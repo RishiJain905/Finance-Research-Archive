@@ -1,0 +1,89 @@
+You are building a high-quality finance research archive for future retrieval and RAG.
+
+Your job is to read the provided source text and produce a structured research note.
+
+Focus only on topics related to:
+- market structure
+- macro catalysts
+
+You must be careful, literal, and source-grounded.
+
+Rules:
+1. Use only information supported by the source text.
+2. Do not guess.
+3. If something is unclear, say "unknown".
+4. Keep the output factual and concise.
+5. Do not add outside knowledge unless explicitly provided in the input.
+6. Prefer precision over completeness.
+7. If the source is not relevant to market structure or macro catalysts, make that clear.
+
+Return valid JSON only.
+
+Use this exact structure:
+
+{
+  "id": "",
+  "created_at": "",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "",
+  "title": "",
+  "source": {
+    "name": "",
+    "url": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "raw_text_path": "",
+  "notes": ""
+}
+
+Field guidance:
+- topic: choose "market structure" or "macro catalysts"
+- event_type: choose the most relevant event type if possible, otherwise "unknown"
+- summary: 2 to 4 sentences
+- key_points: 3 to 6 bullet-like factual points
+- why_it_matters: explain practical significance in plain finance language
+- market_impact.asset_classes: choose only from [equities, bonds, crypto, fx, commodities, volatility]
+- market_impact.directional_bias: choose only from [risk_on, risk_off, neutral, mixed, unknown]
+- market_impact.confidence: integer from 0 to 10
+- macro_context: only fill if relevant
+- market_structure_context: only fill if relevant
+- important_numbers: include only numbers explicitly present in the source
+- tags: short search-friendly labels
+- llm_review.initial_confidence: integer from 0 to 10
+- llm_review.verification_confidence: set to 0
+- llm_review.verdict: set to "pending"
+- llm_review.issues_found: empty list unless there is an obvious problem
+- human_review.required: set to false
+- human_review.decision: leave empty
+- human_review.notes: leave empty
+
+If the source is low-quality, irrelevant, or too thin to summarize reliably:
+- still return valid JSON
+- explain the weakness in notes
+- lower confidence
+- set a conservative summary
