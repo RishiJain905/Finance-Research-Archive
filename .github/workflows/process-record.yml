@@ -11,7 +11,28 @@ on:
     - cron: "0 */12 * * *"
 
 jobs:
-  process-record:
+  resolve-scheduled-records:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    outputs:
+      record_ids: ${{ steps.records.outputs.record_ids }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Read scheduled record ids
+        id: records
+        run: |
+          echo "record_ids=$(python scripts/get_scheduled_records.py)" >> "$GITHUB_OUTPUT"
+
+  process-manual-record:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     permissions:
@@ -21,7 +42,6 @@ jobs:
       OPENAI_BASE_URL: https://api.minimax.io/v1
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       MINIMAX_MODEL: MiniMax-M2.7
-      DEFAULT_RECORD_ID: sample_source
 
     steps:
       - name: Check out repository
@@ -35,18 +55,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Resolve record id
-        id: resolve_record
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "record_id=${{ inputs.record_id }}" >> "$GITHUB_OUTPUT"
-          else
-            echo "record_id=${DEFAULT_RECORD_ID}" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Process record
-        run: python scripts/process_record.py "${{ steps.resolve_record.outputs.record_id }}"
+        run: python scripts/process_record.py "${{ inputs.record_id }}"
 
       - name: Configure git author
         run: |
@@ -59,6 +69,55 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Process finance record: ${{ steps.resolve_record.outputs.record_id }}"
+            git commit -m "Process finance record: ${{ inputs.record_id }}"
+            git push
+          fi
+
+  process-scheduled-records:
+    if: github.event_name == 'schedule'
+    needs: resolve-scheduled-records
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        record_id: ${{ fromJson(needs.resolve-scheduled-records.outputs.record_ids) }}
+
+    env:
+      OPENAI_BASE_URL: https://api.minimax.io/v1
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_MODEL: MiniMax-M2.7
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Process record
+        run: python scripts/process_record.py "${{ matrix.record_id }}"
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit generated files if changed
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Process finance record: ${{ matrix.record_id }}"
+            git pull --rebase origin main
             git push
           fi
