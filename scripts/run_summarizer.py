@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
@@ -89,17 +90,11 @@ def call_minimax(prompt_input: str) -> dict:
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {
-                "role": "system",
-                "content": "Return only valid JSON. Do not include markdown fences."
-            },
-            {
-                "role": "user",
-                "content": prompt_input
-            }
+            {"role": "system", "content": "Return only valid JSON. Do not include markdown fences."},
+            {"role": "user", "content": prompt_input},
         ],
         temperature=0.2,
-        max_completion_tokens=2500
+        max_completion_tokens=2500,
     )
 
     content = response.choices[0].message.content
@@ -110,7 +105,12 @@ def call_minimax(prompt_input: str) -> dict:
 
 
 def main() -> None:
-    raw_file_path = RAW_DIR / "sample_source.txt"
+    if len(sys.argv) < 2:
+        raise SystemExit("Usage: python scripts/run_summarizer.py <record_id>")
+
+    record_id = sys.argv[1]
+
+    raw_file_path = RAW_DIR / f"{record_id}.txt"
     summarize_prompt_path = PROMPTS_DIR / "summarize.txt"
     schema_path = SCHEMAS_DIR / "research_record.json"
 
@@ -121,10 +121,10 @@ def main() -> None:
     record_template = build_record_template(schema, raw_file_path)
     prompt_input = build_prompt_input(summarize_prompt, source_text, record_template)
 
-    print("\nCalling MiniMax...\n")
+    print(f"\nCalling MiniMax summarizer for: {record_id}\n")
     generated_record = call_minimax(prompt_input)
 
-    output_path = REVIEW_QUEUE_DIR / f"{raw_file_path.stem}.json"
+    output_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
     save_json_file(output_path, generated_record)
 
     print("Saved generated record to:")

@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -75,17 +76,11 @@ def call_minimax(prompt_input: str) -> dict:
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {
-                "role": "system",
-                "content": "Return only valid JSON. Do not include markdown fences."
-            },
-            {
-                "role": "user",
-                "content": prompt_input
-            }
+            {"role": "system", "content": "Return only valid JSON. Do not include markdown fences."},
+            {"role": "user", "content": prompt_input},
         ],
         temperature=0.1,
-        max_completion_tokens=2000
+        max_completion_tokens=2000,
     )
 
     content = response.choices[0].message.content
@@ -122,8 +117,13 @@ def apply_verification_result(record: dict, verification: dict) -> dict:
 
 
 def main() -> None:
-    raw_file_path = RAW_DIR / "sample_source.txt"
-    record_path = REVIEW_QUEUE_DIR / "sample_source.json"
+    if len(sys.argv) < 2:
+        raise SystemExit("Usage: python scripts/run_verifier.py <record_id>")
+
+    record_id = sys.argv[1]
+
+    raw_file_path = RAW_DIR / f"{record_id}.txt"
+    record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
     verify_prompt_path = PROMPTS_DIR / "verify.txt"
 
     source_text = load_text_file(raw_file_path)
@@ -132,12 +132,12 @@ def main() -> None:
 
     prompt_input = build_verify_input(verify_prompt, source_text, research_record)
 
-    print("\nCalling MiniMax verifier...\n")
+    print(f"\nCalling MiniMax verifier for: {record_id}\n")
     verification_result = call_minimax(prompt_input)
 
     updated_record = apply_verification_result(research_record, verification_result)
 
-    verification_output_path = REVIEW_QUEUE_DIR / "sample_source_verification.json"
+    verification_output_path = REVIEW_QUEUE_DIR / f"{record_id}_verification.json"
     save_json_file(verification_output_path, verification_result)
     save_json_file(record_path, updated_record)
 

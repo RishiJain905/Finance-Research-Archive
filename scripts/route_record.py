@@ -1,5 +1,6 @@
 import json
 import shutil
+import sys
 from pathlib import Path
 
 
@@ -23,8 +24,13 @@ def move_file_if_exists(source: Path, destination: Path) -> None:
 
 
 def main() -> None:
-    record_path = REVIEW_QUEUE_DIR / "sample_source.json"
-    verification_path = REVIEW_QUEUE_DIR / "sample_source_verification.json"
+    if len(sys.argv) < 2:
+        raise SystemExit("Usage: python scripts/route_record.py <record_id>")
+
+    record_id = sys.argv[1]
+
+    record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
+    verification_path = REVIEW_QUEUE_DIR / f"{record_id}_verification.json"
 
     record = load_json_file(record_path)
     status = record.get("status", "review_queue")
