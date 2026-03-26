@@ -1,3 +1,117 @@
 {
-    "sources": []
+    "sources": [
+        {
+            "name": "Federal Reserve",
+            "type": "macro",
+            "category": "official",
+            "enabled": true,
+            "url": "https://www.federalreserve.gov",
+            "topics": [
+                "macro catalysts"
+            ],
+            "notes": "FOMC statements, minutes, speeches, policy materials"
+        },
+        {
+            "name": "U.S. Bureau of Labor Statistics",
+            "type": "macro",
+            "category": "official",
+            "enabled": true,
+            "url": "https://www.bls.gov",
+            "topics": [
+                "macro catalysts"
+            ],
+            "notes": "CPI, PPI, jobs-related data"
+        },
+        {
+            "name": "U.S. Bureau of Economic Analysis",
+            "type": "macro",
+            "category": "official",
+            "enabled": true,
+            "url": "https://www.bea.gov",
+            "topics": [
+                "macro catalysts"
+            ],
+            "notes": "GDP, PCE, income, spending"
+        },
+        {
+            "name": "U.S. Department of the Treasury",
+            "type": "macro",
+            "category": "official",
+            "enabled": true,
+            "url": "https://home.treasury.gov",
+            "topics": [
+                "macro catalysts",
+                "market structure"
+            ],
+            "notes": "Treasury auctions, funding, policy announcements"
+        },
+        {
+            "name": "FRED",
+            "type": "macro_data",
+            "category": "official",
+            "enabled": true,
+            "url": "https://fred.stlouisfed.org",
+            "topics": [
+                "macro catalysts",
+                "market structure"
+            ],
+            "notes": "Time series for yields, liquidity, spreads, macro indicators"
+        },
+        {
+            "name": "SEC",
+            "type": "market_structure",
+            "category": "official",
+            "enabled": true,
+            "url": "https://www.sec.gov",
+            "topics": [
+                "market structure"
+            ],
+            "notes": "ETF filings, rule changes, market structure proposals"
+        },
+        {
+            "name": "CME Group",
+            "type": "market_structure",
+            "category": "exchange",
+            "enabled": true,
+            "url": "https://www.cmegroup.com",
+            "topics": [
+                "market structure",
+                "macro catalysts"
+            ],
+            "notes": "Futures, rate expectations, market mechanics"
+        },
+        {
+            "name": "ICE",
+            "type": "market_structure",
+            "category": "exchange",
+            "enabled": true,
+            "url": "https://www.theice.com",
+            "topics": [
+                "market structure"
+            ],
+            "notes": "Exchange and market infrastructure materials"
+        },
+        {
+            "name": "NYSE",
+            "type": "market_structure",
+            "category": "exchange",
+            "enabled": true,
+            "url": "https://www.nyse.com",
+            "topics": [
+                "market structure"
+            ],
+            "notes": "Exchange notices, ETF and market mechanics context"
+        },
+        {
+            "name": "Nasdaq",
+            "type": "market_structure",
+            "category": "exchange",
+            "enabled": true,
+            "url": "https://www.nasdaq.com",
+            "topics": [
+                "market structure"
+            ],
+            "notes": "Market structure, ETFs, exchange updates"
+        }
+    ]
 }
