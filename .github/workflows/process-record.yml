@@ -1,0 +1,36 @@
+name: Process Finance Record
+
+on:
+  workflow_dispatch:
+    inputs:
+      record_id:
+        description: "Record ID to process, for example sample_source"
+        required: true
+        type: string
+
+jobs:
+  process-record:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    env:
+      OPENAI_BASE_URL: https://api.minimax.io/v1
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_MODEL: MiniMax-M2.7
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Process record
+        run: python scripts/process_record.py "${{ inputs.record_id }}"
