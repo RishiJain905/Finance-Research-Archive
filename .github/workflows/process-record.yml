@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
 
     env:
       OPENAI_BASE_URL: https://api.minimax.io/v1
@@ -34,3 +34,18 @@ jobs:
 
       - name: Process record
         run: python scripts/process_record.py "${{ inputs.record_id }}"
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit generated files if changed
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Process finance record: ${{ inputs.record_id }}"
+            git push
+          fi
