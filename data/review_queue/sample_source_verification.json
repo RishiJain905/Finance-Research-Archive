@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is listed as 'unknown' but source clearly indicates this is a Federal Reserve policy statement or related commentary",
+    "source metadata is entirely empty (name, url, published_at, source_type) - this is a data quality gap rather than a verification issue with the record content itself",
+    "market_impact.asset_classes lists 'bonds' and 'equities' as affected, but source text does not specify which asset classes are being discussed",
+    "market_impact.directional_bias is 'mixed' with confidence of 3, but source provides no numerical or directional data to support this characterization",
+    "why_it_matters section extrapolates that this 'affects borrowing costs across the economy' and helps 'traders anticipate potential market direction shifts' - these are plausible implications but not stated in source",
+    "macro_context mentions 'yield curve dynamics and risk asset valuations' without explicit support in source text"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is largely faithful to source text but contains interpretive extrapolations in why_it_matters, macro_context, and market_impact sections that go beyond source evidence. The event_type should be classified (likely 'fed_statement' or 'policy_commentary'). The record is acceptable as a thin but accurate summary, but human judgment is needed to determine if the extrapolations are appropriate for archive use.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Uneven inflation progress suggests the Fed may maintain a cautious stance on rate adjustments. Monitoring ETF flows and options positioning for risk appetite shifts provides context for understanding market sentiment as monetary policy evolves, though specific directional impacts are not detailed in the source.",
+    "macro_context": "Fed monetary policy direction remains a key driver of market expectations. The uneven inflation progress noted by officials creates uncertainty around the timing and pace of future policy adjustments.",
+    "market_structure_context": "ETF flow trends and options positioning are noted as indicators being watched by market participants for risk appetite shifts, though specific data points or trends are not provided in the source."
+  }
+}
