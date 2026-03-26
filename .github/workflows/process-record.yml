@@ -7,6 +7,8 @@ on:
         description: "Record ID to process, for example sample_source"
         required: true
         type: string
+  schedule:
+    - cron: "0 */12 * * *"
 
 jobs:
   process-record:
@@ -19,6 +21,7 @@ jobs:
       OPENAI_BASE_URL: https://api.minimax.io/v1
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       MINIMAX_MODEL: MiniMax-M2.7
+      DEFAULT_RECORD_ID: sample_source
 
     steps:
       - name: Check out repository
@@ -32,8 +35,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Resolve record id
+        id: resolve_record
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "record_id=${{ inputs.record_id }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "record_id=${DEFAULT_RECORD_ID}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Process record
-        run: python scripts/process_record.py "${{ inputs.record_id }}"
+        run: python scripts/process_record.py "${{ steps.resolve_record.outputs.record_id }}"
 
       - name: Configure git author
         run: |
@@ -46,6 +59,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Process finance record: ${{ inputs.record_id }}"
+            git commit -m "Process finance record: ${{ steps.resolve_record.outputs.record_id }}"
             git push
           fi
