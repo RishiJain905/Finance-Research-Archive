@@ -1,64 +1,64 @@
 {
-  "id": "sample_source",
-  "created_at": "2026-03-26T19:17:02.931168+00:00",
+  "id": "source_001",
+  "created_at": "2026-03-26T19:44:57.831730+00:00",
   "status": "accepted",
   "topic": "macro catalysts",
-  "event_type": "unknown",
-  "title": "Fed Signals Uneven Inflation Progress; Markets Adjust Rate Expectations",
+  "event_type": "fed_communication",
+  "title": "Fed Officials Signal Uneven Inflation Progress; Treasury Yields Reflect Rate Expectation Adjustments",
   "source": {
-    "name": "",
+    "name": "unknown",
     "url": "",
     "published_at": "",
-    "source_type": ""
+    "source_type": "unknown"
   },
-  "summary": "Federal Reserve officials indicated that inflation progress remains uneven, suggesting the path to rate cuts is not straightforward. Treasury yield movements reflect market participants adjusting their expectations for future monetary policy. Market observers are closely monitoring ETF flow trends and options positioning as indicators of broader risk appetite changes.",
+  "summary": "Federal Reserve officials signaled that progress on inflation remains uneven. Recent Treasury yield movements suggest markets are adjusting expectations for future rate policy. Market participants are monitoring ETF flow trends and options positioning for signs of broader risk appetite shifts.",
   "key_points": [
     "Fed officials signaled that inflation progress remains uneven",
-    "Treasury yield movements suggest markets are adjusting expectations for future rate policy",
-    "ETF flow trends are being watched as a signal of risk appetite",
-    "Options positioning is being monitored for risk appetite shifts",
-    "The relationship between Fed policy signals and market positioning is the focal point"
+    "Treasury yield movements indicate markets adjusting rate expectations",
+    "Market participants watching ETF flow trends",
+    "Options positioning being monitored for risk appetite signals"
   ],
-  "why_it_matters": "Uneven inflation progress suggests the Fed may maintain a cautious stance on rate adjustments. Monitoring ETF flows and options positioning for risk appetite shifts provides context for understanding market sentiment as monetary policy evolves, though specific directional impacts are not detailed in the source.",
+  "why_it_matters": "Fed characterization of inflation as uneven suggests continued uncertainty around the path of future policy adjustments, which could affect borrowing cost expectations and asset valuations across markets.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "equities"
+      "equities",
+      "fx"
     ],
     "directional_bias": "mixed",
     "confidence": 3
   },
-  "macro_context": "Fed monetary policy direction remains a key driver of market expectations. The uneven inflation progress noted by officials creates uncertainty around the timing and pace of future policy adjustments.",
-  "market_structure_context": "ETF flow trends and options positioning are noted as indicators being watched by market participants for risk appetite shifts, though specific data points or trends are not provided in the source.",
+  "macro_context": "Fed communications on inflation progress may influence market pricing of future rate policy and affect Treasury yields and broader market expectations.",
+  "market_structure_context": "ETF flow trends and options positioning are being monitored as potential indicators of risk appetite changes, reflecting market attention to structure-based sentiment signals.",
   "important_numbers": [],
   "tags": [
-    "fed policy",
+    "federal_reserve",
     "inflation",
-    "treasury yields",
-    "rate expectations",
-    "etf flows",
-    "options positioning",
-    "risk appetite",
-    "monetary policy"
+    "treasury_yields",
+    "rate_expectations",
+    "etf_flows",
+    "options_positioning",
+    "risk_appetite"
   ],
   "llm_review": {
     "initial_confidence": 3,
-    "verification_confidence": 6,
+    "verification_confidence": 4,
     "verdict": "review",
     "issues_found": [
-      "event_type is listed as 'unknown' but source clearly indicates this is a Federal Reserve policy statement or related commentary",
-      "source metadata is entirely empty (name, url, published_at, source_type) - this is a data quality gap rather than a verification issue with the record content itself",
-      "market_impact.asset_classes lists 'bonds' and 'equities' as affected, but source text does not specify which asset classes are being discussed",
-      "market_impact.directional_bias is 'mixed' with confidence of 3, but source provides no numerical or directional data to support this characterization",
-      "why_it_matters section extrapolates that this 'affects borrowing costs across the economy' and helps 'traders anticipate potential market direction shifts' - these are plausible implications but not stated in source",
-      "macro_context mentions 'yield curve dynamics and risk asset valuations' without explicit support in source text"
+      "Source attribution completely missing - no name, URL, publication date, or source type provided",
+      "No specific dates or time periods mentioned in source",
+      "No numerical data or specific figures provided (no yield levels, inflation numbers, flow figures)",
+      "No named Fed officials referenced in source",
+      "Source uses vague language throughout ('signaled', 'suggests', 'recent movements') without concrete specifics",
+      "Market impact section assigns asset classes (bonds, equities, fx) and 'mixed' directional bias not explicitly supported by source text",
+      "Low verification confidence (3) is appropriate given source thinness, but limits archival utility"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Record is largely faithful to source text but contains interpretive extrapolations in why_it_matters, macro_context, and market_impact sections that go beyond source evidence. The event_type should be classified (likely 'fed_statement' or 'policy_commentary'). The record is acceptable as a thin but accurate summary, but human judgment is needed to determine if the extrapolations are appropriate for archive use."
+    "notes": "The record is generally faithful to the source in its summary and key points. However, the source itself is extremely thin - containing no dates, named officials, quantitative data, or specific figures. The market impact section makes unsupported claims about specific asset classes and directional bias. Given that this is a finance research archive, the lack of source attribution and specificity significantly limits archival value. Human judgment is needed to determine if records of this generality have sufficient research utility."
   },
-  "raw_text_path": "data\\raw\\sample_source.txt",
-  "notes": "Source text is thin and lacks specific details. No source name, publication date, URL, or specific numbers provided. Assertions about market adjustments and risk appetite are general in nature without supporting data. Confidence deliberately lowered due to lack of verifiable specifics."
+  "raw_text_path": "data\\raw\\source_001.txt",
+  "notes": "Source text is thin and lacks specificity. No dates, no figures, no named Fed officials, no specific yield levels. General market observation rather than actionable research. Confidence deliberately set low."
 }

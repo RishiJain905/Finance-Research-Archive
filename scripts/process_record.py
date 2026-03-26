@@ -1,0 +1,55 @@
+import subprocess
+import sys
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+def run_step(command: list[str], step_name: str) -> None:
+    print(f"\n=== Running {step_name} ===\n")
+
+    result = subprocess.run(
+        command,
+        cwd=BASE_DIR,
+        text=True,
+        capture_output=True
+    )
+
+    if result.stdout:
+        print(result.stdout)
+
+    if result.stderr:
+        print(result.stderr)
+
+    if result.returncode != 0:
+        raise RuntimeError(f"{step_name} failed with exit code {result.returncode}")
+
+
+def main() -> None:
+    if len(sys.argv) < 2:
+        raise SystemExit("Usage: python scripts/process_record.py <record_id>")
+
+    record_id = sys.argv[1]
+    python_cmd = sys.executable
+
+    run_step(
+        [python_cmd, "scripts/run_summarizer.py", record_id],
+        "summarizer"
+    )
+
+    run_step(
+        [python_cmd, "scripts/run_verifier.py", record_id],
+        "verifier"
+    )
+
+    run_step(
+        [python_cmd, "scripts/route_record.py", record_id],
+        "router"
+    )
+
+    print(f"\nPipeline finished for record: {record_id}")
+
+
+if __name__ == "__main__":
+    main()
