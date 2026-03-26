@@ -1,0 +1,249 @@
+import hashlib
+import json
+import re
+from pathlib import Path
+from urllib.parse import urljoin, urlparse
+
+import requests
+from bs4 import BeautifulSoup
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+CONFIG_PATH = BASE_DIR / "config" / "ingestion_targets.json"
+RAW_DIR = BASE_DIR / "data" / "raw"
+MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
+
+DEFAULT_MAX_LINKS_PER_TARGET = 5
+MAX_TITLE_SLUG_LENGTH = 60
+
+
+def slugify(value: str) -> str:
+    value = value.strip().lower()
+    value = re.sub(r"[^a-z0-9]+", "_", value)
+    value = re.sub(r"_+", "_", value).strip("_")
+    return value
+
+
+def shorten_slug(value: str, max_length: int) -> str:
+    value = slugify(value)
+    return value[:max_length].rstrip("_")
+
+
+def load_json(path: Path, default):
+    if not path.exists():
+        return default
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(path: Path, data) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def get_headers() -> dict:
+    return {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+        "Referer": "https://www.google.com/",
+    }
+
+
+def fetch_html(url: str) -> str:
+    response = requests.get(url, timeout=30, headers=get_headers())
+    response.raise_for_status()
+    return response.text
+
+
+def html_to_text(html: str) -> str:
+    soup = BeautifulSoup(html, "html.parser")
+
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
+
+    text = soup.get_text(separator="\n")
+    lines = [line.strip() for line in text.splitlines()]
+    lines = [line for line in lines if line]
+    return "\n".join(lines)
+
+
+def content_hash(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def is_allowed_link(url: str, allowed_prefixes: list[str]) -> bool:
+    if not allowed_prefixes:
+        return True
+    return any(url.startswith(prefix) for prefix in allowed_prefixes)
+
+
+def looks_like_article_link(url: str) -> bool:
+    parsed = urlparse(url)
+    path = parsed.path.lower()
+
+    bad_suffixes = (
+        ".pdf", ".jpg", ".jpeg", ".png", ".gif", ".svg",
+        ".zip", ".xlsx", ".xls", ".csv", ".doc", ".docx"
+    )
+    if path.endswith(bad_suffixes):
+        return False
+
+    if parsed.fragment:
+        return False
+
+    return True
+
+
+def extract_links(index_url: str, html: str, allowed_prefixes: list[str], max_links: int) -> list[str]:
+    soup = BeautifulSoup(html, "html.parser")
+    discovered = []
+    seen = set()
+
+    for a_tag in soup.find_all("a", href=True):
+        href = a_tag["href"].strip()
+        if not href:
+            continue
+
+        full_url = urljoin(index_url, href)
+
+        if full_url in seen:
+            continue
+        seen.add(full_url)
+
+        if not looks_like_article_link(full_url):
+            continue
+
+        if not is_allowed_link(full_url, allowed_prefixes):
+            continue
+
+        discovered.append(full_url)
+
+    return discovered[:max_links]
+
+
+def extract_title(soup: BeautifulSoup) -> str:
+    if soup.title and soup.title.string:
+        return soup.title.string.strip()
+
+    h1 = soup.find("h1")
+    if h1:
+        return h1.get_text(" ", strip=True)
+
+    return "untitled"
+
+
+def sanitize_title(title: str) -> str:
+    title = re.sub(r"\s+", " ", title).strip()
+    return title[:120]
+
+
+def build_record_id(target_name: str, article_title: str, article_url: str) -> str:
+    target_slug = shorten_slug(target_name, 30)
+    title_slug = shorten_slug(article_title, MAX_TITLE_SLUG_LENGTH)
+    url_hash = hashlib.sha1(article_url.encode("utf-8")).hexdigest()[:8]
+    return f"{target_slug}_{title_slug}_{url_hash}"
+
+
+def main() -> None:
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+
+    config = load_json(CONFIG_PATH, {"targets": []})
+    manifest = load_json(
+        MANIFEST_PATH,
+        {
+            "seen_urls": {},
+            "record_map": {}
+        }
+    )
+
+    max_links_per_target = config.get("max_links_per_target", DEFAULT_MAX_LINKS_PER_TARGET)
+    if not isinstance(max_links_per_target, int) or max_links_per_target < 1:
+        max_links_per_target = DEFAULT_MAX_LINKS_PER_TARGET
+
+    created = []
+
+    for target in config.get("targets", []):
+        name = target["name"]
+        topic = target["topic"]
+        url = target["url"]
+        allowed_prefixes = target.get("allowed_prefixes", [])
+
+        print(f"\nTarget: {name}")
+        print(f"  Max links: {max_links_per_target}")
+
+        try:
+            index_html = fetch_html(url)
+        except Exception as e:
+            print(f"  Failed to fetch target page: {e}")
+            continue
+
+        article_links = extract_links(url, index_html, allowed_prefixes, max_links_per_target)
+
+        if not article_links:
+            print("  No candidate links found.")
+            continue
+
+        print(f"  Found {len(article_links)} candidate links")
+
+        for article_url in article_links:
+            print(f"  Fetching article: {article_url}")
+
+            try:
+                article_html = fetch_html(article_url)
+            except Exception as e:
+                print(f"    Failed fetch: {e}")
+                continue
+
+            article_text = html_to_text(article_html)
+            digest = content_hash(article_text)
+
+            previous_hash = manifest["seen_urls"].get(article_url)
+            if previous_hash == digest:
+                print("    No change, skipping.")
+                continue
+
+            soup = BeautifulSoup(article_html, "html.parser")
+            article_title = sanitize_title(extract_title(soup))
+            record_id = build_record_id(name, article_title, article_url)
+
+            output_path = RAW_DIR / f"{record_id}.txt"
+            output_text = (
+                f"TARGET: {name}\n"
+                f"TOPIC: {topic}\n"
+                f"TITLE: {article_title}\n"
+                f"URL: {article_url}\n\n"
+                f"{article_text}"
+            )
+
+            try:
+                output_path.write_text(output_text, encoding="utf-8")
+            except Exception as e:
+                print(f"    Failed write: {e}")
+                continue
+
+            manifest["seen_urls"][article_url] = digest
+            manifest["record_map"][article_url] = record_id
+            created.append(record_id)
+
+            print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
+
+    save_json(MANIFEST_PATH, manifest)
+
+    print("\nCreated/updated record ids:")
+    if created:
+        for record_id in created:
+            print(f"- {record_id}")
+    else:
+        print("- none")
+
+
+if __name__ == "__main__":
+    main()
