@@ -160,13 +160,14 @@ def main() -> None:
         MANIFEST_PATH,
         {
             "seen_urls": {},
-            "record_map": {}
+            "record_map": {},
+            "record_rules": {}
         }
     )
 
-    max_links_per_target = config.get("max_links_per_target", DEFAULT_MAX_LINKS_PER_TARGET)
-    if not isinstance(max_links_per_target, int) or max_links_per_target < 1:
-        max_links_per_target = DEFAULT_MAX_LINKS_PER_TARGET
+    default_max_links = config.get("max_links_per_target", DEFAULT_MAX_LINKS_PER_TARGET)
+    if not isinstance(default_max_links, int) or default_max_links < 1:
+        default_max_links = DEFAULT_MAX_LINKS_PER_TARGET
 
     created = []
 
@@ -175,9 +176,16 @@ def main() -> None:
         topic = target["topic"]
         url = target["url"]
         allowed_prefixes = target.get("allowed_prefixes", [])
+        max_links = target.get("max_links", default_max_links)
+        required_keywords = target.get("required_keywords", [])
+        blocked_keywords = target.get("blocked_keywords", [])
+        min_word_count = target.get("min_word_count", 120)
+
+        if not isinstance(max_links, int) or max_links < 1:
+            max_links = default_max_links
 
         print(f"\nTarget: {name}")
-        print(f"  Max links: {max_links_per_target}")
+        print(f"  Max links: {max_links}")
 
         try:
             index_html = fetch_html(url)
@@ -185,7 +193,7 @@ def main() -> None:
             print(f"  Failed to fetch target page: {e}")
             continue
 
-        article_links = extract_links(url, index_html, allowed_prefixes, max_links_per_target)
+        article_links = extract_links(url, index_html, allowed_prefixes, max_links)
 
         if not article_links:
             print("  No candidate links found.")
@@ -231,8 +239,15 @@ def main() -> None:
 
             manifest["seen_urls"][article_url] = digest
             manifest["record_map"][article_url] = record_id
-            created.append(record_id)
+            manifest["record_rules"][record_id] = {
+                "required_keywords": required_keywords,
+                "blocked_keywords": blocked_keywords,
+                "min_word_count": min_word_count,
+                "target_name": name,
+                "topic": topic
+            }
 
+            created.append(record_id)
             print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
 
     save_json(MANIFEST_PATH, manifest)
@@ -243,6 +258,7 @@ def main() -> None:
             print(f"- {record_id}")
     else:
         print("- none")
+
     return created
 
 

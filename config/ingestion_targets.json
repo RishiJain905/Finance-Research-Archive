@@ -8,7 +8,22 @@
             "allowed_prefixes": [
                 "https://www.federalreserve.gov/monetarypolicy/fomc",
                 "https://www.federalreserve.gov/newsevents/pressreleases/monetary"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "fomc",
+                "statement",
+                "minutes",
+                "monetary policy",
+                "federal reserve"
+            ],
+            "blocked_keywords": [
+                "calendar",
+                "conference",
+                "review of",
+                "historical"
+            ],
+            "min_word_count": 150
         },
         {
             "name": "Federal Reserve Press Releases",
@@ -16,7 +31,23 @@
             "url": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
             "allowed_prefixes": [
                 "https://www.federalreserve.gov/newsevents/pressreleases/"
-            ]
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "federal reserve",
+                "policy",
+                "rates",
+                "inflation",
+                "liquidity",
+                "statement"
+            ],
+            "blocked_keywords": [
+                "community development",
+                "consumer help",
+                "student",
+                "holiday"
+            ],
+            "min_word_count": 150
         },
         {
             "name": "Federal Reserve Speeches and Testimony",
@@ -25,7 +56,22 @@
             "allowed_prefixes": [
                 "https://www.federalreserve.gov/newsevents/speech/",
                 "https://www.federalreserve.gov/newsevents/testimony/"
-            ]
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "inflation",
+                "policy",
+                "rates",
+                "labor market",
+                "federal reserve"
+            ],
+            "blocked_keywords": [
+                "welcome remarks",
+                "opening remarks",
+                "community development",
+                "award"
+            ],
+            "min_word_count": 250
         },
         {
             "name": "Federal Reserve Balance Sheet Developments",
@@ -34,7 +80,22 @@
             "allowed_prefixes": [
                 "https://www.federalreserve.gov/monetarypolicy/bst_",
                 "https://www.federalreserve.gov/monetarypolicy/"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "balance sheet",
+                "reserves",
+                "liquidity",
+                "treasury",
+                "fed"
+            ],
+            "blocked_keywords": [
+                "speech",
+                "conference",
+                "education",
+                "calendar"
+            ],
+            "min_word_count": 180
         },
         {
             "name": "BLS CPI News Releases",
@@ -43,7 +104,19 @@
             "allowed_prefixes": [
                 "https://www.bls.gov/news.release/cpi.nr0.htm",
                 "https://www.bls.gov/bls/news-release/cpi.htm"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "consumer price index",
+                "cpi",
+                "inflation"
+            ],
+            "blocked_keywords": [
+                "handbook",
+                "survey",
+                "overview"
+            ],
+            "min_word_count": 120
         },
         {
             "name": "BLS PPI News Releases",
@@ -52,7 +125,19 @@
             "allowed_prefixes": [
                 "https://www.bls.gov/news.release/ppi.nr0.htm",
                 "https://www.bls.gov/bls/news-release/ppi.htm"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "producer price index",
+                "ppi",
+                "inflation"
+            ],
+            "blocked_keywords": [
+                "handbook",
+                "survey",
+                "overview"
+            ],
+            "min_word_count": 120
         },
         {
             "name": "BLS Employment Situation",
@@ -61,7 +146,20 @@
             "allowed_prefixes": [
                 "https://www.bls.gov/news.release/empsit.nr0.htm",
                 "https://www.bls.gov/bls/news-release/empsit.htm"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "employment situation",
+                "nonfarm payrolls",
+                "unemployment",
+                "labor market"
+            ],
+            "blocked_keywords": [
+                "overview",
+                "handbook",
+                "survey"
+            ],
+            "min_word_count": 120
         },
         {
             "name": "BEA News",
@@ -70,7 +168,21 @@
             "allowed_prefixes": [
                 "https://www.bea.gov/news/",
                 "https://www.bea.gov/data/"
-            ]
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "gdp",
+                "pce",
+                "personal income",
+                "consumer spending",
+                "bea"
+            ],
+            "blocked_keywords": [
+                "interactive data",
+                "methodology",
+                "regional"
+            ],
+            "min_word_count": 140
         },
         {
             "name": "Treasury Press Releases",
@@ -78,7 +190,23 @@
             "url": "https://home.treasury.gov/news/press-releases",
             "allowed_prefixes": [
                 "https://home.treasury.gov/news/press-releases/"
-            ]
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "treasury",
+                "issuance",
+                "funding",
+                "liquidity",
+                "auction",
+                "market"
+            ],
+            "blocked_keywords": [
+                "sanctions",
+                "terrorism",
+                "secretary",
+                "foreign assets control"
+            ],
+            "min_word_count": 150
         },
         {
             "name": "Treasury Quarterly Refunding",
@@ -87,7 +215,21 @@
             "allowed_prefixes": [
                 "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding",
                 "https://home.treasury.gov/news/press-releases/"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "refunding",
+                "auction",
+                "issuance",
+                "treasury",
+                "borrowing"
+            ],
+            "blocked_keywords": [
+                "sanctions",
+                "secretary",
+                "foreign policy"
+            ],
+            "min_word_count": 180
         },
         {
             "name": "SEC Press Releases",
@@ -95,7 +237,24 @@
             "url": "https://www.sec.gov/newsroom/press-releases",
             "allowed_prefixes": [
                 "https://www.sec.gov/newsroom/press-releases/"
-            ]
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "sec",
+                "exchange",
+                "trading",
+                "market",
+                "clearing",
+                "etf"
+            ],
+            "blocked_keywords": [
+                "fraud",
+                "ponzi",
+                "celebrity",
+                "insider trading",
+                "crypto scam"
+            ],
+            "min_word_count": 150
         },
         {
             "name": "SEC Rulemaking Activity",
@@ -104,7 +263,22 @@
             "allowed_prefixes": [
                 "https://www.sec.gov/rules-regulations/",
                 "https://www.sec.gov/files/rules/"
-            ]
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "rule",
+                "exchange",
+                "clearing",
+                "market",
+                "trading",
+                "sec"
+            ],
+            "blocked_keywords": [
+                "investor bulletin",
+                "fraud",
+                "alert"
+            ],
+            "min_word_count": 180
         },
         {
             "name": "NYSE Trade",
@@ -113,7 +287,22 @@
             "allowed_prefixes": [
                 "https://www.nyse.com/",
                 "https://www.intercontinentalexchange.com/"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "nyse",
+                "market",
+                "exchange",
+                "trading",
+                "liquidity"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "advertise",
+                "podcast",
+                "webinar"
+            ],
+            "min_word_count": 150
         },
         {
             "name": "Nasdaq Market Activity",
@@ -123,7 +312,22 @@
                 "https://www.nasdaq.com/market-activity/",
                 "https://www.nasdaq.com/articles/",
                 "https://www.nasdaq.com/solutions/"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "nasdaq",
+                "market",
+                "trading",
+                "exchange",
+                "etf",
+                "liquidity"
+            ],
+            "blocked_keywords": [
+                "sponsored",
+                "advertisement",
+                "partner content"
+            ],
+            "min_word_count": 150
         },
         {
             "name": "CME FedWatch",
@@ -132,7 +336,21 @@
             "allowed_prefixes": [
                 "https://www.cmegroup.com/markets/interest-rates/",
                 "https://www.cmegroup.com/insights/"
-            ]
+            ],
+            "max_links": 2,
+            "required_keywords": [
+                "fedwatch",
+                "rates",
+                "probability",
+                "fomc",
+                "cme"
+            ],
+            "blocked_keywords": [
+                "course",
+                "education",
+                "webinar"
+            ],
+            "min_word_count": 140
         }
     ]
 }
