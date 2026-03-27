@@ -351,6 +351,1086 @@
                 "webinar"
             ],
             "min_word_count": 140
+        },
+        {
+            "name": "New York Fed Press",
+            "topic": "market structure",
+            "url": "https://www.newyorkfed.org/press",
+            "allowed_prefixes": [
+                "https://www.newyorkfed.org/newsevents/",
+                "https://www.newyorkfed.org/markets/",
+                "https://www.newyorkfed.org/research/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "market",
+                "liquidity",
+                "repo",
+                "sofr",
+                "treasury",
+                "funding",
+                "operations"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "community",
+                "education",
+                "student"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "New York Fed News",
+            "topic": "market structure",
+            "url": "https://www.newyorkfed.org/newsevents/news",
+            "allowed_prefixes": [
+                "https://www.newyorkfed.org/newsevents/",
+                "https://www.newyorkfed.org/markets/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "market",
+                "policy",
+                "liquidity",
+                "funding",
+                "treasury",
+                "inflation"
+            ],
+            "blocked_keywords": [
+                "community",
+                "education",
+                "student"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "New York Fed Markets Data Hub",
+            "topic": "market structure",
+            "url": "https://www.newyorkfed.org/markets/data-hub",
+            "allowed_prefixes": [
+                "https://www.newyorkfed.org/markets/",
+                "https://www.newyorkfed.org/medialibrary/media/markets/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "sofr",
+                "repo",
+                "market",
+                "operations",
+                "treasury",
+                "funding"
+            ],
+            "blocked_keywords": [
+                "consumer",
+                "education"
+            ],
+            "min_word_count": 120
+        },
+        {
+            "name": "Bank of Canada Press Browse",
+            "topic": "macro catalysts",
+            "url": "https://www.bankofcanada.ca/press/browse/",
+            "allowed_prefixes": [
+                "https://www.bankofcanada.ca/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "policy rate",
+                "inflation",
+                "bank of canada",
+                "market operations",
+                "financial system"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "bank notes",
+                "student"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "Bank of Canada Market Notices",
+            "topic": "market structure",
+            "url": "https://www.bankofcanada.ca/markets/market-notices/",
+            "allowed_prefixes": [
+                "https://www.bankofcanada.ca/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "market operations",
+                "auction",
+                "liquidity",
+                "bank of canada",
+                "receiver general",
+                "notice"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "currency museum",
+                "student"
+            ],
+            "min_word_count": 130
+        },
+        {
+            "name": "Bank of Canada Speeches",
+            "topic": "macro catalysts",
+            "url": "https://www.bankofcanada.ca/press/speeches/",
+            "allowed_prefixes": [
+                "https://www.bankofcanada.ca/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "policy rate",
+                "economy",
+                "bank of canada",
+                "financial stability"
+            ],
+            "blocked_keywords": [
+                "opening remarks",
+                "welcome remarks",
+                "museum"
+            ],
+            "min_word_count": 220
+        },
+        {
+            "name": "ECB Monetary Policy Decisions",
+            "topic": "macro catalysts",
+            "url": "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html",
+            "allowed_prefixes": [
+                "https://www.ecb.europa.eu/press/govcdec/mopo/",
+                "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "interest rates",
+                "inflation",
+                "governing council",
+                "monetary policy",
+                "ecb"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "legal framework",
+                "banknotes"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "ECB Monetary Policy Statements",
+            "topic": "macro catalysts",
+            "url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/html/index.en.html",
+            "allowed_prefixes": [
+                "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "monetary policy",
+                "inflation",
+                "interest rates",
+                "ecb",
+                "economy"
+            ],
+            "blocked_keywords": [
+                "visual statement",
+                "faq",
+                "explainer"
+            ],
+            "min_word_count": 220
+        },
+        {
+            "name": "ECB Speeches",
+            "topic": "macro catalysts",
+            "url": "https://www.ecb.europa.eu/press/key/date/2026/html/index.en.html",
+            "allowed_prefixes": [
+                "https://www.ecb.europa.eu/press/key/date/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "rates",
+                "ecb",
+                "financial stability"
+            ],
+            "blocked_keywords": [
+                "welcome remarks",
+                "opening remarks",
+                "ceremony"
+            ],
+            "min_word_count": 220
+        },
+        {
+            "name": "Bank of England Speeches",
+            "topic": "macro catalysts",
+            "url": "https://www.bankofengland.co.uk/news/speeches",
+            "allowed_prefixes": [
+                "https://www.bankofengland.co.uk/speech/",
+                "https://www.bankofengland.co.uk/news/speeches"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "bank rate",
+                "financial stability",
+                "bank of england"
+            ],
+            "blocked_keywords": [
+                "opening remarks",
+                "welcome remarks",
+                "museum"
+            ],
+            "min_word_count": 220
+        },
+        {
+            "name": "Bank of England News",
+            "topic": "macro catalysts",
+            "url": "https://www.bankofengland.co.uk/news",
+            "allowed_prefixes": [
+                "https://www.bankofengland.co.uk/news/",
+                "https://www.bankofengland.co.uk/markets/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "bank rate",
+                "inflation",
+                "monetary policy",
+                "market",
+                "bank of england"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "competition",
+                "careers"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "Bank of England Markets",
+            "topic": "market structure",
+            "url": "https://www.bankofengland.co.uk/markets",
+            "allowed_prefixes": [
+                "https://www.bankofengland.co.uk/markets/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "market",
+                "liquidity",
+                "gilts",
+                "repo",
+                "sterling",
+                "operations"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "museum",
+                "education"
+            ],
+            "min_word_count": 140
+        },
+        {
+            "name": "IMF News",
+            "topic": "macro catalysts",
+            "url": "https://www.imf.org/en/News",
+            "allowed_prefixes": [
+                "https://www.imf.org/en/News/",
+                "https://www.imf.org/en/Blogs/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "growth",
+                "rates",
+                "global economy",
+                "financial conditions"
+            ],
+            "blocked_keywords": [
+                "capacity development",
+                "training",
+                "jobs"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "IMF Blogs",
+            "topic": "macro catalysts",
+            "url": "https://www.imf.org/en/Blogs",
+            "allowed_prefixes": [
+                "https://www.imf.org/en/Blogs/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "global growth",
+                "financial conditions",
+                "debt",
+                "economy"
+            ],
+            "blocked_keywords": [
+                "jobs",
+                "events",
+                "training"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "BIS Speeches",
+            "topic": "macro catalysts",
+            "url": "https://www.bis.org/speeches/index.htm",
+            "allowed_prefixes": [
+                "https://www.bis.org/speeches/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "financial stability",
+                "liquidity",
+                "market",
+                "central bank"
+            ],
+            "blocked_keywords": [
+                "opening remarks",
+                "welcome remarks"
+            ],
+            "min_word_count": 220
+        },
+        {
+            "name": "BIS Publications",
+            "topic": "market structure",
+            "url": "https://www.bis.org/publ/index.htm",
+            "allowed_prefixes": [
+                "https://www.bis.org/publ/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "market",
+                "liquidity",
+                "repo",
+                "financial stability",
+                "rates",
+                "funding"
+            ],
+            "blocked_keywords": [
+                "annual report summary",
+                "job",
+                "speech event"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "OECD Economy",
+            "topic": "macro catalysts",
+            "url": "https://www.oecd.org/en/topics/economy.html",
+            "allowed_prefixes": [
+                "https://www.oecd.org/en/topics/",
+                "https://www.oecd.org/en/publications/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "inflation",
+                "growth",
+                "economy",
+                "policy",
+                "productivity"
+            ],
+            "blocked_keywords": [
+                "education",
+                "jobs board",
+                "careers"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Treasury Fiscal Data News",
+            "topic": "market structure",
+            "url": "https://fiscaldata.treasury.gov/news/",
+            "allowed_prefixes": [
+                "https://fiscaldata.treasury.gov/news/",
+                "https://fiscaldata.treasury.gov/datasets/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "treasury",
+                "debt",
+                "auction",
+                "funding",
+                "fiscal data"
+            ],
+            "blocked_keywords": [
+                "api quick start",
+                "tutorial",
+                "guide"
+            ],
+            "min_word_count": 140
+        },
+        {
+            "name": "Treasury Fiscal Data Datasets",
+            "topic": "market structure",
+            "url": "https://fiscaldata.treasury.gov/datasets/",
+            "allowed_prefixes": [
+                "https://fiscaldata.treasury.gov/datasets/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "auction",
+                "debt",
+                "statement",
+                "treasury",
+                "securities"
+            ],
+            "blocked_keywords": [
+                "developer guide",
+                "api quick start",
+                "tutorial"
+            ],
+            "min_word_count": 140
+        },
+        {
+            "name": "CME Insights",
+            "topic": "macro catalysts",
+            "url": "https://www.cmegroup.com/insights.html",
+            "allowed_prefixes": [
+                "https://www.cmegroup.com/insights/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "rates",
+                "fed",
+                "treasury",
+                "volatility",
+                "futures",
+                "inflation"
+            ],
+            "blocked_keywords": [
+                "course",
+                "academy",
+                "webinar",
+                "education"
+            ],
+            "min_word_count": 160
+        },
+        {
+            "name": "ICE Insights",
+            "topic": "market structure",
+            "url": "https://www.ice.com/insights",
+            "allowed_prefixes": [
+                "https://www.ice.com/insights",
+                "https://www.ice.com/fixed-income-data-services"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "market",
+                "fixed income",
+                "trading",
+                "liquidity",
+                "rates"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "webinar registration"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "DTCC Insights",
+            "topic": "market structure",
+            "url": "https://www.dtcc.com/dtcc-connection/articles",
+            "allowed_prefixes": [
+                "https://www.dtcc.com/",
+                "https://www.dtcc.com/dtcc-connection/articles"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "clearing",
+                "settlement",
+                "market structure",
+                "post-trade",
+                "liquidity"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "student",
+                "diversity event"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "SIFMA News",
+            "topic": "market structure",
+            "url": "https://www.sifma.org/news/",
+            "allowed_prefixes": [
+                "https://www.sifma.org/resources/",
+                "https://www.sifma.org/news/"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "treasury",
+                "fixed income",
+                "market structure",
+                "liquidity",
+                "capital markets"
+            ],
+            "blocked_keywords": [
+                "conference registration",
+                "webinar",
+                "career center"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "Brookings Economy",
+            "topic": "macro catalysts",
+            "url": "https://www.brookings.edu/topic/economy/",
+            "allowed_prefixes": [
+                "https://www.brookings.edu/articles/",
+                "https://www.brookings.edu/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "fed",
+                "rates",
+                "economy",
+                "labor market",
+                "growth"
+            ],
+            "blocked_keywords": [
+                "student",
+                "event registration",
+                "donate"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "PIIE Realtime Economics",
+            "topic": "macro catalysts",
+            "url": "https://www.piie.com/research/realtime-economic-issues-watch",
+            "allowed_prefixes": [
+                "https://www.piie.com/blogs/",
+                "https://www.piie.com/research/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "trade",
+                "growth",
+                "rates",
+                "global economy"
+            ],
+            "blocked_keywords": [
+                "job posting",
+                "event registration"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Atlanta Fed Economy Matters",
+            "topic": "macro catalysts",
+            "url": "https://www.atlantafed.org/blogs/economy-matters",
+            "allowed_prefixes": [
+                "https://www.atlantafed.org/blogs/economy-matters",
+                "https://www.atlantafed.org/cqer/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "labor market",
+                "growth",
+                "fed",
+                "economy"
+            ],
+            "blocked_keywords": [
+                "career",
+                "community",
+                "student"
+            ],
+            "min_word_count": 160
+        },
+        {
+            "name": "Chicago Fed Insights",
+            "topic": "macro catalysts",
+            "url": "https://www.chicagofed.org/publications/chicago-fed-insights/index",
+            "allowed_prefixes": [
+                "https://www.chicagofed.org/publications/chicago-fed-insights/",
+                "https://www.chicagofed.org/publications/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "labor market",
+                "policy",
+                "financial conditions",
+                "economy"
+            ],
+            "blocked_keywords": [
+                "student",
+                "museum",
+                "career"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "RBA Media Releases",
+            "topic": "macro catalysts",
+            "url": "https://www.rba.gov.au/media-releases/",
+            "allowed_prefixes": [
+                "https://www.rba.gov.au/media-releases/",
+                "https://www.rba.gov.au/speeches/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "monetary policy",
+                "rates",
+                "financial stability",
+                "payments",
+                "rba"
+            ],
+            "blocked_keywords": [
+                "staff appointment",
+                "museum",
+                "banknote theme"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "RBNZ News",
+            "topic": "macro catalysts",
+            "url": "https://www.rbnz.govt.nz/news-and-events/news",
+            "allowed_prefixes": [
+                "https://www.rbnz.govt.nz/news-and-events/news",
+                "https://www.rbnz.govt.nz/hub/news/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "ocr",
+                "financial stability",
+                "rbnz"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "museum",
+                "school"
+            ],
+            "min_word_count": 150
+        },
+        {
+            "name": "Boston Fed Current Policy Perspectives",
+            "topic": "macro catalysts",
+            "url": "https://www.bostonfed.org/publications/current-policy-perspectives.aspx",
+            "allowed_prefixes": [
+                "https://www.bostonfed.org/publications/current-policy-perspectives",
+                "https://www.bostonfed.org/publications/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "rates",
+                "economy",
+                "expectations",
+                "policy"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "visitor information",
+                "cash services"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "New York Fed Staff Reports",
+            "topic": "market structure",
+            "url": "https://www.newyorkfed.org/research/staff_reports",
+            "allowed_prefixes": [
+                "https://www.newyorkfed.org/research/staff_reports/",
+                "https://www.newyorkfed.org/research/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "market",
+                "liquidity",
+                "treasury",
+                "repo",
+                "inflation",
+                "rates"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "community",
+                "scams"
+            ],
+            "min_word_count": 200
+        },
+        {
+            "name": "Philadelphia Fed The Economy",
+            "topic": "macro catalysts",
+            "url": "https://www.philadelphiafed.org/the-economy",
+            "allowed_prefixes": [
+                "https://www.philadelphiafed.org/the-economy/",
+                "https://www.philadelphiafed.org/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "labor market",
+                "economy",
+                "rates",
+                "growth"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "events",
+                "museum"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "St Louis Fed On the Economy",
+            "topic": "macro catalysts",
+            "url": "https://www.stlouisfed.org/on-the-economy",
+            "allowed_prefixes": [
+                "https://www.stlouisfed.org/on-the-economy",
+                "https://www.stlouisfed.org/"
+            ],
+            "max_links": 5,
+            "required_keywords": [
+                "inflation",
+                "fed",
+                "rates",
+                "economy",
+                "labor market",
+                "growth"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "education",
+                "careers"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "Kansas City Fed Research",
+            "topic": "macro catalysts",
+            "url": "https://www.kansascityfed.org/research/",
+            "allowed_prefixes": [
+                "https://www.kansascityfed.org/research/",
+                "https://www.kansascityfed.org/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "labor market",
+                "financial stability",
+                "economy"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "museum",
+                "teaching"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Richmond Fed Research Publications",
+            "topic": "macro catalysts",
+            "url": "https://www.richmondfed.org/publications/research",
+            "allowed_prefixes": [
+                "https://www.richmondfed.org/publications/research",
+                "https://www.richmondfed.org/publications/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "economy",
+                "policy",
+                "labor market",
+                "financial conditions"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "museum",
+                "classroom"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "ECB Blog",
+            "topic": "macro catalysts",
+            "url": "https://www.ecb.europa.eu/press/blog/html/index.en.html",
+            "allowed_prefixes": [
+                "https://www.ecb.europa.eu/press/blog/",
+                "https://www.ecb.europa.eu/press/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "rates",
+                "financial stability",
+                "ecb"
+            ],
+            "blocked_keywords": [
+                "banknotes",
+                "careers",
+                "legal framework"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Bank of Canada Market Notices Extended",
+            "topic": "market structure",
+            "url": "https://www.bankofcanada.ca/markets/market-notices/",
+            "allowed_prefixes": [
+                "https://www.bankofcanada.ca/markets/",
+                "https://www.bankofcanada.ca/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "market operations",
+                "liquidity",
+                "securities",
+                "auction",
+                "bank of canada"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "student",
+                "currency museum"
+            ],
+            "min_word_count": 130
+        },
+        {
+            "name": "Cleveland Fed Economic Commentary",
+            "topic": "macro catalysts",
+            "url": "https://www.clevelandfed.org/newsroom-and-events/publications/economic-commentary",
+            "allowed_prefixes": [
+                "https://www.clevelandfed.org/publications/economic-commentary/",
+                "https://www.clevelandfed.org/newsroom-and-events/publications/economic-commentary"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "policy",
+                "rates",
+                "economy",
+                "labor market"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "event",
+                "career"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "San Francisco Fed Economic Letter",
+            "topic": "macro catalysts",
+            "url": "https://www.frbsf.org/research-and-insights/publications/economic-letter/",
+            "allowed_prefixes": [
+                "https://www.frbsf.org/research-and-insights/publications/economic-letter/",
+                "https://www.frbsf.org/"
+            ],
+            "max_links": 5,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "rates",
+                "economy",
+                "labor market"
+            ],
+            "blocked_keywords": [
+                "community",
+                "museum",
+                "career"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Dallas Fed Economics",
+            "topic": "macro catalysts",
+            "url": "https://www.dallasfed.org/research/economics",
+            "allowed_prefixes": [
+                "https://www.dallasfed.org/research/",
+                "https://www.dallasfed.org/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "economy",
+                "energy",
+                "rates",
+                "labor market"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "museum",
+                "teacher"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "Atlanta Fed Economy Matters Extended",
+            "topic": "macro catalysts",
+            "url": "https://www.atlantafed.org/blogs/economy-matters",
+            "allowed_prefixes": [
+                "https://www.atlantafed.org/blogs/economy-matters",
+                "https://www.atlantafed.org/"
+            ],
+            "max_links": 5,
+            "required_keywords": [
+                "inflation",
+                "labor market",
+                "economy",
+                "fed",
+                "growth",
+                "policy"
+            ],
+            "blocked_keywords": [
+                "community",
+                "careers",
+                "museum"
+            ],
+            "min_word_count": 160
+        },
+        {
+            "name": "Chicago Fed Insights Extended",
+            "topic": "macro catalysts",
+            "url": "https://www.chicagofed.org/publications/chicago-fed-insights/index",
+            "allowed_prefixes": [
+                "https://www.chicagofed.org/publications/chicago-fed-insights/",
+                "https://www.chicagofed.org/publications/"
+            ],
+            "max_links": 5,
+            "required_keywords": [
+                "inflation",
+                "policy",
+                "economy",
+                "financial conditions",
+                "labor market"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "student",
+                "careers"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "New York Fed Liberty Street Economics",
+            "topic": "market structure",
+            "url": "https://libertystreeteconomics.newyorkfed.org/",
+            "allowed_prefixes": [
+                "https://libertystreeteconomics.newyorkfed.org/"
+            ],
+            "max_links": 5,
+            "required_keywords": [
+                "market",
+                "treasury",
+                "inflation",
+                "rates",
+                "liquidity",
+                "repo"
+            ],
+            "blocked_keywords": [
+                "community",
+                "museum",
+                "student"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Philadelphia Fed Economic Research",
+            "topic": "macro catalysts",
+            "url": "https://www.philadelphiafed.org/the-economy/economic-research",
+            "allowed_prefixes": [
+                "https://www.philadelphiafed.org/the-economy/",
+                "https://www.philadelphiafed.org/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "economy",
+                "policy",
+                "labor market",
+                "growth"
+            ],
+            "blocked_keywords": [
+                "careers",
+                "museum",
+                "event"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "Kansas City Fed Economic Bulletin",
+            "topic": "macro catalysts",
+            "url": "https://www.kansascityfed.org/research/economic-bulletin/",
+            "allowed_prefixes": [
+                "https://www.kansascityfed.org/research/economic-bulletin/",
+                "https://www.kansascityfed.org/research/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "rates",
+                "economy",
+                "labor market",
+                "monetary policy"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "career",
+                "event"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "Richmond Fed Economic Brief",
+            "topic": "macro catalysts",
+            "url": "https://www.richmondfed.org/publications/research/economic_brief",
+            "allowed_prefixes": [
+                "https://www.richmondfed.org/publications/research/economic_brief/",
+                "https://www.richmondfed.org/publications/research/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "economy",
+                "rates",
+                "growth",
+                "policy"
+            ],
+            "blocked_keywords": [
+                "museum",
+                "career",
+                "classroom"
+            ],
+            "min_word_count": 170
+        },
+        {
+            "name": "RBA Speeches",
+            "topic": "macro catalysts",
+            "url": "https://www.rba.gov.au/speeches/",
+            "allowed_prefixes": [
+                "https://www.rba.gov.au/speeches/"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "inflation",
+                "monetary policy",
+                "rates",
+                "financial stability",
+                "rba"
+            ],
+            "blocked_keywords": [
+                "opening remarks",
+                "welcome remarks",
+                "staff appointment"
+            ],
+            "min_word_count": 220
         }
     ]
 }
