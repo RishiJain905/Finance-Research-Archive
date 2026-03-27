@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "The phrase 'AI-Anxiety' is quoted in the summary but does not appear verbatim in the source; source uses 'AI-Anxiety' once in body text but this is editorial language from authors, not a direct quotation",
+    "The statement in why_it_matters that 'The approach to oversold conditions historically increases probability of a technical bounce' is interpretive extrapolation not present in source",
+    "The macro_context claims 'AI-Anxiety returned this week' - this paraphrases source language but adds an assumption about investor psychology not directly stated",
+    "The market_structure_context characterization of 'capitulation dynamics approaching oversold conditions' is interpretive language not present in source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately captures numerical data and factual statements from source (2% decline, 9% off high, 6,550 support level, -7% Communication Services, Claude/Mythos details). However, several interpretive claims in why_it_matters and context fields add analytical framing not explicitly present in source material. The tone of certainty about future market behavior (e.g., 'could signal further downside', 'historically increases probability') goes beyond what the source supports. A human reviewer should verify whether these interpretive additions are appropriate for the archive's standards.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The break below the 6,550 level represents a confirmed technical breakdown. The divergence between equal-weight (-1%) and cap-weighted (-2%) indices, combined with small/midcap relative strength, indicates mega-cap tech has been the primary drag. Daily RSI is approaching 30 but weekly is not yet oversold; expanding daily ranges suggest volatility is increasing, which may precede a technical bounce. The key question per the source is how the market reacts after any relief rally as it tests the broken 6,550 level.",
+    "macro_context": "The Iran conflict escalation over the prior month had been diverting attention from AI concerns. Economic data calendar includes ISM surveys, retail sales, and jobs report (markets closed for Good Friday). Quarter-end rebalancing expected over the next week as March 31 is the final trading day of Q1.",
+    "market_structure_context": "Market structure showing breadth divergence: equal-weight S&P 500 outperformed cap-weighted (-1% vs -2%), and small/midcap indices ended modestly higher, suggesting rotation away from mega-cap names. The index definitively broke below October/November lows around 6,550. Daily RSI is moving toward 30 but weekly is not yet oversold; daily ranges are increasing, indicating heightened volatility."
+  }
+}

@@ -50,6 +50,11 @@ def extract_created_ids(output: str) -> list[str]:
     return [item for item in data if isinstance(item, str) and item.strip()]
 
 
+def file_still_in_raw(record_id: str) -> bool:
+    raw_path = BASE_DIR / "data" / "raw" / f"{record_id}.txt"
+    return raw_path.exists()
+
+
 def main() -> None:
     python_cmd = sys.executable
 
@@ -60,21 +65,32 @@ def main() -> None:
 
     record_ids = extract_created_ids(ingest_output)
 
+    run_command(
+        [python_cmd, "scripts/filter_raw_records.py"],
+        "raw record filtering"
+    )
+
     if not record_ids:
         print("\nNo new or updated records to process.")
         return
 
+    filtered_record_ids = [record_id for record_id in record_ids if file_still_in_raw(record_id)]
+
+    if not filtered_record_ids:
+        print("\nNo records survived filtering.")
+        return
+
     print("\nRecords to process:")
-    for record_id in record_ids:
+    for record_id in filtered_record_ids:
         print(f"- {record_id}")
 
-    for record_id in record_ids:
+    for record_id in filtered_record_ids:
         run_command(
             [python_cmd, "scripts/process_record.py", record_id],
             f"process_record ({record_id})"
         )
 
-    print("\nIngestion + processing pipeline finished.")
+    print("\nIngestion + filtering + processing pipeline finished.")
 
 
 if __name__ == "__main__":
