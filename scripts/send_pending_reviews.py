@@ -2,15 +2,33 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+import hashlib
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 
 
+def build_review_fingerprint(record: dict) -> str:
+    relevant = {
+        "title": record.get("title", ""),
+        "summary": record.get("summary", ""),
+        "issues_found": record.get("llm_review", {}).get("issues_found", []),
+        "verdict": record.get("llm_review", {}).get("verdict", ""),
+        "notes": record.get("human_review", {}).get("notes", "")
+    }
+    raw = json.dumps(relevant, sort_keys=True)
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+
 def load_json_file(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def save_json_file(path: Path, data: dict) -> None:
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def should_send_review(record: dict) -> bool:
@@ -41,10 +59,11 @@ def main() -> None:
             continue
 
         record_id = record.get("id") or record_path.stem
-        telegram_sent = record.get("telegram_review_sent", False)
+        current_review_fp = build_review_fingerprint(record)
+        last_review_fp = record.get("telegram_review_fingerprint", "")
 
-        if telegram_sent:
-            print(f"Already sent to Telegram: {record_id}")
+        if record.get("telegram_review_sent", False) and last_review_fp == current_review_fp:
+            print(f"Already sent to Telegram with same review content: {record_id}")
             continue
 
         print(f"Sending review to Telegram: {record_id}")
@@ -67,8 +86,8 @@ def main() -> None:
             continue
 
         record["telegram_review_sent"] = True
-        with record_path.open("w", encoding="utf-8") as f:
-            json.dump(record, f, indent=2, ensure_ascii=False)
+        record["telegram_review_fingerprint"] = current_review_fp
+        save_json_file(record_path, record)
 
         sent_any = True
 

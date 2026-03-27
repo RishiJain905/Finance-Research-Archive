@@ -16,6 +16,23 @@ MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 DEFAULT_MAX_LINKS_PER_TARGET = 5
 MAX_TITLE_SLUG_LENGTH = 60
 
+def normalize_title(title: str) -> str:
+    title = title.lower().strip()
+    title = re.sub(r"[^a-z0-9\s]", " ", title)
+    title = re.sub(r"\s+", " ", title)
+    return title.strip()
+
+
+def title_fingerprint(title: str) -> str:
+    normalized = normalize_title(title)
+    return hashlib.sha1(normalized.encode("utf-8")).hexdigest()
+
+
+def content_fingerprint(text: str) -> str:
+    normalized = text.lower().strip()
+    normalized = re.sub(r"\s+", " ", normalized)
+    return hashlib.sha1(normalized.encode("utf-8")).hexdigest()
+
 
 def slugify(value: str) -> str:
     value = value.strip().lower()
@@ -158,10 +175,12 @@ def main() -> None:
     config = load_json(CONFIG_PATH, {"targets": []})
     manifest = load_json(
         MANIFEST_PATH,
-        {
+{
             "seen_urls": {},
             "record_map": {},
-            "record_rules": {}
+            "record_rules": {},
+            "title_fingerprints": {},
+            "content_fingerprints": {}
         }
     )
 
@@ -221,6 +240,19 @@ def main() -> None:
             soup = BeautifulSoup(article_html, "html.parser")
             article_title = sanitize_title(extract_title(soup))
             record_id = build_record_id(name, article_title, article_url)
+            title_fp = title_fingerprint(article_title)
+            content_fp = content_fingerprint(article_text[:5000])
+
+            existing_title_record = manifest["title_fingerprints"].get(title_fp)
+            existing_content_record = manifest["content_fingerprints"].get(content_fp)
+
+            if existing_title_record and existing_title_record != record_id:
+                print(f"    Duplicate by title fingerprint, skipping. Existing: {existing_title_record}")
+                continue
+
+            if existing_content_record and existing_content_record != record_id:
+                print(f"    Duplicate by content fingerprint, skipping. Existing: {existing_content_record}")
+                continue
 
             output_path = RAW_DIR / f"{record_id}.txt"
             output_text = (
@@ -246,6 +278,8 @@ def main() -> None:
                 "target_name": name,
                 "topic": topic
             }
+            manifest["title_fingerprints"][title_fp] = record_id
+            manifest["content_fingerprints"][content_fp] = record_id
 
             created.append(record_id)
             print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
