@@ -16,6 +16,8 @@ jobs:
       OPENAI_BASE_URL: https://api.minimax.io/v1
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       MINIMAX_MODEL: MiniMax-M2.7
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
       - name: Check out repository
@@ -32,6 +34,9 @@ jobs:
       - name: Run ingestion and processing pipeline
         run: python scripts/run_ingest_and_process.py
 
+      - name: Send pending review items to Telegram
+        run: python scripts/send_pending_reviews.py
+
       - name: Configure git author
         run: |
           git config user.name "github-actions[bot]"
@@ -39,7 +44,7 @@ jobs:
 
       - name: Commit generated files if changed
         run: |
-          git add data/ config/
+          git add data/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

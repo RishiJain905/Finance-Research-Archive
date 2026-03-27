@@ -1,0 +1,1 @@
+from scripts.telegram_callback_server import app
