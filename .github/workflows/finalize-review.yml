@@ -1,0 +1,47 @@
+name: Finalize Review Decision
+
+on:
+  workflow_dispatch:
+    inputs:
+      record_id:
+        description: "Record ID to finalize"
+        required: true
+        type: string
+      decision:
+        description: "Human decision: approve or reject"
+        required: true
+        type: string
+
+jobs:
+  finalize-review:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Finalize record
+        run: python scripts/finalize_review.py "${{ inputs.record_id }}" "${{ inputs.decision }}"
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit finalized review if changed
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Finalize review: ${{ inputs.record_id }} (${{ inputs.decision }})"
+            git push
+          fi

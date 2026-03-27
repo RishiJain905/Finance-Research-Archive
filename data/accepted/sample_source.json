@@ -1,62 +1,55 @@
 {
   "id": "sample_source",
-  "created_at": "2026-03-27T12:45:53.206096+00:00",
+  "created_at": "2026-03-27T21:00:00Z",
   "status": "accepted",
   "topic": "macro catalysts",
-  "event_type": "monetary_policy",
-  "title": "Fed Signals Uneven Inflation Progress; Treasury Yields and Options Positioning Under Watch",
+  "event_type": "FOMC",
+  "title": "Federal Reserve signals policy uncertainty remains elevated",
   "source": {
-    "name": "",
-    "url": "",
-    "published_at": "",
-    "source_type": "unknown"
+    "name": "Federal Reserve Press Releases",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+    "published_at": "2026-03-27T20:30:00Z",
+    "source_type": "press_release"
   },
-  "summary": "Federal Reserve officials indicated that progress on inflation remains uneven, signaling ongoing uncertainty in monetary policy trajectory. Recent Treasury yield movements reflect market participants adjusting their expectations for future rate policy. Additionally, ETF flow trends and options positioning are being monitored as indicators of broader risk appetite shifts.",
+  "summary": "Federal Reserve communications suggest policymakers still see inflation progress as uneven. Markets may continue repricing rate expectations as new macro data arrives.",
   "key_points": [
-    "Fed officials view inflation progress as uneven, suggesting continued policy caution",
-    "Treasury yield movements indicate markets are repricing rate policy expectations",
-    "Market participants are monitoring ETF flows for risk appetite signals",
-    "Options positioning is being watched as an indicator of market sentiment",
-    "No specific Fed official names or statements provided",
-    "No specific yield levels, ETF flow data, or options positioning figures cited"
+    "Policy language remained cautious",
+    "Inflation progress was described as uneven",
+    "Rate expectations may stay sensitive to incoming data"
   ],
-  "why_it_matters": "The Fed's uneven inflation assessment suggests the central bank remains data-dependent and may maintain a cautious stance on rate adjustments. Treasury yield movements reflecting changing expectations can impact borrowing costs across the economy. ETF flows and options positioning, while not quantified, are commonly used as proxies for institutional risk sentiment and potential market direction.",
+  "why_it_matters": "This matters because Fed tone can affect yields, risk appetite, and positioning across equities, bonds, and other macro-sensitive assets.",
   "market_impact": {
     "asset_classes": [
+      "equities",
       "bonds",
-      "equities"
+      "fx"
     ],
     "directional_bias": "mixed",
-    "confidence": 2
+    "confidence": 6
   },
-  "macro_context": "Fed policy uncertainty remains elevated as officials assess uneven inflation progress. Markets are actively repricing rate expectations based on yield movements, suggesting potential for continued volatility in rate-sensitive assets.",
-  "market_structure_context": "ETF flow trends and options positioning are referenced as structural market indicators. These metrics can provide insights into institutional positioning and risk management behavior, though no specific data points are provided.",
+  "macro_context": "The market is still highly sensitive to inflation and labor data because both affect expected policy paths.",
+  "market_structure_context": "Treasury yields and rate-sensitive positioning can move quickly when Fed communication changes expected policy timing.",
   "important_numbers": [],
   "tags": [
-    "federal_reserve",
-    "inflation",
-    "monetary_policy",
-    "treasury_yields",
-    "rate_expectations",
-    "etf_flows",
-    "options_positioning",
-    "risk_appetite"
+    "fed",
+    "rates",
+    "macro",
+    "policy"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 4,
-    "verdict": "accept",
+    "initial_confidence": 7,
+    "verification_confidence": 5,
+    "verdict": "review",
     "issues_found": [
-      "Source contains no specific data points (no named officials, no yield levels, no flow figures, no positioning data)",
-      "Source lacks publication date and source attribution",
-      "Language is extremely generic, limiting actionable insights"
+      "Market impact language may be slightly too broad",
+      "Source may need human confirmation for interpretation strength"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
-    "notes": ""
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "raw_text_path": "data/raw/sample_source.txt",
-  "notes": "Source is severely limited in informational content. Contains only generic observations about Fed policy stance and market monitoring activities without any specific data points, named sources, or quantifiable metrics. Confidence severely limited by lack of specifics. Cannot verify any claims without additional sourcing. Consider this a placeholder requiring supplementary data for meaningful analysis."
+  "notes": ""
 }
