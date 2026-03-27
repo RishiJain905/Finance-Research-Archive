@@ -243,7 +243,11 @@ def main() -> None:
             print(f"- {record_id}")
     else:
         print("- none")
+    return created
 
 
 if __name__ == "__main__":
-    main()
+    created = main()
+    print("\nJSON_OUTPUT_START")
+    print(json.dumps(created))
+    print("JSON_OUTPUT_END")
