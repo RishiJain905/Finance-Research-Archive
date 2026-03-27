@@ -1,0 +1,67 @@
+{
+    "series": [
+        {
+            "id": "sofr",
+            "name": "SOFR",
+            "topic": "market structure",
+            "source": "fred",
+            "series_code": "SOFR",
+            "enabled": true
+        },
+        {
+            "id": "fed_funds",
+            "name": "Effective Federal Funds Rate",
+            "topic": "macro catalysts",
+            "source": "fred",
+            "series_code": "DFF",
+            "enabled": true
+        },
+        {
+            "id": "iorb",
+            "name": "Interest on Reserve Balances",
+            "topic": "market structure",
+            "source": "fred",
+            "series_code": "IORB",
+            "enabled": true
+        },
+        {
+            "id": "2y_yield",
+            "name": "2-Year Treasury Yield",
+            "topic": "macro catalysts",
+            "source": "fred",
+            "series_code": "DGS2",
+            "enabled": true
+        },
+        {
+            "id": "10y_yield",
+            "name": "10-Year Treasury Yield",
+            "topic": "macro catalysts",
+            "source": "fred",
+            "series_code": "DGS10",
+            "enabled": true
+        }
+    ],
+    "datasets": [
+        {
+            "id": "treasury_auctions",
+            "name": "Treasury Securities Auctions Data",
+            "topic": "market structure",
+            "source": "treasury_fiscal_data",
+            "enabled": true
+        },
+        {
+            "id": "upcoming_treasury_auctions",
+            "name": "Upcoming Treasury Auctions",
+            "topic": "market structure",
+            "source": "treasury_fiscal_data",
+            "enabled": true
+        },
+        {
+            "id": "repo_operations",
+            "name": "NY Fed Repo Operations",
+            "topic": "market structure",
+            "source": "nyfed",
+            "enabled": true
+        }
+    ]
+}
