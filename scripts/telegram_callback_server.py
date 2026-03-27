@@ -58,6 +58,7 @@ def trigger_github_workflow(record_id: str, decision: str) -> None:
 @app.route("/telegram/webhook", methods=["POST"])
 def telegram_webhook():
     update = request.get_json(silent=True) or {}
+    print("Incoming Telegram update:", update)
 
     callback_query = update.get("callback_query")
     if not callback_query:
@@ -77,8 +78,10 @@ def telegram_webhook():
     try:
         trigger_github_workflow(record_id, decision)
         result_text = f"{decision.title()} sent for {record_id}"
+        print(result_text)
     except Exception as e:
         result_text = f"Failed for {record_id}: {e}"
+        print(result_text)
 
     bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
     if bot_token and callback_id:
@@ -94,7 +97,6 @@ def telegram_webhook():
         )
 
     return jsonify({"ok": True, "message": result_text}), 200
-
 
 @app.route("/health", methods=["GET"])
 def health():
