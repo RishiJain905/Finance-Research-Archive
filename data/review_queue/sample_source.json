@@ -1,61 +1,64 @@
 {
   "id": "sample_source",
-  "created_at": "2026-03-26T20:19:37.086443+00:00",
+  "created_at": "2026-03-27T01:46:58.862915+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
-  "event_type": "policy_signal",
+  "event_type": "unknown",
   "title": "Fed Signals Uneven Inflation Progress; Markets Adjust Rate Expectations",
   "source": {
     "name": "",
     "url": "",
     "published_at": "",
-    "source_type": ""
+    "source_type": "unknown"
   },
-  "summary": "Federal Reserve officials indicated that progress on inflation remains uneven, suggesting the central bank remains cautious about the inflation trajectory. Recent Treasury yield movements imply markets are repricing expectations for future rate policy in response to this uncertain outlook. Market participants are also monitoring ETF flow trends and options positioning as indicators of broader risk appetite shifts.",
+  "summary": "Federal Reserve officials have signaled that inflation progress remains uneven, suggesting a cautious approach to near-term rate cuts. Recent Treasury yield movements indicate that markets are recalibrating expectations for future monetary policy. Market participants are closely monitoring ETF flow trends and options positioning as potential indicators of broader risk appetite shifts.",
   "key_points": [
-    "Fed officials signaled that inflation progress remains uneven",
-    "Treasury yield movements suggest markets are adjusting rate policy expectations",
-    "ETF flow trends are being watched as a risk appetite indicator",
-    "Options positioning is being monitored for broader market sentiment signals"
+    "Fed officials signal uneven progress on inflation",
+    "Markets adjusting expectations for future rate policy based on Treasury yield movements",
+    "ETF flow trends being monitored as risk appetite indicator",
+    "Options positioning watched for broader risk sentiment signals",
+    "No specific data points or figures provided in this source"
   ],
-  "why_it_matters": "The 'why_it_matters' section characterizes yield movements as 'observable' and describes a clear repricing picture, but the source only mentions movements in general terms without specifying actual yield changes or the degree of repricing. This framing may slightly overstate the concrete nature of the evidence.",
+  "why_it_matters": "The uneven inflation signal suggests the Fed is maintaining a cautious stance on monetary policy adjustments. Treasury yield movements reflect how market participants are repricing rate expectations, which affects borrowing costs and asset valuations. Monitoring ETF flows and options positioning provides insight into how investors are positioning, beyond stated views.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "equities"
+      "equities",
+      "volatility"
     ],
     "directional_bias": "mixed",
     "confidence": 3
   },
-  "macro_context": "Fed officials continue to assess inflation progress as uneven, maintaining a cautious stance on monetary easing. Markets are responding by adjusting rate expectations, reflected in Treasury yield movements.",
-  "market_structure_context": "ETF flow trends and options positioning are cited as additional indicators market participants use to gauge risk appetite shifts, suggesting structural demand/supply dynamics beyond fundamental news are being monitored.",
+  "macro_context": "Fed policy direction remains a key focus for markets. The uneven inflation signal suggests uncertainty about the pace of disinflation, which could affect near-term rate expectations. Market-based expectations continue to adjust based on incoming economic data.",
+  "market_structure_context": "ETF flow trends and options positioning are cited as indicators of risk appetite shifts, suggesting these market structure metrics may serve as sentiment indicators. This reflects attention to positioning data as potential leading indicators.",
   "important_numbers": [],
   "tags": [
-    "fed",
+    "federal-reserve",
     "inflation",
-    "treasury_yields",
-    "rate_policy",
-    "etf_flows",
-    "options_positioning",
-    "risk_appetite"
+    "rate-expectations",
+    "treasury-yields",
+    "etf-flows",
+    "options-positioning",
+    "risk-appetite"
   ],
   "llm_review": {
     "initial_confidence": 3,
     "verification_confidence": 4,
     "verdict": "review",
     "issues_found": [
-      "Source is extremely thin general market commentary with no named officials, dates, or numerical data",
-      "No specific Treasury yield levels or magnitudes of yield movements provided",
-      "No actual ETF flow data or options positioning figures cited",
-      "Source lacks specificity needed for meaningful verification or archival value",
-      "Market impact confidence score of 3 is appropriate but asset class attribution to 'bonds' and 'equities' is inferred rather than stated"
+      "Source is highly general with no specific data points, named officials, dates, or concrete figures",
+      "Summary includes interpretation ('cautious approach to near-term rate cuts') not explicitly stated in source - reasonable inference but not directly supported",
+      "Macro context contains unsupported inference ('disinflation trend may be stalling') - source only mentions 'uneven progress', not a stalling trend",
+      "Why_it_matters section extends beyond source with interpretive claims about 'higher-for-longer' stance",
+      "Source metadata entirely missing (name, URL, published_at, source_type)",
+      "Low confidence in market_impact assessment (confidence: 3) due to lack of specific directional data"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Source quality is too low to accept without human judgment. The record contains no false claims and all statements are technically supported by the source, but the source itself is a generic 2-3 sentence market summary lacking dates, named officials, yield levels, or any numerical data. Human review is needed to determine whether thin general commentary with no verifiable specifics meets archival standards for this research project."
+    "notes": "While the summary is largely faithful to the source, the macro_context and why_it_matters sections contain interpretive claims that extend beyond what the source explicitly states. The 'disinflation trend may be stalling' claim and 'higher-for-longer' characterization are inferences rather than direct readings. Given the thinness of the source and these interpretive elements, human review is needed to assess whether the record's framing appropriately represents the source's limited scope."
   },
   "raw_text_path": "data/raw/sample_source.txt",
-  "notes": "Source is a thin general market commentary lacking specificity. No named Fed officials, no dates, no actual yield levels, no numerical data on ETF flows or options positioning. Text appears to be a brief market summary rather than a substantive research source. Confidence kept low due to lack of verifiable detail."
+  "notes": "Source is thin and general in nature. Provides directional context about Fed stance and market monitoring activities but lacks specific data points, figures, or temporal specificity. Confidence lowered accordingly. Useful as contextual background but insufficient for granular analysis."
 }
