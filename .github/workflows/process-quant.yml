@@ -1,0 +1,56 @@
+name: Quant Research Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 13 * * *"
+
+jobs:
+  ingest-and-process-quant:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    env:
+      OPENAI_BASE_URL: https://api.minimax.io/v1
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_MODEL: MiniMax-M2.7
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+
+    concurrency:
+      group: quant-research-pipeline
+      cancel-in-progress: false
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run quant pipeline
+        run: python scripts/run_quant_pipeline.py
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit generated files if changed
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Run quant research pipeline"
+            git pull --rebase origin main
+            git push
+          fi
