@@ -1,38 +1,12 @@
-name: Process Finance Record
+name: Finance Research Pipeline
 
 on:
   workflow_dispatch:
-    inputs:
-      record_id:
-        description: "Record ID to process, for example sample_source"
-        required: true
-        type: string
   schedule:
     - cron: "0 */12 * * *"
 
 jobs:
-  resolve-scheduled-records:
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
-    outputs:
-      record_ids: ${{ steps.records.outputs.record_ids }}
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Read scheduled record ids
-        id: records
-        run: |
-          echo "record_ids=$(python scripts/get_scheduled_records.py)" >> "$GITHUB_OUTPUT"
-
-  process-manual-record:
-    if: github.event_name == 'workflow_dispatch'
+  ingest-and-process:
     runs-on: ubuntu-latest
 
     permissions:
@@ -53,58 +27,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: python -m pip install -r requirements.txt
 
-      - name: Process record
-        run: python scripts/process_record.py "${{ inputs.record_id }}"
-
-      - name: Configure git author
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit generated files if changed
-        run: |
-          git add data/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Process finance record: ${{ inputs.record_id }}"
-            git push
-          fi
-
-  process-scheduled-records:
-    if: github.event_name == 'schedule'
-    needs: resolve-scheduled-records
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    strategy:
-      fail-fast: false
-      matrix:
-        record_id: ${{ fromJson(needs.resolve-scheduled-records.outputs.record_ids) }}
-
-    env:
-      OPENAI_BASE_URL: https://api.minimax.io/v1
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      MINIMAX_MODEL: MiniMax-M2.7
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Process record
-        run: python scripts/process_record.py "${{ matrix.record_id }}"
+      - name: Run ingestion and processing pipeline
+        run: python scripts/run_ingest_and_process.py
 
       - name: Configure git author
         run: |
@@ -113,11 +39,10 @@ jobs:
 
       - name: Commit generated files if changed
         run: |
-          git add data/
+          git add data/ config/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Process finance record: ${{ matrix.record_id }}"
-            git pull --rebase origin main
+            git commit -m "Run finance research pipeline"
             git push
           fi
