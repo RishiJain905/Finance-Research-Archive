@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly a placeholder with no actual data",
+    "Contains no auction metrics, bid-to-cover ratios, yields, or participation data",
+    "Source explicitly states it needs to be replaced with real data",
+    "No market structure or macro catalyst information can be derived",
+    "Archive value is effectively zero until replaced with actual data",
+    "The record itself correctly identifies these limitations but remains in review_queue status"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is accurate and honest about the source's limitations. No interpretation or human judgment is needed—the source explicitly states it is a placeholder with no usable data.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a placeholder snapshot for Treasury Securities Auctions Data from treasury_fiscal_data dated 2026-03-28. The dataset contains no actual auction data and explicitly states it needs to be replaced with real dataset or API fetches. No substantive treasury auction information is available in this source.",
+    "why_it_matters": "This source cannot be used for any market structure analysis of Treasury auctions. It contains no actual data on auction sizes, participation, yields, or bidding patterns that would inform understanding of Treasury market structure or debt issuance dynamics. This record should be rejected and replaced when actual data becomes available.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

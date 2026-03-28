@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 9,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains no actual data - only explicit placeholder text",
+    "Record correctly identifies source as placeholder with verification_confidence: 0",
+    "The 'event_type' field is set to 'unknown' which is appropriate given no data",
+    "All claims in the record are supported by the source text",
+    "Record appropriately notes 'requires replacement with real data source before archival'"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is explicitly a placeholder with zero archival value. While the research record itself is accurately constructed and makes no unsupported claims, the underlying source cannot be used for any research or RAG purposes. Human decision needed on whether to: (1) reject this source entry entirely and flag for data engineering, or (2) keep this record as a 'pending' placeholder marker in the archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
