@@ -16,6 +16,20 @@ MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 DEFAULT_MAX_LINKS_PER_TARGET = 5
 MAX_TITLE_SLUG_LENGTH = 60
 
+
+def ensure_manifest_shape(manifest: dict) -> dict:
+    if not isinstance(manifest, dict):
+        manifest = {}
+
+    manifest.setdefault("seen_urls", {})
+    manifest.setdefault("record_map", {})
+    manifest.setdefault("record_rules", {})
+    manifest.setdefault("title_fingerprints", {})
+    manifest.setdefault("content_fingerprints", {})
+
+    return manifest
+
+
 def normalize_title(title: str) -> str:
     title = title.lower().strip()
     title = re.sub(r"[^a-z0-9\s]", " ", title)
@@ -169,13 +183,13 @@ def build_record_id(target_name: str, article_title: str, article_url: str) -> s
     return f"{target_slug}_{title_slug}_{url_hash}"
 
 
-def main() -> None:
+def main() -> list[str]:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
     config = load_json(CONFIG_PATH, {"targets": []})
     manifest = load_json(
         MANIFEST_PATH,
-{
+        {
             "seen_urls": {},
             "record_map": {},
             "record_rules": {},
@@ -183,6 +197,7 @@ def main() -> None:
             "content_fingerprints": {}
         }
     )
+    manifest = ensure_manifest_shape(manifest)
 
     default_max_links = config.get("max_links_per_target", DEFAULT_MAX_LINKS_PER_TARGET)
     if not isinstance(default_max_links, int) or default_max_links < 1:
@@ -240,6 +255,7 @@ def main() -> None:
             soup = BeautifulSoup(article_html, "html.parser")
             article_title = sanitize_title(extract_title(soup))
             record_id = build_record_id(name, article_title, article_url)
+
             title_fp = title_fingerprint(article_title)
             content_fp = content_fingerprint(article_text[:5000])
 
