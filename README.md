@@ -90,3 +90,106 @@ flowchart TD
 
     Z -->|approve| J
     Z -->|reject| K
+
+
+
+
+---
+
+# Workflow Architecture Appendix
+
+This section explains the three main GitHub Actions workflows in the repo and visually shows how records move through the system.
+
+The repo currently has three main automation workflows:
+
+- **Article Research Pipeline**
+- **Quant Research Pipeline**
+- **Finalize Review Decision**
+
+Each one has a different job in the archive lifecycle.
+
+---
+
+## 1. Article Research Pipeline
+
+**Workflow file:** `.github/workflows/process-articles.yml`
+
+This workflow runs on:
+- manual trigger
+- schedule every 2 hours
+
+At a high level it:
+
+1. ingests article-style sources
+2. filters weak/noisy raw records
+3. processes each surviving record
+4. sends any review-needed records to Telegram
+5. commits resulting archive changes back to GitHub
+
+This workflow calls:
+- `scripts/run_ingest_and_process.py`
+- `scripts/send_pending_reviews.py` :contentReference[oaicite:3]{index=3}
+
+### What happens inside `run_ingest_and_process.py`
+
+That script does:
+
+1. `scripts/ingest_sources.py`
+2. `scripts/filter_raw_records.py`
+3. for each surviving record:
+   - `scripts/process_record.py <record_id>`
+
+Then `process_record.py` does:
+
+1. `scripts/run_summarizer.py <record_id>`
+2. `scripts/run_verifier.py <record_id>`
+3. `scripts/route_record.py <record_id>` :contentReference[oaicite:4]{index=4}
+
+### Where AI steps in
+
+The AI steps are:
+
+- **Summarization:** `run_summarizer.py`
+  - reads raw source text
+  - loads the summarize prompt + schema
+  - calls MiniMax
+  - writes the structured research record
+
+- **Verification:** `run_verifier.py`
+  - reads original source text + generated record
+  - calls MiniMax again
+  - decides whether the record should be accepted, reviewed, or rejected
+
+So the article workflow uses MiniMax twice on each kept record:
+- once to generate the research record
+- once to verify the research record against the source :contentReference[oaicite:5]{index=5}
+
+### Article pipeline diagram
+
+```mermaid
+flowchart TD
+    A[GitHub Actions: process-articles.yml] --> B[run_ingest_and_process.py]
+    B --> C[ingest_sources.py]
+    C --> D[data/raw]
+    B --> E[filter_raw_records.py]
+    E -->|weak/noisy| F[data/filtered_out]
+    E -->|survives| G[process_record.py]
+
+    G --> H[run_summarizer.py]
+    H --> H1[MiniMax summarization]
+    H1 --> I[research record JSON]
+
+    G --> J[run_verifier.py]
+    J --> J1[MiniMax verification]
+    J1 --> K[verified verdict]
+
+    G --> L[route_record.py]
+    L -->|accepted| M[data/accepted]
+    L -->|review_queue| N[data/review_queue]
+    L -->|rejected| O[data/rejected]
+
+    A --> P[send_pending_reviews.py]
+    P --> Q[send_review_to_telegram.py]
+    Q --> R[Telegram review messages]
+
+    A --> S[git add / commit / push data]
