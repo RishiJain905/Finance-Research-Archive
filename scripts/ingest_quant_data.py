@@ -44,7 +44,7 @@ def fetch_fred_observations(series_code: str, api_key: str) -> dict:
         "api_key": api_key,
         "file_type": "json",
         "sort_order": "desc",
-        "limit": 5
+        "limit": 10
     }
 
     response = requests.get(FRED_OBSERVATIONS_URL, params=params, timeout=30)
@@ -61,12 +61,29 @@ def extract_recent_valid_observations(payload: dict) -> list[dict]:
         if value == ".":
             continue
 
+        try:
+            numeric_value = float(value)
+        except ValueError:
+            continue
+
         cleaned.append({
             "date": obs.get("date", ""),
-            "value": value
+            "value": numeric_value
         })
 
     return cleaned[:5]
+
+
+def compute_direction(latest: float, previous: float) -> str:
+    if latest > previous:
+        return "up"
+    if latest < previous:
+        return "down"
+    return "flat"
+
+
+def format_number(value: float) -> str:
+    return f"{value:.4f}".rstrip("0").rstrip(".")
 
 
 def build_fred_snapshot(series_item: dict, api_key: str) -> tuple[str, str]:
@@ -98,23 +115,45 @@ def build_fred_snapshot(series_item: dict, api_key: str) -> tuple[str, str]:
         f"SNAPSHOT_DATE: {stamp}",
         "",
         f"LATEST_OBSERVATION_DATE: {latest['date']}",
-        f"LATEST_OBSERVATION_VALUE: {latest['value']}",
+        f"LATEST_OBSERVATION_VALUE: {format_number(latest['value'])}",
     ]
 
     if previous:
-        content_lines.append(f"PREVIOUS_OBSERVATION_DATE: {previous['date']}")
-        content_lines.append(f"PREVIOUS_OBSERVATION_VALUE: {previous['value']}")
+        absolute_change = latest["value"] - previous["value"]
+        direction = compute_direction(latest["value"], previous["value"])
+
+        content_lines.extend([
+            f"PREVIOUS_OBSERVATION_DATE: {previous['date']}",
+            f"PREVIOUS_OBSERVATION_VALUE: {format_number(previous['value'])}",
+            f"ABSOLUTE_CHANGE: {format_number(absolute_change)}",
+            f"DIRECTION: {direction}"
+        ])
+    else:
+        content_lines.extend([
+            "PREVIOUS_OBSERVATION_DATE: unknown",
+            "PREVIOUS_OBSERVATION_VALUE: unknown",
+            "ABSOLUTE_CHANGE: unknown",
+            "DIRECTION: unknown"
+        ])
 
     content_lines.append("")
     content_lines.append("RECENT_OBSERVATIONS:")
 
     for obs in recent:
-        content_lines.append(f"- {obs['date']}: {obs['value']}")
+        content_lines.append(f"- {obs['date']}: {format_number(obs['value'])}")
 
     content_lines.append("")
-    content_lines.append(
-        f"This is a quantitative snapshot for the FRED series {series_item['series_code']} ({series_item['name']})."
-    )
+    content_lines.append("QUANT_SUMMARY:")
+    if previous:
+        content_lines.append(
+            f"{series_item['name']} latest value is {format_number(latest['value'])} on {latest['date']}, "
+            f"versus {format_number(previous['value'])} on {previous['date']}, "
+            f"for a change of {format_number(latest['value'] - previous['value'])} ({direction})."
+        )
+    else:
+        content_lines.append(
+            f"{series_item['name']} latest value is {format_number(latest['value'])} on {latest['date']}."
+        )
 
     return record_id, "\n".join(content_lines)
 
