@@ -176,6 +176,14 @@ def evaluate_article_record(text: str, rules: dict, metadata: dict | None = None
     if page_type in CONTAINER_PAGE_TYPES:
         reasons.append("non_article_page_type")
 
+    allowed_page_types = [
+        page_type_name.strip().lower()
+        for page_type_name in rules.get("allowed_page_types", [])
+        if isinstance(page_type_name, str) and page_type_name.strip()
+    ]
+    if allowed_page_types and page_type and page_type not in allowed_page_types:
+        reasons.append("page_type_not_allowed")
+
     expected_language = rules.get("expected_language", "").strip().lower()
     detected_language = metadata.get("DETECTED_LANGUAGE", "").strip().lower()
     if expected_language and detected_language and detected_language not in {expected_language, "unknown"}:

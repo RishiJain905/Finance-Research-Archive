@@ -44,6 +44,17 @@ MAIN_CONTENT_SELECTORS = [
 ]
 
 CONTAINER_PAGE_TYPES = {"homepage", "navigation_page", "listing_page", "search_page"}
+DATA_RELEASE_HINTS = [
+    "gross domestic product",
+    "consumer price index",
+    "producer price index",
+    "employment situation",
+    "retail sales",
+    "personal income",
+    "industrial production",
+    "estimate",
+    "news release",
+]
 
 
 def ensure_manifest_shape(manifest: dict) -> dict:
@@ -354,6 +365,7 @@ def detect_language(text: str) -> str:
 def classify_page_type(url: str, title: str, text: str, published_at: str) -> str:
     lower_text = text.lower()
     lower_title = title.lower()
+    lower_url = url.lower()
     parsed = urlparse(url)
     path = parsed.path.lower()
     clean_path = path.strip("/")
@@ -395,6 +407,20 @@ def classify_page_type(url: str, title: str, text: str, published_at: str) -> st
 
     if not published_at and listing_hits >= 1:
         return "listing_page"
+
+    article_signal_text = " ".join([lower_url, lower_title, lower_text[:1000]])
+
+    if "market notice" in article_signal_text:
+        return "market_notice"
+
+    if any(token in article_signal_text for token in ["speech", "testimony", "remarks"]):
+        return "speech"
+
+    if any(token in article_signal_text for token in ["press release", "pressreleases", "news release"]):
+        return "press_release"
+
+    if any(token in article_signal_text for token in DATA_RELEASE_HINTS):
+        return "data_release"
 
     return "article"
 

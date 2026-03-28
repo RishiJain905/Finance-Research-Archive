@@ -37,6 +37,10 @@ def save_json_file(path: Path, data: dict) -> None:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+def preferred_source_url(metadata: dict) -> str:
+    return metadata.get("CANONICAL_URL") or metadata.get("ARTICLE_URL") or metadata.get("URL", "")
+
+
 def build_record_template(schema: dict, metadata: dict, raw_file_path: Path | None = None, raw_file_stem: str | None = None) -> dict:
     record = deepcopy(schema)
     if raw_file_path is None and raw_file_stem is None:
@@ -50,7 +54,7 @@ def build_record_template(schema: dict, metadata: dict, raw_file_path: Path | No
     record["status"] = "review_queue"
     record["topic"] = metadata.get("TOPIC", record.get("topic", ""))
     record["source"]["name"] = metadata.get("TARGET", record["source"].get("name", ""))
-    record["source"]["url"] = metadata.get("ARTICLE_URL") or metadata.get("URL", "")
+    record["source"]["url"] = preferred_source_url(metadata)
     record["source"]["published_at"] = metadata.get("PUBLISHED_AT", "")
     record["source"]["source_type"] = metadata.get("PAGE_TYPE", "")
     record["llm_review"]["verdict"] = "pending"
@@ -62,7 +66,7 @@ def hydrate_generated_record(record: dict, metadata: dict) -> dict:
     record.setdefault("source", {})
     record["topic"] = record.get("topic") or metadata.get("TOPIC", "")
     record["source"]["name"] = record["source"].get("name") or metadata.get("TARGET", "")
-    record["source"]["url"] = record["source"].get("url") or metadata.get("ARTICLE_URL") or metadata.get("URL", "")
+    record["source"]["url"] = record["source"].get("url") or preferred_source_url(metadata)
     record["source"]["published_at"] = record["source"].get("published_at") or metadata.get("PUBLISHED_AT", "")
     record["source"]["source_type"] = record["source"].get("source_type") or metadata.get("PAGE_TYPE", "")
     return record

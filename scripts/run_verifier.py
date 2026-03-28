@@ -16,6 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 PROMPTS_DIR = BASE_DIR / "prompts"
 RAW_DIR = BASE_DIR / "data" / "raw"
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
+INGESTION_MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 
 
 def load_text_file(path: Path) -> str:
@@ -35,6 +36,68 @@ def save_json_file(path: Path, data: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def normalize_page_types(values: list[str] | None) -> list[str]:
+    if not values:
+        return []
+    return [
+        value.strip().lower()
+        for value in values
+        if isinstance(value, str) and value.strip()
+    ]
+
+
+def collect_hard_blockers(record: dict, metadata: dict, rules: dict) -> list[str]:
+    page_type = metadata.get("PAGE_TYPE", "").strip().lower()
+    warnings = {
+        warning.strip()
+        for warning in metadata.get("EXTRACTION_WARNINGS", "").split(",")
+        if warning.strip()
+    }
+    blockers = set()
+    source = record.get("source", {})
+    source_type = source.get("source_type", "").strip().lower()
+    effective_page_type = page_type or source_type
+
+    if effective_page_type in CONTAINER_PAGE_TYPES or source_type == "website_navigation" or "container_page" in warnings:
+        blockers.add("container_page")
+
+    allowed_page_types = normalize_page_types(rules.get("allowed_page_types", []))
+    if allowed_page_types and effective_page_type and effective_page_type not in allowed_page_types:
+        blockers.add("page_type_not_allowed")
+
+    expected_language = metadata.get("EXPECTED_LANGUAGE", "").strip().lower()
+    detected_language = metadata.get("DETECTED_LANGUAGE", "").strip().lower()
+    if expected_language and detected_language and detected_language not in {expected_language, "unknown"}:
+        blockers.add("language_mismatch")
+
+    source_name = source.get("name", "").strip()
+    source_url = source.get("url", "").strip()
+    if effective_page_type and effective_page_type not in CONTAINER_PAGE_TYPES and source_type not in {"placeholder", "dataset_snapshot"} and (not source_name or not source_url):
+        blockers.add("missing_source_attribution")
+
+    lower_summary = record.get("summary", "").lower()
+    lower_notes = record.get("notes", "").lower()
+    if source_type in {"placeholder", "dataset_snapshot"} or "placeholder" in lower_summary or "placeholder" in lower_notes or "no actual data" in lower_summary or "no actual data" in lower_notes:
+        blockers.add("placeholder_source")
+
+    return sorted(blockers)
+
+
+def collect_soft_blockers(record: dict, verification: dict) -> list[str]:
+    blockers = []
+    issues = record.get("llm_review", {}).get("issues_found", [])
+    verification_confidence = record.get("llm_review", {}).get("verification_confidence", 0)
+
+    if verification_confidence < 8:
+        blockers.append("low_verification_confidence")
+    if issues:
+        blockers.append("issues_found")
+    if verification.get("suggested_status") != "accepted":
+        blockers.append("suggested_status_not_accepted")
+
+    return blockers
 
 
 def build_verify_input(prompt_text: str, source_record: dict, research_record: dict) -> str:
@@ -126,36 +189,21 @@ def apply_verification_result(record: dict, verification: dict) -> dict:
     return record
 
 
-def apply_archive_quality_gate(record: dict, verification: dict, metadata: dict) -> dict:
-    page_type = metadata.get("PAGE_TYPE", "").strip().lower()
-    warnings = {
-        warning.strip()
-        for warning in metadata.get("EXTRACTION_WARNINGS", "").split(",")
-        if warning.strip()
-    }
-
-    source = record.get("source", {})
-    source_name = source.get("name", "").strip()
-    source_url = source.get("url", "").strip()
-    issues = record.get("llm_review", {}).get("issues_found", [])
-    verification_confidence = record.get("llm_review", {}).get("verification_confidence", 0)
-
-    if page_type in CONTAINER_PAGE_TYPES or "container_page" in warnings:
+def apply_archive_quality_gate(record: dict, verification: dict, metadata: dict, rules: dict) -> dict:
+    hard_blockers = collect_hard_blockers(record, metadata, rules)
+    if hard_blockers:
         record["status"] = "rejected"
         record["llm_review"]["verdict"] = "reject"
-        notes = sorted(warnings | {"container_page"})
         record["human_review"]["required"] = False
-        record["human_review"]["notes"] = ", ".join(notes)
+        record["human_review"]["notes"] = ", ".join(hard_blockers)
         return record
 
-    if not source_name or not source_url:
+    soft_blockers = collect_soft_blockers(record, verification)
+    if soft_blockers:
         record["status"] = "review_queue"
         record["human_review"]["required"] = True
-        record["human_review"]["notes"] = "missing_source_attribution"
-        return record
-
-    if issues or verification_confidence < 8 or verification.get("suggested_status") != "accepted":
-        record["status"] = "review_queue"
+        if not record["human_review"].get("notes"):
+            record["human_review"]["notes"] = ", ".join(soft_blockers)
         return record
 
     record["status"] = "accepted"
@@ -176,6 +224,8 @@ def main() -> None:
     source_record = parse_raw_record(source_text)
     research_record = load_json_file(record_path)
     verify_prompt = load_text_file(verify_prompt_path)
+    ingestion_manifest = load_json_file(INGESTION_MANIFEST_PATH)
+    rules = ingestion_manifest.get("record_rules", {}).get(record_id, {})
 
     prompt_input = build_verify_input(verify_prompt, source_record, research_record)
 
@@ -187,6 +237,7 @@ def main() -> None:
         updated_record,
         verification_result,
         source_record.get("metadata", {}),
+        rules,
     )
 
     verification_output_path = REVIEW_QUEUE_DIR / f"{record_id}_verification.json"
