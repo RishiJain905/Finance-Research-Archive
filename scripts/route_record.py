@@ -3,6 +3,7 @@ import shutil
 import sys
 from pathlib import Path
 
+from scripts.verification_store import canonicalize_verification_artifact
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
@@ -30,27 +31,23 @@ def main() -> None:
     record_id = sys.argv[1]
 
     record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
-    verification_path = REVIEW_QUEUE_DIR / f"{record_id}_verification.json"
+    canonicalize_verification_artifact(record_id)
 
     record = load_json_file(record_path)
     status = record.get("status", "review_queue")
 
     if status == "accepted":
         target_record_path = ACCEPTED_DIR / record_path.name
-        target_verification_path = ACCEPTED_DIR / verification_path.name
 
         move_file_if_exists(record_path, target_record_path)
-        move_file_if_exists(verification_path, target_verification_path)
 
         print("Moved record to accepted:")
         print(target_record_path.relative_to(BASE_DIR))
 
     elif status == "rejected":
         target_record_path = REJECTED_DIR / record_path.name
-        target_verification_path = REJECTED_DIR / verification_path.name
 
         move_file_if_exists(record_path, target_record_path)
-        move_file_if_exists(verification_path, target_verification_path)
 
         print("Moved record to rejected:")
         print(target_record_path.relative_to(BASE_DIR))

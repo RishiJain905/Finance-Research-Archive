@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from scripts.filter_raw_records import parse_raw_record
+from scripts.verification_store import canonicalize_verification_artifact
 
 
 CONTAINER_PAGE_TYPES = {"homepage", "navigation_page", "listing_page", "search_page"}
@@ -240,7 +241,7 @@ def main() -> None:
         rules,
     )
 
-    verification_output_path = REVIEW_QUEUE_DIR / f"{record_id}_verification.json"
+    verification_output_path = canonicalize_verification_artifact(record_id)
     save_json_file(verification_output_path, verification_result)
     save_json_file(record_path, updated_record)
 

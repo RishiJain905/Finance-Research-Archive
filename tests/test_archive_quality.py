@@ -1,4 +1,7 @@
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 from scripts import (
     backfill_archive_quality,
@@ -8,6 +11,7 @@ from scripts import (
     run_summarizer,
     run_verifier,
 )
+from scripts import verification_store
 
 
 class IngestSourceClassificationTests(unittest.TestCase):
@@ -558,6 +562,43 @@ class BackfillQualityTests(unittest.TestCase):
 
         self.assertEqual(status, "rejected")
         self.assertIn("non_article_page_type", reasons)
+
+
+class VerificationStoreTests(unittest.TestCase):
+    def test_verification_artifact_path_uses_verify_directory(self):
+        path = verification_store.verification_artifact_path("sample_record")
+
+        self.assertEqual(path.parent.name, "verify")
+        self.assertEqual(path.name, "sample_record_verification.json")
+
+    def test_canonicalize_verification_artifact_moves_legacy_file(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base_dir = Path(tmpdir)
+            accepted_dir = base_dir / "data" / "accepted"
+            rejected_dir = base_dir / "data" / "rejected"
+            review_queue_dir = base_dir / "data" / "review_queue"
+            verify_dir = base_dir / "data" / "verify"
+            accepted_dir.mkdir(parents=True)
+            rejected_dir.mkdir(parents=True)
+            review_queue_dir.mkdir(parents=True)
+
+            legacy_path = accepted_dir / "sample_record_verification.json"
+            legacy_path.write_text("{}", encoding="utf-8")
+
+            with (
+                patch.object(verification_store, "BASE_DIR", base_dir),
+                patch.object(verification_store, "VERIFY_DIR", verify_dir),
+                patch.object(
+                    verification_store,
+                    "LEGACY_VERIFICATION_DIRS",
+                    [accepted_dir, rejected_dir, review_queue_dir],
+                ),
+            ):
+                canonical_path = verification_store.canonicalize_verification_artifact("sample_record")
+
+            self.assertEqual(canonical_path, verify_dir / "sample_record_verification.json")
+            self.assertTrue(canonical_path.exists())
+            self.assertFalse(legacy_path.exists())
 
 
 if __name__ == "__main__":

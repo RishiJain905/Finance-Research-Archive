@@ -17,6 +17,12 @@ from scripts.filter_raw_records import (
 )
 from scripts.ingest_sources import classify_page_type, detect_language
 from scripts.run_verifier import apply_archive_quality_gate
+from scripts.verification_store import (
+    VERIFY_DIR,
+    canonicalize_verification_artifact,
+    resolve_verification_artifact_path,
+    verification_artifact_path,
+)
 
 ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
 REJECTED_DIR = BASE_DIR / "data" / "rejected"
@@ -142,6 +148,26 @@ def destination_dir_for_status(status: str) -> Path:
     return REVIEW_QUEUE_DIR
 
 
+def iter_verification_artifacts() -> list[Path]:
+    artifacts = []
+    for directory in [ACCEPTED_DIR, REJECTED_DIR, REVIEW_QUEUE_DIR]:
+        artifacts.extend(
+            path
+            for path in sorted(directory.glob("*_verification.json"))
+            if path.parent != VERIFY_DIR
+        )
+    return artifacts
+
+
+def migrate_verification_artifacts(apply_changes: bool) -> None:
+    for legacy_path in iter_verification_artifacts():
+        record_id = legacy_path.name.removesuffix("_verification.json")
+        target_path = verification_artifact_path(record_id)
+        print(f"{legacy_path.relative_to(BASE_DIR)} -> {target_path.relative_to(BASE_DIR)}")
+        if apply_changes:
+            canonicalize_verification_artifact(record_id)
+
+
 def evaluate_existing_record(record_path: Path, verification_path: Path, rules: dict) -> tuple[dict, str, list[str]]:
     record = load_json_file(record_path)
     verification = verification_payload_for(record, verification_path)
@@ -168,6 +194,8 @@ def main() -> None:
     ingestion_manifest = load_json_file(INGESTION_MANIFEST_PATH) if INGESTION_MANIFEST_PATH.exists() else {"record_rules": {}}
     record_rules = ingestion_manifest.get("record_rules", {})
 
+    migrate_verification_artifacts(apply_changes)
+
     record_paths = []
     for directory in [ACCEPTED_DIR, REVIEW_QUEUE_DIR]:
         record_paths.extend(
@@ -178,7 +206,9 @@ def main() -> None:
 
     results = []
     for record_path in record_paths:
-        verification_path = record_path.with_name(f"{record_path.stem}_verification.json")
+        verification_path = resolve_verification_artifact_path(record_path.stem)
+        if apply_changes:
+            verification_path = canonicalize_verification_artifact(record_path.stem)
         rules = record_rules.get(record_path.stem, {})
         record, status, reasons = evaluate_existing_record(record_path, verification_path, rules)
         results.append((record_path, verification_path, record, status, reasons))
@@ -199,12 +229,10 @@ def main() -> None:
 
         target_dir = destination_dir_for_status(status)
         target_record_path = target_dir / record_path.name
-        target_verification_path = target_dir / verification_path.name
 
         save_json_file(record_path, record)
         if record_path.resolve() != target_record_path.resolve():
             move_file_if_exists(record_path, target_record_path)
-            move_file_if_exists(verification_path, target_verification_path)
 
     if apply_changes:
         print("Applied backfill archive quality routing.")
