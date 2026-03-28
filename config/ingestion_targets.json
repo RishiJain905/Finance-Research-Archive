@@ -81,6 +81,7 @@
                 "https://www.federalreserve.gov/monetarypolicy/bst_",
                 "https://www.federalreserve.gov/monetarypolicy/"
             ],
+            "enabled": false,
             "max_links": 2,
             "required_keywords": [
                 "balance sheet",
@@ -105,6 +106,7 @@
                 "https://www.bls.gov/news.release/cpi.nr0.htm",
                 "https://www.bls.gov/bls/news-release/cpi.htm"
             ],
+            "enabled": false,
             "max_links": 2,
             "required_keywords": [
                 "consumer price index",
@@ -126,6 +128,7 @@
                 "https://www.bls.gov/news.release/ppi.nr0.htm",
                 "https://www.bls.gov/bls/news-release/ppi.htm"
             ],
+            "enabled": false,
             "max_links": 2,
             "required_keywords": [
                 "producer price index",
@@ -147,6 +150,7 @@
                 "https://www.bls.gov/news.release/empsit.nr0.htm",
                 "https://www.bls.gov/bls/news-release/empsit.htm"
             ],
+            "enabled": false,
             "max_links": 2,
             "required_keywords": [
                 "employment situation",
@@ -169,7 +173,16 @@
                 "https://www.bea.gov/news/",
                 "https://www.bea.gov/data/"
             ],
-            "max_links": 3,
+            "url_blocklist_fragments": [
+                "interactive-data",
+                "methodologies",
+                "regional",
+                "faq",
+                "help",
+                "about",
+                "contact"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "gdp",
                 "pce",
@@ -238,6 +251,7 @@
             "allowed_prefixes": [
                 "https://www.sec.gov/newsroom/press-releases/"
             ],
+            "enabled": false,
             "max_links": 3,
             "required_keywords": [
                 "sec",
@@ -264,6 +278,7 @@
                 "https://www.sec.gov/rules-regulations/",
                 "https://www.sec.gov/files/rules/"
             ],
+            "enabled": false,
             "max_links": 3,
             "required_keywords": [
                 "rule",
@@ -287,6 +302,16 @@
             "allowed_prefixes": [
                 "https://www.nyse.com/",
                 "https://www.intercontinentalexchange.com/"
+            ],
+            "enabled": false,
+            "url_blocklist_fragments": [
+                "about",
+                "careers",
+                "podcast",
+                "webinar",
+                "events",
+                "insights",
+                "index"
             ],
             "max_links": 2,
             "required_keywords": [
@@ -313,6 +338,16 @@
                 "https://www.nasdaq.com/articles/",
                 "https://www.nasdaq.com/solutions/"
             ],
+            "enabled": false,
+            "url_blocklist_fragments": [
+                "stocks",
+                "option-chain",
+                "etf",
+                "mutual-fund",
+                "dividend-history",
+                "economic-calendar",
+                "screening"
+            ],
             "max_links": 2,
             "required_keywords": [
                 "nasdaq",
@@ -337,6 +372,7 @@
                 "https://www.cmegroup.com/markets/interest-rates/",
                 "https://www.cmegroup.com/insights/"
             ],
+            "enabled": false,
             "max_links": 2,
             "required_keywords": [
                 "fedwatch",
@@ -361,7 +397,15 @@
                 "https://www.newyorkfed.org/markets/",
                 "https://www.newyorkfed.org/research/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "about",
+                "people",
+                "community",
+                "education",
+                "museum",
+                "events"
+            ],
+            "max_links": 3,
             "required_keywords": [
                 "market",
                 "liquidity",
@@ -387,7 +431,15 @@
                 "https://www.newyorkfed.org/newsevents/",
                 "https://www.newyorkfed.org/markets/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "about",
+                "people",
+                "community",
+                "education",
+                "museum",
+                "events"
+            ],
+            "max_links": 3,
             "required_keywords": [
                 "market",
                 "policy",
@@ -411,7 +463,14 @@
                 "https://www.newyorkfed.org/markets/",
                 "https://www.newyorkfed.org/medialibrary/media/markets/"
             ],
-            "max_links": 3,
+            "url_blocklist_fragments": [
+                "about",
+                "education",
+                "consumer",
+                "people",
+                "community"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "sofr",
                 "repo",
@@ -433,7 +492,7 @@
             "allowed_prefixes": [
                 "https://www.bankofcanada.ca/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "policy rate",
                 "inflation",
@@ -455,7 +514,7 @@
             "allowed_prefixes": [
                 "https://www.bankofcanada.ca/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "market operations",
                 "auction",
@@ -478,7 +537,7 @@
             "allowed_prefixes": [
                 "https://www.bankofcanada.ca/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "inflation",
                 "policy rate",
@@ -501,7 +560,7 @@
                 "https://www.ecb.europa.eu/press/govcdec/mopo/",
                 "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/"
             ],
-            "max_links": 3,
+            "max_links": 2,
             "required_keywords": [
                 "interest rates",
                 "inflation",
@@ -523,7 +582,7 @@
             "allowed_prefixes": [
                 "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/"
             ],
-            "max_links": 3,
+            "max_links": 2,
             "required_keywords": [
                 "monetary policy",
                 "inflation",
@@ -545,7 +604,7 @@
             "allowed_prefixes": [
                 "https://www.ecb.europa.eu/press/key/date/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -568,7 +627,7 @@
                 "https://www.bankofengland.co.uk/speech/",
                 "https://www.bankofengland.co.uk/news/speeches"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -591,7 +650,7 @@
                 "https://www.bankofengland.co.uk/news/",
                 "https://www.bankofengland.co.uk/markets/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "bank rate",
                 "inflation",
@@ -613,7 +672,7 @@
             "allowed_prefixes": [
                 "https://www.bankofengland.co.uk/markets/"
             ],
-            "max_links": 3,
+            "max_links": 2,
             "required_keywords": [
                 "market",
                 "liquidity",
@@ -637,7 +696,15 @@
                 "https://www.imf.org/en/News/",
                 "https://www.imf.org/en/Blogs/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "events",
+                "jobs",
+                "training",
+                "capacity-development",
+                "about",
+                "topics"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "growth",
@@ -659,7 +726,14 @@
             "allowed_prefixes": [
                 "https://www.imf.org/en/Blogs/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "events",
+                "jobs",
+                "training",
+                "about",
+                "topics"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "global growth",
@@ -681,7 +755,7 @@
             "allowed_prefixes": [
                 "https://www.bis.org/speeches/"
             ],
-            "max_links": 4,
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "financial stability",
@@ -702,7 +776,13 @@
             "allowed_prefixes": [
                 "https://www.bis.org/publ/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "annual-report",
+                "about",
+                "events",
+                "careers"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "market",
                 "liquidity",
@@ -726,7 +806,14 @@
                 "https://www.oecd.org/en/topics/",
                 "https://www.oecd.org/en/publications/"
             ],
-            "max_links": 3,
+            "url_blocklist_fragments": [
+                "careers",
+                "jobs",
+                "education",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "growth",
@@ -749,7 +836,7 @@
                 "https://fiscaldata.treasury.gov/news/",
                 "https://fiscaldata.treasury.gov/datasets/"
             ],
-            "max_links": 3,
+            "max_links": 2,
             "required_keywords": [
                 "treasury",
                 "debt",
@@ -771,7 +858,7 @@
             "allowed_prefixes": [
                 "https://fiscaldata.treasury.gov/datasets/"
             ],
-            "max_links": 3,
+            "max_links": 2,
             "required_keywords": [
                 "auction",
                 "debt",
@@ -793,7 +880,7 @@
             "allowed_prefixes": [
                 "https://www.cmegroup.com/insights/"
             ],
-            "max_links": 4,
+            "max_links": 2,
             "required_keywords": [
                 "rates",
                 "fed",
@@ -818,7 +905,13 @@
                 "https://www.ice.com/insights",
                 "https://www.ice.com/fixed-income-data-services"
             ],
-            "max_links": 3,
+            "url_blocklist_fragments": [
+                "careers",
+                "webinar",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "market",
                 "fixed income",
@@ -840,7 +933,14 @@
                 "https://www.dtcc.com/",
                 "https://www.dtcc.com/dtcc-connection/articles"
             ],
-            "max_links": 3,
+            "url_blocklist_fragments": [
+                "careers",
+                "student",
+                "events",
+                "about",
+                "leadership"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "clearing",
                 "settlement",
@@ -863,7 +963,14 @@
                 "https://www.sifma.org/resources/",
                 "https://www.sifma.org/news/"
             ],
-            "max_links": 3,
+            "url_blocklist_fragments": [
+                "conference",
+                "webinar",
+                "career",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "treasury",
                 "fixed income",
@@ -886,7 +993,21 @@
                 "https://www.brookings.edu/articles/",
                 "https://www.brookings.edu/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "about",
+                "careers",
+                "events",
+                "experts",
+                "archive",
+                "archives",
+                "education",
+                "programs",
+                "tag",
+                "category",
+                "podcast",
+                "donate"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "fed",
@@ -910,7 +1031,14 @@
                 "https://www.piie.com/blogs/",
                 "https://www.piie.com/research/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "job",
+                "events",
+                "careers",
+                "about",
+                "podcast"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "trade",
@@ -932,7 +1060,14 @@
                 "https://www.atlantafed.org/blogs/economy-matters",
                 "https://www.atlantafed.org/cqer/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "career",
+                "community",
+                "student",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "labor market",
@@ -955,7 +1090,14 @@
                 "https://www.chicagofed.org/publications/chicago-fed-insights/",
                 "https://www.chicagofed.org/publications/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "student",
+                "museum",
+                "career",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "labor market",
@@ -978,7 +1120,7 @@
                 "https://www.rba.gov.au/media-releases/",
                 "https://www.rba.gov.au/speeches/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "monetary policy",
                 "rates",
@@ -1001,7 +1143,7 @@
                 "https://www.rbnz.govt.nz/news-and-events/news",
                 "https://www.rbnz.govt.nz/hub/news/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -1024,7 +1166,14 @@
                 "https://www.bostonfed.org/publications/current-policy-perspectives",
                 "https://www.bostonfed.org/publications/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "careers",
+                "visitor",
+                "cash-services",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "rates",
@@ -1047,7 +1196,14 @@
                 "https://www.newyorkfed.org/research/staff_reports/",
                 "https://www.newyorkfed.org/research/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "museum",
+                "community",
+                "about",
+                "events",
+                "education"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "market",
                 "liquidity",
@@ -1071,7 +1227,15 @@
                 "https://www.philadelphiafed.org/the-economy/",
                 "https://www.philadelphiafed.org/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "careers",
+                "events",
+                "museum",
+                "about",
+                "people",
+                "education"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "labor market",
@@ -1094,7 +1258,14 @@
                 "https://www.stlouisfed.org/on-the-economy",
                 "https://www.stlouisfed.org/"
             ],
-            "max_links": 5,
+            "url_blocklist_fragments": [
+                "museum",
+                "education",
+                "careers",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "fed",
@@ -1118,7 +1289,14 @@
                 "https://www.kansascityfed.org/research/",
                 "https://www.kansascityfed.org/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "careers",
+                "museum",
+                "teaching",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -1141,7 +1319,14 @@
                 "https://www.richmondfed.org/publications/research",
                 "https://www.richmondfed.org/publications/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "careers",
+                "museum",
+                "classroom",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "economy",
@@ -1164,7 +1349,13 @@
                 "https://www.ecb.europa.eu/press/blog/",
                 "https://www.ecb.europa.eu/press/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "banknotes",
+                "careers",
+                "legal-framework",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -1187,7 +1378,7 @@
                 "https://www.bankofcanada.ca/markets/",
                 "https://www.bankofcanada.ca/"
             ],
-            "max_links": 4,
+            "max_links": 2,
             "required_keywords": [
                 "market operations",
                 "liquidity",
@@ -1210,7 +1401,13 @@
                 "https://www.clevelandfed.org/publications/economic-commentary/",
                 "https://www.clevelandfed.org/newsroom-and-events/publications/economic-commentary"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "museum",
+                "event",
+                "career",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "policy",
@@ -1233,7 +1430,14 @@
                 "https://www.frbsf.org/research-and-insights/publications/economic-letter/",
                 "https://www.frbsf.org/"
             ],
-            "max_links": 5,
+            "url_blocklist_fragments": [
+                "community",
+                "museum",
+                "career",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -1256,7 +1460,14 @@
                 "https://www.dallasfed.org/research/",
                 "https://www.dallasfed.org/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "careers",
+                "museum",
+                "teacher",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "economy",
@@ -1279,7 +1490,14 @@
                 "https://www.atlantafed.org/blogs/economy-matters",
                 "https://www.atlantafed.org/"
             ],
-            "max_links": 5,
+            "url_blocklist_fragments": [
+                "community",
+                "careers",
+                "museum",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "labor market",
@@ -1303,7 +1521,14 @@
                 "https://www.chicagofed.org/publications/chicago-fed-insights/",
                 "https://www.chicagofed.org/publications/"
             ],
-            "max_links": 5,
+            "url_blocklist_fragments": [
+                "museum",
+                "student",
+                "careers",
+                "events",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "policy",
@@ -1325,7 +1550,14 @@
             "allowed_prefixes": [
                 "https://libertystreeteconomics.newyorkfed.org/"
             ],
-            "max_links": 5,
+            "url_blocklist_fragments": [
+                "community",
+                "museum",
+                "student",
+                "about",
+                "people"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "market",
                 "treasury",
@@ -1349,7 +1581,15 @@
                 "https://www.philadelphiafed.org/the-economy/",
                 "https://www.philadelphiafed.org/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "careers",
+                "museum",
+                "event",
+                "about",
+                "people",
+                "education"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "economy",
@@ -1372,7 +1612,13 @@
                 "https://www.kansascityfed.org/research/economic-bulletin/",
                 "https://www.kansascityfed.org/research/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "museum",
+                "career",
+                "event",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "rates",
@@ -1395,7 +1641,13 @@
                 "https://www.richmondfed.org/publications/research/economic_brief/",
                 "https://www.richmondfed.org/publications/research/"
             ],
-            "max_links": 4,
+            "url_blocklist_fragments": [
+                "museum",
+                "career",
+                "classroom",
+                "about"
+            ],
+            "max_links": 2,
             "required_keywords": [
                 "inflation",
                 "economy",
@@ -1417,7 +1669,7 @@
             "allowed_prefixes": [
                 "https://www.rba.gov.au/speeches/"
             ],
-            "max_links": 4,
+            "max_links": 3,
             "required_keywords": [
                 "inflation",
                 "monetary policy",
@@ -1432,22 +1684,5 @@
             ],
             "min_word_count": 220
         }
-    ],
-    "url_blocklist_fragments": [
-        "about",
-        "careers",
-        "events",
-        "experts",
-        "archives",
-        "archive",
-        "our-people",
-        "people",
-        "education",
-        "programs",
-        "our-offices",
-        "our-vision",
-        "museum",
-        "tag",
-        "category"
     ]
 }

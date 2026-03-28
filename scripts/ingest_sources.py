@@ -290,6 +290,11 @@ def main() -> list[str]:
     created = []
 
     for target in config.get("targets", []):
+        if not target.get("enabled", True):
+            print(f"\nTarget: {target.get('name', 'unknown')}")
+            print("  Disabled, skipping.")
+            continue
+
         name = target["name"]
         topic = target["topic"]
         url = target["url"]
