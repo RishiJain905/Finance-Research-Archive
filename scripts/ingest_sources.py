@@ -16,6 +16,20 @@ MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 DEFAULT_MAX_LINKS_PER_TARGET = 5
 MAX_TITLE_SLUG_LENGTH = 60
 
+POSITIVE_LINK_HINTS = [
+    "press", "release", "statement", "speech", "testimony", "minutes",
+    "decision", "report", "bulletin", "commentary", "economic-letter",
+    "staff-report", "staff-reports", "blog", "insight", "analysis",
+    "policy", "market-notice", "news", "article", "publication"
+]
+
+NEGATIVE_LINK_HINTS = [
+    "about", "careers", "events", "experts", "archive", "archives",
+    "people", "our-people", "education", "programs", "our-offices",
+    "our-vision", "museum", "tag", "category", "topics", "author",
+    "contact", "signup", "subscribe", "webinar", "podcast"
+]
+
 
 def ensure_manifest_shape(manifest: dict) -> dict:
     if not isinstance(manifest, dict):
@@ -116,6 +130,14 @@ def is_allowed_link(url: str, allowed_prefixes: list[str]) -> bool:
     return any(url.startswith(prefix) for prefix in allowed_prefixes)
 
 
+def is_blocked_link(url: str, blocklist_fragments: list[str]) -> bool:
+    if not blocklist_fragments:
+        return False
+
+    lower_url = url.lower()
+    return any(fragment.lower() in lower_url for fragment in blocklist_fragments)
+
+
 def looks_like_article_link(url: str) -> bool:
     parsed = urlparse(url)
     path = parsed.path.lower()
@@ -133,9 +155,54 @@ def looks_like_article_link(url: str) -> bool:
     return True
 
 
-def extract_links(index_url: str, html: str, allowed_prefixes: list[str], max_links: int) -> list[str]:
+def score_candidate_link(url: str, anchor_text: str) -> int:
+    score = 0
+    url_lower = url.lower()
+    anchor_lower = anchor_text.lower().strip()
+
+    for hint in POSITIVE_LINK_HINTS:
+        if hint in url_lower:
+            score += 3
+        if hint in anchor_lower:
+            score += 2
+
+    for hint in NEGATIVE_LINK_HINTS:
+        if hint in url_lower:
+            score -= 4
+        if hint in anchor_lower:
+            score -= 3
+
+    parsed = urlparse(url)
+    path = parsed.path.lower().strip("/")
+
+    path_segments = [segment for segment in path.split("/") if segment]
+    if len(path_segments) >= 2:
+        score += 1
+
+    if re.search(r"/20\d{2}/", url_lower) or re.search(r"20\d{2}", anchor_lower):
+        score += 2
+
+    if url_lower.endswith(".htm") or url_lower.endswith(".html"):
+        score += 1
+
+    if path.endswith("/"):
+        score -= 1
+
+    if path in {"", "index", "news", "press", "markets", "research", "economy"}:
+        score -= 3
+
+    return score
+
+
+def extract_links(
+    index_url: str,
+    html: str,
+    allowed_prefixes: list[str],
+    blocklist_fragments: list[str],
+    max_links: int
+) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
-    discovered = []
+    candidates = []
     seen = set()
 
     for a_tag in soup.find_all("a", href=True):
@@ -144,6 +211,7 @@ def extract_links(index_url: str, html: str, allowed_prefixes: list[str], max_li
             continue
 
         full_url = urljoin(index_url, href)
+        anchor_text = a_tag.get_text(" ", strip=True)
 
         if full_url in seen:
             continue
@@ -155,9 +223,25 @@ def extract_links(index_url: str, html: str, allowed_prefixes: list[str], max_li
         if not is_allowed_link(full_url, allowed_prefixes):
             continue
 
-        discovered.append(full_url)
+        if is_blocked_link(full_url, blocklist_fragments):
+            continue
 
-    return discovered[:max_links]
+        score = score_candidate_link(full_url, anchor_text)
+        candidates.append((score, full_url, anchor_text))
+
+    candidates.sort(key=lambda item: item[0], reverse=True)
+
+    selected = []
+    for score, full_url, anchor_text in candidates:
+        if len(selected) >= max_links:
+            break
+
+        if score < 0:
+            continue
+
+        selected.append(full_url)
+
+    return selected
 
 
 def extract_title(soup: BeautifulSoup) -> str:
@@ -210,6 +294,7 @@ def main() -> list[str]:
         topic = target["topic"]
         url = target["url"]
         allowed_prefixes = target.get("allowed_prefixes", [])
+        blocklist_fragments = target.get("url_blocklist_fragments", [])
         max_links = target.get("max_links", default_max_links)
         required_keywords = target.get("required_keywords", [])
         blocked_keywords = target.get("blocked_keywords", [])
@@ -227,7 +312,13 @@ def main() -> list[str]:
             print(f"  Failed to fetch target page: {e}")
             continue
 
-        article_links = extract_links(url, index_html, allowed_prefixes, max_links)
+        article_links = extract_links(
+            url,
+            index_html,
+            allowed_prefixes,
+            blocklist_fragments,
+            max_links
+        )
 
         if not article_links:
             print("  No candidate links found.")

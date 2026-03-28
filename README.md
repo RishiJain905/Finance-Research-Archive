@@ -90,7 +90,7 @@ flowchart TD
 
     Z -->|approve| J
     Z -->|reject| K
-
+```
 
 
 
@@ -100,13 +100,13 @@ flowchart TD
 
 This section explains the three main GitHub Actions workflows in the repo and visually shows how records move through the system.
 
-The repo currently has three main automation workflows:
+   The repo currently has three main automation workflows:
 
-- **Article Research Pipeline**
-- **Quant Research Pipeline**
-- **Finalize Review Decision**
+    - **Article Research Pipeline**
+    - **Quant Research Pipeline**
+    - **Finalize Review Decision**
 
-Each one has a different job in the archive lifecycle.
+    Each one has a different job in the archive lifecycle.
 
 ---
 
@@ -193,3 +193,4 @@ flowchart TD
     Q --> R[Telegram review messages]
 
     A --> S[git add / commit / push data]
+```
