@@ -46,6 +46,26 @@ GLOBAL_NOISY_PATTERNS = [
     "all rights reserved"
 ]
 
+METADATA_KEYS = {
+    "TARGET",
+    "TOPIC",
+    "TITLE",
+    "URL",
+    "INDEX_URL",
+    "ARTICLE_URL",
+    "CANONICAL_URL",
+    "PAGE_TITLE",
+    "H1",
+    "PUBLISHED_AT",
+    "PAGE_TYPE",
+    "EXPECTED_LANGUAGE",
+    "DETECTED_LANGUAGE",
+    "CONTENT_WORD_COUNT",
+    "EXTRACTION_WARNINGS",
+}
+
+CONTAINER_PAGE_TYPES = {"homepage", "navigation_page", "listing_page", "search_page"}
+
 
 def load_json(path: Path, default):
     if not path.exists():
@@ -66,6 +86,35 @@ def read_text(path: Path) -> str:
 
 def word_count(text: str) -> int:
     return len(re.findall(r"\b\w+\b", text))
+
+
+def parse_raw_record(text: str) -> dict:
+    metadata = {}
+    body_lines = []
+    in_body = False
+
+    for line in text.splitlines():
+        if not in_body:
+            stripped = line.strip()
+            if not stripped and metadata:
+                in_body = True
+                continue
+
+            if ":" in stripped:
+                key, value = stripped.split(":", 1)
+                key = key.strip()
+                if key in METADATA_KEYS:
+                    metadata[key] = value.strip()
+                    continue
+
+            if stripped:
+                in_body = True
+
+        if in_body:
+            body_lines.append(line)
+
+    body = "\n".join(body_lines).strip()
+    return {"metadata": metadata, "body": body}
 
 
 def count_keyword_hits(text: str, keywords: list[str]) -> int:
@@ -119,8 +168,22 @@ def evaluate_quant_record(text: str) -> tuple[bool, list[str]]:
     return keep, reasons
 
 
-def evaluate_article_record(text: str, rules: dict) -> tuple[bool, list[str]]:
+def evaluate_article_record(text: str, rules: dict, metadata: dict | None = None) -> tuple[bool, list[str]]:
     reasons = []
+    metadata = metadata or {}
+
+    page_type = metadata.get("PAGE_TYPE", "").strip().lower()
+    if page_type in CONTAINER_PAGE_TYPES:
+        reasons.append("non_article_page_type")
+
+    expected_language = rules.get("expected_language", "").strip().lower()
+    detected_language = metadata.get("DETECTED_LANGUAGE", "").strip().lower()
+    if expected_language and detected_language and detected_language not in {expected_language, "unknown"}:
+        reasons.append("language_mismatch")
+
+    warnings = metadata.get("EXTRACTION_WARNINGS", "").lower()
+    if "container_page" in warnings and "non_article_page_type" not in reasons:
+        reasons.append("container_page_warning")
 
     if len(text) < MIN_TEXT_LENGTH:
         reasons.append("text_too_short")
@@ -168,6 +231,9 @@ def main() -> None:
         record_id = raw_path.stem
         text = read_text(raw_path)
         rules = ingestion_manifest.get("record_rules", {}).get(record_id, {})
+        parsed = parse_raw_record(text)
+        metadata = parsed["metadata"]
+        body_text = parsed["body"] or text
 
         is_quant = detect_quant_record(text)
 
@@ -175,7 +241,7 @@ def main() -> None:
             keep, reasons = evaluate_quant_record(text)
             rules_used = {"record_type": "quant"}
         else:
-            keep, reasons = evaluate_article_record(text, rules)
+            keep, reasons = evaluate_article_record(body_text, rules, metadata)
             rules_used = {"record_type": "article", **rules}
 
         if keep:

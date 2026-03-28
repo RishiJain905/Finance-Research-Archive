@@ -8,6 +8,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from scripts.filter_raw_records import parse_raw_record
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROMPTS_DIR = BASE_DIR / "prompts"
@@ -35,23 +37,48 @@ def save_json_file(path: Path, data: dict) -> None:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def build_record_template(schema: dict, raw_file_path: Path) -> dict:
+def build_record_template(schema: dict, metadata: dict, raw_file_path: Path | None = None, raw_file_stem: str | None = None) -> dict:
     record = deepcopy(schema)
-    record["id"] = raw_file_path.stem
+    if raw_file_path is None and raw_file_stem is None:
+        raise ValueError("raw_file_path or raw_file_stem is required")
+
+    record_id = raw_file_path.stem if raw_file_path else raw_file_stem
+    record["id"] = record_id
     record["created_at"] = datetime.now(timezone.utc).isoformat()
-    record["raw_text_path"] = str(raw_file_path.relative_to(BASE_DIR))
+    if raw_file_path is not None:
+        record["raw_text_path"] = str(raw_file_path.relative_to(BASE_DIR))
     record["status"] = "review_queue"
+    record["topic"] = metadata.get("TOPIC", record.get("topic", ""))
+    record["source"]["name"] = metadata.get("TARGET", record["source"].get("name", ""))
+    record["source"]["url"] = metadata.get("ARTICLE_URL") or metadata.get("URL", "")
+    record["source"]["published_at"] = metadata.get("PUBLISHED_AT", "")
+    record["source"]["source_type"] = metadata.get("PAGE_TYPE", "")
     record["llm_review"]["verdict"] = "pending"
     record["llm_review"]["verification_confidence"] = 0
     return record
 
 
-def build_prompt_input(prompt_text: str, source_text: str, record_template: dict) -> str:
+def hydrate_generated_record(record: dict, metadata: dict) -> dict:
+    record.setdefault("source", {})
+    record["topic"] = record.get("topic") or metadata.get("TOPIC", "")
+    record["source"]["name"] = record["source"].get("name") or metadata.get("TARGET", "")
+    record["source"]["url"] = record["source"].get("url") or metadata.get("ARTICLE_URL") or metadata.get("URL", "")
+    record["source"]["published_at"] = record["source"].get("published_at") or metadata.get("PUBLISHED_AT", "")
+    record["source"]["source_type"] = record["source"].get("source_type") or metadata.get("PAGE_TYPE", "")
+    return record
+
+
+def build_prompt_input(prompt_text: str, source_record: dict, record_template: dict) -> str:
+    metadata = source_record.get("metadata", {})
+    body_text = source_record.get("body", "")
     return (
         f"{prompt_text}\n\n"
-        f"=== SOURCE TEXT START ===\n"
-        f"{source_text}\n"
-        f"=== SOURCE TEXT END ===\n\n"
+        f"=== SOURCE METADATA START ===\n"
+        f"{json.dumps(metadata, indent=2, ensure_ascii=False)}\n"
+        f"=== SOURCE METADATA END ===\n\n"
+        f"=== SOURCE BODY START ===\n"
+        f"{body_text}\n"
+        f"=== SOURCE BODY END ===\n\n"
         f"=== RECORD TEMPLATE START ===\n"
         f"{json.dumps(record_template, indent=2)}\n"
         f"=== RECORD TEMPLATE END ===\n"
@@ -117,12 +144,14 @@ def main() -> None:
     source_text = load_text_file(raw_file_path)
     summarize_prompt = load_text_file(summarize_prompt_path)
     schema = load_json_file(schema_path)
+    source_record = parse_raw_record(source_text)
 
-    record_template = build_record_template(schema, raw_file_path)
-    prompt_input = build_prompt_input(summarize_prompt, source_text, record_template)
+    record_template = build_record_template(schema, source_record.get("metadata", {}), raw_file_path=raw_file_path)
+    prompt_input = build_prompt_input(summarize_prompt, source_record, record_template)
 
     print(f"\nCalling MiniMax summarizer for: {record_id}\n")
     generated_record = call_minimax(prompt_input)
+    generated_record = hydrate_generated_record(generated_record, source_record.get("metadata", {}))
 
     output_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
     save_json_file(output_path, generated_record)

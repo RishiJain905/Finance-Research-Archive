@@ -19,6 +19,9 @@ Rules:
 4. Be conservative.
 5. If uncertain, prefer review over accept.
 6. Return valid JSON only.
+7. Treat SOURCE METADATA as authoritative for page diagnostics and source context.
+8. If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page, the record must not be accepted.
+9. Missing source attribution, container pages, and thin low-signal pages should bias toward reject, not accept.
 
 Return JSON in this exact structure:
 
@@ -53,6 +56,8 @@ Accept:
 - summary is supported
 - no important unsupported claims
 - record is useful enough to archive
+- source attribution is present
+- source is article-like, not a container page
 
 Review:
 - mostly good but some uncertainty remains
@@ -66,6 +71,8 @@ Reject:
 - contains unsupported claims
 - poor-quality source
 - archive value is too low
+- source is a homepage, navigation page, listing page, or search page
+- source attribution is missing
 
 Flag issues such as:
 - unsupported claim

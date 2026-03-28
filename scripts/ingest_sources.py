@@ -30,6 +30,21 @@ NEGATIVE_LINK_HINTS = [
     "contact", "signup", "subscribe", "webinar", "podcast"
 ]
 
+MAIN_CONTENT_SELECTORS = [
+    "article",
+    "main",
+    "[role='main']",
+    ".article",
+    ".article-body",
+    ".article-content",
+    ".story-body",
+    ".post-content",
+    ".entry-content",
+    ".content",
+]
+
+CONTAINER_PAGE_TYPES = {"homepage", "navigation_page", "listing_page", "search_page"}
+
 
 def ensure_manifest_shape(manifest: dict) -> dict:
     if not isinstance(manifest, dict):
@@ -108,6 +123,12 @@ def fetch_html(url: str) -> str:
     return response.text
 
 
+def collapse_text_lines(text: str) -> str:
+    lines = [line.strip() for line in text.splitlines()]
+    lines = [line for line in lines if line]
+    return "\n".join(lines)
+
+
 def html_to_text(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
 
@@ -115,9 +136,28 @@ def html_to_text(html: str) -> str:
         tag.decompose()
 
     text = soup.get_text(separator="\n")
-    lines = [line.strip() for line in text.splitlines()]
-    lines = [line for line in lines if line]
-    return "\n".join(lines)
+    return collapse_text_lines(text)
+
+
+def extract_main_text(html: str) -> tuple[str, list[str]]:
+    soup = BeautifulSoup(html, "html.parser")
+
+    for tag in soup(["script", "style", "noscript", "header", "footer", "nav", "aside", "form"]):
+        tag.decompose()
+
+    warnings = []
+
+    for selector in MAIN_CONTENT_SELECTORS:
+        node = soup.select_one(selector)
+        if not node:
+            continue
+
+        text = collapse_text_lines(node.get_text(separator="\n"))
+        if len(text) >= 500:
+            return text, warnings
+
+    warnings.append("main_content_fallback")
+    return html_to_text(str(soup)), warnings
 
 
 def content_hash(text: str) -> str:
@@ -191,6 +231,15 @@ def score_candidate_link(url: str, anchor_text: str) -> int:
     if path in {"", "index", "news", "press", "markets", "research", "economy"}:
         score -= 3
 
+    if not path:
+        score -= 8
+
+    if path.endswith("/index") or "/index." in path or path.startswith("index."):
+        score -= 6
+
+    if anchor_lower in {"home", "about", "contact", "menu"}:
+        score -= 6
+
     return score
 
 
@@ -260,6 +309,101 @@ def sanitize_title(title: str) -> str:
     return title[:120]
 
 
+def extract_published_at(soup: BeautifulSoup) -> str:
+    selectors = [
+        ("meta", {"property": "article:published_time"}),
+        ("meta", {"name": "pubdate"}),
+        ("meta", {"name": "publishdate"}),
+        ("meta", {"name": "date"}),
+        ("meta", {"itemprop": "datePublished"}),
+        ("time", {}),
+    ]
+
+    for tag_name, attrs in selectors:
+        for tag in soup.find_all(tag_name, attrs=attrs):
+            if tag_name == "meta":
+                value = tag.get("content", "").strip()
+            else:
+                value = tag.get("datetime", "").strip() or tag.get_text(" ", strip=True)
+
+            if value:
+                return value
+
+    return ""
+
+
+def extract_canonical_url(soup: BeautifulSoup, fallback_url: str) -> str:
+    canonical_tag = soup.find("link", rel=lambda value: value and "canonical" in value)
+    if canonical_tag:
+        href = canonical_tag.get("href", "").strip()
+        if href:
+            return href
+    return fallback_url
+
+
+def detect_language(text: str) -> str:
+    ascii_chars = sum(1 for char in text if ord(char) < 128)
+    total_chars = len(text)
+    if total_chars == 0:
+        return "unknown"
+
+    ascii_ratio = ascii_chars / total_chars
+    return "en" if ascii_ratio >= 0.9 else "non_en"
+
+
+def classify_page_type(url: str, title: str, text: str, published_at: str) -> str:
+    lower_text = text.lower()
+    lower_title = title.lower()
+    parsed = urlparse(url)
+    path = parsed.path.lower()
+    clean_path = path.strip("/")
+
+    language_selector_hits = sum(
+        1 for token in ["english", "deutsch", "français", "español", "italiano", "bg", "menu"]
+        if token in lower_text
+    )
+    nav_hits = sum(
+        1 for token in ["skip to", "navigation", "menu", "frequently asked questions", "contacts"]
+        if token in lower_text
+    )
+    listing_hits = sum(
+        1 for token in ["latest", "archive", "archives", "recent", "browse", "all rights reserved"]
+        if token in lower_text
+    )
+    homepage_hits = sum(
+        1 for token in ["listings", "trading", "market data", "about", "innovation", "connect"]
+        if token in lower_text
+    )
+
+    if "search" in path:
+        return "search_page"
+
+    if nav_hits >= 2 and language_selector_hits >= 2:
+        return "navigation_page"
+
+    if not clean_path:
+        return "homepage"
+
+    if clean_path.endswith("index") or "/index." in path or clean_path.startswith("index."):
+        if nav_hits >= 1:
+            return "navigation_page"
+        if not published_at:
+            return "listing_page"
+
+    if homepage_hits >= 3 and "|" in lower_title:
+        return "homepage"
+
+    if not published_at and listing_hits >= 1:
+        return "listing_page"
+
+    return "article"
+
+
+def build_raw_record_text(metadata: dict[str, str], article_text: str) -> str:
+    header_lines = [f"{key}: {value}" for key, value in metadata.items()]
+    return "\n".join(header_lines) + f"\n\n{article_text}"
+
+
 def build_record_id(target_name: str, article_title: str, article_url: str) -> str:
     target_slug = shorten_slug(target_name, 30)
     title_slug = shorten_slug(article_title, MAX_TITLE_SLUG_LENGTH)
@@ -304,6 +448,11 @@ def main() -> list[str]:
         required_keywords = target.get("required_keywords", [])
         blocked_keywords = target.get("blocked_keywords", [])
         min_word_count = target.get("min_word_count", 120)
+        expected_language = target.get("expected_language", "en")
+        allowed_page_types = target.get(
+            "allowed_page_types",
+            ["article", "press_release", "speech", "data_release", "market_notice"]
+        )
 
         if not isinstance(max_links, int) or max_links < 1:
             max_links = default_max_links
@@ -340,7 +489,7 @@ def main() -> list[str]:
                 print(f"    Failed fetch: {e}")
                 continue
 
-            article_text = html_to_text(article_html)
+            article_text, extraction_warnings = extract_main_text(article_html)
             digest = content_hash(article_text)
 
             previous_hash = manifest["seen_urls"].get(article_url)
@@ -350,6 +499,14 @@ def main() -> list[str]:
 
             soup = BeautifulSoup(article_html, "html.parser")
             article_title = sanitize_title(extract_title(soup))
+            h1 = soup.find("h1")
+            h1_text = h1.get_text(" ", strip=True) if h1 else ""
+            published_at = extract_published_at(soup)
+            canonical_url = extract_canonical_url(soup, article_url)
+            detected_language = detect_language(article_text)
+            page_type = classify_page_type(article_url, article_title, article_text, published_at)
+            if page_type in CONTAINER_PAGE_TYPES:
+                extraction_warnings.append("container_page")
             record_id = build_record_id(name, article_title, article_url)
 
             title_fp = title_fingerprint(article_title)
@@ -367,12 +524,25 @@ def main() -> list[str]:
                 continue
 
             output_path = RAW_DIR / f"{record_id}.txt"
-            output_text = (
-                f"TARGET: {name}\n"
-                f"TOPIC: {topic}\n"
-                f"TITLE: {article_title}\n"
-                f"URL: {article_url}\n\n"
-                f"{article_text}"
+            output_text = build_raw_record_text(
+                {
+                    "TARGET": name,
+                    "TOPIC": topic,
+                    "TITLE": article_title,
+                    "URL": article_url,
+                    "INDEX_URL": url,
+                    "ARTICLE_URL": article_url,
+                    "CANONICAL_URL": canonical_url,
+                    "PAGE_TITLE": article_title,
+                    "H1": h1_text,
+                    "PUBLISHED_AT": published_at,
+                    "PAGE_TYPE": page_type,
+                    "EXPECTED_LANGUAGE": expected_language,
+                    "DETECTED_LANGUAGE": detected_language,
+                    "CONTENT_WORD_COUNT": str(len(article_text.split())),
+                    "EXTRACTION_WARNINGS": ",".join(sorted(set(extraction_warnings))),
+                },
+                article_text,
             )
 
             try:
@@ -387,6 +557,8 @@ def main() -> list[str]:
                 "required_keywords": required_keywords,
                 "blocked_keywords": blocked_keywords,
                 "min_word_count": min_word_count,
+                "expected_language": expected_language,
+                "allowed_page_types": allowed_page_types,
                 "target_name": name,
                 "topic": topic
             }
