@@ -1,0 +1,247 @@
+TARGET: Boston Fed Current Policy Perspectives
+TOPIC: macro catalysts
+TITLE: The Beige Book's Value for Forecasting Recessions - Federal Reserve Bank of Boston
+URL: https://www.bostonfed.org/publications/current-policy-perspectives/2025/beige-book-for-forecasting-recessions.aspx
+
+The Beige Book's Value for Forecasting Recessions - Federal Reserve Bank of Boston
+Skip to Content
+Public Service That Makes a Difference
+®
+Menu
+Publications & Data
+News & Events
+Careers
+About Us
+Office of the President
+Office of the President
+Monetary Policy & Economic Research
+Monetary Policy & Economic Research
+Supervision & Credit
+Supervision & Credit
+Payments Innovation
+Payments Innovation
+Community Development
+Community Development
+In the Region
+In the Region
+Publications & Data
+News & Events
+Careers
+About Us
+Contact Us
+Directions & Visitor Information
+Reserve Bank Services
+Subscribe
+Search
+25-15
+Current Policy Perspectives
+The Beige Book's Value for Forecasting Recessions
+By
+Mary A. Burke
+and
+Nathaniel R. Nelson
+November 6, 2025
+Full text
+(pdf)
+Appendix
+(pdf)
+more
+share
+share
+share
+share
+View full size
+Federal Reserve Bank of Boston
+The views expressed herein are solely those of the authors and should not be reported as representing the views of the Federal Reserve Bank of Boston, the principals of the Board of Governors, or the Federal Reserve System.
+Can the Beige Book help to tell us when a recession is coming? This question arises from the Federal Reserve Board of Governors’ description of the publication: “The qualitative nature of the Beige Book creates an opportunity to characterize dynamics and identify emerging trends in the economy that may not be readily apparent in the available economic data.”
+1
+The report consists of summaries of current economic conditions nationally and in each of the 12 Federal Reserve Districts based on anecdotal information gathered from each District’s business contacts.
+2
+We build on two recent studies suggesting the answer to the question about the Beige Book’s predictive power is “yes” and ask whether the Beige Book adds value for recession forecasting over the financial indicators that are commonly used to gauge recession risk. Those indicators include the Treasury term spread, which measures the difference between the yields of longer-term and shorter-term Treasury securities, reflecting investor expectations about future economic conditions. They also include the excess bond premium, which captures investor sentiment or risk appetite in the corporate bond market by measuring the required return on corporate bonds in excess of their expected default risk (see Gilchrist and Zakrajšek 2012).
+Sign up for Research Department Updates.
+Research Publications
+Research Publications
+See our privacy policy
+We find that incorporating Beige Book content—specifically, quantitative sentiment indexes based on Beige Book texts—may improve the performance of established recession-forecasting models that use financial indicators. This finding applies especially for shorter-term forecasts. However, the added value of using Beige Book sentiment indexes over financial indicators is less clear for longer-term forecasting. We also find that the Beige Book information that matters most for helping to forecast recessions comes from the individual District reports rather than from the national summary.
+Our analysis suggests that the Beige Book information content overlaps with the information contained in financial indicators such as the term spread, the excess bond premium, and the S&P 500 index (which tracks the stock performance of 500 leading US companies), yet it is not wholly redundant. The information overlap helps to explain why, like other recent studies, we find a statistical association between Beige Book–derived sentiment indexes and recessions.
+The Predictive Power of Beige Book Information
+The information that Beige Book authors use to summarize current economic conditions is gathered directly from each District’s contacts, which include Federal Reserve Bank and Branch directors, business leaders, heads of community organizations, and other market experts. The publication is released eight times per year, roughly two weeks in advance of the Federal Open Market Committee (FOMC) meeting.
+3
+Since as early as 1998, researchers have been investigating whether Beige Book content can be useful for predicting economic and financial outcomes. They consistently find that it captures meaningful information about US economic growth, although studies disagree about whether it adds value for predicting growth over other established economic-forecasting tools.
+4
+Two recent studies use natural language processing methods to investigate the Beige Book’s usefulness for detecting or predicting US recessions specifically, as opposed to GDP growth, in the near term. Gascon and Martorana (2024) construct sentiment indexes from the complete Beige Book texts using the lexicon approach—assigning positive or negative values to individual words according to predetermined dictionaries—and find that the indexes perform well in detecting a current recession. Filippou et al. (2024) construct both national and District-level sentiment indexes using a large language model (LLM)—assigning values to whole sentences—and find that the District-level sentiment indexes lend far more value than the national sentiment index for detecting current US recessions and forecasting near-term US recessions.
+Our study is the first to test whether the Beige Book adds value over established financial indicators for predicting recessions. We find that incorporating Beige Book–derived sentiment measures into an established model that uses the term spread, the lagged term spread (the term spread from an earlier point in time), and the S&P 500 index to forecast recession risk over a three-month horizon—that is, within the three months following the forecast—improves the model’s performance.
+However, adding Beige Book sentiment measures does not unambiguously improve the accuracy of an established model that uses the term spread and the excess bond premium to predict recession risk over a 12-month horizon.
+The analysis suggests that, in addition to describing economic activity, the Beige Book does a good job of capturing subjective factors that may drive near-term economic outcomes, such as business and investor confidence.
+How the Sentiment Indexes Are Constructed
+Following Filippou et al. (2024),
+5
+we use a publicly available large language model, FinBERT-Tone, to construct indexes of economic sentiment based on the texts of Beige Books from May 1970 through August 2025.
+6
+FinBERT-Tone classifies entire sentences as positive, negative, or neutral based on the context and the relationships among words.
+7
+Discarding neutral sentences, the sentiment value for a given text depends on the numbers of positive and negative sentences. The index varies from a minimum of –1, for a text with only negative sentences, to a maximum of 1, for only positive sentences. Sentiment equals 0 when the numbers of positive and negative sentences are equal. See the
+Appendix
+for details.
+The exercise of quantifying Beige Book text is not meant to suggest the report should be reduced to mere numbers, but to demonstrate that it embodies larger truths about the economy and provides a context for understanding quantitative indicators.
+We calculate the sentiment value for each of the 12 Federal Reserve Districts for each roughly six-week cycle covered by the Beige Book reports released during the 1970–2025 period. The
+District sentiment
+value summarizes all 12 District-level sentiment values at any given time during that period. The
+Appendix
+includes details about how we calculate the District sentiment value.
+We separately calculate the
+national sentiment
+value for each Beige Book report using just the text from the national summary. The national summary is a synopsis of the District reports prepared by staff at one of the District banks according to a rotating schedule.
+View full size
+Federal Reserve Bank of Boston
+Figure 1 plots District sentiment over (unevenly spaced) dates spanning April 1970 through November 2024, together with shading indicating recession periods as determined by the National Bureau of Economic Research (NBER). We estimate District sentiment through August 2025, but the figure stops at November 2024 because the NBER declares recessions with time lags, so we treat the recession status for recent months as uncertain. A zero value represents the average score (the mean has been standardized, or set to zero), and larger values indicate more positive sentiment (relative to the average) in each District. The graph shows a clear correlation between District sentiment and recession status: District sentiment falls to a low point during each recession, and, despite some volatility, the value is significantly lower on average during recessions than outside of recessions.
+Using Beige Book Sentiment in Recession-forecasting Models
+To assess the added value of Beige Book sentiment for predicting a recession within three months or, separately, within six months, we conduct regression analysis with forecasting models that include (1) just Beige Book national sentiment and District sentiment, (2) just a set of financial indicators that, according to previous research (Liu and Moench 2016) is best at forecasting recessions within three months and within six months, and (3) the Beige Book measures and the financial indicators. The “best” set of financial indicators comprises the term spread (specifically, the difference between the yields of 10-year and three-month US Treasury securities), the six-month lagged term spread (the term spread from six months earlier), and the percentage change in the S&P 500 index over the preceding 12 months.
+We also conduct regression analysis to assess the added value of Beige Book sentiment for predicting recessions occurring within 12 months. The excess bond premium and the term spread are considered especially valuable for recession forecasting over that longer horizon. (See Gilchrist and Zakrajšek [2012] for more information on the excess bond premium and Estrella and Mishkin [1998], among others, for more information on the predictive power of the term spread.) For this exercise, our forecasting models include (1) just the Beige Book measures, (2) just the excess bond premium and term spread, and (3) both sets of variables.
+In addition to conducting regression analysis for the entire observation period, from April 1970 onward, we estimate the same forecasting models using roughly the first third of the period. We use those results to assess how well the models predict recessions over the rest of the period, which includes four US recessions. More specifically, we use these out-of-sample predictions to assess the forecasting success of each model in terms of its sensitivity and specificity.
+8
+An ideal model has both high sensitivity, which means it predicts recessions that actually occur at the given horizon, and high specificity, which means it does not send false alarms.
+Beige Book Sentiment Measures Improve Forecasting Performance
+Our regression analysis involving just the Beige Book sentiment measures over the complete observation period indicates that District sentiment is significantly negatively associated with recession risk over a three-month horizon, meaning that when sentiment is positive, the risk of recession occurring within three months is low, and when sentiment is negative, the risk is high. This finding stands even when we hold the term spread, lagged term spread, and S&P 500 return constant to isolate the effects of the Beige Book measures. However, we find that national sentiment has no significant association with recession risk in any of the forecasting models (see
+Appendix
+Table A2).
+9
+We believe these results arise because the District-level reports, taken together, do a better job of capturing aggregate economic conditions than the national summary, which out of necessity omits considerable detail.
+View full size
+Federal Reserve Bank of Boston
+For the out-of-sample three-month horizon forecasts (Figure 2), the model that includes the Beige Book measures as well as the term spread, lagged term spread, and S&P 500 return performs better than the model with just those financial indicators. As evidence of its greater sensitivity, the model with the Beige Book sentiment and the financial indicators detects the brief recession that started in August 1990, whereas the model with just the financial indicators does not. The richer model also detects the Great Recession earlier than the model with just the financial indicators, even though neither model detects that recession until it is already underway. The model with Beige Book sentiment and financial indicators also flashes fewer false alarms; in Figure 2, note, for example, the red versus blue shaded areas during the period from late 2022 through late 2023.
+In the regression models predicting recession within 12 months (
+Appendix
+Table A3), District sentiment (but not national sentiment) is significantly negatively associated with recession risk, even when we control for the term spread and the excess bond premium. Despite that robust association, adding the Beige Book measures to the forecasting model yields ambiguous effects on out-of-sample recession forecasts for this horizon. As Figure 3 shows, the model that includes the Beige Book measures as well as the financial indicators has lower sensitivity than the model with just the financial indicators, but greater specificity. Note, for example, that the model with just the financial indicators predicts the onset of the Great Recession well in advance, whereas the model that also includes Beige Book sentiment is late to detect that event. However, the financials-only model falsely predicts a recession in November 1995 and forecasts that the so-called dot-com recession of April 2000 through November 2001 will start much earlier than it did. Conversely, the model that also includes Beige Book sentiment sends no false alarm in 1995 and sends only a brief false alarm before the dot-com recession. The prediction patterns are consistent with the notion that Beige Book sentiment works better as a short-run, rather than long-run, prediction factor.
+View full size
+Federal Reserve Bank of Boston
+Our results suggest that the statistical association between District sentiment and recession risk, observed in models that don’t include financial indicators, arises in part because Beige Book sentiment and financial indicators capture similar information, such as information about expected profits, current and expected interest rates, and investor and business confidence.
+At the same time, the added value of Beige Book sentiment for near-term recession forecasting may reflect the fact that the Beige Book is informed mostly by business leaders, a group that overlaps with but is not identical to investors. Perhaps as a result, during periods of financial market turbulence, such as in the late 1990s, when the prediction models that include only financial indicators tend to send false alarms about recessions, the models that add Beige Book sentiment temper those predictions.
+Endnotes
+See Board of Governors of the Federal Reserve System, “
+Beige Book – October 2025
+”  (accessed October 27, 2025).
+The Beige Book derives its unofficial name from the color of its cover. Its official title is Summary of Commentary on Current Economic Conditions by Federal Reserve District. For more information, see Board of Governors of the Federal Reserve System, “
+Beige Book
+” (accessed October 27, 2025).
+The Federal Reserve has been publishing the Beige Book since 1970 (though it was initially known as the Red Book due to its red cover). The first publicly available Beige Book was released in 1983 (after the cover was changed from red to beige). See Gascon and Martorana (2024) for more information on Beige Book history.
+For a comprehensive review of the relevant literature, see Gascon and Martorana (2024).
+We are able to independently validate the Beige Book sentiment measures and regression results of Filippou et al. (2024); see Table A1 in the
+Appendix
+. We accessed the Beige Book text from the
+Federal Reserve Bank of Minneapolis Beige Book Archive
+.
+The Beige Book’s irregular release schedule creates a challenge when trying to match reports with other data series. Following Gascon and Martorana (2024), we assign each edition of the Beige Book to the month that best coincides with its information-collection period. The assigned month either matches the month printed on a report’s cover or immediately precedes that month. Some months can’t be associated with a report, and we do not impute sentiment values for such months. See the
+Appendix
+for further details.
+FinBERT-Tone (Huang, Wang, and Yang 2023) is a variant of FinBERT (Araci 2019), a large language model designed to analyze financial texts. Both models build on BERT, a general-purpose LLM (Devlin et al. 2019).
+We convert the model’s recession probabilities into binary indicators of whether the economy is in recession using the criteria described in Gascon and Martorana (2024). See the
+Appendix
+for details.
+District sentiment is also negatively associated with risk of recession within six months, but the association becomes statistically insignificant after we account for the effects of the financial indicators. Because Beige Book sentiment appears redundant for this forecasting horizon, we do not evaluate out-of-sample forecasting performance for these models.
+References
+Araci, Dogu. 2019. “
+FinBERT: Financial Sentiment Analysis with Pre-trained Language Models
+.” Master’s thesis. University of Amsterdam.
+Balke, Nathan S., and D’Ann Petersen. 2002. “
+How Well Does the Beige Book Reflect Economic Activity? Evaluating Qualitative Information Quantitatively
+.”
+Journal of Money, Credit and Banking
+34(1): 114–36.
+Devlin, Jacob, Ming-Weig Chang, Kenton Lee, and Kristina Toutanova. 2019. “
+BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding
+.”
+Proceedings of the 2019 Conference of the North American Chapter for the Association for Computational Linguistics: Human Language Technologies
+.
+Estrella, Arturo, and Frederic S. Mishkin. 1998. “
+Predicting U.S. Recessions: Financial Variables as Leading Indicators
+.”
+The Review of Economics and Statistics
+80(1): 45–61.
+Favara, Giovanni, Simon Gilchrist, Kurt F. Lewis, and Egon Zakrajšek. 2016. “
+Recession Risk and the Excess Bond Premium
+.” FEDS Notes No. 2016-0408.
+Filippou, Ilias, Christian Garciga, James Mitchell, and My T. Nguyen. 2024. “
+Regional Economic Sentiment: Constructing Quantitative Estimates from the Beige Book and Testing Their Ability to Forecast Recessions
+.” Federal Reserve Bank of Cleveland Economic Commentary 2024-08.
+Gascon, Charles S., and Joseph Martorana. 2024. “
+The Beige Book and the Business Cycle: Using Beige Book Anecdotes to Construct Recession Probabilities
+.” Federal Reserve Bank of St. Louis Working Paper 2024-037.
+Gilchrist, Simon, and Egon Zakrajšek. 2012. “
+Credit Spreads and Business Cycle Fluctuations
+.”
+American Economic Review
+102(4): 16921720.
+Huang, Allen H., Hui Wang, and Yi Yang. 2023. “
+FinBERT: A Large Language Model for Extracting Information from Financial Text
+.”
+Contemporary Accounting Research
+40 (2): 806–841.
+Liu, Weiling, and Emanuel Moench. 2016. “
+What Predicts US Recessions?
+”
+International Journal of Forecasting
+32(4): 11381150.
+Mitchell, James, Christian Garciga, Ilias Filippou, and My T. Nguyen. “
+Beige Book Sentiment Indices
+.” Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor]. 2025-09-04.
+collapse all
+expand all
+About the Authors
+Mary A. Burke
+,
+Federal Reserve Bank of Boston
+Mary A. Burke is a principal economist and policy advisor with the New England Public Policy Center in the Federal Reserve Bank of Boston Research Department.
+Email:
+Mary.Burke@bos.frb.org
+Nathaniel R. Nelson
+,
+Federal Reserve Bank of Boston
+Nathaniel R. Nelson is a senior research associate with the New England Public Policy Center in the Federal Reserve Bank of Boston Research Department.
+Acknowledgments
+The authors are very grateful for the support and cooperation of James Mitchell and Christian Garciga, who shared their data and methods and responded to questions. They  thank Charles Gascon for his guidance on methodological issues, and they thank Egon Zakrajšek and other Federal Reserve Bank of Boston colleagues for their many helpful suggestions.
+Resources
+Full text
+(pdf)
+Appendix
+(pdf)
+Site Topics
+Monetary Policy & Economic Research
+Keywords
+Beige Book
+,
+recession forecasting
+,
+Financial Indicators
+,
+sentiment indexes
+JEL Codes
+E3
+,
+E37
+,
+E58
+Citation
+Burke, Mary A., and Nathaniel R. Nelson. 2025. “The Beige Book’s Value for Forecasting Recessions.” Federal Reserve Bank of Boston Current Policy Perspectives 25-15.
+Contributing business areas
+Research
+Feedback
+About Us
+Leadership & Organization
+Doing Business With Us
+Careers
+Reserve Bank Services
+Cash Services
+Wholesale Payments
+Contact Us
+Visitor Information & Directions
+600 Atlantic Avenue
+Boston, MA 02210-2204
+map
+(617) 973-3000
+Get Email Updates From The Boston Fed
+Terms of Use & Privacy
+Data Privacy
+Site Accessibility
+Feedback
+©  Federal Reserve Bank of Boston
