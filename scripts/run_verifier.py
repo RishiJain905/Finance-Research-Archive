@@ -6,6 +6,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from scripts.filter_raw_records import parse_raw_record
+
+
+CONTAINER_PAGE_TYPES = {"homepage", "navigation_page", "listing_page", "search_page"}
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROMPTS_DIR = BASE_DIR / "prompts"
@@ -32,12 +37,17 @@ def save_json_file(path: Path, data: dict) -> None:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def build_verify_input(prompt_text: str, source_text: str, research_record: dict) -> str:
+def build_verify_input(prompt_text: str, source_record: dict, research_record: dict) -> str:
+    metadata = source_record.get("metadata", {})
+    body_text = source_record.get("body", "")
     return (
         f"{prompt_text}\n\n"
-        f"=== SOURCE TEXT START ===\n"
-        f"{source_text}\n"
-        f"=== SOURCE TEXT END ===\n\n"
+        f"=== SOURCE METADATA START ===\n"
+        f"{json.dumps(metadata, indent=2, ensure_ascii=False)}\n"
+        f"=== SOURCE METADATA END ===\n\n"
+        f"=== SOURCE BODY START ===\n"
+        f"{body_text}\n"
+        f"=== SOURCE BODY END ===\n\n"
         f"=== GENERATED RESEARCH RECORD START ===\n"
         f"{json.dumps(research_record, indent=2)}\n"
         f"=== GENERATED RESEARCH RECORD END ===\n"
@@ -116,6 +126,42 @@ def apply_verification_result(record: dict, verification: dict) -> dict:
     return record
 
 
+def apply_archive_quality_gate(record: dict, verification: dict, metadata: dict) -> dict:
+    page_type = metadata.get("PAGE_TYPE", "").strip().lower()
+    warnings = {
+        warning.strip()
+        for warning in metadata.get("EXTRACTION_WARNINGS", "").split(",")
+        if warning.strip()
+    }
+
+    source = record.get("source", {})
+    source_name = source.get("name", "").strip()
+    source_url = source.get("url", "").strip()
+    issues = record.get("llm_review", {}).get("issues_found", [])
+    verification_confidence = record.get("llm_review", {}).get("verification_confidence", 0)
+
+    if page_type in CONTAINER_PAGE_TYPES or "container_page" in warnings:
+        record["status"] = "rejected"
+        record["llm_review"]["verdict"] = "reject"
+        notes = sorted(warnings | {"container_page"})
+        record["human_review"]["required"] = False
+        record["human_review"]["notes"] = ", ".join(notes)
+        return record
+
+    if not source_name or not source_url:
+        record["status"] = "review_queue"
+        record["human_review"]["required"] = True
+        record["human_review"]["notes"] = "missing_source_attribution"
+        return record
+
+    if issues or verification_confidence < 8 or verification.get("suggested_status") != "accepted":
+        record["status"] = "review_queue"
+        return record
+
+    record["status"] = "accepted"
+    return record
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         raise SystemExit("Usage: python scripts/run_verifier.py <record_id>")
@@ -127,15 +173,21 @@ def main() -> None:
     verify_prompt_path = PROMPTS_DIR / "verify.txt"
 
     source_text = load_text_file(raw_file_path)
+    source_record = parse_raw_record(source_text)
     research_record = load_json_file(record_path)
     verify_prompt = load_text_file(verify_prompt_path)
 
-    prompt_input = build_verify_input(verify_prompt, source_text, research_record)
+    prompt_input = build_verify_input(verify_prompt, source_record, research_record)
 
     print(f"\nCalling MiniMax verifier for: {record_id}\n")
     verification_result = call_minimax(prompt_input)
 
     updated_record = apply_verification_result(research_record, verification_result)
+    updated_record = apply_archive_quality_gate(
+        updated_record,
+        verification_result,
+        source_record.get("metadata", {}),
+    )
 
     verification_output_path = REVIEW_QUEUE_DIR / f"{record_id}_verification.json"
     save_json_file(verification_output_path, verification_result)

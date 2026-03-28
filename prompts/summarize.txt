@@ -16,6 +16,9 @@ Rules:
 5. Do not add outside knowledge unless explicitly provided in the input.
 6. Prefer precision over completeness.
 7. If the source is not relevant to market structure or macro catalysts, make that clear.
+8. Treat SOURCE METADATA as authoritative for page diagnostics and source context.
+9. If SOURCE METADATA says PAGE_TYPE is homepage, navigation_page, listing_page, or search_page, treat the source as non-archiveable and make that explicit in notes.
+10. Do not infer future price action, historical tendencies, or implied market reactions unless the source text states them directly.
 
 Return valid JSON only.
 
@@ -81,9 +84,12 @@ Field guidance:
 - human_review.required: set to false
 - human_review.decision: leave empty
 - human_review.notes: leave empty
+- source.name and source.url must not be blank when SOURCE METADATA provides them
+- if PAGE_TYPE is container-like, keep why_it_matters, macro_context, and market_structure_context empty unless the source body itself contains direct, specific facts worth preserving
 
 If the source is low-quality, irrelevant, or too thin to summarize reliably:
 - still return valid JSON
 - explain the weakness in notes
 - lower confidence
 - set a conservative summary
+- do not treat container pages, nav pages, or homepages as acceptable archive records

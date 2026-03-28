@@ -300,8 +300,7 @@
             "topic": "market structure",
             "url": "https://www.nyse.com/trade",
             "allowed_prefixes": [
-                "https://www.nyse.com/",
-                "https://www.intercontinentalexchange.com/"
+                "https://www.nyse.com/trade/"
             ],
             "enabled": false,
             "url_blocklist_fragments": [
@@ -312,6 +311,11 @@
                 "events",
                 "insights",
                 "index"
+            ],
+            "expected_language": "en",
+            "allowed_page_types": [
+                "article",
+                "market_notice"
             ],
             "max_links": 2,
             "required_keywords": [
@@ -560,6 +564,18 @@
                 "https://www.ecb.europa.eu/press/govcdec/mopo/",
                 "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/"
             ],
+            "url_blocklist_fragments": [
+                "html/index",
+                "faq",
+                "explainer",
+                "visual-statement"
+            ],
+            "expected_language": "en",
+            "allowed_page_types": [
+                "press_release",
+                "speech",
+                "article"
+            ],
             "max_links": 2,
             "required_keywords": [
                 "interest rates",
@@ -581,6 +597,18 @@
             "url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/html/index.en.html",
             "allowed_prefixes": [
                 "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/"
+            ],
+            "url_blocklist_fragments": [
+                "html/index",
+                "faq",
+                "explainer",
+                "visual-statement"
+            ],
+            "expected_language": "en",
+            "allowed_page_types": [
+                "press_release",
+                "speech",
+                "article"
             ],
             "max_links": 2,
             "required_keywords": [
