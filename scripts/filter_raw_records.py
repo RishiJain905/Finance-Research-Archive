@@ -86,7 +86,40 @@ def count_noisy_hits(text: str) -> int:
     return hits
 
 
-def evaluate_record(text: str, rules: dict) -> tuple[bool, list[str]]:
+def detect_quant_record(text: str) -> bool:
+    upper = text.upper()
+    return (
+        "SOURCE: FRED" in upper
+        or "SERIES_CODE:" in upper
+        or "LATEST_OBSERVATION_VALUE:" in upper
+        or "RECENT_OBSERVATIONS:" in upper
+        or "SNAPSHOT_DATE:" in upper and ("SOURCE: TREASURY_FISCAL_DATA" in upper or "SOURCE: NYFED" in upper)
+    )
+
+
+def evaluate_quant_record(text: str) -> tuple[bool, list[str]]:
+    reasons = []
+
+    upper = text.upper()
+
+    if "SNAPSHOT_DATE:" not in upper:
+        reasons.append("missing_snapshot_date")
+
+    if "LATEST_OBSERVATION_VALUE:" not in upper and "RECENT_OBSERVATIONS:" not in upper:
+        reasons.append("missing_quant_values")
+
+    recent_obs_lines = [
+        line for line in text.splitlines()
+        if line.strip().startswith("- ") and ":" in line
+    ]
+    if len(recent_obs_lines) < 1:
+        reasons.append("not_enough_recent_observations")
+
+    keep = len(reasons) == 0
+    return keep, reasons
+
+
+def evaluate_article_record(text: str, rules: dict) -> tuple[bool, list[str]]:
     reasons = []
 
     if len(text) < MIN_TEXT_LENGTH:
@@ -136,10 +169,17 @@ def main() -> None:
         text = read_text(raw_path)
         rules = ingestion_manifest.get("record_rules", {}).get(record_id, {})
 
-        keep, reasons = evaluate_record(text, rules)
+        is_quant = detect_quant_record(text)
+
+        if is_quant:
+            keep, reasons = evaluate_quant_record(text)
+            rules_used = {"record_type": "quant"}
+        else:
+            keep, reasons = evaluate_article_record(text, rules)
+            rules_used = {"record_type": "article", **rules}
 
         if keep:
-            manifest["kept"][record_id] = {"reasons": [], "rules_used": rules}
+            manifest["kept"][record_id] = {"reasons": [], "rules_used": rules_used}
             kept.append(record_id)
             print(f"KEEP: {record_id}")
             continue
@@ -148,7 +188,7 @@ def main() -> None:
         if raw_path.exists():
             raw_path.replace(target_path)
 
-        manifest["filtered_out"][record_id] = {"reasons": reasons, "rules_used": rules}
+        manifest["filtered_out"][record_id] = {"reasons": reasons, "rules_used": rules_used}
         filtered.append(record_id)
         print(f"FILTER OUT: {record_id} -> {', '.join(reasons)}")
 
