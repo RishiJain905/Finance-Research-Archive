@@ -1,0 +1,104 @@
+{
+  "queries": [
+    {
+      "id": "repo_stress",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "high",
+      "query": "repo market stress liquidity treasury funding collateral",
+      "required_terms": ["repo", "liquidity"],
+      "preferred_domains": [
+        "newyorkfed.org",
+        "federalreserve.gov",
+        "treasury.gov",
+        "bankofengland.co.uk",
+        "ecb.europa.eu",
+        "bis.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 10
+    },
+    {
+      "id": "inflation_repricing",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "priority": "high",
+      "query": "inflation repricing rates fed expectations labor market breakevens",
+      "required_terms": ["inflation", "rates"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "brookings.edu",
+        "piie.com",
+        "imf.org",
+        "bis.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 10
+    },
+    {
+      "id": "treasury_refunding",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "medium",
+      "query": "treasury refunding auction liquidity impact funding conditions",
+      "required_terms": ["treasury", "refunding"],
+      "preferred_domains": [
+        "treasury.gov",
+        "federalreserve.gov",
+        "newyorkfed.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 10
+    },
+    {
+      "id": "fed_path_repricing",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "priority": "medium",
+      "query": "fed funds rate path repricing monetary policy forward guidance",
+      "required_terms": ["fed", "rate", "repricing"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "brookings.edu",
+        "piie.com"
+      ],
+      "blocked_domains": [],
+      "max_results": 10
+    },
+    {
+      "id": "etf_flow_volatility",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "medium",
+      "query": "ETF flow volatility pressure risk assets portfolio rebalancing",
+      "required_terms": ["ETF", "volatility"],
+      "preferred_domains": [
+        "newyorkfed.org",
+        "federalreserve.gov",
+        "bis.org",
+        "imf.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 10
+    },
+    {
+      "id": "liquidity_tightening",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "medium",
+      "query": "liquidity tightening funding conditions credit spreadsoff",
+      "required_terms": ["liquidity", "tightening"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "ecb.europa.eu",
+        "bankofengland.co.uk",
+        "bis.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 10
+    }
+  ]
+}

@@ -18,6 +18,7 @@ Arguments:
 """
 
 import argparse
+import json
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -36,6 +37,7 @@ from scripts.candidate_utils import (
     load_candidate_json,
     update_lane_stats,
     CANDIDATES_DIR,
+    CANDIDATES_DISCOVERED_DIR,
     DATA_DIR,
 )
 from scripts.dedupe_candidates import process_dedupe
@@ -176,19 +178,17 @@ def discover_candidates(lane: str) -> list[dict[str, Any]]:
             ),
         ]
     elif lane == "keyword_discovery":
-        # Synthetic test candidates for keyword discovery lane
-        candidates = [
-            create_synthetic_candidate(
-                lane=lane,
-                domain="brookings.edu",
-                title="The Future of Inflation Targeting",
-                anchor_text="Brookings paper on inflation targeting framework",
-                url="https://www.brookings.edu/research/future-of-inflation-targeting/",
-                topic="macro catalysts",
-                discovery_method="search",
-                trust_tier="medium",
-            ),
-        ]
+        # Call actual keyword discovery runner to get real candidates
+        from scripts.run_keyword_discovery import run_keyword_discovery
+
+        candidate_ids = run_keyword_discovery()
+        # Load candidates from disk
+        candidates = []
+        for cid in candidate_ids:
+            path = CANDIDATES_DISCOVERED_DIR / f"{cid}.json"
+            if path.exists():
+                with open(path, "r") as f:
+                    candidates.append(json.load(f))
     elif lane == "seed_crawl":
         # Synthetic test candidates for seed crawl lane
         candidates = [
