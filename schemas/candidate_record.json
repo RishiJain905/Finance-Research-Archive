@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Candidate Record",
+  "description": "Shared candidate schema for V2 discovery lanes",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "lane",
+    "discovered_at",
+    "topic",
+    "source",
+    "title",
+    "dedupe",
+    "status"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Unique identifier in format: lane_normalized_domain_short_title_slug_short_hash"
+    },
+    "lane": {
+      "type": "string",
+      "enum": ["trusted_sources", "keyword_discovery", "seed_crawl"],
+      "description": "Discovery lane that found this candidate"
+    },
+    "discovered_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when candidate was discovered"
+    },
+    "topic": {
+      "type": "string",
+      "enum": ["macro catalysts", "market structure", "other"],
+      "description": "Topic category for the candidate"
+    },
+    "source": {
+      "type": "object",
+      "required": ["domain", "source_name", "url", "discovery_url", "discovery_method", "trust_tier"],
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "Source domain (e.g., federalreserve.gov)"
+        },
+        "source_name": {
+          "type": "string",
+          "description": "Human-readable source name"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Full URL of the candidate"
+        },
+        "discovery_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL where this candidate was discovered (for crawl sources)"
+        },
+        "discovery_method": {
+          "type": "string",
+          "enum": ["monitor", "search", "crawl"],
+          "description": "How this candidate was discovered"
+        },
+        "trust_tier": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Trust tier based on domain"
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "description": "Title or headline of the candidate"
+    },
+    "anchor_text": {
+      "type": "string",
+      "description": "Anchor text from discovery source (if applicable)"
+    },
+    "raw_html_path": {
+      "type": "string",
+      "description": "Path to raw HTML file if downloaded"
+    },
+    "raw_text_path": {
+      "type": "string",
+      "description": "Path to raw text extraction if processed"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "http_status": {
+          "type": "integer",
+          "description": "HTTP status code when fetched"
+        },
+        "content_type": {
+          "type": "string",
+          "description": "Content-Type header value"
+        },
+        "published_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Publication date if available"
+        },
+        "language": {
+          "type": "string",
+          "default": "en",
+          "description": "Detected language"
+        },
+        "word_count": {
+          "type": "integer",
+          "default": 0,
+          "description": "Word count of extracted content"
+        }
+      }
+    },
+    "candidate_scores": {
+      "type": "object",
+      "properties": {
+        "url_score": {
+          "type": "number",
+          "default": 0
+        },
+        "anchor_score": {
+          "type": "number",
+          "default": 0
+        },
+        "domain_trust_score": {
+          "type": "number",
+          "default": 0
+        },
+        "keyword_score": {
+          "type": "number",
+          "default": 0
+        },
+        "freshness_score": {
+          "type": "number",
+          "default": 0
+        },
+        "total_score": {
+          "type": "number",
+          "default": 0
+        }
+      }
+    },
+    "dedupe": {
+      "type": "object",
+      "required": ["url_hash", "normalized_title_hash", "content_hash"],
+      "properties": {
+        "url_hash": {
+          "type": "string",
+          "description": "Hash of the canonical URL"
+        },
+        "normalized_title_hash": {
+          "type": "string",
+          "description": "Hash of normalized title"
+        },
+        "content_hash": {
+          "type": "string",
+          "description": "Fingerprint of content"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["discovered", "deduped_out", "filtered_out", "converted_to_raw", "processed"],
+      "description": "Current processing status"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes about this candidate"
+    }
+  }
+}

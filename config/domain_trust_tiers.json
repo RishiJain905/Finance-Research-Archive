@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Domain Trust Tiers",
+  "description": "Trust tier classification for candidate source domains",
+  "type": "object",
+  "properties": {
+    "high": {
+      "type": "array",
+      "description": "High trust domains - official central bank and government sources",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "treasury.gov",
+        "fiscaldata.treasury.gov",
+        "bankofcanada.ca",
+        "ecb.europa.eu",
+        "bankofengland.co.uk",
+        "sec.gov"
+      ]
+    },
+    "medium": {
+      "type": "array",
+      "description": "Medium trust domains - research institutions and policy organizations",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        "bis.org",
+        "imf.org",
+        "brookings.edu",
+        "piie.com"
+      ]
+    },
+    "low": {
+      "type": "array",
+      "description": "Low trust domains - everything else discovered from keyword search",
+      "items": {
+        "type": "string"
+      },
+      "examples": []
+    }
+  },
+  "high": [
+    "federalreserve.gov",
+    "www.federalreserve.gov",
+    "newyorkfed.org",
+    "www.newyorkfed.org",
+    "treasury.gov",
+    "www.treasury.gov",
+    "fiscaldata.treasury.gov",
+    "www.fiscaldata.treasury.gov",
+    "bankofcanada.ca",
+    "www.bankofcanada.ca",
+    "ecb.europa.eu",
+    "www.ecb.europa.eu",
+    "bankofengland.co.uk",
+    "www.bankofengland.co.uk",
+    "sec.gov",
+    "www.sec.gov"
+  ],
+  "medium": [
+    "bis.org",
+    "www.bis.org",
+    "imf.org",
+    "www.imf.org",
+    "brookings.edu",
+    "www.brookings.edu",
+    "piie.com",
+    "www.piie.com",
+    "fred.stlouisfed.org",
+    "www.fred.stlouisfed.org",
+    "economics.stackexchange.com"
+  ],
+  "low": []
+}
