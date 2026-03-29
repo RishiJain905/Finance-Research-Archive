@@ -15,6 +15,10 @@ MANIFEST_PATH = BASE_DIR / "data" / "quant_ingestion_manifest.json"
 FRED_OBSERVATIONS_URL = "https://api.stlouisfed.org/fred/series/observations"
 
 
+def normalize_api_key(value: str | None) -> str:
+    return (value or "").strip()
+
+
 def load_json(path: Path, default):
     if not path.exists():
         return default
@@ -39,16 +43,33 @@ def write_raw_snapshot(record_id: str, content: str) -> None:
 
 
 def fetch_fred_observations(series_code: str, api_key: str) -> dict:
+    normalized_api_key = normalize_api_key(api_key)
+    if not normalized_api_key:
+        raise ValueError("FRED API key is missing or blank.")
+
     params = {
         "series_id": series_code,
-        "api_key": api_key,
         "file_type": "json",
         "sort_order": "desc",
         "limit": 10
     }
 
-    response = requests.get(FRED_OBSERVATIONS_URL, params=params, timeout=30)
-    response.raise_for_status()
+    response = requests.get(
+        FRED_OBSERVATIONS_URL,
+        params=params,
+        headers={"Authorization": f"Bearer {normalized_api_key}"},
+        timeout=30,
+    )
+
+    try:
+        response.raise_for_status()
+    except requests.HTTPError as exc:
+        response_text = response.text.strip()
+        detail = f"{response.status_code}"
+        if response_text:
+            detail = f"{detail} {response_text}"
+        raise RuntimeError(f"FRED request failed for {series_code}: {detail}") from exc
+
     return response.json()
 
 
@@ -178,7 +199,7 @@ def build_dataset_snapshot(dataset_item: dict) -> tuple[str, str]:
 def main() -> None:
     load_dotenv(BASE_DIR / ".env")
 
-    fred_api_key = os.getenv("FRED_API_KEY")
+    fred_api_key = normalize_api_key(os.getenv("FRED_API_KEY"))
     config = load_json(CONFIG_PATH, {"series": [], "datasets": []})
     manifest = load_json(MANIFEST_PATH, {"created": []})
 

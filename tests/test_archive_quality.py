@@ -7,6 +7,7 @@ from scripts import (
     backfill_archive_quality,
     filter_raw_records,
     finalize_review,
+    ingest_quant_data,
     ingest_sources,
     run_summarizer,
     run_verifier,
@@ -562,6 +563,46 @@ class BackfillQualityTests(unittest.TestCase):
 
         self.assertEqual(status, "rejected")
         self.assertIn("non_article_page_type", reasons)
+
+
+class QuantIngestionTests(unittest.TestCase):
+    def test_fetch_fred_observations_uses_bearer_header_and_strips_key(self):
+        class DummyResponse:
+            def raise_for_status(self):
+                return None
+
+            def json(self):
+                return {"observations": []}
+
+        with patch.object(ingest_quant_data.requests, "get", return_value=DummyResponse()) as mock_get:
+            ingest_quant_data.fetch_fred_observations("SOFR", "  secret-key  ")
+
+        mock_get.assert_called_once()
+        _, kwargs = mock_get.call_args
+
+        self.assertEqual(kwargs["headers"], {"Authorization": "Bearer secret-key"})
+        self.assertEqual(kwargs["params"]["series_id"], "SOFR")
+        self.assertEqual(kwargs["params"]["file_type"], "json")
+        self.assertEqual(kwargs["params"]["sort_order"], "desc")
+        self.assertEqual(kwargs["params"]["limit"], 10)
+        self.assertNotIn("api_key", kwargs["params"])
+
+    def test_fetch_fred_observations_wraps_http_errors_with_context(self):
+        class DummyResponse:
+            status_code = 400
+            text = "Bad Request"
+
+            def raise_for_status(self):
+                raise ingest_quant_data.requests.HTTPError("400 Client Error", response=self)
+
+        with patch.object(ingest_quant_data.requests, "get", return_value=DummyResponse()):
+            with self.assertRaises(RuntimeError) as ctx:
+                ingest_quant_data.fetch_fred_observations("SOFR", "secret-key")
+
+        message = str(ctx.exception)
+        self.assertIn("FRED request failed for SOFR", message)
+        self.assertIn("400", message)
+        self.assertIn("Bad Request", message)
 
 
 class VerificationStoreTests(unittest.TestCase):

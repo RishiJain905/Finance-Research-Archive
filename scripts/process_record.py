@@ -34,17 +34,17 @@ def main() -> None:
     python_cmd = sys.executable
 
     run_step(
-        [python_cmd, "scripts/run_summarizer.py", record_id],
+        [python_cmd, "-m", "scripts.run_summarizer", record_id],
         "summarizer"
     )
 
     run_step(
-        [python_cmd, "scripts/run_verifier.py", record_id],
+        [python_cmd, "-m", "scripts.run_verifier", record_id],
         "verifier"
     )
 
     run_step(
-        [python_cmd, "scripts/route_record.py", record_id],
+        [python_cmd, "-m", "scripts.route_record", record_id],
         "router"
     )
 
