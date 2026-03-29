@@ -262,6 +262,32 @@ class RawRecordPromptTests(unittest.TestCase):
         self.assertIn("page_type_not_allowed", reasons)
 
 
+class JsonExtractionTests(unittest.TestCase):
+    def test_verifier_extracts_first_json_object_when_response_has_trailing_content(self):
+        response = """
+Verifier output:
+{"verification_confidence": 9, "verdict": "accept", "issues_found": []}
+{"note": "extra object that should be ignored"}
+""".strip()
+
+        parsed = run_verifier.extract_json_from_response(response)
+
+        self.assertEqual(parsed["verification_confidence"], 9)
+        self.assertEqual(parsed["verdict"], "accept")
+
+    def test_summarizer_extracts_first_json_object_when_response_has_trailing_content(self):
+        response = """
+Summary output:
+{"id": "sample", "summary": "A clean summary"}
+{"note": "extra object that should be ignored"}
+""".strip()
+
+        parsed = run_summarizer.extract_json_from_response(response)
+
+        self.assertEqual(parsed["id"], "sample")
+        self.assertEqual(parsed["summary"], "A clean summary")
+
+
 class VerifierGateTests(unittest.TestCase):
     def test_container_page_is_forced_to_rejected(self):
         record = {
