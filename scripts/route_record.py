@@ -3,9 +3,12 @@ import shutil
 import sys
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 from scripts.verification_store import canonicalize_verification_artifact
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
 REJECTED_DIR = BASE_DIR / "data" / "rejected"

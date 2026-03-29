@@ -3,6 +3,10 @@ import os
 import sys
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -13,7 +17,6 @@ from scripts.verification_store import canonicalize_verification_artifact
 CONTAINER_PAGE_TYPES = {"homepage", "navigation_page", "listing_page", "search_page"}
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 PROMPTS_DIR = BASE_DIR / "prompts"
 RAW_DIR = BASE_DIR / "data" / "raw"
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"

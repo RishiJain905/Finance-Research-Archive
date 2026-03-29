@@ -5,13 +5,14 @@ from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 from dotenv import load_dotenv
 from openai import OpenAI
 
 from scripts.filter_raw_records import parse_raw_record
-
-
-BASE_DIR = Path(__file__).resolve().parent.parent
 PROMPTS_DIR = BASE_DIR / "prompts"
 SCHEMAS_DIR = BASE_DIR / "schemas"
 RAW_DIR = BASE_DIR / "data" / "raw"
