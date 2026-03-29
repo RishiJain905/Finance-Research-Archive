@@ -190,19 +190,17 @@ def discover_candidates(lane: str) -> list[dict[str, Any]]:
                 with open(path, "r") as f:
                     candidates.append(json.load(f))
     elif lane == "seed_crawl":
-        # Synthetic test candidates for seed crawl lane
-        candidates = [
-            create_synthetic_candidate(
-                lane=lane,
-                domain="bis.org",
-                title="BIS Quarterly Review March 2026",
-                anchor_text="BIS publishes quarterly review",
-                url="https://www.bis.org/publ/qtrpdf/",
-                topic="market structure",
-                discovery_method="crawl",
-                trust_tier="medium",
-            ),
-        ]
+        # Call actual seed crawl runner to get real candidates
+        from scripts.run_seed_crawl import run_seed_crawl
+
+        candidate_ids = run_seed_crawl()
+        # Load candidates from disk
+        candidates = []
+        for cid in candidate_ids:
+            path = CANDIDATES_DISCOVERED_DIR / f"{cid}.json"
+            if path.exists():
+                with open(path, "r") as f:
+                    candidates.append(json.load(f))
     else:
         candidates = []
 

@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Seed Sites Configuration",
+  "description": "Initial seed sites for Stream A seed-crawl discovery lane",
+  "type": "object",
+  "required": ["seeds"],
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "enabled", "domain", "start_urls", "allowed_prefixes", "blocked_fragments", "max_depth", "max_pages", "topic"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the seed"
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Whether this seed is active for crawling"
+          },
+          "domain": {
+            "type": "string",
+            "description": "Primary domain for this seed (e.g., federalreserve.gov)"
+          },
+          "start_urls": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Starting URLs for crawling"
+          },
+          "allowed_prefixes": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "URL prefixes that are in scope for crawling"
+          },
+          "blocked_fragments": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "URL fragments that should be excluded"
+          },
+          "max_depth": {
+            "type": "integer",
+            "description": "Maximum crawl depth (default: 2)"
+          },
+          "max_pages": {
+            "type": "integer",
+            "description": "Maximum pages to crawl per seed (default: 20)"
+          },
+          "topic": {
+            "type": "string",
+            "enum": ["macro catalysts", "market structure", "other"],
+            "description": "Primary topic category for discovered candidates"
+          }
+        }
+      }
+    }
+  },
+  "seeds": [
+    {
+      "id": "federalreserve.gov",
+      "enabled": true,
+      "domain": "federalreserve.gov",
+      "start_urls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+        "https://www.federalreserve.gov/monetarypolicy.htm",
+        "https://www.federalreserve.gov/boarddocs/speeches/default.htm"
+      ],
+      "allowed_prefixes": [
+        "https://www.federalreserve.gov/newsevents/",
+        "https://www.federalreserve.gov/monetarypolicy/",
+        "https://www.federalreserve.gov/pressreleases/",
+        "https://www.federalreserve.gov/publications/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/events/",
+        "/experts/",
+        "/people/",
+        "/education/",
+        "/programs/",
+        "/museum/",
+        "/archive/",
+        "/category/",
+        "/tag/",
+        "/subscribe/"
+      ],
+      "max_depth": 2,
+      "max_pages": 20,
+      "topic": "macro catalysts"
+    },
+    {
+      "id": "newyorkfed.org",
+      "enabled": true,
+      "domain": "newyorkfed.org",
+      "start_urls": [
+        "https://www.newyorkfed.org/markets/reference-rates",
+        "https://www.newyorkfed.org/markets/rrp_counterparties",
+        "https://www.newyorkfed.org/aboutthefed/org-structure"
+      ],
+      "allowed_prefixes": [
+        "https://www.newyorkfed.org/markets/",
+        "https://www.newyorkfed.org/aboutthefed/",
+        "https://www.newyorkfed.org/newsevents/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/events/",
+        "/experts/",
+        "/people/",
+        "/education/",
+        "/programs/",
+        "/museum/",
+        "/archive/",
+        "/category/",
+        "/tag/",
+        "/subscribe/"
+      ],
+      "max_depth": 2,
+      "max_pages": 20,
+      "topic": "market structure"
+    },
+    {
+      "id": "treasury.gov",
+      "enabled": true,
+      "domain": "treasury.gov",
+      "start_urls": [
+        "https://home.treasury.gov/news/press-releases",
+        "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service",
+        "https://home.treasury.gov/policy-issues/monetary-executive-compensation"
+      ],
+      "allowed_prefixes": [
+        "https://home.treasury.gov/news/",
+        "https://home.treasury.gov/policy-issues/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/events/",
+        "/experts/",
+        "/people/",
+        "/education/",
+        "/programs/",
+        "/museum/",
+        "/archive/",
+        "/category/",
+        "/tag/",
+        "/subscribe/"
+      ],
+      "max_depth": 2,
+      "max_pages": 20,
+      "topic": "macro catalysts"
+    },
+    {
+      "id": "bankofcanada.ca",
+      "enabled": true,
+      "domain": "bankofcanada.ca",
+      "start_urls": [
+        "https://www.bankofcanada.ca/news/",
+        "https://www.bankofcanada.ca/markets/",
+        "https://www.bankofcanada.ca/press/"
+      ],
+      "allowed_prefixes": [
+        "https://www.bankofcanada.ca/news/",
+        "https://www.bankofcanada.ca/markets/",
+        "https://www.bankofcanada.ca/press/",
+        "https://www.bankofcanada.ca/publications/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/events/",
+        "/experts/",
+        "/people/",
+        "/education/",
+        "/programs/",
+        "/museum/",
+        "/archive/",
+        "/category/",
+        "/tag/",
+        "/subscribe/"
+      ],
+      "max_depth": 2,
+      "max_pages": 20,
+      "topic": "macro catalysts"
+    },
+    {
+      "id": "ecb.europa.eu",
+      "enabled": true,
+      "domain": "ecb.europa.eu",
+      "start_urls": [
+        "https://www.ecb.europa.eu/press/pr/html/index.en.html",
+        "https://www.ecb.europa.eu/ecb/orga/press/key_documents/shared/",
+        "https://www.ecb.europa.eu/pub/research/research-bulletin/html/index.en.html"
+      ],
+      "allowed_prefixes": [
+        "https://www.ecb.europa.eu/press/",
+        "https://www.ecb.europa.eu/ecb/orga/",
+        "https://www.ecb.europa.eu/pub/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/events/",
+        "/experts/",
+        "/people/",
+        "/education/",
+        "/programs/",
+        "/museum/",
+        "/archive/",
+        "/category/",
+        "/tag/",
+        "/subscribe/"
+      ],
+      "max_depth": 2,
+      "max_pages": 20,
+      "topic": "macro catalysts"
+    }
+  ]
+}
