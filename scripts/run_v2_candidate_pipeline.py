@@ -250,7 +250,10 @@ def run_pipeline(lane: str = "trusted_sources") -> None:
 
     # Step 2: Dedupe candidates
     print(f"\n[Pipeline] Step 2: Deduplicating candidates...")
-    candidates = process_dedupe(candidates, lane)
+    candidates, duplicates = process_dedupe(candidates, lane)
+    print(
+        f"[Dedup] {len(duplicates)}/{len(candidates) + len(duplicates)} candidates were duplicates"
+    )
 
     if not candidates:
         print(f"[Pipeline] No candidates survived deduplication. Exiting.")
@@ -266,7 +269,10 @@ def run_pipeline(lane: str = "trusted_sources") -> None:
 
     # Step 4: Filter by score
     print(f"\n[Pipeline] Step 4: Filtering by score...")
-    candidates = filter_by_score(candidates, min_score=25)
+    candidates, filtered = filter_by_score(candidates, threshold=25)
+    print(
+        f"[Filter] {len(filtered)}/{len(candidates) + len(filtered)} candidates did not pass score filter"
+    )
 
     if not candidates:
         print(f"[Pipeline] No candidates survived scoring filter. Exiting.")
@@ -274,7 +280,7 @@ def run_pipeline(lane: str = "trusted_sources") -> None:
 
     # Step 5: Convert to raw records
     print(f"\n[Pipeline] Step 5: Converting to raw records...")
-    record_ids = convert_candidates(candidates, lane)
+    record_ids = convert_candidates(candidates)
 
     if not record_ids:
         print(f"[Pipeline] No records were created. Exiting.")

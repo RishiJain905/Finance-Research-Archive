@@ -54,7 +54,7 @@ class TestComputeHashes:
         hash1 = compute_url_hash(url)
         hash2 = compute_url_hash(url)
         assert hash1 == hash2
-        assert len(hash1) == 32  # MD5 hex
+        assert len(hash1) == 16  # SHA256 truncated to 16 chars
 
     def test_compute_url_hash_different_urls(self):
         hash1 = compute_url_hash("https://example.com/page1")

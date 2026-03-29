@@ -103,18 +103,21 @@ def hash_content(text: str) -> str:
 # ============================================================================
 
 
-def normalize_title(title: str) -> str:
+def normalize_title(title: Optional[str]) -> str:
     """
     Normalize a title for consistent hashing and comparison.
 
     Args:
-        title: The title to normalize
+        title: The title to normalize (can be None or empty)
 
     Returns:
-        Lowercase, whitespace-collapsed, stripped title
+        Lowercase, whitespace-collapsed, stripped title with punctuation removed
     """
-    # Lowercase, collapse whitespace, strip
-    return re.sub(r"\s+", " ", title.strip().lower())
+    if title is None:
+        return ""
+    # Lowercase, collapse whitespace, strip punctuation, strip
+    cleaned = re.sub(r"[^\w\s]", "", title.strip().lower())
+    return re.sub(r"\s+", " ", cleaned)
 
 
 # ============================================================================
@@ -170,13 +173,16 @@ def build_candidate_id(lane: str, domain: str, title: str, url: str) -> str:
 # ============================================================================
 
 
-def save_candidate(candidate: Dict[str, Any], path: Path) -> None:
+def save_candidate(candidate: Dict[str, Any], path: Path) -> Path:
     """
     Save a candidate record to JSON file.
 
     Args:
         candidate: Candidate dictionary
         path: Path to save to (should be .json)
+
+    Returns:
+        The path where the file was saved
     """
     _ensure_directories()
 
@@ -185,6 +191,7 @@ def save_candidate(candidate: Dict[str, Any], path: Path) -> None:
 
     with open(path, "w", encoding="utf-8") as f:
         json.dump(candidate, f, indent=2, ensure_ascii=False)
+    return path
 
 
 def load_candidate(path: Path) -> Dict[str, Any]:
@@ -272,13 +279,14 @@ def get_lane_stats() -> Dict[str, Dict[str, int]]:
         return default_stats
 
 
-def update_lane_stats(lane: str, stat_name: str) -> None:
+def update_lane_stats(lane: str, stat_name: str, count: int = 1) -> None:
     """
     Atomically increment a lane stat.
 
     Args:
         lane: Lane name (trusted_sources, keyword_discovery, seed_crawl)
         stat_name: Stat to increment (discovered, deduped_out, filtered_out, converted)
+        count: Amount to increment by (default: 1)
     """
     valid_lanes = ["trusted_sources", "keyword_discovery", "seed_crawl"]
     valid_stats = ["discovered", "deduped_out", "filtered_out", "converted"]
@@ -289,7 +297,7 @@ def update_lane_stats(lane: str, stat_name: str) -> None:
         raise ValueError(f"Invalid stat: {stat_name}. Must be one of {valid_stats}")
 
     stats = get_lane_stats()
-    stats[lane][stat_name] += 1
+    stats[lane][stat_name] += count
     _save_json_atomic(LANE_STATS_PATH, stats)
 
 
@@ -357,6 +365,16 @@ def update_candidate_index(
     _save_json_atomic(CANDIDATE_INDEX_PATH, index)
 
 
+def save_candidate_index(index: Dict[str, Any]) -> None:
+    """
+    Save the full candidate index.
+
+    Args:
+        index: The candidate index dict to save
+    """
+    _save_json_atomic(CANDIDATE_INDEX_PATH, index)
+
+
 # ============================================================================
 # Convenience Functions
 # ============================================================================
@@ -410,3 +428,36 @@ def is_duplicate(url_hash: str, title_hash: str, content_hash: str) -> Dict[str,
 
 # Ensure directories exist on module import
 _ensure_directories()
+
+
+# ============================================================================
+# Compatibility Aliases (for Processing/Orchestration stream compatibility)
+# ============================================================================
+
+
+def load_json(path: Path) -> Dict[str, Any]:
+    """
+    Load a JSON file.
+
+    Args:
+        path: Path to JSON file
+
+    Returns:
+        Parsed JSON data
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+# Aliases for naming consistency with other streams
+compute_content_hash = hash_content
+compute_title_hash = hash_title
+compute_url_hash = hash_url
+generate_candidate_id = build_candidate_id
+save_candidate_json = save_candidate
+load_candidate_json = load_candidate
+load_candidate_index = get_candidate_index
+ensure_candidate_directories = _ensure_directories
+
+# Data directory constant
+DATA_DIR = BASE_DIR / "data"

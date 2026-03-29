@@ -11,7 +11,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 from scripts.candidate_utils import (
     BASE_DIR,
@@ -233,6 +233,7 @@ def register_candidate(
 
 def process_dedupe(
     candidates: list[dict[str, Any]],
+    lane: Optional[str] = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     """Main dedupe entry point.
 

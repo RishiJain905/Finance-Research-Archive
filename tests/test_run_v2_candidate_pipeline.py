@@ -119,19 +119,23 @@ class TestPipelineSteps:
         mock_discover.return_value = [
             {"candidate_id": "test_candidate_1", "lane": "trusted_sources"}
         ]
-        mock_dedupe.return_value = [
-            {"candidate_id": "test_candidate_1", "lane": "trusted_sources"}
-        ]
+        mock_dedupe.return_value = (
+            [{"candidate_id": "test_candidate_1", "lane": "trusted_sources"}],
+            [],  # duplicates
+        )
         mock_score.return_value = {
             "candidate_id": "test_candidate_1",
             "candidate_scores": {"total_score": 50},
         }
-        mock_filter.return_value = [
-            {
-                "candidate_id": "test_candidate_1",
-                "candidate_scores": {"total_score": 50},
-            }
-        ]
+        mock_filter.return_value = (
+            [
+                {
+                    "candidate_id": "test_candidate_1",
+                    "candidate_scores": {"total_score": 50},
+                }
+            ],
+            [],  # filtered_out
+        )
         mock_convert.return_value = ["test_record_id"]
 
         # Run pipeline
