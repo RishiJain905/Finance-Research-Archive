@@ -39,6 +39,9 @@ def main() -> None:
     record = load_json_file(record_path)
     status = record.get("status", "review_queue")
 
+    # Import here to avoid circular imports
+    from scripts.memory_manager import update_all_memory_on_outcome
+
     if status == "accepted":
         target_record_path = ACCEPTED_DIR / record_path.name
 
@@ -46,6 +49,21 @@ def main() -> None:
 
         print("Moved record to accepted:")
         print(target_record_path.relative_to(BASE_DIR))
+
+        # Update memory for accepted record
+        source_domain = record.get("source", {}).get("domain", "")
+        if source_domain:
+            result = update_all_memory_on_outcome(
+                domain=source_domain,
+                outcome="accepted_human",
+                source_id=record.get("source", {}).get("source_id"),
+                source_type=record.get("lane", "manual"),
+                url=record.get("url", ""),
+                candidate_id=record.get("id", record_path.stem),
+            )
+            print(
+                f"Memory updated - domain trust: {result['domain_memory']['trust_score']}"
+            )
 
     elif status == "rejected":
         target_record_path = REJECTED_DIR / record_path.name
@@ -55,9 +73,39 @@ def main() -> None:
         print("Moved record to rejected:")
         print(target_record_path.relative_to(BASE_DIR))
 
+        # Update memory for rejected record
+        source_domain = record.get("source", {}).get("domain", "")
+        if source_domain:
+            result = update_all_memory_on_outcome(
+                domain=source_domain,
+                outcome="rejected_human",
+                source_id=record.get("source", {}).get("source_id"),
+                source_type=record.get("lane", "manual"),
+                url=record.get("url", ""),
+                candidate_id=record.get("id", record_path.stem),
+            )
+            print(
+                f"Memory updated - domain trust: {result['domain_memory']['trust_score']}"
+            )
+
     else:
         print("Record remains in review_queue:")
         print(record_path.relative_to(BASE_DIR))
+
+        # Update memory for record staying in review queue
+        source_domain = record.get("source", {}).get("domain", "")
+        if source_domain:
+            result = update_all_memory_on_outcome(
+                domain=source_domain,
+                outcome="review_human",
+                source_id=record.get("source", {}).get("source_id"),
+                source_type=record.get("lane", "manual"),
+                url=record.get("url", ""),
+                candidate_id=record.get("id", record_path.stem),
+            )
+            print(
+                f"Memory updated - domain trust: {result['domain_memory']['trust_score']}"
+            )
 
 
 if __name__ == "__main__":

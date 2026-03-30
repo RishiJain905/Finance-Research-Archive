@@ -276,6 +276,107 @@ def extract_lane_reliability_score(lane: str, scoring_rules: dict[str, Any]) -> 
     return float(lane_reliability.get(lane, default_scores.get(lane, 0)))
 
 
+def extract_domain_trust_score_with_memory(
+    domain: str, scoring_rules: dict[str, Any]
+) -> tuple[float, str]:
+    """Look up domain trust, blending baseline with memory-based trust.
+
+    1. Get baseline trust from scoring_rules.json (high=100, medium=50, low=10)
+    2. Get memory-based trust from memory_manager.get_domain_trust(domain)
+    3. Blend based on sample size in memory
+
+    Returns (blended_trust_score, trust_tier)
+    """
+    # First get baseline trust and tier from existing function
+    baseline_score, tier = extract_domain_trust_score(domain, scoring_rules)
+
+    # Get memory-based trust
+    from scripts.memory_manager import get_domain_trust
+
+    memory_trust = get_domain_trust(domain)
+
+    # If no memory exists, just use baseline
+    if memory_trust == baseline_score:
+        return baseline_score, tier
+
+    # Get domain memory to check sample size
+    from scripts.memory_persistence import get_domain_memory
+
+    memory = get_domain_memory(domain)
+
+    if memory is None:
+        return baseline_score, tier
+
+    total = memory.get("total_candidates", 0)
+
+    # Load memory config for blending thresholds
+    from scripts.memory_persistence import load_memory_config
+
+    config = load_memory_config()
+    cold_start = config.get("cold_start", {})
+    min_samples = cold_start.get("min_samples_for_learning", 10)
+    full_threshold = cold_start.get("full_learning_threshold", 25)
+
+    if total < min_samples:
+        # Not enough data, mostly use baseline
+        return baseline_score, tier
+    elif total >= full_threshold:
+        # Enough data, mostly use memory
+        # Blend: 10% baseline, 90% memory
+        blended = baseline_score * 0.1 + memory_trust * 0.9
+        return max(0, min(100, blended)), tier
+    else:
+        # Linear blend between min and full
+        blend_ratio = (total - min_samples) / (full_threshold - min_samples)
+        baseline_weight = 0.9 - (blend_ratio * 0.8)  # 0.9 → 0.1
+        memory_weight = 0.1 + (blend_ratio * 0.8)  # 0.1 → 0.9
+        blended = baseline_score * baseline_weight + memory_trust * memory_weight
+        return max(0, min(100, blended)), tier
+
+
+def extract_path_trust_score(
+    domain: str, url: str, scoring_rules: dict[str, Any]
+) -> float:
+    """Extract path trust score from memory.
+
+    Args:
+        domain: Source domain
+        url: Full URL
+        scoring_rules: Scoring rules config
+
+    Returns:
+        Path trust score (0-100), defaults to 50 if no memory
+    """
+    from scripts.memory_manager import extract_path_pattern, get_path_trust
+
+    path_pattern = extract_path_pattern(url)
+    if not path_pattern:
+        return 50.0  # Default for root path
+
+    path_trust = get_path_trust(domain, path_pattern)
+    return path_trust
+
+
+def extract_source_quality_scores(source_id: str) -> tuple[float, float]:
+    """Extract yield and noise scores from source memory.
+
+    Args:
+        source_id: Source identifier (often same as lane)
+
+    Returns:
+        Tuple of (yield_score, noise_score), defaults to (0.5, 0.5) if no memory
+    """
+    from scripts.memory_persistence import get_source_memory
+
+    memory = get_source_memory(source_id)
+    if memory is None:
+        return (0.5, 0.5)  # Neutral default
+
+    yield_score = memory.get("yield_score", 0.5)
+    noise_score = memory.get("noise_score", 0.5)
+    return (yield_score, noise_score)
+
+
 def derive_source_type(candidate: dict[str, Any], scoring_rules: dict[str, Any]) -> str:
     """Derive source type for candidate.
 
@@ -438,14 +539,22 @@ def extract_candidate_features(candidate: dict[str, Any]) -> dict[str, Any]:
     # Keyword match score
     keyword_match_score = extract_keyword_match_score(candidate, scoring_rules)
 
-    # Domain trust score
-    domain_trust_score, trust_tier = extract_domain_trust_score(
+    # Domain trust score (with memory-based blending)
+    domain_trust_score, trust_tier = extract_domain_trust_score_with_memory(
         source_domain, scoring_rules
     )
 
     # Lane reliability score
     lane = candidate.get("lane", "seed_crawl")
     lane_reliability_score = extract_lane_reliability_score(lane, scoring_rules)
+
+    # Path trust score (from memory)
+    url = candidate.get("url", "")
+    path_trust_score = extract_path_trust_score(source_domain, url, scoring_rules)
+
+    # Source quality scores (yield and noise from memory)
+    source_id = candidate.get("source_id", lane)  # Default to lane as source_id
+    source_yield_score, source_noise_score = extract_source_quality_scores(source_id)
 
     # Duplication risk score
     duplication_risk_score = extract_duplication_risk_score(candidate, candidate_index)
@@ -465,6 +574,9 @@ def extract_candidate_features(candidate: dict[str, Any]) -> dict[str, Any]:
     candidate["domain_trust_score"] = domain_trust_score
     candidate["domain_trust_tier"] = trust_tier
     candidate["lane_reliability_score"] = lane_reliability_score
+    candidate["path_trust_score"] = path_trust_score
+    candidate["source_yield_score"] = source_yield_score
+    candidate["source_noise_score"] = source_noise_score
     candidate["duplication_risk_score"] = duplication_risk_score
     candidate["source_type"] = source_type
     candidate["topic_hints"] = topic_hints

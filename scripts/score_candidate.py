@@ -118,6 +118,11 @@ def score_candidate(
     lane_reliability_score = candidate.get("lane_reliability_score", 0)
     duplication_risk_score = candidate.get("duplication_risk_score", 0)
 
+    # Memory-based component scores (may be absent if no memory)
+    path_trust_score = candidate.get("path_trust_score")
+    source_yield_score = candidate.get("source_yield_score", 0.5)
+    source_noise_score = candidate.get("source_noise_score", 0.5)
+
     # Duplication risk is negative signal (higher risk = lower final score)
     # We'll handle this by negating its weight contribution
 
@@ -131,6 +136,18 @@ def score_candidate(
         "lane_reliability": lane_reliability_score,
         "duplication_risk": duplication_risk_score,
     }
+
+    # Add memory-based components if available
+    memory_weights = scoring_rules.get("memory_weights", {})
+    if path_trust_score is not None:
+        breakdown["path_trust"] = path_trust_score
+    if source_yield_score is not None or source_noise_score is not None:
+        # Convert yield/noise (0-1) to a quality score (0-100)
+        # High yield (+), Low noise (+) = high quality
+        # source_quality = (yield_score * 100) - (noise_score * 50)
+        source_quality_score = (source_yield_score * 100) - (source_noise_score * 50)
+        source_quality_score = max(0, min(100, source_quality_score))
+        breakdown["source_quality"] = source_quality_score
 
     # Compute weighted score
     # Note: duplication_risk has negative weight, so we compute separately
@@ -199,6 +216,68 @@ def score_candidate(
             * abs(weights.get("duplication_risk", 0)),
         },
     }
+
+    # Add memory-based breakdown components if available
+    if path_trust_score is not None:
+        path_trust_weight = memory_weights.get("path_trust_weight", 0.05)
+        score_breakdown["path_trust"] = {
+            "raw": path_trust_score,
+            "normalized": path_trust_score,
+            "weight": path_trust_weight,
+            "contribution": path_trust_score * path_trust_weight,
+        }
+
+    if source_yield_score is not None or source_noise_score is not None:
+        source_quality_weight = memory_weights.get("source_quality_weight", 0.05)
+        score_breakdown["source_quality"] = {
+            "raw": source_quality_score,
+            "normalized": source_quality_score,
+            "weight": source_quality_weight,
+            "contribution": source_quality_score * source_quality_weight,
+        }
+
+    # Apply memory-based scoring adjustments
+    # Get thresholds from memory_weights (with defaults)
+    path_trust_penalty_threshold = memory_weights.get(
+        "path_trust_penalty_threshold", 20
+    )
+    # Lowered yield threshold to 0.4 so yield=0.5 can trigger bonus
+    # Noise threshold set to 0.25 to differentiate noise levels
+    source_yield_bonus_threshold = memory_weights.get(
+        "source_yield_bonus_threshold", 0.4
+    )
+    source_noise_penalty_threshold = memory_weights.get(
+        "source_noise_penalty_threshold", 0.25
+    )
+
+    # If path_trust is very low (< threshold), apply penalty
+    if path_trust_score is not None and path_trust_score < path_trust_penalty_threshold:
+        final_score = final_score * 0.9  # 10% penalty
+        score_breakdown["path_trust_penalty"] = {
+            "applied": True,
+            "threshold": path_trust_penalty_threshold,
+            "actual": path_trust_score,
+            "multiplier": 0.9,
+        }
+
+    # If yield is high and noise is low, apply bonus
+    if (
+        source_yield_score is not None
+        and source_noise_score is not None
+        and source_yield_score >= source_yield_bonus_threshold
+        and source_noise_score <= source_noise_penalty_threshold
+    ):
+        final_score = final_score * 1.25  # 25% bonus for high yield, low noise
+        # Cap at 100
+        final_score = min(100.0, final_score)
+        score_breakdown["source_quality_bonus"] = {
+            "applied": True,
+            "yield_threshold": source_yield_bonus_threshold,
+            "yield_actual": source_yield_score,
+            "noise_threshold": source_noise_penalty_threshold,
+            "noise_actual": source_noise_score,
+            "multiplier": 1.25,
+        }
 
     # Update candidate_score
     candidate_score["candidate_score"] = final_score

@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Source Memory",
+  "description": "Tracks configured or discovered source performance over time",
+  "type": "object",
+  "required": ["source_id", "source_type", "trust_score", "yield_score", "noise_score", "last_updated"],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "description": "Unique identifier for the source (e.g., brookings_economy, federalreserve_fomc)",
+      "examples": ["brookings_economy", "federalreserve_fomc", "keyword_inflation_search"]
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["trusted_source_monitor", "keyword_discovery", "seed_crawl", "manual"],
+      "description": "Type of source for discovery"
+    },
+    "source_domain": {
+      "type": "string",
+      "description": "Primary domain associated with this source (if applicable)"
+    },
+    "trust_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Computed trust score based on historical outcomes"
+    },
+    "yield_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Ratio of accepted to total candidates produced by this source"
+    },
+    "noise_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Ratio of (filtered_out + rejected) to total candidates"
+    },
+    "total_candidates": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of candidates produced by this source"
+    },
+    "accepted_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates accepted"
+    },
+    "accepted_human_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates approved by human"
+    },
+    "review_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates sent to review"
+    },
+    "review_human_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Human review decisions"
+    },
+    "rejected_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates rejected"
+    },
+    "rejected_human_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates rejected by human"
+    },
+    "filtered_out_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates filtered out"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of last update"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of last candidate from this source"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of first candidate from this source"
+    }
+  }
+}

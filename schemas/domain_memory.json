@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Domain Memory",
+  "description": "Tracks domain-level performance and trust metrics over time",
+  "type": "object",
+  "required": ["domain", "trust_score", "total_candidates", "accepted_count", "review_count", "rejected_count", "filtered_out_count", "last_seen"],
+  "properties": {
+    "domain": {
+      "type": "string",
+      "description": "The domain name (e.g., newyorkfed.org)",
+      "examples": ["federalreserve.gov", "brookings.edu", "newyorkfed.org"]
+    },
+    "trust_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Computed trust score based on historical outcomes (0-100)"
+    },
+    "total_candidates": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of candidates seen from this domain"
+    },
+    "accepted_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates that were accepted (auto or human)"
+    },
+    "accepted_human_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates approved by human reviewer"
+    },
+    "accepted_auto_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates accepted automatically"
+    },
+    "review_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates sent to review queue"
+    },
+    "review_human_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Human review decisions (approved or rejected)"
+    },
+    "rejected_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates rejected (auto or human)"
+    },
+    "rejected_human_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates rejected by human reviewer"
+    },
+    "rejected_auto_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates rejected automatically"
+    },
+    "filtered_out_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Candidates filtered out by score threshold"
+    },
+    "yield_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Ratio of accepted to total candidates"
+    },
+    "noise_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Ratio of (filtered_out + rejected) to total candidates"
+    },
+    "baseline_trust": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Initial static trust from domain_trust_baselines (high=100, medium=50, low=10)"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of last candidate from this domain"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of first candidate from this domain"
+    }
+  }
+}

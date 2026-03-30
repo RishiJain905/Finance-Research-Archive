@@ -113,8 +113,37 @@ def write_scoring_log(candidates: list[dict[str, Any]], output_dir: Path) -> Pat
     return log_path
 
 
+def update_memory_for_skipped_candidates(candidates: list[dict[str, Any]]) -> None:
+    """Update memory for all candidates that were filtered/skipped.
+
+    For each candidate with process_decision == "skip", update the memory
+    system with outcome="filtered_out".
+
+    Args:
+        candidates: List of scored candidates
+    """
+    # Import here to avoid circular imports
+    from scripts.memory_manager import update_all_memory_on_outcome
+
+    for candidate in candidates:
+        if candidate.get("candidate_score", {}).get("process_decision") == "skip":
+            source_domain = candidate.get("source_domain", "")
+            candidate_id = candidate.get("candidate_id", "")
+
+            # Only update memory if we have a domain
+            if source_domain:
+                update_all_memory_on_outcome(
+                    domain=source_domain,
+                    outcome="filtered_out",
+                    source_id=candidate.get("lane"),
+                    source_type=candidate.get("lane", "manual"),
+                    url=candidate.get("url", ""),
+                    candidate_id=candidate_id,
+                )
+
+
 def score_candidates_batch(
-    candidates: list[dict[str, Any]], scoring_rules: dict[str, Any] = None
+    candidates: list[dict[str, Any]], scoring_rules: dict[str, Any] | None = None
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     """Score candidates in batch with priority routing.
 
@@ -135,6 +164,9 @@ def score_candidates_batch(
 
     if scoring_rules is None:
         scoring_rules = load_scoring_rules()
+
+    # Ensure scoring_rules is not None for type narrowing
+    assert scoring_rules is not None
 
     thresholds = scoring_rules.get("thresholds", {})
     priority_buckets = scoring_rules.get("priority_buckets", {})
@@ -173,5 +205,9 @@ def score_candidates_batch(
     if candidates:
         all_candidates = process_list + defer_list + skip_list
         write_scoring_log(all_candidates, SCORING_LOG_DIR)
+
+    # Update memory for skipped/filtered candidates
+    if skip_list:
+        update_memory_for_skipped_candidates(skip_list)
 
     return process_list, defer_list, skip_list
