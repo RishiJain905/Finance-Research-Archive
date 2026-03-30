@@ -48,12 +48,14 @@ try:
     from scripts.dedupe_candidates import process_dedupe
     from scripts.score_candidates import score_candidate, filter_by_score
     from scripts.convert_candidates_to_raw import convert_candidates
+    from scripts.build_keyword_candidates import fetch_candidate_contents
 except ImportError as e:
     print(f"[Warning] Could not import shared pipeline modules: {e}")
     process_dedupe = None
     score_candidate = None
     filter_by_score = None
     convert_candidates = None
+    fetch_candidate_contents = None
 
 # Configuration paths
 SEED_SITES_CONFIG_PATH = BASE_DIR / "config" / "seed_sites.json"
@@ -213,19 +215,12 @@ def crawl_seed_site(seed: dict[str, Any]) -> list[dict[str, Any]]:
 
     print(f"\n[Crawl] Starting crawl for seed '{seed_id}' ({domain})")
 
-    # Try to import crawl_seed_site from Stream A
+    # Try to import crawl_seed from Stream A
     try:
-        from scripts.crawl_seed_site import crawl_site
+        from scripts.crawl_seed_site import crawl_seed
 
-        candidates = []
-        for url in start_urls:
-            print(f"[Crawl] Crawling {url}...")
-            try:
-                results = crawl_site(url, seed)
-                candidates.extend(results)
-            except Exception as e:
-                print(f"[Crawl] Error crawling {url}: {e}")
-
+        print(f"[Crawl] Using Stream A crawl_seed")
+        candidates = crawl_seed(seed)
         return candidates
 
     except ImportError:
@@ -478,6 +473,31 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
     total_stats["accepted"] = len(filtered_candidates)
     total_stats["rejected"] = len(filtered_out)
 
+    # Step 3.5: Fetch content for candidates
+    if fetch_candidate_contents is None:
+        print(
+            "[Pipeline] fetch_candidate_contents not available. Skipping content fetch."
+        )
+        fetched_candidates = filtered_candidates
+        failed_candidates = []
+    else:
+        print(
+            f"\n[Pipeline] Step 3.5: Fetching content for {len(filtered_candidates)} candidates..."
+        )
+        fetched_candidates, failed_candidates = fetch_candidate_contents(
+            filtered_candidates
+        )
+        if failed_candidates:
+            print(
+                f"[Pipeline] Failed to fetch content for {len(failed_candidates)} candidates"
+            )
+        print(f"[Pipeline] Fetched content for {len(fetched_candidates)} candidates")
+
+    if not fetched_candidates:
+        print("[Pipeline] No candidates had content fetched. Exiting.")
+        _save_stats(total_stats)
+        return []
+
     if convert_candidates is None:
         print("[Pipeline] Shared convert module not available. Skipping convert.")
         _save_stats(total_stats)
@@ -485,7 +505,7 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
 
     # Step 4: Convert to raw records
     print(f"\n[Pipeline] Step 4: Converting to raw records...")
-    record_paths = convert_candidates(filtered_candidates)
+    record_paths = convert_candidates(fetched_candidates)
 
     if not record_paths:
         print("[Pipeline] No records were created. Exiting.")
