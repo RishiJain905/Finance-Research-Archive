@@ -23,6 +23,7 @@ Arguments:
 import argparse
 import json
 import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -514,6 +515,28 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
 
     total_stats["converted"] = len(record_paths)
     update_lane_stats(LANE, "converted", len(record_paths))
+
+    # Step 5: Process each record through process_record.py
+    print(f"\n[Pipeline] Step 5: Processing {len(record_paths)} records...")
+    record_ids = [p.stem for p in record_paths]
+
+    for record_id in record_ids:
+        print(f"  - Processing {record_id}...")
+        try:
+            result = subprocess.run(
+                [sys.executable, "-m", "scripts.process_record", record_id],
+                cwd=BASE_DIR,
+                capture_output=True,
+                text=True,
+            )
+            if result.returncode != 0:
+                print(
+                    f"    [Warning] process_record failed for {record_id}: {result.stderr}"
+                )
+            else:
+                print(f"    [OK] Processed {record_id}")
+        except Exception as e:
+            print(f"    [Warning] Error processing {record_id}: {e}")
 
     # Save stats
     _save_stats(total_stats)
