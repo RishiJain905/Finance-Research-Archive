@@ -1,0 +1,57 @@
+{
+  "id": "seed_crawl_ecb.europa_research_publications_db19139a55c0f381",
+  "created_at": "2026-03-30T07:35:08.501538+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Research publications",
+  "source": {
+    "name": "ECB Research Publications",
+    "url": "",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This source is a container page from the ECB website that lists research publications. The page contains no actual research content, data, or findings—it only shows navigation text indicating 'All pages in this section.' No macro catalyst information, market data, or research findings are present in this source.",
+  "key_points": [
+    "Source is a navigation/listing page, not actual research content",
+    "Contains only meta-navigation text: 'Research publications All pages in this section'",
+    "DOMAIN_TRUST_TIER: high, but page content is empty of substantive information",
+    "URL is missing from source metadata, preventing direct verification"
+  ],
+  "why_it_matters": "None. This page provides no extractable information for research or market analysis purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "research",
+    "listing-page",
+    "no-content",
+    "container"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Container/listing page per Rule 8 - listing pages must not be accepted",
+      "URL is blank in source metadata, preventing direct verification",
+      "Source contains only navigation text: 'Research publications All pages in this section'",
+      "No substantive research content, data, or findings present",
+      "Zero extractable macro catalyst information or market structure content",
+      "Archive value is effectively zero despite high domain trust tier"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_research_publications_db19139a55c0f381.txt",
+  "notes": "CRITICAL ISSUE: This is a non-archiveable container page with no substantive content. Per Rule 9, listing pages and container pages should not be treated as acceptable archive records. The source contains only navigation text 'Research publications All pages in this section' with zero extractable research data, macro catalyst information, or market structure content. DOMAIN_TRUST_TIER is 'high' but page quality is zero. URL is blank, preventing verification. Recommend discarding this record."
+}

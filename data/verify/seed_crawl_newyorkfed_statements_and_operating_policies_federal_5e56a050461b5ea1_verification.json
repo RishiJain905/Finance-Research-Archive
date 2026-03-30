@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Container/listing page per rule #8 - record must not be accepted",
+    "No substantive content - only statement titles and dates from 2003-2026",
+    "URL field is empty - source is not locatable for verification",
+    "Archive value is too low per rule #9 - cannot extract market structure or macro catalyst insights from index page",
+    "Individual statements would be relevant but must be accessed separately"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a listing/archive index page for Federal Reserve Bank of New York statements and operating policies. It contains only titles and dates spanning 2003-2026 with no substantive content. Topics referenced include FedTrade platform, SOFR methodology, repurchase agreements, reverse repurchase agreements, securities lending, Treasury operations, MBS operations, and the Standing Repo Facility—but the actual statements must be accessed individually for any research value.",
+    "why_it_matters": "While individual statements from this archive could be relevant to market structure (repo operations, SOFR methodology, FedTrade platform changes), this index page itself has no archive value. It is a navigation container that merely lists statement titles.",
+    "macro_context": "Not applicable - no substantive content from which to extract macro context.",
+    "market_structure_context": "Not applicable - no substantive content from which to extract market structure insights. Individual Fed statements on repo operations, SOFR methodology, and Standing Repo Facility would be relevant but must be crawled separately."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic 'macro catalysts' is inappropriate for this content - this is an institutional announcement about internal ECB data governance, not a macro catalyst that would influence markets or trading decisions",
+    "Source URL is blank - violates data quality requirements and prevents verification",
+    "Low archive value for a finance research archive - this press release concerns ECB's internal research data infrastructure with no direct market implications",
+    "The source is informational/thin with no actionable market intelligence content",
+    "The content does not inform trading decisions, risk assessment, or market analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the generated record is factually accurate and the summary is faithful to the source, the topic assignment (macro catalysts) is clearly wrong. This is an administrative press release about data access protocols with zero market relevance. The URL is also missing, which is a data quality violation. Given the project scope (finance research archive focused on market-moving information), this record should be rejected despite being factually correct.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is an institutional announcement about improving ECB's research data infrastructure. It has no direct market-moving implications and does not affect current market dynamics or trading conditions. Appropriate classification would be 'institutional_policy' or similar, not 'macro catalysts'.",
+    "macro_context": "The initiative represents a long-term investment in research infrastructure that could improve economic analysis over time, but has no near-term macro implications. This is not a macro catalyst.",
+    "market_structure_context": "No market structure relevance. This concerns internal ECB data governance and research access protocols, not market structure elements such as trading venues, market participants, order flow mechanics, or market microstructure."
+  }
+}
