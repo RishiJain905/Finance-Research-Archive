@@ -348,11 +348,32 @@ def add_negative_bundle(bundle: dict[str, Any]) -> None:
 
 # Alias for compatibility
 load_negative_keyword_bundles = read_negative_bundles
+save_negative_bundle = add_negative_bundle
+
+
+def initialize_negative_bundle(
+    bundle_id: str,
+    terms: list[str],
+    penalty_strength: float = 30.0,
+    source_candidate_id: str = None,
+) -> dict[str, Any]:
+    """Initialize a new negative bundle record."""
+    return {
+        "bundle_id": bundle_id,
+        "terms": terms,
+        "penalty_strength": penalty_strength,
+        "source_candidate_id": source_candidate_id,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
 
 
 # ============================================================================
 # High-level Theme Operations
 # ============================================================================
+
+
+# Alias for compatibility with different API names
+get_themes = get_all_theme_memory
 
 
 def get_high_priority_themes(threshold: float = 70.0) -> list[dict[str, Any]]:

@@ -458,9 +458,9 @@ class TestLoadSaveThemeMemory:
 
     def test_load_theme_memory_returns_dict(self, mock_theme_memory_paths):
         """load_theme_memory returns a dictionary."""
-        # Write some data
+        # Write some data in the expected format
         themes_path = mock_theme_memory_paths["themes"]
-        themes_path.write_text('{"test-theme": {"theme_id": "test-theme"}}')
+        themes_path.write_text('{"themes": {"test-theme": {"theme_id": "test-theme"}}}')
 
         themes = update_theme_memory.load_theme_memory()
 
@@ -485,10 +485,11 @@ class TestLoadSaveThemeMemory:
 
         update_theme_memory.save_theme_memory(themes)
 
-        # Verify file contents
+        # Verify file contents - should be wrapped in {"themes": ...}
         themes_path = mock_theme_memory_paths["themes"]
         content = json.loads(themes_path.read_text())
-        assert "new-theme" in content
+        assert "themes" in content
+        assert "new-theme" in content["themes"]
 
 
 # =============================================================================

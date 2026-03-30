@@ -391,10 +391,10 @@ class TestNegativeKeywordBundlesConfig:
 class TestThemesData:
     """Tests for themes data file."""
 
-    def test_has_themes_array(self, themes_data):
-        """Data has themes array."""
+    def test_has_themes_dict(self, themes_data):
+        """Data has themes dict."""
         assert "themes" in themes_data
-        assert isinstance(themes_data["themes"], list)
+        assert isinstance(themes_data["themes"], dict)
 
     def test_has_version(self, themes_data):
         """Data has version field."""
@@ -405,8 +405,8 @@ class TestThemesData:
         assert "last_updated" in themes_data
 
     def test_empty_themes_is_valid(self, themes_data):
-        """Empty themes array is valid."""
-        assert themes_data["themes"] == []
+        """Empty themes dict is valid."""
+        assert themes_data["themes"] == {}
 
 
 # =============================================================================

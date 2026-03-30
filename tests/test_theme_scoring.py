@@ -337,9 +337,9 @@ class TestThemeScoringIntegration:
         self, sample_candidate, sample_themes, keyword_bundles
     ):
         """Scored candidate includes theme-related features."""
-        # Pre-populate theme memory
+        # Pre-populate theme memory using the correct API
         for theme_id, theme in sample_themes.items():
-            save_theme(theme_id, theme, priority=theme["priority"])
+            save_theme(theme_id, theme)
 
         # First extract features (score_candidate expects features to be pre-extracted)
         from scripts.extract_candidate_features import extract_candidate_features
@@ -364,18 +364,14 @@ class TestThemeScoringIntegration:
 
     def test_high_priority_theme_bonus_applied(self, sample_candidate, keyword_bundles):
         """High priority theme (>=70) can add bonus to score."""
-        # Add high priority theme to memory
+        # Add high priority theme to memory using the correct API
         high_priority_theme = initialize_theme(
-            bundle_id="monetary_policy",
-            keywords=["fomc", "monetary policy"],
-            priority=85.0,
+            theme_id="monetary_policy",
+            theme_label="Monetary Policy",
+            positive_terms=["fomc", "monetary policy"],
         )
-        save_theme(
-            high_priority_theme["theme_id"],
-            high_priority_theme,
-            priority=85.0,
-            matched_terms=["fomc", "monetary policy"],
-        )
+        high_priority_theme["priority_score"] = 85.0
+        save_theme("monetary_policy", high_priority_theme)
 
         themes_with_high_priority = {
             high_priority_theme["theme_id"]: high_priority_theme
