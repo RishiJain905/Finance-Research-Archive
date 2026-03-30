@@ -4,7 +4,6 @@ import sys
 from pathlib import Path
 
 import requests
-from dotenv import load_dotenv
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,10 +50,10 @@ def send_telegram_message(token: str, chat_id: str, text: str, record_id: str) -
             "inline_keyboard": [
                 [
                     {"text": "Approve", "callback_data": f"approve:{record_id}"},
-                    {"text": "Reject", "callback_data": f"reject:{record_id}"}
+                    {"text": "Reject", "callback_data": f"reject:{record_id}"},
                 ]
             ]
-        }
+        },
     }
 
     response = requests.post(url, json=payload, timeout=30)
@@ -64,8 +63,6 @@ def send_telegram_message(token: str, chat_id: str, text: str, record_id: str) -
 def main() -> None:
     if len(sys.argv) < 2:
         raise SystemExit("Usage: python scripts/send_review_to_telegram.py <record_id>")
-
-    load_dotenv(BASE_DIR / ".env")
 
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")

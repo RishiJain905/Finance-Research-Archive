@@ -1,6 +1,7 @@
 import json
 import subprocess
 import sys
+import time
 from pathlib import Path
 import hashlib
 
@@ -15,7 +16,7 @@ def build_review_fingerprint(record: dict) -> str:
         "summary": record.get("summary", ""),
         "issues_found": record.get("llm_review", {}).get("issues_found", []),
         "verdict": record.get("llm_review", {}).get("verdict", ""),
-        "notes": record.get("human_review", {}).get("notes", "")
+        "notes": record.get("human_review", {}).get("notes", ""),
     }
     raw = json.dumps(relevant, sort_keys=True)
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
@@ -35,6 +36,30 @@ def should_send_review(record: dict) -> bool:
     human_review = record.get("human_review", {})
     status = record.get("status", "")
     return human_review.get("required", False) and status == "review_queue"
+
+
+def send_review_with_retry(
+    python_cmd: str, record_id: str, base_dir: Path, max_retries: int = 3
+) -> bool:
+    for attempt in range(max_retries):
+        result = subprocess.run(
+            [python_cmd, "scripts/send_review_to_telegram.py", record_id],
+            cwd=base_dir,
+            text=True,
+            capture_output=True,
+        )
+
+        if result.returncode == 0:
+            return True
+
+        if result.returncode != 0 and attempt < max_retries - 1:
+            wait_time = (attempt + 1) * 2
+            print(
+                f"Retry {attempt + 2}/{max_retries} for {record_id} after {wait_time}s. Error: {result.stderr}"
+            )
+            time.sleep(wait_time)
+
+    return False
 
 
 def main() -> None:
@@ -62,27 +87,19 @@ def main() -> None:
         current_review_fp = build_review_fingerprint(record)
         last_review_fp = record.get("telegram_review_fingerprint", "")
 
-        if record.get("telegram_review_sent", False) and last_review_fp == current_review_fp:
+        if (
+            record.get("telegram_review_sent", False)
+            and last_review_fp == current_review_fp
+        ):
             print(f"Already sent to Telegram with same review content: {record_id}")
             continue
 
         print(f"Sending review to Telegram: {record_id}")
 
-        result = subprocess.run(
-            [python_cmd, "scripts/send_review_to_telegram.py", record_id],
-            cwd=BASE_DIR,
-            text=True,
-            capture_output=True
-        )
+        success = send_review_with_retry(python_cmd, record_id, BASE_DIR)
 
-        if result.stdout:
-            print(result.stdout)
-
-        if result.stderr:
-            print(result.stderr)
-
-        if result.returncode != 0:
-            print(f"Failed to send Telegram review for {record_id}")
+        if not success:
+            print(f"Failed to send Telegram review for {record_id} after retries")
             continue
 
         record["telegram_review_sent"] = True
@@ -90,6 +107,7 @@ def main() -> None:
         save_json_file(record_path, record)
 
         sent_any = True
+        time.sleep(0.35)
 
     if not sent_any:
         print("No pending review messages were sent.")
