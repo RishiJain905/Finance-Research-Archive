@@ -28,6 +28,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Finalize record
         run: python scripts/finalize_review.py "${{ inputs.record_id }}" "${{ inputs.decision }}"
 
