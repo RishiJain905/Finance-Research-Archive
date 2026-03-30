@@ -4,7 +4,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
-from dotenv import load_dotenv
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +50,7 @@ def fetch_fred_observations(series_code: str, api_key: str) -> dict:
         "series_id": series_code,
         "file_type": "json",
         "sort_order": "desc",
-        "limit": 10
+        "limit": 10,
     }
 
     response = requests.get(
@@ -87,10 +86,7 @@ def extract_recent_valid_observations(payload: dict) -> list[dict]:
         except ValueError:
             continue
 
-        cleaned.append({
-            "date": obs.get("date", ""),
-            "value": numeric_value
-        })
+        cleaned.append({"date": obs.get("date", ""), "value": numeric_value})
 
     return cleaned[:5]
 
@@ -143,19 +139,23 @@ def build_fred_snapshot(series_item: dict, api_key: str) -> tuple[str, str]:
         absolute_change = latest["value"] - previous["value"]
         direction = compute_direction(latest["value"], previous["value"])
 
-        content_lines.extend([
-            f"PREVIOUS_OBSERVATION_DATE: {previous['date']}",
-            f"PREVIOUS_OBSERVATION_VALUE: {format_number(previous['value'])}",
-            f"ABSOLUTE_CHANGE: {format_number(absolute_change)}",
-            f"DIRECTION: {direction}"
-        ])
+        content_lines.extend(
+            [
+                f"PREVIOUS_OBSERVATION_DATE: {previous['date']}",
+                f"PREVIOUS_OBSERVATION_VALUE: {format_number(previous['value'])}",
+                f"ABSOLUTE_CHANGE: {format_number(absolute_change)}",
+                f"DIRECTION: {direction}",
+            ]
+        )
     else:
-        content_lines.extend([
-            "PREVIOUS_OBSERVATION_DATE: unknown",
-            "PREVIOUS_OBSERVATION_VALUE: unknown",
-            "ABSOLUTE_CHANGE: unknown",
-            "DIRECTION: unknown"
-        ])
+        content_lines.extend(
+            [
+                "PREVIOUS_OBSERVATION_DATE: unknown",
+                "PREVIOUS_OBSERVATION_VALUE: unknown",
+                "ABSOLUTE_CHANGE: unknown",
+                "DIRECTION: unknown",
+            ]
+        )
 
     content_lines.append("")
     content_lines.append("RECENT_OBSERVATIONS:")
@@ -197,8 +197,6 @@ def build_dataset_snapshot(dataset_item: dict) -> tuple[str, str]:
 
 
 def main() -> None:
-    load_dotenv(BASE_DIR / ".env")
-
     fred_api_key = normalize_api_key(os.getenv("FRED_API_KEY"))
     config = load_json(CONFIG_PATH, {"series": [], "datasets": []})
     manifest = load_json(MANIFEST_PATH, {"created": []})

@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from scripts.filter_raw_records import parse_raw_record
+
 PROMPTS_DIR = BASE_DIR / "prompts"
 SCHEMAS_DIR = BASE_DIR / "schemas"
 RAW_DIR = BASE_DIR / "data" / "raw"
@@ -39,10 +40,19 @@ def save_json_file(path: Path, data: dict) -> None:
 
 
 def preferred_source_url(metadata: dict) -> str:
-    return metadata.get("CANONICAL_URL") or metadata.get("ARTICLE_URL") or metadata.get("URL", "")
+    return (
+        metadata.get("CANONICAL_URL")
+        or metadata.get("ARTICLE_URL")
+        or metadata.get("URL", "")
+    )
 
 
-def build_record_template(schema: dict, metadata: dict, raw_file_path: Path | None = None, raw_file_stem: str | None = None) -> dict:
+def build_record_template(
+    schema: dict,
+    metadata: dict,
+    raw_file_path: Path | None = None,
+    raw_file_stem: str | None = None,
+) -> dict:
     record = deepcopy(schema)
     if raw_file_path is None and raw_file_stem is None:
         raise ValueError("raw_file_path or raw_file_stem is required")
@@ -63,17 +73,47 @@ def build_record_template(schema: dict, metadata: dict, raw_file_path: Path | No
     return record
 
 
-def hydrate_generated_record(record: dict, metadata: dict) -> dict:
+def hydrate_generated_record(record: dict, metadata: dict, template: dict) -> dict:
     record.setdefault("source", {})
     record["topic"] = record.get("topic") or metadata.get("TOPIC", "")
-    record["source"]["name"] = record["source"].get("name") or metadata.get("TARGET", "")
-    record["source"]["url"] = record["source"].get("url") or preferred_source_url(metadata)
-    record["source"]["published_at"] = record["source"].get("published_at") or metadata.get("PUBLISHED_AT", "")
-    record["source"]["source_type"] = record["source"].get("source_type") or metadata.get("PAGE_TYPE", "")
+    record["source"]["name"] = record["source"].get("name") or metadata.get(
+        "TARGET", ""
+    )
+    record["source"]["url"] = record["source"].get("url") or preferred_source_url(
+        metadata
+    )
+    record["source"]["published_at"] = record["source"].get(
+        "published_at"
+    ) or metadata.get("PUBLISHED_AT", "")
+    record["source"]["source_type"] = record["source"].get(
+        "source_type"
+    ) or metadata.get("PAGE_TYPE", "")
+
+    if "llm_review" not in record and "llm_review" in template:
+        record["llm_review"] = deepcopy(template["llm_review"])
+    if "human_review" not in record and "human_review" in template:
+        record["human_review"] = deepcopy(template["human_review"])
+
+    for field in [
+        "summary",
+        "key_points",
+        "why_it_matters",
+        "macro_context",
+        "market_structure_context",
+        "notes",
+    ]:
+        if field not in record and field in template:
+            record[field] = deepcopy(template[field])
+    for field in ["market_impact", "important_numbers", "tags"]:
+        if field not in record and field in template:
+            record[field] = deepcopy(template[field])
+
     return record
 
 
-def build_prompt_input(prompt_text: str, source_record: dict, record_template: dict) -> str:
+def build_prompt_input(
+    prompt_text: str, source_record: dict, record_template: dict
+) -> str:
     metadata = source_record.get("metadata", {})
     body_text = source_record.get("body", "")
     return (
@@ -127,7 +167,10 @@ def call_minimax(prompt_input: str) -> dict:
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": "Return only valid JSON. Do not include markdown fences."},
+            {
+                "role": "system",
+                "content": "Return only valid JSON. Do not include markdown fences.",
+            },
             {"role": "user", "content": prompt_input},
         ],
         temperature=0.2,
@@ -156,12 +199,16 @@ def main() -> None:
     schema = load_json_file(schema_path)
     source_record = parse_raw_record(source_text)
 
-    record_template = build_record_template(schema, source_record.get("metadata", {}), raw_file_path=raw_file_path)
+    record_template = build_record_template(
+        schema, source_record.get("metadata", {}), raw_file_path=raw_file_path
+    )
     prompt_input = build_prompt_input(summarize_prompt, source_record, record_template)
 
     print(f"\nCalling MiniMax summarizer for: {record_id}\n")
     generated_record = call_minimax(prompt_input)
-    generated_record = hydrate_generated_record(generated_record, source_record.get("metadata", {}))
+    generated_record = hydrate_generated_record(
+        generated_record, source_record.get("metadata", {}), record_template
+    )
 
     output_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
     save_json_file(output_path, generated_record)

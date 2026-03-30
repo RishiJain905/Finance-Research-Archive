@@ -64,26 +64,49 @@ def collect_hard_blockers(record: dict, metadata: dict, rules: dict) -> list[str
     source_type = source.get("source_type", "").strip().lower()
     effective_page_type = page_type or source_type
 
-    if effective_page_type in CONTAINER_PAGE_TYPES or source_type == "website_navigation" or "container_page" in warnings:
+    if (
+        effective_page_type in CONTAINER_PAGE_TYPES
+        or source_type == "website_navigation"
+        or "container_page" in warnings
+    ):
         blockers.add("container_page")
 
     allowed_page_types = normalize_page_types(rules.get("allowed_page_types", []))
-    if allowed_page_types and effective_page_type and effective_page_type not in allowed_page_types:
+    if (
+        allowed_page_types
+        and effective_page_type
+        and effective_page_type not in allowed_page_types
+    ):
         blockers.add("page_type_not_allowed")
 
     expected_language = metadata.get("EXPECTED_LANGUAGE", "").strip().lower()
     detected_language = metadata.get("DETECTED_LANGUAGE", "").strip().lower()
-    if expected_language and detected_language and detected_language not in {expected_language, "unknown"}:
+    if (
+        expected_language
+        and detected_language
+        and detected_language not in {expected_language, "unknown"}
+    ):
         blockers.add("language_mismatch")
 
     source_name = source.get("name", "").strip()
     source_url = source.get("url", "").strip()
-    if effective_page_type and effective_page_type not in CONTAINER_PAGE_TYPES and source_type not in {"placeholder", "dataset_snapshot"} and (not source_name or not source_url):
+    if (
+        effective_page_type
+        and effective_page_type not in CONTAINER_PAGE_TYPES
+        and source_type not in {"placeholder", "dataset_snapshot"}
+        and (not source_name or not source_url)
+    ):
         blockers.add("missing_source_attribution")
 
     lower_summary = record.get("summary", "").lower()
     lower_notes = record.get("notes", "").lower()
-    if source_type in {"placeholder", "dataset_snapshot"} or "placeholder" in lower_summary or "placeholder" in lower_notes or "no actual data" in lower_summary or "no actual data" in lower_notes:
+    if (
+        source_type in {"placeholder", "dataset_snapshot"}
+        or "placeholder" in lower_summary
+        or "placeholder" in lower_notes
+        or "no actual data" in lower_summary
+        or "no actual data" in lower_notes
+    ):
         blockers.add("placeholder_source")
 
     return sorted(blockers)
@@ -92,7 +115,9 @@ def collect_hard_blockers(record: dict, metadata: dict, rules: dict) -> list[str
 def collect_soft_blockers(record: dict, verification: dict) -> list[str]:
     blockers = []
     issues = record.get("llm_review", {}).get("issues_found", [])
-    verification_confidence = record.get("llm_review", {}).get("verification_confidence", 0)
+    verification_confidence = record.get("llm_review", {}).get(
+        "verification_confidence", 0
+    )
 
     if verification_confidence < 8:
         blockers.append("low_verification_confidence")
@@ -104,7 +129,9 @@ def collect_soft_blockers(record: dict, verification: dict) -> list[str]:
     return blockers
 
 
-def build_verify_input(prompt_text: str, source_record: dict, research_record: dict) -> str:
+def build_verify_input(
+    prompt_text: str, source_record: dict, research_record: dict
+) -> str:
     metadata = source_record.get("metadata", {})
     body_text = source_record.get("body", "")
     return (
@@ -158,7 +185,10 @@ def call_minimax(prompt_input: str) -> dict:
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": "Return only valid JSON. Do not include markdown fences."},
+            {
+                "role": "system",
+                "content": "Return only valid JSON. Do not include markdown fences.",
+            },
             {"role": "user", "content": prompt_input},
         ],
         temperature=0.1,
@@ -173,11 +203,15 @@ def call_minimax(prompt_input: str) -> dict:
 
 
 def apply_verification_result(record: dict, verification: dict) -> dict:
-    record["llm_review"]["verification_confidence"] = verification.get("verification_confidence", 0)
+    record["llm_review"]["verification_confidence"] = verification.get(
+        "verification_confidence", 0
+    )
     record["llm_review"]["verdict"] = verification.get("verdict", "review")
     record["llm_review"]["issues_found"] = verification.get("issues_found", [])
 
-    record["human_review"]["required"] = verification.get("human_review_required", False)
+    record["human_review"]["required"] = verification.get(
+        "human_review_required", False
+    )
 
     human_reason = verification.get("human_review_reason", "")
     if human_reason:
@@ -190,7 +224,12 @@ def apply_verification_result(record: dict, verification: dict) -> dict:
         record["status"] = "review_queue"
 
     corrected_fields = verification.get("corrected_fields", {})
-    for field_name in ["summary", "why_it_matters", "macro_context", "market_structure_context"]:
+    for field_name in [
+        "summary",
+        "why_it_matters",
+        "macro_context",
+        "market_structure_context",
+    ]:
         corrected_value = corrected_fields.get(field_name, "")
         if corrected_value:
             record[field_name] = corrected_value
@@ -198,7 +237,9 @@ def apply_verification_result(record: dict, verification: dict) -> dict:
     return record
 
 
-def apply_archive_quality_gate(record: dict, verification: dict, metadata: dict, rules: dict) -> dict:
+def apply_archive_quality_gate(
+    record: dict, verification: dict, metadata: dict, rules: dict
+) -> dict:
     hard_blockers = collect_hard_blockers(record, metadata, rules)
     if hard_blockers:
         record["status"] = "rejected"
@@ -213,6 +254,10 @@ def apply_archive_quality_gate(record: dict, verification: dict, metadata: dict,
         record["human_review"]["required"] = True
         if not record["human_review"].get("notes"):
             record["human_review"]["notes"] = ", ".join(soft_blockers)
+        return record
+
+    if record["human_review"].get("required", False):
+        record["status"] = "review_queue"
         return record
 
     record["status"] = "accepted"

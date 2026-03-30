@@ -17,17 +17,52 @@ DEFAULT_MAX_LINKS_PER_TARGET = 5
 MAX_TITLE_SLUG_LENGTH = 60
 
 POSITIVE_LINK_HINTS = [
-    "press", "release", "statement", "speech", "testimony", "minutes",
-    "decision", "report", "bulletin", "commentary", "economic-letter",
-    "staff-report", "staff-reports", "blog", "insight", "analysis",
-    "policy", "market-notice", "news", "article", "publication"
+    "press",
+    "release",
+    "statement",
+    "speech",
+    "testimony",
+    "minutes",
+    "decision",
+    "report",
+    "bulletin",
+    "commentary",
+    "economic-letter",
+    "staff-report",
+    "staff-reports",
+    "blog",
+    "insight",
+    "analysis",
+    "policy",
+    "market-notice",
+    "news",
+    "article",
+    "publication",
 ]
 
 NEGATIVE_LINK_HINTS = [
-    "about", "careers", "events", "experts", "archive", "archives",
-    "people", "our-people", "education", "programs", "our-offices",
-    "our-vision", "museum", "tag", "category", "topics", "author",
-    "contact", "signup", "subscribe", "webinar", "podcast"
+    "about",
+    "careers",
+    "events",
+    "experts",
+    "archive",
+    "archives",
+    "people",
+    "our-people",
+    "education",
+    "programs",
+    "our-offices",
+    "our-vision",
+    "museum",
+    "tag",
+    "category",
+    "topics",
+    "author",
+    "contact",
+    "signup",
+    "subscribe",
+    "webinar",
+    "podcast",
 ]
 
 MAIN_CONTENT_SELECTORS = [
@@ -66,6 +101,7 @@ def ensure_manifest_shape(manifest: dict) -> dict:
     manifest.setdefault("record_rules", {})
     manifest.setdefault("title_fingerprints", {})
     manifest.setdefault("content_fingerprints", {})
+    manifest.setdefault("processed_urls", {})
 
     return manifest
 
@@ -153,7 +189,9 @@ def html_to_text(html: str) -> str:
 def extract_main_text(html: str) -> tuple[str, list[str]]:
     soup = BeautifulSoup(html, "html.parser")
 
-    for tag in soup(["script", "style", "noscript", "header", "footer", "nav", "aside", "form"]):
+    for tag in soup(
+        ["script", "style", "noscript", "header", "footer", "nav", "aside", "form"]
+    ):
         tag.decompose()
 
     warnings = []
@@ -194,8 +232,18 @@ def looks_like_article_link(url: str) -> bool:
     path = parsed.path.lower()
 
     bad_suffixes = (
-        ".pdf", ".jpg", ".jpeg", ".png", ".gif", ".svg",
-        ".zip", ".xlsx", ".xls", ".csv", ".doc", ".docx"
+        ".pdf",
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif",
+        ".svg",
+        ".zip",
+        ".xlsx",
+        ".xls",
+        ".csv",
+        ".doc",
+        ".docx",
     )
     if path.endswith(bad_suffixes):
         return False
@@ -259,7 +307,7 @@ def extract_links(
     html: str,
     allowed_prefixes: list[str],
     blocklist_fragments: list[str],
-    max_links: int
+    max_links: int,
 ) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
     candidates = []
@@ -371,19 +419,51 @@ def classify_page_type(url: str, title: str, text: str, published_at: str) -> st
     clean_path = path.strip("/")
 
     language_selector_hits = sum(
-        1 for token in ["english", "deutsch", "français", "español", "italiano", "bg", "menu"]
+        1
+        for token in [
+            "english",
+            "deutsch",
+            "français",
+            "español",
+            "italiano",
+            "bg",
+            "menu",
+        ]
         if token in lower_text
     )
     nav_hits = sum(
-        1 for token in ["skip to", "navigation", "menu", "frequently asked questions", "contacts"]
+        1
+        for token in [
+            "skip to",
+            "navigation",
+            "menu",
+            "frequently asked questions",
+            "contacts",
+        ]
         if token in lower_text
     )
     listing_hits = sum(
-        1 for token in ["latest", "archive", "archives", "recent", "browse", "all rights reserved"]
+        1
+        for token in [
+            "latest",
+            "archive",
+            "archives",
+            "recent",
+            "browse",
+            "all rights reserved",
+        ]
         if token in lower_text
     )
     homepage_hits = sum(
-        1 for token in ["listings", "trading", "market data", "about", "innovation", "connect"]
+        1
+        for token in [
+            "listings",
+            "trading",
+            "market data",
+            "about",
+            "innovation",
+            "connect",
+        ]
         if token in lower_text
     )
 
@@ -396,7 +476,11 @@ def classify_page_type(url: str, title: str, text: str, published_at: str) -> st
     if not clean_path:
         return "homepage"
 
-    if clean_path.endswith("index") or "/index." in path or clean_path.startswith("index."):
+    if (
+        clean_path.endswith("index")
+        or "/index." in path
+        or clean_path.startswith("index.")
+    ):
         if nav_hits >= 1:
             return "navigation_page"
         if not published_at:
@@ -413,10 +497,15 @@ def classify_page_type(url: str, title: str, text: str, published_at: str) -> st
     if "market notice" in article_signal_text:
         return "market_notice"
 
-    if any(token in article_signal_text for token in ["speech", "testimony", "remarks"]):
+    if any(
+        token in article_signal_text for token in ["speech", "testimony", "remarks"]
+    ):
         return "speech"
 
-    if any(token in article_signal_text for token in ["press release", "pressreleases", "news release"]):
+    if any(
+        token in article_signal_text
+        for token in ["press release", "pressreleases", "news release"]
+    ):
         return "press_release"
 
     if any(token in article_signal_text for token in DATA_RELEASE_HINTS):
@@ -448,8 +537,9 @@ def main() -> list[str]:
             "record_map": {},
             "record_rules": {},
             "title_fingerprints": {},
-            "content_fingerprints": {}
-        }
+            "content_fingerprints": {},
+            "processed_urls": {},
+        },
     )
     manifest = ensure_manifest_shape(manifest)
 
@@ -477,7 +567,7 @@ def main() -> list[str]:
         expected_language = target.get("expected_language", "en")
         allowed_page_types = target.get(
             "allowed_page_types",
-            ["article", "press_release", "speech", "data_release", "market_notice"]
+            ["article", "press_release", "speech", "data_release", "market_notice"],
         )
 
         if not isinstance(max_links, int) or max_links < 1:
@@ -493,11 +583,7 @@ def main() -> list[str]:
             continue
 
         article_links = extract_links(
-            url,
-            index_html,
-            allowed_prefixes,
-            blocklist_fragments,
-            max_links
+            url, index_html, allowed_prefixes, blocklist_fragments, max_links
         )
 
         if not article_links:
@@ -508,6 +594,10 @@ def main() -> list[str]:
 
         for article_url in article_links:
             print(f"  Fetching article: {article_url}")
+
+            if article_url in manifest.get("processed_urls", {}):
+                print("    Already processed, skipping.")
+                continue
 
             try:
                 article_html = fetch_html(article_url)
@@ -530,7 +620,9 @@ def main() -> list[str]:
             published_at = extract_published_at(soup)
             canonical_url = extract_canonical_url(soup, article_url)
             detected_language = detect_language(article_text)
-            page_type = classify_page_type(article_url, article_title, article_text, published_at)
+            page_type = classify_page_type(
+                article_url, article_title, article_text, published_at
+            )
             if page_type in CONTAINER_PAGE_TYPES:
                 extraction_warnings.append("container_page")
             record_id = build_record_id(name, article_title, article_url)
@@ -542,11 +634,15 @@ def main() -> list[str]:
             existing_content_record = manifest["content_fingerprints"].get(content_fp)
 
             if existing_title_record and existing_title_record != record_id:
-                print(f"    Duplicate by title fingerprint, skipping. Existing: {existing_title_record}")
+                print(
+                    f"    Duplicate by title fingerprint, skipping. Existing: {existing_title_record}"
+                )
                 continue
 
             if existing_content_record and existing_content_record != record_id:
-                print(f"    Duplicate by content fingerprint, skipping. Existing: {existing_content_record}")
+                print(
+                    f"    Duplicate by content fingerprint, skipping. Existing: {existing_content_record}"
+                )
                 continue
 
             output_path = RAW_DIR / f"{record_id}.txt"
@@ -586,7 +682,7 @@ def main() -> list[str]:
                 "expected_language": expected_language,
                 "allowed_page_types": allowed_page_types,
                 "target_name": name,
-                "topic": topic
+                "topic": topic,
             }
             manifest["title_fingerprints"][title_fp] = record_id
             manifest["content_fingerprints"][content_fp] = record_id
