@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "bundles": [
     {
       "bundle_id": "broad_event_noise",
@@ -8,39 +7,23 @@
       "suppression_strength": 0.8,
       "source": "static",
       "created_at": null
+    },
+    {
+      "bundle_id": "noise",
+      "label": "Noise/Off-Topic",
+      "terms": ["casino", "gambling", "lottery", "spam", "advertisement", "sponsored content"],
+      "suppression_strength": 0.7,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "bundle_id": "personal_finance",
+      "label": "Personal Finance (Not Research)",
+      "terms": ["personal loan", "mortgage rate", "credit score", "retirement planning", "401k", "ira"],
+      "suppression_strength": 0.6,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
     }
   ],
   "version": "1.0"
-=======
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Negative Keyword Bundles Configuration",
-  "description": "Configuration for negative keyword bundles that indicate noise or should be excluded",
-  "type": "object",
-  "additionalProperties": {
-    "type": "object",
-    "properties": {
-      "bundle_name": {
-        "type": "string",
-        "description": "Human-readable name for this negative keyword bundle"
-      },
-      "negative_keywords": {
-        "type": "array",
-        "items": {"type": "string"},
-        "description": "Keywords that indicate noise or off-topic content"
-      },
-      "min_occurrences": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Minimum occurrences required for a term to be considered negative"
-      },
-      "penalty_weight": {
-        "type": "number",
-        "minimum": 0,
-        "maximum": 10,
-        "description": "Weight multiplier for penalty calculation"
-      }
-    },
-    "required": ["bundle_name", "negative_keywords"]
-  }
->>>>>>> feature/v2.5-part3-extraction
 }
