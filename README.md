@@ -194,3 +194,283 @@ flowchart TD
 
     A --> S[git add / commit / push data]
 ```
+
+---
+
+## 2. Keyword Discovery Pipeline
+
+**Script:** `scripts/run_keyword_discovery.py`
+
+This lane discovers candidates through keyword searches against configured queries. It feeds into the shared candidate pipeline.
+
+Flow:
+1. Load `config/keyword_queries.json`
+2. For each enabled query, execute search (web or preferred domains)
+3. Normalize results and build candidates
+4. Shared pipeline: dedupe → scoring → filtering → convert → process_record
+
+### Keyword discovery diagram
+
+```mermaid
+flowchart TD
+    A[keyword_queries.json] --> B[run_keyword_discovery.py]
+    B --> C[discovery_providers.py]
+    C -->|web search| D[search results]
+    C -->|preferred domains| E[domain-filtered results]
+    D --> F[normalize_results.py]
+    E --> F
+    F --> G[build_keyword_candidates.py]
+    G --> H[candidate JSON records]
+    
+    H --> I[dedupe_candidates.py]
+    I -->|duplicates| J[data/candidates/deduped_out]
+    I -->|unique| K[score_candidates.py]
+    
+    K --> L{score >= threshold?}
+    L -->|no| M[data/candidates/filtered_out]
+    L -->|yes| N[convert_candidates_to_raw.py]
+    N --> O[data/raw]
+    O --> P[process_record.py]
+    
+    P --> Q[run_summarizer.py<br/>MiniMax]
+    Q --> R[run_verifier.py<br/>MiniMax]
+    R --> S[route_record.py]
+    
+    S -->|accepted| T[data/accepted]
+    S -->|review_queue| U[data/review_queue]
+    S -->|rejected| V[data/rejected]
+```
+
+---
+
+## 3. Seed Site Crawling Pipeline
+
+**Script:** `scripts/run_seed_crawl.py`
+
+This lane crawls configured seed sites to discover candidates. It also feeds into the shared candidate pipeline.
+
+Flow:
+1. Load `config/seed_sites.json`
+2. For each enabled seed, crawl and extract links
+3. Build candidates from discovered URLs
+4. Shared pipeline: dedupe → scoring → filtering → convert → process_record
+
+### Seed crawl diagram
+
+```mermaid
+flowchart TD
+    A[seed_sites.json] --> B[run_seed_crawl.py]
+    B --> C[crawl_seed_site.py]
+    C --> D[extract_internal_links.py]
+    D --> E[candidate URL list]
+    E --> F[build candidates]
+    
+    F --> G[save to data/candidates/discovered]
+    G --> H[dedupe_candidates.py]
+    
+    H -->|duplicates| I[data/candidates/deduped_out]
+    H -->|unique| J[score_candidates.py]
+    
+    J --> K{score >= threshold?}
+    K -->|no| L[data/candidates/filtered_out]
+    K -->|yes| M[convert_candidates_to_raw.py]
+    M --> N[data/raw]
+    N --> O[process_record.py]
+    
+    O --> P[run_summarizer.py<br/>MiniMax]
+    P --> Q[run_verifier.py<br/>MiniMax]
+    Q --> R[route_record.py]
+    
+    R -->|accepted| S[data/accepted]
+    R -->|review_queue| T[data/review_queue]
+    R -->|rejected| U[data/rejected]
+```
+
+---
+
+## 4. V2.5 Unified Scoring System
+
+**Scripts:** 
+- `scripts/extract_candidate_features.py`
+- `scripts/score_candidate.py`
+- `scripts/score_candidates_batch.py`
+
+V2.5 introduced a unified scoring system with multiple weighted components and priority buckets.
+
+### Scoring components
+
+| Component | Weight | Description |
+|-----------|--------|-------------|
+| domain_trust | 0.25 | Trust from domain baselines (high=100, medium=50, low=10) |
+| url_quality | 0.20 | URL structure hints (positive: press, report, research) |
+| title_quality | 0.20 | Title keyword hints |
+| keyword_match | 0.20 | Match against keyword bundles |
+| freshness | 0.10 | Age decay (full score < 168 hours) |
+| lane_reliability | 0.10 | Lane-based reliability (trusted=100, keyword=50, seed=30) |
+| duplication_risk | -0.15 | Duplicate penalty (URL/title hash matches) |
+
+### Scoring flow diagram
+
+```mermaid
+flowchart TD
+    A[candidate record] --> B[extract_candidate_features.py]
+    
+    B --> C[Freshness extraction<br/>hours since published]
+    B --> D[URL quality scoring<br/>path hints]
+    B --> E[Title quality scoring<br/>keyword hints]
+    B --> F[Domain trust lookup<br/>from scoring_rules.json]
+    B --> G[Lane reliability lookup<br/>static lane scores]
+    B --> H[Duplication check<br/>hash against index]
+    
+    C & D & E & F & G & H --> I[score_candidate.py]
+    
+    I --> J[Weighted sum calculation]
+    J --> K[Score breakdown<br/>domain_trust, url_quality, etc.]
+    K --> L[candidate_score: 0-100]
+    
+    L --> M[score_candidates_batch.py]
+    M --> N{score >= 75?}
+    N -->|yes| O[High Priority<br/>process immediately]
+    N -->|no| P{score >= 60?}
+    P -->|yes| Q[Medium Priority<br/>defer]
+    P -->|no| R{score >= 45?}
+    R -->|yes| S[Low Priority<br/>defer]
+    R -->|no| T[Skip<br/>filtered_out]
+    
+    O --> U[process_list]
+    Q --> V[defer_list]
+    S --> V
+    T --> W[skip_list]
+    
+    U & V --> X[convert_candidates_to_raw.py]
+    W --> Y[update_source_memory.py<br/>filtered_out memory]
+```
+
+---
+
+## 5. V2.5 Memory System
+
+**Scripts:**
+- `scripts/memory_persistence.py`
+- `scripts/memory_manager.py`
+- `scripts/update_source_memory.py`
+
+Memory tracks domain, path-pattern, and source performance over time to make scoring adaptive.
+
+### Memory types
+
+| Memory Type | Tracks | Key Metrics |
+|-------------|--------|-------------|
+| Domain Memory | `data/source_memory/domain_memory.json` | trust_score, accepted/rejected counts, yield/noise |
+| Path Memory | `data/source_memory/path_memory.json` | `/events/`, `/research/` pattern trust |
+| Source Memory | `data/source_memory/source_memory.json` | source_id yield/noise, lane-based trust |
+
+### Memory update flow
+
+```mermaid
+flowchart TD
+    A[Candidate Outcome] --> B{Outcome Type}
+    
+    B -->|accepted| C[accepted_human]
+    B -->|rejected| D[rejected_human]
+    B -->|review_queue| E[review_human]
+    B -->|filtered_out| F[filtered_out]
+    
+    C --> G[route_record.py]
+    D --> G
+    E --> G
+    F --> H[score_candidates_batch.py]
+    
+    G --> I[update_all_memory_on_outcome]
+    H --> I
+    
+    I --> J[memory_manager.py]
+    
+    J --> K[Domain Memory]
+    J --> L[Path Memory]
+    J --> L
+    J --> M[Source Memory]
+    
+    K --> N[data/source_memory<br/>domain_memory.json]
+    L --> O[data/source_memory<br/>path_memory.json]
+    M --> P[data/source_memory<br/>source_memory.json]
+    
+    K --> Q[Trust Recalculation]
+    L --> Q
+    M --> Q
+    
+    Q --> R[blend baseline + learned<br/>cold-start aware]
+    R --> S[trust_score updated]
+    
+    S --> T[compute yield/noise]
+    T --> U[yield_score, noise_score]
+    
+    U --> V[logs/source_memory<br/>memory_updates.jsonl]
+```
+
+### Memory-influenced scoring
+
+```mermaid
+flowchart TD
+    A[candidate] --> B[extract_candidate_features.py]
+    
+    B --> C[extract_domain_trust_score_with_memory]
+    C --> D{Domain in memory?}
+    D -->|yes| E[blend: 10% baseline<br/>90% memory]
+    D -->|no| F[use baseline trust]
+    
+    B --> G[extract_path_trust_score]
+    G --> H{path /events/?}
+    H -->|yes, trust < 20| I[apply 10% penalty]
+    H -->|no| J[no penalty]
+    
+    B --> K[extract_source_quality_scores]
+    K --> L{yield > 0.7<br/>noise < 0.3?}
+    L -->|yes| M[apply 10% bonus]
+    L -->|no| N[no bonus]
+    
+    E & F & I & J & M & N --> O[Final score<br/>capped at 100]
+```
+
+### Cold-start blending
+
+New domains/sources start with baseline trust and gradually shift to learned trust:
+
+| Samples | Baseline Weight | Learned Weight |
+|---------|-----------------|----------------|
+| 0-9 | 90-100% | 0-10% |
+| 10-24 | 90% → 10% | 10% → 90% |
+| 25+ | 10% | 90% |
+
+Human decisions are weighted 2x more than automatic decisions.
+
+---
+
+## 6. Three-Lane Architecture
+
+The system uses three discovery lanes that converge into a shared processing pipeline:
+
+```mermaid
+flowchart TD
+    A[Lane 1: Trusted Sources<br/>federalreserve.gov, etc.] --> X[Shared Candidate Pipeline]
+    B[Lane 2: Keyword Discovery<br/>config/keyword_queries.json] --> X
+    C[Lane 3: Seed Site Crawl<br/>config/seed_sites.json] --> X
+    
+    X --> D[Candidate Deduplication]
+    D --> E[Candidate Scoring<br/>V2.5 Unified]
+    E --> F[Memory-Based Trust<br/>V2.5 Part 2]
+    F --> G[Priority Buckets<br/>high/medium/low/skip]
+    G --> H[Convert to Raw]
+    H --> I[process_record.py]
+    I --> J[MiniMax Summarize]
+    J --> K[MiniMax Verify]
+    K --> L[Route: accept/reject/review]
+    
+    L -->|accepted| M[data/accepted]
+    L -->|rejected| N[data/rejected]
+    L -->|review| O[data/review_queue]
+    
+    O --> P[Telegram Human Review]
+    P -->|approve| M
+    P -->|reject| N
+```
