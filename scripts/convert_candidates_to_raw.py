@@ -11,6 +11,19 @@ from typing import Any
 from scripts.candidate_utils import BASE_DIR
 
 
+def print_conversion_failures(candidates: list[dict[str, Any]]) -> None:
+    """Print summary of conversion failures for debugging."""
+    failed = [
+        c for c in candidates if c.get("conversion_status", "").startswith("failed:")
+    ]
+    if failed:
+        print(f"[Convert] {len(failed)}/{len(candidates)} candidates failed:")
+        for c in failed:
+            cid = c.get("candidate_id", "unknown")
+            status = c.get("conversion_status", "")
+            print(f"  - {cid}: {status}")
+
+
 def candidate_to_raw_header(candidate: dict[str, Any]) -> str:
     """Generate V1-compatible header from candidate.
 
@@ -117,4 +130,5 @@ def convert_candidates(candidates: list[dict[str, Any]]) -> list[Path]:
         except Exception as e:
             candidate["conversion_status"] = f"failed: {str(e)}"
 
+    print_conversion_failures(candidates)
     return created_paths
