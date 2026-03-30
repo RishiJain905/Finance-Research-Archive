@@ -1,0 +1,74 @@
+{
+  "id": "seed_crawl_newyorkfed_reference_rates_federal_reserve_bank_dd3990584a9efa74",
+  "created_at": "2026-03-30T06:22:13.595797+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "reference_rate_framework",
+  "title": "Reference Rates - Federal Reserve Bank of New York",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "",
+    "published_at": "",
+    "source_type": "institutional"
+  },
+  "summary": "The Federal Reserve Bank of New York publishes multiple reference rates for money markets, including the Effective Federal Funds Rate (EFFR), Overnight Bank Funding Rate (OBFR), Secured Overnight Financing Rate (SOFR), Broad General Collateral Rate (BGCR), and Tri-Party General Collateral Rate (TGCR). These rates provide transparent, independent pricing sources that facilitate standardized contracts, reduce information asymmetries, and support robust market functioning. The New York Fed has served as an administrator and producer of reference rates since the 1950s and maintains compliance with IOSCO's Principles for Financial Benchmarks.",
+  "key_points": [
+    "EFFR is calculated from overnight federal funds transactions reported by domestic banks and U.S. branches of foreign banks via the FR 2420 Report",
+    "OBFR extends EFFR data to include overnight Eurodollar transactions and certain deposit transactions at domestic branches",
+    "SOFR measures the general cost of financing Treasury securities overnight, combining BGCR data with FICC Delivery-versus-Payment repo transactions",
+    "SOFR Averages are backward-looking compounded rates with 30-, 90-, and 180-calendar day tenors; SOFR Index began April 2, 2018",
+    "BGCR covers overnight Treasury general collateral repo including tri-party and FICC GCF repo transactions",
+    "TGCR specifically measures overnight tri-party GC repo secured by Treasury securities between identified counterparties",
+    "New York Fed reference rates are compliant with IOSCO Principles for Financial Benchmarks"
+  ],
+  "why_it_matters": "Reference rates form critical market infrastructure by providing transparent pricing benchmarks that support efficient market functioning. They reduce information asymmetries, lower transaction costs through standardized contracts, and can limit manipulation incentives when robustly designed.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 8
+  },
+  "macro_context": "Reference rate infrastructure supports monetary policy implementation and provides pricing benchmarks used in money market transactions and contract settlement.",
+  "market_structure_context": "This source documents the institutional framework behind key money market reference rates (EFFR, OBFR, SOFR, BGCR, TGCR) that serve as pricing references for various market participants and transactions.",
+  "important_numbers": [
+    1950,
+    2,
+    30,
+    90,
+    180
+  ],
+  "tags": [
+    "federal-reserve",
+    "reference-rates",
+    "SOFR",
+    "EFFR",
+    "OBFR",
+    "BGCR",
+    "TGCR",
+    "money-market",
+    "monetary-policy",
+    "benchmark-rates",
+    "IOSCO-compliance",
+    "repo-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - violates rule 7 (SOURCE METADATA as authoritative for page diagnostics) and rule 8 (source attribution is missing)",
+      "Important numbers list includes '2' without clear source context - appears unsupported",
+      "Why it matters claims 'underpins trillions of dollars' and 'LIBOR transition' are not explicitly supported in this source text",
+      "Macro context claims 'trillions in outstanding debt and derivatives globally' are not stated in source",
+      "Source page contains navigation elements, announcement listings, and links to related content suggesting this may be a hub/listing page rather than a primary article"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_reference_rates_federal_reserve_bank_dd3990584a9efa74.txt",
+  "notes": "Source provides comprehensive documentation of NY Fed reference rate methodology. URL field is empty in metadata. Source is institutional and high-quality for market structure research. Minor note: page includes navigation elements and multiple links but contains substantive content about rate calculations and their roles in market functioning."
+}

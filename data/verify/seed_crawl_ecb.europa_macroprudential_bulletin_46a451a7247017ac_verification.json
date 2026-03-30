@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/table-of-contents page containing only article titles and brief descriptions, not substantive research content",
+    "No publication date provided in body content",
+    "URL field is blank in source metadata",
+    "No specific quantitative findings, data points, or market-moving figures provided",
+    "Cannot assess actual market impact or macro implications from this listing page",
+    "Rule 8 violation: listing_page source type must not be accepted as standalone record",
+    "Archive value is minimal - individual article pages should be crawled for real content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record has already correctly identified this as a listing page with no substantive content. The record's self-assessment is accurate and no additional human review is needed - direct rejection is appropriate per Rule 8.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a table of contents/listing page for ECB Macroprudential Bulletin Issue 32 (November 2025), presenting article titles and brief descriptions on macroprudential topics. The content covers extensions to the 2025 EU-wide stress test, including bank deleveraging dynamics, contagion risk integration, climate risk assessment, and scenario severity frameworks. No specific quantitative data, findings, or market-moving figures are provided in this source.",
+    "why_it_matters": "This listing page provides no standalone research value. Individual article pages should be crawled separately for substantive content on macroprudential stress testing methodology, systemic risk assessment, and countercyclical capital buffer policy calibration.",
+    "macro_context": "ECB macroprudential research on stress test methodology and systemic risk assessment provides background for understanding potential bank sector vulnerabilities. However, this listing page does not contain the actual research findings - only references to articles that should be crawled individually.",
+    "market_structure_context": ""
+  }
+}

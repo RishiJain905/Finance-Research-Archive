@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a media advisory announcing a future release, not substantive research content",
+    "Source is a container/thin page (press advisory) with no actual policy content, economic data, or market analysis",
+    "URL is blank, preventing source verification",
+    "Archive value is minimal - the source only announces a publication date without providing any content",
+    "Record correctly identifies this as a low-quality container page but still assigns it 'review_queue' status",
+    "Even for review_queue, thin container pages should not be accepted into a research archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Low-value source that only announces an upcoming publication without containing any substantive information",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Bank of Canada issued a media advisory announcing it will publish a summary of deliberations from its March 18, 2026 interest rate decision on April 1, 2026. This is a container page with zero substantive content - it contains only metadata about an upcoming release, not the release itself.",
+    "why_it_matters": "This advisory has no research value. It merely announces a future publication date. The actual deliberation content that would be relevant for macro research is not present in this source.",
+    "macro_context": "Not applicable. The source contains no macroeconomic data, projections, policy details, or analysis of any kind.",
+    "market_structure_context": "Not applicable. No market structure information is present in this thin media advisory."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page with no substantive research content",
+    "Contains only navigation links to reports and testimonies, not the actual content",
+    "No URL provided in source metadata, making attribution impossible",
+    "No macro catalysts, market-moving data, or actionable information present",
+    "PAGE_TYPE equivalent to listing_page - explicitly disallowed per archive rules",
+    "Archive value is zero as a standalone record; individual report URLs required for actual research value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this as a non-archivable container page. No human judgment needed to reject a pure listing page with no substantive content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a navigation/listing page for the Federal Reserve Supervision and Regulation Report, providing links to archived reports and testimonies from 2018 through 2025. It does not contain substantive research content, market-moving data, or specific macro catalysts. The actual reports are available separately as HTML or PDF documents.",
+    "why_it_matters": "Container/index pages provide no standalone research value and should not be archived. Actual banking supervision findings, supervisory activities, and macro-relevant content exist only in the individual report documents linked from this page.",
+    "macro_context": "While the Federal Reserve Supervision and Regulation Report covers banking conditions and supervisory activities relevant to macro analysis, this listing page itself contains none of that content. Individual reports (HTML/PDF) from this index must be accessed for substantive macro context.",
+    "market_structure_context": "This listing page has no market structure relevance. Banking supervision content that might inform market structure analysis exists in the separate linked documents, not on this index page."
+  }
+}

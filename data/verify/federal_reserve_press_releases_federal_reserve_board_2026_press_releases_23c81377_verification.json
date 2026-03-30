@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/index page containing only press release titles and dates, not substantive content",
+    "PAGE_TYPE metadata indicates 'press_release' but content structure matches a listing or index page",
+    "No actionable details, market signals, or policy content present in the source",
+    "Archive value is too low - individual press releases (FOMC minutes, enforcement actions, regulatory proposals) should be sourced directly",
+    "Cannot assess actual market impact without document content",
+    "Reference to monetary policy items (FOMC minutes, discount rate minutes) provides no substantive information beyond their existence"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is an index page with no substantive content. The PAGE_TYPE metadata contradicts the actual content structure. Record correctly identifies this as a listing page with low archival value. Rejection is appropriate but human review confirms the assessment aligns with verification rules.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an index page of Federal Reserve Board press releases from 2026 containing only titles and dates of approximately 30 separate announcements. No substantive policy content is included. Monetary policy references (FOMC minutes, discount rate minutes) exist only as titles without content details.",
+    "why_it_matters": "Provides no actionable research value. Documents existence of Fed communications but offers no insight into content, implications, or market impact. Individual press releases must be sourced directly for meaningful archival research.",
+    "macro_context": "Cannot assess macro context from this index. References to monetary policy items (FOMC minutes from January 27-28, 2026; discount rate meetings) are not actually present in the document, only listed as external links.",
+    "market_structure_context": "References to banking application approvals (Home BancShares, Associated Banc-Corp, Fulton Financial, Fifth Third Bancorp), enforcement actions, and regulatory proposals appear only as titles without substantive content."
+  }
+}

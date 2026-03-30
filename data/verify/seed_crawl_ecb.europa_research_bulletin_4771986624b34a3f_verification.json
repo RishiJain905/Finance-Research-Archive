@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a container/listing page with no actual research articles, data, or specific findings",
+    "URL is blank - missing basic source attribution required by rule #9",
+    "No publication date provided",
+    "SOURCE_TYPE should be 'listing_page' per rule #8 and rule #9",
+    "Container pages must not be accepted per rule #8",
+    "No extractable macro catalyst or market structure content",
+    "Archive value is zero - only contains generic publication description"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut rejection case requiring no human review. Source is explicitly a container/listing page per source metadata and body content. Rule #8 and #9 mandate rejection of such pages. The generated record already correctly identifies all critical issues.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a generic landing/container page for the ECB Research Bulletin section. It describes the publication as a monthly selection of policy-relevant work by ECB economists for a general audience, but contains no actual research articles, data, findings, or actionable content. URL and publication date are blank. This page has zero archive value for macro catalyst research.",
+    "why_it_matters": "Container pages provide no substantive content for a research archive and must be rejected per archive rules.",
+    "macro_context": "None - source contains only metadata description with no research content",
+    "market_structure_context": "None - source contains only metadata description with no research content"
+  }
+}

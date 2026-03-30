@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/listing page - violates Rule 8 (navigation_page must not be accepted)",
+    "No URL provided - source attribution is missing",
+    "Contains only broad research topic categories, no specific findings, data, or actionable macro catalysts",
+    "No publication date present",
+    "Content is structural overview of ECB research areas rather than actual research output",
+    "Ends with 'All pages in this section' confirming navigation page status",
+    "Tagged as navigation page in both source classification and generated record",
+    "Archive value is too low - individual research pages should be crawled instead"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a navigation/listing page from the ECB's website that catalogs broad research topic categories rather than containing actual research findings, data, or actionable macro catalysts. No URL or publication date provided.",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
