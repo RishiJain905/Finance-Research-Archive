@@ -127,7 +127,7 @@
     "https://www.bankofcanada.ca/multimedia/press-conference-policy-rate-announcement-march-2026/": "cfea950d3d5a3f62171ae8d56cc3411d01d6a8f690c687a858bdaee9898a9a0c",
     "https://www.bankofengland.co.uk/news/publications": "ac539ccc87bc5249937937bff7665e48413a9759039358745b85431c58ca24ef",
     "https://www.bankofengland.co.uk/news/news": "281bfe49b7a9ea7573c126725a3055b1b8e2c601353c41556896d963b804c1ab",
-    "https://www.bankofengland.co.uk/markets/market-notices/2026/february/foreign-currency-reserves-10-february-2026": "ed196722274734fd9de2e06322d64e1546fe99c70093a40fa8cc2880968d7665",
+    "https://www.bankofengland.co.uk/markets/market-notices/2026/february/foreign-currency-reserves-10-february-2026": "a8f7dff09ed1b49187fcb2fe801670f8bc6a99067b5133c10d44b40b6ed2b81a",
     "https://www.bankofengland.co.uk/markets/market-notices/2026/february/foreign-currency-reserves-9-february-2026": "10b26cc26ca4e4124096d5f61af86031ae7c023838f1760d2e636f7872137786",
     "https://www.sifma.org/news/press-releases/sifma-statement-on-basel-iii-implementation-proposals": "21f8e5cf9136aad2ec8d641ee3e91ae65b4fbcc23aa3db53755c45130d46395f",
     "https://www.brookings.edu/brookings-institution-privacy-policy/": "c1468ee37e6710851d98f28bd16b75a64ca397f5c50664fa3afe1e24a820bc1d",
@@ -149,7 +149,8 @@
     "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis": "29b6d76cabc0059bd6aed597e6c7366436175a05e5f479d03d1bda6fd5e24a9f",
     "https://www.rba.gov.au/speeches/2026/mc-gov-2026-03-17.html": "6aa6a309ceccbded6f325f18f6d8dd30dae5941f98860c4d74ca81c432817b03",
     "https://www.rba.gov.au/speeches/2026/mc-gov-2026-02-03.html": "f05a8c65454b9fb860994452a338959ccf5b3dad10da666f6b5d47ab22b68c5c",
-    "https://www.rba.gov.au/speeches/2025/mc-gov-2025-12-09.html": "34062c721f147a46d6569e8aa1fa72695121d48b2b388223efdee7fadc04fb0b"
+    "https://www.rba.gov.au/speeches/2025/mc-gov-2025-12-09.html": "34062c721f147a46d6569e8aa1fa72695121d48b2b388223efdee7fadc04fb0b",
+    "https://www.bea.gov/news/schedule": "f37ac2eb918ce2321b9fc42d80db902dea5a91e539d0985182540f47c2ae8686"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -301,7 +302,8 @@
     "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis": "philadelphia_fed_economic_rese_regional_economic_analysis_113353fb",
     "https://www.rba.gov.au/speeches/2026/mc-gov-2026-03-17.html": "rba_speeches_media_conference_monetary_policy_decision_17_march_2026_spee_49073634",
     "https://www.rba.gov.au/speeches/2026/mc-gov-2026-02-03.html": "rba_speeches_media_conference_monetary_policy_decision_3_february_2026_sp_bcf865f1",
-    "https://www.rba.gov.au/speeches/2025/mc-gov-2025-12-09.html": "rba_speeches_media_conference_monetary_policy_decision_9_december_2025_sp_51259ec5"
+    "https://www.rba.gov.au/speeches/2025/mc-gov-2025-12-09.html": "rba_speeches_media_conference_monetary_policy_decision_9_december_2025_sp_51259ec5",
+    "https://www.bea.gov/news/schedule": "bea_news_release_schedule_u_s_bureau_of_economic_analysis_bea_01c9a329"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -2841,6 +2843,31 @@
       ],
       "target_name": "Treasury Press Releases",
       "topic": "market structure"
+    },
+    "bea_news_release_schedule_u_s_bureau_of_economic_analysis_bea_01c9a329": {
+      "required_keywords": [
+        "gdp",
+        "pce",
+        "personal income",
+        "consumer spending",
+        "bea"
+      ],
+      "blocked_keywords": [
+        "interactive data",
+        "methodology",
+        "regional"
+      ],
+      "min_word_count": 140,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BEA News",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -2963,7 +2990,8 @@
     "db970240ae114d2ba59214bd343decea2f245796": "federal_reserve_press_releases_federal_reserve_board_2026_press_releases_23c81377",
     "c43121019973fcdea1c34114bb268191c43189b5": "federal_reserve_press_releases_federal_reserve_board_2025_fomc_press_releases_1bb536b5",
     "e149bc6db1c9e9fba86d304f4d4f546dd1cc69cf": "federal_reserve_press_releases_federal_reserve_board_2025_press_releases_32fc84d2",
-    "a5748589b310ee1e319c7640685fe87f2b65a576": "treasury_press_releases_treasury_announces_president_donald_j_trump_s_signature_to_a_9a12814e"
+    "a5748589b310ee1e319c7640685fe87f2b65a576": "treasury_press_releases_treasury_announces_president_donald_j_trump_s_signature_to_a_9a12814e",
+    "0f2af04ce97013f0d344a710c8c394a8c432f1f4": "bea_news_release_schedule_u_s_bureau_of_economic_analysis_bea_01c9a329"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -3137,6 +3165,7 @@
     "201675a14e392f46bafd0fa3a7c313e9aabe8bef": "rba_speeches_media_conference_monetary_policy_decision_3_february_2026_sp_bcf865f1",
     "ab5c5591a7b6b9c8f9d1e2dfb443a007c3f3cb42": "rba_speeches_media_conference_monetary_policy_decision_9_december_2025_sp_51259ec5",
     "04b881a07bc4e7873fde23e8c08a026231d938de": "bank_of_england_markets_foreign_currency_reserves_2026_market_notice_10_february_202_329afdce",
-    "8dc17b78227aa12493ac7c48800bbe717667ec2d": "bank_of_england_markets_foreign_currency_reserves_2026_market_notice_9_february_2026_8cde0248"
+    "8dc17b78227aa12493ac7c48800bbe717667ec2d": "bank_of_england_markets_foreign_currency_reserves_2026_market_notice_9_february_2026_8cde0248",
+    "0dfae9a1992eba7b0b6fb2bf448d0c6a989d19ef": "bea_news_release_schedule_u_s_bureau_of_economic_analysis_bea_01c9a329"
   }
 }

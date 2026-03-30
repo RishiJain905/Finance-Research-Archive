@@ -1,17 +1,19 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "The important_numbers field includes 3.75 (Bank Rate), which is not present in this specific market notice. The Bank Rate appears in a related navigation link (MPC summary from 19 March 2026), not in the source body of this notice."
+    "Published_at discrepancy: metadata shows 2026-03-27 but the notice itself states published on 10 February 2026. Record correctly uses 2026-03-27 from metadata, but this represents the page publication date, not the notice date (10 February 2026). This creates ambiguity about when the issuance actually occurred.",
+    "Source is primarily regulatory boilerplate: legal disclaimers, jurisdictional restrictions, and forward-looking statement warnings dominate the content. Core substantive content is thin.",
+    "Missing pricing context: no yield information, secondary market behavior, or investor demand signals provided in source.",
+    "No market reaction or commentary: the source contains only factual issuance parameters and legal notices, no analysis of market impact or implications."
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "The published_at date discrepancy needs clarification—whether the record should reflect the notice date (10 February 2026) or the page publication date (27 March 2026). Additionally, the source quality is moderate (significant boilerplate with limited analytical content), and the record's value for market structure analysis depends on how the date and context are interpreted.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": "",
-    "important_numbers": "[2500000000, 3.5, 2029]"
+    "summary": "The Bank of England issued a US$2.5 billion 3-year RegS/144A eurobond on 10 February 2026 to finance its foreign currency reserves. The bond carries a 3.5% coupon and matures on 18 February 2029. This was the first operation under the Bank's updated issuance programme announced in September 2025, which shifted to targeting two benchmark issuances annually with regular timing and high transparency. Note: the page was published/updated on 27 March 2026 per metadata.",
+    "why_it_matters": "This issuance represents a structural change in how the Bank of England finances its foreign currency reserves, moving from ad hoc issuance to a systematic, predictable two-times-per-year benchmark programme. This enhances market transparency and provides regular liquidity events in the gilt-adjacent space. The US$2.5B size and 3.5% coupon provide benchmark pricing references for similar-duration sterling and foreign currency sovereign debt. However, the source provides no yield data, market reaction, or investor demand indicators.",
+    "macro_context": "The issuance is part of the Bank of England's reserve management operations. Foreign currency reserves support monetary policy and financial stability objectives. The shift to predictable benchmark issuances improves the Bank's operational efficiency and market communication. The source does not provide context on broader monetary policy stance or reserve adequacy considerations.",
+    "market_structure_context": "The updated issuance programme (announced September 2025) represents a structural improvement in UK sovereign debt market operations. By committing to two annual benchmark issuances with a regular timetable and designated dealer group, the Bank enhances price discovery, liquidity, and investor engagement for its reserve financing instruments. However, the source is a regulatory filing rather than market commentary, providing limited insight into market structure implications."
   }
 }
