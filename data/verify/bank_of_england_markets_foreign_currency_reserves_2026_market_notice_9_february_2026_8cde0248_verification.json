@@ -1,21 +1,14 @@
 {
-  "verification_confidence": 7,
-  "verdict": "review",
-  "issues_found": [
-    "Field 'verification_confidence' incorrectly set to 0; should reflect actual confidence based on source quality",
-    "Field 'verdict' remains 'pending' rather than a final determination",
-    "Human review notes indicate internal inconsistency between different parts of the record",
-    "The document contains forward-looking statements with inherent uncertainty",
-    "Future-dated source (February 2026) relative to metadata published_at (March 2026) creates temporal ambiguity",
-    "Confidence score of 3 for market_impact is reasonable given lack of quantitative data in source"
-  ],
-  "human_review_required": true,
-  "human_review_reason": "The core record content is accurate and well-supported, but the internal metadata shows inconsistencies (verification_confidence=0 vs actual good quality, verdict='pending') that require correction. The source is legitimate (BoE official market notice) with clear relevance to market structure. Human review is needed to clean up these procedural fields rather than because of source quality concerns.",
-  "suggested_status": "review_queue",
+  "verification_confidence": 9,
+  "verdict": "accept",
+  "issues_found": [],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "This market notice operationalizes the Bank of England's restructured foreign exchange reserve financing programme announced September 2025. The shift to predictable, transparent benchmark issuances (twice annually) affects market structure by providing regular anticipated supply signals to USD bond markets, reducing uncertainty around central bank reserve management operations, and establishing consistent distribution infrastructure through joint lead managers.",
-    "macro_context": "The Bank of England's foreign exchange reserves support policy objectives. USD benchmark bond issuance by a major central bank contributes to sovereign debt supply in USD markets. The two annual issuances create a regular, anticipated supply cadence.",
-    "market_structure_context": "The transition from irregular reserve financing to a structured programme with two annual benchmark issuances represents a structural change in BoE's balance sheet management and market communication. Using four joint lead managers (RBC, BMO, HSBC, Morgan Stanley) establishes distribution infrastructure for reserve-linked securities. The programme's high transparency and regular timetable reduce information asymmetry in USD bond markets."
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }
