@@ -100,14 +100,16 @@ class TestPipelineSteps:
 
     @patch("scripts.run_v2_candidate_pipeline.discover_candidates")
     @patch("scripts.run_v2_candidate_pipeline.process_dedupe")
+    @patch("scripts.run_v2_candidate_pipeline.extract_candidate_features")
     @patch("scripts.run_v2_candidate_pipeline.score_candidate")
-    @patch("scripts.run_v2_candidate_pipeline.filter_by_score")
+    @patch("scripts.run_v2_candidate_pipeline.score_candidates_batch")
     @patch("scripts.run_v2_candidate_pipeline.convert_candidates")
     def test_pipeline_calls_steps_in_order(
         self,
         mock_convert,
-        mock_filter,
+        mock_batch,
         mock_score,
+        mock_extract,
         mock_dedupe,
         mock_discover,
         tmp_path,
@@ -123,18 +125,29 @@ class TestPipelineSteps:
             [{"candidate_id": "test_candidate_1", "lane": "trusted_sources"}],
             [],  # duplicates
         )
+        mock_extract.return_value = {
+            "candidate_id": "test_candidate_1",
+            "lane": "trusted_sources",
+        }
         mock_score.return_value = {
             "candidate_id": "test_candidate_1",
-            "candidate_scores": {"total_score": 50},
+            "candidate_scores": {"total_score": 80},
+            "candidate_score": {"candidate_score": 80, "score_breakdown": {}},
+            "priority_bucket": "high",
+            "process_decision": "process",
         }
-        mock_filter.return_value = (
+        mock_batch.return_value = (
             [
                 {
                     "candidate_id": "test_candidate_1",
-                    "candidate_scores": {"total_score": 50},
+                    "candidate_scores": {"total_score": 80},
+                    "candidate_score": {"candidate_score": 80, "score_breakdown": {}},
+                    "priority_bucket": "high",
+                    "process_decision": "process",
                 }
             ],
-            [],  # filtered_out
+            [],  # defer_list
+            [],  # skip_list
         )
         mock_convert.return_value = ["test_record_id"]
 
@@ -144,8 +157,9 @@ class TestPipelineSteps:
         # Verify call order
         mock_discover.assert_called_once_with("trusted_sources")
         mock_dedupe.assert_called_once()
+        mock_extract.assert_called()
         mock_score.assert_called()
-        mock_filter.assert_called()
+        mock_batch.assert_called_once()
         mock_convert.assert_called_once()
 
 

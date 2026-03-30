@@ -11,7 +11,15 @@
     "source",
     "title",
     "dedupe",
-    "status"
+    "status",
+    "freshness_hours",
+    "url_quality_score",
+    "title_quality_score",
+    "keyword_match_score",
+    "domain_trust_score",
+    "duplication_risk_score",
+    "lane_reliability_score",
+    "source_type"
   ],
   "properties": {
     "candidate_id": {
@@ -139,6 +147,51 @@
           "default": 0
         }
       }
+    },
+    "freshness_hours": {
+      "type": "number",
+      "description": "Hours since candidate was published/discovered"
+    },
+    "url_quality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "URL quality score based on path hints"
+    },
+    "title_quality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Title quality score based on keyword hints"
+    },
+    "keyword_match_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Keyword match score from discovery lane"
+    },
+    "domain_trust_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Domain trust score based on trust tier"
+    },
+    "duplication_risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Duplication risk score (higher = more risk)"
+    },
+    "lane_reliability_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Lane reliability score based on discovery lane"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["press_release", "speech", "blog", "research", "rulemaking", "quant_snapshot", "unknown"],
+      "description": "Type of source content"
     },
     "dedupe": {
       "type": "object",

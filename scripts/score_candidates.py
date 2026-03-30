@@ -1,7 +1,7 @@
 """Candidate scoring module for V2 shared candidate layer.
 
-This module scores candidates based on positive and negative signals
-to determine relevance and quality.
+This module provides backwards-compatible scoring functions that delegate to
+the new V2.5 scoring modules while maintaining the old interface.
 """
 
 import json
@@ -11,6 +11,11 @@ from pathlib import Path
 from typing import Any
 
 from scripts.candidate_utils import BASE_DIR, load_json
+
+# Import new V2.5 scoring modules
+from scripts.extract_candidate_features import extract_candidate_features
+from scripts.score_candidate import score_candidate as new_score_candidate
+from scripts.score_candidates_batch import score_candidates_batch
 
 
 # Configuration paths
@@ -330,58 +335,65 @@ def score_content_length(candidate: dict[str, Any]) -> int:
 
 
 def score_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
-    """Score a candidate and return updated candidate with candidate_scores filled.
+    """Score a candidate using the new V2.5 scoring layer.
+
+    This function maintains backwards compatibility by:
+    1. Extracting features using the new feature extraction module
+    2. Scoring using the new single candidate scoring module
+    3. Mapping V2.5 fields to V2 candidate_scores structure
 
     Args:
         candidate: Candidate dict with all relevant fields
 
     Returns:
-        Candidate with updated candidate_scores containing all component scores
-            and total_score
+        Candidate with updated candidate_scores (legacy) and candidate_score (V2.5) fields
     """
-    # Ensure candidate_scores structure exists
+    # Ensure candidate_scores structure exists for backwards compatibility
     if "candidate_scores" not in candidate:
         candidate["candidate_scores"] = {}
 
-    scores = candidate["candidate_scores"]
+    # Extract features using new V2.5 module
+    candidate = extract_candidate_features(candidate)
 
-    # Calculate component scores
-    domain = candidate.get("source", {}).get("domain", "")
-    domain_trust_score, trust_tier = get_domain_trust_score(domain)
+    # Score using new V2.5 module
+    candidate = new_score_candidate(candidate)
 
-    url_score = score_url(candidate)
-    anchor_score = score_anchor_text(candidate)
-    freshness_score = score_freshness(candidate)
-    content_length_score = score_content_length(candidate)
+    # Get the V2.5 score data
+    v2_5_score = candidate.get("candidate_score", {})
+    score_breakdown = v2_5_score.get("score_breakdown", {})
 
-    # Keyword score is derived from URL + anchor positive matches
-    keyword_score = sum(
-        [5 for kw in POSITIVE_URL_KEYWORDS if kw in candidate.get("url", "").lower()]
-    )
+    # Map V2.5 fields to V2 candidate_scores for backwards compatibility
+    # url_score <- url_quality
+    candidate["candidate_scores"]["url_score"] = score_breakdown.get(
+        "url_quality", {}
+    ).get("normalized", candidate.get("url_quality_score", 0))
 
-    # Calculate total
-    total_score = (
-        domain_trust_score
-        + url_score
-        + anchor_score
-        + freshness_score
-        + content_length_score
-        + keyword_score
-    )
+    # anchor_score <- title_quality
+    candidate["candidate_scores"]["anchor_score"] = score_breakdown.get(
+        "title_quality", {}
+    ).get("normalized", candidate.get("title_quality_score", 0))
 
-    # Update candidate_scores
-    scores["url_score"] = url_score
-    scores["anchor_score"] = anchor_score
-    scores["domain_trust_score"] = domain_trust_score
-    scores["keyword_score"] = keyword_score
-    scores["freshness_score"] = freshness_score
-    scores["content_length_score"] = content_length_score
-    scores["total_score"] = total_score
-    scores["trust_tier"] = trust_tier
+    # domain_trust_score <- domain_trust
+    candidate["candidate_scores"]["domain_trust_score"] = score_breakdown.get(
+        "domain_trust", {}
+    ).get("normalized", candidate.get("domain_trust_score", 0))
 
-    # Also update source trust_tier
-    if "source" in candidate:
-        candidate["source"]["trust_tier"] = trust_tier
+    # keyword_score <- keyword_match
+    candidate["candidate_scores"]["keyword_score"] = score_breakdown.get(
+        "keyword_match", {}
+    ).get("normalized", candidate.get("keyword_match_score", 0))
+
+    # freshness_score <- freshness
+    candidate["candidate_scores"]["freshness_score"] = score_breakdown.get(
+        "freshness", {}
+    ).get("normalized", 0)
+
+    # total_score <- candidate_score (the final 0-100 score)
+    candidate["candidate_scores"]["total_score"] = v2_5_score.get("candidate_score", 0)
+
+    # Also set trust_tier in candidate_scores for backwards compatibility
+    if "domain_trust_tier" in candidate:
+        candidate["candidate_scores"]["trust_tier"] = candidate["domain_trust_tier"]
 
     return candidate
 
@@ -389,29 +401,39 @@ def score_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
 def filter_by_score(
     candidates: list[dict[str, Any]], threshold: float = 0.0
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Filter candidates by score threshold.
+    """Filter candidates by score threshold using V2 API.
+
+    Simple threshold filtering on candidate_scores.total_score.
+    Auto-scores candidates that don't have a total_score yet.
 
     Args:
-        candidates: List of candidates (should have candidate_scores.total_score)
+        candidates: List of candidates (may have candidate_scores.total_score)
         threshold: Minimum score to pass filter (default 0.0)
 
     Returns:
         Tuple of (survivors, filtered_out) lists
     """
+    # Ensure all candidates are scored
+    scored_candidates = []
+    for candidate in candidates:
+        # Check if already scored (has total_score in candidate_scores)
+        if "candidate_scores" in candidate and "total_score" in candidate.get(
+            "candidate_scores", {}
+        ):
+            # Already scored, use existing score
+            scored_candidates.append(candidate)
+        else:
+            # Need to score this candidate
+            scored_candidates.append(score_candidate(candidate))
+
+    # Apply threshold filtering based on V2 total_score
     survivors = []
     filtered_out = []
 
-    for candidate in candidates:
-        # Ensure candidate has been scored
-        if (
-            "candidate_scores" not in candidate
-            or "total_score" not in candidate["candidate_scores"]
-        ):
-            candidate = score_candidate(candidate)
+    for candidate in scored_candidates:
+        total_score = candidate.get("candidate_scores", {}).get("total_score", 0)
 
-        total = candidate["candidate_scores"].get("total_score", 0)
-
-        if total >= threshold:
+        if total_score >= threshold:
             candidate["filter_status"] = "passed_score_threshold"
             survivors.append(candidate)
         else:

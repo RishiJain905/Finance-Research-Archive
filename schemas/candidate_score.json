@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "V2.5 Scored Candidate",
+  "description": "Candidate record with V2.5 unified scoring fields",
+  "type": "object",
+  "properties": {
+    "candidate_id": { "type": "string" },
+    "lane": { "type": "string", "enum": ["trusted_sources", "keyword_discovery", "seed_crawl"] },
+    "discovered_at": { "type": "string", "format": "date-time" },
+    "source_domain": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "anchor_text": { "type": "string" },
+    "topic_hints": { "type": "array", "items": { "type": "string" } },
+    "source_type": { "type": "string", "enum": ["press_release", "speech", "blog", "research", "rulemaking", "quant_snapshot", "unknown"] },
+    "freshness_hours": { "type": "number" },
+    "url_quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "title_quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "keyword_match_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "domain_trust_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "duplication_risk_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "lane_reliability_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "candidate_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "score_breakdown": {
+      "type": "object",
+      "properties": {
+        "domain_trust": { "type": "number" },
+        "url_quality": { "type": "number" },
+        "title_quality": { "type": "number" },
+        "keyword_match": { "type": "number" },
+        "freshness": { "type": "number" },
+        "lane_reliability": { "type": "number" },
+        "duplication_risk": { "type": "number" },
+        "weights_applied": {
+          "type": "object",
+          "properties": {
+            "domain_trust": { "type": "number" },
+            "url_quality": { "type": "number" },
+            "title_quality": { "type": "number" },
+            "keyword_match": { "type": "number" },
+            "freshness": { "type": "number" },
+            "lane_reliability": { "type": "number" },
+            "duplication_risk": { "type": "number" }
+          }
+        }
+      }
+    },
+    "priority_bucket": { "type": "string", "enum": ["high", "medium", "low", "skip"] },
+    "process_decision": { "type": "string", "enum": ["process", "defer", "skip"] }
+  }
+}

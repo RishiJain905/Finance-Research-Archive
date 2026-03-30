@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scoring Rules Configuration",
+  "description": "V2.5 unified scoring configuration",
+  "weights": {
+    "domain_trust": 0.25,
+    "url_quality": 0.20,
+    "title_quality": 0.20,
+    "keyword_match": 0.20,
+    "freshness": 0.10,
+    "lane_reliability": 0.10,
+    "duplication_risk": -0.15
+  },
+  "thresholds": {
+    "high": 75,
+    "medium": 60,
+    "low": 45
+  },
+  "priority_buckets": {
+    "high": "process",
+    "medium": "defer",
+    "low": "defer",
+    "skip": "skip"
+  },
+  "lane_reliability": {
+    "trusted_sources": 100,
+    "keyword_discovery": 50,
+    "seed_crawl": 30
+  },
+  "domain_trust_baselines": {
+    "high": [
+      "federalreserve.gov",
+      "www.federalreserve.gov",
+      "newyorkfed.org",
+      "www.newyorkfed.org",
+      "treasury.gov",
+      "www.treasury.gov",
+      "fiscaldata.treasury.gov",
+      "bankofcanada.ca",
+      "www.bankofcanada.ca",
+      "ecb.europa.eu",
+      "www.ecb.europa.eu",
+      "bankofengland.co.uk",
+      "www.bankofengland.co.uk",
+      "sec.gov",
+      "www.sec.gov"
+    ],
+    "medium": [
+      "bis.org",
+      "www.bis.org",
+      "imf.org",
+      "www.imf.org",
+      "brookings.edu",
+      "www.brookings.edu",
+      "piie.com",
+      "www.piie.com",
+      "fred.stlouisfed.org",
+      "www.fred.stlouisfed.org"
+    ],
+    "low": []
+  },
+  "url_hints": {
+    "positive": [
+      "press",
+      "statement",
+      "report",
+      "speech",
+      "research",
+      "analysis",
+      "release",
+      "announcement",
+      "decision",
+      "testimony",
+      "bulletin",
+      "commentary",
+      "market notice",
+      "policy",
+      "article"
+    ],
+    "negative": [
+      "about",
+      "careers",
+      "events",
+      "experts",
+      "people",
+      "education",
+      "programs",
+      "museum",
+      "archive",
+      "category",
+      "tag",
+      "subscribe",
+      "webinar",
+      "podcast",
+      "career",
+      "jobs",
+      "team",
+      "contact",
+      "faq",
+      "help",
+      "search",
+      "login",
+      "signin",
+      "register"
+    ]
+  },
+  "title_hints": {
+    "positive": [
+      "monetary policy",
+      "inflation",
+      "rates",
+      "liquidity",
+      "treasury",
+      "repo",
+      "labor market",
+      "gdp",
+      "pce",
+      "volatility",
+      "fed funds",
+      "interest rate",
+      "fomc",
+      "central bank",
+      "reserve",
+      "balance sheet",
+      "quantitative",
+      "market structure",
+      "macro catalysts",
+      "funding",
+      "yield",
+      "curve"
+    ],
+    "negative": [
+      "advertisement",
+      "sponsored",
+      "promoted",
+      "newsletter",
+      "subscribe",
+      "donate",
+      "support",
+      "about us",
+      "our team",
+      "careers",
+      "event",
+      "registration"
+    ]
+  },
+  "source_type_map": {
+    "federalreserve.gov": "rulemaking",
+    "www.federalreserve.gov": "rulemaking",
+    "sec.gov": "rulemaking",
+    "www.sec.gov": "rulemaking",
+    "ecb.europa.eu": "rulemaking",
+    "www.ecb.europa.eu": "rulemaking",
+    "treasury.gov": "rulemaking",
+    "www.treasury.gov": "rulemaking",
+    "bankofcanada.ca": "rulemaking",
+    "www.bankofcanada.ca": "rulemaking",
+    "bankofengland.co.uk": "rulemaking",
+    "www.bankofengland.co.uk": "rulemaking",
+    "newyorkfed.org": "speech",
+    "www.newyorkfed.org": "speech",
+    "brookings.edu": "research",
+    "www.brookings.edu": "research",
+    "piie.com": "research",
+    "www.piie.com": "research",
+    "bis.org": "research",
+    "www.bis.org": "research",
+    "imf.org": "research",
+    "www.imf.org": "research",
+    "fred.stlouisfed.org": "quant_snapshot",
+    "www.fred.stlouisfed.org": "quant_snapshot"
+  },
+  "freshness": {
+    "max_hours_for_full_score": 168,
+    "decay_rate": "linear"
+  },
+  "duplication_risk": {
+    "url_match_penalty": 50,
+    "title_match_penalty": 30,
+    "domain_family_match_penalty": 20
+  }
+}

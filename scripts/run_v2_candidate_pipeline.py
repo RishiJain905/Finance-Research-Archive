@@ -41,8 +41,10 @@ from scripts.candidate_utils import (
     DATA_DIR,
 )
 from scripts.dedupe_candidates import process_dedupe
-from scripts.score_candidates import score_candidate, filter_by_score
 from scripts.convert_candidates_to_raw import convert_candidates
+from scripts.extract_candidate_features import extract_candidate_features
+from scripts.score_candidate import score_candidate
+from scripts.score_candidates_batch import score_candidates_batch
 
 
 # Valid lanes
@@ -257,28 +259,47 @@ def run_pipeline(lane: str = "trusted_sources") -> None:
         print(f"[Pipeline] No candidates survived deduplication. Exiting.")
         return
 
-    # Step 3: Score candidates
-    print(f"\n[Pipeline] Step 3: Scoring candidates...")
+    # Step 3: Extract features for all candidates
+    print(f"\n[Pipeline] Step 3: Extracting candidate features...")
     for candidate in candidates:
-        candidate = score_candidate(candidate)
-        print(
-            f"  - {candidate['candidate_id']}: score={candidate['candidate_scores']['total_score']}"
-        )
+        candidate = extract_candidate_features(candidate)
 
-    # Step 4: Filter by score
-    print(f"\n[Pipeline] Step 4: Filtering by score...")
-    candidates, filtered = filter_by_score(candidates, threshold=25)
-    print(
-        f"[Filter] {len(filtered)}/{len(candidates) + len(filtered)} candidates did not pass score filter"
+    # Step 4: Score all candidates
+    print(f"\n[Pipeline] Step 4: Scoring candidates...")
+    scoring_rules = {}
+    for candidate in candidates:
+        candidate = score_candidate(candidate, scoring_rules)
+        score = candidate.get("candidate_score", {}).get("candidate_score", 0)
+        print(f"  - {candidate['candidate_id']}: score={score}")
+
+    # Step 5: Batch score with routing and logging
+    print(f"\n[Pipeline] Step 5: Batch scoring and routing...")
+    process_list, defer_list, skip_list = score_candidates_batch(
+        candidates, scoring_rules
     )
 
-    if not candidates:
-        print(f"[Pipeline] No candidates survived scoring filter. Exiting.")
+    # Log bucket distribution
+    print(f"\n[Scoring] Bucket distribution:")
+    print(f"  - High priority (process immediately): {len(process_list)}")
+    print(f"  - Medium priority (deferred): {len(defer_list)}")
+    print(f"  - Low priority (deferred): {len(skip_list)}")
+
+    # Use process_list + defer_list for conversion (defer still gets processed)
+    candidates_to_convert = process_list + defer_list
+    filtered_count = len(skip_list)
+
+    if filtered_count > 0:
+        update_lane_stats(lane, "filtered_out", filtered_count)
+
+    if not candidates_to_convert:
+        print(f"[Pipeline] No candidates to convert (all skipped). Exiting.")
         return
 
-    # Step 5: Convert to raw records
-    print(f"\n[Pipeline] Step 5: Converting to raw records...")
-    record_ids = convert_candidates(candidates)
+    # Step 6: Convert to raw records
+    print(
+        f"\n[Pipeline] Step 6: Converting {len(candidates_to_convert)} candidates to raw records..."
+    )
+    record_ids = convert_candidates(candidates_to_convert)
 
     if not record_ids:
         print(f"[Pipeline] No records were created. Exiting.")
@@ -286,14 +307,17 @@ def run_pipeline(lane: str = "trusted_sources") -> None:
 
     update_lane_stats(lane, "converted", len(record_ids))
 
-    # Step 6: Call existing process_record.py (optional, skip for testing)
-    print(f"\n[Pipeline] Step 6: Processed {len(record_ids)} records:")
+    # Step 7: Call existing process_record.py (optional, skip for testing)
+    print(f"\n[Pipeline] Step 7: Processed {len(record_ids)} records:")
     for record_id in record_ids:
         print(f"  - {record_id}")
 
     print(f"\n{'=' * 60}")
     print(f"Pipeline complete for lane '{lane}'")
     print(f"Converted {len(record_ids)} candidates to raw records")
+    print(
+        f"Routing: {len(process_list)} high, {len(defer_list)} medium/deferred, {len(skip_list)} skipped"
+    )
     print(f"{'=' * 60}\n")
 
 
