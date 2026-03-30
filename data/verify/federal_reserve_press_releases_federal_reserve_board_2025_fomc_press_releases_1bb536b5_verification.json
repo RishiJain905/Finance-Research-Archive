@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/index page containing only dates and titles, not an archiveable research document",
+    "No substantive policy content present - only 13 dated entry titles without FOMC statement text",
+    "Content word count is only 159 words - insufficient for research value",
+    "PAGE_TYPE metadata incorrectly labeled as 'press_release' when content structure is a listing page",
+    "Archive value is essentially zero as a standalone record",
+    "Individual FOMC statements and economic projections must be extracted separately for actual research use"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately identifies the source as a low-quality listing page. No human review needed - the assessment is correct and complete.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an index page listing Federal Reserve FOMC press releases and economic projections from 2025. The page contains only dates and titles of 13 separate announcements from January through December 2025, with links to individual statements. No substantive policy content, rate decisions, or projection details are present in this listing. This is a navigation/aggregation page, not an archiveable research document.",
+    "why_it_matters": "This page serves only as a directory to individual FOMC press releases. It does not itself contain the macro catalyst information needed for research. Each listed announcement (FOMC statements and economic projections) is a separate document requiring individual extraction to access actual policy content.",
+    "macro_context": "This is a container/listing page. No macro catalyst information is present. Individual FOMC statements and projection releases would need to be sourced separately.",
+    "market_structure_context": ""
+  }
+}

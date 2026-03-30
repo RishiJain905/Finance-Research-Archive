@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE metadata incorrectly says 'article' but content is functionally a listing/navigation page",
+    "Source contains only links and brief descriptions of resources, no substantive economic analysis",
+    "Content word count of 377 words confirms thin, navigational content",
+    "published_at is empty, limiting source provenance and dating",
+    "No actual macro catalyst data, events, or analysis present - only catalog of resources",
+    "Cannot serve as reliable archive record for macro catalyst research purposes",
+    "Per Rule 8: listing pages must not be accepted",
+    "Per Rule 9: thin low-signal container pages should bias toward reject"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately identifies all substantive issues. No ambiguity exists - this is clearly a navigation/index page despite metadata classification. Human review would not change the determination.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a portal page from the Philadelphia Fed listing Third District economic surveys and data products, including the Beige Book, manufacturing and nonmanufacturing outlook surveys, and state coincident indexes. The page functions as an index to resources rather than providing substantive economic analysis or data. No specific macro catalyst events, data releases, or analysis are present in this source.",
+    "why_it_matters": "This page is a directory to regional economic data sources that track Third District (PA, NJ, DE) business conditions. The Beige Book and business outlook surveys are inputs to FOMC decision-making, but this source only points to those resources rather than containing the actual analysis or data. This page should not be archived for macro catalyst research.",
+    "macro_context": "While the listed surveys (Beige Book, business outlook surveys, price expectations) are macro-relevant indicators, this source contains no actual data or analysis. It is merely a catalog of available resources. The actual macro catalysts exist on separate pages and should be archived individually.",
+    "market_structure_context": ""
+  }
+}

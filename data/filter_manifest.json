@@ -230,9 +230,12 @@
     },
     "bank_of_england_speeches_speeches_bank_of_england_6f7f6f23": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed",
+        "word_count_too_low"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "inflation",
           "monetary policy",
@@ -246,6 +249,14 @@
           "museum"
         ],
         "min_word_count": 220,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Bank of England Speeches",
         "topic": "macro catalysts"
       }
@@ -486,10 +497,13 @@
     },
     "chicago_fed_insights_chicago_fed_insights_federal_reserve_bank_of_chicago_6a63a5f9": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
         "contains_blocked_keywords",
         "too_much_boilerplate_noise"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "inflation",
           "labor market",
@@ -503,6 +517,14 @@
           "career"
         ],
         "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Chicago Fed Insights",
         "topic": "macro catalysts"
       }
@@ -737,9 +759,10 @@
     },
     "ice_insights_inside_the_ice_house_ice_nyse_insights_4572544b": {
       "reasons": [
-        "contains_blocked_keywords"
+        "word_count_too_low"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "market",
           "fixed income",
@@ -752,6 +775,14 @@
           "webinar registration"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "ICE Insights",
         "topic": "market structure"
       }
@@ -861,6 +892,7 @@
         "contains_blocked_keywords"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "market",
           "treasury",
@@ -875,6 +907,14 @@
           "student"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Liberty Street Economics",
         "topic": "market structure"
       }
@@ -1441,9 +1481,11 @@
     },
     "richmond_fed_economic_brief_stablecoins_and_the_demand_for_dollars_richmond_fed_34f0dd33": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "inflation",
           "economy",
@@ -1457,6 +1499,14 @@
           "classroom"
         ],
         "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Richmond Fed Economic Brief",
         "topic": "macro catalysts"
       }
@@ -1529,9 +1579,11 @@
     },
     "richmond_fed_research_publicat_research_publications_richmond_fed_92ba0645": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "inflation",
           "economy",
@@ -1545,6 +1597,14 @@
           "classroom"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Richmond Fed Research Publications",
         "topic": "macro catalysts"
       }
@@ -1684,10 +1744,14 @@
     },
     "sifma_news_press_releases_e512544a": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
+        "text_too_short",
         "word_count_too_low",
-        "too_much_boilerplate_noise"
+        "missing_required_keywords"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "treasury",
           "fixed income",
@@ -1701,6 +1765,14 @@
           "career center"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "SIFMA News",
         "topic": "market structure"
       }
@@ -1752,7 +1824,8 @@
     },
     "bank_of_canada_press_browse_monetary_policy_decision_press_conference_opening_statement_327d77b4": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -1769,12 +1842,22 @@
           "student"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Bank of Canada Press Browse",
         "topic": "macro catalysts"
       }
     },
     "bank_of_canada_press_browse_press_releases_bank_of_canada_59720d56": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
         "contains_blocked_keywords"
       ],
       "rules_used": {
@@ -1792,6 +1875,14 @@
           "student"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Bank of Canada Press Browse",
         "topic": "macro catalysts"
       }
@@ -1821,7 +1912,7 @@
     },
     "bank_of_canada_speeches_press_conference_policy_rate_announcement_march_2026_bank_of_42d892ba": {
       "reasons": [
-        "contains_blocked_keywords"
+        "word_count_too_low"
       ],
       "rules_used": {
         "record_type": "article",
@@ -1838,6 +1929,14 @@
           "museum"
         ],
         "min_word_count": 220,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Bank of Canada Speeches",
         "topic": "macro catalysts"
       }
@@ -1892,7 +1991,8 @@
     },
     "bank_of_england_news_news_and_minutes_bank_of_england_171a7c86": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -1909,13 +2009,22 @@
           "careers"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Bank of England News",
         "topic": "macro catalysts"
       }
     },
     "bank_of_england_news_publications_bank_of_england_73965e11": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -1932,6 +2041,14 @@
           "careers"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Bank of England News",
         "topic": "macro catalysts"
       }
@@ -1978,14 +2095,22 @@
           "regional"
         ],
         "min_word_count": 140,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "BEA News",
         "topic": "macro catalysts"
       }
     },
     "brookings_economy_brookings_institution_press_brookings_b275ec9d": {
       "reasons": [
-        "contains_blocked_keywords",
-        "too_much_boilerplate_noise"
+        "missing_required_keywords",
+        "contains_blocked_keywords"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2003,12 +2128,23 @@
           "donate"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Brookings Economy",
         "topic": "macro catalysts"
       }
     },
     "brookings_economy_brookings_institution_privacy_policy_brookings_cc395125": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
+        "missing_required_keywords",
         "contains_blocked_keywords",
         "too_much_boilerplate_noise"
       ],
@@ -2028,12 +2164,23 @@
           "donate"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Brookings Economy",
         "topic": "macro catalysts"
       }
     },
     "chicago_fed_insights_annual_report_federal_reserve_bank_of_chicago_7e5d64ec": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
+        "word_count_too_low",
         "contains_blocked_keywords",
         "too_much_boilerplate_noise"
       ],
@@ -2052,13 +2199,22 @@
           "career"
         ],
         "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Chicago Fed Insights",
         "topic": "macro catalysts"
       }
     },
     "dallas_fed_economics_dallas_fed_executive_speaking_engagements_dallasfed_org_39e5d49b": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2075,13 +2231,22 @@
           "teacher"
         ],
         "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Dallas Fed Economics",
         "topic": "macro catalysts"
       }
     },
     "dallas_fed_economics_president_lorie_logan_speeches_and_publications_dallasfed_or_22a1afa0": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2098,6 +2263,14 @@
           "teacher"
         ],
         "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Dallas Fed Economics",
         "topic": "macro catalysts"
       }
@@ -2170,13 +2343,21 @@
           "historical"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Federal Reserve FOMC Calendar",
         "topic": "macro catalysts"
       }
     },
     "federal_reserve_fomc_calendar_federal_reserve_board_federal_open_market_committee_reaffirm_179340be": {
       "reasons": [
-        "contains_blocked_keywords"
+        "word_count_too_low"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2194,6 +2375,14 @@
           "historical"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Federal Reserve FOMC Calendar",
         "topic": "macro catalysts"
       }
@@ -2247,7 +2436,8 @@
     },
     "new_york_fed_markets_data_hub_monetary_policy_implementation_federal_reserve_bank_of_new_y_57405083": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2264,13 +2454,22 @@
           "education"
         ],
         "min_word_count": 120,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Markets Data Hub",
         "topic": "market structure"
       }
     },
     "new_york_fed_press_financial_stability_considerations_for_monetary_policy_feder_0837c946": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2290,13 +2489,22 @@
           "student"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Press",
         "topic": "market structure"
       }
     },
     "new_york_fed_press_monetary_policy_and_heterogeneity_federal_reserve_bank_of_ne_b5860ab7": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2316,12 +2524,22 @@
           "student"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Press",
         "topic": "market structure"
       }
     },
     "new_york_fed_press_system_committee_on_regional_analysis_federal_reserve_bank_o_970c7820": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
         "contains_blocked_keywords"
       ],
       "rules_used": {
@@ -2342,13 +2560,22 @@
           "student"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Press",
         "topic": "market structure"
       }
     },
     "new_york_fed_staff_reports_revised_staff_reports_federal_reserve_bank_of_new_york_bbb4aaf3": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2366,13 +2593,22 @@
           "scams"
         ],
         "min_word_count": 200,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Staff Reports",
         "topic": "market structure"
       }
     },
     "new_york_fed_staff_reports_the_evolution_of_treasury_market_liquidity_evidence_from_30_2ea1f1b1": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2390,6 +2626,14 @@
           "scams"
         ],
         "min_word_count": 200,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "New York Fed Staff Reports",
         "topic": "market structure"
       }
@@ -2419,7 +2663,8 @@
     },
     "philadelphia_fed_the_economy_monetary_policy_b08df1b5": {
       "reasons": [
-        "contains_blocked_keywords"
+        "word_count_too_low",
+        "missing_required_keywords"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2436,6 +2681,14 @@
           "museum"
         ],
         "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Philadelphia Fed The Economy",
         "topic": "macro catalysts"
       }
@@ -2489,8 +2742,7 @@
     },
     "rba_speeches_media_conference_monetary_policy_decision_17_march_2026_spee_49073634": {
       "reasons": [
-        "contains_blocked_keywords",
-        "too_much_boilerplate_noise"
+        "contains_blocked_keywords"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2507,6 +2759,14 @@
           "staff appointment"
         ],
         "min_word_count": 220,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "RBA Speeches",
         "topic": "macro catalysts"
       }
@@ -2559,7 +2819,8 @@
     },
     "richmond_fed_research_publicat_annual_report_richmond_fed_406539c6": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2576,12 +2837,22 @@
           "classroom"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Richmond Fed Research Publications",
         "topic": "macro catalysts"
       }
     },
     "san_francisco_fed_economic_let_the_ai_moment_possibilities_productivity_and_policy_san_fran_a4050ac5": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
         "contains_blocked_keywords"
       ],
       "rules_used": {
@@ -2599,13 +2870,22 @@
           "career"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "San Francisco Fed Economic Letter",
         "topic": "macro catalysts"
       }
     },
     "san_francisco_fed_economic_let_the_changing_sensitivity_of_interest_rates_to_oil_supply_new_c876dd72": {
       "reasons": [
-        "contains_blocked_keywords"
+        "non_article_page_type",
+        "page_type_not_allowed"
       ],
       "rules_used": {
         "record_type": "article",
@@ -2622,6 +2902,14 @@
           "career"
         ],
         "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "San Francisco Fed Economic Letter",
         "topic": "macro catalysts"
       }
@@ -2670,6 +2958,14 @@
           "foreign assets control"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Treasury Press Releases",
         "topic": "market structure"
       }
@@ -2695,8 +2991,109 @@
           "foreign assets control"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "Treasury Press Releases",
         "topic": "market structure"
+      }
+    },
+    "federal_reserve_press_releases_federal_reserve_board_2025_press_releases_32fc84d2": {
+      "reasons": [
+        "contains_blocked_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "liquidity",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases",
+        "topic": "macro catalysts"
+      }
+    },
+    "repo_operations_2026_03_28": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_auctions_2026_03_28": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_press_releases_treasury_announces_president_donald_j_trump_s_signature_to_a_9a12814e": {
+      "reasons": [
+        "contains_blocked_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "treasury",
+          "issuance",
+          "funding",
+          "liquidity",
+          "auction",
+          "market"
+        ],
+        "blocked_keywords": [
+          "sanctions",
+          "terrorism",
+          "secretary",
+          "foreign assets control"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Treasury Press Releases",
+        "topic": "market structure"
+      }
+    },
+    "upcoming_treasury_auctions_2026_03_28": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
       }
     }
   },
@@ -2715,7 +3112,32 @@
     },
     "bea_news_releases_u_s_bureau_of_economic_analysis_bea_f22a8491": {
       "reasons": [],
-      "rules_used": {}
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "gdp",
+          "pce",
+          "personal income",
+          "consumer spending",
+          "bea"
+        ],
+        "blocked_keywords": [
+          "interactive data",
+          "methodology",
+          "regional"
+        ],
+        "min_word_count": 140,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "BEA News",
+        "topic": "macro catalysts"
+      }
     },
     "bea_news_u_s_economy_at_a_glance_u_s_bureau_of_economic_analysis_bea_dc35615f": {
       "reasons": [],
@@ -2774,7 +3196,32 @@
     "federal_reserve_press_releases_federal_reserve_board_2025_fomc_press_releases_1bb536b5": {
       "reasons": [],
       "rules_used": {
-        "record_type": "article"
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "liquidity",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases",
+        "topic": "macro catalysts"
       }
     },
     "federal_reserve_press_releases_federal_reserve_board_2025_press_releases_32fc84d2": {
@@ -2786,13 +3233,63 @@
     "federal_reserve_press_releases_federal_reserve_board_2026_fomc_press_releases_b4852258": {
       "reasons": [],
       "rules_used": {
-        "record_type": "article"
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "liquidity",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases",
+        "topic": "macro catalysts"
       }
     },
     "federal_reserve_press_releases_federal_reserve_board_2026_press_releases_23c81377": {
       "reasons": [],
       "rules_used": {
-        "record_type": "article"
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "liquidity",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases",
+        "topic": "macro catalysts"
       }
     },
     "nyse_trade_nyse_bonds_5daceea8": {
@@ -2929,6 +3426,472 @@
         "min_word_count": 220,
         "target_name": "ECB Monetary Policy Statements",
         "topic": "macro catalysts"
+      }
+    },
+    "bank_of_canada_press_browse_release_of_the_2025_bank_of_canada_fmi_oversight_activities_7f97e79e": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "policy rate",
+          "inflation",
+          "bank of canada",
+          "market operations",
+          "financial system"
+        ],
+        "blocked_keywords": [
+          "museum",
+          "bank notes",
+          "student"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Bank of Canada Press Browse",
+        "topic": "macro catalysts"
+      }
+    },
+    "bank_of_england_markets_foreign_currency_reserves_2026_market_notice_10_february_202_329afdce": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "market",
+          "liquidity",
+          "gilts",
+          "repo",
+          "sterling",
+          "operations"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "museum",
+          "education"
+        ],
+        "min_word_count": 140,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Bank of England Markets",
+        "topic": "market structure"
+      }
+    },
+    "bank_of_england_markets_foreign_currency_reserves_2026_market_notice_9_february_2026_8cde0248": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "market",
+          "liquidity",
+          "gilts",
+          "repo",
+          "sterling",
+          "operations"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "museum",
+          "education"
+        ],
+        "min_word_count": 140,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Bank of England Markets",
+        "topic": "market structure"
+      }
+    },
+    "boston_fed_current_policy_pers_how_interest_rate_changes_affect_credit_card_spending_federa_29ee7418": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "rates",
+          "economy",
+          "expectations",
+          "policy"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "visitor information",
+          "cash services"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Boston Fed Current Policy Perspectives",
+        "topic": "macro catalysts"
+      }
+    },
+    "boston_fed_current_policy_pers_pricing_in_the_new_year_why_inflation_behaves_differently_at_3888c07f": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "rates",
+          "economy",
+          "expectations",
+          "policy"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "visitor information",
+          "cash services"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Boston Fed Current Policy Perspectives",
+        "topic": "macro catalysts"
+      }
+    },
+    "ecb_blog_enhancing_climate_analysis_new_insights_through_data_7223b7c5": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "ecb"
+        ],
+        "blocked_keywords": [
+          "banknotes",
+          "careers",
+          "legal framework"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "ECB Blog",
+        "topic": "macro catalysts"
+      }
+    },
+    "ecb_blog_from_headlines_to_hard_data_mapping_the_uneven_impact_of_geo_8ef215d0": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "ecb"
+        ],
+        "blocked_keywords": [
+          "banknotes",
+          "careers",
+          "legal framework"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "ECB Blog",
+        "topic": "macro catalysts"
+      }
+    },
+    "ice_insights_climate_risk_ice_insights_c3035507": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "market",
+          "fixed income",
+          "trading",
+          "liquidity",
+          "rates"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "webinar registration"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "ICE Insights",
+        "topic": "market structure"
+      }
+    },
+    "new_york_fed_liberty_street_ec_what_s_driving_rising_business_costs_liberty_street_economic_0688e4fb": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "market",
+          "treasury",
+          "inflation",
+          "rates",
+          "liquidity",
+          "repo"
+        ],
+        "blocked_keywords": [
+          "community",
+          "museum",
+          "student"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "New York Fed Liberty Street Economics",
+        "topic": "market structure"
+      }
+    },
+    "new_york_fed_markets_data_hub_annual_report_on_open_market_operations_federal_reserve_bank_8f30ef66": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "sofr",
+          "repo",
+          "market",
+          "operations",
+          "treasury",
+          "funding"
+        ],
+        "blocked_keywords": [
+          "consumer",
+          "education"
+        ],
+        "min_word_count": 120,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "New York Fed Markets Data Hub",
+        "topic": "market structure"
+      }
+    },
+    "philadelphia_fed_economic_rese_regional_economic_analysis_113353fb": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "economy",
+          "policy",
+          "labor market",
+          "growth"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "museum",
+          "event"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Philadelphia Fed Economic Research",
+        "topic": "macro catalysts"
+      }
+    },
+    "philadelphia_fed_the_economy_price_and_inflation_expectations_survey_pies_2026_q1_report_06ff32cf": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "labor market",
+          "economy",
+          "rates",
+          "growth"
+        ],
+        "blocked_keywords": [
+          "careers",
+          "events",
+          "museum"
+        ],
+        "min_word_count": 170,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Philadelphia Fed The Economy",
+        "topic": "macro catalysts"
+      }
+    },
+    "rba_media_releases_statement_by_the_monetary_policy_board_monetary_policy_decis_3379c47b": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "payments",
+          "rba"
+        ],
+        "blocked_keywords": [
+          "staff appointment",
+          "museum",
+          "banknote theme"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "RBA Media Releases",
+        "topic": "macro catalysts"
+      }
+    },
+    "rba_speeches_media_conference_monetary_policy_decision_3_february_2026_sp_bcf865f1": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "rba"
+        ],
+        "blocked_keywords": [
+          "opening remarks",
+          "welcome remarks",
+          "staff appointment"
+        ],
+        "min_word_count": 220,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "RBA Speeches",
+        "topic": "macro catalysts"
+      }
+    },
+    "rba_speeches_media_conference_monetary_policy_decision_9_december_2025_sp_51259ec5": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "rba"
+        ],
+        "blocked_keywords": [
+          "opening remarks",
+          "welcome remarks",
+          "staff appointment"
+        ],
+        "min_word_count": 220,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "RBA Speeches",
+        "topic": "macro catalysts"
+      }
+    },
+    "sifma_news_sifma_statement_on_basel_iii_implementation_proposals_sifma_4b4ba83e": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "treasury",
+          "fixed income",
+          "market structure",
+          "liquidity",
+          "capital markets"
+        ],
+        "blocked_keywords": [
+          "conference registration",
+          "webinar",
+          "career center"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "SIFMA News",
+        "topic": "market structure"
       }
     }
   }
