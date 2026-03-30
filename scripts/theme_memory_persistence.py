@@ -10,15 +10,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-# Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Theme memory storage paths
 THEME_MEMORY_DIR = BASE_DIR / "data" / "theme_memory"
 THEMES_PATH = THEME_MEMORY_DIR / "themes.json"
 EXPANSIONS_PATH = THEME_MEMORY_DIR / "expansions.json"
 
-# Config paths
 KEYWORD_BUNDLES_PATH = BASE_DIR / "config" / "keyword_bundles.json"
 NEGATIVE_BUNDLES_PATH = BASE_DIR / "config" / "negative_keyword_bundles.json"
 
@@ -34,14 +31,7 @@ def _get_lock() -> threading.Lock:
 
 
 def _load_json_atomic(path: Path) -> dict[str, Any]:
-    """Load JSON file with thread safety.
-
-    Args:
-        path: Path to JSON file
-
-    Returns:
-        Parsed JSON dictionary, or empty dict if file doesn't exist
-    """
+    """Load JSON file with thread safety."""
     with _get_lock():
         if not path.exists():
             return {}
@@ -53,12 +43,7 @@ def _load_json_atomic(path: Path) -> dict[str, Any]:
 
 
 def _save_json_atomic(path: Path, data: dict[str, Any]) -> None:
-    """Save JSON file with thread safety (write to temp then rename).
-
-    Args:
-        path: Path to save to
-        data: Dictionary to save as JSON
-    """
+    """Save JSON file with thread safety (write to temp then rename)."""
     _ensure_theme_memory_dir()
     with _get_lock():
         temp_path = path.with_suffix(".tmp")
@@ -73,34 +58,18 @@ def _save_json_atomic(path: Path, data: dict[str, Any]) -> None:
 
 
 def get_theme_memory(theme_id: str) -> Optional[dict[str, Any]]:
-    """Get memory record for a theme.
-
-    Args:
-        theme_id: Theme identifier
-
-    Returns:
-        Theme memory dict, or None if not found
-    """
+    """Get memory record for a theme."""
     all_themes = read_theme_memory()
     return all_themes.get(theme_id)
 
 
 def get_all_theme_memory() -> dict[str, dict[str, Any]]:
-    """Get all theme memory records.
-
-    Returns:
-        Dictionary mapping theme_id to memory record
-    """
+    """Get all theme memory records."""
     return read_theme_memory()
 
 
 def save_theme_memory(theme_id: str, memory: dict[str, Any]) -> None:
-    """Save or update memory record for a theme.
-
-    Args:
-        theme_id: Theme identifier
-        memory: Theme memory dictionary
-    """
+    """Save or update memory record for a theme."""
     all_themes = read_theme_memory()
     memory["theme_id"] = theme_id
     memory["last_seen"] = datetime.now(timezone.utc).isoformat()
@@ -115,18 +84,7 @@ def initialize_theme_memory(
     negative_terms: Optional[list[str]] = None,
     priority_score: float = 50.0,
 ) -> dict[str, Any]:
-    """Initialize a new theme memory record.
-
-    Args:
-        theme_id: Theme identifier
-        theme_label: Human-readable label for the theme
-        positive_terms: List of positive matching terms
-        negative_terms: List of negative matching terms (exclusions)
-        priority_score: Initial priority score (0-100)
-
-    Returns:
-        New theme memory dictionary
-    """
+    """Initialize a new theme memory record."""
     now = datetime.now(timezone.utc).isoformat()
     return {
         "theme_id": theme_id,
@@ -142,14 +100,7 @@ def initialize_theme_memory(
 
 
 def delete_theme_memory(theme_id: str) -> bool:
-    """Delete a theme memory record.
-
-    Args:
-        theme_id: Theme identifier
-
-    Returns:
-        True if deleted, False if not found
-    """
+    """Delete a theme memory record."""
     all_themes = read_theme_memory()
     if theme_id in all_themes:
         del all_themes[theme_id]
@@ -158,24 +109,14 @@ def delete_theme_memory(theme_id: str) -> bool:
     return False
 
 
-# ============================================================================
-# Themes Store Operations
-# ============================================================================
-
-
 def read_theme_memory() -> dict[str, dict[str, Any]]:
-    """Read themes.json file.
-
-    Returns:
-        Dictionary mapping theme_id to theme record
-    """
+    """Read themes.json file."""
     if not THEMES_PATH.exists():
         return {}
     try:
         with open(THEMES_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
             themes = data.get("themes", {})
-            # Handle case where themes is an empty list instead of dict
             if isinstance(themes, list):
                 return {}
             return themes
@@ -184,11 +125,7 @@ def read_theme_memory() -> dict[str, dict[str, Any]]:
 
 
 def write_theme_memory(themes: dict[str, dict[str, Any]]) -> None:
-    """Write themes.json file atomically.
-
-    Args:
-        themes: Dictionary mapping theme_id to theme record
-    """
+    """Write themes.json file atomically."""
     _ensure_theme_memory_dir()
     data = {
         "themes": themes,
@@ -198,17 +135,36 @@ def write_theme_memory(themes: dict[str, dict[str, Any]]) -> None:
     _save_json_atomic(THEMES_PATH, data)
 
 
+# Aliases for compatibility with Stream B naming
+get_theme = get_theme_memory
+get_all_themes = get_all_theme_memory
+save_theme = save_theme_memory
+
+
+def delete_theme(theme_id: str) -> bool:
+    """Delete a theme by ID."""
+    return delete_theme_memory(theme_id)
+
+
+def initialize_theme(
+    theme_id: str,
+    theme_label: str,
+    positive_terms: Optional[list[str]] = None,
+    negative_terms: Optional[list[str]] = None,
+) -> dict[str, Any]:
+    """Initialize a new theme record."""
+    return initialize_theme_memory(
+        theme_id, theme_label, positive_terms, negative_terms
+    )
+
+
 # ============================================================================
 # Expansions Queue Operations
 # ============================================================================
 
 
 def read_expansions() -> dict[str, Any]:
-    """Read expansions.json file.
-
-    Returns:
-        Expansions data dictionary with proposals, approved, rejected, applied
-    """
+    """Read expansions.json file."""
     if not EXPANSIONS_PATH.exists():
         return {
             "proposals": [],
@@ -231,36 +187,21 @@ def read_expansions() -> dict[str, Any]:
 
 
 def write_expansions(expansions: dict[str, Any]) -> None:
-    """Write expansions.json file atomically.
-
-    Args:
-        expansions: Expansions data dictionary
-    """
+    """Write expansions.json file atomically."""
     _ensure_theme_memory_dir()
     expansions["version"] = "1.0"
     _save_json_atomic(EXPANSIONS_PATH, expansions)
 
 
 def add_proposal(proposal: dict[str, Any]) -> None:
-    """Add a new expansion proposal.
-
-    Args:
-        proposal: Proposal dictionary with theme_id, term, source, etc.
-    """
+    """Add a new expansion proposal."""
     expansions = read_expansions()
     expansions["proposals"].append(proposal)
     write_expansions(expansions)
 
 
 def approve_proposal(proposal_id: str) -> Optional[dict[str, Any]]:
-    """Approve a proposal and move it to approved list.
-
-    Args:
-        proposal_id: Identifier of the proposal to approve
-
-    Returns:
-        The approved proposal, or None if not found
-    """
+    """Approve a proposal and move it to approved list."""
     expansions = read_expansions()
     proposal = None
     new_proposals = []
@@ -278,15 +219,7 @@ def approve_proposal(proposal_id: str) -> Optional[dict[str, Any]]:
 
 
 def reject_proposal(proposal_id: str, reason: Optional[str] = None) -> bool:
-    """Reject a proposal and move it to rejected list.
-
-    Args:
-        proposal_id: Identifier of the proposal to reject
-        reason: Optional rejection reason
-
-    Returns:
-        True if rejected, False if not found
-    """
+    """Reject a proposal and move it to rejected list."""
     expansions = read_expansions()
     proposal = None
     new_proposals = []
@@ -306,14 +239,7 @@ def reject_proposal(proposal_id: str, reason: Optional[str] = None) -> bool:
 
 
 def apply_approved_expansion(expansion_id: str) -> bool:
-    """Mark an approved expansion as applied.
-
-    Args:
-        expansion_id: Identifier of the approved expansion
-
-    Returns:
-        True if applied, False if not found
-    """
+    """Mark an approved expansion as applied."""
     expansions = read_expansions()
     for exp in expansions["approved"]:
         if exp.get("id") == expansion_id:
@@ -333,11 +259,7 @@ def apply_approved_expansion(expansion_id: str) -> bool:
 
 
 def read_keyword_bundles() -> dict[str, Any]:
-    """Read keyword_bundles.json file.
-
-    Returns:
-        Keyword bundles configuration dictionary
-    """
+    """Read keyword_bundles.json file."""
     if not KEYWORD_BUNDLES_PATH.exists():
         return {"bundles": [], "version": "1.0"}
     try:
@@ -348,24 +270,13 @@ def read_keyword_bundles() -> dict[str, Any]:
 
 
 def write_keyword_bundles(bundles_config: dict[str, Any]) -> None:
-    """Write keyword_bundles.json file atomically.
-
-    Args:
-        bundles_config: Keyword bundles configuration dictionary
-    """
+    """Write keyword_bundles.json file atomically."""
     bundles_config["version"] = "1.0"
     _save_json_atomic(KEYWORD_BUNDLES_PATH, bundles_config)
 
 
 def get_keyword_bundle(bundle_id: str) -> Optional[dict[str, Any]]:
-    """Get a keyword bundle by ID.
-
-    Args:
-        bundle_id: Bundle identifier
-
-    Returns:
-        Bundle dictionary, or None if not found
-    """
+    """Get a keyword bundle by ID."""
     config = read_keyword_bundles()
     for bundle in config.get("bundles", []):
         if bundle.get("bundle_id") == bundle_id:
@@ -374,11 +285,7 @@ def get_keyword_bundle(bundle_id: str) -> Optional[dict[str, Any]]:
 
 
 def add_keyword_bundle(bundle: dict[str, Any]) -> None:
-    """Add a new keyword bundle.
-
-    Args:
-        bundle: Bundle dictionary to add
-    """
+    """Add a new keyword bundle."""
     config = read_keyword_bundles()
     bundle["created_at"] = datetime.now(timezone.utc).isoformat()
     config["bundles"].append(bundle)
@@ -386,15 +293,7 @@ def add_keyword_bundle(bundle: dict[str, Any]) -> None:
 
 
 def update_keyword_bundle(bundle_id: str, updates: dict[str, Any]) -> bool:
-    """Update an existing keyword bundle.
-
-    Args:
-        bundle_id: Bundle identifier
-        updates: Dictionary of fields to update
-
-    Returns:
-        True if updated, False if not found
-    """
+    """Update an existing keyword bundle."""
     config = read_keyword_bundles()
     for bundle in config.get("bundles", []):
         if bundle.get("bundle_id") == bundle_id:
@@ -404,17 +303,17 @@ def update_keyword_bundle(bundle_id: str, updates: dict[str, Any]) -> bool:
     return False
 
 
+# Alias for compatibility
+load_keyword_bundles = read_keyword_bundles
+
+
 # ============================================================================
 # Negative Keyword Bundles Operations
 # ============================================================================
 
 
 def read_negative_bundles() -> dict[str, Any]:
-    """Read negative_keyword_bundles.json file.
-
-    Returns:
-        Negative bundles configuration dictionary
-    """
+    """Read negative_keyword_bundles.json file."""
     if not NEGATIVE_BUNDLES_PATH.exists():
         return {"bundles": [], "version": "1.0"}
     try:
@@ -425,24 +324,13 @@ def read_negative_bundles() -> dict[str, Any]:
 
 
 def write_negative_bundles(bundles_config: dict[str, Any]) -> None:
-    """Write negative_keyword_bundles.json file atomically.
-
-    Args:
-        bundles_config: Negative bundles configuration dictionary
-    """
+    """Write negative_keyword_bundles.json file atomically."""
     bundles_config["version"] = "1.0"
     _save_json_atomic(NEGATIVE_BUNDLES_PATH, bundles_config)
 
 
 def get_negative_bundle(bundle_id: str) -> Optional[dict[str, Any]]:
-    """Get a negative bundle by ID.
-
-    Args:
-        bundle_id: Bundle identifier
-
-    Returns:
-        Bundle dictionary, or None if not found
-    """
+    """Get a negative bundle by ID."""
     config = read_negative_bundles()
     for bundle in config.get("bundles", []):
         if bundle.get("bundle_id") == bundle_id:
@@ -451,15 +339,30 @@ def get_negative_bundle(bundle_id: str) -> Optional[dict[str, Any]]:
 
 
 def add_negative_bundle(bundle: dict[str, Any]) -> None:
-    """Add a new negative keyword bundle.
-
-    Args:
-        bundle: Bundle dictionary to add
-    """
+    """Add a new negative keyword bundle."""
     config = read_negative_bundles()
     bundle["created_at"] = datetime.now(timezone.utc).isoformat()
     config["bundles"].append(bundle)
     write_negative_bundles(config)
+
+
+# Alias for compatibility
+load_negative_keyword_bundles = read_negative_bundles
+
+
+# ============================================================================
+# High-level Theme Operations
+# ============================================================================
+
+
+def get_high_priority_themes(threshold: float = 70.0) -> list[dict[str, Any]]:
+    """Get themes with priority score above threshold."""
+    all_themes = read_theme_memory()
+    return [
+        theme
+        for theme in all_themes.values()
+        if theme.get("priority_score", 0) >= threshold
+    ]
 
 
 # ============================================================================
@@ -468,10 +371,7 @@ def add_negative_bundle(bundle: dict[str, Any]) -> None:
 
 
 def initialize_theme_memory_files() -> None:
-    """Initialize empty theme memory files if they don't exist.
-
-    Creates empty JSON objects in the theme memory directory.
-    """
+    """Initialize empty theme memory files if they don't exist."""
     _ensure_theme_memory_dir()
 
     if not THEMES_PATH.exists():
