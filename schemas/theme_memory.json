@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Theme Memory",
+  "description": "Tracks keyword theme performance and learned terms for adaptive keyword expansion",
+  "type": "object",
+  "required": [
+    "theme_id",
+    "theme_label",
+    "positive_terms",
+    "negative_terms",
+    "accepted_count",
+    "review_count",
+    "rejected_count",
+    "last_seen",
+    "priority_score"
+  ],
+  "properties": {
+    "theme_id": {
+      "type": "string",
+      "description": "Unique identifier for the theme (e.g., 'repo_liquidity_treasury')",
+      "examples": ["repo_liquidity_treasury", "central_bank_fx", "yield_curve"]
+    },
+    "theme_label": {
+      "type": "string",
+      "description": "Human-readable label for the theme",
+      "examples": ["Repo / Liquidity / Treasury", "Central Bank FX", "Yield Curve"]
+    },
+    "positive_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Terms that positively match this theme (AND logic for required, OR for optional)",
+      "examples": [["repo", "liquidity", "treasury"], ["fx", "foreign exchange", "currency"]]
+    },
+    "negative_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Terms that should exclude content from this theme",
+      "examples": [["careers", "event registration"], ["webinar", "conference"]]
+    },
+    "accepted_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of candidates accepted that matched this theme"
+    },
+    "review_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of candidates sent to review for this theme"
+    },
+    "rejected_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of candidates rejected for this theme"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of last candidate matching this theme"
+    },
+    "priority_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Computed priority score for theme (0-100)"
+    }
+  }
+}

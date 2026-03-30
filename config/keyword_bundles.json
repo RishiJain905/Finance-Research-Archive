@@ -1,0 +1,65 @@
+{
+  "bundles": [
+    {
+      "bundle_id": "repo_liquidity_treasury",
+      "label": "Repo / Liquidity / Treasury",
+      "required_terms": ["repo", "liquidity"],
+      "optional_terms": ["treasury", "funding conditions", "collateral"],
+      "exclusions": [],
+      "priority_score": 70,
+      "source": "static",
+      "created_at": null
+    },
+    {
+      "bundle_id": "market_structure",
+      "label": "Market Structure",
+      "required_terms": [],
+      "optional_terms": ["liquidity", "repo", "repurchase", "clearing", "settlement", "exchange", "trading venue", "market maker", "bid ask spread", "depth of book", "collateral", "funding", "overnight"],
+      "exclusions": [],
+      "priority_score": 60,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "bundle_id": "macro_catalysts",
+      "label": "Macro Catalysts",
+      "required_terms": [],
+      "optional_terms": ["gdp", "unemployment", "payroll", "jobs report", "retail sales", "housing starts", "consumer confidence", "manufacturing pmi", "hiring", "employment", "jobs", "labor force", " Layoffs", "contraction", "growth", "expansion", "economic activity"],
+      "exclusions": [],
+      "priority_score": 75,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "bundle_id": "central_banks",
+      "label": "Central Banks",
+      "required_terms": [],
+      "optional_terms": ["federal reserve", "fed", "fomc", "ecb", "boe", "boj", "monetary policy", "policy rate", "balance sheet", "quantitative easing", "qt", "interest rates", "rate hike", "rate cut"],
+      "exclusions": [],
+      "priority_score": 80,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "bundle_id": "treasuries",
+      "label": "Treasuries",
+      "required_terms": [],
+      "optional_terms": ["treasury", "bonds", "yields", "note", "bond auction", "treasury auction", "issuance", "bid to cover", "auction"],
+      "exclusions": [],
+      "priority_score": 65,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "bundle_id": "inflation",
+      "label": "Inflation",
+      "required_terms": [],
+      "optional_terms": ["cpi", "ppi", "inflation", "price index", "headline inflation", "core inflation"],
+      "exclusions": [],
+      "priority_score": 72,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "version": "1.0"
+}

@@ -1,0 +1,29 @@
+{
+  "bundles": [
+    {
+      "bundle_id": "broad_event_noise",
+      "label": "Broad Event Noise",
+      "terms": ["event registration", "conference", "careers", "webinar", "career center", "donate now", "museum", "community outreach"],
+      "suppression_strength": 0.8,
+      "source": "static",
+      "created_at": null
+    },
+    {
+      "bundle_id": "noise",
+      "label": "Noise/Off-Topic",
+      "terms": ["casino", "gambling", "lottery", "spam", "advertisement", "sponsored content"],
+      "suppression_strength": 0.7,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "bundle_id": "personal_finance",
+      "label": "Personal Finance (Not Research)",
+      "terms": ["personal loan", "mortgage rate", "credit score", "retirement planning", "401k", "ira"],
+      "suppression_strength": 0.6,
+      "source": "learned",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "version": "1.0"
+}
