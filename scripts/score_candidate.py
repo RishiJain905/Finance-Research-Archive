@@ -5,12 +5,49 @@ Scores a single candidate using extracted features.
 
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 from scripts.candidate_utils import BASE_DIR
 
 # Configuration paths
 SCORING_RULES_PATH = BASE_DIR / "config" / "scoring_rules.json"
+
+# Theme memory caching
+_cached_themes: Optional[dict[str, Any]] = None
+_cached_keyword_bundles: Optional[dict[str, Any]] = None
+
+
+def _get_themes() -> dict[str, Any]:
+    """Get cached themes from theme memory."""
+    global _cached_themes
+    if _cached_themes is None:
+        try:
+            from scripts.theme_memory_persistence import get_themes
+
+            _cached_themes = get_themes()
+        except Exception:
+            _cached_themes = {}
+    return _cached_themes if _cached_themes is not None else {}
+
+
+def _get_keyword_bundles() -> dict[str, Any]:
+    """Get cached keyword bundles."""
+    global _cached_keyword_bundles
+    if _cached_keyword_bundles is None:
+        try:
+            from scripts.theme_memory_persistence import load_keyword_bundles
+
+            _cached_keyword_bundles = load_keyword_bundles().get("bundles", {})
+        except Exception:
+            _cached_keyword_bundles = {}
+    return _cached_keyword_bundles if _cached_keyword_bundles is not None else {}
+
+
+def _clear_theme_cache() -> None:
+    """Clear theme memory cache (call after updates)."""
+    global _cached_themes, _cached_keyword_bundles
+    _cached_themes = None
+    _cached_keyword_bundles = None
 
 
 def load_scoring_rules() -> dict[str, Any]:
@@ -277,6 +314,78 @@ def score_candidate(
             "noise_threshold": source_noise_penalty_threshold,
             "noise_actual": source_noise_score,
             "multiplier": 1.25,
+        }
+
+    # ========================================================================
+    # Theme-based scoring adjustments
+    # ========================================================================
+    # Theme weights from scoring_rules or use defaults
+    theme_match_weight = memory_weights.get("theme_match_weight", 0.15)
+    negative_bundle_penalty_weight = memory_weights.get(
+        "negative_bundle_penalty_weight", 0.10
+    )
+    high_priority_theme_threshold = memory_weights.get(
+        "high_priority_theme_threshold", 70.0
+    )
+
+    # Get theme features from candidate
+    theme_match_score = candidate.get("theme_match_score", 0.0)
+    negative_bundle_penalty = candidate.get("negative_bundle_penalty", 0.0)
+    negative_bundle_match = candidate.get("negative_bundle_match", False)
+    theme_match_count = candidate.get("theme_match_count", 0.0)
+
+    # Add theme scoring to breakdown if theme features are present
+    if theme_match_score > 0 or negative_bundle_penalty > 0 or theme_match_count > 0:
+        # Calculate theme contribution to score
+        theme_contribution = theme_match_score * theme_match_weight
+        breakdown["theme_match"] = theme_match_score
+        score_breakdown["theme_match"] = {
+            "raw": theme_match_score,
+            "normalized": theme_match_score,
+            "weight": theme_match_weight,
+            "contribution": theme_contribution,
+            "theme_count": theme_match_count,
+        }
+
+        # Add to positive score
+        final_score = final_score + theme_contribution
+
+        # Check for high-priority theme bonus
+        themes = _get_themes()
+        high_priority_matched = False
+        for theme_id, theme in themes.items():
+            priority = theme.get("priority", 0)
+            if priority >= high_priority_theme_threshold:
+                # Check if this theme's keywords match the candidate
+                keywords = theme.get("keywords", [])
+                title = candidate.get("title", "").lower()
+                anchor_text = candidate.get("anchor_text", "").lower()
+                url = candidate.get("url", "").lower()
+                combined = f"{title} {anchor_text} {url}"
+                matched = any(kw.lower() in combined for kw in keywords)
+                if matched:
+                    high_priority_matched = True
+                    break
+
+        if high_priority_matched:
+            final_score = final_score * 1.15  # 15% bonus for high-priority theme match
+            final_score = min(100.0, final_score)
+            score_breakdown["high_priority_theme_bonus"] = {
+                "applied": True,
+                "threshold": high_priority_theme_threshold,
+                "multiplier": 1.15,
+            }
+
+    # Apply negative bundle penalty
+    if negative_bundle_match and negative_bundle_penalty > 0:
+        penalty_contribution = negative_bundle_penalty * negative_bundle_penalty_weight
+        final_score = final_score - penalty_contribution
+        final_score = max(0.0, final_score)
+        score_breakdown["negative_bundle_penalty"] = {
+            "applied": True,
+            "penalty": negative_bundle_penalty,
+            "weight": negative_bundle_penalty_weight,
+            "deduction": penalty_contribution,
         }
 
     # Update candidate_score
