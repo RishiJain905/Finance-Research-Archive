@@ -32,6 +32,9 @@ DOMAIN_TRUST_TIERS_PATH = BASE_DIR / "config" / "domain_trust_tiers.json"
 # Candidate output directory
 CANDIDATES_DISCOVERED_DIR = BASE_DIR / "data" / "candidates" / "discovered"
 
+# Raw content directory for fetched article text
+RAW_CONTENT_DIR = BASE_DIR / "data" / "raw"
+
 # Fetch timeout in seconds
 FETCH_TIMEOUT = 10
 
@@ -215,6 +218,72 @@ def fetch_and_extract_text(url: str) -> Optional[str]:
 
     except Exception:
         return None
+
+
+def fetch_candidate_content(candidate: dict[str, Any]) -> Optional[dict[str, Any]]:
+    """
+    Fetch article content for a candidate and save to disk.
+
+    Fetches the URL from the candidate's source.url, extracts text,
+    and saves to data/raw/<candidate_id>.txt. Updates raw_text_path
+    on the candidate dict.
+
+    Args:
+        candidate: Candidate dict with source.url and candidate_id
+
+    Returns:
+        Updated candidate dict with raw_text_path set, or None if fetch failed
+    """
+    url = candidate.get("source", {}).get("url")
+    candidate_id = candidate.get("candidate_id")
+
+    if not url or not candidate_id:
+        return None
+
+    text = fetch_and_extract_text(url)
+    if not text:
+        return None
+
+    raw_text_path = RAW_CONTENT_DIR / f"{candidate_id}.txt"
+    RAW_CONTENT_DIR.mkdir(parents=True, exist_ok=True)
+
+    try:
+        with open(raw_text_path, "w", encoding="utf-8") as f:
+            f.write(text)
+
+        candidate["raw_text_path"] = str(raw_text_path)
+        candidate["metadata"] = candidate.get("metadata", {})
+        candidate["metadata"]["page_fetched"] = True
+        candidate["metadata"]["content_length"] = len(text)
+
+        return candidate
+    except Exception:
+        return None
+
+
+def fetch_candidate_contents(
+    candidates: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """
+    Fetch content for multiple candidates.
+
+    Args:
+        candidates: List of candidate dicts to fetch content for
+
+    Returns:
+        Tuple of (successfully_fetched, failed_to_fetch) candidates
+    """
+    successfully_fetched = []
+    failed_to_fetch = []
+
+    for candidate in candidates:
+        result = fetch_candidate_content(candidate)
+        if result:
+            successfully_fetched.append(result)
+        else:
+            failed_to_fetch.append(candidate)
+
+    return successfully_fetched, failed_to_fetch
 
 
 # ============================================================================

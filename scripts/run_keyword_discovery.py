@@ -41,6 +41,7 @@ from scripts.convert_candidates_to_raw import convert_candidates
 from scripts.build_keyword_candidates import (
     build_keyword_candidates,
     save_keyword_candidates,
+    fetch_candidate_contents,
 )
 from scripts.discovery_providers import (
     search_web,
@@ -202,10 +203,22 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
         print(f"[Discovery] Built {len(candidates)} candidates from query '{query_id}'")
 
-        # Save candidates if not dry run
+        # Fetch content for candidates
         if not dry_run:
-            save_keyword_candidates(candidates)
-            for candidate in candidates:
+            fetched_candidates, failed_candidates = fetch_candidate_contents(candidates)
+            if failed_candidates:
+                print(
+                    f"[Discovery] Failed to fetch content for {len(failed_candidates)} candidates from query '{query_id}'"
+                )
+            print(
+                f"[Discovery] Fetched content for {len(fetched_candidates)} candidates from query '{query_id}'"
+            )
+
+            if not fetched_candidates:
+                continue
+
+            save_keyword_candidates(fetched_candidates)
+            for candidate in fetched_candidates:
                 discovered_ids.append(candidate["candidate_id"])
                 all_candidates.append(candidate)
         else:
