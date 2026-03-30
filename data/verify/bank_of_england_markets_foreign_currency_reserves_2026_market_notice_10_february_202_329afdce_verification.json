@@ -1,8 +1,8 @@
 {
-  "verification_confidence": 9,
+  "verification_confidence": 8,
   "verdict": "accept",
   "issues_found": [
-    "Minor date ambiguity: metadata shows page published 27 March 2026, while source body states event date of 10 February 2026 and was 'previously announced on 9 February 2026' – this is not an error in the record, merely reflects the nature of Bank of England website updates"
+    "The important_numbers field includes 3.75 (Bank Rate), which is not present in this specific market notice. The Bank Rate appears in a related navigation link (MPC summary from 19 March 2026), not in the source body of this notice."
   ],
   "human_review_required": false,
   "human_review_reason": "",
@@ -11,6 +11,7 @@
     "summary": "",
     "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "",
+    "important_numbers": "[2500000000, 3.5, 2029]"
   }
 }
