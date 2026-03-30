@@ -3440,6 +3440,66 @@
       "rules_used": {
         "record_type": "article"
       }
+    },
+    "repo_operations_2026_03_30": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_auctions_2026_03_30": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_press_releases_treasury_targets_fraud_schemes_exploiting_government_health_a35dab0a": {
+      "reasons": [
+        "contains_blocked_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "treasury",
+          "issuance",
+          "funding",
+          "liquidity",
+          "auction",
+          "market"
+        ],
+        "blocked_keywords": [
+          "sanctions",
+          "terrorism",
+          "secretary",
+          "foreign assets control"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Treasury Press Releases",
+        "topic": "market structure"
+      }
+    },
+    "upcoming_treasury_auctions_2026_03_30": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
     }
   },
   "kept": {
@@ -4557,6 +4617,12 @@
       }
     },
     "seed_crawl_treasury_treasury_sanctions_global_network_diverting_d757b18275faf062": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_urif_announces_first_investment_strengthening_0f4bfba06b8b7fd8": {
       "reasons": [],
       "rules_used": {
         "record_type": "article"
