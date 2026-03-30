@@ -495,6 +495,155 @@ def extract_topic_hints(
     return matched
 
 
+def calculate_bundle_match_score(
+    candidate_text: str, keyword_bundles: dict[str, Any]
+) -> float:
+    """Calculate how well candidate matches keyword bundles.
+
+    For each bundle, checks if all required_terms are present and
+    scores based on optional_terms matched. Returns normalized score 0-100.
+
+    Args:
+        candidate_text: Combined text from candidate (title + anchor + url)
+        keyword_bundles: Dictionary of bundle definitions
+
+    Returns:
+        Normalized bundle match score (0-100)
+    """
+    if not candidate_text or not keyword_bundles:
+        return 0.0
+
+    candidate_lower = candidate_text.lower()
+    total_score = 0.0
+    bundle_count = 0
+
+    for bundle_id, bundle in keyword_bundles.items():
+        if bundle.get("is_negative", False):
+            continue  # Skip negative bundles in positive matching
+
+        required_terms = bundle.get("required_terms", [])
+        optional_terms = bundle.get("optional_terms", [])
+        bundle_weight = bundle.get("weight", 1.0)
+
+        # Check required terms
+        required_matches = sum(
+            1 for term in required_terms if term.lower() in candidate_lower
+        )
+        required_score = 0.0
+        if required_terms:
+            if len(required_terms) == required_matches:
+                # All required matched - full points
+                required_score = 20.0 * len(required_terms)
+            else:
+                # Partial match - no points
+                required_score = 0.0
+
+        # Check optional terms
+        optional_matches = sum(
+            1 for term in optional_terms if term.lower() in candidate_lower
+        )
+        optional_score = 10.0 * optional_matches  # 10 points per optional match
+
+        bundle_score = (required_score + optional_score) * bundle_weight
+        total_score += bundle_score
+        bundle_count += 1
+
+    if bundle_count == 0:
+        return 0.0
+
+    # Normalize to 0-100
+    # Assuming max possible is roughly 100 per bundle (20 * 5 required + 10 * 5 optional)
+    max_expected = bundle_count * 100.0
+    normalized = (total_score / max_expected) * 100.0
+
+    return min(100.0, max(0.0, normalized))
+
+
+def extract_theme_match_features(
+    candidate: dict[str, Any], themes: dict[str, Any], keyword_bundles: dict[str, Any]
+) -> dict[str, Any]:
+    """Extract theme-related features from candidate.
+
+    Computes:
+    - theme_match_count: Number of learned themes matched (0-10 scaled)
+    - theme_match_score: Weighted score based on theme priority (0-100)
+    - negative_bundle_match: Boolean if matches negative bundle
+    - negative_bundle_penalty: Penalty score based on negative match strength (0-50)
+
+    Args:
+        candidate: Candidate dictionary with title, anchor_text, url
+        themes: Dictionary of learned themes
+        keyword_bundles: Dictionary of keyword bundle definitions
+
+    Returns:
+        Dictionary with theme-related features
+    """
+    # Combine text sources for matching
+    title = candidate.get("title", "").lower()
+    anchor_text = candidate.get("anchor_text", "").lower()
+    url = candidate.get("url", "").lower()
+    combined_text = f"{title} {anchor_text} {url}"
+
+    theme_match_count = 0
+    theme_match_score = 0.0
+    negative_bundle_match = False
+    negative_bundle_penalty = 0.0
+
+    # Check each learned theme
+    for theme_id, theme in themes.items():
+        bundle_id = theme.get("bundle_id", "")
+        keywords = theme.get("keywords", [])
+        priority = theme.get("priority", 50.0)
+
+        # Check if keywords match
+        matched_keywords = [kw for kw in keywords if kw.lower() in combined_text]
+
+        if matched_keywords:
+            theme_match_count += 1
+            # Weight by priority (0-100) scaled to contribution
+            priority_contribution = (priority / 100.0) * 15.0  # Max 15 points per theme
+            theme_match_score += priority_contribution
+
+    # Check negative bundles
+    negative_bundles = keyword_bundles.get("negative_bundles", {})
+    if not negative_bundles:
+        # Fall back to finding negative bundle in main bundles
+        for bundle_id, bundle in keyword_bundles.items():
+            if bundle.get("is_negative", False):
+                negative_bundles[bundle_id] = bundle
+
+    for neg_bundle_id, neg_bundle in negative_bundles.items():
+        terms = neg_bundle.get("optional_terms", []) + neg_bundle.get(
+            "required_terms", []
+        )
+        penalty_strength = neg_bundle.get("penalty_strength", 30.0)
+
+        # Check if any negative terms match
+        matched_negative_terms = [
+            term for term in terms if term.lower() in combined_text
+        ]
+
+        if matched_negative_terms:
+            negative_bundle_match = True
+            # Scale penalty by how many negative terms matched
+            match_ratio = len(matched_negative_terms) / max(len(terms), 1)
+            negative_bundle_penalty = min(50.0, penalty_strength * match_ratio)
+            break  # Only apply strongest negative bundle
+
+    # Scale theme_match_count to 0-10 range
+    theme_match_count_scaled = min(10.0, float(theme_match_count))
+
+    # Scale theme_match_score to 0-100 range (cap at ~3 themes contributing max)
+    theme_match_score = min(100.0, theme_match_score)
+
+    return {
+        "theme_match_count": theme_match_count_scaled,
+        "theme_match_score": theme_match_score,
+        "negative_bundle_match": negative_bundle_match,
+        "negative_bundle_penalty": negative_bundle_penalty,
+    }
+
+
 def extract_candidate_features(candidate: dict[str, Any]) -> dict[str, Any]:
     """Main function to extract all features from a raw candidate.
 
@@ -580,5 +729,22 @@ def extract_candidate_features(candidate: dict[str, Any]) -> dict[str, Any]:
     candidate["duplication_risk_score"] = duplication_risk_score
     candidate["source_type"] = source_type
     candidate["topic_hints"] = topic_hints
+
+    # Extract theme matching features
+    themes = {}
+    keyword_bundles = {}
+    try:
+        from scripts.theme_memory_persistence import get_themes, load_keyword_bundles
+
+        themes = get_themes()
+        keyword_bundles = load_keyword_bundles().get("bundles", {})
+    except Exception:
+        pass  # Theme memory not available
+
+    if themes and keyword_bundles:
+        theme_features = extract_theme_match_features(
+            candidate, themes, keyword_bundles
+        )
+        candidate.update(theme_features)
 
     return candidate

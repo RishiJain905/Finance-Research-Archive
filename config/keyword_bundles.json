@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Keyword Bundles Configuration",
+  "description": "V2.5 keyword bundles for adaptive keyword expansion and theme matching",
+  "bundles": {
+    "monetary_policy": {
+      "name": "Monetary Policy",
+      "description": "Core monetary policy terms",
+      "required_terms": ["monetary policy", "central bank", "interest rate", "fomc"],
+      "optional_terms": ["inflation", "rates", "federal reserve", "ecb", "bank of england", "quantitative", "balance sheet", "reserve", "liquidity"],
+      "weight": 1.0
+    },
+    "treasury_markets": {
+      "name": "Treasury Markets",
+      "description": "US Treasury market related terms",
+      "required_terms": ["treasury"],
+      "optional_terms": ["auction", "yield", "repo", "settlement", "debt", "securities", "bill", "note", "bond"],
+      "weight": 1.0
+    },
+    "economic_indicators": {
+      "name": "Economic Indicators",
+      "description": "Key economic data releases",
+      "required_terms": ["gdp", "inflation", "employment"],
+      "optional_terms": ["pce", "cpi", "ppi", " jobless claims", "retail sales", "manufacturing", "pmi", "consumer sentiment"],
+      "weight": 0.9
+    },
+    "market_structure": {
+      "name": "Market Structure",
+      "description": "Market structure and microstructure terms",
+      "required_terms": ["market structure", "liquidity", "volatility"],
+      "optional_terms": ["bid", "ask", "spread", "depth", "order flow", "market maker", "arbitrage", "efficiency"],
+      "weight": 0.8
+    },
+    "negative_signals": {
+      "name": "Negative Signals",
+      "description": "Terms that typically indicate low-quality or off-topic content",
+      "required_terms": [],
+      "optional_terms": ["subscribe", "careers", "jobs", "advertisement", "sponsored", "newsletter", "donate", "about us", "our team", "event", "registration", "webinar", "podcast"],
+      "weight": -1.0,
+      "is_negative": true
+    }
+  },
+  "bundle_matching": {
+    "require_all_required": true,
+    "optional_match_bonus": 10,
+    "required_match_bonus": 20,
+    "negative_bundle_penalty": 30
+  }
+}
