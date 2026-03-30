@@ -127,7 +127,7 @@
     "https://www.bankofcanada.ca/multimedia/press-conference-policy-rate-announcement-march-2026/": "cfea950d3d5a3f62171ae8d56cc3411d01d6a8f690c687a858bdaee9898a9a0c",
     "https://www.bankofengland.co.uk/news/publications": "ac539ccc87bc5249937937bff7665e48413a9759039358745b85431c58ca24ef",
     "https://www.bankofengland.co.uk/news/news": "281bfe49b7a9ea7573c126725a3055b1b8e2c601353c41556896d963b804c1ab",
-    "https://www.bankofengland.co.uk/markets/market-notices/2026/february/foreign-currency-reserves-10-february-2026": "ed196722274734fd9de2e06322d64e1546fe99c70093a40fa8cc2880968d7665",
+    "https://www.bankofengland.co.uk/markets/market-notices/2026/february/foreign-currency-reserves-10-february-2026": "a8f7dff09ed1b49187fcb2fe801670f8bc6a99067b5133c10d44b40b6ed2b81a",
     "https://www.bankofengland.co.uk/markets/market-notices/2026/february/foreign-currency-reserves-9-february-2026": "6694c53068bd7cb8255e8b034a65e2db75678c7c6a87df40ad9e06ad27d830f6",
     "https://www.sifma.org/news/press-releases/sifma-statement-on-basel-iii-implementation-proposals": "3fcfcdccc135a8eccfe455558296bfba4931d86349a8d6951a1fb0441531a1ea",
     "https://www.brookings.edu/brookings-institution-privacy-policy/": "c1468ee37e6710851d98f28bd16b75a64ca397f5c50664fa3afe1e24a820bc1d",
@@ -151,7 +151,8 @@
     "https://www.rba.gov.au/speeches/2026/mc-gov-2026-02-03.html": "f05a8c65454b9fb860994452a338959ccf5b3dad10da666f6b5d47ab22b68c5c",
     "https://www.rba.gov.au/speeches/2025/mc-gov-2025-12-09.html": "34062c721f147a46d6569e8aa1fa72695121d48b2b388223efdee7fadc04fb0b",
     "https://www.bea.gov/news/schedule": "f37ac2eb918ce2321b9fc42d80db902dea5a91e539d0985182540f47c2ae8686",
-    "https://home.treasury.gov/news/press-releases/sb0426": "6cd732d558dcd866b0b27cef85e69fa0b9da53ee7889fe34307a95da7768eea5"
+    "https://home.treasury.gov/news/press-releases/sb0426": "6cd732d558dcd866b0b27cef85e69fa0b9da53ee7889fe34307a95da7768eea5",
+    "https://www.sifma.org/news/press-releases/sifma-statement-on-dol-rule-proposal-on-alternative-investments-in-retirement-accounts": "518cf684aebcb164bce788251cb3c13035e9589f9ae646e2c394c6cbf12d0d00"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -305,7 +306,8 @@
     "https://www.rba.gov.au/speeches/2026/mc-gov-2026-02-03.html": "rba_speeches_media_conference_monetary_policy_decision_3_february_2026_sp_bcf865f1",
     "https://www.rba.gov.au/speeches/2025/mc-gov-2025-12-09.html": "rba_speeches_media_conference_monetary_policy_decision_9_december_2025_sp_51259ec5",
     "https://www.bea.gov/news/schedule": "bea_news_release_schedule_u_s_bureau_of_economic_analysis_bea_01c9a329",
-    "https://home.treasury.gov/news/press-releases/sb0426": "treasury_press_releases_treasury_targets_fraud_schemes_exploiting_government_health_a35dab0a"
+    "https://home.treasury.gov/news/press-releases/sb0426": "treasury_press_releases_treasury_targets_fraud_schemes_exploiting_government_health_a35dab0a",
+    "https://www.sifma.org/news/press-releases/sifma-statement-on-dol-rule-proposal-on-alternative-investments-in-retirement-accounts": "sifma_news_sifma_statement_on_dol_rule_proposal_on_alternative_investme_fdfa024c"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -2897,6 +2899,31 @@
       ],
       "target_name": "Treasury Press Releases",
       "topic": "market structure"
+    },
+    "sifma_news_sifma_statement_on_dol_rule_proposal_on_alternative_investme_fdfa024c": {
+      "required_keywords": [
+        "treasury",
+        "fixed income",
+        "market structure",
+        "liquidity",
+        "capital markets"
+      ],
+      "blocked_keywords": [
+        "conference registration",
+        "webinar",
+        "career center"
+      ],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "SIFMA News",
+      "topic": "market structure"
     }
   },
   "title_fingerprints": {
@@ -3021,7 +3048,8 @@
     "e149bc6db1c9e9fba86d304f4d4f546dd1cc69cf": "federal_reserve_press_releases_federal_reserve_board_2025_press_releases_32fc84d2",
     "a5748589b310ee1e319c7640685fe87f2b65a576": "treasury_press_releases_treasury_announces_president_donald_j_trump_s_signature_to_a_9a12814e",
     "0f2af04ce97013f0d344a710c8c394a8c432f1f4": "bea_news_release_schedule_u_s_bureau_of_economic_analysis_bea_01c9a329",
-    "89802ddab15c8f69e04cc4f51cf1f02a41cbb4c6": "treasury_press_releases_treasury_targets_fraud_schemes_exploiting_government_health_a35dab0a"
+    "89802ddab15c8f69e04cc4f51cf1f02a41cbb4c6": "treasury_press_releases_treasury_targets_fraud_schemes_exploiting_government_health_a35dab0a",
+    "59c3be2d9abe9aeb370a0c96dd4f648028788f71": "sifma_news_sifma_statement_on_dol_rule_proposal_on_alternative_investme_fdfa024c"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -3200,6 +3228,7 @@
     "01a8d5b4bc4aae2f925bca87bc74e10aac041a91": "bank_of_england_markets_foreign_currency_reserves_2026_market_notice_9_february_2026_8cde0248",
     "3499dd9f173fcae6660646915b10ad3bab3e9b5c": "bea_news_the_bea_wire_bea_s_official_blog_u_s_bureau_of_economic_anal_8bf806b3",
     "27127a8b57133705e5f802a21426ef1e6b0c3956": "treasury_press_releases_treasury_targets_fraud_schemes_exploiting_government_health_a35dab0a",
-    "d548a377225e4d8a9996d5ad4ccede0ad3a56d38": "sifma_news_sifma_statement_on_basel_iii_implementation_proposals_sifma_4b4ba83e"
+    "d548a377225e4d8a9996d5ad4ccede0ad3a56d38": "sifma_news_sifma_statement_on_basel_iii_implementation_proposals_sifma_4b4ba83e",
+    "f7e08361bb3c82aa03f3b102493cec8d773e0fa2": "sifma_news_sifma_statement_on_dol_rule_proposal_on_alternative_investme_fdfa024c"
   }
 }

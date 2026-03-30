@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Incorrect asset_class in market_impact: 'equities' is listed, but the source discusses alternative investments/private markets, not equity markets specifically",
+    "Source contains only a brief press statement with no details about the actual DOL proposal contents, provisions, or timeline",
+    "why_it_matters describes a potential structural change, but the source does not provide specifics about what the rule would actually permit or change"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is generally accurate and well-structured, but the asset_classes field incorrectly lists 'equities' when the source pertains to alternative investments and private markets. Human review is needed to correct this classification error before acceptance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "SIFMA released a statement from President and CEO Kenneth E. Bentsen, Jr. regarding a DOL rule proposal on allowing alternative investments in retirement accounts. The trade association expressed support for policy changes that could expand access to private markets for retirement savers, citing potential benefits including improved diversification and democratized access to investment choices. SIFMA indicated it will review the proposal in detail and engage with regulators during the comment period.",
+    "why_it_matters": "This DOL rule proposal could significantly expand the types of investments available within retirement accounts, potentially allowing retail investors broader access to private markets. If implemented, this would represent a structural change in how retirement capital flows into alternative asset classes. Note: The source contains no specific details about what the rule would actually permit or change.",
+    "macro_context": "The proposal relates to retirement savings policy and capital markets regulation, potentially affecting how retirement capital is allocated across asset classes. As of this statement, only high-level support has been expressed; no details about specific provisions, timelines, or the actual scope of permitted alternative investments have been disclosed.",
+    "market_structure_context": "The rule could alter market structure by enabling broader retail investor participation in private markets through retirement accounts, potentially increasing demand for alternative investment vehicles. However, no specific information about the proposal's terms is available from this source."
+  }
+}
