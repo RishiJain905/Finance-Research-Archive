@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Negative Keyword Bundles Configuration",
+  "description": "Configuration for negative keyword bundles that indicate noise or should be excluded",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "bundle_name": {
+        "type": "string",
+        "description": "Human-readable name for this negative keyword bundle"
+      },
+      "negative_keywords": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Keywords that indicate noise or off-topic content"
+      },
+      "min_occurrences": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Minimum occurrences required for a term to be considered negative"
+      },
+      "penalty_weight": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 10,
+        "description": "Weight multiplier for penalty calculation"
+      }
+    },
+    "required": ["bundle_name", "negative_keywords"]
+  }
+}

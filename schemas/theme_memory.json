@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Theme Memory",
+  "description": "Tracks themes extracted from accepted/rejected records with associated positive and negative terms",
+  "type": "object",
+  "required": ["theme_id", "theme_label", "positive_terms", "negative_terms", "accepted_count", "review_count", "rejected_count", "last_seen", "priority_score"],
+  "properties": {
+    "theme_id": {
+      "type": "string",
+      "description": "Auto-generated slug identifier for the theme",
+      "examples": ["treasury-liquidity", "fed-policy", "yield-curve"]
+    },
+    "theme_label": {
+      "type": "string",
+      "description": "Human-readable label for the theme",
+      "examples": ["Treasury Liquidity", "Fed Policy Shifts", "Yield Curve Dynamics"]
+    },
+    "positive_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Terms that are indicative of this theme in accepted records"
+    },
+    "negative_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Terms that should be excluded or indicate noise for this theme"
+    },
+    "accepted_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of accepted records associated with this theme"
+    },
+    "review_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of records sent to review for this theme"
+    },
+    "rejected_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of rejected records associated with this theme"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of when this theme was last seen"
+    },
+    "priority_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Computed priority score based on accepted/rejected/review counts"
+    }
+  }
+}

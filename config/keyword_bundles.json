@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Keyword Bundles Configuration",
+  "description": "Configuration for keyword bundles used in theme extraction and candidate scoring",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "bundle_name": {
+        "type": "string",
+        "description": "Human-readable name for this keyword bundle"
+      },
+      "seed_keywords": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Initial seed keywords for this theme"
+      },
+      "min_occurrences": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Minimum occurrences required for a term to be considered"
+      },
+      "weight": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 10,
+        "description": "Weight multiplier for scoring"
+      }
+    },
+    "required": ["bundle_name", "seed_keywords"]
+  }
+}
