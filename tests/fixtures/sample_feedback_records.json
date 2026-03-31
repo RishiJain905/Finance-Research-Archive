@@ -1,0 +1,140 @@
+{
+    "accepted_with_human_feedback": {
+        "record_id": "rec_2024_001",
+        "title": "Federal Reserve FOMC Meeting Minutes",
+        "topic": "monetary_policy",
+        "event_type": "meeting_minutes",
+        "source": "federalreserve.gov",
+        "url": "https://federalreserve.gov/fomc/minutes/2024-01-01.htm",
+        "status": "accepted",
+        "human_review": {
+            "required": false,
+            "decision": "approved_by_human",
+            "notes": "Standard FOMC minutes, high quality source",
+            "reviewed_at": "2024-01-15T10:30:00Z"
+        },
+        "human_feedback": {
+            "decision": "approve",
+            "notes": "High quality central bank source",
+            "reviewed_at": "2024-01-15T10:30:00Z",
+            "reviewer_id": "reviewer_001"
+        },
+        "llm_review": {
+            "verdict": "accept",
+            "quality_tier": "tier_1",
+            "score": 85.0
+        }
+    },
+    "rejected_with_human_feedback": {
+        "record_id": "rec_2024_002",
+        "title": "Career Opportunities at Local Bank",
+        "topic": "banking",
+        "event_type": "job_posting",
+        "source": "localbank.com",
+        "url": "https://localbank.com/careers",
+        "status": "rejected",
+        "human_review": {
+            "required": false,
+            "decision": "rejected_by_human",
+            "notes": "Job postings not relevant for research",
+            "reviewed_at": "2024-01-16T14:00:00Z"
+        },
+        "human_feedback": {
+            "decision": "reject",
+            "notes": "Not research content",
+            "reviewed_at": "2024-01-16T14:00:00Z",
+            "reviewer_id": "reviewer_001"
+        },
+        "llm_review": {
+            "verdict": "reject",
+            "quality_tier": "tier_3",
+            "score": 25.0
+        }
+    },
+    "all_feedback_decisions": [
+        {
+            "decision": "approve",
+            "reviewed_at": "2024-01-15T10:00:00Z",
+            "notes": "Standard approval"
+        },
+        {
+            "decision": "reject",
+            "reviewed_at": "2024-01-15T10:01:00Z",
+            "notes": "Standard rejection"
+        },
+        {
+            "decision": "approve_but_weak",
+            "reviewed_at": "2024-01-15T10:02:00Z",
+            "notes": "Accept but not high confidence"
+        },
+        {
+            "decision": "approve_and_promote",
+            "reviewed_at": "2024-01-15T10:03:00Z",
+            "notes": "High quality, suggest promoting"
+        },
+        {
+            "decision": "bad_source",
+            "reviewed_at": "2024-01-15T10:04:00Z",
+            "notes": "Source has poor track record"
+        },
+        {
+            "decision": "good_source",
+            "reviewed_at": "2024-01-15T10:05:00Z",
+            "notes": "Source is reliable"
+        },
+        {
+            "decision": "expand_this_topic",
+            "reviewed_at": "2024-01-15T10:06:00Z",
+            "notes": "Topic deserves more coverage"
+        },
+        {
+            "decision": "suppress_similar_items",
+            "reviewed_at": "2024-01-15T10:07:00Z",
+            "notes": "Too many similar items, suppress"
+        }
+    ],
+    "with_source_and_topic_feedback": {
+        "record_id": "rec_2024_003",
+        "title": "Treasury Market Analysis",
+        "topic": "treasury_markets",
+        "event_type": "research_report",
+        "source": "treasury.gov",
+        "url": "https://treasury.gov/analysis",
+        "status": "accepted",
+        "human_review": {
+            "required": false,
+            "decision": "approved_by_human",
+            "notes": "Good source and topic expansion",
+            "reviewed_at": "2024-01-17T09:00:00Z"
+        },
+        "human_feedback": {
+            "decision": "approve_and_promote",
+            "source_feedback": "good_source",
+            "topic_feedback": "expand_this_topic",
+            "reviewed_at": "2024-01-17T09:00:00Z",
+            "reviewer_id": "reviewer_002"
+        },
+        "llm_review": {
+            "verdict": "accept",
+            "quality_tier": "tier_1",
+            "score": 92.0
+        }
+    },
+    "minimal_valid_feedback": {
+        "decision": "approve",
+        "reviewed_at": "2024-01-15T10:00:00Z"
+    },
+    "feedback_with_all_optional_fields": {
+        "decision": "approve_and_promote",
+        "notes": "Excellent content from a trusted source. Please prioritize.",
+        "source_feedback": "good_source",
+        "topic_feedback": "expand_this_topic",
+        "reviewed_at": "2024-01-15T10:00:00Z",
+        "reviewer_id": "senior_reviewer_001"
+    },
+    "notes_at_max_length": {
+        "decision": "approve",
+        "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit vo",
+        "reviewed_at": "2024-01-15T10:00:00Z"
+    }
+}
