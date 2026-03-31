@@ -118,6 +118,10 @@ def extract_feature_values(record: dict, domain_trust: dict | None = None) -> di
     human_decision = human_review.get("decision", "")
     human_approved = human_decision in ("approved_by_human", "approved")
 
+    # Human feedback signal (additional feedback beyond simple approval)
+    human_feedback = human_review.get("human_feedback", {})
+    feedback_signal = human_feedback.get("feedback_decision", "")
+
     # Issues found count (0-10, capped)
     issues = llm_review.get("issues_found", [])
     issues_count = min(len(issues), 10)
@@ -149,6 +153,7 @@ def extract_feature_values(record: dict, domain_trust: dict | None = None) -> di
     return {
         "verification_confidence": verification_confidence,
         "human_approved": human_approved,
+        "feedback_signal": feedback_signal,
         "issues_found_count": issues_count,
         "why_it_matters_quality": why_quality,
         "has_structured_numbers": has_numbers,
@@ -225,6 +230,21 @@ def compute_tier_score(
         event_val = event_map.get(features["event_type"], event_map.get("default", 0.4))
         score += event_val * es["weight"] * 100
 
+    # 9. Feedback signal adjustments
+    feedback_signal = features.get("feedback_signal", "")
+    if feedback_signal == "approve_and_promote":
+        # Stronger positive signal
+        score += 10
+    elif feedback_signal == "approve_but_weak":
+        # Weaker positive signal
+        score -= 5
+    elif feedback_signal == "bad_source":
+        # Negative source quality signal
+        score -= 10
+    elif feedback_signal == "good_source":
+        # Positive source quality signal
+        score += 5
+
     return round(min(100.0, max(0.0, score)), 1)
 
 
@@ -276,6 +296,17 @@ def generate_reasoning(
     # Human approval
     if features["human_approved"]:
         reasons.append("human-approved")
+
+    # Feedback signal
+    feedback_signal = features.get("feedback_signal", "")
+    if feedback_signal == "approve_and_promote":
+        reasons.append("feedback: approve and promote (+10)")
+    elif feedback_signal == "approve_but_weak":
+        reasons.append("feedback: approve but weak (-5)")
+    elif feedback_signal == "bad_source":
+        reasons.append("feedback: bad source quality (-10)")
+    elif feedback_signal == "good_source":
+        reasons.append("feedback: good source quality (+5)")
 
     # Issues
     ic = features["issues_found_count"]

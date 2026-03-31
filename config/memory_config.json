@@ -2,115 +2,36 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Memory Configuration",
   "description": "Configuration for adaptive memory system (cold-start thresholds, weights, decay)",
-  "type": "object",
-  "properties": {
-    "cold_start": {
-      "type": "object",
-      "description": "Cold-start behavior for new domains/sources",
-      "properties": {
-        "min_samples_for_learning": {
-          "type": "integer",
-          "minimum": 1,
-          "default": 10,
-          "description": "Minimum candidates before starting to blend learned trust with baseline"
-        },
-        "full_learning_threshold": {
-          "type": "integer",
-          "minimum": 1,
-          "default": 25,
-          "description": "Candidates after which learned trust dominates over baseline"
-        },
-        "blend_formula": {
-          "type": "string",
-          "enum": ["linear", "exponential"],
-          "default": "linear",
-          "description": "How to blend baseline and learned trust between min_samples and full_learning_threshold"
-        }
-      }
-    },
-    "weights": {
-      "type": "object",
-      "description": "Weights for trust score computation",
-      "properties": {
-        "accepted_weight": {
-          "type": "number",
-          "default": 10,
-          "description": "Points added per accepted candidate"
-        },
-        "rejected_weight": {
-          "type": "number",
-          "default": 5,
-          "description": "Points subtracted per rejected candidate"
-        },
-        "filtered_weight": {
-          "type": "number",
-          "default": 3,
-          "description": "Points subtracted per filtered-out candidate"
-        },
-        "review_weight": {
-          "type": "number",
-          "default": 0,
-          "description": "Points adjustment per review queue candidate (usually neutral)"
-        },
-        "human_multiplier": {
-          "type": "number",
-          "default": 2.0,
-          "description": "Multiplier for human decisions vs automatic ones"
-        }
-      }
-    },
-    "trust_score_bounds": {
-      "type": "object",
-      "description": "Trust score bounds",
-      "properties": {
-        "min": {
-          "type": "number",
-          "default": 1,
-          "description": "Minimum trust score (prevent zero-trust lockout)"
-        },
-        "max": {
-          "type": "number",
-          "default": 100,
-          "description": "Maximum trust score"
-        }
-      }
-    },
-    "decay": {
-      "type": "object",
-      "description": "Time-based decay settings (optional)",
-      "properties": {
-        "enabled": {
-          "type": "boolean",
-          "default": false,
-          "description": "Enable time-based decay for old outcomes"
-        },
-        "half_life_days": {
-          "type": "integer",
-          "default": 180,
-          "description": "Days until outcomes count at half value"
-        },
-        "min_age_days": {
-          "type": "integer",
-          "default": 30,
-          "description": "Only apply decay to outcomes older than this"
-        }
-      }
-    },
-    "logging": {
-      "type": "object",
-      "description": "Memory logging settings",
-      "properties": {
-        "log_dir": {
-          "type": "string",
-          "default": "logs/source_memory",
-          "description": "Directory for memory update logs"
-        },
-        "log_updates": {
-          "type": "boolean",
-          "default": true,
-          "description": "Whether to log memory updates"
-        }
-      }
-    }
+  "cold_start": {
+    "min_samples_for_learning": 10,
+    "full_learning_threshold": 25,
+    "blend_formula": "linear"
+  },
+  "weights": {
+    "accepted_weight": 10,
+    "rejected_weight": 5,
+    "filtered_weight": 3,
+    "review_weight": 0,
+    "human_multiplier": 2.0
+  },
+  "feedback_weights": {
+    "bad_source_weight": 15,
+    "good_source_weight": 30,
+    "weak_accept_weight": 10,
+    "promote_weight": 40,
+    "suppress_weight": 10
+  },
+  "trust_score_bounds": {
+    "min": 1,
+    "max": 100
+  },
+  "decay": {
+    "enabled": false,
+    "half_life_days": 180,
+    "min_age_days": 30
+  },
+  "logging": {
+    "log_dir": "logs/source_memory",
+    "log_updates": true
   }
 }
