@@ -1,0 +1,307 @@
+{
+  "macro_records": [
+    {
+      "id": "macro_inflation_001",
+      "status": "accepted",
+      "created_at": "2026-03-25T08:30:00+00:00",
+      "topic": "inflation",
+      "event_type": "economic_data",
+      "title": "CPI rises 0.3% in February, core inflation remains elevated",
+      "summary": "The Consumer Price Index increased 0.3% month-over-month in February, with core inflation (excluding food and energy) showing persistent strength at 0.4%. The data suggests inflation is not cooling as quickly as the Fed had hoped.",
+      "why_it_matters": "CPI data is a primary inflation gauge that directly influences Fed policy decisions and market expectations for interest rates.",
+      "key_points": [
+        "Headline CPI: +0.3% MoM, +3.2% YoY",
+        "Core CPI: +0.4% MoM, +3.9% YoY",
+        "Shelter costs continued to rise at 0.5%",
+        "Energy prices declined 0.8%"
+      ],
+      "macro_context": "Elevated inflation readings complicate the Fed's decision-making process and may delay interest rate cuts.",
+      "market_structure_context": "Inflation data affects Treasury yields, particularly at the short end of the curve, and influences Fed Funds futures pricing.",
+      "tags": ["inflation", "cpi", "price", "fed", "monetary policy", "economic data"],
+      "quality_tier": {"tier": "tier_1", "score": 85},
+      "source": {"name": "Bureau of Labor Statistics", "source_type": "government_data", "published_at": "2026-03-25"},
+      "linked_quant_context": [
+        {"record_id": "core_cpi_2026_03", "relationship": "correlated_data", "link_score": 95}
+      ]
+    },
+    {
+      "id": "macro_labor_002",
+      "status": "accepted",
+      "created_at": "2026-03-25T14:00:00+00:00",
+      "topic": "labor",
+      "event_type": "employment_report",
+      "title": "Nonfarm payrolls add 275,000 jobs, unemployment ticks up to 3.9%",
+      "summary": "The U.S. economy added 275,000 nonfarm jobs in February, beating expectations of 220,000. However, the unemployment rate edged up to 3.9% from 3.8%, and wage growth slowed to 0.2% MoM.",
+      "why_it_matters": "Labor market strength influences consumer spending, inflation expectations, and the Fed's assessment of economic health.",
+      "key_points": [
+        "Nonfarm payrolls: +275,000 (est. +220,000)",
+        "Unemployment rate: 3.9% (up from 3.8%)",
+        "Average hourly earnings: +0.2% MoM, +4.1% YoY",
+        "Healthcare and government led job gains"
+      ],
+      "macro_context": "Mixed labor data complicates the inflation-growth outlook. Strong hiring but rising unemployment suggests the labor market is cooling gradually.",
+      "market_structure_context": "Labor market data affects Treasury yields and equity valuations, particularly rate-sensitive sectors.",
+      "tags": ["labor", "employment", "jobs", "growth", "unemployment", "economic data"],
+      "quality_tier": {"tier": "tier_1", "score": 88},
+      "source": {"name": "Bureau of Labor Statistics", "source_type": "government_data", "published_at": "2026-03-25"},
+      "linked_quant_context": [
+        {"record_id": "nfp_2026_02", "relationship": "primary_data_source", "link_score": 100}
+      ]
+    },
+    {
+      "id": "macro_central_bank_003",
+      "status": "accepted",
+      "created_at": "2026-03-26T18:00:00+00:00",
+      "topic": "central bank",
+      "event_type": "speech",
+      "title": "Fed Chair signals patience on rate decisions amid inflation uncertainty",
+      "summary": "Federal Reserve Chair Jerome Powell indicated that the central bank needs more confidence that inflation is moving sustainably toward its 2% target before cutting rates. He emphasized the Fed will remain data-dependent.",
+      "why_it_matters": "Fed communications shape market expectations and can trigger significant moves in equities, bonds, and currencies.",
+      "key_points": [
+        "Chair Powell emphasized patience before rate cuts",
+        "Fed needs 'greater confidence' on inflation trajectory",
+        "Data-dependent approach remains intact",
+        "Balance sheet runoff continues as planned"
+      ],
+      "macro_context": "Powell's cautious tone reflects the Fed's concern that inflation may be stickier than anticipated, supporting higher-for-longer rate expectations.",
+      "market_structure_context": "Fed communications directly impact Treasury yields, the dollar, and risk appetite across asset classes.",
+      "tags": ["fed", "central bank", "monetary policy", "powell", "fomc", "rate decision"],
+      "quality_tier": {"tier": "tier_1", "score": 92},
+      "source": {"name": "Federal Reserve", "source_type": "press_release", "published_at": "2026-03-26"},
+      "linked_quant_context": [
+        {"record_id": "fed_funds_2026_03_26", "relationship": "policy_context", "link_score": 88}
+      ]
+    },
+    {
+      "id": "macro_rates_004",
+      "status": "accepted",
+      "created_at": "2026-03-27T16:00:00+00:00",
+      "topic": "rates",
+      "event_type": "yield_curve",
+      "title": "2-year yield rises to 4.85% as rate cut expectations pushed out",
+      "summary": "The 2-year Treasury yield climbed to 4.85%, its highest level since November, as markets revised down expectations for Fed rate cuts. Traders now pricing just one cut for 2026, down from three at the start of the year.",
+      "why_it_matters": "Short-term yields reflect market expectations for the Fed's near-term policy path and impact borrowing costs across the economy.",
+      "key_points": [
+        "2-year yield: 4.85% (highest since November)",
+        "10-year yield: 4.35%, 2s10s spread at -50bps",
+        "Fed funds futures pricing one cut in 2026",
+        "Rates markets showing 'higher for longer' consensus"
+      ],
+      "macro_context": "The steepening yield curve reflects growing skepticism about the Fed's ability to cut rates in 2026, driven by persistent inflation and resilient economic data.",
+      "market_structure_context": "Yield curve dynamics affect bank profitability, insurance reserves, and pension fund allocations.",
+      "tags": ["rate", "yield", "curve", "treasury", "bond", "spread", "fed"],
+      "quality_tier": {"tier": "tier_2", "score": 78},
+      "source": {"name": "Financial Times", "source_type": "article", "published_at": "2026-03-27"},
+      "linked_quant_context": [
+        {"record_id": "treasury_yields_2026_03_27", "relationship": "market_data_context", "link_score": 85}
+      ]
+    }
+  ],
+  "market_structure_records": [
+    {
+      "id": "ms_liquidity_001",
+      "status": "accepted",
+      "created_at": "2026-03-25T10:00:00+00:00",
+      "topic": "liquidity",
+      "event_type": "funding_market",
+      "title": "Repo rates stabilize near 5.3% after overnight volatility",
+      "summary": "Overnight repo rates settled around 5.30% after experiencing brief volatility tied to Treasury settlement flows. Dealers reported adequate liquidity but noted heightened demand for intraday funding.",
+      "why_it_matters": "Repo market functioning is a key indicator of short-term funding conditions and reflects the broader liquidity environment.",
+      "key_points": [
+        "Overnight repo: 5.30% (settled)",
+        "SOFR: 5.31%, unchanged",
+        "Treasury settlement drove brief volatility",
+        "No signs of funding stress"
+      ],
+      "macro_context": "Stable repo rates suggest the banking system has adequate reserves and the Fed's tightening is being transmitted effectively.",
+      "market_structure_context": "Repo market conditions directly affect short-term funding costs and the effectiveness of monetary policy transmission.",
+      "tags": ["liquidity", "repo", "funding", "sofr", "money markets"],
+      "quality_tier": {"tier": "tier_1", "score": 82},
+      "source": {"name": "Bloomberg", "source_type": "article", "published_at": "2026-03-25"},
+      "linked_quant_context": [
+        {"record_id": "sofr_2026_03_25", "relationship": "rate_context", "link_score": 90}
+      ]
+    },
+    {
+      "id": "ms_treasury_002",
+      "status": "accepted",
+      "created_at": "2026-03-26T14:30:00+00:00",
+      "topic": "treasury",
+      "event_type": "auction",
+      "title": "10-year Treasury auction shows strong demand with 4.42% stop-through rate",
+      "summary": "The Treasury's $39 billion 10-year note auction attracted strong bidder demand, with the stop-through rate at 4.42%, below the pre-auction market rate of 4.44%. Indirect bidding reached 72%.",
+      "why_it_matters": "Treasury auctions reveal investor demand for government debt and influence the broader rates landscape.",
+      "key_points": [
+        "Auction size: $39 billion 10-year notes",
+        "Stop-through rate: 4.42% (below 4.44% market)",
+        "Bid-to-cover ratio: 2.58",
+        "Indirect bidders took 72% (strong)"
+      ],
+      "macro_context": "Strong auction demand reflects healthy appetite for U.S. Treasuries despite elevated yield levels and fiscal deficit concerns.",
+      "market_structure_context": "Treasury issuance directly affects the supply of bonds in the secondary market and influences yield dynamics.",
+      "tags": ["treasury", "issuance", "auction", "debt", "t-note", "bond market"],
+      "quality_tier": {"tier": "tier_2", "score": 75},
+      "source": {"name": "Treasury Direct", "source_type": "government_data", "published_at": "2026-03-26"},
+      "linked_quant_context": [
+        {"record_id": "treasury_auctions_2026_03_26", "relationship": "auction_results", "link_score": 95}
+      ]
+    },
+    {
+      "id": "ms_clearing_003",
+      "status": "accepted",
+      "created_at": "2026-03-27T09:00:00+00:00",
+      "topic": "clearing",
+      "event_type": "exchange",
+      "title": "DTCC proposes new margining framework for Treasury clearing members",
+      "summary": "The Depository Trust & Clearing Corporation has proposed a revised margining framework for Treasury clearing that would adjust margin requirements based on portfolio risk characteristics and market conditions.",
+      "why_it_matters": "Changes to clearing margining can affect liquidity requirements for dealers and prime brokers, impacting market-making capacity and costs.",
+      "key_points": [
+        "DTCC proposes risk-sensitive margin framework",
+        "Would adjust requirements based on portfolio risk",
+        "Aims to reduce procyclicality",
+        "Industry feedback requested by April 15"
+      ],
+      "macro_context": "Improved risk management in Treasury clearing enhances financial stability and supports the smooth functioning of rate markets.",
+      "market_structure_context": "Clearinghouse rules directly affect the cost and availability of Treasury trading, particularly for dealers and institutional investors.",
+      "tags": ["clearing", "exchange", "settlement", "dtcc", "margin", "market plumbing"],
+      "quality_tier": {"tier": "tier_2", "score": 70},
+      "source": {"name": "DTCC", "source_type": "press_release", "published_at": "2026-03-27"},
+      "linked_quant_context": []
+    },
+    {
+      "id": "ms_onrrp_004",
+      "status": "accepted",
+      "created_at": "2026-03-28T17:00:00+00:00",
+      "topic": "liquidity",
+      "event_type": "on_rrp",
+      "title": "ONRRP usage drops to $350B as money market conditions ease",
+      "summary": "Usage of the Federal Reserve's overnight reverse repo facility fell to $350 billion, the lowest level since mid-2024, as money market conditions normalized and banks' appetite for reserves increased.",
+      "why_it_matters": "ONRRP usage reflects the distribution of reserves in the banking system and money market fund investment preferences.",
+      "key_points": [
+        "ONRRP usage: $350B (down from $450B)",
+        "T-bill yields competitive with Fed facility",
+        "Money markets no longer relying on ONRRP floor",
+        "Signals improved reserve distribution"
+      ],
+      "macro_context": "Declining ONRRP usage suggests liquidity is becoming more evenly distributed, reducing reliance on the Fed's defensive tools.",
+      "market_structure_context": "ONRRP dynamics affect money market fund flows, bank funding costs, and the effective lower bound for short-term rates.",
+      "tags": ["liquidity", "on rrp", "on rrpon", "money markets", "fed", "reserves"],
+      "quality_tier": {"tier": "tier_2", "score": 72},
+      "source": {"name": "Federal Reserve", "source_type": "quant_snapshot", "published_at": "2026-03-28"},
+      "linked_quant_context": [
+        {"record_id": "onrrp_2026_03_28", "relationship": "usage_data", "link_score": 100}
+      ]
+    }
+  ],
+  "records_for_range_testing": [
+    {
+      "id": "macro_test_2026_03_23",
+      "status": "accepted",
+      "created_at": "2026-03-23T12:00:00+00:00",
+      "topic": "inflation",
+      "event_type": "economic_data",
+      "title": "PPI rises 0.3% in February, signaling continued producer price pressures",
+      "summary": "Producer Price Index increased 0.3% MoM in February, with goods prices up 0.5% while services edged lower. The data suggests input cost pressures remain in the supply chain.",
+      "why_it_matters": "PPI data provides insight into inflation at the production level, which can foreshadow consumer price changes.",
+      "key_points": [
+        "Headline PPI: +0.3% MoM",
+        "Goods: +0.5%, Services: -0.1%",
+        "Final demand inflation +0.2%"
+      ],
+      "macro_context": "Producer price pressures continue to feed through to consumer prices, maintaining inflationary concerns.",
+      "market_structure_context": "PPI influences commodity markets and Treasury breakeven inflation rates.",
+      "tags": ["ppi", "inflation", "price", "producer"],
+      "quality_tier": {"tier": "tier_2", "score": 68},
+      "source": {"name": "Bureau of Labor Statistics", "source_type": "government_data", "published_at": "2026-03-23"},
+      "linked_quant_context": []
+    },
+    {
+      "id": "macro_test_2026_03_24",
+      "status": "accepted",
+      "created_at": "2026-03-24T14:00:00+00:00",
+      "topic": "central bank",
+      "event_type": "speech",
+      "title": "ECB's Schnabel warns of persistent services inflation",
+      "summary": "ECB Executive Board member Isabel Schnabel highlighted that services inflation in the eurozone remains elevated and may prove stickier than anticipated, complicating the path to the 2% target.",
+      "why_it_matters": "ECB communications influence eurozone rate expectations and can trigger movements in European sovereign bonds and the euro.",
+      "key_points": [
+        "Services inflation elevated at 4.0%",
+        "Wage growth driving services costs",
+        "ECB may need to maintain restrictive policy",
+        "Inflation not yet durably at target"
+      ],
+      "macro_context": "Persistent services inflation in Europe contrasts with improving goods prices, suggesting a bifurcated inflation picture.",
+      "market_structure_context": "ECB policy uncertainty affects eurodollar and Treasury yields through relative rate expectations.",
+      "tags": ["ecb", "central bank", "inflation", "eurozone", "monetary policy"],
+      "quality_tier": {"tier": "tier_2", "score": 65},
+      "source": {"name": "European Central Bank", "source_type": "speech", "published_at": "2026-03-24"},
+      "linked_quant_context": []
+    },
+    {
+      "id": "ms_test_2026_03_26",
+      "status": "accepted",
+      "created_at": "2026-03-26T11:00:00+00:00",
+      "topic": "market structure",
+      "event_type": "operations",
+      "title": "SEC proposes enhanced Treasury market transparency rules",
+      "summary": "The Securities and Exchange Commission has proposed new rules to enhance transparency in the Treasury market, including real-time reporting requirements for interdealer brokers and improved transaction data collection.",
+      "why_it_matters": "Greater transparency in the Treasury market could improve price discovery and reduce flash crash risks.",
+      "key_points": [
+        "Real-time reporting for interdealer trades",
+        "Improved transaction data collection",
+        "Covered the $1.2 quadrillion market",
+        "Comment period ends in 60 days"
+      ],
+      "macro_context": "Enhanced market structure transparency supports efficient price formation in the world's most important bond market.",
+      "market_structure_context": "Regulatory changes to Treasury market structure affect all participants from dealers to buy-and-hold investors.",
+      "tags": ["market structure", "plumbing", "infrastructure", "sec", "treasury", "transparency"],
+      "quality_tier": {"tier": "tier_2", "score": 73},
+      "source": {"name": "SEC", "source_type": "regulatory", "published_at": "2026-03-26"},
+      "linked_quant_context": []
+    }
+  ],
+  "non_relevant_records": [
+    {
+      "id": "tech_product_001",
+      "status": "accepted",
+      "created_at": "2026-03-25T09:00:00+00:00",
+      "topic": "technology",
+      "event_type": "product_launch",
+      "title": "Tech company announces new smartphone with improved battery life",
+      "summary": "A major technology company has unveiled its latest smartphone model featuring significantly improved battery life and a new processor.",
+      "why_it_matters": "Product announcements can affect the company's stock price but have limited broader market impact.",
+      "key_points": [
+        "New battery technology extends life by 40%",
+        "New processing chip improves performance",
+        "Camera system upgraded"
+      ],
+      "macro_context": "Consumer tech spending is a small component of broader consumption data.",
+      "market_structure_context": "Individual company product cycles do not affect market structure.",
+      "tags": ["technology", "smartphone", "consumer electronics", "product"],
+      "quality_tier": {"tier": "tier_3", "score": 45},
+      "source": {"name": "Tech News", "source_type": "article", "published_at": "2026-03-25"},
+      "linked_quant_context": []
+    },
+    {
+      "id": "sports_result_001",
+      "status": "accepted",
+      "created_at": "2026-03-26T20:00:00+00:00",
+      "topic": "sports",
+      "event_type": "game_results",
+      "title": "Local basketball team wins championship game",
+      "summary": "The hometown basketball team defeated their rivals in an exciting championship game that went into overtime.",
+      "why_it_matters": "Local interest only, no broader market impact.",
+      "key_points": [
+        "Championship game went to overtime",
+        "Star player scored 35 points",
+        "Team wins first title in 10 years"
+      ],
+      "macro_context": "Not relevant to macroeconomic conditions.",
+      "market_structure_context": "Not applicable to financial markets.",
+      "tags": ["sports", "basketball", "championship", "local news"],
+      "quality_tier": {"tier": "tier_3", "score": 30},
+      "source": {"name": "Local Sports", "source_type": "article", "published_at": "2026-03-26"},
+      "linked_quant_context": []
+    }
+  ]
+}
