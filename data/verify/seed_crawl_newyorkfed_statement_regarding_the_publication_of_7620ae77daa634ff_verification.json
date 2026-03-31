@@ -1,14 +1,17 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "source.url is empty - URL was not captured in crawl metadata. Domain (newyorkfed.org) was inferred but full URL is missing, violating source attribution completeness requirement.",
+    "summary states rates won't publish 'due to Good Friday and the March Employment Situation report' - this conflates the proximate cause. The source indicates the non-publication is due to cleared Treasury repo settlement unavailability; Good Friday and the employment report are upstream factors that caused that settlement issue. More precise phrasing would be 'due to cleared Treasury repo settlement not being scheduled for April 3.'"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Issues are minor - missing URL is a documentation gap (source is authoritative NY Fed content, domain is captured) and summary phrasing is imprecise but not factually wrong. Record is otherwise accurate and complete. Auto-routing to review queue is appropriate for documentation cleanup.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "The Federal Reserve Bank of New York announced that TGCR, BGCR, SOFR, and SOFR Averages and Index will not be published on Friday, April 3, 2026, due to cleared Treasury repo settlement not being scheduled for that date. The EFFR and OBFR, which follow the NY Fed's holiday schedule, will publish normally on April 3. On Monday, April 6, SOFR and related rates will resume publication.",
+    "why_it_matters": "This notice is critical for any market participant using SOFR or related overnight reference rates in derivatives pricing, loan agreements, or risk calculations. The one-day gap in SOFR publication affects daily accrual calculations, fallback provisions, and any contracts tied to these benchmarks. The differential treatment of EFFR/OBFR (published) versus SOFR (not published) on the same day may create basis considerations.",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The notice directly addresses the plumbing of reference rate publication, specifically the interdependencies between cleared repo settlement availability and SOFR calculation. It clarifies that the loss of cleared Treasury repo settlement eliminates two of three market segments used in Treasury repo reference rate calculations (TGCR and BGCR). The EFFR and OBFR are explicitly noted to follow a different publication schedule (NY Fed holiday schedule) than SOFR."
   }
 }

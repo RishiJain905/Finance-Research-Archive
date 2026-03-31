@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_the_mortgage_rate_conundrum_federal_e87ef64b428de703",
-  "created_at": "2026-03-31T13:46:14.320953+00:00",
+  "created_at": "2026-03-31T19:31:28.679168+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -8,47 +8,51 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/research/staff_reports/sr829.html",
-    "published_at": "2017-11",
+    "published_at": "2017-11-01",
     "source_type": "research_paper",
     "domain": "www.newyorkfed.org"
   },
-  "summary": "Staff Report No. 829 from the Federal Reserve Bank of New York documents the emergence of a disconnect between mortgage and Treasury interest rates in summer 2003, following the end of the Federal Reserve's expansionary monetary cycle in June 2003. The research finds that mortgage rates failed to rise according to their historical relationship with Treasury yields, leading to significantly and persistently easier mortgage credit conditions. Using millions of loan-level observations to control for loan, borrower, and geographic characteristics, the authors reveal that delinquency rates began rising for loans originated after mid-2003, coinciding exactly with the period when mortgage rates disconnected from Treasury yields.",
+  "summary": "This November 2017 Federal Reserve Bank of New York Staff Report (Number 829) by Justiniano, Primiceri, and Tambalotti documents a disconnect between mortgage and Treasury interest rates that emerged in summer 2003 following the end of the Fed's expansionary monetary cycle in June 2003. The research, based on millions of loan-level observations, finds that mortgage rates failed to rise according to their historical relationship with Treasury yields, leading to persistently easier mortgage credit conditions.",
   "key_points": [
-    "Mortgage rates failed to rise in line with Treasury yields following the Fed's rate-hike cycle ending June 2003",
-    "The disconnect led to significantly and persistently easier mortgage credit conditions",
-    "Research used a large dataset with millions of loan-level observations to control for loan, borrower, and geographic characteristics",
-    "Delinquency rates started rising for loans originated after mid-2003, exactly when the mortgage-Treasury relationship broke down",
-    "Authors are Alejandro Justiniano, Giorgio E. Primiceri, and Andrea Tambalotti"
+    "Published November 2017 as Federal Reserve Bank of New York Staff Report Number 829",
+    "Authors: Alejandro Justiniano, Giorgio E. Primiceri, and Andrea Tambalotti",
+    "Documents disconnect between mortgage and Treasury rates in summer 2003, after Fed's expansionary cycle ended in June 2003",
+    "Mortgage rates failed to rise according to historical relationship with Treasury yields post-June 2003",
+    "Analysis based on millions of loan-level observations controlling for loan, borrower, and geographic characteristics",
+    "Delinquency rates rose for loans originated after mid-2003, coinciding with the rate disconnect and cheaper credit"
   ],
-  "why_it_matters": "This research documents how the historical relationship between mortgage rates and Treasury yields can break down, with significant implications for credit availability and credit risk. The disconnect between policy rates and mortgage market conditions may create unintended easing of credit that can contribute to building vulnerabilities in the financial system, as evidenced by the rising delinquency rates observed post-mid-2003.",
+  "why_it_matters": "This research examines a structural anomaly in the relationship between mortgage markets and Treasury yields, showing how monetary policy cycles can produce lasting changes in credit conditions. The findings are relevant to understanding mortgage market pricing mechanisms and the transmission of Fed policy to housing finance.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "mortgage-backed securities"
+      "equities"
     ],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "The paper examines the mortgage rate-Treasury yield relationship, a key component of the mortgage-backed securities market structure and pricing mechanism. The disconnect documented represents a structural shift in how monetary policy transmits to mortgage markets.",
+  "macro_context": "The research examines the period following the end of the Fed's expansionary cycle in June 2003, demonstrating how monetary policy shifts can create disconnects in credit markets. While this is historical analysis, it provides framework for understanding how rate cycles affect mortgage market structure.",
+  "market_structure_context": "Core finding: mortgage rates became structurally disconnected from Treasury yields following mid-2003, creating persistently easier credit conditions beyond what historical relationships would predict. The loan-level data analysis controls for borrower, loan, and geographic characteristics to isolate this structural shift.",
   "important_numbers": [
     "June 2003 (end of Fed expansionary cycle)",
-    "mid-2003 (timing of observed changes)",
-    "Number 829 (Staff Report identifier)"
+    "mid-2003 (point when delinquency rates began rising)"
   ],
   "tags": [
-    "new-york-fed",
-    "research-paper",
     "mortgage-rates",
     "treasury-yields",
     "credit-conditions",
-    "delinquency-rates",
-    "monetary-policy-transmission",
-    "housing-finance",
-    "loan-level-data"
+    "new-york-fed",
+    "staff-report",
+    "rate-cycle",
+    "loan-level-data",
+    "delinquency",
+    "market-structure",
+    "jstor-el",
+    "e32",
+    "e44",
+    "g21"
   ],
   "llm_review": {
-    "initial_confidence": 5,
+    "initial_confidence": 4,
     "verification_confidence": 8,
     "verdict": "accept",
     "issues_found": []
@@ -56,8 +60,8 @@
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Historical research paper from 2017. Source is a research_paper type and relevant to market structure analysis, though the content is limited in the crawl extract. The PDF is only available in full format. Consider for historical research value but note significant age."
+    "notes": "Source is a thin abstract/description only - the full PDF research paper was not captured in the crawl. Historical relevance to mortgage-Treasury relationship but severely limited extractability. Low confidence due to age (2017) and lack of full text access."
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_the_mortgage_rate_conundrum_federal_e87ef64b428de703.txt",
-  "notes": "Crawl extraction contains only metadata and abstract. Full PDF content not available in crawl. Source is a New York Fed Staff Report (research paper) relevant to mortgage market structure. Historical record from November 2017 documents mortgage rate disconnects in 2003. Available only in PDF per source acknowledgment."
+  "notes": "Thin source - only abstract metadata was captured. The full research paper is only available in PDF format and was not included in the crawl. This November 2017 Staff Report is a historical research document examining mortgage rate dynamics from 2003-2004. While topic is relevant to market structure (mortgage-Treasury relationship), the lack of full text significantly limits the archival value. Published over 8 years before TODAY. LLM confidence lowered accordingly."
 }

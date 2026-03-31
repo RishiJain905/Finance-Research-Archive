@@ -1,52 +1,55 @@
 {
   "id": "seed_crawl_newyorkfed_staff_reports_ade6026a5110b997",
-  "created_at": "2026-03-31T09:14:48.267942+00:00",
+  "created_at": "2026-03-31T19:26:16.381749+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "research_paper",
+  "event_type": "unknown",
   "title": "Staff Reports",
   "source": {
-    "name": "Federal Reserve Bank of New York",
+    "name": "New York Fed Research",
     "url": "https://www.newyorkfed.org/research/staff_reports",
+    "domain": "www.newyorkfed.org",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.newyorkfed.org"
+    "source_type": "listing_page"
   },
-  "summary": "This is a listing/navigation page for the New York Fed's Staff Reports series, an archive of technical working papers spanning 1995-2017. The page provides an index of papers organized by year with titles and authors, but does not contain the full text or substantive content of any individual paper. Some indexed papers relate tangentially to market structure topics (e.g., Treasury market liquidity indices, monetary policy implementation frameworks), but the source itself offers no actionable analysis.",
+  "summary": "This is a New York Fed research listing page indexing Staff Reports and Research Papers from 1995-2017, not a single archiveable document. The page provides browse access to technical working papers on topics including Treasury market liquidity, network contagion, monetary policy, and household debt. No specific paper is presented in detail.",
   "key_points": [
-    "Source is a listing page for New York Fed Staff Reports series, not an individual research document",
-    "Papers listed span from 1995 to 2017, indicating historical archive content",
-    "Most recent items visible are from November 2017",
-    "Example market-structure-adjacent papers: 'An Index of Treasury Market Liquidity: 1991-2017' (SR827), 'The Treasury Market Practices Group: Creation and Early Initiatives' (SR823)",
-    "Page includes year-browse navigation and advanced search tools rather than substantive research content",
-    "No publication date provided for the page itself; individual paper dates range up to 2017"
+    "Source is a listing/navigation page (listing_page), not an individual research document, and thus non-archiveable as a single record.",
+    "Papers listed span from 1995 to 2017, with the most recent batch being 2017 Staff Reports.",
+    "Some indexed papers touch on market structure topics: Treasury market liquidity index (SR 827), empirical network contagion (SR 826), Treasury Market Practices Group history (SR 823), and money market fund industry (SR 817).",
+    "No single publication date, author detail, or specific finding is presented in the page content.",
+    "The actual research papers would need to be accessed individually to be properly archived."
   ],
-  "why_it_matters": "This source cannot serve as an archiveable research document because it is a navigation index. Researchers seeking market structure or macro catalysts content would need to access individual Staff Reports directly, not this listing page. The archive contains relevant papers but this page does not deliver them.",
+  "why_it_matters": "This source provides no specific market structure or macro catalyst information. It is merely an index to historical research papers. Individual Staff Reports with market-structure-relevant content (e.g., SR 827 Treasury liquidity index, SR 826 network contagion, SR 817 money market fund regulation) must be accessed and archived separately.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "",
+  "market_structure_context": "The page references potentially market-structure-relevant papers but these are just titles in an index, not actual research findings. Individual papers should be retrieved directly from the New York Fed Staff Reports archive for proper archival.",
   "important_numbers": [],
   "tags": [
     "new-york-fed",
     "staff-reports",
-    "research-papers",
     "working-papers",
     "listing-page",
-    "archive-index"
+    "historical-records",
+    "treasury-market",
+    "market-liquidity",
+    "network-contagion"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 9,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/navigation page (source_type: listing_page), which per CORE RULE 5 requires rejection",
-      "Page contains no substantive research content - only an index of paper titles and authors",
-      "Published_at is blank and individual papers date to 2017 or earlier, making content stale relative to TODAY (2026-03-31)",
-      "Source cannot provide actionable market structure or macro catalyst insights as it is merely an archive index"
+      "Source is a listing_page per source_type, violating CORE RULE #5 which requires rejection of listing pages",
+      "Source is a browse/index interface for Staff Reports (1995-2017), not a single archiveable document",
+      "No single publication date exists; content spans multiple years",
+      "No specific research findings, data, or analysis presented - only paper titles and author names",
+      "event_type set to 'unknown' is correct since listing pages cannot be assigned a meaningful event type",
+      "No archival value as a standalone record since individual papers must be accessed separately"
     ]
   },
   "human_review": {
@@ -55,5 +58,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_staff_reports_ade6026a5110b997.txt",
-  "notes": "Source is a high-trust domain (newyorkfed.org) but the content is a navigation index. The page provides year-based browsing for Staff Reports series papers. Individual papers are not accessible from this listing—users must navigate to specific paper URLs. Published_at is blank because the page itself has no discrete publication date; individual reports are dated 1995-2017. This source is not suitable for direct archiving but could serve as a reference for identifying specific research papers for separate crawling."
+  "notes": "Non-archiveable listing page. Source provides browse interface for historical New York Fed working papers (1995-2017), not a specific document. No single event_type applicable. Individual papers with market structure relevance (Treasury liquidity, network contagion, money market funds) exist within this archive but must be retrieved separately. Today's date (2026-03-31) confirms this content is stale historical research."
 }

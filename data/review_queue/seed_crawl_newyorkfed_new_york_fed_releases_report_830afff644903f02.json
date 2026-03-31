@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_new_york_fed_releases_report_830afff644903f02",
-  "created_at": "2026-03-31T14:06:40.866481+00:00",
+  "created_at": "2026-03-31T19:10:35.689910+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -8,63 +8,64 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/newsevents/news/research/2018/an181207",
-    "domain": "www.newyorkfed.org",
     "published_at": "2018-12-07",
-    "source_type": "blog_post"
+    "source_type": "blog_post",
+    "domain": "www.newyorkfed.org"
   },
-  "summary": "The Federal Reserve Bank of New York released a special issue of its Economic Policy Review containing nine research papers examining the government's role in U.S. mortgage markets, developed from presentations given at a 2017 workshop. The papers cover four broad topics: government guarantees (implicit/explicit for GSEs), secondary market institutions (comparing U.S. and Danish mortgage systems), sourcing of private capital through credit risk transfer (CRT), and affordable housing program evaluation.",
+  "summary": "The Federal Reserve Bank of New York released a special issue of its Economic Policy Review on December 7, 2018, comprising nine research papers examining the government's role in U.S. mortgage markets. The papers, developed from a workshop held in April 2017, cover topics including GSE guarantees, secondary market structures, credit risk transfer, and affordable housing. Opinions expressed are those of the individual authors and do not necessarily reflect official institutional views.",
   "key_points": [
-    "The volume assesses implicit and explicit government guarantees for GSEs and recommends limiting systemic risk through mortgage design allowing homeowners to better weather downturns",
-    "Papers examine the connection between government mortgage programs (FHA/VA and GSE lending) and economic outcomes during and after the financial crisis",
-    "Researchers introduced a method for estimating government exposure to credit risk through loan and guarantee programs, arguing overall capital reserves can be reduced",
-    "The Danish mortgage finance system is compared with the U.S. system, highlighting features that mitigate refinancing frictions during falling home prices",
-    "Credit risk transfer (CRT) programs are evaluated showing how they reduced GSEs' exposure to mortgage credit risk without disrupting secondary market liquidity or stability",
-    "Nine papers authored by Fed staff and academics are included, covering topics from GSE guarantees to FHA first-time homebuyer outcomes"
+    "The volume assesses implicit and explicit government guarantees for GSEs and recommends limiting systemic risk through mortgage design features that help homeowners weather downturns",
+    "Papers examine the connection between government mortgage programs (FHA/VA and GSE lending) and economic outcomes during and after the 2007-09 financial crisis",
+    "A method for estimating and valuing government exposure to credit risk through loan and guarantee programs is introduced, arguing that required capital reserves could be reduced",
+    "The Danish mortgage finance system is compared to the U.S. system, highlighting features that mitigate refinancing frictions during periods of falling home prices",
+    "Credit risk transfer (CRT) programs are summarized, showing how they reduced GSEs' exposure to mortgage credit risk without disrupting secondary market liquidity or stability",
+    "Papers draw lessons from MBS pricing failures during the 2007-09 crisis for future use of credit risk transfers",
+    "Metrics are proposed for evaluating whether the FHA fosters sustainable homeownership using New York Fed Consumer Credit Panel data",
+    "The nine papers include contributions from researchers including W. Scott Frame, Joseph Tracy, Wayne Passmore, Brent W. Ambrose, and others"
   ],
-  "why_it_matters": "This research provides foundational analysis of mortgage market structure, particularly the role of government guarantees in housing finance and the evolution of credit risk transfer mechanisms. It examines systemic risk implications of GSE arrangements, compares alternative approaches like the Danish mortgage model, and evaluates how CRT programs have modified traditional GSE risk profiles. Historical context for understanding the evolution of secondary mortgage market structure.",
+  "why_it_matters": "This research volume provides foundational analysis of mortgage market structure, particularly regarding the government's role through GSEs (Fannie Mae, Freddie Mac) and FHA programs. The findings on credit risk transfer mechanisms and government guarantee exposure offer historical context for understanding potential reforms to the U.S. mortgage finance system. The comparison with the Danish system provides international perspective on secondary market design. Note: This source is from 2018 and represents pre-pandemic analysis; market conditions and policy frameworks may have evolved significantly.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "mortgage-backed securities"
+      "equities"
     ],
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "The research addresses housing affordability and sustainable homeownership evaluation, with papers examining FHA outcomes and recommendations for federal policymakers on housing policy trade-offs. This is historical research published December 2018, based on a 2017 workshop. While providing useful archival context on pre-pandemic mortgage market thinking, it does not reflect current policy or market conditions.",
-  "market_structure_context": "The volume examines secondary mortgage market structure through four lenses: (1) government guarantees and their systemic risk implications for GSEs, (2) institutional structure comparing U.S. and Danish mortgage finance systems including refinancing mechanisms, (3) credit risk transfer mechanisms and their effect on GSE risk profiles and market stability, and (4) lessons from MBS pricing failures during the 2007-09 crisis applied to future risk pricing. Documents how CRT programs have modified the traditional GSE risk profile.",
-  "important_numbers": [
-    "9 research papers",
-    "4 broad topics",
-    "April 2017 workshop date",
-    "December 7, 2018 publication date"
-  ],
+  "macro_context": "",
+  "market_structure_context": "The source discusses mortgage market structure extensively, covering: (1) secondary market institutions including GSEs, (2) credit risk transfer mechanisms as alternatives to direct government guarantees, (3) the structure of government guarantees, and (4) international comparison of mortgage finance systems. The research examines how private capital can be sourced through CRT while maintaining market stability. This is a summary of research themes rather than original quantitative findings.",
+  "important_numbers": [],
   "tags": [
-    "federal-reserve",
-    "ny-fed",
+    "new-york-fed",
     "mortgage-markets",
     "gse",
-    "housing-finance",
+    "government-guarantees",
     "credit-risk-transfer",
     "secondary-market",
-    "research-publication"
+    "affordable-housing",
+    "economic-policy-review",
+    "research-volume",
+    "fha",
+    "housing-finance"
   ],
   "llm_review": {
-    "initial_confidence": 7,
-    "verification_confidence": 6,
+    "initial_confidence": 6,
+    "verification_confidence": 5,
     "verdict": "review",
     "issues_found": [
-      "event_type is 'research_paper' but the source is a press release announcing the research, not the research papers themselves - source_type correctly identifies it as 'blog_post' but event_type does not align",
-      "The source is a press release summary of the research rather than the actual research papers - while it contains substantial detail about the papers' topics, the event type should more accurately reflect the announcement nature of the source",
-      "Published 2018-12-07, over 7 years before TODAY (2026-03-31) - exceeds 90-day threshold but has archival value as foundational research on mortgage market structure"
+      "event_type 'research_paper' is incorrect — the source is a press release that summarizes a research volume, not a research paper itself. Correct type should be 'economic_commentary' or similar.",
+      "source_type listed as 'blog_post' is inaccurate — this is a formal press release/news release from the New York Fed.",
+      "Individual paper titles listed in source are not reproduced in the record; only topics/themes are summarized, which is acceptable given the source format but means the record lacks specificity.",
+      "Source is a high-level summary press release without quantitative findings or specific numerical data, limiting direct utility for market analysis."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The event_type mismatch between 'research_paper' and the actual source type (press release/announcement) needs clarification. Additionally, the 7+ year age raises questions about current relevance, though the archival value for mortgage market structure research is legitimate. Human judgment needed to determine if the press release content is substantive enough to archive or if the record should reference the actual Economic Policy Review papers instead."
+    "notes": "The record has classification errors (event_type and source_type both incorrect) that require correction. While the summary content is factually accurate to the source, the type misidentification is a concrete problem. Human should verify whether this historical (2018) press release has sufficient archival value given its age and format as a summary rather than original research."
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_releases_report_830afff644903f02.txt",
-  "notes": "Source is a press release announcing a special issue of the New York Fed's Economic Policy Review on government mortgage market roles. The underlying nine papers present research findings but this specific URL only summarizes their topics. Published December 7, 2018 - historical content over 7 years old. While directly relevant to market structure (mortgage markets, GSEs, credit risk transfer), the age significantly reduces utility for real-time market analysis. May have archival value for understanding pre-crisis regulatory thinking but should be flagged as historical.",
+  "notes": "Historical research summary. The New York Fed released this Economic Policy Review volume summarizing nine papers on government role in mortgage markets. Relevant to market structure analysis for mortgage finance but dated (2018). Individual paper details are not included in this press release — only topic summaries are provided. No specific numerical data or quantitative findings are cited. SOURCE METADATA correctly identifies this as market structure topic.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "3cf809efd6f1dd908b02ee2e1c341b60acf71320"
+  "telegram_review_fingerprint": "b05643d0b593521ffcc492aba4bc772e77186a10"
 }

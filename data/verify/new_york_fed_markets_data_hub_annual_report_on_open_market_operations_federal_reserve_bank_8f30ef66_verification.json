@@ -1,14 +1,17 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "PUBLISHED_AT is empty - cannot verify recency from metadata alone, though content clearly describes 2024 data in an annual report format",
+    "Source attribution name 'New York Fed Markets Data Hub' is somewhat generic; the actual source is the 'Annual Report on Open Market Operations' from the NY Fed"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Content is factually accurate and directly supported by source. The empty PUBLISHED_AT is a metadata concern but does not affect the factual integrity of the record. As an annual report documenting 2024 operations, this has clear archival value for historical policy tracking regardless of exact publication date.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
-    "macro_context": "",
+    "macro_context": "The 2024 balance sheet runoff represents a continuation of quantitative tightening post-pandemic. The June 2024 slowdown in Treasury runoff cap signaled the FOMC's intent to extend the QT timeline, reducing market supply pressure gradually rather than maintaining maximum removal pace.",
     "market_structure_context": ""
   }
 }

@@ -1,27 +1,27 @@
 {
   "id": "seed_crawl_federalreserve_2023_press_releases_26dc42c30af7212e",
-  "created_at": "2026-03-31T13:40:06.136147+00:00",
+  "created_at": "2026-03-31T18:38:36.762697+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2023 Press Releases",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2023-press.htm",
-    "domain": "www.federalreserve.gov",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This is an index/listing page aggregating all Federal Reserve press releases from calendar year 2023. It is not a single document but rather a chronological enumeration of dozens of distinct announcements including FOMC minutes, enforcement actions, regulatory proposals, banking applications, and other administrative matters. The page is not directly relevant for targeted macro catalyst or market structure analysis as it lacks the depth and specificity of individual documents.",
+  "summary": "This is a chronological index/listing page of all Federal Reserve Board press releases issued during calendar year 2023. The page aggregates dozens of diverse announcements including FOMC minutes, enforcement actions, banking applications, regulatory proposals, and institutional announcements. As a listing page rather than a single document, it is non-archiveable as a standalone research record.",
   "key_points": [
-    "This is a listing page, not an archiveable source document",
-    "Contains mixed content types: FOMC minutes (monetary_policy), enforcement actions, regulatory proposals, banking applications, and institutional announcements",
-    "FOMC minutes releases appearing here include: October 31-November 1, 2023 (released 11/21), September 19-20, 2023 (released 10/11), and July 25-26, 2023 (released 8/16)",
-    "Several regulatory actions cited relate to market structure: proposed rule on large bank long-term debt (8/29/2023), guidance on resolution planning (8/29/2023), debit interchange fee proposal (10/25/2023)",
-    "Source is stale: all content from 2023, approximately 2+ years old relative to TODAY",
-    "Individual press releases should be extracted and archived separately for meaningful analysis"
+    "Source is a listing page containing multiple event types: FOMC minutes releases (October, August, November), enforcement actions, regulatory proposals, banking applications, and institutional announcements",
+    "FOMC minutes releases noted include October 31-November 1, 2023 (released November 21), September 19-20, 2023 (released October 11), and July 25-26, 2023 (released August 16)",
+    "Notable enforcement actions include fines against Metropolitan Commercial Bank (~$14.5 million) and Regions Bank (~$2.95 million)",
+    "Regulatory activity includes proposed rules on large bank capital requirements, long-term debt requirements, interchange fee caps, and Community Reinvestment Act modernization",
+    "No explicit interest rate decisions are visible in the truncated listing",
+    "Page covers entire 2023 calendar year—historical record as of TODAY (2026-03-31)"
   ],
-  "why_it_matters": "This listing page serves only as a finding aid to locate individual Fed press releases. It has no standalone analytical value for macro catalyst or market structure research. Researchers should access the specific FOMC minutes, rate decisions, or regulatory documents directly rather than this index.",
+  "why_it_matters": "This listing page serves as a directory to 2023 Fed communications but is not itself an archiveable research document. Individual press releases should be retrieved and archived separately for meaningful RAG use.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,25 +31,18 @@
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
+    "fed",
     "federal-reserve",
+    "press-releases",
     "listing-page",
-    "not-archiveable",
-    "2023",
-    "stale"
+    "non-archivable",
+    "2023"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "PAGE_TYPE is listing_page — per CORE RULES Rule 5, listing pages must be rejected",
-      "Source is a container/index page with no standalone analytical content",
-      "event_type set to 'unknown' — no valid event_type applies to a listing page",
-      "published_at is empty — listing page covers entire 2023 calendar year but has no specific publication date",
-      "Source is stale — all content is from 2023, approximately 2+ years before TODAY (2026-03-31)",
-      "Cannot extract meaningful market structure or macro catalyst signals from an index page",
-      "No verifiable claims to check — source aggregates dozens of unrelated announcements"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -57,5 +50,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2023_press_releases_26dc42c30af7212e.txt",
-  "notes": "Source is non-archiveable listing page. Each individual press release referenced herein (FOMC minutes, regulatory proposals, enforcement actions) would constitute a separate archiveable document. Recommend crawling individual release URLs rather than this index page for meaningful research archive content."
+  "notes": "CLASSIFICATION: Non-archivable. This is a listing/index page containing multiple event types from calendar year 2023. Per CORE RULES rule 6, listing pages are treated as non-archiveable. The FOMC minutes releases and other individual announcements referenced here should be accessed directly as separate documents for proper archival. Source predates TODAY by over 2 years, lowering relevance for near-term macro catalysts analysis."
 }

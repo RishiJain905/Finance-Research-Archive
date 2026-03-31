@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "SOURCE BODY TRUNCATED - The critical rate decision (maintained/raised/lowered), target rate range, and vote tally are not visible in the provided source text",
+    "Forward guidance language is cut off mid-sentence at 'over the lo'",
+    "The most critical piece of information for an FOMC statement (the actual rate decision) cannot be extracted from the truncated source",
+    "Without the complete statement text, the record lacks the key policy outcome and has limited archival value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source body is truncated and the most critical element of any FOMC statement—the actual rate decision—is not visible. While the visible portion is accurately captured, an FOMC statement record without the rate decision has significantly diminished archival value. Human judgment needed to determine if the complete statement should be retrieved or if the partial record is acceptable given the visible economic assessment content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve issued its January 28, 2026 FOMC statement, noting solid economic expansion, low job gains, stabilized unemployment, and somewhat elevated inflation. The statement was released at 2:00 p.m. EST. CRITICAL NOTE: The source text is truncated and the actual rate decision (maintained/raised/lowered), target rate range, vote tally, and complete forward guidance language are not visible in the provided text.",
+    "why_it_matters": "FOMC statements are the primary communication vehicle for Federal Reserve policy decisions. This statement from January 2026 provides the Fed's current assessment of the economy and its policy intentions. However, the truncated text prevents extraction of the critical rate decision and complete forward guidance, which limits the archival value of this record.",
+    "macro_context": "The Fed's assessment shows a stabilizing labor market (low job gains, stabilized unemployment) alongside persistent inflation concerns (somewhat elevated). This balance between employment and inflation objectives shapes the policy outlook. NOTE: Full policy decision cannot be verified from truncated source.",
+    "market_structure_context": ""
+  }
+}

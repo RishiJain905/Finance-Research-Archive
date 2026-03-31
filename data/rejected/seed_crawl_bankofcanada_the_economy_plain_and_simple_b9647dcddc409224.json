@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_the_economy_plain_and_simple_b9647dcddc409224",
-  "created_at": "2026-03-31T14:25:26.300397+00:00",
+  "created_at": "2026-03-31T17:53:30.318350+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,23 +8,23 @@
   "source": {
     "name": "Bank of Canada",
     "url": "https://www.bankofcanada.ca/publications/the-economy-plain-and-simple",
-    "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.bankofcanada.ca"
+    "domain": "www.bankofcanada.ca",
+    "published_at": "2025-09-12",
+    "source_type": "listing_page"
   },
-  "summary": "This is a Bank of Canada educational hub page containing links to multiple short explainer articles on various economic topics spanning from December 2023 to September 2025. It is not a single archiveable document or macro catalyst event. Topics covered include payments innovation, business investment uncertainty, Canadian inflation, Indigenous economies, productivity, grocery prices, labour force participation, gasoline prices, and interest rate transmission.",
+  "summary": "This is a Bank of Canada landing page that aggregates educational articles on economics, not a specific research report or data release. It links to short explainers on topics including payment evolution, economic uncertainty, inflation, productivity, labour participation, and interest rate transmission. The page contains no original macro analysis, policy decisions, or market-moving data.",
   "key_points": [
-    "This is a listing page (listing_page source_type), not a standalone archiveable document",
-    "Contains multiple separate articles from various dates: December 2023 through September 2025",
-    "Topics include: payment technologies, economic uncertainty and investment, Canadian inflation, productivity and prices, grocery/gas pricing, labour participation, and monetary policy transmission",
-    "Most recent article listed is dated September 12, 2025 on payment innovations",
-    "No specific macro catalyst event or market structure data is contained in this page",
-    "The page functions as a navigation hub for Bank of Canada educational content"
+    "This is a navigation/listing page, not an archiveable research document",
+    "The page links to educational content rather than containing substantive macro analysis",
+    "Listed articles cover general economic topics: inflation, interest rates, productivity, labour markets, grocery prices, gasoline prices",
+    "The most recent article linked is from September 12, 2025 ('The evolution of how we pay for things')",
+    "No specific macro catalysts, policy decisions, or market-moving information is present",
+    "Content is designed for public economic education, not professional research"
   ],
-  "why_it_matters": "This source is not directly relevant to macro catalysts or market structure for archival purposes. It is an educational portal with general interest content rather than a policy decision, data release, or research paper containing specific market-moving information.",
+  "why_it_matters": "This page has no direct relevance for finance research or RAG applications. It is a navigation hub for consumer-facing educational content from the Bank of Canada. It does not contain policy statements, data releases, or analytical commentary that would support macro catalyst research.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "neutral",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -32,30 +32,22 @@
   "important_numbers": [],
   "tags": [
     "bank-of-canada",
-    "educational",
-    "explainer",
+    "educational-content",
     "inflation",
     "interest-rates",
-    "labour-market",
-    "canadian-economy"
+    "labour-markets"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 10,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page (verified via source metadata: DISCOVERY_METHOD: crawl) - listing pages are non-archiveable per rule 5",
-      "No single event_type can be assigned to a collection of heterogeneous educational articles",
-      "Published_at field is blank despite individual article dates spanning December 2023 to September 2025",
-      "No macro catalyst or market structure content present - this is a navigation hub for educational content",
-      "Does not meet archival value criteria for finance research"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
-    "decision": "reject",
+    "decision": "",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_the_economy_plain_and_simple_b9647dcddc409224.txt",
-  "notes": "Source is non-archiveable listing page. Contains links to 9 separate articles on various economic topics but is not itself a macro catalyst or market structure document. Topics span 2023-2025 but no specific policy event, data release, or market-moving content is present."
+  "notes": "NON-ARCHIVEABLE: This source is a listing page for the Bank of Canada's educational content series. It does not contain specific macro catalyst information, policy decisions, or market-moving data. The linked articles touch on macro topics (inflation, interest rates) but the page itself is merely a collection index. Recommend reviewing individual linked articles separately if substantive content is needed. The source_type (listing_page) indicates this should not be treated as an archiveable research document per CORE RULE 6."
 }

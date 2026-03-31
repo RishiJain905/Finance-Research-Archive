@@ -1,20 +1,18 @@
 {
-  "verification_confidence": 4,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "URL field is blank in both source metadata and record, limiting traceability - cannot verify source provenance",
-    "Source page type is ambiguous - appears to be a program overview/documentation page that could function as a navigation hub with links to multiple sub-resources (Operations, SOMA Holdings, Transaction Data, FAQs)",
-    "No publication date provided in source body text",
-    "Record correctly notes URL is blank in notes, but this should be a disqualifying factor for acceptance",
-    "Content is factually accurate to source text but source is an institutional landing page rather than substantive article content"
+    "Source URL is missing from metadata, limiting verifiability",
+    "Published date is unknown; source appears to be a static institutional page without a publication date",
+    "Program described is historical (ended November 2021), approximately 4.5 years before TODAY; lacks clear archival framing beyond being a program description"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source URL is missing which limits traceability; page structure suggests it may be a program hub/navigation page rather than standalone content - human should verify whether this page provides sufficient standalone archival value or if it primarily links to sub-pages. Content accuracy is good but source attribution gap is significant.",
+  "human_review_reason": "The factual content is accurate and the source is from a high-trust domain (NY Fed), but the missing URL is a significant verifiability concern. While the content correctly describes the agency CMBS purchase program and its timeline, the lack of source attribution and publication date makes it difficult to assess the source's current relevance and verify the record against the original. Human review needed to determine whether the missing URL is a blocking issue or whether the domain (newyorkfed.org) and content specificity are sufficient for archival acceptance.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The summary is factually accurate and well-supported by source text. No corrections needed.",
-    "why_it_matters": "Reasoning is appropriate - connects Federal Reserve operations to market structure context and emergency liquidity frameworks. Supported by source content.",
-    "macro_context": "Field correctly left empty - source provides operational specifics but no explicit macro-economic narrative.",
-    "market_structure_context": "Accurately describes Federal Reserve temporary purchase program and SOMA operational context. No corrections needed."
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

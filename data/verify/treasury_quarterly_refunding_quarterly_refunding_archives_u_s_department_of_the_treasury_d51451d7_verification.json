@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/archive index page (PAGE_TYPE: listing_page), which per CORE RULE 5 requires rejection",
+    "No substantive research content present in source body—only Treasury navigation menus, link lists, and press release summaries",
+    "event_type is 'unknown' and no valid taxonomy value is present",
+    "Cannot assess relevance to market structure or macro catalysts from this listing page",
+    "Source should be non-archiveable per rules; actual quarterly refunding content exists in linked documents, not this index"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear reject per CORE RULE 5—no judgment call needed. Listing pages are automatically non-archivable regardless of content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a Treasury website listing/archive index page for Quarterly Refunding documents. It contains only navigation menus, link lists, and press release summaries—no substantive research, data, or policy analysis. It is a container page that points to actual content rather than containing meaningful content itself.",
+    "why_it_matters": "As a listing page, this has no archival value for research purposes. Individual archived quarterly refunding documents (auction results, policy announcements, investor presentations) should be sourced directly instead of this index.",
+    "macro_context": "N/A - listing page has no macro context",
+    "market_structure_context": "N/A - listing page has no market structure content"
+  }
+}

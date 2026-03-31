@@ -1,0 +1,70 @@
+{
+  "id": "seed_crawl_treasury_remarks_a_reset_on_liquidity_291b69f194465112",
+  "created_at": "2026-03-31T19:45:59.331245+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "speech_neutral",
+  "title": "Remarks: A Reset on Liquidity Regulation",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "",
+    "published_at": "2026-03-03",
+    "source_type": "seed_crawl",
+    "domain": ""
+  },
+  "summary": "Under Secretary McKernan delivered remarks outlining Treasury's case for revising post-2008 bank liquidity regulation, arguing the current framework excessively constrains lending capacity by requiring large banks to allocate 25% of balance sheets to safe assets (up from 10% pre-crisis). The speech cites the March 2023 stress events (SVB, Signature, First Republic) as evidence that existing buffers are poorly designed, with banks unwilling to use buffers during stress and discount window stigma entrenched by regulatory treatment of buffers as 'untouchable.' Treasury argues the original framework incorrectly deputized large banks as liquidity insurers rather than relying on the central bank as the natural insurer against severe liquidity stress. The speech calls for near-term reforms to restore the lender of last resort to its intended role, though the concluding paragraphs with specific reform proposals are truncated in this source.",
+  "key_points": [
+    "Current liquidity regulation requires large banks to allocate approximately 25% of balance sheets to safe assets, up from roughly 10% before the 2008 crisis, constraining lending capacity.",
+    "The March 2023 stress events (SVB, Signature, First Republic) exposed flaws: substantial Treasury and agency MBS holdings existed only on paper due to inadequate collateral prepositioning and untested discount window access.",
+    "Buffers have become treated as untouchable hard minimums by both regulators and markets, contradicting the architects' intent that buffer useability was critical—instead exacerbating hoarding and accelerating liquidity stress transmission.",
+    "Discount window stigma is entrenched because banks only access it when \"really bad,\" making such access itself a signal of distress rather than routine operational readiness.",
+    "Treasury argues monetizing liquid assets through sales or repo merely redistributes reserves; only the central bank can create new reserves to counteract flight-to-safety dynamics system-wide.",
+    "Near-term reforms will focus on reducing discount window stigma, incentivizing collateral prepositioning, and normalizing routine testing of central bank facilities."
+  ],
+  "why_it_matters": "This speech signals a significant shift in regulatory philosophy toward bank liquidity, with direct implications for bank balance sheet management and systemic risk framework. If implemented, reforms could free substantial lending capacity currently locked in safe assets, but carry resolution risk if lender-of-last-resort normalization reduces market discipline. Treasury frames current liquidity rules as 'quietly stifling' economic transformation needed to finance AI infrastructure, domestic supply chains, and defense industrial base. The March 2023 lessons and SVB's 'Thursday turmoil' precedent underscore real-world stakes of getting this framework wrong.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 2
+  },
+  "macro_context": "The speech explicitly links regulatory reform to financing goals: 'hundreds of billions—potentially trillions—in new lending capacity' needed for AI infrastructure, domestic supply chains, and defense industrial base. Treasury frames current liquidity rules as 'quietly stifling' economic transformation under 'guise of prudence.' This suggests regulatory changes are part of broader growth agenda under the current administration, though specific legislative mechanisms or timelines are not detailed in the available text.",
+  "market_structure_context": "The speech diagnoses specific structural failures in the post-2008 liquidity framework: (1) buffer useability problem where regulators and markets treat buffers as hard minimums rather than shock absorbers; (2) discount window stigma created by regulatory incentives that only encourage window use during severe distress; (3) collateral prepositioning gaps exposed by March 2023 stress; (4) the conceptual error of 'deputizing large banks as liquidity insurers' for the system rather than relying on central bank as natural insurer for severe stress. Treasury proposes restoring lender of last resort to its 'intended role' as the key structural fix. The speech argues only the central bank can create new reserves to counteract flight-to-safety dynamics system-wide.",
+  "important_numbers": [
+    "25% of large banks' balance sheets allocated to safe assets (current)",
+    "~10% of balance sheets allocated to safe assets (pre-2008)",
+    "March 2023 stress events cited as triggering event for framework reassessment"
+  ],
+  "tags": [
+    "treasury",
+    "liquidity-regulation",
+    "bank-regulation",
+    "discount-window",
+    "lender-of-last-resort",
+    "buffer-requirements",
+    "svb",
+    "regulatory-reset",
+    "financial-stability",
+    "banking-sector"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty in both metadata and record - missing source attribution violates verification standards",
+      "Domain field is empty in the record - cannot verify domain trust tier",
+      "Source text is truncated mid-sentence ('the liquid') - final paragraph with concrete reform proposals not captured",
+      "market_impact confidence rated 2 (very low) but no explanation for directional_bias 'mixed' claim when source is regulatory commentary with no price targets or forecasts"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_remarks_a_reset_on_liquidity_291b69f194465112.txt",
+  "notes": "Speech by Under Secretary Jonathan McKernan (Domestic Finance) at a Treasury roundtable on bank liquidity and lender of last resort. Source is directly relevant to market structure through its diagnosis of post-2008 liquidity regulation failures and proposed reforms. Not a macro catalyst in the traditional sense (no rate decision, economic data, or speech signaling imminent policy change)—rather a regulatory philosophy statement with uncertain implementation timeline. Medium confidence due to truncation. Speech correctly attributed to Treasury under Trump's leadership per SOURCE METADATA context."
+}

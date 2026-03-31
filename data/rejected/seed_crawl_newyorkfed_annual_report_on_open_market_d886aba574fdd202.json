@@ -1,0 +1,73 @@
+{
+  "id": "seed_crawl_newyorkfed_annual_report_on_open_market_d886aba574fdd202",
+  "created_at": "2026-03-31T18:56:03.633579+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Annual Report on Open Market Operations",
+  "source": {
+    "name": "New York Federal Reserve",
+    "url": "",
+    "domain": "newyorkfed.org",
+    "published_at": "unknown",
+    "source_type": "seed_crawl"
+  },
+  "summary": "SOMA holdings of Treasuries and agency MBS decreased by nearly $700 billion during 2024, driven by balance sheet runoff guided by monthly caps set by the FOMC. The FOMC directed a slowing of balance sheet runoff in June by decreasing the Treasury securities redemption cap from $60 billion to $25 billion, while keeping the agency MBS cap unchanged at $35 billion.",
+  "key_points": [
+    "SOMA holdings of Treasuries and agency MBS decreased by nearly $700 billion during 2024",
+    "Treasury securities holdings declined from $4.79 trillion to $4.29 trillion, representing approximately 70 percent of total SOMA runoff",
+    "Agency MBS holdings decreased from $2.42 trillion to $2.23 trillion, representing approximately 30 percent of total SOMA runoff",
+    "In June 2024, the FOMC decreased the monthly Treasury cap from $60 billion to $25 billion to slow balance sheet runoff",
+    "Agency MBS monthly cap remained at $35 billion; principal payments stayed well below this cap, resulting in no reinvestments",
+    "SOMA securities make up approximately 95 percent of total Federal Reserve assets"
+  ],
+  "why_it_matters": "This report documents the Federal Reserve's quantitative tightening operations and balance sheet reduction during 2024. The data provides transparency into the pace and composition of Fed runoff, which directly affects Treasury and MBS market supply dynamics. The June 2024 decision to slow Treasury runoff from $60B to $25B per month marked a significant shift in the pace of balance sheet normalization.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "",
+  "market_structure_context": "The source details Fed balance sheet mechanics including monthly runoff caps for Treasuries and MBS, the composition of SOMA holdings (95% of Fed assets), and the FOMC's control over the pace of quantitative tightening. This is foundational market plumbing data for understanding reserve supply and Treasury market supply dynamics.",
+  "important_numbers": [
+    "$700 billion (total SOMA runoff 2024)",
+    "$60 billion to $25 billion (monthly Treasury cap reduction in June 2024)",
+    "$35 billion (agency MBS monthly cap)",
+    "$4.79 trillion to $4.29 trillion (Treasury holdings decline)",
+    "$2.42 trillion to $2.23 trillion (MBS holdings decline)",
+    "70 percent (Treasury share of SOMA runoff)",
+    "30 percent (MBS share of SOMA runoff)",
+    "95 percent (SOMA as share of Fed assets)"
+  ],
+  "tags": [
+    "balance-sheet",
+    "qt",
+    "soma",
+    "open-market-operations",
+    "fed",
+    "treasury-runoff",
+    "mbs",
+    "quantitative-tightening",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "URL is blank, preventing independent source verification",
+      "Published_at is 'unknown' - cannot assess recency; if this is 2025 report covering 2024 data, age is acceptable; if much older, may lack relevance",
+      "Source type 'seed_crawl' suggests raw crawled content without full metadata extraction"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_annual_report_on_open_market_d886aba574fdd202.txt",
+  "notes": "Source discusses Federal Reserve open market operations and balance sheet runoff during 2024. Relevant to market structure as it details QT mechanics and the Fed's control over reserve supply. Publication date not provided in source body or metadata, making it impossible to assess recency relative to TODAY (2026-03-31). Lowered confidence slightly due to missing temporal data and seed_crawl source type suggesting raw/unverified content."
+}

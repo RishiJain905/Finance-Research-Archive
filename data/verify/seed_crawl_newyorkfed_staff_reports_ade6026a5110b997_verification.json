@@ -1,19 +1,21 @@
 {
-  "verification_confidence": 9,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/navigation page (source_type: listing_page), which per CORE RULE 5 requires rejection",
-    "Page contains no substantive research content - only an index of paper titles and authors",
-    "Published_at is blank and individual papers date to 2017 or earlier, making content stale relative to TODAY (2026-03-31)",
-    "Source cannot provide actionable market structure or macro catalyst insights as it is merely an archive index"
+    "Source is a listing_page per source_type, violating CORE RULE #5 which requires rejection of listing pages",
+    "Source is a browse/index interface for Staff Reports (1995-2017), not a single archiveable document",
+    "No single publication date exists; content spans multiple years",
+    "No specific research findings, data, or analysis presented - only paper titles and author names",
+    "event_type set to 'unknown' is correct since listing pages cannot be assigned a meaningful event type",
+    "No archival value as a standalone record since individual papers must be accessed separately"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record's assessment is accurate and complete. The human review notes correctly identify this as a listing page that should be rejected per CORE RULE 5. Auto-rejection is appropriate.",
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies the source as a listing page, but the suggested_status of 'review_queue' is inconsistent with the clear rejection criteria in CORE RULE #5. Listing pages must be rejected outright - they are not eligible for review or archiving as single records.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a listing/navigation page for the New York Fed's Staff Reports series, an archive of technical working papers spanning 1995-2017. The page provides an index of papers organized by year with titles and authors, but does not contain the full text or substantive content of any individual paper. Some indexed papers relate tangentially to market structure topics (e.g., Treasury market liquidity indices, monetary policy implementation frameworks), but the source itself offers no actionable analysis.",
-    "why_it_matters": "This source cannot serve as an archiveable research document because it is a navigation index. Researchers seeking market structure or macro catalysts content would need to access individual Staff Reports directly, not this listing page. The archive contains relevant papers but this page does not deliver them.",
+    "summary": "This is a New York Fed research listing page indexing Staff Reports and Research Papers from 1995-2017, not a single archiveable document. The page provides browse access to technical working papers on topics including Treasury market liquidity, network contagion, monetary policy, and household debt. No specific paper is presented in detail.",
+    "why_it_matters": "This source provides no specific market structure or macro catalyst information. It is merely an index to historical research papers. Individual Staff Reports with market-structure-relevant content (e.g., SR 827 Treasury liquidity index, SR 826 network contagion, SR 817 money market fund regulation) must be accessed and archived separately.",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The page references potentially market-structure-relevant papers but these are just titles in an index, not actual research findings. Individual papers should be retrieved directly from the New York Fed Staff Reports archive for proper archival."
   }
 }

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2019_press_releases_9fe0d364b05234a7",
-  "created_at": "2026-03-31T13:30:26.648780+00:00",
+  "created_at": "2026-03-31T18:32:40.079656+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -9,19 +9,20 @@
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2019-press.htm",
     "domain": "www.federalreserve.gov",
-    "published_at": "2019-12-31",
+    "published_at": "2019-01-01",
     "source_type": "listing_page"
   },
-  "summary": "This is a Federal Reserve website index page listing press releases from calendar year 2019, not a single document or article. The page contains links to dozens of distinct announcements spanning multiple categories including FOMC statements, regulatory actions, enforcement actions, banking applications, and research publications. The content is from 2019 and is therefore a historical record from over 6 years ago.",
+  "summary": "This is a Federal Reserve press release archive index page for calendar year 2019 containing approximately 100+ individual press release links spanning monetary policy (FOMC statements, minutes, projections), banking regulation, enforcement actions, and various administrative announcements. The page is a historical listing page, not a single archiveable document.",
   "key_points": [
-    "This is a listing/index page containing links to multiple press releases, not a single source document",
-    "Contains FOMC statement releases from 12/11/2019 and 10/30/2019 (but links not captured in full)",
-    "Contains FOMC minutes from 11/20/2019",
-    "Contains economic projections release from 12/11/2019",
-    "Contains discount rate meeting minutes from multiple dates",
-    "Contains numerous regulatory, enforcement, and administrative announcements"
+    "Source is a listing page (archive index), not a single coherent document",
+    "Contains FOMC statements from 10/30/2019 and 12/11/2019",
+    "Contains FOMC minutes from 10/29-30/2019 and 11/20/2019",
+    "Contains economic projections from December 2019 FOMC meeting",
+    "Contains monetary policy implementation statement from 10/11/2019",
+    "Historical source from 2019 (approximately 6+ years old relative to TODAY)",
+    "Mixed content types: monetary policy, regulatory proposals, enforcement actions, banking applications, payment studies"
   ],
-  "why_it_matters": "This listing page cannot serve as a reliable single source for research purposes. Individual press releases referenced here would need to be accessed separately. The page's value is navigational rather than substantive.",
+  "why_it_matters": "This listing page is not suitable for direct archival. Individual press releases should be extracted and archived separately. The index page provides the calendar of Fed communications for 2019 but itself contains no single actionable research note.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -33,14 +34,20 @@
   "tags": [
     "federal-reserve",
     "press-releases",
+    "archive-index",
     "listing-page",
-    "historical"
+    "historical-2019"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 10,
+    "verification_confidence": 0,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "PAGE_TYPE is listing_page; core rule 5 explicitly rejects listing pages",
+      "Source is an archive index containing ~100+ unrelated press releases, not a single coherent document",
+      "No single archiveable research note can be extracted from this listing page",
+      "Individual press releases (FOMC statements, minutes, projections) should be extracted and archived separately"
+    ]
   },
   "human_review": {
     "required": false,
@@ -48,5 +55,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2019_press_releases_9fe0d364b05234a7.txt",
-  "notes": "NON-ARCHIVABLE: This is a listing page containing an index of 2019 Federal Reserve press releases. Cannot be treated as a single source. Individual items (FOMC statements 12/11/2019, 10/30/2019; FOMC minutes 11/20/2019; economic projections 12/11/2019) would need to be retrieved as separate documents. The source metadata identifies the topic as macro catalysts, and while some items on this page relate to that topic, the page itself is not a coherent source. Historical record from 2019."
+  "notes": "Non-archivable listing page. The page aggregates ~100+ individual 2019 Fed press releases across multiple categories: monetary policy (FOMC statements, minutes, projections, implementation), banking regulation, enforcement actions, and administrative matters. Individual items of interest for macro catalysts or market structure should be retrieved and archived separately. Source confidence reduced due to listing page type and historical age (2019)."
 }

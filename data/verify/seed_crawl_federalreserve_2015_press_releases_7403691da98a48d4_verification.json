@@ -1,16 +1,16 @@
 {
-  "verification_confidence": 10,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "PAGE_TYPE is listing_page — non-archiveable per core rules (Rule 5)",
-    "Source is a container/aggregate page containing hundreds of separate press releases, not a single research document",
-    "Cannot assign meaningful event_type to a listing index (correctly set to 'unknown')",
-    "Cannot extract actionable market_impact or macro_context from a listing page",
-    "Source content is approximately 10+ years stale (2015 vintage), far exceeding the 90-day relevance threshold",
-    "Mixed content types (FOMC statements, banking applications, enforcement actions, regulatory proposals) lack coherence as a single research note"
+    "Source is a listing_page (index of 2015 press releases), explicitly excluded from archival per rule 5",
+    "Source contains no primary content - only links to individual press releases",
+    "Source published 2015-12-31, approximately 11 years before TODAY (2026-03-31), making it stale",
+    "event_type set to 'unknown' but should not be any event type since this is a container page, not an archiveable source",
+    "No extractable macro catalyst or market structure content",
+    "Individual FOMC statements, rate decisions, and other substantive Fed releases from 2015 should be archived separately as primary sources"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record is already correctly assessed. This is a clear-cut rejection case where the source is a listing page per explicit core rules, and the generated record has correctly identified this issue and recommended reject.",
+  "human_review_reason": "Record correctly identifies this as a non-archivable listing page with no primary content. The rejection criteria are unambiguous - listing pages must be rejected per Core Rule 5.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

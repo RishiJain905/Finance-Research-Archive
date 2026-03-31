@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_does_going_easy_on_distressed_5628b0343e5f275a",
-  "created_at": "2026-03-31T13:42:04.081992+00:00",
+  "created_at": "2026-03-31T18:59:55.312741+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -9,54 +9,57 @@
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/research/staff_reports/sr823.html",
     "domain": "www.newyorkfed.org",
-    "published_at": "2017-10",
-    "source_type": "research_paper"
+    "published_at": "2017-10-01",
+    "source_type": "seed_crawl"
   },
-  "summary": "This Federal Reserve Bank of New York staff report (SR 823) by Sean Hundtofte examines the real economic effects of regulatory forbearance during the U.S. savings and loan crisis, using historical variation in deposit insurance and geographic variation in principal supervisory agents as instruments. The evidence suggests that forbearance policies induced a real estate boom from 1982-89, followed by a larger bust in both real estate values and real GDP.",
+  "summary": "This Federal Reserve Bank of New York Staff Report (SR 823) examines the real economic effects of regulatory forbearance during the U.S. savings and loan crisis by comparing state-level economic outcomes based on the amount of forbearance received. The study, authored by Sean Hundtofte and revised in January 2018, finds evidence of a policy-induced real estate boom during the forbearance period (1982-89), followed by a larger bust in both real estate values and real GDP. The analysis uses historical variation in deposit insurance for thrifts and geographic variation in principal supervisory agent as instruments.",
   "key_points": [
-    "Study uses historical variation in thrift deposit insurance and geographic variation in principal supervisory agents (PSA) as instrumental variables",
-    "Findings indicate regulatory forbearance created a policy-induced real estate boom during 1982-89",
-    "The subsequent bust in real estate and real GDP was larger than the initial boom",
-    "The relationship is not explained by ex ante state size, industry exposure, or systematic cyclicality",
-    "Study focuses on the U.S. savings and loan crisis as the empirical context",
-    "Available only in PDF format"
+    "Study estimates real effects of regulatory forbearance during the U.S. savings and loan crisis by comparing states' economic outcomes by forbearance amount received",
+    "Instruments used: historical variation in deposit insurance of similar financial intermediaries (thrifts) and geographic variation in principal supervisory agent (PSA)",
+    "Evidence suggests a policy-induced real estate boom during forbearance (1982-89)",
+    "Forbearance was followed by a bigger bust in both real estate and real GDP",
+    "Relationship does not appear driven by ex ante state size, industry exposure, or systematic cyclicality",
+    "Full paper available only in PDF format; no additional methodology or findings provided in this source text"
   ],
-  "why_it_matters": "This historical research provides empirical evidence that regulatory forbearance during banking crises may produce larger economic losses in the bust phase. For current policymakers, this offers a data-driven perspective on the tradeoffs of allowing distressed banks to continue operating versus prompt corrective action.",
+  "why_it_matters": "This research provides historical evidence on the unintended consequences of regulatory forbearance during banking crises. For policymakers and regulators, the findings suggest that relaxing requirements and refraining from closing troubled banks may create temporary economic relief but lead to larger downturns. This has implications for evaluating current or future bank resolution policies and understanding systemic risk dynamics.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The study links regulatory forbearance to real GDP outcomes, finding that the post-boom bust phase produces larger economic contractions than the initial boom, suggesting forbearance policies have asymmetric macro costs.",
-  "market_structure_context": "The research examines bank regulatory structure and supervisory frameworks, specifically how differences in deposit insurance regimes and supervisory agent assignments affected the degree of forbearance across states during the savings and loan crisis.",
-  "important_numbers": [],
+  "macro_context": "This historical study (1982-89 forbearance period) examines how regulatory forbearance affected real estate markets and GDP. The findings indicate that permitting distressed banks to continue operations created a subsequent larger bust, suggesting forbearance may amplify rather than mitigate economic cycles. The research is historical and does not address current market conditions.",
+  "market_structure_context": "The source focuses on bank regulatory policy rather than direct market structure topics such as trading mechanisms, market plumbing, or operational frameworks. It discusses deposit insurance and supervisory arrangements as research instruments but does not address market structure mechanics.",
+  "important_numbers": [
+    "1982-89 (forbearance period studied)"
+  ],
   "tags": [
-    "research-paper",
-    "new-york-fed",
-    "savings-and-loan-crisis",
     "regulatory-forbearance",
+    "savings-and-loan-crisis",
     "banking-regulation",
-    "real-estate",
-    "gdp",
-    "deposit-insurance",
-    "historical-study"
+    "real-estate-boom",
+    "real-gdp",
+    "federal-reserve",
+    "research-paper",
+    "financial-stability"
   ],
   "llm_review": {
-    "initial_confidence": 6,
-    "verification_confidence": 7,
+    "initial_confidence": 4,
+    "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "Source published October 2017 (revised January 2018) — approximately 8 years old, well beyond the 90-day threshold. However, per guidelines, may still be accepted as a key research finding with archival value.",
-      "Full content available only in PDF; crawl extracted limited metadata. Key quantitative findings and detailed methodology were not captured in extraction, though the summary accurately reflects available metadata."
+      "Source text is minimal—an abstract/landing page only; full research content available only in PDF, limiting verification depth",
+      "Published October 2017 (revised January 2018), approximately 8 years before TODAY—while historical research can have archival value, this is a borderline consideration",
+      "Source marginally relevant to 'market structure' TARGET—primarily macroeconomic and regulatory policy content rather than trading mechanisms or market plumbing",
+      "No quantitative results or detailed findings provided in the source text beyond the abstract"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The record is largely accurate and well-constructed from a high-trust source (Federal Reserve Bank of New York Staff Report). The event_type 'research_paper' is valid and correct. However, human review is recommended to confirm archival value determination: (1) the source is 8 years old, which normally would be a concern, but it constitutes a key research finding on regulatory forbearance with lasting policy relevance; (2) PDF-only availability limits content verification but does not invalidate the metadata-based summary. A human reviewer should confirm this historical research paper is appropriate for archiving given its age versus its demonstrated archival value."
+    "notes": "Source is thin (abstract only) with limited verification depth. The research paper classification and summary content are factually supported by the abstract, but the full findings cannot be verified. Additionally, the marginal relevance to the specified 'market structure' TARGET warrants human assessment of archival value."
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_does_going_easy_on_distressed_5628b0343e5f275a.txt",
-  "notes": "Historical research paper. The crawl extracted minimal metadata; full content available only in PDF. Published approximately 8 years ago (Oct 2017, revised Jan 2018), well beyond the 90-day relevance window. While the topic touches banking regulation (market structure), this is historical academic research rather than a current market event or macro catalyst. Source does not discuss current market conditions or forward-looking market reactions. Relevance to real-time market structure or macro catalysts is indirect.",
+  "notes": "This source is a research paper abstract/landing page from the Federal Reserve Bank of New York. The full paper is only available in PDF, and the source text provides only the abstract summary. Published in October 2017 (revised January 2018), this is a historical record approximately 8 years old. While the TARGET metadata specifies 'market structure', the content is primarily about banking regulation and macroeconomic effects rather than direct market structure topics. Confidence lowered due to source thinness and age. The research focuses on the U.S. savings and loan crisis (1980s), which limits direct applicability to current market structure concerns.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "6aae081291ac6adf2b16f0dff008cc5fbbf19456"
+  "telegram_review_fingerprint": "0f0dfe70f476c8b0eb2a48df26b52ef4761c16d0"
 }

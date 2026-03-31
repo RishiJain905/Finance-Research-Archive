@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2013_press_releases_b53df4cc27444e38",
-  "created_at": "2026-03-31T09:10:24.489676+00:00",
+  "created_at": "2026-03-31T18:27:49.533848+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,19 +8,19 @@
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2013all.htm",
-    "published_at": "",
+    "published_at": "2013-12-27",
     "source_type": "listing_page",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This source is a Federal Reserve website index page listing all press releases from calendar year 2013. It is not a single document but rather a navigation/listing page containing approximately 100+ individual press releases spanning diverse topics including FOMC statements, regulatory guidance, enforcement actions, banking applications, and other Fed announcements. The source is a historical record from over 12 years ago and does not represent archiveable content on its own.",
+  "summary": "This is a listing/index page aggregating all Federal Reserve press releases from calendar year 2013, spanning items from January through December 2013. The page contains hundreds of disparate items including regulatory guidance, enforcement actions, banking applications, FOMC statements, monetary policy communications, and operational notices. As a listing page, it is not itself an archiveable research document.",
   "key_points": [
-    "This is a listing/index page, not a single source document - individual press releases would need to be archived separately",
-    "Contains links to multiple FOMC-related documents from 2013 including statements (Dec 18), minutes (Oct 29-30), and projections (Dec 17-18)",
-    "Includes regulatory announcements such as Volcker rule implementation (Dec 10, 2013)",
-    "Contains enforcement actions, banking applications, and other administrative Fed announcements",
-    "The page itself is not directly usable for research without selecting specific child documents"
+    "This is a listing page (index) of press releases, not an individual source document",
+    "Items span the full calendar year 2013 with dates ranging from early 2013 to 12/27/2013",
+    "Contains mixed content types: regulatory guidance, enforcement actions, banking applications, monetary policy items",
+    "Some potentially relevant individual items exist within the list (FOMC statements, projections, minutes, Volcker rule final rules)",
+    "Individual press releases from this page would be candidates for separate archival if targeted individually"
   ],
-  "why_it_matters": "This listing page serves as an index to 2013 Federal Reserve communications but cannot be used as a standalone research document. Individual press releases would need to be identified and archived separately for meaningful research use. The page demonstrates the breadth of Fed activity in 2013 but provides no specific data, decisions, or analysis on its own.",
+  "why_it_matters": "This listing page aggregates hundreds of disparate 2013 Fed press releases and is not itself an archiveable research document. Individual items within it (FOMC statements from 12/18/2013, FOMC projections, Volcker rule final rules from 12/10/2013, market risk capital rule from 12/6/2013) are candidates for separate archival.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,22 +31,21 @@
   "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "press-releases",
     "listing-page",
-    "historical",
     "2013",
-    "non-archivable"
+    "press-releases-index",
+    "not-archiveable"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 2,
+    "initial_confidence": 2,
+    "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page (navigation/index page) - per rule 6, listing pages must be rejected",
-      "event_type is 'unknown' which is technically accurate but indicates no single event can be attributed to this source",
-      "Source is a container page with no standalone research value - individual press releases would need to be archived separately",
-      "Source contains no specific macro catalyst or market structure content of its own - just an index of links",
-      "Source is over 12 years old (2013 vs 2026-03-31) with no archival value as a collection index"
+      "Source is a listing/index page aggregating all 2013 Federal Reserve press releases - not an individual archiveable document",
+      "Per CORE RULE 5: PAGE_TYPE listing_page mandates rejection",
+      "Per CORE RULE 6: Container/listing pages bias toward reject",
+      "Contains no coherent narrative or substantive analysis - only a chronological index of disparate items",
+      "Published date (2013-12-27) is approximately 12+ years before TODAY and lacks standalone archival value as a listing page"
     ]
   },
   "human_review": {
@@ -55,5 +54,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2013_press_releases_b53df4cc27444e38.txt",
-  "notes": "NON-ARCHIVABLE: This is a listing_page (navigation index) containing links to approximately 100+ individual press releases from 2013. Per core rule 6, listing pages should not be treated as archiveable content. The page contains no specific macro catalyst or market structure content of its own. Individual documents would need to be identified and archived separately. Source is extremely stale (12+ years old) and would have low research utility for current market structure or macro catalyst analysis. Recommend excluding from archive entirely."
+  "notes": "Non-archiveable listing page per CORE RULE 6. Individual press releases within this list could be targeted for separate archival. The source itself provides no substantive analysis or synthesis. Historical record (2013 data, over 12 years old). Lower confidence due to source type and age."
 }

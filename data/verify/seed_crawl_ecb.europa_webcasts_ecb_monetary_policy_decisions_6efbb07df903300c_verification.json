@@ -1,16 +1,16 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/listing page (source_type: navigation_page) - explicitly rejected per Rule 5",
-    "No substantive policy content - only links to press releases, statements, and projections",
-    "No publication date provided - cannot assess recency or staleness",
-    "ECB interest rates displayed are from June 11, 2025 (deposit 2.00%, MRO 2.15%, marginal lending 2.40%) - approximately 9 months stale as of TODAY",
-    "event_type set to 'unknown' - appropriate for navigation page but confirms lack of archiveable content",
-    "Cannot serve as standalone archival record - only a portal linking to actual policy documents"
+    "PAGE_TYPE is listing_page - per Rule 5, listing pages must be rejected",
+    "event_type incorrectly set to 'rate_decision' but no rate decision is contained in this source; it is an index page linking to press conferences",
+    "Source is a navigation/listing hub with no substantive policy content - actual rate decisions require navigating to linked press releases",
+    "The rates shown (2.00%/2.15%/2.40%) are from 11 June 2025, over 9 months stale as of TODAY (2026-03-31)",
+    "Published_at set to TODAY is misleading - this index page has no specific publication date and is perpetually maintained",
+    "References to February and March 2026 meetings suggest they exist but the actual decisions are not included here"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record correctly identifies all fundamental problems with this source. No human judgment needed - this is a navigation page that should be rejected per explicit guidelines.",
+  "human_review_reason": "Rule 5 is unambiguous: listing pages must be rejected. No human judgment needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

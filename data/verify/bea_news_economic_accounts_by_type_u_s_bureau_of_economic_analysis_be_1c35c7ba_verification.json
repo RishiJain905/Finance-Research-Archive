@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source_type metadata—reject per CORE RULE 5",
+    "No substantive content; page is a navigation index with links to data categories only",
+    "No published_at date provided; last modified date (12/5/22) indicates page is stale (>90 days before TODAY)",
+    "event_type 'unknown' is technically valid but indicates inability to classify a non-content source",
+    "No specific economic data releases, figures, or policy information present",
+    "Record summary and key_points correctly identify the page as non-archiveable"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record has correctly identified this as a listing/navigation page with no substantive content. No human review needed—the verdict is clear: reject per CORE RULE 5 (listing_page type) and CORE RULE 6 (thin low-signal source). The record itself is well-structured and accurately describes the source's limitations.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

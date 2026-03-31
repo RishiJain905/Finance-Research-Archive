@@ -1,10 +1,16 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "URL field is empty - source attribution is incomplete and unverifiable",
+    "source_type is 'homepage' - per rule #5, homepage pages must be rejected as non-archivable",
+    "event_type 'economic_commentary' is incorrect - the source is an aggregation/index page for FOMC balance sheet communications, not a commentary; should be 'balance_sheet_update' if archived as operational documentation",
+    "Published_at date (2025-11-26) reflects page last update, not publication of the referenced content (which includes statements from 2022 and 2025)",
+    "Source is a container page that indexes multiple primary documents rather than a standalone primary source"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Automated rejection is appropriate because the source is a homepage/container page with incomplete URL attribution, which are explicitly disqualifying per core rules #5 and #6.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source attribution is malformed: 'seed_crawl' is a domain trust tier identifier, not a proper source name; URL field is blank",
+    "TOPIC/MACRO_CATALYSTS mismatch: Source metadata specifies macro catalysts target but the source is a geopolitical security enforcement action with no direct macro market catalyst relevance",
+    "Event type 'regulatory_guidance' is only marginally accurate; this is more precisely a sanctions designation/enforcement action rather than guidance",
+    "Source does not fit traditional macro catalyst categories (monetary policy, data releases, rate decisions, fiscal policy) - it concerns counterproliferation sanctions evasion",
+    "Market impact fields are empty/null, which accurately reflects uncertainty but leaves record without a key required field"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Topic mismatch requires human judgment: source metadata explicitly targets 'macro catalysts' but content is geopolitical sanctions enforcement with indirect market implications (compliance risk, secondary sanctions exposure). Human must decide if indirect sanctions enforcement has sufficient macro relevance for this archive, or if the TOPIC metadata is incorrect.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) sanctioned six individuals and two entities for their roles in DPRK government-orchestrated IT worker schemes that defrauded U.S. businesses and generated revenue for the regime's WMD programs, including nearly $800 million in 2024.",
+    "why_it_matters": "This enforcement action targets a significant revenue stream for North Korea's weapons programs. The schemes generated nearly $800 million in 2024 through fraudulent IT employment at U.S. and allied companies. Financial institutions and businesses face increased compliance risk from secondary sanctions exposure and potential correspondent account restrictions."
+  }
+}

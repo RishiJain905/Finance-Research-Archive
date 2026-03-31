@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is missing (empty string) - full attribution requires the actual URL where this speech was published",
+    "Source domain is missing (empty string)",
+    "source_type is 'unknown' when it could reasonably be identified as 'federal_reserve_speech' or similar",
+    "The speech body is truncated - the final portion on the inflation path forward was cut off, leaving the analysis incomplete"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is well-structured and factually supported by the source text, with accurate key points covering the main themes. However, the missing URL and domain fields represent incomplete source attribution, which is a core requirement. Additionally, the truncated source body means we cannot verify the final portion of the speech on the inflation outlook, and the human notes confirm the conclusion was cut off. These metadata completeness issues warrant human review before acceptance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Barkin's speech provides a detailed Fed district perspective on the economic outlook as of late March 2026. His characterization of 'fog' and the explicit acknowledgment that the FOMC held rates due to balanced risks—rather than a clear directional bias—suggests the Fed is in a wait-and-see mode. The speech offers insights into how Fed officials are weighing consumer resilience against labor market fragility, AI disruption, and geopolitical oil shocks when forming policy. Note: The speech was truncated mid-sentence on the inflation outlook; the final portion on the path forward for inflation was not captured in the source.",
+    "macro_context": "The speech provides extensive macro context: GDP growth at 2%, consumer spending supported by low unemployment and rising real wages, but employment growth near zero. Inflation is above target but declining. The Iran conflict has spiked oil prices, creating recession risk historically associated with oil shocks. The speech explicitly notes the Fed held rates at the last meeting due to balanced risks, indicating uncertainty about the appropriate policy path. Note: Source body was truncated before the complete discussion of inflation path forward.",
+    "market_structure_context": ""
+  }
+}

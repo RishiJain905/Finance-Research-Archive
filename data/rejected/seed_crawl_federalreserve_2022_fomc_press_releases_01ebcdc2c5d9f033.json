@@ -1,46 +1,41 @@
 {
   "id": "seed_crawl_federalreserve_2022_fomc_press_releases_01ebcdc2c5d9f033",
-  "created_at": "2026-03-31T13:31:17.686021+00:00",
+  "created_at": "2026-03-31T18:36:24.826329+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "fomc_statement",
+  "event_type": "unknown",
   "title": "2022 FOMC Press Releases",
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2022-press-fomc.htm",
-    "published_at": "2022-01-26",
+    "published_at": "",
     "source_type": "listing_page",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This is a navigation/index page listing all FOMC press releases from 2022 on the Federal Reserve website. The page contains 15 dated entries including 8 FOMC statements and 4 sets of economic projections. No substantive policy content is present—this index page only provides links to individual press releases.",
+  "summary": "This page is a listing/indexing page for Federal Reserve FOMC press releases from 2022. It contains links to statements, projections, and policy announcements but does not contain the actual content of those releases. Each FOMC statement referenced would need to be crawled individually as a separate source. This listing page itself should NOT be archived.",
   "key_points": [
-    "This is a listing page containing dates and titles of 2022 FOMC events, not the actual policy statements or projections.",
-    "2022 FOMC statements were released on: January 26, March 16, May 4, June 15, July 27, September 21, November 2, December 14.",
-    "Economic projections were released following March 15-16, June 14-15, September 20-21, and December 13-14 FOMC meetings.",
-    "The page also references a February 18, 2022 FOMC adoption of new investment and trading rules.",
-    "A 'Plans for Reducing the Size of the Federal Reserve's Balance Sheet' was released May 4, 2022.",
-    "Page last updated February 26, 2026, but content is historical from 2022."
+    "Page is a listing page (not an individual archiveable document)",
+    "Contains links to 2022 FOMC statements (8 meetings: January, March, May, June, July, September, November, December)",
+    "Also links to 2022 FOMC economic projections (March, June, September, December)",
+    "Includes one balance sheet-related item: 'Plans for Reducing the Size of the Federal Reserve's Balance Sheet' dated May 4, 2022",
+    "Includes trading rule item: 'FOMC formally adopts comprehensive new rules for investment and trading activity' dated February 18, 2022",
+    "Actual FOMC statement content not present in this listing page"
   ],
-  "why_it_matters": "This index page serves as a reference guide to 2022 Fed policy communications but contains no actionable policy content. Researchers must navigate to individual press releases for actual statements and projection details.",
+  "why_it_matters": "This source is a container page with no archival value. The individual 2022 FOMC statements contain the actual policy content relevant for macro catalysts research. The 2022 period covered the Fed's aggressive hiking cycle (from near-zero to 4.25-4.50%), making individual statements highly relevant.",
   "market_impact": {
-    "asset_classes": [
-      "bonds",
-      "equities",
-      "fx"
-    ],
+    "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "This page indexes 2022 FOMC communications when the Fed aggressively tightened monetary policy, raising rates from 0-0.25% in March 2022 to 4.25-4.50% by December 2022.",
+  "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "fomc",
-    "fed",
-    "monetary-policy",
+    "federal-reserve",
     "2022",
-    "rate-hikes",
-    "index",
+    "listing-page",
+    "non-archivable",
     "historical"
   ],
   "llm_review": {
@@ -48,12 +43,11 @@
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/index page containing only dates and titles of press releases - no substantive policy content",
-      "event_type 'fomc_statement' is misapplied; the source does not contain any FOMC statements, only references to them",
-      "Per core rule #5: listing_page source type must be rejected",
-      "Per core rule #6: container pages and thin low-signal sources bias toward reject",
-      "No actionable policy content exists in this source for research archive purposes",
-      "Historical content from 2022 (over 3 years old) - while individual FOMC events are significant, this index page has no standalone archival value"
+      "Source is a listing_page per source_type field - violates Core Rule 5 requiring rejection of listing pages",
+      "Source contains no actual FOMC statement text, only hyperlinks to statements",
+      "This is a container page with no substantive policy content for archival purposes",
+      "event_type 'unknown' is correct but source should be rejected entirely rather than archived",
+      "Individual FOMC statements (e.g., December 14, 2022 statement) should be crawled separately as standalone documents"
     ]
   },
   "human_review": {
@@ -62,5 +56,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2022_fomc_press_releases_01ebcdc2c5d9f033.txt",
-  "notes": "SOURCE CLASSIFICATION: Non-archiveable listing page. The source is a Federal Reserve website index of 2022 FOMC press releases. Per core rule #6, listing pages should be treated as non-archiveable. The page contains only dates, titles, and category labels - no actual policy content. While the indexed 2022 events are historically significant (rapid Fed tightening cycle), this particular source provides no substantive material for a research archive. Recommend archiving individual FOMC statements and projections directly rather than this index. Historical record from 2022 (over 3 years prior to TODAY)."
+  "notes": "Non-archivable listing page. The source contains no FOMC statement text, only hyperlinks. For macro catalysts research on 2022 Fed policy, individual FOMC statements should be retrieved directly (e.g., crawl https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm for the December 2022 statement). The listed items include: January 26 statement, March 16 statement + projections, May 4 statement + balance sheet plans, June 15 statement + projections, July 27 statement, September 21 statement + projections, November 2 statement, December 14 statement + projections."
 }

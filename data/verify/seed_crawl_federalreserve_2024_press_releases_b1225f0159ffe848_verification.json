@@ -2,13 +2,14 @@
   "verification_confidence": 9,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page per source metadata — violates Rule 5 requiring rejection of listing pages",
-    "No substantive content to archive — only titles, dates, and category labels with links to individual press releases",
-    "event_type correctly set to 'unknown' since a listing page has no specific event type",
-    "Published_at is empty (no single publication date), which is expected for an index page"
+    "Source is a listing_page per source_type and URL pattern (listing/index of 2024 Fed press releases)",
+    "CORE RULE #5 explicitly states: 'If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page — reject'",
+    "Content is a broad aggregation of dozens of distinct press releases with no substantive detail on any single item",
+    "This page has no standalone archival value; individual FOMC minutes, enforcement actions, and regulatory announcements within it would each warrant separate records",
+    "event_type is 'unknown' which is correct for a listing page that spans multiple event types"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The record accurately identifies the source as a listing page and correctly applies the rejection criteria. The assessment is thorough and well-reasoned.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

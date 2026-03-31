@@ -1,13 +1,11 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "event_type 'regulatory_guidance' is a valid taxonomy value but not perfectly descriptive—the source is a specific regulatory order/exemption approval rather than guidance; 'banking_regulation' or 'regulatory_decision' would be more precise but are not in the taxonomy",
-    "market_impact confidence is set to 0 rather than a numeric estimate, suggesting incomplete assessment",
-    "The source is narrowly focused on one bank's internal reorganization and has limited broader market structure relevance despite the regulatory framework context"
+    "event_type 'regulatory_guidance' is somewhat imprecise; the source is an order/approval announcement rather than guidance. 'financial_stability_report' or 'unknown' might be more accurate, though 'regulatory_guidance' is within the valid taxonomy."
   ],
   "human_review_required": true,
-  "human_review_reason": "Source is factually accurate and well-sourced, but the archival value for a finance research archive focused on market structure is borderline. The record honestly acknowledges the narrow scope (one bank's internal reorganization), but this specific administrative action—while properly documented—may not warrant archival preservation unless the archive captures all regulatory actions. Human judgment needed to determine if narrowly scoped bank-specific exemptions meet the archive's inclusion threshold.",
+  "human_review_reason": "The record is factually accurate and properly attributed. However, the source is very thin (basic press release with minimal detail) and describes a narrow administrative action affecting only one bank. Human review is needed to determine if this meets the archival value threshold given its limited market structure relevance.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source body was truncated, cutting off during quantile regression methodology explanation - full methodology details cannot be verified",
+    "Published date is 'unknown' - cannot assess recency or staleness relative to TODAY (2026-03-31)",
+    "source_type is 'research_paper' but source is more accurately a methodology explanation/documentation page, not a research paper",
+    "The source is a methodology description page, not a data release - no current risk estimates are presented to verify accuracy of the tool's outputs",
+    "Metadata TARGET says 'market structure' but content is about macroeconomic risk quantification methodology - record correctly identifies this mismatch"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source truncation prevents full verification of methodology details. Missing published_at date makes staleness assessment impossible. While the record's summary and key points appear factually supported by the visible source content, the truncation means some technical details may be incomplete. Human should verify whether this methodology explanation page has sufficient archival value compared to actual data releases from the Outlook-at-Risk tool.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The New York Fed's Outlook-at-Risk is a research methodology that quantifies downside risks to real GDP growth, upside risks to unemployment, and two-sided risks to CPI inflation by estimating conditional distributions based on financial conditions (using the ECB's Composite Indicator of Systemic Stress). The tool uses quantile regressions on Blue Chip Economic Indicators forecasts and is published monthly on the third Wednesday. It is explicitly not an official Fed forecast and is a joint product of the NY Fed's Financial Stability Division and Applied Macroeconomics and Econometrics Center.",
+    "why_it_matters": "This tool provides a systematic, quantitative framework for measuring tail risks to the macro outlook by linking financial conditions to the distribution of future economic outcomes. Market participants can use it to assess whether current financial conditions suggest elevated downside risk to growth or upside risk to unemployment and inflation. Note: This is a methodology explanation page; actual current risk estimates would be found in separate data release pages.",
+    "macro_context": "The methodology demonstrates a negative relationship between financial conditions and real activity risk, with this relationship strongest when the economy is most vulnerable. For GDP growth, left-tail percentiles (10th percentile) indicate downside risk; for unemployment, right-tail percentiles (90th percentile) indicate deterioration risk; for inflation, both tails matter. The gap between 90th and 10th percentiles measures uncertainty about future outcomes.",
+    "market_structure_context": ""
+  }
+}

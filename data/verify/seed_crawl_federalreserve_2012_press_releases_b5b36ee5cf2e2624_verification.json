@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source metadata - must be rejected per Rule 5",
+    "No substantive content - only titles and dates linking to individual documents",
+    "Contains mixed content types requiring disambiguation",
+    "Individual items need separate archival processing"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record correctly identifies all issues. This is a listing page (listing_page) per the source metadata, which must be rejected per Rule 5. No human review needed - the record accurately captures why this should be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a chronological index page listing all Federal Reserve press releases from 2012, including monetary policy statements, enforcement actions, banking applications, regulatory guidance, and other announcements. The page itself contains no substantive research content—only titles and dates linking to individual documents. Published in 2012, this is a historical archive listing (approximately 14 years stale relative to TODAY).",
+    "why_it_matters": "This page serves only as an index to 2012 Federal Reserve communications. It cannot be used directly for research as it contains no substantive content beyond titles and dates. Individual press releases would need to be crawled and archived separately."
+  }
+}

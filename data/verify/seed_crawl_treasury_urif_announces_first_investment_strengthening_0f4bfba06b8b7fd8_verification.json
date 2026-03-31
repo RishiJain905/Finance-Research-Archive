@@ -1,20 +1,17 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source attribution in record (https://urifinvest.com) differs from authoritative Treasury source; the source body references Treasury Secretary statements but the URL is to URIF website rather than treasury.gov",
-    "Claim that investment is 'relatively small-scale' is an unsupported inference - the source does not disclose investment amount",
-    "Claim that fund 'establishes a template for U.S.-aligned private capital mobilization' is interpretive - source says this is the aim but no actual private capital has been mobilized yet",
-    "verification_confidence remains at 0 in llm_review, indicating the record does not self-assess properly",
-    "No directional market impact can be assessed given absence of investment amount, fund size, or asset class data"
+    "event_type is set to 'unknown' when a more appropriate value should be assigned - this is a government investment announcement that fits within treasury/operations category, though no exact taxonomy match exists",
+    "source URL is 'https://urifinvest.com' but the DOMAIN is listed as 'treasury.gov' - the source attribution should clarify whether this originated from treasury.gov or the URIF website; the source body references both the Treasury press release format and the URIF website"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source is a government press release with limited financial specifics - no investment amount, fund size, or return expectations disclosed. The record's self-assessment shows verification_confidence at 0 with no clear basis. While the factual elements are supported, the interpretive claims about scale and template effects need verification. Additionally, source attribution (urifinvest.com vs treasury.gov) should be confirmed.",
+  "human_review_reason": "The record is mostly accurate and the source is legitimate government content. However, event_type being 'unknown' when a treasury/operations announcement should have a taxonomy value requires human judgment on whether to assign a placeholder value or keep it as unknown. Additionally, the macro catalyst relevance question raised in the record is valid - this is a bilateral reconstruction fund announcement rather than a traditional market-moving macro event, but it may still have archival value for geopolitical/emerging market analysis.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The U.S.-Ukraine Reconstruction Investment Fund (URIF) announced its first equity investment in Sine Engineering, a company developing radio communication control systems for Unmanned Aerial Vehicles (UAVs). The investment was approved by the joint U.S.-Ukrainian board of directors and represents the fund's initial deployment since its establishment in April 2025. Priority sectors for future URIF investments include energy, dual-use manufacturing, infrastructure, and critical minerals. Note: The specific investment amount was not disclosed in the announcement.",
-    "why_it_matters": "URIF represents a novel bilateral investment structure combining security, reconstruction, and technology access objectives. The investment in Sine Engineering marks the first concrete deployment from a fund designed to mobilize U.S.-aligned private capital for Ukrainian reconstruction. While the fund positions this as a template for future deals in strategic technology sectors, no specific investment amount or fund size was disclosed, limiting assessment of scale.",
-    "macro_context": "URIF is a key pillar of the Trump administration's economic partnership with Ukraine, targeting supply chain resilience and shared economic security. The fund seeks to mobilize U.S. and allied private capital for Ukrainian reconstruction in priority sectors including critical minerals and dual-use manufacturing. This announcement signals continued U.S. commitment to Ukraine's post-conflict economic development.",
-    "market_structure_context": ""
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "URIF is a bilateral investment vehicle established under the Trump administration's economic partnership framework with Ukraine, announced in April 2025. This first investment signals operationalization of U.S.-Ukraine reconstruction financing and represents a novel public-private investment model combining security, technology, and economic development objectives.",
+    "market_structure_context": "The investment in dual-use UAV technology (radio communication control systems) reflects growing U.S. interest in securing advanced defense technology supply chains through equity stakes. This approach differs from traditional development finance by taking direct equity positions in emerging technology companies with both military and commercial applications."
   }
 }

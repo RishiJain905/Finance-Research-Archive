@@ -1,13 +1,20 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/index page (source_type correctly identified as 'navigation_page')",
+    "No actual rate decision, statement text, or policy guidance is present in this source",
+    "Page contains only links to monetary policy sections, no substantive decision content",
+    "Published_at is unknown; page references March 19, 2026 press conference but does not contain that decision",
+    "Published_at is more than 90 days before TODAY but has no archival value as this is a container page",
+    "event_type set to 'unknown' which is correct given the source has no policy event content"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "The record correctly identifies this as a navigation page with no actual policy decision content. No ambiguity exists - Rule 5 explicitly requires rejection for navigation pages regardless.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This source is the ECB's Bulgarian-language navigation/index page for monetary policy decisions, not an actual policy decision document. It contains links to monetary policy strategy, tools, asset purchase programs, and references a press conference dated March 19, 2026, but does not contain the actual decision content, rate statements, or policy guidance.",
+    "why_it_matters": "This page serves as an entry point to ECB monetary policy information but contains no actionable policy content. Researchers seeking ECB rate decisions or policy statements should navigate to specific decision pages or press releases rather than this index.",
     "macro_context": "",
     "market_structure_context": ""
   }

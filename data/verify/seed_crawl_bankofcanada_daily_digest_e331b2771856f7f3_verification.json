@@ -1,19 +1,21 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "Source is a data compilation/listing page (Daily Digest) rather than analytical content - lacks commentary or policy interpretation",
-    "why_it_matters contains speculative policy interpretation ('could strengthen the case for Bank of Canada rate cuts ahead') not present in source",
-    "macro_context states 'Bank of Canada may have room to cut rates' as a derived conclusion - this goes beyond raw data presented",
-    "market_impact directional_bias 'risk_on' is interpretive inference, not supported by source"
+    "Source is explicitly classified as 'listing_page' in source_type metadata, which is a direct reject criterion per Rule 5",
+    "Source is a raw data compilation page without analytical depth, policy interpretation, or forward guidance",
+    "Content is transient reference data (daily snapshot) rather than substantive research or commentary suitable for archival",
+    "No policy interpretation or market commentary - the page only presents numbers without explaining causes or implications",
+    "The page aggregates heterogeneous data points across multiple dates (March 27-30) rather than presenting a coherent single release",
+    "Record accurately captures source data but accuracy is moot given the structural source-type violation"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The inflation data extraction is accurate and the record is relevant for macro research, but key interpretive fields (why_it_matters, macro_context) contain policy speculation about rate cuts that the source does not provide. A human should verify whether these interpretations are acceptable editorial additions or constitute unsupported claims.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "The rejection is deterministic based on the source_type being 'listing_page', which is an explicit reject criterion in Rule 5. The generated record itself correctly identifies this issue. No human judgment needed - the source is a container/listing page by its own metadata classification.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "The decline in Canadian CPI from 2.3% to 1.8% brings headline inflation below the Bank of Canada's 1-3% control range ceiling. Core inflation measures also declined, moving closer to the 2% target midpoint. The data represents a notable disinflationary development but the source provides no policy commentary or forward guidance.",
-    "macro_context": "Canadian CPI dropped 0.5 percentage points from January to February 2026. All core measures (trim, median, common) declined. The Bank of Canada's target overnight rate remained at 2.25%. The source is a data snapshot page with no policy interpretation provided.",
+    "why_it_matters": "",
+    "macro_context": "",
     "market_structure_context": ""
   }
 }

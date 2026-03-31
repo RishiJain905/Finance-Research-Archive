@@ -1,14 +1,16 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page (index of FOMC press release links), which violates Rule 5 requiring rejection of homepage, navigation_page, listing_page, or search_page",
-    "event_type is 'unknown' - while correctly identified as unknown, listing pages do not fit any valid event_type taxonomy value",
-    "No actual FOMC statement content is present - only links to statements",
-    "Source provides no substantive policy content, only dates and titles of statements"
+    "Source is a listing_page (index) with no substantive content - Core Rule 5 prohibits archiving homepage, navigation, listing, or search pages",
+    "Only contains dates and titles of FOMC releases; actual statement text, projections data, rate decisions, and voting records are absent",
+    "event_type set to 'unknown' when source is clearly monetary_policy-related FOMC material - should be more specific",
+    "published_at set to '2024-01-01' appears fabricated; the listing page itself was last updated 2026-02-26, not published in 2024",
+    "Source is too thin/noisy to have archival value per Core Rule 6 - individual FOMC statement pages should be crawled separately",
+    "No policy details, forward guidance, or market-relevant content can be extracted from this index"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Record accurately identifies the source as a non-archivable listing page. Rejection is straightforward per Core Rule 5 (listing_page source_type) and Core Rule 6 (thin/noisy source with no substantive content).",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

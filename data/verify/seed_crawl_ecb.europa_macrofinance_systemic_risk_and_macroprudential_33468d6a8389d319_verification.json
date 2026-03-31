@@ -1,15 +1,17 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page (index/listing page referencing 'All pages in this section'), which violates Core Rule #5 - reject listing pages",
-    "event_type is 'research_paper' but source is a research agenda index page, not a research paper - misclassification",
-    "No publication date provided - freshness cannot be assessed",
-    "Source contains only broad research topic descriptions with no specific data, findings, or conclusions",
-    "Source is too thin for archiving as it lacks original content, findings, or market-moving information"
+    "source_type is 'listing_page' - per core rule 5, listing pages should be rejected",
+    "event_type 'research_paper' is incorrect - this is a research agenda index page, not a research paper",
+    "Content is thin - only contains high-level topic descriptions without specific findings, data, or publication dates",
+    "No publication date provided - cannot assess recency or staleness",
+    "Source ends with 'All pages in this section' - confirms this is a navigation/index page",
+    "Per core rule 6, container pages and thin low-signal sources bias toward reject",
+    "The record correctly identifies these issues but still assigns 'review_queue' status when rejection is warranted"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately describes the source content and correctly identifies it as a listing page, but the suggested status of 'review_queue' conflicts with the core rules which mandate rejection of listing pages. Human confirmation needed to override the system's assessment and correctly reject this record.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

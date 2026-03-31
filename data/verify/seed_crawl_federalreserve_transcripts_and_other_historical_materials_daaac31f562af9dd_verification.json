@@ -1,16 +1,16 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/container page cataloging FOMC document types, not the documents themselves",
-    "No specific economic data, policy decisions, or market-moving content present",
-    "No source URL provided in metadata, making document retrieval impossible",
-    "No published date provided",
-    "Container pages are explicitly non-archivable per Rule 8 and Rule 9",
-    "Zero archival value as standalone research note for macro catalysts"
+    "Source URL is empty - missing source attribution per Rule 6",
+    "Publication date is empty - no temporal context available",
+    "Source is a navigation_page (container page) per Rule 5 - must reject",
+    "Source contains no substantive content - only catalog descriptions of FOMC document types",
+    "event_type is 'unknown' which is technically valid for this page type but confirms lack of archiveable event",
+    "No specific FOMC decisions, data, policy content, or research present - cannot serve as macro catalyst source"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The record correctly identifies all critical issues with the source. The source is a navigation/indexing portal with no substantive content, no URL, and no publication date. Per CORE RULE 5, navigation pages must be rejected. No judgment call needed - this is a clear rejection.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

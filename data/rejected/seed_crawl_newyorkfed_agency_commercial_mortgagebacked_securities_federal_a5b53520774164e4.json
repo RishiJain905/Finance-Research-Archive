@@ -1,63 +1,58 @@
 {
   "id": "seed_crawl_newyorkfed_agency_commercial_mortgagebacked_securities_federal_a5b53520774164e4",
-  "created_at": "2026-03-30T06:42:23.939333+00:00",
+  "created_at": "2026-03-31T18:50:31.008754+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "central_bank_operations",
+  "event_type": "balance_sheet_update",
   "title": "Agency Commercial Mortgage-Backed Securities - Federal Reserve Bank of New York",
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "",
-    "published_at": "",
-    "source_type": "institutional_guidance"
+    "domain": "newyorkfed.org",
+    "published_at": "unknown",
+    "source_type": "unknown"
   },
-  "summary": "The summary is factually accurate and well-supported by source text. No corrections needed.",
+  "summary": "This is a historical informational page describing the Federal Reserve's agency CMBS purchase program that operated from March 2020 to November 2021 as an emergency COVID-19 market support measure. The program was managed by BlackRock Financial Markets Advisory as a third-party vendor from March 2020 until contract termination on May 2, 2022. The program purchased multifamily mortgages guaranteed by Fannie Mae, Freddie Mac, and Ginnie Mae.",
   "key_points": [
-    "FOMC directed agency CMBS purchases effective March 23, 2020 through November 4, 2021",
-    "Purchases targeted multifamily mortgages guaranteed by Fannie Mae, Freddie Mac, and Ginnie Mae",
-    "BlackRock Financial Markets Advisory was retained as investment manager on March 24, 2020",
-    "BlackRock contract terminated on May 2, 2022",
-    "Transaction data published quarterly, approximately two years after conduct per Dodd-Frank Act",
-    "Historical price data available for March 2020-March 2021 period"
+    "FOMC directed the Open Market Trading Desk to purchase agency CMBS effective March 23, 2020",
+    "Purchases were limited to multifamily mortgages fully guaranteed by Fannie Mae, Freddie Mac, or Ginnie Mae",
+    "The Desk stopped purchasing agency CMBS effective November 4, 2021",
+    "BlackRock Financial Markets Advisory was retained as third-party vendor on March 24, 2020 to operationalize purchases",
+    "The BlackRock contract was terminated on May 2, 2022",
+    "Transaction data is published quarterly, approximately two years after transactions occurred"
   ],
-  "why_it_matters": "Reasoning is appropriate - connects Federal Reserve operations to market structure context and emergency liquidity frameworks. Supported by source content.",
+  "why_it_matters": "This page documents the Fed's historical use of agency CMBS purchases as an emergency liquidity tool during COVID-19 market stress. Understanding past Fed balance sheet operations provides context for future policy responses. The information is relevant for market structure analysis of how the Fed engages external managers and the operational framework for purchasing structured products.",
   "market_impact": {
     "asset_classes": [
       "bonds"
     ],
     "directional_bias": "neutral",
-    "confidence": 4
+    "confidence": 0
   },
-  "macro_context": "Field correctly left empty - source provides operational specifics but no explicit macro-economic narrative.",
-  "market_structure_context": "Accurately describes Federal Reserve temporary purchase program and SOMA operational context. No corrections needed.",
+  "macro_context": "",
+  "market_structure_context": "The page describes the Fed's operational framework for agency CMBS purchases, including the use of external vendors (BlackRock), approved counterparties, and the transition to publishing transaction data pursuant to the Dodd-Frank Act. This provides transparency into Fed market operations and vendor management practices.",
   "important_numbers": [
-    20200323,
-    20201104,
-    20200324,
-    20220502
+    "March 23, 2020 (program start)",
+    "November 4, 2021 (end of directed purchases)",
+    "May 2, 2022 (contract termination)"
   ],
   "tags": [
     "federal-reserve",
     "agency-cMBS",
-    "soma",
-    "fomc-directive",
+    "balance-sheet",
     "blackrock",
-    "multifamily-mortgage",
-    "fannie-mae",
-    "freddie-mac",
-    "ginnie-mae",
-    "emergency-liquidity"
+    "soma",
+    "open-market-operations",
+    "multifamily-mortgage"
   ],
   "llm_review": {
-    "initial_confidence": 5,
-    "verification_confidence": 4,
+    "initial_confidence": 4,
+    "verification_confidence": 6,
     "verdict": "reject",
     "issues_found": [
-      "URL field is blank in both source metadata and record, limiting traceability - cannot verify source provenance",
-      "Source page type is ambiguous - appears to be a program overview/documentation page that could function as a navigation hub with links to multiple sub-resources (Operations, SOMA Holdings, Transaction Data, FAQs)",
-      "No publication date provided in source body text",
-      "Record correctly notes URL is blank in notes, but this should be a disqualifying factor for acceptance",
-      "Content is factually accurate to source text but source is an institutional landing page rather than substantive article content"
+      "Source URL is missing from metadata, limiting verifiability",
+      "Published date is unknown; source appears to be a static institutional page without a publication date",
+      "Program described is historical (ended November 2021), approximately 4.5 years before TODAY; lacks clear archival framing beyond being a program description"
     ]
   },
   "human_review": {
@@ -66,5 +61,5 @@
     "notes": "missing_source_attribution"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_agency_commercial_mortgagebacked_securities_federal_a5b53520774164e4.txt",
-  "notes": "Source is institutional documentation page from high-trust domain (ny.fed.org). Contains specific operational facts including dates, vendor selection, and program parameters. Multiple data resources referenced (Operations data, SOMA Holdings, Transaction data, Historical Prices). No publication date provided in body text. URL field is blank in source metadata, limiting traceability."
+  "notes": "Source is a New York Fed institutional page describing a concluded Fed emergency program. The page documents operational details rather than providing analysis or current policy. While relevant to market structure (Fed operations), the content is historical and informational. No URL was provided in metadata, limiting verifiability. The mention of 'Oct 29, 2025' in the body refers to a separate statement about reinvestment, not the publication date of this page."
 }

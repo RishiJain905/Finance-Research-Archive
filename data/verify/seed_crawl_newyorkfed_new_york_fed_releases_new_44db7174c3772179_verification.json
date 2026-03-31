@@ -1,20 +1,18 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 4,
+  "verdict": "review",
   "issues_found": [
-    "Source is 10 years old (published May 2, 2016), with no archival value as current market reference",
-    "Source is a press release/announcement about launching a research tool, not the tool itself or any analytical output",
-    "event_type is 'economic_commentary' but the source is a news announcement/press release; 'blog_post' would be more accurate but even then the content is thin",
-    "No market-moving data or current analysis; purely an announcement with limited archival value",
-    "TARGET metadata says 'market structure' but the content is about commodity analysis methodology, which is tangential",
-    "Low information density makes this unsuitable for a finance research archive"
+    "Source is nearly 10 years old (published May 2016) with limited archival value for current market analysis",
+    "Topic mismatch: metadata and target specify 'market structure' but source content is about oil price economic research methodology, not market plumbing, trading infrastructure, or operations",
+    "Source is an announcement/press release about launching a report, not substantive research content itself",
+    "No concrete market structure implications or trading infrastructure details present in source"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Auto-reject appropriate given source age (10 years), thin content (announcement only), and lack of relevance to current market structure or macro catalysts",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "Significant topic mismatch between metadata classification (market structure) and actual source content (economic research methodology). The source announces a Fed report on oil price decomposition but contains no discussion of market operations, trading infrastructure, or market structure mechanics. While the source is from a high-trust domain and is factually accurate, its relevance to 'market structure' as defined in the taxonomy is questionable. Human judgment needed on whether economic commentary about commodity price analysis qualifies under this archive's scope.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "The record accurately describes the report launch, but the archival value for a market structure archive is questionable given the source's focus on economic research methodology rather than market operations or trading infrastructure.",
     "macro_context": "",
     "market_structure_context": ""
   }

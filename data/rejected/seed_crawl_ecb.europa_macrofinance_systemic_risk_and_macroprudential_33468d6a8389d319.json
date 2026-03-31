@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_macrofinance_systemic_risk_and_macroprudential_33468d6a8389d319",
-  "created_at": "2026-03-31T14:29:31.949996+00:00",
+  "created_at": "2026-03-31T18:17:38.986382+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "research_paper",
@@ -12,23 +12,25 @@
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "The ECB publishes a research agenda outlining three main areas of macro-financial research focus: macroprudential policies and their effects, macro-financial linkages, and monetary policy and financial stability. The page describes research priorities rather than presenting specific findings, data, or policy decisions. No publication date is provided, making it unclear when this research agenda was current.",
+  "summary": "The ECB publishes a research agenda outlining its macro-financial research priorities, covering macroprudential policy effectiveness, macro-financial linkages, and the intersection of monetary policy and financial stability. This is a high-level research agenda page that lists areas of interest rather than presenting specific research findings, data, or policy recommendations.",
   "key_points": [
-    "ECB research agenda covers macroprudential policies including their effects on output, credit, asset prices, and optimal capital requirements",
-    "Research examines interactions between macroprudential and monetary policy, including potential complementarities",
-    "Macro-financial linkage research focuses on how financial conditions (leverage) affect macroeconomic performance and volatility",
-    "ECB investigates how conventional and unconventional monetary policy affects financial constraints and risk-taking behavior",
-    "Research area includes costs and benefits of 'leaning against the wind' monetary policy",
-    "Climate change effects on banking stability and financial regulation are identified as emerging research areas",
-    "Page is an index/listing page referencing 'All pages in this section' rather than a standalone research paper"
+    "ECB identifies three main research pillars: macroprudential policies and effects, macro-financial linkages, and monetary policy and financial stability",
+    "Macroprudential research areas include: drivers of systemic risk, effects on output/credit/asset prices, optimal capital requirements, and policy interactions with monetary policy",
+    "Macro-financial linkage research focuses on financial conditions (leverage) effects on macroeconomic performance and techniques to assess macroeconomic risk",
+    "Monetary policy and financial stability research examines conventional/unconventional policy effects on risk-taking, leaning against the wind costs/benefits, and climate change implications for banking stability",
+    "No publication date is stated in the source text",
+    "This page links to multiple research pages but the source body itself contains only high-level topic descriptions"
   ],
-  "why_it_matters": "This research agenda indicates the ECB's analytical priorities for understanding financial stability risks. While not containing specific policy decisions or economic data, it signals which macro-financial linkages the ECB considers most important for research, potentially reflecting concerns about systemic risk, credit cycles, or financial dominance. However, as a static research outline with no publication date or specific findings, its immediate market relevance is minimal.",
+  "why_it_matters": "This research agenda signals the ECB's analytical priorities for understanding financial system risks and policy interactions. While not immediately market-moving, these research themes inform future policy frameworks and regulatory approaches that could affect bank capital requirements, credit availability, and financial system resilience.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "equities",
+      "bonds"
+    ],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The research agenda touches on macro-relevant themes including: how accommodative monetary policy can incite risk-taking; the effectiveness of macroprudential policies; and financial dominance risks. However, it presents these as research areas of interest rather than conclusions or forecasts. No specific macro projections, data, or policy guidance is provided.",
+  "macro_context": "The research agenda covers macroprudential policy effectiveness, systemic risk drivers, and monetary-financial stability interactions—all topics with long-term implications for macroprudential regulation and potential policy evolution.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
@@ -38,19 +40,20 @@
     "macro-financial-linkages",
     "research-agenda",
     "financial-stability",
-    "monetary-policy-transmission",
-    "climate-risk"
+    "monetary-policy"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 3,
+    "initial_confidence": 3,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page (index/listing page referencing 'All pages in this section'), which violates Core Rule #5 - reject listing pages",
-      "event_type is 'research_paper' but source is a research agenda index page, not a research paper - misclassification",
-      "No publication date provided - freshness cannot be assessed",
-      "Source contains only broad research topic descriptions with no specific data, findings, or conclusions",
-      "Source is too thin for archiving as it lacks original content, findings, or market-moving information"
+      "source_type is 'listing_page' - per core rule 5, listing pages should be rejected",
+      "event_type 'research_paper' is incorrect - this is a research agenda index page, not a research paper",
+      "Content is thin - only contains high-level topic descriptions without specific findings, data, or publication dates",
+      "No publication date provided - cannot assess recency or staleness",
+      "Source ends with 'All pages in this section' - confirms this is a navigation/index page",
+      "Per core rule 6, container pages and thin low-signal sources bias toward reject",
+      "The record correctly identifies these issues but still assigns 'review_queue' status when rejection is warranted"
     ]
   },
   "human_review": {
@@ -59,5 +62,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_macrofinance_systemic_risk_and_macroprudential_33468d6a8389d319.txt",
-  "notes": "Low-value source: research agenda/outline page rather than actual research output. No publication date, no specific data, no findings. Recommend prioritizing actual ECB working papers, economic bulletins, or financial stability reports from this research area instead. This type of listing/index page provides minimal analytical value for a research archive focused on macro catalysts."
+  "notes": "Source is a research agenda navigation page from ECB listing research areas of interest. Content is thin and contains only high-level topic descriptions without specific findings, data, or publication dates. No market-moving information. Page type suggests this may not be suitable for high-quality archival retrieval—likely a seed crawl capturing index pages rather than substantive research output."
 }

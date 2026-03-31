@@ -1,49 +1,56 @@
 {
   "id": "seed_crawl_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff",
-  "created_at": "2026-03-30T06:40:59.914940+00:00",
+  "created_at": "2026-03-31T19:28:59.226878+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "policy_announcement",
+  "event_type": "market_notice",
   "title": "Statement Regarding the Publication of Reference Rates on Friday, April 3, 2026",
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "",
+    "domain": "newyorkfed.org",
     "published_at": "2026-03-12",
-    "source_type": "official_announcement"
+    "source_type": "seed_crawl"
   },
-  "summary": "The New York Fed announced that TGCR, BGCR, SOFR, and SOFR Averages/Index will not be published on April 3, 2026, due to the March Employment Situation report release coinciding with Good Friday. Repo market participants are expected to treat April 3 as a holiday, with cleared Treasury repo settlement unavailable. The EFFR and OBFR will still be published on April 3 as they follow the NY Fed's separate holiday schedule.",
+  "summary": "The Federal Reserve Bank of New York announced that TGCR, BGCR, SOFR, and SOFR Averages and Index will not be published on Friday, April 3, 2026, due to cleared Treasury repo settlement not being scheduled for that date. The EFFR and OBFR, which follow the NY Fed's holiday schedule, will publish normally on April 3. On Monday, April 6, SOFR and related rates will resume publication.",
   "key_points": [
-    "No publication of TGCR, BGCR, SOFR, or SOFR Averages/Index on April 3, 2026",
-    "Cleared Treasury repo settlement is not scheduled for April 3, eliminating two of three market segments used for Treasury repo reference rates",
-    "EFFR and OBFR will be published on April 3 per NY Fed's holiday schedule",
-    "SIFMA did not recommend full closure of U.S. government securities secondary trading",
-    "On April 6, SOFR will reflect transactions settling April 2 and maturing April 6"
+    "TGCR, BGCR, SOFR, SOFR Averages and Index will not publish on April 3, 2026 due to cleared Treasury repo settlement unavailability",
+    "EFFR and OBFR follow the New York Fed's holiday schedule and will publish on April 3, 2026",
+    "SIFMA did not recommend a full closure of secondary market trading for U.S. government securities on April 3",
+    "Repo market participants broadly expect to treat April 3 as a holiday",
+    "Settlement of cleared Treasury repo is not scheduled for April 3, eliminating two of three market segments used to calculate Treasury repo reference rates",
+    "On April 6, TGCR, BGCR, and SOFR will publish reflecting same-day settling transactions that settle Thursday April 2 and mature Monday April 6"
   ],
-  "why_it_matters": "SOFR is the primary benchmark for trillions of dollars in loans and derivatives. Its temporary non-publication during a major data release demonstrates how critical reference rate infrastructure adapts to market events. The divergence between EFFR/OBFR (published) and repo-based rates (not published) on the same day creates a temporary gap in rate coverage that market participants must account for.",
+  "why_it_matters": "This notice is critical for any market participant using SOFR or related overnight reference rates in derivatives pricing, loan agreements, or risk calculations. The one-day gap in SOFR publication affects daily accrual calculations, fallback provisions, and any contracts tied to these benchmarks. The differential treatment of EFFR/OBFR (published) versus SOFR (not published) on the same day may create basis considerations.",
   "market_impact": {
     "asset_classes": [
-      "bonds",
-      "repo"
+      "bonds"
     ],
     "directional_bias": "neutral",
-    "confidence": 7
+    "confidence": 5
   },
-  "macro_context": "The April 3 reference rate change is directly tied to the March Employment Situation report release, a major monthly macro catalyst. SIFMA's partial market treatment reflects the dual nature of the date as both a federal holiday and a scheduled data release.",
-  "market_structure_context": "The announcement clarifies how reference rate infrastructure handles holiday scheduling when major economic data releases occur. The loss of cleared repo settlement eliminates two of three Treasury repo market segments from rate calculations, affecting SOFR composition.",
+  "macro_context": "",
+  "market_structure_context": "The notice directly addresses the plumbing of reference rate publication, specifically the interdependencies between cleared repo settlement availability and SOFR calculation. It clarifies that the loss of cleared Treasury repo settlement eliminates two of three market segments used in Treasury repo reference rate calculations (TGCR and BGCR). The EFFR and OBFR are explicitly noted to follow a different publication schedule (NY Fed holiday schedule) than SOFR.",
   "important_numbers": [],
   "tags": [
-    "SOFR",
-    "reference_rates",
-    "Federal_Reserve",
-    "repo_market",
-    "holiday_schedule",
-    "NY_Fed"
+    "sofr",
+    "tgcr",
+    "bgcr",
+    "effr",
+    "obfr",
+    "repo-market",
+    "reference-rates",
+    "new-york-fed",
+    "market-structure"
   ],
   "llm_review": {
-    "initial_confidence": 8,
-    "verification_confidence": 9,
+    "initial_confidence": 9,
+    "verification_confidence": 7,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "source.url is empty - URL was not captured in crawl metadata. Domain (newyorkfed.org) was inferred but full URL is missing, violating source attribution completeness requirement.",
+      "summary states rates won't publish 'due to Good Friday and the March Employment Situation report' - this conflates the proximate cause. The source indicates the non-publication is due to cleared Treasury repo settlement unavailability; Good Friday and the employment report are upstream factors that caused that settlement issue. More precise phrasing would be 'due to cleared Treasury repo settlement not being scheduled for April 3.'"
+    ]
   },
   "human_review": {
     "required": false,
@@ -51,5 +58,5 @@
     "notes": "missing_source_attribution"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff.txt",
-  "notes": "Source is high-authority institutional announcement from NY Fed. URL not provided in metadata. The body contains substantive market structure details about reference rate publication procedures during the March Employment Situation release. All key facts are directly supported by source text."
+  "notes": "This is an operational market notice, not a research archive piece. It provides factual information about reference rate publication schedule changes for a specific holiday date. The content is thin but authoritative. Source name and URL not captured in crawl metadata; populated with domain inference."
 }

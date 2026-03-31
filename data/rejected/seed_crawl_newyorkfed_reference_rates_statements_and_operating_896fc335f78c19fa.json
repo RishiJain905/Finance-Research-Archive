@@ -1,55 +1,53 @@
 {
   "id": "seed_crawl_newyorkfed_reference_rates_statements_and_operating_896fc335f78c19fa",
-  "created_at": "2026-03-30T06:49:58.233919+00:00",
+  "created_at": "2026-03-31T19:20:01.128677+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "regulatory_statement",
-  "title": "Reference Rates: Statements and Operating Policies - Federal Reserve Bank of New York",
+  "event_type": "unknown",
+  "title": "Reference Rates: Statements and Operating Policies",
   "source": {
     "name": "Federal Reserve Bank of New York",
-    "url": "",
-    "published_at": "",
+    "url": "https://www.newyorkfed.org/markets/reference-rates-statements",
+    "domain": "newyorkfed.org",
+    "published_at": "2026-03-12",
     "source_type": "listing_page"
   },
-  "summary": "This page is an index/archive listing of statements issued by the Federal Reserve Bank of New York regarding reference rates, spanning from 2015 to 2026. The statements cover SOFR (Secured Overnight Financing Rate), EFFR (Effective Federal Funds Rate), OBFR (Overnight Bank Funding Rate), and Treasury Repo Reference Rates. The page does not contain the substantive content of any individual statement—it only provides dates and titles. This is a navigation/archive index page, not a primary source document.",
+  "summary": "This is a chronological archive index page from the NY Fed listing statements on reference rates (SOFR, EFFR, OBFR, Treasury Repo Reference Rates) spanning 2016–2026. It includes IOSCO compliance statements, publication schedule notices, and SOFR methodology modification announcements. The most recent item (March 12, 2026) is a procedural notice regarding publication on April 3, 2026. No single policy decision or substantive new content is presented on this page; individual statements would need to be archived separately for actionable research value.",
   "key_points": [
-    "This is an index page listing dates and titles of reference rate statements, not the statements themselves",
-    "Covered rate types include SOFR, EFFR, OBFR, and Treasury Repo Reference Rates",
-    "Statements span from January 2015 through March 2026",
-    "Topics include IOSCO compliance, publication schedules, methodology modifications, and historical data updates",
-    "The page is a container/navigation page with no substantive analytical content"
+    "This is a listing/archive page containing an index of 50+ separate statements on reference rate administration from 2015–2026.",
+    "Most recent item: March 12, 2026 notice regarding publication of reference rates on April 3, 2026.",
+    "Notable 2024 items: SOFR methodology modifications announced July 2024 with public comment period and implemented October/November 2024.",
+    "Notable 2020 items: Introduction of SOFR Averages and Index (February–March 2020).",
+    "Historical items include initial publication of Treasury Repo Reference Rates (January–April 2018) and SOFR transition statements (2017–2018).",
+    "All statements are administrative/procedural in nature regarding IOSCO compliance, publication schedules, or methodology updates."
   ],
-  "why_it_matters": "Reference rates administered by the Federal Reserve Bank of New York form the backbone of money market and derivatives pricing. However, this source is merely an index page and does not contain the actual policy content needed for research purposes. Individual statements would need to be retrieved separately for substantive analysis.",
+  "why_it_matters": "SOFR and related reference rates underpin trillions of dollars in derivatives, loans, and securities. This archive documents the evolution of US benchmark rate administration. However, this specific page is an index—each listed statement (SOFR methodology modifications, IOSCO compliance updates, historical rate introductions) warrants individual archival for detailed analysis. The page is useful for locating historical statements but does not itself constitute actionable market intelligence.",
   "market_impact": {
-    "asset_classes": [
-      "bonds",
-      "fx"
-    ],
+    "asset_classes": [],
     "directional_bias": "neutral",
-    "confidence": 1
+    "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "SOFR, EFFR, OBFR, and Treasury Repo Reference Rates are foundational benchmarks for short-term funding markets, derivatives pricing, and transition from LIBOR. However, this source only lists statement titles without providing the actual policy content.",
+  "market_structure_context": "SOFR, EFFR, OBFR, and Treasury Repo Reference Rates are foundational market structure elements. The archive documents administrative evolution of US overnight financing benchmarks. No new market structure changes are announced on this index page. Individual statements on SOFR methodology modifications (July–November 2024) represent substantive market infrastructure updates that may warrant separate archival.",
   "important_numbers": [],
   "tags": [
-    "federal-reserve",
     "sofr",
     "reference-rates",
-    "money-market",
     "ny-fed",
-    "libor-transition",
-    "repo"
+    "iosco-compliance",
+    "market-infrastructure",
+    "treasury-repo",
+    "archive-index"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
+    "initial_confidence": 5,
+    "verification_confidence": 7,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page/index page, explicitly disallowed per Rule 9",
-      "No substantive content - page contains only dates and statement titles, not actual policy content",
-      "Archive value is too low as standalone record - individual statements would need to be retrieved separately",
-      "URL field is blank, preventing source verification",
-      "Source quality is insufficient for research purposes"
+      "source_type is 'listing_page' — per CORE RULES #5, listing pages should be rejected",
+      "event_type is 'unknown' but the content type is clearly 'market_notice' (procedural statements about reference rate publication and methodology)",
+      "The most recent substantive item (March 12, 2026) is merely a one-line procedural notice about a future publication date, not a policy document",
+      "Source URL is present and valid, but this is an index/aggregation page, not an archiveable standalone document"
     ]
   },
   "human_review": {
@@ -58,5 +56,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_reference_rates_statements_and_operating_896fc335f78c19fa.txt",
-  "notes": "Source is a low-quality, container-like page. Per Rule 9, listing pages should be treated as non-archiveable. The page provides no substantive content—it is merely a chronological index of statement titles and dates. To be useful for RAG, individual statements (e.g., the SOFR methodology modifications, IOSCO compliance statements) would need to be retrieved and archived separately."
+  "notes": "Non-archivable as a single record. This is a listing page containing an index of 50+ separate statements. The most recent item (March 12, 2026) states: 'Statement Regarding the Publication of Reference Rates on Friday, April 3, 2026'—a procedural notice. Individual statements about SOFR methodology modifications (2024), IOSCO compliance updates, and historical rate introductions may each warrant separate archival if not already captured. Source domain trust tier: high (NY Fed). Content relevance to market structure: high; content freshness: mix (most recent statement 19 days old, but page aggregates items from 2015–2026)."
 }

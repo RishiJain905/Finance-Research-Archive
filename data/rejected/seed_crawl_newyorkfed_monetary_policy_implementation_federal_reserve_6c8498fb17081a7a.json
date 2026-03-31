@@ -1,64 +1,59 @@
 {
   "id": "seed_crawl_newyorkfed_monetary_policy_implementation_federal_reserve_6c8498fb17081a7a",
-  "created_at": "2026-03-30T06:38:56.006524+00:00",
+  "created_at": "2026-03-31T19:04:34.780532+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "institutional_framework",
-  "title": "Monetary Policy Implementation - Federal Reserve Bank of New York",
+  "event_type": "unknown",
+  "title": "Monetary Policy Implementation",
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "",
+    "domain": "newyorkfed.org",
     "published_at": "",
-    "source_type": "institutional_education"
+    "source_type": "unknown"
   },
-  "summary": "This source explains the Federal Reserve's monetary policy implementation framework, detailing how the FOMC sets policy stance through the federal funds rate target range and how the New York Fed's Open Market Trading Desk executes operations. The framework relies on administered rates (IORB, ON RRP, SRP) to control short-term rates in an ample-reserves regime, supplemented by standing liquidity facilities including the discount window, FIMA Repo Facility, and central bank swap lines. Asset purchases and balance sheet management serve distinct functions: reserves management, policy accommodation, and market functioning support.",
+  "summary": "This is an educational page from the New York Fed describing the general framework for implementing monetary policy, including the mechanisms for controlling the federal funds rate (IORB, ON RRP, SRP), open market operations, and additional liquidity tools. It is not a report of a specific monetary policy decision, data release, or market event.",
   "key_points": [
-    "The federal funds rate is controlled primarily through IORB (interest on reserve balances), which sets a floor under overnight lending rates",
-    "ON RRP (Overnight Reverse Repo) provides a floor under money market rates for ineligible entities; SRP (Standing Repo) provides a ceiling",
-    "The FOMC conducts eight meetings per year and announces target range adjustments; the Effective Federal Funds Rate (EFFR) is published daily as a volume-weighted median",
-    "Asset purchases serve three distinct purposes: reserves management, policy accommodation (easing financial conditions), and market functioning support",
-    "Between June 2022 and November 2025, the FOMC directed balance sheet reduction through limits on reinvestment of maturing securities",
-    "Standing liquidity facilities (discount window, FIMA Repo, currency swaps) provide backup funding channels during market stress"
+    "The Federal Reserve controls the federal funds rate primarily through the interest rate on reserve balances (IORB), which sets a floor for bank lending rates",
+    "Overnight Reverse Repo (ON RRP) operations provide a floor under overnight money market rates for eligible counterparties including money market funds, GSEs, primary dealers, and depository institutions",
+    "Standing Repo (SRP) operations provide a ceiling on overnight money market rates and are expected to be actively used when economically sensible",
+    "The discount window provides liquidity to banks through Primary Credit, available to institutions in generally sound financial condition with eligible collateral",
+    "The FIMA Repo Facility allows approved foreign central banks to enter overnight repo transactions against Treasury securities held at the New York Fed",
+    "The federal funds rate is the interest rate on overnight unsecured transactions between banks for reserve balances held at the Federal Reserve"
   ],
-  "why_it_matters": "Understanding the Fed's implementation framework is essential for market structure analysis because it describes the mechanical plumbing of monetary policy transmission. The interactions between IORB, ON RRP, and SRP create the corridor within which short-term rates fluctuate, directly affecting repo markets, money market funds, and bank funding costs. This framework also clarifies how balance sheet operations (QE, QT) function as distinct tools from rate policy.",
+  "why_it_matters": "This page describes the operational infrastructure that underpins federal funds rate control and market plumbing. Understanding IORB, ON RRP, and SRP mechanics is essential for comprehending how Fed policy decisions transmit to money markets. However, this is educational background material rather than a record of a specific policy event or market development. The source lacks a publication date and URL, limiting its utility as a dated archival record.",
   "market_impact": {
-    "asset_classes": [
-      "bonds",
-      "fx"
-    ],
+    "asset_classes": [],
     "directional_bias": "neutral",
-    "confidence": 5
+    "confidence": 0
   },
-  "macro_context": "The source describes the foundational mechanisms through which FOMC decisions transmit to financial markets, but itself contains no current macro catalysts, policy announcements, or forward guidance. It is institutional documentation of the framework.",
-  "market_structure_context": "Directly relevant to market structure: describes the mechanics of interest rate control in the fed funds market, overnight repo market operations, standing facilities that affect money market structure, and the role of the Desk's operations in maintaining rate targets. The source explains how reserve balances, administered rates, and asset purchases interact to implement policy.",
+  "macro_context": "",
+  "market_structure_context": "This page directly describes market structure elements including: the Fed's administered rates framework (IORB), standing facilities (ON RRP, SRP), the discount window, and FIMA repo facility. It explains how the Desk executes open market operations and how these tools maintain the federal funds rate within the target range.",
   "important_numbers": [
-    8,
-    12,
-    2022,
-    2025
+    "8 meetings per year"
   ],
   "tags": [
     "federal-reserve",
-    "monetary-policy",
+    "monetary-policy-implementation",
+    "market-structure",
     "federal-funds-rate",
-    "IORB",
-    "ON-RRP",
+    "iorb",
+    "on-rrp",
     "standing-repo",
-    "balance-sheet",
-    "open-market-operations",
     "discount-window",
-    "FIMA-repo",
-    "currency-swaps",
-    "ample-reserves",
-    "New-York-fed"
+    "new-york-fed",
+    "desk-operations"
   ],
   "llm_review": {
-    "initial_confidence": 8,
-    "verification_confidence": 8,
+    "initial_confidence": 4,
+    "verification_confidence": 4,
     "verdict": "reject",
     "issues_found": [
-      "URL field is blank in source metadata - domain and institutional attribution are present, but specific page URL is unavailable",
-      "Source is institutional educational content rather than event-driven research; it describes the framework rather than providing current catalysts or market-moving information"
+      "URL is blank - source attribution is incomplete, violating core requirements",
+      "PUBLISHED_AT is blank - cannot verify recency or staleness",
+      "event_type is 'unknown' when a more specific classification is possible for institutional/research documentation",
+      "Source is educational/institutional content rather than a specific policy event, data release, or research finding",
+      "Record lacks a specific publication date, making it difficult to assess archival relevance relative to TODAY (2026-03-31)"
     ]
   },
   "human_review": {
@@ -67,5 +62,5 @@
     "notes": "missing_source_attribution"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_monetary_policy_implementation_federal_reserve_6c8498fb17081a7a.txt",
-  "notes": "Source is institutional educational content from the New York Fed explaining the monetary policy implementation framework. Contains no current policy announcements or market-moving data. The URL field is blank per SOURCE METADATA, which has been honored. The source is authoritative (high domain trust tier) but informational rather than event-driven. Important as foundational market structure reference material for understanding Fed operations."
+  "notes": "Source is an educational page describing the general monetary policy implementation framework. No specific event date, publication date, or market-moving content. Relevance to archive is informational/reference rather than event-driven. Lower confidence due to inability to verify publication date and lack of specific actionable content."
 }

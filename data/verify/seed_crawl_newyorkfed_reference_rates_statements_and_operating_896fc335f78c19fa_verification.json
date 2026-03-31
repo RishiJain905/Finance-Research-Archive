@@ -1,20 +1,18 @@
 {
-  "verification_confidence": 9,
-  "verdict": "reject",
+  "verification_confidence": 7,
+  "verdict": "review",
   "issues_found": [
-    "Source is a listing_page/index page, explicitly disallowed per Rule 9",
-    "No substantive content - page contains only dates and statement titles, not actual policy content",
-    "Archive value is too low as standalone record - individual statements would need to be retrieved separately",
-    "URL field is blank, preventing source verification",
-    "Source quality is insufficient for research purposes"
+    "source_type is 'listing_page' — per CORE RULES #5, listing pages should be rejected",
+    "event_type is 'unknown' but the content type is clearly 'market_notice' (procedural statements about reference rate publication and methodology)",
+    "The most recent substantive item (March 12, 2026) is merely a one-line procedural notice about a future publication date, not a policy document",
+    "Source URL is present and valid, but this is an index/aggregation page, not an archiveable standalone document"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The generated record accurately identifies the source as a non-archivable listing page. No additional review needed - the record's assessment is faithful to the source content.",
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies this as a listing page with high domain trust but low archival value as a single record. The record accurately summarizes the content and appropriately recommends archiving individual statements separately. However, per CORE RULES #5, listing pages should be rejected. Human review needed to determine if this specific aggregation page has any standalone archival value or if the guidance to archive individual statements should be the final recommendation.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This is a chronological archive index page from the NY Fed listing statements on reference rates (SOFR, EFFR, OBFR, Treasury Repo Reference Rates) spanning 2016–2026. It includes IOSCO compliance statements, publication schedule notices, and SOFR methodology modification announcements. The most recent item (March 12, 2026) is a procedural notice regarding publication on April 3, 2026. No single policy decision or substantive new content is presented on this page; individual statements would need to be archived separately for actionable research value.",
+    "why_it_matters": "SOFR and related reference rates underpin trillions of dollars in derivatives, loans, and securities. This archive documents the evolution of US benchmark rate administration. However, this specific page is an index—each listed statement (SOFR methodology modifications, IOSCO compliance updates, historical rate introductions) warrants individual archival for detailed analysis. The page is useful for locating historical statements but does not itself constitute actionable market intelligence.",
+    "market_structure_context": "SOFR, EFFR, OBFR, and Treasury Repo Reference Rates are foundational market structure elements. The archive documents administrative evolution of US overnight financing benchmarks. No new market structure changes are announced on this index page. Individual statements on SOFR methodology modifications (July–November 2024) represent substantive market infrastructure updates that may warrant separate archival."
   }
 }

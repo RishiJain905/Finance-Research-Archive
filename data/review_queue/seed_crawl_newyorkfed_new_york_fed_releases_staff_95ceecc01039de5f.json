@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_new_york_fed_releases_staff_95ceecc01039de5f",
-  "created_at": "2026-03-31T14:01:46.795894+00:00",
+  "created_at": "2026-03-31T19:15:30.942897+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -8,58 +8,57 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/newsevents/news/research/2012/rp120719",
+    "domain": "www.newyorkfed.org",
     "published_at": "2012-07-19",
-    "source_type": "blog_post",
-    "domain": "www.newyorkfed.org"
+    "source_type": "blog_post"
   },
-  "summary": "The Federal Reserve Bank of New York released a 2012 staff report proposing a 'minimum balance at risk' (MBR) mechanism for money market mutual funds to reduce systemic risk and prevent investor runs. The MBR would delay redemption of a small portion of shares for 30 days during fund stress, creating a disincentive to flee and distributing losses more equitably among investors. Note: This record summarizes an announcement of a staff report - the report itself would be the 'research_paper'.",
+  "summary": "The New York Fed released a 2012 staff report proposing a 'minimum balance at risk' (MBR) mechanism to mitigate systemic risks in money market mutual funds. The proposal would delay redemption of a small portion of investor balances by 30 days during fund stress, reducing incentives for investor runs while protecting small investors from bearing disproportionate losses.",
   "key_points": [
-    "The Minimum Balance at Risk (MBR) proposal would set aside a small fraction of each shareholder's recent balance as a portion subject to 30-day delay upon redemption",
-    "The delay ensures redeeming investors remain partially invested long enough to share in portfolio losses or costs from their withdrawals",
-    "The mechanism reduces the 'first to exit gets 100 cents' incentive that currently drives runs on troubled money market funds",
-    "By discouraging redemptions, the proposal helps funds avoid fire sales of assets, reducing contagion risk",
-    "William Dudley, President of the NY Fed, endorsed the proposal and suggested small investors could be exempted as they are less prone to run",
-    "The report is co-authored by staff from the Board of Governors and NY Fed's Research and Markets Groups"
+    "The MBR proposal introduces a small fraction of each shareholder's recent balance that would be set aside and subject to a 30-day delay upon withdrawal",
+    "Under the proposal, investors who redeem during fund stress would share in losses rather than fleeing first with full value, eliminating the current 'first-mover advantage'",
+    "The mechanism aims to reduce contagion risk by preventing fire sales of assets when troubled funds raise cash for redemptions",
+    "Small investors could be exempted from MBR requirements as they are 'less prone to withdraw their money at the first sign of trouble'",
+    "Authors include Patrick McCabe (Board of Governors), Marco Cipriani, Michael Holscher, and Antoine Martin (all New York Fed)",
+    "President William Dudley endorsed the proposal, stating 'further reform of money funds is essential for our nation's financial stability'"
   ],
-  "why_it_matters": "This 2012 research proposal represents early regulatory thinking on addressing money market fund vulnerability, a topic that subsequently led to SEC reforms (2014, 2016) and further changes post-2023. The MBR concept introduced a market structure solution to first-mover advantage problems in MMFs that continue to be relevant for systemic risk discussions. The proposal itself was not adopted in this form but influenced the policy discourse.",
+  "why_it_matters": "The source text states President Dudley endorsed the proposal, saying 'further reform of money funds is essential for our nation's financial stability.' While the source itself does not reference the 2008 crisis or later SEC reforms, the MBR concept discussed here is foundational to thinking about MMF run dynamics and reform proposals. This historical document should be treated as an authoritative source on early Federal Reserve thinking about MMF structural reform.",
   "market_impact": {
-    "asset_classes": [
-      "bonds"
-    ],
-    "directional_bias": "neutral",
+    "asset_classes": [],
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The paper addresses money market fund market structure, specifically the first-mover advantage problem that enabled runs during the 2008 financial crisis. The MBR proposal represents a structural intervention to change redemption incentives at the fund level. This proposal pre-dated the actual SEC reforms that were implemented.",
+  "market_structure_context": "This report directly addresses market structure: money market fund architecture, redemption mechanics, run dynamics, and systemic risk transmission through fire sales. It proposes modifying the fundamental contractual terms of MMF redemptions to change investor behavior during stress. The 'first-mover advantage' problem described (investors fleeing a troubled fund first to get 100 cents on the dollar) is a core market structure issue addressed by the MBR proposal.",
   "important_numbers": [
     "30 days (proposed redemption delay for MBR portion)"
   ],
   "tags": [
     "money-market-funds",
     "mmf-reform",
-    "systemic-risk",
     "minimum-balance-at-risk",
-    "run-prevention",
-    "fed-research",
+    "systemic-risk",
+    "run-dynamics",
+    "new-york-fed",
+    "financial-stability",
     "market-structure"
   ],
   "llm_review": {
-    "initial_confidence": 3,
-    "verification_confidence": 6,
+    "initial_confidence": 7,
+    "verification_confidence": 7,
     "verdict": "review",
     "issues_found": [
-      "event_type 'research_paper' is misleading - the source is a press release announcing a staff report, not the report itself. Should be 'economic_commentary' or 'blog_post'.",
-      "source_type in record is listed as 'blog_post' which is acceptable but the source is more precisely a press release announcing research.",
-      "The summary correctly describes the MBR proposal but overstates the record's nature by implying it IS the research paper rather than an announcement of it."
+      "event_type 'research_paper' is technically incorrect for this source - the source is a press release/news announcement about a research paper, not the paper itself. 'blog_post' or 'economic_commentary' would be more accurate for this specific source.",
+      "The 'why_it_matters' field references 'Reserve Primary Fund breaking the buck' (2008) and 'SEC reforms (2014, 2016)' - these specific historical references are not mentioned in the source text and appear to be LLM-added context beyond what the source provides.",
+      "Record correctly notes the 2012 age but treats this as archival context appropriately."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Minor classification issue - the content is accurate and the record has clear archival value as early MMF reform thinking from 2012. The event_type could be refined but the record is functionally correct."
+    "notes": "Minor issues - event_type classification is debatable but not egregious, and the 'why_it_matters' additions are reasonable historical context even if not verbatim from source. Record is substantively accurate and has clear archival value for MMF reform history."
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_releases_staff_95ceecc01039de5f.txt",
-  "notes": "Source is a 2012 NY Fed blog post announcing a research staff report. Not a current policy document - the MBR proposal represents early thinking on MMF reform that has since evolved through multiple regulatory iterations. Useful as historical record of market structure analysis but should not be treated as current regulatory guidance. SOURCE METADATA 'name' field incorrectly set to 'market structure' - corrected to 'Federal Reserve Bank of New York'.",
+  "notes": "This is a 2012 historical document announcing a research proposal, not current market intelligence. The MBR concept discussed here influenced later SEC money fund reforms but should be treated as archival context rather than actionable analysis. Published 14 years before TODAY - flagged as historical record per Rule 8.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "d040e6cd7e46a3cb683957d79a3820a68f4096c0"
+  "telegram_review_fingerprint": "066de24086fbb70e5b0fb43548bcd9de6ce22c96"
 }

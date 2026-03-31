@@ -1,13 +1,17 @@
 {
-  "verification_confidence": 7,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source body was truncated at 'Do newer hazard models alter physica', preventing verification of the physical risk analysis section and any associated data or conclusions",
+    "Topic classification as 'macro catalysts' is loose; this is climate-related methodological research rather than traditional market-moving catalysts like rate decisions or economic data releases",
+    "Source is ECB staff blog content rather than official ECB policy communication - the record correctly treats it as commentary but this limits its standing as a formal policy reference"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source body truncation prevents full verification; physical risk section not captured. Record is generally accurate and well-sourced but topic classification as 'macro catalysts' may overstate market-relevance. Human review needed to assess whether climate methodological research warrants archive inclusion given the specialized, non-market-moving nature.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "The why_it_matters correctly captures the analytical value but could note this represents ECB staff research methodology rather than official policy findings.",
     "macro_context": "",
     "market_structure_context": ""
   }

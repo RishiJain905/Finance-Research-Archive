@@ -1,23 +1,22 @@
 {
-  "verification_confidence": 10,
+  "verification_confidence": 1,
   "verdict": "reject",
   "issues_found": [
-    "Source is an organizational overview page describing Treasury functions, not a specific macro catalyst or market-moving event",
-    "No published_at date provided, making the content undatable",
-    "Source type is 'organizational_overview' - a background/background institutional page, not an article or analytical report",
-    "Discovery method is 'seed_crawl' indicating broad index crawl rather than targeted document capture",
-    "Content describes general institutional functions without specific numbers, dates, or actionable market intelligence",
-    "No specific macro catalysts present - only institutional descriptions of ongoing government operations",
-    "Source provides no market-moving data, economic releases, policy decisions, or trading-relevant content",
-    "Archive value is too low to justify inclusion as a research record"
+    "Source is a generic organizational/informational page with no specific policy decisions, data points, or market-moving content",
+    "URL field is blank - missing source attribution violates archive requirements",
+    "published_at field is blank - cannot assess recency or archival value",
+    "Source is a container/navigation-type page (seed_crawl of agency overview), not an article or research document",
+    "event_type set to 'unknown' when source contains no classifiable event content",
+    "No actionable content for market structure or macro catalyst analysis - purely background context",
+    "Source content is generic enough to qualify as an agency Wikipedia equivalent"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Record already correctly identifies source as non-archivable. Auto-rejection is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is an organizational overview of the U.S. Department of Treasury's institutional structure and general functions. It describes broad departmental responsibilities including debt management, cash forecasting, financial reporting, and regulatory oversight bodies (FSOC, Federal Insurance Office). The content is descriptive background material about government finance operations, not a specific macro catalyst, market analysis, or actionable research.",
-    "why_it_matters": "This source lacks any specific market-moving content, data releases, policy announcements, or trading-relevant intelligence. It serves only as generic institutional context and does not meet the threshold for a macro catalyst research record.",
-    "macro_context": "No macro catalyst context present. The source describes ongoing institutional operations (quarterly refunding process, routine reporting) but contains no specific policy announcements, data releases, or market-moving events.",
-    "market_structure_context": "The source mentions the Financial Stability Oversight Council (FSOC) as an institutional body but provides no specific regulatory actions, market structure analysis, or trading microstructure insights."
+    "summary": "",
+    "why_it_matters": "This source is not relevant for a finance research archive focused on market structure or macro catalysts. It provides only generic descriptions of Treasury functions without any specific policy decisions, economic data, or actionable market intelligence.",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

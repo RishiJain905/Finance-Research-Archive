@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 9,
-  "verdict": "reject",
+  "verification_confidence": 8,
+  "verdict": "review",
   "issues_found": [
-    "Source is a navigation/listing page - contains no substantive macro catalyst data",
-    "Per Rule 8: navigation_page types must not be accepted",
-    "No economic projections, inflation figures, growth data, or catalyst information present",
-    "Archive value is too low - only provides access points to actual reports",
-    "No specific numerical evidence or analytical content"
+    "URL is blank - cannot verify page location in live web",
+    "source_type correctly identified as listing_page, which triggers CORE RULE #6 rejection",
+    "event_type is 'unknown' - could reasonably be 'monetary_policy_report' given ECB Economic Bulletin content",
+    "PUBLISHED_AT is empty - cannot assess currency against TODAY"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record correctly identifies this as a non-archivable container page. Rule 8 mandate is unambiguous - navigation pages must be rejected regardless of content quality. No human judgment needed.",
+  "human_review_required": true,
+  "human_review_reason": "While the record accurately describes the source as a non-archivable listing page and correctly identifies its limitations, CORE RULE #6 explicitly requires rejection for listing pages. The human reviewer should confirm: (1) whether to reject per rules, or (2) whether archival value exists in documenting the ECB publication framework itself.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a container/listing page for ECB Economic Bulletins, not a specific analytical document. The page describes what the Economic Bulletin is (policy decision basis, released eight times yearly) and lists previous release dates. No actual economic data, projections, inflation figures, growth analysis, or macro catalyst information is contained in this source.",
-    "why_it_matters": "This is a meta-page about ECB publications rather than an actual economic report. It does not contain data suitable for macro catalyst analysis. Per Rule 8, navigation/listing pages must be rejected.",
+    "summary": "This is a navigation/landing page for the ECB Economic Bulletin section, not an actual archived release. The page describes what the Economic Bulletin is (economic and monetary information released eight times yearly, two weeks after each ECB policy meeting) and provides links to download specific issues. No actual economic data, policy analysis, or market-relevant content is present in this source.",
+    "why_it_matters": "This page provides no actionable macro or market information. It is a structural metadata page describing the ECB Economic Bulletin publication framework. Researchers seeking ECB economic analysis should access the specific downloadable issues rather than this landing page. Per CORE RULE #6, listing pages are not archiveable.",
     "macro_context": "",
     "market_structure_context": ""
   }

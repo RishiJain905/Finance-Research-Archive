@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Page type is navigation_page — violates rule 5 (reject for homepage, navigation_page, listing_page, search_page)",
+    "Source contains no substantive FOMC content — only navigation links and search interface",
+    "No publication date provided on the page",
+    "Cannot verify relevance to market structure or macro catalysts without actual FOMC content",
+    "event_type correctly set to 'unknown' but source provides no specific event to classify",
+    "Insufficient for meaningful research archive entry — no transcripts, statements, minutes, or policy content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's self-assessment is accurate and complete. This is a clear reject based on rule 5 (navigation_page) and rule 6 (thin, non-archiveable source). The generated record correctly identified all issues.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a Federal Reserve website navigation/index page that provides access to FOMC historical materials through search and year-based browsing. The page itself contains no specific FOMC transcripts, meeting minutes, rate decisions, or substantive policy content. It merely serves as a portal linking to various Federal Reserve sections including monetary policy, supervision, financial stability, payment systems, and economic research.",
+    "why_it_matters": "This source cannot serve as an archiveable record for market structure or macro catalysts research. It is a web navigation interface that merely provides access pathways to historical FOMC documents. Researchers seeking FOMC transcripts, statements, or minutes must use the linked search tools and select specific years/meetings to retrieve actual content."
+  }
+}

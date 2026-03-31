@@ -2,17 +2,18 @@
   "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "event_type 'economic_commentary' is borderline; 'monetary_policy_report' may be more accurate for this BoE institutional explainer, though neither is clearly wrong",
-    "Source is informational/explanatory rather than original research or commentary, reducing direct utility for macro catalyst tracking",
-    "No current policy announcements or new data; content is historical overview suitable as institutional background"
+    "event_type 'economic_commentary' is imprecise; source is an educational explainer page describing QE mechanics, not original economic research or commentary",
+    "source_type is 'unknown' in metadata; content is educational/informational rather than article-like research or commentary",
+    "Record lacks forward guidance or current policy signals—describes historical QE program and mechanics without providing actionable macro catalyst information",
+    "The page is institutional reference material rather than new research findings; archival value is contextual rather than substantive"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Minor classification uncertainty but no factual errors. The record is accurate and well-structured; auto-routing to review queue is appropriate to confirm event_type classification.",
+  "human_review_required": true,
+  "human_review_reason": "This record is factually accurate and from a high-trust institutional source (BoE). However, the event_type is a loose fit (educational explainer vs. economic commentary), and the source lacks new policy signals or research findings—it is primarily background material. Human review should confirm whether educational explainers meet the archive's relevance threshold for macro catalysts.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Bank of England has published an educational explainer on quantitative easing (QE), describing it as a tool to meet the 2% inflation target by lowering long-term borrowing costs when Bank Rate is constrained. The UK first used QE in March 2009 during the Global Financial Crisis, eventually purchasing £875 billion in UK government gilts and £20 billion in UK corporate bonds, totaling £895 billion. The last QE expansion was announced in November 2020, and quantitative tightening (QT) began in February 2022 as the Bank began reducing its bond holdings.",
+    "why_it_matters": "This Bank of England educational resource provides authoritative institutional context on how QE functions as a monetary policy tool and its historical implementation in the UK. The page explains the mechanics of bond purchases, yield effects, and transmission to broader financial conditions. Key figures confirmed: £895bn total purchases, QT initiated February 2022, and the stated rationale for portfolio unwinding. Note: This source does not provide current policy signals or forward guidance—it is historical and educational in nature.",
+    "macro_context": "The source explains QE's role in the monetary policy framework: when inflation is below target, QE lowers long-term rates to stimulate spending and lift inflation; when inflation is above target, the BoE raises rates and conducts QT. The page notes that QE's effectiveness varied across 'rounds,' with the largest economic impact after the first round (2009), post-Brexit (2016), and early Covid (2020) when markets were stressed. QT's stated purpose is to ensure future QE capacity, not to directly affect rates or inflation.",
+    "market_structure_context": "The source describes the operational mechanics of QE: the BoE creates central bank reserves digitally to purchase bonds from asset managers, which increases bond prices and reduces yields. It explains how lower gilt yields serve as a benchmark rate for other financial products including household mortgages. When QT occurs, bond maturities and sales cause the created money to be withdrawn from the economy. The process affects bond markets, equity valuations, and broader financial conditions through portfolio rebalancing effects."
   }
 }

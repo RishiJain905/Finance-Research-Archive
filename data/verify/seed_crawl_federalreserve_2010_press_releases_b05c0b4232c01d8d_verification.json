@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source_type metadata — explicitly non-archiveable per rule 6",
+    "No standalone archival value; provides only navigation index to individual press releases",
+    "Source name field contains 'macro catalysts' instead of 'Federal Reserve' — field misconfiguration",
+    "Published date is a range (2010-01-01 to 2010-12-31), not a specific date",
+    "No substantive content can be extracted from this listing page for market or macro analysis",
+    "event_type 'unknown' is correct for a listing page, but this page itself has no event to classify"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is accurate and complete. Rejection is straightforward based on listing_page type and lack of archival value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a Federal Reserve website listing page containing all press releases from calendar year 2010, organized chronologically. The page is not a single archiveable document but rather a navigation index pointing to dozens of individual announcements including FOMC statements, enforcement actions, regulatory proposals, and other Fed communications. As a listing page, it is non-archiveable as a standalone document. Individual items referenced would need to be retrieved separately for substantive analysis.",
+    "why_it_matters": "This listing page has no standalone research value. It serves only as a navigation index. Any macro-catalyst or market-structure relevant content would require accessing the individual press releases directly. The 2010 date makes this an historical record of post-financial-crisis Federal Reserve operations.",
+    "macro_context": "The page references several macro-relevant events from 2010 including FOMC policy statements and the extension of central bank liquidity swap facilities, but the listing format provides no substantive details on these items.",
+    "market_structure_context": "The listing includes references to enforcement actions, regulatory proposals (including Volcker Rule and Basel II Advanced Approaches), and the Term Deposit Facility, but provides no specific details due to its listing-page nature."
+  }
+}
