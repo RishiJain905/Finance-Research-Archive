@@ -1,0 +1,59 @@
+{
+  "id": "seed_crawl_federalreserve_2024_press_releases_b1225f0159ffe848",
+  "created_at": "2026-03-31T13:41:05.756792+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2024 Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2024-press.htm",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This is an index page listing Federal Reserve press releases from calendar year 2024. The page contains only titles, dates, and category labels with links to individual press releases—it does not contain substantive content itself. The listed items include FOMC minutes, enforcement actions, banking applications, regulatory policy statements, and other Fed announcements.",
+  "key_points": [
+    "This is a listing page (not an archiveable document)—it contains only titles and dates with links, no substantive content",
+    "Listed items span multiple categories: Monetary Policy (FOMC minutes), Banking and Consumer Regulatory Policy, Enforcement Actions, Orders on Banking Applications, and Other Announcements",
+    "Key FOMC-related items include minutes from meetings on 11/6-7/2024, 9/17-18/2024, and 7/30-31/2024",
+    "Notable enforcement actions include $123.5M fine against Toronto-Dominion Bank for AML violations",
+    "Several discount rate meeting minutes are listed under Monetary Policy category",
+    "The page does not provide actual content of any press release—individual releases must be accessed separately"
+  ],
+  "why_it_matters": "This page serves only as a navigational index. It cannot be used directly as a research source. Individual press releases linked from this page would need to be retrieved and archived separately for substantive research.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "listing-page",
+    "index",
+    "2024",
+    "press-releases",
+    "non-archiveable"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per source metadata — violates Rule 5 requiring rejection of listing pages",
+      "No substantive content to archive — only titles, dates, and category labels with links to individual press releases",
+      "event_type correctly set to 'unknown' since a listing page has no specific event type",
+      "Published_at is empty (no single publication date), which is expected for an index page"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2024_press_releases_b1225f0159ffe848.txt",
+  "notes": "NON-ARCHIVEABLE: This is a listing/index page that provides no substantive content. It only contains titles, dates, and category labels with links to individual Federal Reserve press releases from 2024. The FOMC minutes and other policy-relevant items referenced here would need to be accessed as separate documents. This source should be excluded from the archive and individual releases should be retrieved directly."
+}

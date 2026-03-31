@@ -1,0 +1,66 @@
+{
+  "id": "seed_crawl_newyorkfed_banking_research_data_sets_e9d8a5b59ff28da1",
+  "created_at": "2026-03-31T13:56:18.685885+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Banking Research Data Sets",
+  "source": {
+    "name": "New York Fed Research",
+    "url": "https://www.newyorkfed.org/research/banking_research/datasets",
+    "domain": "www.newyorkfed.org",
+    "published_at": "unknown",
+    "source_type": "listing_page"
+  },
+  "summary": "This page is a listing index of banking research datasets available from the New York Fed, including the CRSP-FRB Link dataset, historical national bank balance sheets (1867-1904), and commercial bank financial statements (1959-2025). The page provides no current market commentary, policy signals, or analysis relevant to market structure or macro catalysts.",
+  "key_points": [
+    "The CRSP-FRB Link dataset connects regulatory identification numbers (RSSD ID) from the National Information Center to CRSP permanent company numbers (PERMCO).",
+    "The Balance Sheets of National Banks dataset covers over 7,000 unique national banks with more than 110,000 annual balance sheets from 1867 to 1904, sourced from OCC call reports.",
+    "The Balance Sheets and Income Statements of Commercial Banks dataset spans 1959 to 2025, constructed from over 2.5 million quarterly financial statements for 24,000 unique banks.",
+    "No publication date or last-updated timestamp is provided for this listing page.",
+    "The page contains no discussion of current market conditions, regulatory changes, or policy implications."
+  ],
+  "why_it_matters": "This resource serves as a data catalog for academic researchers studying historical banking trends. It does not provide actionable market intelligence or current market structure analysis. The datasets are archival in nature and require significant processing to be useful for market research.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The datasets provide foundational banking data that could theoretically support market structure research on bank balance sheet composition and historical banking sector structure, but this listing page does not provide that analysis—only pointers to raw data.",
+  "important_numbers": [
+    "7,000 unique national banks",
+    "110,000+ annual balance sheets",
+    "24,000 unique banks",
+    "2.5 million quarterly financial statements"
+  ],
+  "tags": [
+    "new-york-fed",
+    "banking-data",
+    "research-datasets",
+    "historical-data",
+    "crsp-frb-link",
+    "bank-balance-sheets"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing/index page per source_type field - violates Rule 6 which mandates rejection of listing pages",
+      "event_type incorrectly set to 'research_paper' - this is not a research paper, it's a dataset catalog",
+      "No publication date provided - cannot assess recency",
+      "No content relevant to market structure or macro catalysts - only dataset metadata and descriptions",
+      "Source provides no market commentary, policy analysis, or actionable research findings",
+      "Low archival value for RAG retrieval on stated topic (market structure)",
+      "Source contains only pointers to data, not the data or analysis itself"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "exclude",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_banking_research_data_sets_e9d8a5b59ff28da1.txt",
+  "notes": "Non-archivable listing page. This New York Fed page lists banking research datasets available for download but provides no substantive research content, commentary, or analysis. No publication date is present. The datasets described are historical banking financial data (1867-2025) intended for academic research replication. This page is not useful for RAG retrieval on market structure or macro catalysts as it contains no market commentary or policy analysis."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "seed_crawl_bankofcanada_summary_of_governing_council_deliberations_657b5b4ed41231f2",
+  "created_at": "2026-03-31T14:22:37.802847+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "economic_commentary",
+  "title": "Summary of Governing Council deliberations",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/publications/summary-governing-council-deliberations",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "2026-02-11",
+    "source_type": "publication"
+  },
+  "summary": "The Bank of Canada published a summary of Governing Council deliberations on February 11, 2026, covering the monetary policy decision of January 28, 2026. However, the source body provided contains only metadata—no substantive deliberation content was captured in the crawl.",
+  "key_points": [
+    "Source is a Bank of Canada publication dated February 11, 2026",
+    "Covers the fixed announcement date of January 28, 2026 for Bank of Canada monetary policy",
+    "Content type classified as 'Publications' and 'Summary of deliberations'",
+    "Domain is classified as high trust tier (bankofcanada.ca)",
+    "Actual deliberation content, policy rationale, and decision details are not included in the source body",
+    "Source was discovered via seed_crawl method"
+  ],
+  "why_it_matters": "Monetary policy deliberation summaries from the Bank of Canada provide critical insight into policy rationale, inflation and growth assessments, and rate path decisions. The January 28, 2026 decision would be relevant to macro catalysts, but the actual content is missing from this source.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Bank of Canada Governing Council deliberation summaries typically contain discussion of economic conditions, inflation outlook, growth risks, and the rationale for monetary policy decisions. Without the full content, the macroeconomic context of the January 28, 2026 decision cannot be determined.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "governing-council",
+    "deliberations",
+    "monetary-policy",
+    "canada",
+    "bo-c",
+    "central-bank"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is incorrect: set to 'economic_commentary' but source is a summary of monetary policy deliberations (analogous to FOMC minutes), which maps to 'monetary_policy_report'",
+      "Source body contains only metadata with zero substantive deliberation content - this is a crawl failure, not an intentional extract",
+      "Cannot extract any policy decisions, rate guidance, inflation outlook, growth assessment, or policy rationale from the source",
+      "Record summary and why_it_matters are accurate in noting the thin content, but the event_type error means the record itself is flawed",
+      "No archival value without actual deliberation content"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record correctly identifies the thin content problem but uses wrong event_type; rejection is clear-cut since no substantive content exists to archive"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_summary_of_governing_council_deliberations_657b5b4ed41231f2.txt",
+  "notes": "Source is a Bank of Canada deliberation summary but the source body provided is essentially empty—only metadata is present. The actual content of the Governing Council deliberations (which would include discussion of inflation, growth, policy options, and the rationale for the January 28, 2026 decision) is not included. This appears to be a crawl that captured only the document header/metadata but failed to extract the body content. The metadata is sufficient to identify the source as potentially relevant to macro catalysts, but the record is too thin to archive meaningfully without the full content."
+}

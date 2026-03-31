@@ -1,0 +1,61 @@
+{
+  "id": "seed_crawl_treasury_assistance_for_american_industry_c1f652d42c88e3c0",
+  "created_at": "2026-03-31T14:17:02.422733+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Assistance for American Industry",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/coronavirus/assistance-for-american-industry",
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "This Treasury Department landing page contains only program category headings (Airline and National Security Relief Programs, CERTS Program, Payroll Relief Programs) with no substantive content, dates, figures, or policy details. The source provides no actionable information for financial research.",
+  "key_points": [
+    "Source is a COVID-19 era fiscal support overview page with minimal actual content",
+    "Programs referenced include: Airline and National Security Relief Programs, CERTS Program, and Payroll Relief Programs",
+    "No published date provided; content likely from 2020-2021 pandemic period",
+    "No specific dollar amounts, program parameters, or policy details are stated in the source body",
+    "Page structure suggests this is a navigation or landing page rather than substantive policy documentation"
+  ],
+  "why_it_matters": "Not relevant for market research. This is a thin navigation page from the COVID-era Treasury website with no substantive policy content. No current macro or market catalyst value.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "covid-19",
+    "fiscal-policy",
+    "historical",
+    "airline-relief",
+    "payroll-support",
+    "pandemic-response"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation/landing page (home.treasury.gov/policy-issues/coronavirus/...) - per rule 5, must reject container pages",
+      "Source body content is extremely thin - only contains 3 program category names and brief descriptors, no substantive policy content",
+      "event_type set to 'unknown' but source type is clearly not research content - should be flagged as container page not archived",
+      "No published_at date provided in source metadata - cannot verify recency or historical context",
+      "Source has no archival value for financial research - no specific figures, dates, eligibility criteria, or policy mechanics present",
+      "Source is COVID-era historical content (2020-2021) with no relevance to 2026 macro analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_assistance_for_american_industry_c1f652d42c88e3c0.txt",
+  "notes": "Low-quality source. The source body contains only a few bullet point headings describing COVID-era relief programs. No specific policy details, dates, numbers, or analysis present. This appears to be crawl seed data or a navigation page rather than substantive research content. Not usable for RAG without original source documents."
+}

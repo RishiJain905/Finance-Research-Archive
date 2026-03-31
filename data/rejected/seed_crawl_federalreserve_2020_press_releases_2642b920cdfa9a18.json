@@ -1,0 +1,64 @@
+{
+  "id": "seed_crawl_federalreserve_2020_press_releases_2642b920cdfa9a18",
+  "created_at": "2026-03-31T13:32:23.545185+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2020 Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2020-press.htm",
+    "published_at": "2020-01-01",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This is a listing/index page aggregating all Federal Reserve press releases from calendar year 2020. It contains dozens of distinct announcements spanning monetary policy decisions, enforcement actions, banking regulation, stress tests, lending program updates, and institutional governance matters. The page is non-archiveable as it serves as a navigation index rather than a standalone research document. Individual press releases from this listing would require separate archival treatment.",
+  "key_points": [
+    "This is a listing page (not a single research document), collecting all Fed press releases from 2020 into one index.",
+    "Contains diverse items including FOMC statements, rate decisions, enforcement actions, regulatory proposals, and program announcements.",
+    "Notable macro-relevant items include: FIMA repo facility extension through September 2021, Main Street Lending Program adjustments, swap line extensions, and LIBOR transition statements.",
+    "Historical record: published in 2020, approximately 5+ years prior to TODAY (2026-03-31), making it stale for current market analysis.",
+    "Each individual press release would require separate archival processing as independent documents."
+  ],
+  "why_it_matters": "This listing page serves as a reference index to Federal Reserve communications during 2020. For research purposes, individual press releases should be extracted and archived separately. The page itself is not actionable as a standalone document.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The listing contains multiple items with macro relevance from 2020 including COVID-era emergency lending facility announcements, monetary policy extensions, and regulatory updates. However, these would need to be reviewed as individual documents for accurate macro context.",
+  "market_structure_context": "Some items in the listing touch on market structure: LIBOR transition guidance, payment system data releases, and bank resilience rules. Individual items would require separate analysis.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "listing-page",
+    "2020",
+    "press-releases",
+    "historical",
+    "index",
+    "emergency-lending",
+    "monetary-policy",
+    "banking-regulation"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "PAGE_TYPE violation: source is a listing_page per source metadata, which CORE RULE 6 explicitly requires rejection",
+      "Source has no archival value as a standalone document - it is a navigation index containing links to dozens of separate press releases",
+      "event_type incorrectly set to 'unknown' - listing pages with mixed content do not have a single event type",
+      "source.published_at shows '2020-01-01' which is inaccurate - this is a year-spanning listing page with items dated throughout 2020 (earliest seen 10/7/2020, latest 12/29/2020)",
+      "No individual macro catalyst or market structure content can be extracted from this index format",
+      "The summary and key_points correctly identify the page as non-archiveable, but the record was still submitted for archival rather than properly rejected at intake",
+      "Historical age (2020 vs TODAY 2026-03-31) further compounds lack of current relevance"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2020_press_releases_2642b920cdfa9a18.txt",
+  "notes": "NON-ARCHIVEABLE: This is a listing page (PAGE_TYPE: listing_page) that aggregates all Federal Reserve press releases from 2020. It is not a single research document but rather a navigation index containing dozens of distinct announcements. Individual items within the listing (e.g., FIMA repo extensions, Main Street Lending Program updates, stress test results) would warrant separate archival entries with their own event_type classifications. The source contains mixed content including monetary policy, enforcement actions, banking regulation, and administrative announcements. Historical record from 2020 - significantly stale for current market analysis purposes."
+}

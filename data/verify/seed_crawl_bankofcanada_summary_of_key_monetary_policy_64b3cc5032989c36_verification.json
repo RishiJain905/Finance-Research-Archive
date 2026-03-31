@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type incorrectly set to 'economic_commentary' - source is a raw data table with no commentary, analysis, or narrative. Should be 'data_release_other' or similar factual data category",
+    "Published_at '2026-02' appears to reflect the latest data month rather than an actual publication date - cannot verify currency with certainty",
+    "source_type correctly identified as 'data_page' but the record does not adequately flag this limitation for downstream users - raw data tables have limited RAG value for qualitative research retrieval",
+    "human_review.required is false but event_type misclassification and source_type concerns warrant human judgment on archival fit"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the factual data extraction is accurate and the Bank of Canada source is high-trust-tier official data, the event_type misclassification (data table labeled as 'economic_commentary') is a significant structural issue. Human review needed to determine if this record has sufficient archival value given its low-analytical content and whether event_type should be corrected to 'data_release_other'.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

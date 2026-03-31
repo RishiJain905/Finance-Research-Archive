@@ -1,0 +1,75 @@
+{
+  "id": "seed_crawl_bankofcanada_summary_of_key_monetary_policy_64b3cc5032989c36",
+  "created_at": "2026-03-31T14:23:58.751583+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "economic_commentary",
+  "title": "Summary of key monetary policy variables",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/indicators/key-variables",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "2026-02",
+    "source_type": "data_page"
+  },
+  "summary": "The Bank of Canada publishes a monthly data table of key monetary policy variables including inflation indicators, monetary aggregates, and the overnight rate target. The most recent data point (February 2026) shows the overnight rate target at 2.25%, total CPI at 1.8% (within the 1-3% inflation-control target band), and core inflation measures (CPI-trim, CPI-median, CPI-common) ranging from 2.3% to 2.4%. The data tracks the Bank of Canada's rate path from 0.25% during COVID emergency levels through a peak of 5.00% in 2023-2024, down to the current 2.25%.",
+  "key_points": [
+    "Bank of Canada overnight rate target currently at 2.25% as of February 2026, down from 5.00% peak in mid-2024",
+    "Total CPI inflation at 1.8% in February 2026, within the 1-3% inflation-control target range",
+    "Core inflation measures (CPI-trim: 2.3%, CPI-median: 2.3%, CPI-common: 2.4%) all running above total CPI in latest print",
+    "Bank rate history: 0.25% (2020-2021) → 5.00% (2023-2024) → 2.25% (current), showing full policy normalization cycle",
+    "Canadian Effective Exchange Rate (CEER, 1999=100) at 113.76 as of February 2026, relatively stable near 113-116 range since 2024",
+    "Monetary aggregates M1+ (7.2% YoY) and M2++ (5.9% YoY) show positive but moderating growth as of January 2026"
+  ],
+  "why_it_matters": "This Bank of Canada data compilation is a primary reference for tracking Canadian monetary policy conditions and inflation trajectory. The data shows that the Bank has cut rates significantly from the 2023-2024 peak, with current policy stance appearing modestly accommodative given inflation is near the lower bound of the target band. For CAD traders and fixed income investors, this provides a historical baseline for policy rate evolution; for inflation watchers, the multiple core measures help assess underlying price pressures beyond headline volatility.",
+  "market_impact": {
+    "asset_classes": [
+      "fx",
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The data confirms a completed tightening cycle and subsequent easing for the Bank of Canada. Total CPI at 1.8% is at the lower end of the 1-3% target band, which historically would support further rate cuts, but the data alone does not indicate future policy direction. The convergence of core measures (2.3-2.4%) above headline CPI (1.8%) suggests some residual inflation persistence in underlying components.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "2.25%",
+    "2.2492%",
+    "1.8%",
+    "2.3%",
+    "2.3%",
+    "2.4%",
+    "113.76",
+    "5.00%",
+    "0.25%",
+    "1-3%"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "overnight-rate",
+    "monetary-policy",
+    "cpi-inflation",
+    "core-inflation",
+    "cad",
+    "monetary-aggregates",
+    "data-table"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type incorrectly set to 'economic_commentary' - source is a raw data table with no commentary, analysis, or narrative. Should be 'data_release_other' or similar factual data category",
+      "Published_at '2026-02' appears to reflect the latest data month rather than an actual publication date - cannot verify currency with certainty",
+      "source_type correctly identified as 'data_page' but the record does not adequately flag this limitation for downstream users - raw data tables have limited RAG value for qualitative research retrieval",
+      "human_review.required is false but event_type misclassification and source_type concerns warrant human judgment on archival fit"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "While the factual data extraction is accurate and the Bank of Canada source is high-trust-tier official data, the event_type misclassification (data table labeled as 'economic_commentary') is a significant structural issue. Human review needed to determine if this record has sufficient archival value given its low-analytical content and whether event_type should be corrected to 'data_release_other'."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_summary_of_key_monetary_policy_64b3cc5032989c36.txt",
+  "notes": "This is a statistical data compilation page from the Bank of Canada containing monthly time-series data on key monetary policy variables from approximately 2017 through early 2026. The page provides authoritative raw data on inflation measures, exchange rates, monetary aggregates, and policy rates but contains no analytical narrative, commentary, or policy interpretation. While the data is directly relevant to macro catalysts analysis, the source's value for RAG purposes is limited to factual data retrieval rather than qualitative research insights."
+}

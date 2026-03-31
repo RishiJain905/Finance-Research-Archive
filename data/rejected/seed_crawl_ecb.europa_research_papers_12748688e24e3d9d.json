@@ -1,0 +1,57 @@
+{
+  "id": "seed_crawl_ecb.europa_research_papers_12748688e24e3d9d",
+  "created_at": "2026-03-31T14:31:30.111083+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Research papers",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/pub/research/html/index.en.html",
+    "published_at": "2026-03-31",
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
+  },
+  "summary": "This is a navigation/listing page for ECB research publications, not a specific research document. It categorizes research into working papers, discussion papers, occasional papers, legal working papers, and statistics papers, with links to individual publications. The page does not contain substantive research content itself.",
+  "key_points": [
+    "Page is a category index listing ECB research paper types rather than individual research documents",
+    "Lists five research paper categories: working papers, discussion papers, occasional papers, legal working papers, and statistics papers",
+    "Recent publications referenced include papers on EU Recovery and Resilience Facility, rare earths export controls, severe weather and financial stability, capital market integration, DeFi regulation, and repo market networks",
+    "Page serves as a directory to individual papers rather than containing archiveable research content",
+    "Source is a high-trust domain (ecb.europa.eu) but is structural/navigational in nature"
+  ],
+  "why_it_matters": "This listing page provides access to ECB research but is not itself a research document. Individual papers from this collection would be relevant for macro analysis; this index page is not.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "research",
+    "listing-page",
+    "working-papers",
+    "discussion-papers"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per metadata, violating CORE RULE 5 which mandates rejection of listing, navigation, homepage, and search pages",
+      "No substantive research content present - only a category index with paper titles",
+      "event_type set to 'unknown' which is correct but the underlying issue is that no specific research document exists to classify",
+      "Individual papers listed (e.g., 'Repo market networks: dynamics under financial stress', 'Securities losses and the bank collateral channel of monetary transmission') are the appropriate archival targets, not this index"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_research_papers_12748688e24e3d9d.txt",
+  "notes": "Non-archiveable: This is a listing page (PAGE_TYPE: listing_page) that catalogs ECB research papers rather than containing research content itself. The recent paper titles mentioned (EU RRF institutional quality, rare earths export controls, severe weather and financial stability, repo market networks) are individually accessible documents that would be appropriate for archiving, but this index page should not be treated as a source document. Source quality is high-trust domain but content is navigational. Consider crawling individual paper URLs for substantive research."
+}

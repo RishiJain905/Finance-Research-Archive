@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a thin metadata/crawl seed record with no actual research content",
+    "Source is a container/index page (seed_crawl), not an article or data page",
+    "No macro catalyst or market structure information present",
+    "event_type set to 'unknown' which is technically valid but indicates no actual event was captured",
+    "No published_at date provided in metadata",
+    "Record accurately self-identifies as having no content worth archiving"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is self-evidently a thin metadata seed with no actual content. Both the generated record and source clearly indicate this is not archiveable material. No judgment call is needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

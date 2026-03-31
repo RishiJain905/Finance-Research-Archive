@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page (source_type correctly identified) - contains only an index of links to individual documents, no substantive policy content",
+    "event_type set to 'unknown' - appropriate given the page is not a discrete event but an aggregate index, however this confirms the record lacks a specific FOMC event to archive",
+    "The source has no archival value as a standalone research record - it merely lists metadata about other documents that should be archived individually",
+    "PUBLISHED_AT (2026-02-26) reflects page last update, but content pertains to 2021 FOMC meetings (over 4 years old relative to TODAY 2026-03-31)",
+    "Important numbers [12, 4] in the record are metadata counts from the listing, not substantive market-relevant data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately identifies that this source is a non-archivable listing page, which is the correct conclusion. However, the record itself describes a source with no standalone research value - it only indexes other documents. Per Rule 5 and 6, listing pages should be rejected. The record could serve as metadata about the existence of the index, but individual FOMC statements and projections from 2021 should be archived separately as actual research documents.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

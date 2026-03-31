@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (index of press releases) - violates Core Rule #5 requiring rejection of listing pages",
+    "Source is non-archivable - contains no single document with substantive content, only hyperlinks and dates",
+    "event_type is 'unknown' which is technically correct but the record should acknowledge this is a container page",
+    "Source topic labeled as 'macro catalysts' in metadata is misleading - the listing contains heterogeneous content (enforcement actions, banking applications, FOMC minutes, etc.)",
+    "No published_at date in record, though source metadata indicates 2021 content (over 4 years stale as of 2026-03-31)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record already correctly identifies this as a non-archivable listing page. The verdict is straightforward: reject per Core Rule #5. No additional human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a non-archiveable listing page from the Federal Reserve website containing an index of 60+ press releases from calendar year 2021, covering FOMC minutes, discount rate meeting minutes, enforcement actions, banking applications, and regulatory announcements. No single document or detailed analysis can be extracted from this source.",
+    "why_it_matters": "This listing page serves as a navigation index to Federal Reserve press releases but does not contain archiveable research content. Individual press releases should be accessed and archived separately for substantive information.",
+    "macro_context": "Source is a heterogeneous listing of 2021 Federal Reserve communications - not a single macro catalyst document.",
+    "market_structure_context": "Not applicable - listing page has no market structure content."
+  }
+}

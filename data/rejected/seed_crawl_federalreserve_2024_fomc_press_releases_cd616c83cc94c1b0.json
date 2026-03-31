@@ -1,0 +1,60 @@
+{
+  "id": "seed_crawl_federalreserve_2024_fomc_press_releases_cd616c83cc94c1b0",
+  "created_at": "2026-03-31T13:38:59.243571+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2024 FOMC Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2024-press-fomc.htm",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This is an index page listing all FOMC press releases and economic projections from 2024, including statements from January, March, May, June, July, September, and December, along with projection releases from March, June, and September. The page does not contain the actual statements themselves.",
+  "key_points": [
+    "12/18/2024 - FOMC statement and economic projections",
+    "11/7/2024 - FOMC statement",
+    "9/18/2024 - FOMC statement and economic projections",
+    "7/31/2024 - FOMC statement",
+    "6/12/2024 - FOMC statement and economic projections",
+    "5/1/2024 - FOMC statement",
+    "3/20/2024 - FOMC statement and economic projections",
+    "1/31/2024 - FOMC statement and reaffirmation of longer-run goals and monetary policy strategy",
+    "Contains links to FOMC statements and economic projections, not the actual content"
+  ],
+  "why_it_matters": "This page serves as a historical archive index for 2024 Federal Reserve communications. It documents when key FOMC meetings occurred and what materials were released, but does not provide the substantive policy content. Relevant for understanding the timeline of Fed communications in 2024.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "This page catalogs the timing of 2024 FOMC statements and economic projections, which were significant macro catalysts throughout the year. The statements themselves, not this index, would contain the actual policy decisions and forward guidance that moved markets.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "fomc",
+    "federal-reserve",
+    "monetary-policy",
+    "2024",
+    "listing-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page (index of FOMC press release links), which violates Rule 5 requiring rejection of homepage, navigation_page, listing_page, or search_page",
+      "event_type is 'unknown' - while correctly identified as unknown, listing pages do not fit any valid event_type taxonomy value",
+      "No actual FOMC statement content is present - only links to statements",
+      "Source provides no substantive policy content, only dates and titles of statements"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "notes": ""
+}

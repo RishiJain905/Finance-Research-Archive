@@ -1,0 +1,60 @@
+{
+  "id": "seed_crawl_ecb.europa_monetary_policy_d07fc1075d5687d9",
+  "created_at": "2026-03-31T14:33:11.758951+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Monetary Policy",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/press_conference/visual-mps/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This is a navigation/index page on the ECB website that lists links to visual monetary policy statements from press conferences, spanning dates from March 19, 2026 back to July 2021. The page itself contains no specific monetary policy content, decisions, or analysis—it is an archive index without any embedded policy detail. This page should be rejected per archiving rules as it is a listing_page with no standalone archival value.",
+  "key_points": [
+    "This is a listing/navigation page containing only links to individual visual statements, not the statements themselves.",
+    "The page references visual statements for ECB press conferences on a six-week cycle.",
+    "Dates listed range from March 19, 2026 (most recent) to July 2021 (earliest).",
+    "No specific policy decisions, interest rate changes, or forward guidance is contained in this page.",
+    "The actual visual statement content resides on separate pages not included in this crawl."
+  ],
+  "why_it_matters": "This source has no direct research value as it contains no substantive monetary policy content. It is an index page that would require visiting individual linked pages to access actual ECB policy statements. Per rule 5, listing pages are ineligible for archiving.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "monetary-policy",
+    "visual-statement",
+    "press-conference",
+    "index",
+    "non-archiveable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per source_type classification - violates Rule 5 which mandates rejection for listing pages",
+      "Source contains only links to visual statements with no substantive monetary policy content",
+      "event_type set to 'unknown' when the correct type (monetary_policy_report or rate_decision) would be determinable from actual linked pages",
+      "No policy decisions, interest rate changes, or forward guidance present",
+      "Published_at date missing, which compounds the low-value nature of this listing page",
+      "No archival value as a standalone source per rule 6 (thin low-signal sources bias toward reject)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_monetary_policy_d07fc1075d5687d9.txt",
+  "notes": "Non-archiveable listing page. Contains only links to ECB visual monetary policy statements with no embedded policy content. To capture ECB monetary policy decisions, individual press conference visual statement pages should be crawled directly. The most recent visual statement linked here is dated March 19, 2026."
+}

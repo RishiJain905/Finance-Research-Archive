@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (data series lookup interface) - per CORE RULE 5, such pages must be rejected",
+    "Page contains no actual data, policy content, commentary, or research - only UI elements for querying data series",
+    "No published_at date available to assess recency",
+    "Source has zero standalone archival value - it becomes relevant only when linked to specific queried data",
+    "event_type set to 'unknown' which is acceptable since the correct response is to reject the record entirely",
+    "Archiving this page in isolation would provide no research value to the finance archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a straightforward rejection case. The source is explicitly a listing_page per metadata, contains no substantive content, and per CORE RULE 5 must be rejected. No human review needed - the rules are clear.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 9,
+  "verdict": "accept",
+  "issues_found": [
+    "suggested_status should be 'rejected' instead of 'review_queue' since source_type is listing_page per CORE RULE 5"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies all substantive issues with the source. The listing_page type is unambiguous, and the assessment that the source is non-archivable is accurate. Minor correction to suggested_status needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a chronological index page listing all Federal Reserve press releases from calendar year 2022, including FOMC minutes, regulatory announcements, enforcement actions, banking application approvals, and other Fed communications. It does not contain a single archiveable document but rather serves as a navigation hub to individual press releases.",
+    "why_it_matters": "This page is not directly actionable for market research as it is merely an index. Individual press releases linked from this page would need to be retrieved separately for meaningful analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

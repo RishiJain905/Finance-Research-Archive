@@ -1,0 +1,59 @@
+{
+  "id": "seed_crawl_bankofcanada_banking_and_financial_statistics_7ed24a4338b0c432",
+  "created_at": "2026-03-31T14:20:40.529469+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Banking and financial statistics",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/banking-and-financial-statistics",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "seed_crawl"
+  },
+  "summary": "This is a thin crawl seed record for the Bank of Canada 'Banking and financial statistics' page. The actual page content is not present in this record; only metadata indicating that the page contains month-end statements of assets and liabilities as required by the Bank of Canada Act. The figures for the last two reference periods are noted as preliminary and subject to revision.",
+  "key_points": [
+    "This is a metadata/crawl seed record, not actual source content",
+    "The page would contain Bank of Canada assets and liabilities at month-end (formerly B1)",
+    "Content is governed by the Bank of Canada Act requirements",
+    "Last two reference period figures are preliminary and subject to revision",
+    "No actual balance sheet figures or data are included in this record"
+  ],
+  "why_it_matters": "This record does not contain usable research content. It is only a crawl seed indicating that the Bank of Canada publishes monthly balance sheet data. To extract macro-catalyst-relevant information, one would need to access the actual data tables rather than this metadata record.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "banking-statistics",
+    "balance-sheet",
+    "metadata-record",
+    "no-content"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a thin metadata/crawl seed record with no actual research content",
+      "Source is a container/index page (seed_crawl), not an article or data page",
+      "No macro catalyst or market structure information present",
+      "event_type set to 'unknown' which is technically valid but indicates no actual event was captured",
+      "No published_at date provided in metadata",
+      "Record accurately self-identifies as having no content worth archiving"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "reject",
+    "notes": "The record is self-evidently a thin metadata seed with no actual content. Both the generated record and source clearly indicate this is not archiveable material. No judgment call is needed."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_banking_and_financial_statistics_7ed24a4338b0c432.txt",
+  "notes": "Non-archiveable. This seed_crawl record is a thin metadata record that does not contain the actual banking and financial statistics data. It only indicates that the Bank of Canada publishes month-end balance sheet data. The source name in the template was incorrectly set to 'macro catalysts' (matching TARGET) instead of 'Bank of Canada'. The page_type of 'seed_crawl' suggests an internal crawl classification rather than an actual source type. Recommend re-crawling to capture actual data tables if macro catalyst analysis of Bank of Canada balance sheet is desired."
+}

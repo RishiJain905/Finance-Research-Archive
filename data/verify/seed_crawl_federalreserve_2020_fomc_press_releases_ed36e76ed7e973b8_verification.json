@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (per source metadata and DOMAIN_TRUST_TIER designation), which Core Rule 5 explicitly requires rejecting",
+    "No substantive content—only dates, titles, and category tags for 14 separate documents",
+    "Cannot fulfill archival purpose as a standalone record; individual FOMC statements not included",
+    "event_type correctly set to 'unknown' but the record has no meaningful event to categorize",
+    "published_at is blank—no publication date applies to an index page",
+    "No rate decisions, forward guidance, or policy content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as a non-archivable listing page. Auto-rejection is appropriate per Core Rule 5.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a navigation index page listing 14 FOMC statements from 2020. It contains only dates, titles, and category tags for each press release—no substantive policy content, decisions, or statements. The actual individual statements are separate documents not included here.",
+    "why_it_matters": "This source provides no archiveable policy content. It is a directory page to individual FOMC statements that would need to be fetched separately. The historical 2020 FOMC actions are highly significant (emergency rate cuts, QE programs during COVID), but this page does not contain them."
+  }
+}
