@@ -189,7 +189,7 @@ def call_minimax(prompt_input: str, max_retries: int = 2) -> dict:
     if not api_key:
         raise EnvironmentError("OPENAI_API_KEY is missing. Add it to your .env file.")
 
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    client = OpenAI(api_key=api_key, base_url=base_url, timeout=120.0)
     messages = [
         {
             "role": "system",

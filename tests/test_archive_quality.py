@@ -398,6 +398,69 @@ class VerifierGateTests(unittest.TestCase):
 
         self.assertEqual(updated["status"], "review_queue")
 
+    def test_llm_rejected_record_is_auto_rejected_without_human_review(self):
+        record = {
+            "status": "review_queue",
+            "source": {
+                "name": "BEA News Releases",
+                "url": "https://www.bea.gov/news/schedule",
+                "published_at": "2026-03-01",
+                "source_type": "article",
+            },
+            "llm_review": {
+                "verification_confidence": 4,
+                "verdict": "reject",
+                "issues_found": ["Source is a schedule page with no substantive content"],
+            },
+            "human_review": {"required": False, "decision": "", "notes": ""},
+        }
+        verification = {
+            "verification_confidence": 4,
+            "verdict": "reject",
+            "issues_found": ["Source is a schedule page with no substantive content"],
+            "human_review_required": False,
+            "human_review_reason": "Source has no archival value.",
+            "suggested_status": "rejected",
+            "corrected_fields": {},
+        }
+        metadata = {"PAGE_TYPE": "article", "EXPECTED_LANGUAGE": "en", "DETECTED_LANGUAGE": "en"}
+
+        updated = run_verifier.apply_archive_quality_gate(record, verification, metadata, {})
+
+        self.assertEqual(updated["status"], "rejected")
+        self.assertFalse(updated["human_review"]["required"])
+
+    def test_high_confidence_accepted_with_minor_issue_is_auto_accepted(self):
+        record = {
+            "status": "review_queue",
+            "source": {
+                "name": "Bank of England Markets",
+                "url": "https://www.bankofengland.co.uk/markets/notice-2026-02-10",
+                "published_at": "2026-03-27",
+                "source_type": "market_notice",
+            },
+            "llm_review": {
+                "verification_confidence": 9,
+                "verdict": "accept",
+                "issues_found": ["Minor date discrepancy: source references 10 February 2026 but metadata shows published_at 2026-03-27"],
+            },
+            "human_review": {"required": False, "decision": "", "notes": ""},
+        }
+        verification = {
+            "verification_confidence": 9,
+            "verdict": "accept",
+            "issues_found": ["Minor date discrepancy: source references 10 February 2026 but metadata shows published_at 2026-03-27"],
+            "human_review_required": False,
+            "human_review_reason": "",
+            "suggested_status": "accepted",
+            "corrected_fields": {},
+        }
+        metadata = {"PAGE_TYPE": "market_notice", "EXPECTED_LANGUAGE": "en", "DETECTED_LANGUAGE": "en"}
+
+        updated = run_verifier.apply_archive_quality_gate(record, verification, metadata, {})
+
+        self.assertEqual(updated["status"], "accepted")
+
     def test_clean_allowed_article_is_accepted(self):
         record = {
             "status": "review_queue",

@@ -22,6 +22,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,5 +49,5 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Finalize review: ${{ inputs.record_id }} (${{ inputs.decision }})"
-            git push
+            git push origin HEAD:main
           fi

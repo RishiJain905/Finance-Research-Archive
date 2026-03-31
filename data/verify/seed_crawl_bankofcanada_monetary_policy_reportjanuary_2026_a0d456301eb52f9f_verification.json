@@ -1,15 +1,14 @@
 {
   "verification_confidence": 7,
-  "verdict": "accept",
+  "verdict": "review",
   "issues_found": [
-    "Source URL not provided in metadata - cannot verify direct link to full report",
-    "Published date not provided in metadata",
-    "Source appears to be a landing/index page containing report highlights rather than the full report document, but contains substantive policy content",
-    "Minor fraction representation (1¼% in source vs 1.25% in record) is acceptable rounding"
+    "verification_confidence is incorrectly set to 0 in the record; llm_review.initial_confidence is 7, suggesting the correct value should be 7",
+    "The 90-day threshold calculation in human_review.notes contains a minor factual error: 75 days is correctly within the 90-day window, not 'approximately 75 days before TODAY'",
+    "source.url is empty in source metadata, which is a data quality issue for archival purposes"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "The record content is factually accurate and well-supported by the source, but verification_confidence is inconsistently set to 0 despite initial_confidence of 7. Human review needed to reconcile this scoring discrepancy and verify the record quality. Additionally, the missing source URL should be located if possible from the Bank of Canada domain.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
