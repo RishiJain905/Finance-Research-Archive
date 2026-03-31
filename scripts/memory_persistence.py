@@ -22,6 +22,9 @@ SOURCE_MEMORY_PATH = MEMORY_DIR / "source_memory.json"
 # Config path
 MEMORY_CONFIG_PATH = BASE_DIR / "config" / "memory_config.json"
 
+# Module-level lock shared across all callers for true mutual exclusion
+_file_lock = threading.Lock()
+
 
 def _ensure_memory_dir() -> None:
     """Ensure the memory directory exists."""
@@ -29,8 +32,8 @@ def _ensure_memory_dir() -> None:
 
 
 def _get_lock() -> threading.Lock:
-    """Get a thread lock for atomic file operations."""
-    return threading.Lock()
+    """Get the shared file lock for atomic file operations."""
+    return _file_lock
 
 
 def _load_json_atomic(path: Path) -> dict[str, Any]:

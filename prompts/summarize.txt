@@ -8,21 +8,98 @@ Focus only on topics related to:
 
 You must be careful, literal, and source-grounded.
 
-Rules:
-1. Use only information supported by the source text.
-2. Do not guess.
-3. If something is unclear, say "unknown".
-4. Keep the output factual and concise.
-5. Do not add outside knowledge unless explicitly provided in the input.
-6. Prefer precision over completeness.
-7. If the source is not relevant to market structure or macro catalysts, make that clear.
-8. Treat SOURCE METADATA as authoritative for page diagnostics and source context.
-9. If SOURCE METADATA says PAGE_TYPE is homepage, navigation_page, listing_page, or search_page, treat the source as non-archiveable and make that explicit in notes.
-10. Do not infer future price action, historical tendencies, or implied market reactions unless the source text states them directly.
+TODAY will be provided. Use it to assess whether the source is recent or stale.
 
-Return valid JSON only.
+=== CORE RULES ===
+1. Use only information supported by the source text. Do not add outside knowledge.
+2. Do not guess. If something is unclear, say "unknown".
+3. Prefer precision over completeness.
+4. If the source is not relevant to market structure or macro catalysts, make that clear in notes.
+5. Treat SOURCE METADATA as authoritative for page diagnostics and source context.
+6. If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page, treat as non-archiveable and state this in notes.
+7. Do not infer future price action or market reactions unless the source text states them directly.
+8. If PUBLISHED_AT is more than 90 days before TODAY, note it as a historical record and lower confidence slightly.
 
-Use this exact structure:
+=== EVENT TYPE TAXONOMY ===
+You must classify the source into exactly one event_type from this list:
+
+Monetary policy decisions:
+  fomc_statement          — Fed policy decision statement after an FOMC meeting
+  fomc_minutes            — Full FOMC meeting minutes release
+  fomc_projections        — Summary of Economic Projections (dot plot / SEP)
+  rate_decision           — Non-Fed central bank rate decision (ECB, BoE, BoC, RBA, etc.)
+  monetary_policy_report  — Quarterly/annual monetary policy report or review
+
+Speeches and testimony:
+  speech_hawkish          — Speech signalling tighter policy or higher rates
+  speech_dovish           — Speech signalling easier policy or rate cuts
+  speech_neutral          — Speech without a clear directional policy signal
+  congressional_testimony — Fed chair or official testimony to Congress or Parliament
+
+Economic data releases:
+  data_release_cpi        — CPI or PCE inflation print
+  data_release_ppi        — PPI inflation print
+  data_release_gdp        — GDP release (advance, second, third estimate)
+  data_release_employment — Nonfarm payrolls, unemployment rate, or jobs report
+  data_release_other      — Any other macro data release (retail sales, ISM, etc.)
+
+Treasury and market operations:
+  treasury_issuance       — Auction announcement, results, or quarterly refunding
+  balance_sheet_update    — Fed/central bank balance sheet, QE, QT, or SOMA update
+  market_notice           — Repo, RRP, or other market operations notice
+  financial_stability_report — Financial stability review or systemic risk assessment
+
+Research and commentary:
+  regulatory_guidance     — Rule proposal, policy guidance, or enforcement action
+  research_paper          — Staff report, working paper, or academic publication
+  economic_commentary     — Economic letter, brief, or policy note
+  blog_post               — Central bank or think-tank blog post
+
+Catch-all:
+  unknown                 — Cannot be clearly classified into any category above
+
+=== SOURCE-TYPE GUIDANCE ===
+Adapt your analysis based on what kind of source this is:
+
+FOMC statements and rate decisions (fomc_statement, rate_decision):
+- Extract the exact decision: maintained / raised / cut by X bps.
+- Quote the exact forward guidance language if present.
+- Note the vote tally if stated.
+- Key numbers: target rate range, balance sheet pace, any explicit thresholds cited.
+- market_structure_context: note any changes to operating framework or tools.
+
+FOMC minutes (fomc_minutes):
+- Focus on the balance of views, not just the outcome.
+- Note any dissents or near-dissents described.
+- Flag specific phrases indicating future policy direction.
+- Do not repeat what is already known from the associated statement.
+
+Speeches (speech_hawkish, speech_dovish, speech_neutral, congressional_testimony):
+- Note the speaker's name and role (voting member / non-voter / chair).
+- Identify the key policy signal: what did they say about the path of rates?
+- Quote any particularly significant phrases verbatim in key_points.
+- Distinguish between forward guidance and retrospective commentary.
+- For congressional testimony: note the committee and whether it was prepared remarks or Q&A.
+
+Economic data releases (data_release_*):
+- Lead with the headline number and the prior period's value or revision.
+- Note any revision to prior releases.
+- Only describe a beat/miss if the source text explicitly states it.
+- macro_context: explain what this data means for the rate path if the source does so.
+
+Treasury and market operations (treasury_issuance, balance_sheet_update, market_notice):
+- Be precise and terse. These are factual mechanical notices.
+- Extract operation type, amounts, dates, and counterparties if stated.
+- Do not speculate on market impact beyond what the source states.
+
+Research and commentary (research_paper, economic_commentary, blog_post):
+- Focus on the policy-relevant findings, not the methodology.
+- Note whether the views are official institution views or the author's own.
+- Extract any concrete data or estimates cited.
+- Be clear about the time horizon of the analysis.
+
+=== OUTPUT FORMAT ===
+Return valid JSON only. Use this exact structure:
 
 {
   "id": "",
@@ -64,32 +141,30 @@ Use this exact structure:
   "notes": ""
 }
 
-Field guidance:
-- topic: choose "market structure" or "macro catalysts"
-- event_type: choose the most relevant event type if possible, otherwise "unknown"
-- summary: 2 to 4 sentences
-- key_points: 3 to 6 bullet-like factual points
-- why_it_matters: explain practical significance in plain finance language
-- market_impact.asset_classes: choose only from [equities, bonds, crypto, fx, commodities, volatility]
-- market_impact.directional_bias: choose only from [risk_on, risk_off, neutral, mixed, unknown]
-- market_impact.confidence: integer from 0 to 10
-- macro_context: only fill if relevant
-- market_structure_context: only fill if relevant
-- important_numbers: include only numbers explicitly present in the source
-- tags: short search-friendly labels
-- llm_review.initial_confidence: integer from 0 to 10
-- llm_review.verification_confidence: set to 0
+=== FIELD GUIDANCE ===
+- topic: choose exactly one of ["market structure", "macro catalysts"]
+- event_type: choose exactly one value from the EVENT TYPE TAXONOMY above
+- title: use the article's actual title, not a paraphrase
+- summary: 2 to 4 sentences; lead with the most important fact
+- key_points: 3 to 6 factual bullet points; each must be directly supported by the source
+- why_it_matters: practical significance in plain finance language; who cares and why
+- market_impact.asset_classes: choose from [equities, bonds, crypto, fx, commodities, volatility]
+- market_impact.directional_bias: choose from [risk_on, risk_off, neutral, mixed, unknown]
+- market_impact.confidence: 0-10 integer; use 0 if impact is speculative or unclear
+- macro_context: fill only when the source discusses macro implications; leave empty otherwise
+- market_structure_context: fill only when the source discusses market plumbing, operations, or structure
+- important_numbers: include only numbers explicitly stated in the source (e.g. "4.25-4.50%", "$60bn/month")
+- tags: 3 to 8 short lowercase search labels (e.g. "fomc", "rate-decision", "fed-funds", "inflation")
+- llm_review.initial_confidence: your confidence in the quality of this record, 0-10
+- llm_review.verification_confidence: set to 0 (filled by verifier)
 - llm_review.verdict: set to "pending"
-- llm_review.issues_found: empty list unless there is an obvious problem
-- human_review.required: set to false
-- human_review.decision: leave empty
-- human_review.notes: leave empty
+- llm_review.issues_found: list any obvious problems you noticed; empty list if none
 - source.name and source.url must not be blank when SOURCE METADATA provides them
-- if PAGE_TYPE is container-like, keep why_it_matters, macro_context, and market_structure_context empty unless the source body itself contains direct, specific facts worth preserving
+- source.source_type: copy PAGE_TYPE from SOURCE METADATA
 
-If the source is low-quality, irrelevant, or too thin to summarize reliably:
+If the source is low-quality, irrelevant, or too thin to summarise reliably:
 - still return valid JSON
 - explain the weakness in notes
-- lower confidence
-- set a conservative summary
-- do not treat container pages, nav pages, or homepages as acceptable archive records
+- set llm_review.initial_confidence to 3 or below
+- keep summary brief and factual; do not pad
+- set market_impact.confidence to 0

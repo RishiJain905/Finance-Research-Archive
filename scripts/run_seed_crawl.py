@@ -441,12 +441,12 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
     else:
         # Step 2: Score
         print(f"\n[Pipeline] Step 2: Scoring {len(deduped_candidates)} candidates...")
+        scored_candidates = []
         for candidate in deduped_candidates:
-            candidate = score_candidate(candidate)
-            score = candidate.get("candidate_scores", {}).get("total_score", 0)
-            print(f"  - {candidate['candidate_id']}: score={score}")
-
-        scored_candidates = deduped_candidates
+            scored = score_candidate(candidate)
+            score = scored.get("candidate_scores", {}).get("total_score", 0)
+            print(f"  - {scored['candidate_id']}: score={score}")
+            scored_candidates.append(scored)
 
     if filter_by_score is None:
         print("[Pipeline] Shared filtering module not available. Skipping filter.")

@@ -9,8 +9,11 @@ Dependencies:
 - Uses scripts/discovery_providers.py for page content fetching (if needed)
 """
 
+import io
 import json
 import re
+import warnings
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
@@ -18,6 +21,10 @@ from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
+
+# BeautifulSoup emits non-critical Unicode replacement warnings on some pages;
+# suppress them so they don't pollute pipeline output.
+warnings.filterwarnings("ignore", category=UserWarning, module="bs4")
 
 from scripts.candidate_utils import (
     BASE_DIR,
@@ -163,28 +170,56 @@ def should_fetch_page(title: str, snippet: str, required_terms: list[str]) -> bo
 # ============================================================================
 
 
-def fetch_and_extract_text(url: str) -> Optional[str]:
-    """
-    Fetch page content and extract article text.
+def _extract_pdf_text(content: bytes) -> Optional[str]:
+    """Extract plain text from raw PDF bytes using pypdf.
 
     Args:
-        url: URL to fetch
+        content: Raw PDF file bytes.
 
     Returns:
-        Extracted article text, or None if fetch fails
+        Concatenated page text, or None if extraction fails or yields nothing.
+    """
+    try:
+        import pypdf
+
+        reader = pypdf.PdfReader(io.BytesIO(content))
+        pages = [page.extract_text() or "" for page in reader.pages]
+        text = " ".join(pages)
+        text = re.sub(r"\s+", " ", text).strip()
+        return text if len(text) > 100 else None
+    except Exception:
+        return None
+
+
+def fetch_and_extract_text(url: str) -> Optional[str]:
+    """Fetch page content and extract article text.
+
+    Handles both HTML pages and PDF documents. PDFs are detected by URL
+    suffix or the Content-Type response header and extracted via pypdf.
+
+    Args:
+        url: URL to fetch.
+
+    Returns:
+        Extracted article text, or None if fetch or extraction fails.
     """
     try:
         response = requests.get(url, headers=FETCH_HEADERS, timeout=FETCH_TIMEOUT)
         response.raise_for_status()
 
-        # Parse HTML
+        content_type = response.headers.get("Content-Type", "").lower()
+        is_pdf = url.lower().endswith(".pdf") or "application/pdf" in content_type
+
+        # --- PDF path ---
+        if is_pdf:
+            return _extract_pdf_text(response.content)
+
+        # --- HTML path ---
         soup = BeautifulSoup(response.content, "html.parser")
 
-        # Remove script and style elements
         for element in soup(["script", "style", "nav", "header", "footer", "aside"]):
             element.decompose()
 
-        # Try to find main content
         article = None
         for selector in [
             "article",
@@ -202,18 +237,14 @@ def fetch_and_extract_text(url: str) -> Optional[str]:
             if article:
                 break
 
-        # Fall back to body
         if not article:
             article = soup.find("body")
 
         if not article:
             return None
 
-        # Extract text and clean
         text = article.get_text(separator=" ")
-        # Normalize whitespace
         text = re.sub(r"\s+", " ", text).strip()
-
         return text if text else None
 
     except Exception:
@@ -224,15 +255,21 @@ def fetch_candidate_content(candidate: dict[str, Any]) -> Optional[dict[str, Any
     """
     Fetch article content for a candidate and save to disk.
 
-    Fetches the URL from the candidate's source.url, extracts text,
-    and saves to data/raw/<candidate_id>.txt. Updates raw_text_path
-    on the candidate dict.
+    Strategy (in order):
+    1. Direct HTTP fetch + BeautifulSoup extraction.
+    2. Fallback to Tavily's pre-cached raw_content if the direct fetch fails
+       (e.g. paywalls, JS-rendered pages, bot-blocked domains).
+
+    Saves extracted text to data/raw/<candidate_id>.txt and updates
+    raw_text_path on the candidate dict.
 
     Args:
-        candidate: Candidate dict with source.url and candidate_id
+        candidate: Candidate dict with source.url, candidate_id, and
+                   optionally tavily_content (carried from search result).
 
     Returns:
-        Updated candidate dict with raw_text_path set, or None if fetch failed
+        Updated candidate dict with raw_text_path set, or None if both
+        fetch methods failed or content was too short to be useful.
     """
     url = candidate.get("source", {}).get("url")
     candidate_id = candidate.get("candidate_id")
@@ -240,7 +277,17 @@ def fetch_candidate_content(candidate: dict[str, Any]) -> Optional[dict[str, Any
     if not url or not candidate_id:
         return None
 
+    # --- Strategy 1: direct HTTP fetch ---
     text = fetch_and_extract_text(url)
+    content_source = "http"
+
+    # --- Strategy 2: Tavily cached content fallback ---
+    if not text:
+        tavily_content = candidate.get("tavily_content", "")
+        if tavily_content and len(tavily_content.strip()) > 200:
+            text = tavily_content.strip()
+            content_source = "tavily_cache"
+
     if not text:
         return None
 
@@ -254,6 +301,7 @@ def fetch_candidate_content(candidate: dict[str, Any]) -> Optional[dict[str, Any
         candidate["raw_text_path"] = str(raw_text_path)
         candidate["metadata"] = candidate.get("metadata", {})
         candidate["metadata"]["page_fetched"] = True
+        candidate["metadata"]["content_source"] = content_source
         candidate["metadata"]["content_length"] = len(text)
 
         return candidate
@@ -263,25 +311,39 @@ def fetch_candidate_content(candidate: dict[str, Any]) -> Optional[dict[str, Any
 
 def fetch_candidate_contents(
     candidates: list[dict[str, Any]],
+    max_workers: int = 6,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """
-    Fetch content for multiple candidates.
+    """Fetch content for multiple candidates in parallel.
+
+    Uses a thread pool to fire HTTP requests concurrently, reducing total
+    wall-clock time from O(n * timeout) to roughly O(timeout) for a batch.
 
     Args:
-        candidates: List of candidate dicts to fetch content for
+        candidates: List of candidate dicts to fetch content for.
+        max_workers: Max concurrent fetch threads (default 6).
 
     Returns:
-        Tuple of (successfully_fetched, failed_to_fetch) candidates
+        Tuple of (successfully_fetched, failed_to_fetch) candidates.
+        Order within each list is non-deterministic due to parallelism.
     """
-    successfully_fetched = []
-    failed_to_fetch = []
+    successfully_fetched: list[dict[str, Any]] = []
+    failed_to_fetch: list[dict[str, Any]] = []
 
-    for candidate in candidates:
-        result = fetch_candidate_content(candidate)
-        if result:
-            successfully_fetched.append(result)
-        else:
-            failed_to_fetch.append(candidate)
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_candidate = {
+            executor.submit(fetch_candidate_content, candidate): candidate
+            for candidate in candidates
+        }
+        for future in as_completed(future_to_candidate):
+            original = future_to_candidate[future]
+            try:
+                result = future.result()
+            except Exception:
+                result = None
+            if result:
+                successfully_fetched.append(result)
+            else:
+                failed_to_fetch.append(original)
 
     return successfully_fetched, failed_to_fetch
 
@@ -442,6 +504,9 @@ def build_candidate_from_result(
     url = result.get("url", "")
     snippet = result.get("snippet", "")
     source_domain = result.get("source_domain", extract_domain(url))
+    # Carry Tavily's pre-cached content so fetch_candidate_content can use it
+    # as a fallback when the direct HTTP request fails.
+    tavily_content = result.get("tavily_content", "")
 
     if not url or not title:
         return None
@@ -517,6 +582,7 @@ def build_candidate_from_result(
         "anchor_text": snippet,
         "raw_html_path": "",
         "raw_text_path": "",
+        "tavily_content": tavily_content,
         "metadata": {
             "http_status": 200,
             "content_type": "text/html",
