@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/index page per source_type field - violates Rule 6 which mandates rejection of listing pages",
+    "event_type incorrectly set to 'research_paper' - this is not a research paper, it's a dataset catalog",
+    "No publication date provided - cannot assess recency",
+    "No content relevant to market structure or macro catalysts - only dataset metadata and descriptions",
+    "Source provides no market commentary, policy analysis, or actionable research findings",
+    "Low archival value for RAG retrieval on stated topic (market structure)",
+    "Source contains only pointers to data, not the data or analysis itself"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut rejection per Rule 6. The source is explicitly a listing_page providing no substantive research content, analysis, or market-relevant commentary. The generated record already correctly identifies this as a non-archivable listing page with human_review.decision='exclude'.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is a listing index of banking research datasets available from the New York Fed, including the CRSP-FRB Link dataset, historical national bank balance sheets (1867-1904), and commercial bank financial statements (1959-2025). The page provides no current market commentary, policy signals, or analysis relevant to market structure or macro catalysts.",
+    "why_it_matters": "This resource serves as a data catalog for academic researchers studying historical banking trends. It does not provide actionable market intelligence or current market structure analysis. The datasets are archival in nature and require significant processing to be useful for market research.",
+    "market_structure_context": "The datasets provide foundational banking data that could theoretically support market structure research on bank balance sheet composition and historical banking sector structure, but this listing page does not provide that analysis—only pointers to raw data."
+  }
+}

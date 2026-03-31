@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'research_paper' but source is a press release announcing a research article, not the paper itself",
+    "TOPIC/TARGET metadata specifies 'market structure' but source content is about household financial stability and housing sector leverage — this is macroprudential research, not market structure (trading venues, market plumbing, clearing/settlement, execution mechanics)",
+    "Source is a press release summarizing research findings, not the full research paper with methodology and data",
+    "Record correctly notes the source is stale (June 27, 2018, ~7 years 9 months old)"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Topic classification mismatch requires human decision: the source TARGET/TOPIC says 'market structure' but content is about household leverage and financial stability, which is macroprudential research rather than market structure. Additionally, event_type should likely be changed from 'research_paper' to 'economic_commentary' since this is a press release announcing research, not the paper itself. Human review needed to determine if topic should be reclassified and if this source has sufficient archival value given the age and topic mismatch.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The New York Fed released a research article titled 'Tracking and Stress-Testing U.S. Household Leverage' examining household debt-to-value ratios in the housing sector. The study finds that leverage was low before 2006, rose rapidly through 2012, and fell back toward pre-crisis lows by early 2017 as home prices recovered. Stress tests project that the household sector remains vulnerable to severe house-price declines, though it has become steadily less risky in recent years.",
+    "why_it_matters": "This research provides insights into household sector vulnerability to housing market shocks, relevant for financial stability assessments and macroprudential policy. Understanding leverage concentrations helps policymakers evaluate systemic risk in the housing finance system.",
+    "macro_context": "This is a historical research announcement from June 27, 2018 (~7 years 9 months old). The findings about household leverage during the post-crisis recovery period represent important historical analysis but are not directly applicable to current market conditions. The research examines housing equity as a component of borrower wealth and their ability to withstand economic shocks.",
+    "market_structure_context": "This source does not address market structure topics such as trading venue operations, market plumbing, clearing and settlement, or execution mechanics. The focus is on household balance sheet composition and housing sector financial stability — a macroprudential concern rather than market structure."
+  }
+}

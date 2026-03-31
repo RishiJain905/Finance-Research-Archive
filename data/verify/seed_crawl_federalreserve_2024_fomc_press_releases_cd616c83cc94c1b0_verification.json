@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (index of FOMC press release links), which violates Rule 5 requiring rejection of homepage, navigation_page, listing_page, or search_page",
+    "event_type is 'unknown' - while correctly identified as unknown, listing pages do not fit any valid event_type taxonomy value",
+    "No actual FOMC statement content is present - only links to statements",
+    "Source provides no substantive policy content, only dates and titles of statements"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

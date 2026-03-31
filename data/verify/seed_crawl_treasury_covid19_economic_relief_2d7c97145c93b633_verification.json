@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a policy hub/navigation page (policy-issues/coronavirus), not a substantive document - violates Rule 5 and 6",
+    "event_type 'economic_commentary' is incorrect - content is promotional/retrospective marketing material, not economic commentary",
+    "published_at is missing from source metadata, preventing age assessment per Rule 8",
+    "Source has no current market relevance - purely historical retrospective on COVID relief programs",
+    "Content is thin and high-level: mostly links to other documents with promotional language, no specific data points or policy signals",
+    "Source lacks archival value for market structure or macro catalyst analysis per Rule 6"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-reject is appropriate given multiple clear violations: source is a policy hub page, event_type is incorrect, and content lacks market relevance or archival value for the stated purpose.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Treasury Department policy hub page aggregates information about American Rescue Plan programs with no current market relevance, forecasts, or policy signals. It contains promotional retrospective content and links to impact reports rather than substantive research or data.",
+    "why_it_matters": "This source provides no actionable information for current market participants. It is a retrospective policy summary page with no forward-looking guidance or current economic indicators.",
+    "macro_context": "The source discusses historical COVID-19 fiscal relief impact (mortgage delinquency prevention, workforce investments) but provides no current macroeconomic data relevant to rate decisions or economic outlook.",
+    "market_structure_context": "No market structure or trading-relevant content present."
+  }
+}

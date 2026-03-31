@@ -1,0 +1,55 @@
+{
+  "id": "seed_crawl_bankofcanada_browse_publications_d76a25b5f6ebef54",
+  "created_at": "2026-03-31T10:00:13.167558+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Browse publications - Bank of Canada",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/publications/browse",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "This source is a Bank of Canada publications browse page listing. The source body contains only a single metadata entry referencing a Summary of Governing Council deliberations from January 28, 2026 decision dated February 11, 2026. The actual deliberations content is not present in the source body.",
+  "key_points": [
+    "Source is a publications listing page, not the actual deliberations document",
+    "Only one publication referenced: Summary of Governing Council deliberations for January 28, 2026 fixed announcement date",
+    "Publication date stated as February 11, 2026",
+    "No substantive policy content included in the source body"
+  ],
+  "why_it_matters": "This listing page does not contain the actual monetary policy deliberations content. A separate direct link to the specific deliberations document would be needed for archival.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "listing-page",
+    "no-content",
+    "publications"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a publications listing/browse page (listing_page) — per Core Rule 5, reject container pages",
+      "Source body contains only metadata referencing a deliberations document, not the actual deliberations content",
+      "Cannot extract any policy details, rate decisions, or forward guidance from the source body",
+      "No archiveable substantive content present"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_browse_publications_d76a25b5f6ebef54.txt",
+  "notes": "Non-archiveable listing page. Source body contains only minimal metadata referencing a Bank of Canada Summary of Governing Council deliberations. The actual deliberations document content is not included. Unable to extract policy information, rate decisions, or forward guidance. Recommend finding and crawling the direct publication URL."
+}

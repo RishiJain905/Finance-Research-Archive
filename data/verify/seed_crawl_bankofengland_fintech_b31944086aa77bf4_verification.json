@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/overview hub page, not a standalone research document - explicitly prohibited under CORE RULE 5",
+    "No publication date provided in source metadata",
+    "Source contains only high-level descriptions linking to other documents; no specific findings, data points, or policy decisions",
+    "Event type correctly set to 'unknown' as page does not fit any taxonomy category",
+    "Topic labeled 'macro catalysts' but source lacks any market-moving content or specific macro catalyst information",
+    "No actionable market intelligence present - page is institutional index to other publications"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection is appropriate because the source is definitively a navigation page (prohibited under CORE RULE 5). The generated record accurately identifies this issue and correctly recommends rejection. No human judgment needed for this clear-cut case.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Bank of England overview page summarizes the institution's approach to fintech innovation, covering artificial intelligence, distributed ledger technology, and quantum computing in UK financial services. The page is a navigation hub linking to various publications, speeches, and initiatives rather than a standalone research document with specific findings.",
+    "why_it_matters": "This page provides context on the Bank of England's regulatory approach to emerging technologies but does not contain specific macro catalysts or market-moving information. It serves as an index to various BoE fintech work rather than a source of actionable market intelligence.",
+    "market_structure_context": "The page references several market infrastructure initiatives including the Digital Securities Sandbox for DLT-based securities settlement, the DLT Innovation Challenge for wholesale central bank settlement, and RTGS (Real-Time Gross Settlement) modernization. However, these are described at a high level without specific operational details."
+  }
+}

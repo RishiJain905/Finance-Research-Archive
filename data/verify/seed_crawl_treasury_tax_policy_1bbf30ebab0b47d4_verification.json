@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/listing page (source_type correctly identified) - per Rule 5, such pages must be rejected",
+    "No publication date provided in source metadata",
+    "No substantive content: page describes Office of Tax Policy functions but contains no specific policy announcements, data releases, or market-moving information",
+    "event_type set to 'unknown' which is appropriate given the page type, but also confirms lack of specific event classification",
+    "Source is too thin to have archival value as a standalone record"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a Treasury Department navigation page describing the Office of Tax Policy's general functions, including developing tax policies, reviewing regulations, negotiating treaties, and providing fiscal estimates. It links to supporting documents such as the Greenbook, tax expenditure tables, and international tax agreements, but does not contain specific policy announcements or macro catalyst events.",
+    "why_it_matters": "This page serves as an institutional directory rather than a source of actionable macro catalyst information. While tax policy can influence markets, this navigation page does not contain specific policy proposals or fiscal data that would constitute a market-moving event.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "seed_crawl_bankofengland_news_and_minutes_433ce8a261e2c551",
+  "created_at": "2026-03-31T10:33:41.119415+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "News and minutes",
+  "source": {
+    "name": "Bank of England",
+    "url": "https://www.bankofengland.co.uk/news/news",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.bankofengland.co.uk"
+  },
+  "summary": "This is a navigation/listing page from the Bank of England website with no actual content. The page shows zero results and was last updated February 1, 2024. No macro catalyst information is present.",
+  "key_points": [
+    "Source is a navigation/listing page with no actual news content",
+    "Page displays zero results under 'Latest news, publications and events'",
+    "No publication dates or content available for any items",
+    "Last updated February 1, 2024, making this stale (over 90 days old)"
+  ],
+  "why_it_matters": "This source contains no archiveable content. It is a site navigation page that directs to other pages but provides no actual data, commentary, or policy information on its own.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-england",
+    "navigation-page",
+    "no-content",
+    "stale"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing/navigation page with no substantive content (0 results displayed)",
+      "Page last updated 01 February 2024, making it stale (over 2 years old)",
+      "No actual macro catalyst, policy, or market structure information present",
+      "event_type set to 'unknown' - appropriate given no content to classify, but source itself fails Rule 5 listing_page rejection criteria",
+      "No published_at date available - correctly noted in record"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofengland_news_and_minutes_433ce8a261e2c551.txt",
+  "notes": "Source metadata indicated macro catalysts topic, but the actual page content is a navigation shell with no substantive information. The page last updated 01 February 2024, which is over 90 days before TODAY (2026-03-31), making it stale. Zero results displayed. Per Rule 6, listing_page should be treated as non-archiveable."
+}

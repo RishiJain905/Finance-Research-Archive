@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE is listing_page - violates CORE RULE 6 which mandates rejection for listing pages",
+    "event_type incorrectly set to 'research_paper' - source is a catalog/index, not a research paper",
+    "No substantive research content provided - only titles, authors, and dates",
+    "No publication date for the page itself; revision dates span 2006-2017 making content historical and stale relative to TODAY (2026-03-31)",
+    "Cannot extract actionable market data, key findings, or research content from this source",
+    "Individual reports require separate retrieval - this source has no archival value on its own"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record itself correctly identifies this as a listing_page and acknowledges the content is non-archiveable. No subjective judgment needed - CORE RULE 6 explicitly requires rejection of listing pages. The event_type 'research_paper' is factually wrong and should be flagged.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is an index/catalog of revised staff reports from the Federal Reserve Bank of New York, listing titles, authors, original release dates, and revision dates (spanning 2006-2017). It does not contain full text of any individual report, key findings, or actionable data. The page itself has no publication date.",
+    "why_it_matters": "This catalog page has no standalone archival value. Individual research reports must be accessed separately to obtain substantive content. The listing covers market structure topics including dealer balance sheets, Treasury market microstructure, repo markets, and bond liquidity—but provides only metadata, not research.",
+    "market_structure_context": "While the catalog references market-structure-relevant papers (SR 796, SR 803, SR 758, SR 381), this source provides only bibliographic metadata. No research content, data, or analysis is present for archival.",
+    "event_type": "listing_page"
+  }
+}

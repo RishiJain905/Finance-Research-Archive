@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is an institutional page describing research collaboration processes, not an article or research document",
+    "Source type is seed_crawl, indicating a discovery crawl rather than a targeted document retrieval",
+    "Page content is purely administrative/informational (how to contact researchers, PhD internship program details, data access policies)",
+    "No financial market data, policy signals, economic analysis, or market structure content present",
+    "event_type set to 'unknown' is correct, but the record should be rejected rather than marked as unknown"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source clearly fails relevance criteria. The record accurately identifies the content as institutional and irrelevant, but the appropriate action is reject rather than pending review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This page does not meet archive relevance criteria. It is an institutional page about research collaboration processes at the Bank of England, describing PhD internship programs and data access policies. Contains no market structure information, macro catalyst data, monetary policy content, or financial market analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

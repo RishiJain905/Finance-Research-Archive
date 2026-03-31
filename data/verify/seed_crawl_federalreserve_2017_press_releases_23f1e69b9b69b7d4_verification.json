@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing page containing multiple unrelated press releases, not a single focused document",
+    "source_type correctly identified as 'listing_page' which triggers automatic rejection per Rule #5",
+    "event_type set to 'unknown' which is appropriate given listing page has no single event, but also indicates no archiveable content",
+    "Source provides no substantive analysis, data, or research - only index entries requiring separate access",
+    "Published date 2017 (approximately 9 years old) well exceeds 90-day staleness threshold",
+    "Cannot extract meaningful market structure or macro catalyst signals from an index page",
+    "Record correctly identifies source as 'Non-archiveable listing page' but this should result in rejection, not review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is a listing page per PAGE_TYPE guidance (Rule #5) which requires rejection. No human review needed - the record itself acknowledges the source is non-archiveable and is a 'listing/navigation index'. The generated record should have been rejected automatically.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a chronological listing page of all Federal Reserve press releases from calendar year 2017, aggregating diverse content including FOMC statements, rate decisions, enforcement actions, banking applications, regulatory proposals, and organizational announcements. The page is not a single archiveable document but rather a navigation index. This source should be rejected as it is a listing page per verification rules.",
+    "why_it_matters": "Listing pages should not be archived as primary documents. Individual press releases from 2017 (FOMC statements, rate decisions, enforcement actions, etc.) should be sourced separately for actual research value. This index page serves only as a finding aid.",
+    "macro_context": "This listing page references standard 2017 FOMC statements and releases but contains no substantive macro analysis itself. Specific policy decisions from 2017 are not contained in this index page.",
+    "market_structure_context": "This listing page references some market structure relevant items (repo reference rates, Regulation M/C changes, Payment System Risk Policy proposals) but these require accessing individual linked press releases for actual content."
+  }
+}

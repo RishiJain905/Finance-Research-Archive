@@ -1,0 +1,60 @@
+{
+  "id": "seed_crawl_ecb.europa_decisions_statements_accounts_f68b3766d4e31858",
+  "created_at": "2026-03-31T10:05:19.853136+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Decisions, statements & accounts",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/mopo/decisions/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "This page is a navigation/landing page for ECB monetary policy decisions that contains only general explanatory content about how the ECB's monetary policy framework works. It describes the three key policy rates (deposit facility, main refinancing operations, marginal lending facility) and various monetary policy tools (TLTROs, asset purchases, negative rates, forward guidance) but does not contain any specific current decisions, statements, or data.",
+  "key_points": [
+    "Page is a navigation hub with links to decisions, statements, and accounts rather than the actual content",
+    "Describes ECB's three key rates: deposit facility rate, main refinancing operations rate, and marginal lending facility rate",
+    "Explains that since March 2024, the ECB steers monetary policy through the deposit facility rate",
+    "Mentions short-term money market rates should evolve in the vicinity of the deposit facility rate",
+    "Lists historical monetary policy tools: central bank loans, negative interest rates, TLTROs, asset purchases, and forward guidance",
+    "No specific current interest rates, decisions, or economic data are provided on this page"
+  ],
+  "why_it_matters": "This source has no immediate market relevance as it contains only educational content about the ECB's monetary policy framework. It does not contain any current policy decisions, rate levels, or specific guidance that could serve as a macro catalyst. This is a structural reference page, not a news or decision source.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page explains the ECB's operating framework including the deposit facility rate as the primary steering rate since March 2024, and describes how short-term money market rates should evolve near the deposit facility rate with tolerance for volatility. This represents the ECB's monetary policy transmission mechanism.",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "monetary-policy",
+    "navigation-page",
+    "explanatory-content",
+    "euro-area",
+    "policy-rates"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation/landing page (navigation_page) - per CORE RULE 6, archive must reject container and navigation pages",
+      "No published_at date in source metadata - cannot assess content recency",
+      "event_type is set to 'unknown' but correct type is also unknowable since no specific event is documented",
+      "Source contains only general explanatory content about ECB monetary policy framework - no specific decisions, rate levels, or statements",
+      "Source has no market catalyst value as it lacks actionable macro information"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_decisions_statements_accounts_f68b3766d4e31858.txt",
+  "notes": "SOURCE_TYPE is navigation_page per DOMAIN_TRUST_TIER and content structure. This page contains only links and general educational content about ECB monetary policy framework. No specific decisions, statements, or current policy data present. Published_at date not provided - cannot assess recency. Recommended for exclusion from archive as it does not contain actionable macro catalyst information. If retained, should be tagged as reference material only."
+}

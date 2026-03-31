@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'regulatory_guidance' given the source clearly describes Bank of England/PRA regulatory policy framework",
+    "source_type is 'unknown' but should be 'regulatory_guidance'",
+    "published_at is empty - no publication date provided to assess currency or archival value",
+    "Source is informational overview content describing regulatory framework, not a dated publication with specific policy decision or market-moving information",
+    "Topic mismatch: TARGET is 'macro catalysts' but source covers operational resilience policy (cyber security, third-party risk, incident reporting) which is regulatory/infrastructure content, not macro catalysts",
+    "Source does not contain market-moving information, economic data, or policy decisions with clear market impact",
+    "Source appears to be an ongoing overview/hub page rather than a specific research paper, statement, or dated publication"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear rejection criteria met: topic mismatch (operational resilience vs macro catalysts), event_type missing when correct type is obvious, and source is informational overview content without market-moving specifics or dated publication",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

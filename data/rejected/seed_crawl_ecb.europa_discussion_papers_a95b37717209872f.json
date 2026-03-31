@@ -1,0 +1,58 @@
+{
+  "id": "seed_crawl_ecb.europa_discussion_papers_a95b37717209872f",
+  "created_at": "2026-03-31T10:06:15.115164+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Discussion papers",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/research-publications/discussion-papers/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This is a landing/index page for ECB Discussion Papers, not an individual research document. The page contains only a generic description of what discussion papers are—research-based publications covering policy topics—without any specific paper titles, findings, or actionable data.",
+  "key_points": [
+    "ECB Discussion Papers are research-based publications covering topics relevant to policy",
+    "Papers place analysis in the wider context of existing literature and address topics from a policy viewpoint",
+    "Papers 1-20 were originally published as part of the ECB Working Paper Series",
+    "Discussion Papers are available online only",
+    "Views expressed are those of the author(s) and do not necessarily reflect ECB official positions"
+  ],
+  "why_it_matters": "This page has no standalone research value. It is a navigation index that would need to be followed to access individual discussion papers. As a source for the archive, it provides no specific macro catalyst information, data points, or policy signals.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "discussion-papers",
+    "research",
+    "listing-page",
+    "no-content"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per source_type classification - Rule 5 mandates rejection for listing pages",
+      "event_type set to 'unknown' but source contains no event-type-specific content to classify",
+      "Source has no publication date in metadata",
+      "No specific research findings, data points, or policy signals present - only generic series description",
+      "Source is a navigation index with no standalone archival value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_discussion_papers_a95b37717209872f.txt",
+  "notes": "NON-ARCHIVABLE SOURCE: This is a listing/index page for ECB Discussion Papers. The page contains only a generic description of the discussion paper series with no specific research findings, data, or policy signals. Individual papers would need to be crawled separately for actual archive content. Page type classified as listing_page per source-type guidance."
+}

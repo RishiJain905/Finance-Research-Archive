@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is incorrect: set to 'economic_commentary' but source is a summary of monetary policy deliberations (analogous to FOMC minutes), which maps to 'monetary_policy_report'",
+    "Source body contains only metadata with zero substantive deliberation content - this is a crawl failure, not an intentional extract",
+    "Cannot extract any policy decisions, rate guidance, inflation outlook, growth assessment, or policy rationale from the source",
+    "Record summary and why_it_matters are accurate in noting the thin content, but the event_type error means the record itself is flawed",
+    "No archival value without actual deliberation content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies the thin content problem but uses wrong event_type; rejection is clear-cut since no substantive content exists to archive",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Bank of Canada published a summary of Governing Council deliberations on February 11, 2026, covering the monetary policy decision of January 28, 2026. However, the source body provided contains only metadata—no substantive deliberation content was captured in the crawl.",
+    "why_it_matters": "Monetary policy deliberation summaries from the Bank of Canada provide critical insight into policy rationale, inflation and growth assessments, and rate path decisions. The January 28, 2026 decision would be relevant to macro catalysts, but the actual content is missing from this source.",
+    "macro_context": "Bank of Canada Governing Council deliberation summaries typically contain discussion of economic conditions, inflation outlook, growth risks, and the rationale for monetary policy decisions. Without the full content, the macroeconomic context of the January 28, 2026 decision cannot be determined.",
+    "market_structure_context": ""
+  }
+}

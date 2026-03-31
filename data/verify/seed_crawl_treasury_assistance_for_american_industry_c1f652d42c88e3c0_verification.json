@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/landing page (home.treasury.gov/policy-issues/coronavirus/...) - per rule 5, must reject container pages",
+    "Source body content is extremely thin - only contains 3 program category names and brief descriptors, no substantive policy content",
+    "event_type set to 'unknown' but source type is clearly not research content - should be flagged as container page not archived",
+    "No published_at date provided in source metadata - cannot verify recency or historical context",
+    "Source has no archival value for financial research - no specific figures, dates, eligibility criteria, or policy mechanics present",
+    "Source is COVID-era historical content (2020-2021) with no relevance to 2026 macro analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately characterizes the source's fatal flaws. Source is a thin navigation page with no substantive content. No human review needed - clear reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Treasury Department landing page contains only program category headings (Airline and National Security Relief Programs, CERTS Program, Payroll Relief Programs) with no substantive content, dates, figures, or policy details. The source provides no actionable information for financial research.",
+    "why_it_matters": "Not relevant for market research. This is a thin navigation page from the COVID-era Treasury website with no substantive policy content. No current macro or market catalyst value.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

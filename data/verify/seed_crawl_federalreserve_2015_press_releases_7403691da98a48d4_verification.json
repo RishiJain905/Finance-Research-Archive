@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE is listing_page — non-archiveable per core rules (Rule 5)",
+    "Source is a container/aggregate page containing hundreds of separate press releases, not a single research document",
+    "Cannot assign meaningful event_type to a listing index (correctly set to 'unknown')",
+    "Cannot extract actionable market_impact or macro_context from a listing page",
+    "Source content is approximately 10+ years stale (2015 vintage), far exceeding the 90-day relevance threshold",
+    "Mixed content types (FOMC statements, banking applications, enforcement actions, regulatory proposals) lack coherence as a single research note"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is already correctly assessed. This is a clear-cut rejection case where the source is a listing page per explicit core rules, and the generated record has correctly identified this issue and recommended reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

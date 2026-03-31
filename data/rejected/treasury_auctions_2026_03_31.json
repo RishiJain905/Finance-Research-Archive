@@ -1,0 +1,61 @@
+{
+  "id": "treasury_auctions_2026_03_31",
+  "created_at": "2026-03-31T14:43:40.959372+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Treasury Securities Auctions Data Placeholder",
+  "source": {
+    "name": "Treasury Securities Auctions Data",
+    "url": "",
+    "domain": "treasury_fiscal_data",
+    "published_at": "",
+    "source_type": "placeholder"
+  },
+  "summary": "This source is a placeholder note indicating that Treasury Securities Auctions Data has not yet been fetched from treasury_fiscal_data. No actual auction data, results, or specifications are provided. Real data would need to replace this snapshot before any market structure analysis can be performed.",
+  "key_points": [
+    "Source is a placeholder snapshot, not actual Treasury auction data",
+    "No auction dates, sizes, or results are provided",
+    "The text explicitly states 'Next we can replace this with real dataset/API fetches'",
+    "Target topic is Treasury Securities Auctions Data under market structure"
+  ],
+  "why_it_matters": "This placeholder provides no actionable information for market structure analysis. Treasury auction data (bid-to-cover ratios, tail sizes, participation rates) is critical for understanding market demand for U.S. debt and potential market structure implications. This record cannot support any research or RAG use cases until real data replaces the placeholder.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The intended target (Treasury Securities Auctions Data) relates to primary market structure, specifically how the Treasury issues debt and how markets absorb that supply. However, this placeholder contains no data on auction mechanics, bidder participation, or dealer behavior that would inform market structure analysis.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "placeholder",
+    "no-data",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a placeholder note with no actual Treasury auction data",
+      "No auction dates, sizes, results, or specifications provided",
+      "Source attribution URL is empty",
+      "PUBLISHED_AT is empty - no publication date available",
+      "Cannot extract any market structure or macro catalyst information from placeholder content",
+      "event_type set to 'unknown' - correct for this source type but confirms lack of categorization",
+      "Source has no archival value - cannot support any research or RAG use cases"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "placeholder_source"
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_03_31.txt",
+  "notes": "Source is a placeholder with no substantive content. The SOURCE METADATA correctly identifies the intended target (Treasury Securities Auctions Data) and topic (market structure), but the source body contains only a single placeholder note. This record is created to document the placeholder status but should not be used for any research or RAG purposes until actual data is retrieved."
+}

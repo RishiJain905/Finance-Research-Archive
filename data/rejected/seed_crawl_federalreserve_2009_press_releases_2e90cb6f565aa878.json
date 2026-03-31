@@ -1,0 +1,65 @@
+{
+  "id": "seed_crawl_federalreserve_2009_press_releases_2e90cb6f565aa878",
+  "created_at": "2026-03-31T09:09:19.070331+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2009 Press Releases",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2009all.htm",
+    "published_at": "2009-01-01 to 2009-12-31",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This page is a historical index listing Federal Reserve press releases from calendar year 2009. It is not a single research document but rather a navigational listing containing links to various press release categories including FOMC statements, enforcement actions, monetary policy announcements, and regulatory actions. The content is stale (over 16 years old) and the page itself is a non-archiveable listing page that does not contain substantive research or analysis suitable for a finance research archive.",
+  "key_points": [
+    "This is a listing page indexing Federal Reserve press releases from January through December 2009",
+    "Contains links to multiple FOMC statements from 2009, a period during the zero lower bound era following the 2008 financial crisis",
+    "Includes Term Auction Facility (TAF) auction results and announcements, relevant to market structure and liquidity operations",
+    "References enforcement actions against various financial institutions, regulatory policy updates, and CRA threshold adjustments",
+    "The page is classified as non-archiveable per source-type guidance for listing pages",
+    "Content is historical (2009) and over 90 days before TODAY (2026-03-31)"
+  ],
+  "why_it_matters": "This source is a low-quality index page from 2009, not suitable for direct archival. Researchers seeking 2009 Fed content would need to access individual press releases linked from this page. The listing provides evidence that Term Auction Facility operations and FOMC statements from 2009 exist as historical records, but the page itself does not contain the substantive content.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page references Term Auction Facility operations ($75 billion 28-day credit auctions, $25 billion 42-day credit auctions) and proposed amendments to Regulation D for a term deposit facility, which were market structure elements of the Fed's crisis response in 2009.",
+  "important_numbers": [
+    "$75 billion (28-day TAF credit)",
+    "$25 billion (42-day TAF credit)"
+  ],
+  "tags": [
+    "federal-reserve",
+    "listing-page",
+    "historical",
+    "2009",
+    "non-archivable",
+    "term-auction-facility",
+    "enforcement-actions",
+    "regulatory-policy"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page, explicitly rejected per CORE RULE 5",
+      "No substantive research content - page is a navigational index linking to individual press releases",
+      "event_type correctly set to 'unknown' but this is because listing pages have no specific event type",
+      "Source is over 16 years old (2009) and contains no single publication date",
+      "Record correctly identifies source as non-archivable but status should be 'rejected', not 'review_queue'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2009_press_releases_2e90cb6f565aa878.txt",
+  "notes": "Non-archiveable listing page. This page indexes Federal Reserve press releases from 2009 but is itself just a navigation/index page. The actual content of interest (FOMC statements, TAF operations, regulatory proposals) exists in linked documents, not this listing. MARKED FOR EXCLUSION from archive - individual press releases from 2009 should be crawled and archived separately if relevant to macro catalysts or market structure."
+}

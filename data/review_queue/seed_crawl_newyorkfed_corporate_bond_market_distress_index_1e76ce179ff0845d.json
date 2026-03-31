@@ -1,0 +1,66 @@
+{
+  "id": "seed_crawl_newyorkfed_corporate_bond_market_distress_index_1e76ce179ff0845d",
+  "created_at": "2026-03-31T09:20:46.024456+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Corporate Bond Market Distress Index",
+  "source": {
+    "name": "New York Fed",
+    "url": "https://www.newyorkfed.org/research/policy/cmdi#/interactive",
+    "published_at": "",
+    "source_type": "interactive_page",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "This New York Fed interactive data tool tracks corporate bond market distress levels, but the crawled content contains only website navigation elements without the actual index values, methodology, or substantive data.",
+  "key_points": [
+    "The source is a New York Federal Reserve research page for the Corporate Bond Market Distress Index (CMDI)",
+    "The crawled content consists only of website navigation, terms of use, and privacy statement references",
+    "No actual CMDI index values, methodology, or current data were captured in this crawl",
+    "The target topic is market structure, which aligns with CMDI's purpose, but the content is insufficient for archival",
+    "Published date was not captured in the crawl",
+    "The URL indicates this is an interactive data visualization tool, which may not render fully in standard web crawlers"
+  ],
+  "why_it_matters": "The Corporate Bond Market Distress Index is a legitimate New York Fed analytical tool for monitoring corporate bond market stress. However, this particular crawl did not capture the actual index data or methodology. Users seeking CMDI data would need to access the page directly through a browser or use an API endpoint that returns the underlying data.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "CMDI is designed to measure distress in the corporate bond market by aggregating multiple indicators of market functioning. However, no actual distress metrics or index values were provided in this crawl.",
+  "important_numbers": [],
+  "tags": [
+    "new-york-fed",
+    "corporate-bonds",
+    "distress-index",
+    "market-structure",
+    "interactive-tool",
+    "data-visualization",
+    "low-quality-crawl"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "pending",
+    "issues_found": [
+      "Crawl captured only navigation text, not actual page content",
+      "No CMDI data, values, or methodology captured",
+      "No publication date provided",
+      "Interactive visualization likely requires JavaScript rendering",
+      "Unable to verify any substantive claims about the index",
+      "This record should not be used for research without re-crawling with a JavaScript-enabled crawler or direct page access"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "reject",
+    "notes": "The crawled content is insufficient for archival purposes. The page is an interactive data visualization tool that requires JavaScript rendering. Recommend re-crawling with a headless browser or accessing the underlying data API directly. The New York Fed does provide CMDI data through other means that should be targeted instead."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_corporate_bond_market_distress_index_1e76ce179ff0845d.txt",
+  "notes": "Low-quality crawl failure. The target page is an interactive visualization tool at the New York Fed. Standard web crawling did not capture the actual index data. The raw_text contains only website boilerplate (terms of use, navigation elements). Topic alignment is correct (market structure) but content is unusable. Recommend finding alternative source for CMDI data, such as the New York Fed's API or static methodology pages.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "1eb0e3d058b021cd7e145f706973be22dab0edc0"
+}

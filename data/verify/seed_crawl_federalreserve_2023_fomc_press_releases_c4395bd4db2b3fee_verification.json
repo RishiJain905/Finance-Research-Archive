@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source_type classification - violates CORE RULE 5",
+    "No substantive policy content present - only links to individual FOMC statements",
+    "event_type is 'unknown' but cannot be meaningfully assigned to a navigation/listing page",
+    "No published_at date provided in source metadata",
+    "Record has no archival value as it does not contain actual FOMC statement text, rate decisions, or policy language",
+    "Researcher guidance in why_it_matters ('researchers must navigate to individual FOMC statements') confirms this is not itself archiveable"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is well-formed and accurately describes the source's nature. The LLM review correctly identifies the critical issue: this is a non-archiveable listing page. No human review needed—the record should be rejected per CORE RULE 5.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This page serves as a directory to 2023 FOMC decisions but does not itself constitute an archiveable policy document. Researchers must navigate to individual FOMC statements for actual policy content. Per CORE RULE 5, listing pages should be rejected in favor of sourceable individual statements.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "seed_crawl_bankofcanada_daily_digest_e331b2771856f7f3",
+  "created_at": "2026-03-31T14:26:22.799543+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Daily Digest",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/daily-digest",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "2026-03-30",
+    "source_type": "data_page"
+  },
+  "summary": "The Bank of Canada's Daily Digest provides a snapshot of key Canadian economic indicators including exchange rates, money market rates, inflation, interest rates, and bond yields for March 27–30, 2026. Most notably, total CPI inflation declined sharply from 2.3% in January 2026 to 1.8% in February 2026, a drop of 0.5 percentage points, with all core inflation measures also declining. The Bank's target overnight rate remained unchanged at 2.25%.",
+  "key_points": [
+    "CPI inflation declined to 1.8% in February 2026 from 2.3% in January 2026, a 0.5 percentage point drop",
+    "Core inflation measures all declined: CPI-trim (2.4% to 2.3%), CPI-median (2.5% to 2.3%), CPI-common (2.7% to 2.4%)",
+    "Bank of Canada target overnight rate held steady at 2.25% (unchanged from prior period)",
+    "USD/CAD rose to 1.3926 from 1.3875, indicating modest CAD weakness",
+    "Canadian government bond yields declined across maturities: 10-year yield fell 5 bps to 3.83%, 3-year yield fell 7 bps to 2.94%",
+    "Prime rate remained at 4.45%"
+  ],
+  "why_it_matters": "The decline in Canadian CPI from 2.3% to 1.8% brings headline inflation below the Bank of Canada's 1-3% control range ceiling. Core inflation measures also declined, moving closer to the 2% target midpoint. The data represents a notable disinflationary development but the source provides no policy commentary or forward guidance.",
+  "market_impact": {
+    "asset_classes": [
+      "fx",
+      "bonds",
+      "commodities"
+    ],
+    "directional_bias": "risk_on",
+    "confidence": 5
+  },
+  "macro_context": "Canadian CPI dropped 0.5 percentage points from January to February 2026. All core measures (trim, median, common) declined. The Bank of Canada's target overnight rate remained at 2.25%. The source is a data snapshot page with no policy interpretation provided.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "2.25% target overnight rate",
+    "1.8% CPI February 2026",
+    "2.3% CPI January 2026",
+    "2.3% CPI-trim February 2026",
+    "2.3% CPI-median February 2026",
+    "2.4% CPI-common February 2026",
+    "1.3926 USD/CAD",
+    "3.83% 10-year Canada bond yield",
+    "2.94% 3-year Canada bond yield"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "canadian-cpi",
+    "inflation",
+    "interest-rates",
+    "overnight-rate",
+    "bond-yields",
+    "cad",
+    "usd-cad"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a data compilation/listing page (Daily Digest) rather than analytical content - lacks commentary or policy interpretation",
+      "why_it_matters contains speculative policy interpretation ('could strengthen the case for Bank of Canada rate cuts ahead') not present in source",
+      "macro_context states 'Bank of Canada may have room to cut rates' as a derived conclusion - this goes beyond raw data presented",
+      "market_impact directional_bias 'risk_on' is interpretive inference, not supported by source"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The inflation data extraction is accurate and the record is relevant for macro research, but key interpretive fields (why_it_matters, macro_context) contain policy speculation about rate cuts that the source does not provide. A human should verify whether these interpretations are acceptable editorial additions or constitute unsupported claims."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_daily_digest_e331b2771856f7f3.txt",
+  "notes": "This is a daily data digest page from the Bank of Canada website, not an analytical document. The page provides raw economic indicator snapshots with no commentary or policy interpretation. The inflation data (CPI declining to 1.8% in February) is the most significant macro catalyst element. Data appears current as of March 30, 2026. Source is relevant for macro catalysts research but lacks analytical framing.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "a76fe8d4412efa8fd944b8063c9e14750e1b58c1"
+}

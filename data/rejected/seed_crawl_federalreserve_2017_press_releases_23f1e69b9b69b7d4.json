@@ -1,0 +1,63 @@
+{
+  "id": "seed_crawl_federalreserve_2017_press_releases_23f1e69b9b69b7d4",
+  "created_at": "2026-03-31T09:13:34.754963+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2017 Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2017-press.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2017-01-01 to 2017-12-31",
+    "source_type": "listing_page"
+  },
+  "summary": "This is a chronological listing page of all Federal Reserve press releases from calendar year 2017, aggregating diverse content including FOMC statements, rate decisions, enforcement actions, banking applications, regulatory proposals, and organizational announcements. The page is not a single archiveable document but rather a navigation index. This source should be rejected as it is a listing page per verification rules.",
+  "key_points": [
+    "Page is a listing/navigation index containing multiple unrelated press releases, not a single focused document",
+    "Contains FOMC statements from December 13, November 1, and October 31, 2017 (with associated projections released December 13)",
+    "Includes enforcement actions, banking application approvals, regulatory proposals, and organizational announcements throughout 2017",
+    "Published by Federal Reserve Board covering the full calendar year 2017",
+    "Several items relate to payments system (repo reference rates, Payment System Risk Policy proposals)",
+    "FOMC minutes referenced: October 31-November 1 meeting (released November 22) and discount rate meeting minutes from October-November 2017"
+  ],
+  "why_it_matters": "Listing pages should not be archived as primary documents. Individual press releases from 2017 (FOMC statements, rate decisions, enforcement actions, etc.) should be sourced separately for actual research value. This index page serves only as a finding aid.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "This listing page references standard 2017 FOMC statements and releases but contains no substantive macro analysis itself. Specific policy decisions from 2017 are not contained in this index page.",
+  "market_structure_context": "This listing page references some market structure relevant items (repo reference rates, Regulation M/C changes, Payment System Risk Policy proposals) but these require accessing individual linked press releases for actual content.",
+  "important_numbers": [],
+  "tags": [
+    "fed",
+    "listing-page",
+    "2017",
+    "fomc",
+    "press-releases",
+    "federal-reserve",
+    "historical"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing page containing multiple unrelated press releases, not a single focused document",
+      "source_type correctly identified as 'listing_page' which triggers automatic rejection per Rule #5",
+      "event_type set to 'unknown' which is appropriate given listing page has no single event, but also indicates no archiveable content",
+      "Source provides no substantive analysis, data, or research - only index entries requiring separate access",
+      "Published date 2017 (approximately 9 years old) well exceeds 90-day staleness threshold",
+      "Cannot extract meaningful market structure or macro catalyst signals from an index page",
+      "Record correctly identifies source as 'Non-archiveable listing page' but this should result in rejection, not review_queue"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2017_press_releases_23f1e69b9b69b7d4.txt",
+  "notes": "Non-archiveable listing page. This is a calendar index of all Federal Reserve press releases for 2017, containing hundreds of unrelated items spanning monetary policy, enforcement, applications, and regulatory matters. Does not contain substantive analysis itself. Published date range is 2017 (historical record, well beyond 90-day relevance window). Recommend archiving individual linked press releases instead of this index."
+}

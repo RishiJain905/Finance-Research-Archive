@@ -1,0 +1,60 @@
+{
+  "id": "seed_crawl_treasury_social_security_and_medicare_trustees_09d64731602a66df",
+  "created_at": "2026-03-31T09:44:58.280674+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Social Security and Medicare Trustees Reports",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/economic-policy/social-security-and-medicare-trustees-reports",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "This Treasury.gov page is a navigation/listing page that describes the structure of Social Security and Medicare Trustees Reports but contains no actual report data, projections, or financial status information. The source body merely explains that the Secretary of the Treasury chairs the Boards of Trustees and that annual reports are issued to Congress. The actual report content (where substantive macro-fiscal data would reside) is not present in this source.",
+  "key_points": [
+    "Page is a navigation/listing page linking to Social Security Report, Medicare Report, and Summary of Both—not the actual reports themselves.",
+    "No financial projections, trust fund balances, solvency dates, or numerical data are present in the source body.",
+    "Describes trustee composition: 6 trustees total (Secretary of Treasury as Chair, Commissioner of Social Security, Secretary of HHS, Secretary of Labor, plus 2 President-appointed public trustees).",
+    "Reports are issued annually to Congress per the source text."
+  ],
+  "why_it_matters": "This source is not useful for macro catalyst research. Fiscal sustainability of Social Security and Medicare is a legitimate macro concern (potential long-term deficits could affect Treasury supply, tax policy, and broader fiscal trajectory), but this listing page contains zero substantive data. Actual trustees reports would need to be retrieved separately for any analytical value.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "social-security",
+    "medicare",
+    "treasury",
+    "trust-funds",
+    "fiscal-policy",
+    "listing-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page with no substantive content - only structural metadata about the trustees reporting process",
+      "No actual trustees report data present (no solvency dates, trust fund balances, projections, or numerical data)",
+      "source_type correctly identified as 'listing_page' which violates Rule #5 (reject listing/navigation pages)",
+      "event_type set to 'unknown' when 'financial_stability_report' would be the correct taxonomy value for actual trustees reports",
+      "published_at is empty/missing",
+      "Thin low-signal source with no archival value per Rule #6",
+      "The real macro-fiscally relevant data exists in linked reports (Social Security Report, Medicare Report), not in this source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_social_security_and_medicare_trustees_09d64731602a66df.txt",
+  "notes": "This source is NOT relevant for macro catalyst research as written. The page describes the existence of annual trustees reports but provides none of the actual report content. The real macro-fiscally relevant data would be in the linked reports (Social Security Report, Medicare Report, Summary of Both). Source should be marked as non-archiveable landing page."
+}

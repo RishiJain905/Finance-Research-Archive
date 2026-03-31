@@ -1,0 +1,63 @@
+{
+  "id": "seed_crawl_bankofcanada_canadian_interest_rates_and_monetary_1283c45b77020709",
+  "created_at": "2026-03-31T14:21:35.578929+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Canadian interest rates and monetary policy variables: 10-year lookup",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/canadian-interest-rates",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "This is a Bank of Canada data lookup interface page that allows users to query historical series for Canadian monetary policy variables including the overnight rate target, bank rate, CORRA, and various interest rates. The page provides no actual data values, policy commentary, or research content—it is solely a tool for accessing time series data.",
+  "key_points": [
+    "Page is a data series lookup interface, not a source of monetary policy information or data itself",
+    "Lists monetary policy variables including: overnight rate target (V39079), bank rate (V39050), CORRA (V122530), operating band, and overnight repo operations",
+    "Includes interest rate series for banker's acceptances (1-month, 3-month), prime corporate paper rates, and estimated variable mortgage rates",
+    "Provides frequency options: daily, weekly, and monthly series with date range selection capabilities",
+    "No specific data values, policy decisions, or commentary are contained on this page",
+    "Published_at date not available for this page"
+  ],
+  "why_it_matters": "This page is not a substantive source for research or market intelligence. It is an administrative data access tool that users would visit to retrieve specific historical interest rate data. For archival purposes, this page has no standalone research value—it becomes relevant only when linked to specific queried data series.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "interest-rates",
+    "data-lookup",
+    "monetary-policy",
+    "overnight-rate",
+    "canada",
+    "time-series",
+    "no-content"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page (data series lookup interface) - per CORE RULE 5, such pages must be rejected",
+      "Page contains no actual data, policy content, commentary, or research - only UI elements for querying data series",
+      "No published_at date available to assess recency",
+      "Source has zero standalone archival value - it becomes relevant only when linked to specific queried data",
+      "event_type set to 'unknown' which is acceptable since the correct response is to reject the record entirely",
+      "Archiving this page in isolation would provide no research value to the finance archive"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page, placeholder_source"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_canadian_interest_rates_and_monetary_1283c45b77020709.txt",
+  "notes": "Source is a Bank of Canada data series lookup tool/interface. The page lists available monetary policy variables and provides UI controls for querying historical data, but contains no actual data values, policy statements, or research content. Per CORE RULE 6, listing_page types should be treated as non-archiveable. This page would only become relevant if specific data queries were archived alongside it. The raw_text captures only the interface elements, not actual financial data. Recommend against archiving this page in isolation."
+}

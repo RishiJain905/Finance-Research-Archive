@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source_type classification - Rule 5 mandates rejection for listing pages",
+    "event_type set to 'unknown' but source contains no event-type-specific content to classify",
+    "Source has no publication date in metadata",
+    "No specific research findings, data points, or policy signals present - only generic series description",
+    "Source is a navigation index with no standalone archival value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies the source as a non-archivable listing page. The verification is accurate and complete - no human decision needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a landing/index page for ECB Discussion Papers, not an individual research document. The page contains only a generic description of what discussion papers are—research-based publications covering policy topics—without any specific paper titles, findings, or actionable data.",
+    "why_it_matters": "This page has no standalone research value. It is a navigation index that would need to be followed to access individual discussion papers. As a source for the archive, it provides no specific macro catalyst information, data points, or policy signals.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

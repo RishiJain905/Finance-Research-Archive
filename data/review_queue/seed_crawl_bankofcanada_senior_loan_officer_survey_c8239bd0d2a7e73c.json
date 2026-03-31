@@ -1,0 +1,73 @@
+{
+  "id": "seed_crawl_bankofcanada_senior_loan_officer_survey_c8239bd0d2a7e73c",
+  "created_at": "2026-03-31T14:19:14.299339+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Senior Loan Officer Survey",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/publications/slos",
+    "published_at": "",
+    "source_type": "unknown",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "The Bank of Canada Senior Loan Officer Survey provides quarterly data on lending practices at Canadian financial institutions. The survey publication was discontinued as of January 1, 2020, but historical data continues to be published quarterly. The latest available data covers Q4 2025, showing a sharp deterioration in household lending conditions while business lending conditions have improved. The survey collects information on price and non-price terms of lending and represents respondent opinions, not necessarily Bank of Canada views. Data available in CSV, JSON, and XML formats.",
+  "key_points": [
+    "Overall household lending conditions turned negative in Q4 2025: mortgage (-5.58) and non-mortgage (-1.73) both declined from Q3 2025 peaks",
+    "Business lending conditions improved to +2.81 in Q4 2025, with business non-price lending conditions at +8.73",
+    "Overall household lending peaked at +19.61 (Q1 2025) and has since declined for three consecutive quarters",
+    "Business price lending conditions remained persistently negative at -3.11 through Q4 2025",
+    "Survey results summarize respondent opinions and do not necessarily reflect Bank of Canada views or policies",
+    "Data is available in CSV, JSON, and XML formats"
+  ],
+  "why_it_matters": "Loan officer surveys are leading indicators of credit availability and bank risk appetite. Deteriorating household lending conditions suggest banks are tightening standards for mortgages and consumer credit, which can precede weaker consumer spending. Improving business lending conditions indicate corporate credit remains accessible, potentially supporting investment. The divergence between household and business credit conditions is relevant for assessing Canada's economic outlook and potential monetary policy transmission.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 3
+  },
+  "macro_context": "The survey data suggests a bifurcated credit environment: households face tightening credit conditions while businesses maintain access to credit. This divergence could signal moderating consumer-led growth while business investment remains supported. The Bank of Canada would monitor these trends as leading indicators of economic momentum.",
+  "market_structure_context": "The survey uses a balance of opinion methodology where positive values indicate loosening of lending standards and negative values indicate tightening. This is consistent with the Federal Reserve's SLOOS (Senior Loan Officer Opinion Survey) methodology, making cross-jurisdictional comparisons meaningful. The data can inform expectations about credit spreads, mortgage demand, and corporate borrowing costs.",
+  "important_numbers": [
+    "Q4 2025 overall household lending conditions: -1.73 (non-mortgage)",
+    "Q4 2025 mortgage lending conditions: -5.58",
+    "Q4 2025 overall business lending conditions: +2.81",
+    "Q4 2025 business non-price lending conditions: +8.73",
+    "Q4 2025 business price lending conditions: -3.11"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "lending-conditions",
+    "loan-officer-survey",
+    "credit-conditions",
+    "household-credit",
+    "business-credit",
+    "canada",
+    "quarterly-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a data table page rather than an article or narrative report - offers raw quantitative data without analysis",
+      "Published_at field is blank - no publication date provided on the source page",
+      "Survey publication discontinued as of January 1, 2020 - the page only publishes data, not new survey reports",
+      "event_type correctly identified as data_release_other"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record has accurate data extraction and correctly notes the survey discontinuation, but the source is a data-only page without narrative content. While the data is authoritative and from a trusted central bank source (Bank of Canada), this is borderline for archival value - it lacks the analytical depth typically expected for research records. Human review should determine if raw data tables without commentary meet the archive's threshold for research records, or if this should be recategorized as a data source rather than a research record."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_senior_loan_officer_survey_c8239bd0d2a7e73c.txt",
+  "notes": "This is a data table page rather than an article or report. The survey itself was discontinued as of January 1, 2020 but the Bank continues to publish the historical data quarterly. The data represents balance of opinion measures where positive values indicate loosening conditions and negative values indicate tightening. Source provides raw tabular data only, no narrative or analysis.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "6b59e4b74f1da7ea001742d1e8867c89fb793003"
+}

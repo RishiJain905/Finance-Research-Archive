@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page (journal landing page index), not an archiveable document per Rule #5",
+    "No specific publication date provided for any content on this listing page",
+    "No actual research content present; only article titles and volume metadata",
+    "event_type incorrectly set to 'unknown' when the correct classification is 'listing_page' (invalid for archiving)",
+    "Source is too thin to have archival value - provides no actionable findings, data, or analysis",
+    "Content is historical (likely 2016-2017 era based on Volume 23), approximately 8-9 years old relative to TODAY"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this as a non-archiveable listing page. No human review needed - auto-reject is appropriate based on source type.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a journal landing page for the New York Fed's Economic Policy Review, serving as an archive index listing research volumes from 1995-2017. No specific article content is provided; only volume/article titles and metadata are available. This is a navigation/listing page, not an archiveable source document.",
+    "why_it_matters": "This source provides no actionable content for research purposes. It is merely a navigation index to a historical journal archive. Individual articles (e.g., 'The Development of the Government Securities Clearing Corporation', 'The Effect of Regular and Predictable Issuance on Treasury Bill Financing') would be appropriate archive candidates if their full texts are available as separate documents.",
+    "market_structure_context": "The page references article titles that touch on market structure topics (Government Securities Clearing Corporation, Treasury bill issuance practices), but no actual content, findings, or data is present in this source.",
+    "macro_context": ""
+  }
+}

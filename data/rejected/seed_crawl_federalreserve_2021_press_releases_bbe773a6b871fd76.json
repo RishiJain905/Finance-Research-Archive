@@ -1,0 +1,62 @@
+{
+  "id": "seed_crawl_federalreserve_2021_press_releases_bbe773a6b871fd76",
+  "created_at": "2026-03-31T13:29:23.330203+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2021 Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2021-press.htm",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This is a non-archiveable listing page from the Federal Reserve website containing an index of 60+ press releases from calendar year 2021, covering FOMC minutes, discount rate meeting minutes, enforcement actions, banking applications, and regulatory announcements. No single document or detailed analysis can be extracted from this source.",
+  "key_points": [
+    "This is a listing page/index, not an individual archiveable document",
+    "Contains links to multiple FOMC minutes releases from 2021",
+    "Contains links to discount rate meeting minutes from 2021",
+    "Contains links to various enforcement actions and banking application approvals",
+    "Contains links to joint agency statements on crypto-asset policy (November 2021)",
+    "Contains link to October 2021 announcement of new rules prohibiting Fed policymakers from purchasing individual securities",
+    "No substantive policy content or analysis is present; only hyperlinks and dates"
+  ],
+  "why_it_matters": "This listing page serves as a navigation index to Federal Reserve press releases but does not contain archiveable research content. Individual press releases should be accessed and archived separately for substantive information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Source is a heterogeneous listing of 2021 Federal Reserve communications - not a single macro catalyst document.",
+  "market_structure_context": "Not applicable - listing page has no market structure content.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "press-releases",
+    "listing-page",
+    "2021",
+    "non-archivable",
+    "fomc-minutes",
+    "enforcement-actions"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page (index of press releases) - violates Core Rule #5 requiring rejection of listing pages",
+      "Source is non-archivable - contains no single document with substantive content, only hyperlinks and dates",
+      "event_type is 'unknown' which is technically correct but the record should acknowledge this is a container page",
+      "Source topic labeled as 'macro catalysts' in metadata is misleading - the listing contains heterogeneous content (enforcement actions, banking applications, FOMC minutes, etc.)",
+      "No published_at date in record, though source metadata indicates 2021 content (over 4 years stale as of 2026-03-31)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2021_press_releases_bbe773a6b871fd76.txt",
+  "notes": "CLASSIFIED AS NON-ARCHIVABLE: This is a listing page/index of Federal Reserve press releases, not an individual research document. Per rule #6, homepage, navigation_page, and listing_page types should be marked as non-archiveable. The most relevant individual items from this listing for macro catalysts research would be the FOMC minutes releases and the joint crypto-asset policy statement, but those should be crawled and archived as separate documents. Source contains 2021 content which is over 4 years old as of TODAY (2026-03-31)."
+}

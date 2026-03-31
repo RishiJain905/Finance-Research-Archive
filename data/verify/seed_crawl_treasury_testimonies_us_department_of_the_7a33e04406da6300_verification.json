@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing page per Rule 5: listing_page source_type confirmed in both source metadata and record",
+    "No substantive policy content: page contains only testimony titles, dates, and speaker names",
+    "Cannot assess macro catalyst relevance or event_type because no policy content is present",
+    "published_at is empty - listing pages have no single publication date",
+    "event_type is 'unknown' - this is correct but also indicates the source lacks enough substance to classify"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as a non-archiveable listing page. Rule 5 requires rejection of listing pages. No human judgment needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a Treasury Department testimonies listing page (index) that aggregates multiple congressional testimonies from Treasury officials between May 2023 and June 2024. The page provides only titles, dates, and speaker names without the full testimony content. The most recent testimony listed is from June 4, 2024, but individual testimony dates range from May 31, 2023 to June 4, 2024.",
+    "why_it_matters": "This listing page has no direct market impact as it contains no substantive policy content. It serves only as an index to individual testimonies that would need to be retrieved separately for research purposes. Users seeking macro catalyst information should access the individual testimony pages directly.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

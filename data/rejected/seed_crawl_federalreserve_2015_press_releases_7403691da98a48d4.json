@@ -1,0 +1,61 @@
+{
+  "id": "seed_crawl_federalreserve_2015_press_releases_7403691da98a48d4",
+  "created_at": "2026-03-31T09:12:21.751300+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2015 Press Releases",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2015all.htm",
+    "published_at": "2015-12-31",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This page is a chronological index listing hundreds of Federal Reserve press releases from calendar year 2015, containing a mix of monetary policy announcements, banking applications, enforcement actions, regulatory guidance, and administrative notices. The page is not a single research document but rather a collection index that should not be archived as one record. Individual FOMC statements from this period (December 16, October 28, and September 17, 2015) would be the appropriate archival units for macro catalysts research.",
+  "key_points": [
+    "This is a listing page containing hundreds of separate press releases, not a single document for archival purposes.",
+    "Individual FOMC statements visible include December 16, October 28, and September 17, 2015.",
+    "The page contains mixed content types: monetary policy (FOMC statements, rate decisions), banking applications, enforcement actions, regulatory proposals, and administrative announcements.",
+    "Content dated 2015 is approximately 11 years stale relative to TODAY (2026-03-31), well beyond the 90-day relevance window."
+  ],
+  "why_it_matters": "This listing page aggregates disparate Fed communications from 2015 and is not suitable as a single research note. Researchers seeking FOMC statements, rate decisions, or other specific Fed actions from 2015 should retrieve the individual press releases directly. The 11-year time gap renders this historical context for current market structure or macro catalyst analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "listing-page",
+    "2015",
+    "historical",
+    "mixed-content",
+    "fomc",
+    "enforcement",
+    "banking-applications"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 10,
+    "verdict": "reject",
+    "issues_found": [
+      "PAGE_TYPE is listing_page — non-archiveable per core rules (Rule 5)",
+      "Source is a container/aggregate page containing hundreds of separate press releases, not a single research document",
+      "Cannot assign meaningful event_type to a listing index (correctly set to 'unknown')",
+      "Cannot extract actionable market_impact or macro_context from a listing page",
+      "Source content is approximately 10+ years stale (2015 vintage), far exceeding the 90-day relevance threshold",
+      "Mixed content types (FOMC statements, banking applications, enforcement actions, regulatory proposals) lack coherence as a single research note"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2015_press_releases_7403691da98a48d4.txt",
+  "notes": "Non-archiveable listing page. This source aggregates hundreds of Fed press releases from 2015 including FOMC statements (Dec 16, Oct 28, Sep 17), banking applications, enforcement actions, regulatory proposals, and administrative notices. Cannot meaningfully extract single event_type, market impact, or macro context from an index. The source is approximately 11 years stale and contains no current relevance. Individual documents should be crawled and archived separately if needed for research purposes."
+}

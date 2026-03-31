@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (navigation/filter interface with zero results) — per Rule 5, listing pages must be rejected",
+    "Source has no substantive content to evaluate for macro catalyst relevance",
+    "event_type correctly set to 'unknown' since no actual event data exists on this page",
+    "Published date is empty — dynamically populated page cannot be reliably timestamped"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Bank of England statistical releases landing page displaying zero current results. The page structure shows filtering options by topic and date range but contains no actual data releases, publications, or substantive content at time of crawl.",
+    "why_it_matters": "This source provides no useable information for the finance research archive. It is a navigation placeholder with no data releases, commentary, or policy content.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

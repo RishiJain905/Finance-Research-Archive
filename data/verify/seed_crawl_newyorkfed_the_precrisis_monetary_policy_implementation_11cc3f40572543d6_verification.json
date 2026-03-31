@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Published date inconsistency: record shows 2017-03-01 but source metadata indicates 'Revised May 2018' - more accurate date would be May 2018",
+    "Source text is thin - contains only abstract/description rather than full paper content; full PDF was not captured in crawl",
+    "Document is historical (2018) - while it has archival value as historical research, it's not current or relevant for near-term policy signals"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Historical research paper with thin source text. The published_at date should likely reflect the May 2018 revision. While the source is relevant to market structure and the summary accurately reflects the available text, the inability to access full paper content limits verification depth. Human review needed to confirm archival value decision given the document's age.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
