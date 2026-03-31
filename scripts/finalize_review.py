@@ -1,7 +1,30 @@
+"""Finalize Review Script.
+
+Finalizes human review decisions for records in the review queue.
+Part of V2.5 Part 7 Human Review Intelligence.
+
+Supports rich feedback decisions with memory routing:
+- approve, reject (binary, backward compatible)
+- approve_but_weak, approve_and_promote (nuanced accepts)
+- bad_source, good_source (source quality feedback)
+- expand_this_topic, suppress_similar_items (topic actions)
+
+Usage:
+    python scripts/finalize_review.py <record_id> <decision> [--notes "text"]
+        [--source-feedback bad_source|good_source] [--topic-feedback expand_this_topic]
+
+Examples:
+    python scripts/finalize_review.py rec_123 approve
+    python scripts/finalize_review.py rec_456 approve_and_promote --source-feedback good_source
+    python scripts/finalize_review.py rec_789 reject --notes "Low quality source"
+"""
+
 import json
 import shutil
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any, Optional
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
@@ -17,27 +40,79 @@ ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
 REJECTED_DIR = BASE_DIR / "data" / "rejected"
 INGESTION_MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 
+# Valid decision types
+VALID_DECISIONS = [
+    "approve",
+    "reject",
+    "approve_but_weak",
+    "approve_and_promote",
+    "bad_source",
+    "good_source",
+    "expand_this_topic",
+    "suppress_similar_items",
+]
 
-def load_json_file(path: Path) -> dict:
+# Decisions that map to accepted status
+ACCEPT_DECISIONS = [
+    "approve",
+    "approve_but_weak",
+    "approve_and_promote",
+    "good_source",
+    "expand_this_topic",
+]
+
+
+def load_json_file(path: Path) -> dict[str, Any]:
+    """Load JSON file.
+
+    Args:
+        path: Path to JSON file
+
+    Returns:
+        Parsed JSON dictionary
+    """
     if not path.exists():
         raise FileNotFoundError(f"Missing file: {path}")
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def save_json_file(path: Path, data: dict) -> None:
+def save_json_file(path: Path, data: dict[str, Any]) -> None:
+    """Save JSON file.
+
+    Args:
+        path: Path to save to
+        data: Data to save
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def move_file_if_exists(source: Path, destination: Path) -> None:
+    """Move file if it exists.
+
+    Args:
+        source: Source path
+        destination: Destination path
+    """
     if source.exists():
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.move(str(source), str(destination))
 
 
-def load_review_context(record_id: str, record: dict) -> tuple[dict, dict]:
+def load_review_context(
+    record_id: str, record: dict[str, Any]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Load review context for a record.
+
+    Args:
+        record_id: The record ID
+        record: The record dictionary
+
+    Returns:
+        Tuple of (metadata, rules)
+    """
     metadata = {}
     rules = {}
 
@@ -56,41 +131,193 @@ def load_review_context(record_id: str, record: dict) -> tuple[dict, dict]:
     return metadata, rules
 
 
+def build_human_feedback_block(
+    decision: str,
+    notes: Optional[str] = None,
+    source_feedback: Optional[str] = None,
+    topic_feedback: Optional[str] = None,
+    reviewer_id: Optional[str] = None,
+) -> dict[str, Any]:
+    """Build a human_feedback block.
+
+    Args:
+        decision: The feedback decision
+        notes: Optional reviewer notes
+        source_feedback: Optional source feedback
+        topic_feedback: Optional topic feedback
+        reviewer_id: Optional reviewer identifier
+
+    Returns:
+        Human feedback dictionary
+    """
+    feedback = {
+        "decision": decision,
+        "reviewed_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+    if notes:
+        feedback["notes"] = notes
+
+    if source_feedback:
+        feedback["source_feedback"] = source_feedback
+
+    if topic_feedback:
+        feedback["topic_feedback"] = topic_feedback
+
+    if reviewer_id:
+        feedback["reviewer_id"] = reviewer_id
+
+    return feedback
+
+
 def apply_review_decision(
-    record: dict, decision: str, hard_blockers: list[str]
-) -> dict:
+    record: dict[str, Any],
+    decision: str,
+    hard_blockers: list[str],
+    notes: Optional[str] = None,
+    source_feedback: Optional[str] = None,
+    topic_feedback: Optional[str] = None,
+) -> dict[str, Any]:
+    """Apply a review decision to a record.
+
+    Handles both binary (approve/reject) and rich feedback decisions.
+    Sets both human_feedback (new) and human_review (backward compat) blocks.
+
+    Args:
+        record: The record to update
+        decision: The feedback decision
+        hard_blockers: List of quality gate failures
+        notes: Optional reviewer notes
+        source_feedback: Optional source feedback
+        topic_feedback: Optional topic feedback
+
+    Returns:
+        Updated record
+    """
+    # Check for hard blockers with approve decision
     if decision == "approve" and hard_blockers:
         record["status"] = "rejected"
         record["human_review"]["required"] = False
         record["human_review"]["decision"] = "rejected_by_quality_gate"
         record["human_review"]["notes"] = ", ".join(hard_blockers)
+
+        # Also set human_feedback block for consistency
+        record["human_feedback"] = build_human_feedback_block(
+            decision="reject",
+            notes=", ".join(hard_blockers),
+            source_feedback=source_feedback,
+            topic_feedback=topic_feedback,
+        )
         return record
 
-    if decision == "approve":
+    # Determine if this is an acceptance or rejection
+    is_acceptance = decision in ACCEPT_DECISIONS or decision == "approve"
+
+    # Build notes for backward compat
+    if notes:
+        review_notes = notes
+    elif is_acceptance:
+        review_notes = "Approved from Telegram review flow."
+    else:
+        review_notes = "Rejected from Telegram review flow."
+
+    # Set status
+    if is_acceptance:
         record["status"] = "accepted"
-        record["human_review"]["required"] = False
-        record["human_review"]["decision"] = "approved_by_human"
-        record["human_review"]["notes"] = "Approved from Telegram review flow."
-        return record
+        human_review_decision = "approved_by_human"
+    else:
+        record["status"] = "rejected"
+        human_review_decision = "rejected_by_human"
 
-    record["status"] = "rejected"
+    # Set human_review block (backward compatibility)
     record["human_review"]["required"] = False
-    record["human_review"]["decision"] = "rejected_by_human"
-    record["human_review"]["notes"] = "Rejected from Telegram review flow."
+    record["human_review"]["decision"] = human_review_decision
+    record["human_review"]["notes"] = review_notes
+
+    # Set human_feedback block (new rich format)
+    record["human_feedback"] = build_human_feedback_block(
+        decision=decision,
+        notes=notes,
+        source_feedback=source_feedback,
+        topic_feedback=topic_feedback,
+    )
+
     return record
 
 
+def apply_feedback_to_memory(record: dict[str, Any]) -> dict[str, Any]:
+    """Apply feedback to memory systems.
+
+    Args:
+        record: The record with feedback
+
+    Returns:
+        Memory update result
+    """
+    # Import here to avoid circular imports
+    from scripts import update_feedback_memory
+
+    feedback = record.get("human_feedback", {})
+    if not feedback:
+        return {"action": "no_feedback_to_apply"}
+
+    return update_feedback_memory.apply_feedback_to_memory(record, feedback)
+
+
 def main() -> None:
-    if len(sys.argv) < 3:
-        raise SystemExit(
-            "Usage: python scripts/finalize_review.py <record_id> <approve|reject>"
-        )
+    """Main entry point for CLI usage."""
+    import argparse
 
-    record_id = sys.argv[1]
-    decision = sys.argv[2].strip().lower()
+    parser = argparse.ArgumentParser(
+        description="Finalize a human review decision for a record",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+    python scripts/finalize_review.py rec_123 approve
+    python scripts/finalize_review.py rec_456 approve_and_promote --source-feedback good_source
+    python scripts/finalize_review.py rec_789 reject --notes "Low quality source"
+    python scripts/finalize_review.py rec_101 bad_source --notes "Unreliable source"
+        """,
+    )
 
-    if decision not in {"approve", "reject"}:
-        raise ValueError("Decision must be 'approve' or 'reject'.")
+    parser.add_argument(
+        "record_id",
+        help="Record ID to finalize",
+    )
+    parser.add_argument(
+        "decision",
+        choices=VALID_DECISIONS,
+        help="Review decision",
+    )
+    parser.add_argument(
+        "--notes",
+        type=str,
+        default="",
+        help="Reviewer notes",
+    )
+    parser.add_argument(
+        "--source-feedback",
+        type=str,
+        choices=["good_source", "bad_source"],
+        help="Source quality feedback",
+    )
+    parser.add_argument(
+        "--topic-feedback",
+        type=str,
+        choices=["expand_this_topic"],
+        help="Topic feedback",
+    )
+    parser.add_argument(
+        "--reviewer-id",
+        type=str,
+        default="",
+        help="Reviewer identifier",
+    )
+
+    args = parser.parse_args()
+
+    record_id = args.record_id
+    decision = args.decision
 
     record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
 
@@ -114,7 +341,18 @@ def main() -> None:
     metadata, rules = load_review_context(record_id, record)
     hard_blockers = collect_hard_blockers(record, metadata, rules)
 
-    record = apply_review_decision(record, decision, hard_blockers)
+    record = apply_review_decision(
+        record,
+        decision,
+        hard_blockers,
+        notes=args.notes if args.notes else None,
+        source_feedback=args.source_feedback,
+        topic_feedback=args.topic_feedback,
+    )
+
+    # Apply feedback to memory systems
+    memory_result = apply_feedback_to_memory(record)
+
     save_json_file(record_path, record)
 
     if record["status"] == "accepted":
@@ -138,6 +376,7 @@ def main() -> None:
         print(
             f"  Quality tier: {tier_block['quality_tier']['tier']} (score: {tier_block['quality_tier']['score']})"
         )
+        print(f"  Decision: {decision}")
     else:
         target_record_path = REJECTED_DIR / record_path.name
 
@@ -145,6 +384,11 @@ def main() -> None:
 
         print("Moved record to rejected:")
         print(target_record_path.relative_to(BASE_DIR))
+        print(f"  Decision: {decision}")
+
+    # Print memory update info
+    if memory_result and memory_result.get("action") != "no_feedback_to_apply":
+        print(f"  Memory: {memory_result}")
 
 
 if __name__ == "__main__":
