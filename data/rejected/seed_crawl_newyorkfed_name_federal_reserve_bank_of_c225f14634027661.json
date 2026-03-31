@@ -1,0 +1,58 @@
+{
+  "id": "seed_crawl_newyorkfed_name_federal_reserve_bank_of_c225f14634027661",
+  "created_at": "2026-03-31T10:01:05.354098+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "$name - FEDERAL RESERVE BANK of NEW YORK",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "This source is the New York Fed's news listing page, which aggregates dozens of press releases spanning appointments, economic surveys, FX intervention reports, household debt data, and various institutional announcements from 2024-2026. It is not a single archiveable document but rather a navigation index containing heterogeneous content that would require individual extraction for proper archival.",
+  "key_points": [
+    "Source is a listing page, not a single document — contains mixed press releases including appointments, economic surveys, and FX reports",
+    "Notable market-relevant items present: quarterly FX intervention reports (Fed/Treasury no intervention in multiple quarters), SCE (Survey of Consumer Expectations) labor market and inflation expectation releases",
+    "Household debt and delinquency data releases appear periodically (quarterly)",
+    "Personnel announcements (Markets Group head changes, board directors) are interspersed with substantive economic content",
+    "SOURCE METADATA TARGET indicates market structure focus, but listing page contains broad mix of topics",
+    "Individual items (FX reports, SCE surveys, household debt reports) would be separate archiveable sources"
+  ],
+  "why_it_matters": "This listing page aggregates New York Fed communications but is not itself suitable for archival. Individual items within it — particularly the quarterly FX intervention statements, SCE labor market and inflation expectation surveys, and household debt/credit reports — are substantive research outputs that warrant separate archival treatment. The mix of personnel announcements with economic data releases makes this page unsuitable as a single source record.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Some FX intervention notices (Fed/Treasury no intervention) and periodic references to market operations appear within the listing but require individual extraction.",
+  "important_numbers": [],
+  "tags": [
+    "new-york-fed",
+    "listing-page",
+    "press-releases",
+    "mixed-content",
+    "non-archivable"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "TITLE contains unresolved template variable '$name' indicating metadata parsing issue",
+      "event_type is set to 'unknown' which is technically correct for a listing page but prevents categorization",
+      "published_at is empty - listing pages aggregate items from multiple dates which is understood",
+      "Source is correctly identified as non-archivable as a single record due to heterogeneous content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_name_federal_reserve_bank_of_c225f14634027661.txt",
+  "notes": "Non-archivable as a single record. This is a listing/navigation page that mixes: (a) market-relevant items (FX intervention statements, SCE surveys, household debt data) with (b) governance items (board appointments, advisory council memberships). Per CORE RULE 6, listing pages should be flagged and their constituent items extracted individually. The SOURCE METADATA shows TARGET=topic but the actual page content does not match — it's a general news hub. Recommend crawler configuration be updated to archive individual press release URLs rather than aggregation pages."
+}

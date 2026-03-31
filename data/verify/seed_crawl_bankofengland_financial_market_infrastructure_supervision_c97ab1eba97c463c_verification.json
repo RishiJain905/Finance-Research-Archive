@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'financial_stability_report' but the source is a navigation/overview page, not a financial stability report",
+    "Source is a navigation_page per source_type field - violates CORE RULE 5: pages of type homepage, navigation_page, listing_page, or search_page must be rejected",
+    "No specific policy decisions, data, or substantive content contained in the source",
+    "March 2026 publication dates referenced on a page last updated July 2025 appear inconsistent (future-dated content on archived page)",
+    "Source lacks archival value as an actionable research document",
+    "topic is 'market structure' but TARGET metadata says 'macro catalysts' - source is not relevant to macro catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection is appropriate because the source is explicitly a navigation page (source_type: navigation_page), which per CORE RULE 5 must be rejected regardless of other factors. The event_type is also incorrectly assigned.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

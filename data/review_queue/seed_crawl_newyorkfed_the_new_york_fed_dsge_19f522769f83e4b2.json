@@ -1,0 +1,54 @@
+{
+  "id": "seed_crawl_newyorkfed_the_new_york_fed_dsge_19f522769f83e4b2",
+  "created_at": "2026-03-31T09:21:56.532262+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "The New York Fed DSGE Model",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/research/policy/dsge#/interactive",
+    "domain": "www.newyorkfed.org",
+    "published_at": "",
+    "source_type": "seed_crawl"
+  },
+  "summary": "This crawl captured only page footer/navigation boilerplate (terms of use, privacy links, site navigation) rather than the substantive content of the New York Fed DSGE Model page. No actual information about the DSGE model, its methodology, outputs, or policy relevance is present in the captured body.",
+  "key_points": [
+    "Source body contains only website footer text: Terms of Use, Privacy Statement, and site navigation links",
+    "No substantive content about the DSGE model was captured",
+    "This appears to be a failed or incomplete crawl that missed the main page content"
+  ],
+  "why_it_matters": "This source cannot be archived as research material because the actual content was not captured. The URL points to a potentially valuable New York Fed research tool, but the crawled text does not contain the model's documentation or outputs.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "failed-crawl",
+    "incomplete-data",
+    "dsge-model",
+    "new-york-fed"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "pending",
+    "issues_found": [
+      "Crawl captured only footer/navigation boilerplate, not main page content",
+      "No substantive information about DSGE model present in source body",
+      "Cannot assess relevance to market structure or macro catalysts from this content",
+      "published_at is empty - date unknown"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This crawl is non-archiveable due to missing content. The New York Fed DSGE Model page likely contains interactive model documentation and projections that would be relevant, but the seed_crawl did not capture any of this material. Recommend re-crawling the page to obtain actual content."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_the_new_york_fed_dsge_19f522769f83e4b2.txt",
+  "notes": "DOMAIN_TRUST_TIER is high (New York Fed is authoritative), but content quality is zero due to failed crawl. SOURCE_TYPE is seed_crawl which appears to be an initial crawl that did not properly extract page content. The TARGET says market structure but no market structure content was captured. Recommend re-crawl with proper JavaScript rendering if the DSGE tool uses dynamic content loading."
+}

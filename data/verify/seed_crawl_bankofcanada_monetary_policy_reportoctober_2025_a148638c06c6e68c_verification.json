@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "source_type is set to 'unknown' but should be 'monetary_policy_report' given the authoritative Bank of Canada publication type",
+    "domain field incorrectly populated with topic value 'macro catalysts' instead of 'www.bankofcanada.ca'",
+    "Published date (2025-10-29) is 153 days before TODAY (2026-03-31), exceeding the 90-day threshold by 63 days; record has clear archival value but age should be noted"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is substantively accurate and well-supported. All key points are verifiable from the source. Minor metadata/template field issues do not affect the research value. Age exceeds threshold but MPR has clear archival value as official Bank of Canada policy document. Auto-routing to review queue for minor corrections.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "",
+    "source": {
+      "domain": "www.bankofcanada.ca",
+      "source_type": "monetary_policy_report"
+    }
+  }
+}

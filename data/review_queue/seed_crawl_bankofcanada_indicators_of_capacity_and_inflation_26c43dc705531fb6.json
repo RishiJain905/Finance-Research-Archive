@@ -1,0 +1,72 @@
+{
+  "id": "seed_crawl_bankofcanada_indicators_of_capacity_and_inflation_26c43dc705531fb6",
+  "created_at": "2026-03-31T09:53:31.650004+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "economic_commentary",
+  "title": "Indicators of capacity and inflation pressures for Canada",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/indicators/capacity-and-inflation-pressures",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "2026-03-19",
+    "source_type": "data_dashboard"
+  },
+  "summary": "The Bank of Canada publishes a comprehensive dashboard of capacity and inflation pressure indicators, last updated March 19, 2026. Headline CPI inflation stands at 1.8% year-over-year (February 2026), while multiple output gap estimates range from -0.8% to -1.6%, indicating persistent negative output gap. The unemployment rate is 6.7% with wage growth measures ranging from 2.6% to 3.9% across different surveys.",
+  "key_points": [
+    "CPI inflation: 1.8% YoY (February 2026), down from 2.7% in Q2 2024",
+    "CPI-trim at 2.3%, CPI-median at 2.3%, CPI-common at 2.4% (February 2026)",
+    "Output gap estimates range from -0.8% to -1.8% across different methodologies, indicating below-potential economic activity",
+    "Unemployment rate: 6.7% (February 2026), up from 6.3% in mid-2024",
+    "Wage growth measures range from 2.6% (LFS-Micro) to 3.9% (LFS-Average Hourly Earnings) year-over-year",
+    "Business Outlook Survey shows 22% of firms reporting labour shortages (Q4 2025), up from 13% in Q3 2025"
+  ],
+  "why_it_matters": "This dashboard provides the empirical foundation for Bank of Canada monetary policy decisions. The data shows Canada's economy has persistent excess capacity (negative output gap) and inflation within the target band. Labour market indicators (6.7% unemployment, moderating wage growth) are relevant inputs for assessing inflationary pressures and potential monetary policy adjustments.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 2
+  },
+  "macro_context": "Canada's economy shows signs of excess capacity with a negative output gap across all measured methodologies. The unemployment rate has risen from 6.3% to 6.7% over the past year. Inflation is at 1.8% (Feb 2026). Wage growth has moderated from peaks above 5% to current levels between 2.6% and 3.9%. These indicators are key inputs into Bank of Canada policy assessments.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "CPI inflation: 1.8% (Feb 2026)",
+    "CPI-trim: 2.3%",
+    "CPI-median: 2.3%",
+    "CPI-common: 2.4%",
+    "Unemployment rate: 6.7%",
+    "Output gap (current MPR): -0.8%",
+    "Output gap (Extended multivariate filter): -1.6%",
+    "Labour shortage (% firms, BOS): 22%"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "canada-economy",
+    "inflation-indicators",
+    "output-gap",
+    "labour-market",
+    "wage-growth",
+    "capacity-pressures",
+    "monetary-policy-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'economic_commentary' is questionable for a data dashboard; 'data_release_other' or 'research_paper' may be more appropriate",
+      "why_it_matters and macro_context contain interpretive claims (e.g., 'limited inflationary pressure', 'support a more accommodative monetary policy stance') that go beyond what the source data explicitly states",
+      "market_impact directional_bias 'neutral' is reasonable but the record itself notes market impact is indirect; this is more of a reference data source than a market-moving catalyst"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is a high-quality official data dashboard with accurate data extraction. Minor concerns about event_type classification and over-interpretation of policy implications, but these are not serious enough to require human review."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_indicators_of_capacity_and_inflation_26c43dc705531fb6.txt",
+  "notes": "This is a reference data dashboard containing multiple time series of economic indicators. It does not contain policy announcements, forward guidance, or analytical commentary—it is a compilation of official statistics updated regularly. The data is current (March 19, 2026) and relevant for assessing Canadian macro conditions. Market impact is indirect; this data informs policy decisions but does not itself move markets."
+}

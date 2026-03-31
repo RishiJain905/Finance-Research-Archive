@@ -1,0 +1,62 @@
+{
+  "id": "seed_crawl_bankofengland_financial_market_infrastructure_supervision_c97ab1eba97c463c",
+  "created_at": "2026-03-31T10:32:46.567560+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "financial_stability_report",
+  "title": "Financial market infrastructure supervision",
+  "source": {
+    "name": "Bank of England",
+    "url": "https://www.bankofengland.co.uk/financial-stability/financial-market-infrastructure-supervision",
+    "published_at": "2025-07-28",
+    "source_type": "navigation_page",
+    "domain": "www.bankofengland.co.uk"
+  },
+  "summary": "The Bank of England publishes this overview page describing its supervisory mandate over UK financial market infrastructures (FMIs), including payment systems, central securities depositories (CSDs), and central counterparties (CCPs). The page is informational and does not contain specific policy decisions or data releases. Recent publications referenced include operational resilience reporting requirements (March 2026) and the FMI fees regime for 2025/26 (February 2026).",
+  "key_points": [
+    "BoE supervises three categories of FMIs: payment systems (recognised by HM Treasury), central securities depositories (CSDs), and central counterparties (CCPs)",
+    "CCP model: CCPs sit between buyers and sellers so both parties hold contracts with the CCP rather than each other, reducing counterparty credit risk",
+    "BoE's stated supervisory objective is to protect and enhance financial stability in the UK",
+    "Recent publication (18 March 2026): Operational resilience requirements for FMIs covering incident reporting, outsourcing, and third-party reporting",
+    "Recent publication (19 February 2026): BoE fees regime for FMI supervision 2025/26",
+    "This is an overview/navigation page listing supervisory activities, not a specific policy document or data release"
+  ],
+  "why_it_matters": "Understanding who supervises FMIs and how is foundational for assessing systemic risk in the UK financial system. The BoE's FMI supervision function is critical infrastructure oversight that affects clearing, settlement, and payment processing across markets. However, this specific page provides no actionable intelligence or market-moving information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page defines BoE's supervisory scope over critical market plumbing: payment systems for fund transfers, CSDs for securities ownership records, and CCPs for trade novation and counterparty risk management. The referenced March 2026 operational resilience publication appears to be forthcoming guidance on incident and third-party reporting for FMIs.",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-england",
+    "fmi-supervision",
+    "market-structure",
+    "ccp",
+    "csd",
+    "payment-systems",
+    "uk-financial-stability"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'financial_stability_report' but the source is a navigation/overview page, not a financial stability report",
+      "Source is a navigation_page per source_type field - violates CORE RULE 5: pages of type homepage, navigation_page, listing_page, or search_page must be rejected",
+      "No specific policy decisions, data, or substantive content contained in the source",
+      "March 2026 publication dates referenced on a page last updated July 2025 appear inconsistent (future-dated content on archived page)",
+      "Source lacks archival value as an actionable research document",
+      "topic is 'market structure' but TARGET metadata says 'macro catalysts' - source is not relevant to macro catalysts"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofengland_financial_market_infrastructure_supervision_c97ab1eba97c463c.txt",
+  "notes": "Source is not directly relevant to macro catalysts. Topic reclassified to market structure based on actual content. This is a regulatory oversight overview page describing BoE's FMI supervisory mandate. The page serves as a table of contents for FMI supervision activities rather than a substantive document. No specific policy content to extract. Consider linking to more specific FMI publications (operational resilience, fees regime, clearing obligation) rather than this overview."
+}

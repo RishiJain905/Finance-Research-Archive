@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (navigation/index page) - per rule 6, listing pages must be rejected",
+    "event_type is 'unknown' which is technically accurate but indicates no single event can be attributed to this source",
+    "Source is a container page with no standalone research value - individual press releases would need to be archived separately",
+    "Source contains no specific macro catalyst or market structure content of its own - just an index of links",
+    "Source is over 12 years old (2013 vs 2026-03-31) with no archival value as a collection index"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source clearly violates rule 6 (listing_page) and rule 7 (container page). The generated record correctly identifies these issues. This index page should not be archived; individual press releases from 2013 that have archival value should be identified and archived separately. Human review is requested to confirm rejection and document the exclusion reason.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

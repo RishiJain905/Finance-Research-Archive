@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE is listing_page; source must be rejected per Core Rule 5",
+    "Source is a navigation/index page with no specific papers, data releases, or macro catalyst content",
+    "No published_at date provided; page contains only series metadata and submission guidelines",
+    "Source attribution (ECB name) is present but content is thin and non-archivable",
+    "event_type set to 'unknown' which is acceptable here since no specific content exists to categorize"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear-cut rejection case per established rules. The source is a listing page (correctly identified) with no specific content, no actionable macro data, and no archival value as a standalone record.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "seed_crawl_ecb.europa_working_papers_bb7948e088191908",
+  "created_at": "2026-03-31T10:09:49.605364+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "ECB Working Paper Series (Index Page)",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/research-publications/working-papers/html/index.en.html",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
+  },
+  "summary": "This source is the index page for the ECB Working Paper Series, a generic landing page that describes the series' purpose as disseminating economic research relevant to ECB tasks. No specific working paper, publication date, or research findings are provided—the page contains only meta-descriptions about the series' objectives and a disclaimer that views expressed are those of the authors.",
+  "key_points": [
+    "Source is an index/listing page for ECB Working Paper Series, not an individual research paper",
+    "Content limited to generic series description: 'work in progress' published to stimulate discussion",
+    "Disclaimer states views are authors' own and do not necessarily reflect ECB position",
+    "Series targets expert readers with knowledge in economics",
+    "No specific paper titles, authors, dates, or findings are present in the extracted text"
+  ],
+  "why_it_matters": "Cannot be used for RAG or research purposes. This is a navigation gateway page with no substantive content—no specific research findings, data, or policy-relevant analysis is available to extract.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "working-papers",
+    "research-index",
+    "listing-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page/index page, which core rules explicitly require rejecting",
+      "No specific research paper identified—only generic series description",
+      "No publication dates, paper titles, authors, or findings present",
+      "Source provides no substantive content for archiving or research retrieval",
+      "Cannot serve RAG or research purposes as no extractable data exists"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_working_papers_bb7948e088191908.txt",
+  "notes": "Non-archiveable listing page. The extracted text contains only generic metadata about the ECB Working Paper Series rather than any specific research content. No individual paper is identified—no title, author, date, abstract, or findings. For the archive to be useful, this crawl seed should be updated to target specific working paper URLs. Current status provides no value for RAG or research retrieval."
+}

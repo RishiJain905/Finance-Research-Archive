@@ -1,0 +1,73 @@
+{
+  "id": "seed_crawl_bankofengland_inflation_and_the_2_target_6a8a4047814c4caf",
+  "created_at": "2026-03-31T10:27:40.624897+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "monetary_policy_report",
+  "title": "Inflation and the 2% target",
+  "source": {
+    "name": "Bank of England",
+    "url": "https://www.bankofengland.co.uk/monetary-policy/inflation",
+    "domain": "www.bankofengland.co.uk",
+    "published_at": "2026-02-18",
+    "source_type": "seed_crawl"
+  },
+  "summary": "The Bank of England maintains a 2% CPI inflation target as set by the Government, with current inflation at 3% and Bank Rate at 3.75%. If inflation deviates more than 1 percentage point from target, the Governor must write to the Chancellor explaining the deviation and outlining corrective actions. The page was last updated on 18 February 2026 and appears to be an educational informational resource rather than a substantive policy announcement.",
+  "key_points": [
+    "Current Bank Rate stands at 3.75%, with the next MPC meeting due on 30 April 2026",
+    "Current CPI inflation rate is 3%, which is 1 percentage point above the 2% target",
+    "The Government has set the Bank of England's inflation target at 2% CPI",
+    "The ONS collects approximately 180,000 prices across about 700 items monthly to calculate CPI",
+    "If CPI inflation exceeds 3% or falls below 1%, the Governor must send an explanatory letter to the Chancellor",
+    "The page contains links to recent inflation letters from December 2025, September 2025, and June 2025"
+  ],
+  "why_it_matters": "This page establishes the foundational framework for UK monetary policy, explaining the BoE's inflation mandate and accountability mechanisms. The current 1 percentage point overshoot of the 2% target may trigger Governor-to-Chancellor correspondence explaining the deviation. Market participants tracking UK monetary policy can use this as baseline context for understanding BoE policy objectives.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The 3% inflation print versus the 2% target represents a modest overshoot, with the BoE's 3.75% Bank Rate reflecting prior tightening to address inflationary pressures. This informational page does not provide new policy signals or forward guidance.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.75%",
+    "3%",
+    "2%",
+    "1%",
+    "180,000",
+    "700",
+    "30 April 2026"
+  ],
+  "tags": [
+    "bank-of-england",
+    "inflation",
+    "cpi",
+    "monetary-policy",
+    "bank-rate",
+    "target-2pc",
+    "uk",
+    "educational"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 5,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type 'monetary_policy_report' is incorrect; this is an educational/informational page, not a substantive monetary policy report",
+      "Source is purely educational content explaining basic inflation framework concepts with no substantive policy content",
+      "No forward guidance, economic projections, analysis, or market-moving information present",
+      "Page content is static informational material rather than a time-sensitive policy document",
+      "Low archival value for macro catalyst tracking; contains only publicly available baseline statistics"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate but the source itself is not suitable for archiving. This is an educational page from the Bank of England explaining their inflation targeting framework—essentially static informational content. It contains no new policy announcements, data releases, analysis, or forward guidance. While the generated record correctly identifies the current Bank Rate (3.75%), CPI (3%), and target (2%), these are publicly available baseline statistics. The page does not provide the substantive content expected of a monetary_policy_report, which would typically include policy analysis, economic commentary, or forward-looking statements. Source should be rejected per guidelines favoring rejection for thin, low-signal sources lacking archival value for macro catalyst research."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofengland_inflation_and_the_2_target_6a8a4047814c4caf.txt",
+  "notes": "Source is a general informational/educational page from the Bank of England explaining their inflation targeting framework. While relevant to macro catalysts in that it covers UK inflation policy, the content is purely educational and does not contain new policy announcements, data releases, or substantive commentary. Not suitable for capturing actionable intelligence. Recommend downweighting in RAG relevance scoring."
+}

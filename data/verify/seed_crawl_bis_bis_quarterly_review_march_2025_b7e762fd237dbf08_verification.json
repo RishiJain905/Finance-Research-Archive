@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (publication landing page), which violates rule #5 requiring rejection of homepage, navigation_page, listing_page, and search_page types",
+    "Source body contains only metadata and descriptive text—no substantive research content from the 116-page PDF was captured",
+    "The linked PDF (https://www.bis.org/publ/qtrpdf/r_qt2503.pdf) containing the actual analysis was not ingested",
+    "Cannot extract specific findings, data points, or policy signals from this thin source body",
+    "Record has no archival value in its current form as it does not contain research content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear reject case—the record correctly identifies the source as a listing_page and acknowledges the lack of substantive content. No human review needed; auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The BIS Quarterly Review for March 2025 is a 116-page research publication available as PDF. This source captured only the publication landing page metadata—no substantive content from the report itself.",
+    "why_it_matters": "The BIS Quarterly Review is a high-quality, authoritative publication, but this source body contains only metadata and description from the landing page. The actual 116-page PDF analysis was not ingested. This record is insufficient for research archive purposes.",
+    "macro_context": "Cannot assess—source body contains only landing page metadata with no substantive research findings.",
+    "market_structure_context": "Cannot assess—source body contains only landing page metadata with no substantive research findings."
+  }
+}

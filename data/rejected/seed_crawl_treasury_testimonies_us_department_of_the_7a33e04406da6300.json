@@ -1,0 +1,59 @@
+{
+  "id": "seed_crawl_treasury_testimonies_us_department_of_the_7a33e04406da6300",
+  "created_at": "2026-03-31T09:42:29.598217+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Testimonies | U.S. Department of the Treasury",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/news/press-releases/testimonies",
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This is a Treasury Department testimonies listing page (index) that aggregates multiple congressional testimonies from Treasury officials between May 2023 and June 2024. The page provides only titles, dates, and speaker names without the full testimony content. The most recent testimony listed is from June 4, 2024, but individual testimony dates range from May 31, 2023 to June 4, 2024.",
+  "key_points": [
+    "This is a non-archiveable listing page, not an individual testimony document.",
+    "Listed testimonies include Secretary Yellen on FY2025 Budget (Feb 14, 2024), Banking Committee (Feb 6, 2024), and Financial Services Committee (Jan 11, 2024).",
+    "Additional testimonies include Under Secretary Nelson on Financial Services (Feb 14, 2024), Director Gacki on FinCEN (Feb 8, 2024), and Deputy Secretary Adeyemo on Energy (Dec 13, 2023).",
+    "Historical testimonies from 2023 include Assistant Secretary Rosenberg on Terrorist Financing, Assistant Secretary Rosen on Investment Security, and Under Secretary Shambaugh on Foreign Relations.",
+    "The page does not contain full testimony text, policy analysis, or market-relevant details—only titles, speakers, committees, and dates."
+  ],
+  "why_it_matters": "This listing page has no direct market impact as it contains no substantive policy content. It serves only as an index to individual testimonies that would need to be retrieved separately for research purposes. Users seeking macro catalyst information should access the individual testimony pages directly.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "congressional-testimony",
+    "listing-page",
+    "non-archiveable",
+    "yellen",
+    "treasury-officials"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing page per Rule 5: listing_page source_type confirmed in both source metadata and record",
+      "No substantive policy content: page contains only testimony titles, dates, and speaker names",
+      "Cannot assess macro catalyst relevance or event_type because no policy content is present",
+      "published_at is empty - listing pages have no single publication date",
+      "event_type is 'unknown' - this is correct but also indicates the source lacks enough substance to classify"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_testimonies_us_department_of_the_7a33e04406da6300.txt",
+  "notes": "This source is a navigation/listing page that aggregates multiple Treasury testimonies. Per CORE RULE 6, listing pages are non-archiveable and should not be processed as standalone records. The actual testimonies referenced (Yellen budget testimony, Nelson financial services testimony, etc.) would need to be crawled individually for meaningful research archive content."
+}

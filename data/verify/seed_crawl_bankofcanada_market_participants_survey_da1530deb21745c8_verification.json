@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body is critically thin—contains only 2 lines of crawl metadata and no substantive content",
+    "No actual survey results, expectations, or market data included in source",
+    "Source URL points to a publications listing page rather than the specific Q4 2025 survey report",
+    "Unable to verify any macro catalyst or market structure information from this source",
+    "event_type 'economic_commentary' is questionable—source appears to be a survey publication, not commentary"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection is appropriate because the source body is essentially empty (failed/incomplete crawl), and the URL is a listing page rather than the actual survey publication",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Bank of Canada Market Participants Survey listing page was crawled on February 9, 2026. The source body contains only crawl metadata with no actual survey content.",
+    "why_it_matters": "Market Participants Surveys from the Bank of Canada capture consensus expectations for policy rates, inflation, and growth, but the actual survey content is not present in this source.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page/index page, which core rules explicitly require rejecting",
+    "No specific research paper identified—only generic series description",
+    "No publication dates, paper titles, authors, or findings present",
+    "Source provides no substantive content for archiving or research retrieval",
+    "Cannot serve RAG or research purposes as no extractable data exists"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is self-evidently correct in identifying this as a non-archiveable listing page. No subjective judgment needed—the source_type is listing_page and Rule 5 mandates rejection. The generated record already made this determination accurately.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is the index page for the ECB Working Paper Series, a generic landing page that describes the series' purpose as disseminating economic research relevant to ECB tasks. No specific working paper, publication date, or research findings are provided—the page contains only meta-descriptions about the series' objectives and a disclaimer that views expressed are those of the authors.",
+    "why_it_matters": "Cannot be used for RAG or research purposes. This is a navigation gateway page with no substantive content—no specific research findings, data, or policy-relevant analysis is available to extract.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

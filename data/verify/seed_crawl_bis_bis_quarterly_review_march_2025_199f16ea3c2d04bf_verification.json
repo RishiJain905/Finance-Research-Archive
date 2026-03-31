@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a briefing/landing page with no substantive content - contains only author names, titles, and navigation links",
+    "event_type is set to 'unknown' when the source context clearly indicates this is economic commentary/research (BIS Quarterly Review briefing)",
+    "Actual briefing remarks or research findings not present in source body",
+    "Published 2025-03-10, approximately 386 days before TODAY (2026-03-31) - source is stale",
+    "Source is a container page (briefing_page type), violating CORE RULE #5 which requires article-like content",
+    "Record correctly identifies this as a navigation/landing page but the status should be reject, not review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut rejection based on source type and content. This is a container/briefing page with no substantive policy content, research findings, or macro catalysts. The generated record correctly identifies the source quality issue. Per CORE RULE #5 and #6, container pages and thin low-signal sources bias toward reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a landing/navigation page for a BIS Quarterly Review March 2025 media briefing dated 10 March 2025. The actual substantive content of the briefing (speeches or remarks by Hyun Song Shin, Gaston Gelos, and Frank Smets) is not present in this source. The page contains only author names, titles, and navigation links without the full text or policy content.",
+    "why_it_matters": "This source does not contain the substantive policy content or research findings from the BIS Quarterly Review March 2025. It cannot serve as an archiveable record of macro catalysts or market structure analysis because the actual content was not captured. Source is a container page (briefing_page) and should be rejected per verification standards."
+  }
+}

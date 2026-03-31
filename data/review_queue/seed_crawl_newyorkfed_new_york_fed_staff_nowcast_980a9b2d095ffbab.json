@@ -1,0 +1,56 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_staff_nowcast_980a9b2d095ffbab",
+  "created_at": "2026-03-31T09:21:26.000568+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "New York Fed Staff Nowcast",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/research/policy/nowcast#/nowcast",
+    "published_at": "",
+    "source_type": "unknown",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The crawl captured only page navigation elements and boilerplate text (terms of use, privacy statement links) without the actual nowcast data or interactive content. The New York Fed Staff Nowcast is a quantitative model projecting GDP growth, but no substantive data appears in this source.",
+  "key_points": [
+    "Source content is limited to navigation and terms of use text only",
+    "No actual nowcast numbers, forecasts, or model outputs were captured",
+    "The nowcast page likely requires JavaScript/dynamic rendering not captured by the crawl",
+    "No economic projections or growth forecasts are present in this source"
+  ],
+  "why_it_matters": "The New York Fed Staff Nowcast is a closely watched quantitative model for Q1/Q2 GDP growth expectations. However, this source does not contain any of that information due to a failed crawl of a dynamic interactive page.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "new-york-fed",
+    "nowcast",
+    "gd p-forecast",
+    "insufficient-content",
+    "failed-crawl"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "pending",
+    "issues_found": [
+      "Source body contains only navigation/boilerplate text, not actual nowcast data",
+      "Published_at date is missing from metadata",
+      "Source type not determined - likely a dynamic page that didn't render during crawl",
+      "No substantive content to extract or verify"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This crawl failed to capture the substantive content of the New York Fed Staff Nowcast page. The source appears to be a JavaScript-rendered interactive page. Recommend re-crawling with a headless browser or accessing the underlying API if available."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_staff_nowcast_980a9b2d095ffbab.txt",
+  "notes": "Non-archiveable: Crawl captured only page shell content (navigation elements, terms of use). The actual nowcast data and model outputs were not captured, likely due to JavaScript rendering requirements. This source cannot be used for research purposes as-is."
+}

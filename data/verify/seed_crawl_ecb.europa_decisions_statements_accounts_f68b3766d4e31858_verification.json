@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/landing page (navigation_page) - per CORE RULE 6, archive must reject container and navigation pages",
+    "No published_at date in source metadata - cannot assess content recency",
+    "event_type is set to 'unknown' but correct type is also unknowable since no specific event is documented",
+    "Source contains only general explanatory content about ECB monetary policy framework - no specific decisions, rate levels, or statements",
+    "Source has no market catalyst value as it lacks actionable macro information"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is correctly self-assessed as a navigation page with no archival value for macro catalyst research. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

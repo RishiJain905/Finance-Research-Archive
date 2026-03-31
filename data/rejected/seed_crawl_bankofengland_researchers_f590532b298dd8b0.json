@@ -1,0 +1,59 @@
+{
+  "id": "seed_crawl_bankofengland_researchers_f590532b298dd8b0",
+  "created_at": "2026-03-31T10:22:51.635855+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Researchers",
+  "source": {
+    "name": "Bank of England",
+    "url": "https://www.bankofengland.co.uk/research/researchers",
+    "published_at": "2025-11-19",
+    "source_type": "listing_page",
+    "domain": "www.bankofengland.co.uk"
+  },
+  "summary": "This is a navigation/listing page for Bank of England researchers that provides only a generic description of staff research activities. It contains no specific research findings, data releases, or policy-relevant content. The page last updated 19 November 2025.",
+  "key_points": [
+    "Page is a general listing/overview page for BoE researchers, not a source of specific research",
+    "No individual researcher profiles or their specific publications are detailed in the provided content",
+    "Mentions only generically that staff publish in journals, Financial Stability Papers, working papers, and Bank Insights",
+    "No dates, titles, or findings from any specific research are provided",
+    "Page functions as a navigation hub with search and filter functionality mentioned",
+    "No content related to market structure or macro catalysts present"
+  ],
+  "why_it_matters": "This source provides no actionable information for finance research. It is a personnel/listing page with no specific research findings, data, or policy content that would be useful for market analysis or RAG retrieval.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-england",
+    "researchers",
+    "listing-page",
+    "no-content"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing/navigation page (source_type: listing_page) - per Rule 5, reject pages of this type",
+      "No substantive research content present - only generic description of staff research activities",
+      "No specific publication dates, titles, or findings provided",
+      "Cannot assess relevance to market structure or macro catalysts as page contains no actionable content",
+      "event_type set to 'unknown' when the correct classification (listing_page) is obvious from context",
+      "Source is a thin, low-signal page with no archival value per Rule 6"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofengland_researchers_f590532b298dd8b0.txt",
+  "notes": "Source is a navigation/listing page per rule 6 - non-archiveable. No specific research content present. Last updated 19 November 2025. This page serves as a directory/index but contains no archiveable research findings, data releases, or policy content relevant to market structure or macro catalysts. Recommend crawling specific publication pages (working papers, Financial Stability Papers) for actual research content."
+}

@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page with no substantive content - only structural metadata about the trustees reporting process",
+    "No actual trustees report data present (no solvency dates, trust fund balances, projections, or numerical data)",
+    "source_type correctly identified as 'listing_page' which violates Rule #5 (reject listing/navigation pages)",
+    "event_type set to 'unknown' when 'financial_stability_report' would be the correct taxonomy value for actual trustees reports",
+    "published_at is empty/missing",
+    "Thin low-signal source with no archival value per Rule #6",
+    "The real macro-fiscally relevant data exists in linked reports (Social Security Report, Medicare Report), not in this source"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies this as a non-archiveable listing page. Human review is not necessary as the verdict is clear: reject. The source provides no substantive content for macro catalyst research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Treasury.gov page is a navigation/listing page that describes the structure of Social Security and Medicare Trustees Reports but contains no actual report data, projections, or financial status information. The source body merely explains that the Secretary of the Treasury chairs the Boards of Trustees and that annual reports are issued to Congress. The actual report content (where substantive macro-fiscal data would reside) is not present in this source.",
+    "why_it_matters": "This source is not useful for macro catalyst research. Fiscal sustainability of Social Security and Medicare is a legitimate macro concern (potential long-term deficits could affect Treasury supply, tax policy, and broader fiscal trajectory), but this listing page contains zero substantive data. Actual trustees reports would need to be retrieved separately for any analytical value.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
