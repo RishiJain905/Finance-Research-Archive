@@ -1,3 +1,4 @@
+import hashlib
 import os
 from pathlib import Path
 
@@ -7,6 +8,7 @@ from flask import Flask, jsonify, request
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 load_dotenv(BASE_DIR / ".env")
 
 app = Flask(__name__)
@@ -17,6 +19,27 @@ GITHUB_WORKFLOW_FILENAME = os.getenv("GITHUB_WORKFLOW_FILENAME", "finalize-revie
 GITHUB_PAT = os.getenv("GITHUB_PAT")
 GITHUB_REF = os.getenv("GITHUB_REF", "main")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
+
+def _make_callback_key(record_id: str) -> str:
+    """Must stay in sync with send_review_to_telegram.make_callback_key."""
+    return hashlib.sha1(record_id.encode()).hexdigest()[:28]
+
+
+def resolve_record_id(callback_key: str) -> str | None:
+    """Return the full record_id whose SHA-1 key matches *callback_key*.
+
+    Scans the review_queue directory and recomputes the key for each filename
+    stem until a match is found.  Returns None if no match exists.
+    """
+    if not REVIEW_QUEUE_DIR.exists():
+        return None
+    for record_path in REVIEW_QUEUE_DIR.glob("*.json"):
+        if record_path.name.endswith("_verification.json"):
+            continue
+        if _make_callback_key(record_path.stem) == callback_key:
+            return record_path.stem
+    return None
 
 
 def trigger_github_workflow(record_id: str, decision: str) -> None:
@@ -70,12 +93,21 @@ def answer_callback_query(callback_id: str, text: str) -> None:
     )
 
 
+_TELEGRAM_MAX_LEN = 4096
+
+
+def _truncate(text: str, max_len: int = _TELEGRAM_MAX_LEN) -> str:
+    if len(text) <= max_len:
+        return text
+    return text[: max_len - 1] + "\u2026"
+
+
 def edit_message_after_decision(chat_id: int, message_id: int, original_text: str, decision: str) -> None:
     if not TELEGRAM_BOT_TOKEN:
         return
 
     decision_label = "Approved" if decision == "approve" else "Rejected"
-    updated_text = f"{original_text}\n\nDecision: {decision_label}"
+    updated_text = _truncate(f"{original_text}\n\nDecision: {decision_label}")
 
     edit_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/editMessageText"
     response = requests.post(
@@ -124,12 +156,18 @@ def telegram_webhook():
         answer_callback_query(callback_id, "Invalid callback data")
         return jsonify({"ok": False, "message": "Invalid callback data"}), 400
 
-    decision, record_id = callback_data.split(":", 1)
+    decision, callback_key = callback_data.split(":", 1)
 
     if decision not in {"approve", "reject"}:
         answer_callback_query(callback_id, "Invalid decision")
         return jsonify({"ok": False, "message": "Invalid decision"}), 400
 
+    record_id = resolve_record_id(callback_key)
+    if record_id is None:
+        answer_callback_query(callback_id, "Record not found")
+        return jsonify({"ok": False, "message": f"No record matched key {callback_key!r}"}), 404
+
+    result_text = f"Processing {decision} for {record_id}"
     try:
         trigger_github_workflow(record_id, decision)
         result_text = f"{decision.title()} sent for {record_id}"

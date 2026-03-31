@@ -7,9 +7,10 @@ and generates candidate records following the candidate_record schema.
 
 import json
 import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Set
 
 from bs4 import BeautifulSoup
 
@@ -21,12 +22,67 @@ from scripts.candidate_utils import (
     build_candidate_id,
     hash_url,
     hash_title,
+    load_candidate_index,
 )
 from scripts.build_keyword_candidates import domain_to_source_name
+
+# URL patterns that indicate content pages (press releases, speeches, reports).
+# Links whose URLs match at least one of these patterns get a score bonus.
+_CONTENT_URL_PATTERNS = re.compile(
+    r"(\d{4}[-/]\d{2}[-/]\d{2}"        # date in URL  e.g. 2026/03/28
+    r"|/press[-_]?release"
+    r"|/speech"
+    r"|/statement"
+    r"|/publication"
+    r"|/report"
+    r"|/working[-_]?paper"
+    r"|/bulletin"
+    r"|/minutes"
+    r"|/testimony"
+    r"|/transcript"
+    r"|/article"
+    r"|/blog"
+    r"|/research"
+    r")",
+    re.IGNORECASE,
+)
 
 # Configuration paths
 SEED_SITES_PATH = BASE_DIR / "config" / "seed_sites.json"
 DOMAIN_TRUST_TIERS_PATH = BASE_DIR / "config" / "domain_trust_tiers.json"
+
+
+def _load_recently_crawled_urls(window_days: int = 7) -> Set[str]:
+    """Return the set of URL hashes seen within *window_days*.
+
+    This lets the BFS skip pages that were already visited and processed
+    recently, preventing the crawl from re-queuing and re-fetching the same
+    navigation/content pages every single run.
+    """
+    try:
+        index = load_candidate_index()
+    except Exception:
+        return set()
+
+    cutoff = time.time() - window_days * 24 * 60 * 60
+    seen: Set[str] = set()
+
+    for url_hash, entry in index.get("seen_url_hashes", {}).items():
+        if isinstance(entry, dict):
+            ts = float(entry.get("timestamp", 0))
+        elif isinstance(entry, str):
+            try:
+                from datetime import datetime as _dt
+                ts = _dt.fromisoformat(entry.replace("Z", "+00:00")).timestamp()
+            except (ValueError, AttributeError):
+                ts = 0.0
+        else:
+            ts = 0.0
+
+        if ts >= cutoff:
+            seen.add(url_hash)
+
+    return seen
 
 
 def load_seed_sites() -> List[Dict[str, Any]]:
@@ -272,15 +328,22 @@ def crawl_seed(seed_config: Dict[str, Any]) -> List[Dict[str, Any]]:
     max_depth = seed_config.get("max_depth", 2)
     max_pages = seed_config.get("max_pages", 20)
 
+    # Load URLs that were processed recently so we can skip them in BFS.
+    # This prevents re-visiting (and re-emitting) the exact same pages on
+    # every run.  We use the same 7-day window as URL-level dedup.
+    recently_crawled = _load_recently_crawled_urls(window_days=7)
+
     # Initialize queue
     queue = CrawlQueue(max_pages=max_pages, max_depth=max_depth)
 
-    # Seed the queue with start URLs at depth 0
+    # Seed the queue with start URLs at depth 0.
+    # Start URLs are always enqueued even if recently crawled because they
+    # serve as entry points to discover *new* child links.
     for start_url in start_urls:
         item = create_queue_item(
             url=start_url,
             depth=0,
-            score=10.0,  # Start URLs get base score
+            score=10.0,
             parent_url="",
             anchor_text="Start URL",
         )
@@ -305,6 +368,15 @@ def crawl_seed(seed_config: Dict[str, Any]) -> List[Dict[str, Any]]:
         if not is_url_in_scope(url, allowed_prefixes, blocked_fragments):
             continue
 
+        # Skip pages we have already processed recently.  This is a
+        # pre-filter before the HTTP fetch to save bandwidth and prevent
+        # duplicate candidates being emitted from the crawl itself.
+        url_hash = hash_url(url)
+        if url_hash in recently_crawled and crawl_item.get("depth", 0) > 0:
+            # Still extract child links from start-URL-level pages so we can
+            # discover freshly published content linked from navigation pages.
+            continue
+
         # Fetch page
         soup = fetch_page(url)
         if soup is None:
@@ -317,6 +389,10 @@ def crawl_seed(seed_config: Dict[str, Any]) -> List[Dict[str, Any]]:
         candidate = create_candidate_record(crawl_item, seed_config, title)
         candidates.append(candidate)
 
+        # Mark this URL as crawled in the local set so we don't re-emit it
+        # if it's linked from multiple parent pages in the same run.
+        recently_crawled.add(url_hash)
+
         # Extract and score internal links
         links = extract_links(soup, url)
 
@@ -328,8 +404,15 @@ def crawl_seed(seed_config: Dict[str, Any]) -> List[Dict[str, Any]]:
             if not is_url_in_scope(link_url, allowed_prefixes, blocked_fragments):
                 continue
 
-            # Score the link
+            # Skip links to recently crawled pages early to keep the queue lean.
+            if hash_url(link_url) in recently_crawled:
+                continue
+
+            # Score the link; boost content-type URLs so they are prioritised
+            # over generic navigation pages.
             score = score_link(link_url, anchor_text)
+            if _CONTENT_URL_PATTERNS.search(link_url):
+                score += 5.0
 
             # Create queue item for next depth
             next_item = create_queue_item(

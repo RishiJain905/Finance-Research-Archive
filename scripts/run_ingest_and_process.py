@@ -75,7 +75,8 @@ def save_manifest(manifest: dict) -> None:
 def mark_record_processed(record_id: str) -> None:
     manifest = load_manifest()
 
-    url = manifest.get("record_map", {}).get(record_id)
+    record_map = manifest.get("record_map", {})
+    url = next((u for u, rid in record_map.items() if rid == record_id), None)
     if url:
         manifest.setdefault("processed_urls", {})[url] = True
         print(f"\n  Marked URL as processed: {url}")
@@ -96,10 +97,10 @@ def verify_manifest_consistency() -> None:
     seen_urls = manifest.get("seen_urls", {})
     processed_urls = manifest.get("processed_urls", {})
 
-    for record_id, url in record_map.items():
+    for url, record_id in record_map.items():
         if url not in seen_urls:
             issues.append(
-                f"record_map has URL for '{record_id}' but URL not in seen_urls: {url}"
+                f"record_map has record '{record_id}' but URL not in seen_urls: {url}"
             )
 
     for url in processed_urls:
@@ -134,34 +135,39 @@ def main() -> None:
     print("\n=== Verifying manifest consistency ===")
     verify_manifest_consistency()
 
-    ingest_output = run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
-
-    record_ids = extract_created_ids(ingest_output)
+    run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
+    run_command([python_cmd, "scripts/ingest_rss.py"], "RSS ingestion")
 
     run_command([python_cmd, "scripts/filter_raw_records.py"], "raw record filtering")
 
-    if not record_ids:
-        print("\nNo new or updated records to process.")
-        return
+    # Scan RAW_DIR after filtering so orphaned files from previous failed runs
+    # are also picked up, not just records from the current ingest.
+    records_to_process = sorted(f.stem for f in RAW_DIR.glob("*.txt"))
 
-    filtered_record_ids = [
-        record_id for record_id in record_ids if file_still_in_raw(record_id)
-    ]
-
-    if not filtered_record_ids:
-        print("\nNo records survived filtering.")
+    if not records_to_process:
+        print("\nNo records to process.")
         return
 
     print("\nRecords to process:")
-    for record_id in filtered_record_ids:
+    for record_id in records_to_process:
         print(f"- {record_id}")
 
-    for record_id in filtered_record_ids:
-        run_command(
-            [python_cmd, "scripts/process_record.py", record_id],
-            f"process_record ({record_id})",
-        )
-        mark_record_processed(record_id)
+    failed_ids = []
+    for record_id in records_to_process:
+        try:
+            run_command(
+                [python_cmd, "scripts/process_record.py", record_id],
+                f"process_record ({record_id})",
+            )
+            mark_record_processed(record_id)
+        except RuntimeError as e:
+            print(f"\n  Warning: processing failed for {record_id}: {e}")
+            failed_ids.append(record_id)
+
+    if failed_ids:
+        print(f"\n{len(failed_ids)} record(s) failed to process:")
+        for rid in failed_ids:
+            print(f"  - {rid}")
 
     print("\nIngestion + filtering + processing pipeline finished.")
 

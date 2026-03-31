@@ -1,6 +1,8 @@
 import hashlib
 import json
 import re
+import time
+from datetime import date
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -102,6 +104,8 @@ def ensure_manifest_shape(manifest: dict) -> dict:
     manifest.setdefault("title_fingerprints", {})
     manifest.setdefault("content_fingerprints", {})
     manifest.setdefault("processed_urls", {})
+    # Maps sha1(domain|date|event_type) -> record_id for event-level dedup
+    manifest.setdefault("event_fingerprints", {})
 
     return manifest
 
@@ -164,10 +168,30 @@ def get_headers() -> dict:
     }
 
 
-def fetch_html(url: str) -> str:
-    response = requests.get(url, timeout=30, headers=get_headers())
-    response.raise_for_status()
-    return response.text
+def fetch_html(url: str, max_retries: int = 3) -> str:
+    last_exc: Exception | None = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = requests.get(url, timeout=30, headers=get_headers())
+            response.raise_for_status()
+            return response.text
+        except requests.exceptions.HTTPError as exc:
+            # Don't retry permanent client errors (4xx) — they won't change.
+            if exc.response is not None and 400 <= exc.response.status_code < 500:
+                raise
+            last_exc = exc
+        except (requests.exceptions.ConnectionError,
+                requests.exceptions.Timeout) as exc:
+            last_exc = exc
+
+        if attempt < max_retries:
+            wait = 2 ** attempt  # 2s, 4s
+            print(f"    Fetch attempt {attempt} failed, retrying in {wait}s...")
+            time.sleep(wait)
+
+    raise requests.exceptions.RequestException(
+        f"Failed after {max_retries} attempts: {last_exc}"
+    )
 
 
 def collapse_text_lines(text: str) -> str:
@@ -254,7 +278,12 @@ def looks_like_article_link(url: str) -> bool:
     return True
 
 
-def score_candidate_link(url: str, anchor_text: str) -> int:
+def score_candidate_link(
+    url: str,
+    anchor_text: str,
+    processed_urls: dict | None = None,
+    current_year: int | None = None,
+) -> int:
     score = 0
     url_lower = url.lower()
     anchor_lower = anchor_text.lower().strip()
@@ -278,8 +307,30 @@ def score_candidate_link(url: str, anchor_text: str) -> int:
     if len(path_segments) >= 2:
         score += 1
 
-    if re.search(r"/20\d{2}/", url_lower) or re.search(r"20\d{2}", anchor_lower):
-        score += 2
+    # Freshness: reward links mentioning the current or previous year.
+    if current_year:
+        prev_year = current_year - 1
+        if (
+            f"/{current_year}/" in url_lower
+            or f"/{current_year}" in url_lower
+            or str(current_year) in anchor_lower
+        ):
+            score += 4
+        elif (
+            f"/{prev_year}/" in url_lower
+            or f"/{prev_year}" in url_lower
+            or str(prev_year) in anchor_lower
+        ):
+            score += 2
+        elif re.search(r"/20\d{2}/", url_lower) or re.search(r"20\d{2}", anchor_lower):
+            score += 1  # older year in URL — still a dated article, minor bonus
+    else:
+        if re.search(r"/20\d{2}/", url_lower) or re.search(r"20\d{2}", anchor_lower):
+            score += 2
+
+    # Already processed: penalise so truly new links surface ahead of old ones.
+    if processed_urls and url in processed_urls:
+        score -= 10
 
     if url_lower.endswith(".htm") or url_lower.endswith(".html"):
         score += 1
@@ -308,6 +359,8 @@ def extract_links(
     allowed_prefixes: list[str],
     blocklist_fragments: list[str],
     max_links: int,
+    processed_urls: dict | None = None,
+    current_year: int | None = None,
 ) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
     candidates = []
@@ -334,7 +387,9 @@ def extract_links(
         if is_blocked_link(full_url, blocklist_fragments):
             continue
 
-        score = score_candidate_link(full_url, anchor_text)
+        score = score_candidate_link(
+            full_url, anchor_text, processed_urls=processed_urls, current_year=current_year
+        )
         candidates.append((score, full_url, anchor_text))
 
     candidates.sort(key=lambda item: item[0], reverse=True)
@@ -547,6 +602,8 @@ def main() -> list[str]:
     if not isinstance(default_max_links, int) or default_max_links < 1:
         default_max_links = DEFAULT_MAX_LINKS_PER_TARGET
 
+    processed_urls = manifest.get("processed_urls", {})
+    current_year = date.today().year
     created = []
 
     for target in config.get("targets", []):
@@ -583,7 +640,8 @@ def main() -> list[str]:
             continue
 
         article_links = extract_links(
-            url, index_html, allowed_prefixes, blocklist_fragments, max_links
+            url, index_html, allowed_prefixes, blocklist_fragments, max_links,
+            processed_urls=processed_urls, current_year=current_year,
         )
 
         if not article_links:

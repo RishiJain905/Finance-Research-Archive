@@ -62,31 +62,32 @@
       "domain": "federalreserve.gov",
       "start_urls": [
         "https://www.federalreserve.gov/newsevents/pressreleases.htm",
-        "https://www.federalreserve.gov/monetarypolicy.htm",
-        "https://www.federalreserve.gov/boarddocs/speeches/default.htm"
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.federalreserve.gov/newsevents/speeches.htm",
+        "https://www.federalreserve.gov/newsevents/testimony.htm"
       ],
       "allowed_prefixes": [
         "https://www.federalreserve.gov/newsevents/",
         "https://www.federalreserve.gov/monetarypolicy/",
-        "https://www.federalreserve.gov/pressreleases/",
+        "https://www.federalreserve.gov/releases/",
         "https://www.federalreserve.gov/publications/"
       ],
       "blocked_fragments": [
         "/about/",
         "/careers/",
-        "/events/",
         "/experts/",
         "/people/",
         "/education/",
         "/programs/",
         "/museum/",
-        "/archive/",
         "/category/",
         "/tag/",
-        "/subscribe/"
+        "/subscribe/",
+        "/faqs/",
+        "/pubs/feds/"
       ],
       "max_depth": 2,
-      "max_pages": 20,
+      "max_pages": 30,
       "topic": "macro catalysts"
     },
     {
@@ -95,30 +96,26 @@
       "domain": "newyorkfed.org",
       "start_urls": [
         "https://www.newyorkfed.org/markets/reference-rates",
-        "https://www.newyorkfed.org/markets/rrp_counterparties",
-        "https://www.newyorkfed.org/aboutthefed/org-structure"
+        "https://www.newyorkfed.org/markets/desk-operations",
+        "https://www.newyorkfed.org/newsevents/news",
+        "https://www.newyorkfed.org/research/staff_reports"
       ],
       "allowed_prefixes": [
         "https://www.newyorkfed.org/markets/",
-        "https://www.newyorkfed.org/aboutthefed/",
-        "https://www.newyorkfed.org/newsevents/"
+        "https://www.newyorkfed.org/newsevents/",
+        "https://www.newyorkfed.org/research/"
       ],
       "blocked_fragments": [
         "/about/",
         "/careers/",
-        "/events/",
-        "/experts/",
-        "/people/",
         "/education/",
         "/programs/",
-        "/museum/",
-        "/archive/",
         "/category/",
         "/tag/",
         "/subscribe/"
       ],
       "max_depth": 2,
-      "max_pages": 20,
+      "max_pages": 30,
       "topic": "market structure"
     },
     {
@@ -127,8 +124,8 @@
       "domain": "treasury.gov",
       "start_urls": [
         "https://home.treasury.gov/news/press-releases",
-        "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service",
-        "https://home.treasury.gov/policy-issues/monetary-executive-compensation"
+        "https://home.treasury.gov/news/featured-stories",
+        "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service"
       ],
       "allowed_prefixes": [
         "https://home.treasury.gov/news/",
@@ -137,19 +134,14 @@
       "blocked_fragments": [
         "/about/",
         "/careers/",
-        "/events/",
-        "/experts/",
-        "/people/",
         "/education/",
         "/programs/",
-        "/museum/",
-        "/archive/",
         "/category/",
         "/tag/",
         "/subscribe/"
       ],
       "max_depth": 2,
-      "max_pages": 20,
+      "max_pages": 30,
       "topic": "macro catalysts"
     },
     {
@@ -157,32 +149,27 @@
       "enabled": true,
       "domain": "bankofcanada.ca",
       "start_urls": [
-        "https://www.bankofcanada.ca/news/",
-        "https://www.bankofcanada.ca/markets/",
-        "https://www.bankofcanada.ca/press/"
+        "https://www.bankofcanada.ca/news/press-releases/",
+        "https://www.bankofcanada.ca/news/speeches/",
+        "https://www.bankofcanada.ca/rates/",
+        "https://www.bankofcanada.ca/publications/mpr/"
       ],
       "allowed_prefixes": [
         "https://www.bankofcanada.ca/news/",
-        "https://www.bankofcanada.ca/markets/",
-        "https://www.bankofcanada.ca/press/",
+        "https://www.bankofcanada.ca/rates/",
         "https://www.bankofcanada.ca/publications/"
       ],
       "blocked_fragments": [
         "/about/",
         "/careers/",
-        "/events/",
-        "/experts/",
-        "/people/",
         "/education/",
         "/programs/",
-        "/museum/",
-        "/archive/",
         "/category/",
         "/tag/",
         "/subscribe/"
       ],
       "max_depth": 2,
-      "max_pages": 20,
+      "max_pages": 30,
       "topic": "macro catalysts"
     },
     {
@@ -191,30 +178,82 @@
       "domain": "ecb.europa.eu",
       "start_urls": [
         "https://www.ecb.europa.eu/press/pr/html/index.en.html",
-        "https://www.ecb.europa.eu/ecb/orga/press/key_documents/shared/",
-        "https://www.ecb.europa.eu/pub/research/research-bulletin/html/index.en.html"
+        "https://www.ecb.europa.eu/press/key/html/index.en.html",
+        "https://www.ecb.europa.eu/pub/economic-bulletin/html/index.en.html",
+        "https://www.ecb.europa.eu/mopo/decisions/html/index.en.html"
       ],
       "allowed_prefixes": [
         "https://www.ecb.europa.eu/press/",
-        "https://www.ecb.europa.eu/ecb/orga/",
-        "https://www.ecb.europa.eu/pub/"
+        "https://www.ecb.europa.eu/pub/",
+        "https://www.ecb.europa.eu/mopo/"
       ],
       "blocked_fragments": [
         "/about/",
         "/careers/",
-        "/events/",
-        "/experts/",
-        "/people/",
         "/education/",
-        "/programs/",
-        "/museum/",
-        "/archive/",
         "/category/",
         "/tag/",
         "/subscribe/"
       ],
       "max_depth": 2,
-      "max_pages": 20,
+      "max_pages": 30,
+      "topic": "macro catalysts"
+    },
+    {
+      "id": "bis.org",
+      "enabled": true,
+      "domain": "bis.org",
+      "start_urls": [
+        "https://www.bis.org/press/",
+        "https://www.bis.org/speeches/",
+        "https://www.bis.org/publ/work.htm",
+        "https://www.bis.org/publ/qtrpdf/r_qt2503.htm"
+      ],
+      "allowed_prefixes": [
+        "https://www.bis.org/press/",
+        "https://www.bis.org/speeches/",
+        "https://www.bis.org/publ/",
+        "https://www.bis.org/review/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/category/",
+        "/tag/",
+        "/subscribe/",
+        "/statistics/"
+      ],
+      "max_depth": 2,
+      "max_pages": 30,
+      "topic": "macro catalysts"
+    },
+    {
+      "id": "bankofengland.co.uk",
+      "enabled": true,
+      "domain": "bankofengland.co.uk",
+      "start_urls": [
+        "https://www.bankofengland.co.uk/news/",
+        "https://www.bankofengland.co.uk/monetary-policy/monetary-policy-committee",
+        "https://www.bankofengland.co.uk/research/research-publications",
+        "https://www.bankofengland.co.uk/statistics/bank-stats"
+      ],
+      "allowed_prefixes": [
+        "https://www.bankofengland.co.uk/news/",
+        "https://www.bankofengland.co.uk/monetary-policy/",
+        "https://www.bankofengland.co.uk/research/",
+        "https://www.bankofengland.co.uk/financial-stability/"
+      ],
+      "blocked_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/category/",
+        "/tag/",
+        "/subscribe/"
+      ],
+      "max_depth": 2,
+      "max_pages": 30,
       "topic": "macro catalysts"
     }
   ]

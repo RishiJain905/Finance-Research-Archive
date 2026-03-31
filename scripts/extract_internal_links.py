@@ -16,6 +16,12 @@ import requests
 # Fetch timeout in seconds
 FETCH_TIMEOUT = 10
 
+# Module-level robots.txt result cache: domain → bool (True = allowed)
+# Without this, every page fetch triggers an extra HTTP call to /robots.txt on
+# the same host, multiplying network requests by 2× and adding seconds of
+# latency per page on slow government sites.
+_robots_cache: dict[str, bool] = {}
+
 # HTTP headers for fetching
 FETCH_HEADERS = {
     "User-Agent": (
@@ -62,8 +68,10 @@ NEGATIVE_HINTS = [
 
 
 def robots_txt(url: str) -> bool:
-    """
-    Check if URL is allowed by robots.txt.
+    """Check if URL is allowed by robots.txt.
+
+    Results are cached per domain so repeated calls for pages on the same
+    host only hit the network once per process lifetime.
 
     Args:
         url: URL to check
@@ -73,39 +81,41 @@ def robots_txt(url: str) -> bool:
     """
     try:
         parsed = urlparse(url)
-        robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+        domain_key = f"{parsed.scheme}://{parsed.netloc}"
 
+        # Return cached result for this domain
+        if domain_key in _robots_cache:
+            return _robots_cache[domain_key]
+
+        robots_url = f"{domain_key}/robots.txt"
         response = requests.get(
             robots_url, headers=FETCH_HEADERS, timeout=FETCH_TIMEOUT
         )
 
         if response.status_code != 200:
-            # No robots.txt or can't access it - assume allowed
+            _robots_cache[domain_key] = True
             return True
 
         robots_content = response.text
-
-        # Simple robots.txt parsing
-        # Check if there's a rule blocking this path
-        user_agent = FETCH_HEADERS["User-Agent"]
-
         in_user_agent_block = False
+        allowed = True
+
         for line in robots_content.split("\n"):
             line = line.strip().lower()
 
             if line.startswith("user-agent:"):
                 ua = line.split(":", 1)[1].strip()
-                in_user_agent_block = ua == "*" or ua in user_agent.lower()
-            elif line.startswith("disallow:"):
-                if in_user_agent_block:
-                    path = line.split(":", 1)[1].strip()
-                    if path and path in parsed.path:
-                        return False
+                in_user_agent_block = ua == "*" or ua in FETCH_HEADERS["User-Agent"].lower()
+            elif line.startswith("disallow:") and in_user_agent_block:
+                path = line.split(":", 1)[1].strip()
+                if path and parsed.path.startswith(path):
+                    allowed = False
+                    break
 
-        return True
+        _robots_cache[domain_key] = allowed
+        return allowed
 
     except Exception:
-        # On any error, assume allowed
         return True
 
 
@@ -153,6 +163,10 @@ def extract_links(soup: BeautifulSoup, base_url: str) -> List[Dict[str, Any]]:
     links = []
     parsed_base = urlparse(base_url)
     base_domain = parsed_base.netloc
+    # Normalise base domain once for www/non-www comparison.
+    # E.g. crawling www.federalreserve.gov should still follow links to
+    # federalreserve.gov (no www) and vice-versa.
+    base_domain_norm = re.sub(r"^www\.", "", base_domain.lower())
 
     # Find all anchor tags
     for anchor in soup.find_all("a", href=True):
@@ -167,8 +181,9 @@ def extract_links(soup: BeautifulSoup, base_url: str) -> List[Dict[str, Any]]:
         full_url = urljoin(base_url, href)
         parsed_url = urlparse(full_url)
 
-        # Only include internal links (same domain)
-        if parsed_url.netloc != base_domain:
+        # Only include internal links (same domain, www-normalised)
+        link_domain_norm = re.sub(r"^www\.", "", parsed_url.netloc.lower())
+        if link_domain_norm != base_domain_norm:
             continue
 
         # Skip javascript and other non-http(s) schemes

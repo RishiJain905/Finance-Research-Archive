@@ -2,8 +2,9 @@ import json
 import os
 import sys
 from copy import deepcopy
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
@@ -47,6 +48,15 @@ def preferred_source_url(metadata: dict) -> str:
     )
 
 
+def extract_domain(url: str) -> str:
+    if not url:
+        return ""
+    try:
+        return urlparse(url).netloc
+    except Exception:
+        return ""
+
+
 def build_record_template(
     schema: dict,
     metadata: dict,
@@ -65,7 +75,9 @@ def build_record_template(
     record["status"] = "review_queue"
     record["topic"] = metadata.get("TOPIC", record.get("topic", ""))
     record["source"]["name"] = metadata.get("TARGET", record["source"].get("name", ""))
-    record["source"]["url"] = preferred_source_url(metadata)
+    source_url = preferred_source_url(metadata)
+    record["source"]["url"] = source_url
+    record["source"]["domain"] = extract_domain(source_url)
     record["source"]["published_at"] = metadata.get("PUBLISHED_AT", "")
     record["source"]["source_type"] = metadata.get("PAGE_TYPE", "")
     record["llm_review"]["verdict"] = "pending"
@@ -79,9 +91,10 @@ def hydrate_generated_record(record: dict, metadata: dict, template: dict) -> di
     record["source"]["name"] = record["source"].get("name") or metadata.get(
         "TARGET", ""
     )
-    record["source"]["url"] = record["source"].get("url") or preferred_source_url(
-        metadata
-    )
+    source_url = record["source"].get("url") or preferred_source_url(metadata)
+    record["source"]["url"] = source_url
+    if not record["source"].get("domain"):
+        record["source"]["domain"] = extract_domain(source_url)
     record["source"]["published_at"] = record["source"].get(
         "published_at"
     ) or metadata.get("PUBLISHED_AT", "")
@@ -111,18 +124,32 @@ def hydrate_generated_record(record: dict, metadata: dict, template: dict) -> di
     return record
 
 
+MAX_BODY_CHARS = 8_000
+
+
 def build_prompt_input(
     prompt_text: str, source_record: dict, record_template: dict
 ) -> str:
     metadata = source_record.get("metadata", {})
     body_text = source_record.get("body", "")
+    today = date.today().isoformat()
+
+    truncated = len(body_text) > MAX_BODY_CHARS
+    if truncated:
+        body_text = body_text[:MAX_BODY_CHARS]
+
+    body_block = body_text
+    if truncated:
+        body_block += "\n[TRUNCATED: source body exceeded character limit]"
+
     return (
         f"{prompt_text}\n\n"
+        f"TODAY: {today}\n\n"
         f"=== SOURCE METADATA START ===\n"
         f"{json.dumps(metadata, indent=2, ensure_ascii=False)}\n"
         f"=== SOURCE METADATA END ===\n\n"
         f"=== SOURCE BODY START ===\n"
-        f"{body_text}\n"
+        f"{body_block}\n"
         f"=== SOURCE BODY END ===\n\n"
         f"=== RECORD TEMPLATE START ===\n"
         f"{json.dumps(record_template, indent=2)}\n"
@@ -152,7 +179,7 @@ def extract_json_from_response(text: str) -> dict:
     raise ValueError("Model response did not contain valid JSON.")
 
 
-def call_minimax(prompt_input: str) -> dict:
+def call_minimax(prompt_input: str, max_retries: int = 2) -> dict:
     load_dotenv()
 
     api_key = os.getenv("OPENAI_API_KEY")
@@ -163,25 +190,43 @@ def call_minimax(prompt_input: str) -> dict:
         raise EnvironmentError("OPENAI_API_KEY is missing. Add it to your .env file.")
 
     client = OpenAI(api_key=api_key, base_url=base_url)
+    messages = [
+        {
+            "role": "system",
+            "content": "Return only valid JSON. Do not include markdown fences.",
+        },
+        {"role": "user", "content": prompt_input},
+    ]
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {
-                "role": "system",
-                "content": "Return only valid JSON. Do not include markdown fences.",
-            },
-            {"role": "user", "content": prompt_input},
-        ],
-        temperature=0.2,
-        max_completion_tokens=2500,
-    )
+    last_error: Exception | None = None
+    for attempt in range(1, max_retries + 2):
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0.2,
+            max_completion_tokens=2500,
+        )
 
-    content = response.choices[0].message.content
-    if not content:
-        raise ValueError("MiniMax returned an empty response.")
+        content = response.choices[0].message.content
+        if not content:
+            last_error = ValueError("MiniMax returned an empty response.")
+            messages.append({"role": "assistant", "content": ""})
+            messages.append({"role": "user", "content": "Your response was empty. Return only valid JSON."})
+            continue
 
-    return extract_json_from_response(content)
+        try:
+            return extract_json_from_response(content)
+        except ValueError as e:
+            last_error = e
+            if attempt <= max_retries:
+                print(f"  JSON parse failed on attempt {attempt}, retrying...")
+                messages.append({"role": "assistant", "content": content})
+                messages.append({
+                    "role": "user",
+                    "content": "Your response was not valid JSON. Return only the JSON object, no markdown fences or extra text.",
+                })
+
+    raise ValueError(f"MiniMax failed to return valid JSON after {max_retries + 1} attempts: {last_error}")
 
 
 def main() -> None:

@@ -32,7 +32,13 @@ def _extract_domain(url: str) -> str:
 
 
 def _normalize_result(result: dict[str, Any]) -> dict[str, Any]:
-    """Normalize a single Tavily result to the standard format."""
+    """Normalize a single Tavily result to the standard format.
+
+    raw_content is Tavily's pre-fetched full page text (only present when
+    include_raw_content=True is passed to the search call). It is preserved
+    here so build_keyword_candidates can use it as a fallback when a direct
+    HTTP fetch fails.
+    """
     return {
         "title": result.get("title", ""),
         "url": result.get("url", ""),
@@ -40,16 +46,24 @@ def _normalize_result(result: dict[str, Any]) -> dict[str, Any]:
         "source_domain": _extract_domain(result.get("url", "")),
         "provider": "tavily",
         "published_at": _normalize_date(result.get("published_date")),
+        "tavily_content": result.get("raw_content", "") or "",
     }
 
 
-def search_web(query: str, max_results: int = 10) -> list[dict[str, Any]]:
+def search_web(
+    query: str,
+    max_results: int = 10,
+    days_back: int | None = None,
+    search_type: str = "general",
+) -> list[dict[str, Any]]:
     """
     General web search via Tavily.
 
     Args:
         query: The search query.
         max_results: Maximum number of results to return (default: 10).
+        days_back: Restrict results to last N days (only applies when search_type="news").
+        search_type: "news" uses Tavily news topic with recency filtering; "general" is default.
 
     Returns:
         List of normalized search results.
@@ -59,20 +73,32 @@ def search_web(query: str, max_results: int = 10) -> list[dict[str, Any]]:
     """
     client = _get_tavily_client()
     try:
-        response = client.search(query=query, max_results=max_results)
+        kwargs: dict[str, Any] = dict(
+            query=query, max_results=max_results, include_raw_content=True
+        )
+        if search_type == "news":
+            kwargs["topic"] = "news"
+            if days_back:
+                kwargs["days"] = days_back
+        response = client.search(**kwargs)
         results = response.get("results", [])
         return [_normalize_result(r) for r in results]
     except Exception as e:
         raise RuntimeError(f"Tavily web search failed for query '{query}': {e}") from e
 
 
-def search_news(query: str, max_results: int = 10) -> list[dict[str, Any]]:
+def search_news(
+    query: str,
+    max_results: int = 10,
+    days_back: int | None = None,
+) -> list[dict[str, Any]]:
     """
     News search via Tavily.
 
     Args:
         query: The search query.
         max_results: Maximum number of results to return (default: 10).
+        days_back: Restrict results to last N days (default: no limit).
 
     Returns:
         List of normalized search results.
@@ -82,9 +108,12 @@ def search_news(query: str, max_results: int = 10) -> list[dict[str, Any]]:
     """
     client = _get_tavily_client()
     try:
-        response = client.search(
-            query=query, max_results=max_results, search_type="news"
+        kwargs: dict[str, Any] = dict(
+            query=query, max_results=max_results, topic="news", include_raw_content=True
         )
+        if days_back:
+            kwargs["days"] = days_back
+        response = client.search(**kwargs)
         results = response.get("results", [])
         return [_normalize_result(r) for r in results]
     except Exception as e:
@@ -92,19 +121,25 @@ def search_news(query: str, max_results: int = 10) -> list[dict[str, Any]]:
 
 
 def search_preferred_domains(
-    query: str, domains: list[str], max_results: int = 10
+    query: str,
+    domains: list[str],
+    max_results: int = 10,
+    days_back: int | None = None,
+    search_type: str = "general",
 ) -> list[dict[str, Any]]:
     """
     Site-restricted search via Tavily.
 
-    Attempts to use Tavily's domain filtering capabilities. If the API does not
-    directly support domain parameters, results are filtered post-search to
-    only include URLs from the specified domains.
+    Attempts to use Tavily's domain filtering with include_domains (falling back to
+    legacy domains parameter). Results are also post-filtered to only include URLs
+    from the specified domains.
 
     Args:
         query: The search query.
         domains: List of domain names to restrict search to (e.g., ["example.com"]).
         max_results: Maximum number of results to return (default: 10).
+        days_back: Restrict results to last N days (only applies when search_type="news").
+        search_type: "news" uses Tavily news topic with recency filtering; "general" is default.
 
     Returns:
         List of normalized search results from the specified domains.
@@ -115,27 +150,33 @@ def search_preferred_domains(
     client = _get_tavily_client()
     domain_set = {d.lower().strip() for d in domains}
 
-    try:
-        # Try Tavily's search_depth="basic" with domains if supported
-        response = client.search(
-            query=query,
-            max_results=max_results,
-            search_depth="basic",
-            domains=domains,
-        )
-        results = response.get("results", [])
-    except TypeError:
-        # Tavily doesn't support domains parameter directly - fall back to basic search
-        response = client.search(
-            query=query, max_results=max_results, search_depth="basic"
-        )
-        results = response.get("results", [])
+    base_kwargs: dict[str, Any] = dict(
+        query=query, max_results=max_results, search_depth="basic", include_raw_content=True
+    )
+    if search_type == "news":
+        base_kwargs["topic"] = "news"
+        if days_back:
+            base_kwargs["days"] = days_back
 
-    # Filter results to only include URLs from specified domains
-    filtered = []
-    for r in results:
-        url_domain = _extract_domain(r.get("url", "")).lower()
-        if any(url_domain == d or url_domain.endswith(f".{d}") for d in domain_set):
-            filtered.append(r)
+    results: list[dict[str, Any]] = []
+
+    # Try include_domains (newer Tavily SDK), fall back to domains, then bare search
+    for domain_kwarg in ({"include_domains": domains}, {"domains": domains}, {}):
+        try:
+            response = client.search(**base_kwargs, **domain_kwarg)
+            results = response.get("results", [])
+            break
+        except TypeError:
+            continue
+
+    # Post-filter to only keep results from the requested domains
+    filtered = [
+        r for r in results
+        if any(
+            _extract_domain(r.get("url", "")).lower() == d
+            or _extract_domain(r.get("url", "")).lower().endswith(f".{d}")
+            for d in domain_set
+        )
+    ]
 
     return [_normalize_result(r) for r in filtered]

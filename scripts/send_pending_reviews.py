@@ -83,7 +83,7 @@ def main() -> None:
         if not should_send_review(record):
             continue
 
-        record_id = record.get("id") or record_path.stem
+        record_id = record_path.stem
         current_review_fp = build_review_fingerprint(record)
         last_review_fp = record.get("telegram_review_fingerprint", "")
 
@@ -107,7 +107,7 @@ def main() -> None:
         save_json_file(record_path, record)
 
         sent_any = True
-        time.sleep(0.35)
+        time.sleep(1.5)
 
     if not sent_any:
         print("No pending review messages were sent.")

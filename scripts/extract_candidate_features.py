@@ -667,6 +667,13 @@ def extract_candidate_features(candidate: dict[str, Any]) -> dict[str, Any]:
     """
     from scripts.candidate_utils import get_candidate_index
 
+    # Seed-crawl (and other lanes) store the URL under source.url rather than
+    # the top-level ``url`` field.  Normalise here once so every downstream
+    # extractor in this module sees the correct value without needing individual
+    # changes in each helper.
+    if not candidate.get("url"):
+        candidate["url"] = candidate.get("source", {}).get("url", "")
+
     # Load scoring rules and candidate index
     scoring_rules = load_scoring_rules()
     candidate_index = get_candidate_index()

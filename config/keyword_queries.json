@@ -1,104 +1,286 @@
 {
+  "max_queries_per_run": 6,
   "queries": [
     {
       "id": "repo_stress",
       "topic": "market structure",
       "enabled": true,
       "priority": "high",
+      "search_type": "news",
+      "days_back": 14,
       "query": "repo market stress liquidity treasury funding collateral",
-      "required_terms": ["repo", "liquidity"],
+      "required_terms": ["repo"],
       "preferred_domains": [
         "newyorkfed.org",
         "federalreserve.gov",
         "treasury.gov",
         "bankofengland.co.uk",
         "ecb.europa.eu",
-        "bis.org"
+        "bis.org",
+        "stlouisfed.org",
+        "fsb.org"
       ],
       "blocked_domains": [],
-      "max_results": 10
+      "max_results": 20
     },
     {
       "id": "inflation_repricing",
       "topic": "macro catalysts",
       "enabled": true,
       "priority": "high",
+      "search_type": "news",
+      "days_back": 14,
       "query": "inflation repricing rates fed expectations labor market breakevens",
-      "required_terms": ["inflation", "rates"],
+      "required_terms": ["inflation"],
       "preferred_domains": [
         "federalreserve.gov",
         "newyorkfed.org",
         "brookings.edu",
         "piie.com",
         "imf.org",
-        "bis.org"
+        "bis.org",
+        "bls.gov",
+        "bea.gov",
+        "clevelandfed.org"
       ],
       "blocked_domains": [],
-      "max_results": 10
+      "max_results": 20
     },
     {
       "id": "treasury_refunding",
       "topic": "market structure",
       "enabled": true,
       "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
       "query": "treasury refunding auction liquidity impact funding conditions",
-      "required_terms": ["treasury", "refunding"],
+      "required_terms": ["treasury"],
       "preferred_domains": [
         "treasury.gov",
+        "home.treasury.gov",
         "federalreserve.gov",
-        "newyorkfed.org"
+        "newyorkfed.org",
+        "cbo.gov"
       ],
       "blocked_domains": [],
-      "max_results": 10
+      "max_results": 20
     },
     {
       "id": "fed_path_repricing",
       "topic": "macro catalysts",
       "enabled": true,
       "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
       "query": "fed funds rate path repricing monetary policy forward guidance",
-      "required_terms": ["fed", "rate", "repricing"],
+      "required_terms": ["fed", "rate"],
       "preferred_domains": [
         "federalreserve.gov",
         "newyorkfed.org",
         "brookings.edu",
-        "piie.com"
+        "piie.com",
+        "richmondfed.org",
+        "chicagofed.org"
       ],
       "blocked_domains": [],
-      "max_results": 10
+      "max_results": 20
     },
     {
       "id": "etf_flow_volatility",
       "topic": "market structure",
       "enabled": true,
       "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
       "query": "ETF flow volatility pressure risk assets portfolio rebalancing",
-      "required_terms": ["ETF", "volatility"],
+      "required_terms": ["ETF"],
       "preferred_domains": [
         "newyorkfed.org",
         "federalreserve.gov",
         "bis.org",
-        "imf.org"
+        "imf.org",
+        "fsb.org",
+        "sec.gov"
       ],
       "blocked_domains": [],
-      "max_results": 10
+      "max_results": 20
     },
     {
       "id": "liquidity_tightening",
       "topic": "market structure",
       "enabled": true,
       "priority": "medium",
-      "query": "liquidity tightening funding conditions credit spreadsoff",
-      "required_terms": ["liquidity", "tightening"],
+      "search_type": "news",
+      "days_back": 14,
+      "query": "liquidity tightening funding conditions credit spreads financial stability",
+      "required_terms": ["liquidity"],
       "preferred_domains": [
         "federalreserve.gov",
         "newyorkfed.org",
         "ecb.europa.eu",
         "bankofengland.co.uk",
-        "bis.org"
+        "bis.org",
+        "fsb.org",
+        "snb.ch"
       ],
       "blocked_domains": [],
-      "max_results": 10
+      "max_results": 20
+    },
+    {
+      "id": "credit_spreads_stress",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "investment grade credit spreads widening high yield financial stress conditions",
+      "required_terms": ["credit"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "bis.org",
+        "imf.org",
+        "fsb.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "sovereign_debt_issuance",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "sovereign bond issuance yield demand foreign buyers debt sustainability",
+      "required_terms": ["sovereign"],
+      "preferred_domains": [
+        "imf.org",
+        "bis.org",
+        "treasury.gov",
+        "ecb.europa.eu",
+        "oecd.org",
+        "fsb.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "fx_dollar_flows",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "dollar strength capital flows emerging markets FX reserve currency",
+      "required_terms": ["dollar"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "imf.org",
+        "bis.org",
+        "bankofengland.co.uk"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "bank_regulation_capital",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "bank capital requirements stress test Basel buffer systemic risk",
+      "required_terms": ["bank"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "bis.org",
+        "fsb.org",
+        "ecb.europa.eu",
+        "bankofengland.co.uk",
+        "cftc.gov"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "derivatives_clearing",
+      "topic": "market structure",
+      "enabled": true,
+      "priority": "low",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "derivatives clearing margin call central counterparty systemic risk OTC",
+      "required_terms": ["clearing"],
+      "preferred_domains": [
+        "bis.org",
+        "fsb.org",
+        "cftc.gov",
+        "sec.gov",
+        "federalreserve.gov",
+        "ecb.europa.eu"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "labor_market_wages",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "wage growth employment cost index labor productivity hiring conditions",
+      "required_terms": ["wage"],
+      "preferred_domains": [
+        "bls.gov",
+        "federalreserve.gov",
+        "brookings.edu",
+        "piie.com",
+        "imf.org",
+        "richmondfed.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "balance_sheet_runoff",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "Fed balance sheet QT quantitative tightening runoff reserves drain",
+      "required_terms": ["balance sheet"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "brookings.edu",
+        "stlouisfed.org",
+        "richmondfed.org"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
+    },
+    {
+      "id": "inflation_expectations_surveys",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "priority": "medium",
+      "search_type": "news",
+      "days_back": 14,
+      "query": "inflation expectations survey consumer Michigan Fed breakeven TIPS market",
+      "required_terms": ["inflation"],
+      "preferred_domains": [
+        "federalreserve.gov",
+        "newyorkfed.org",
+        "clevelandfed.org",
+        "stlouisfed.org",
+        "brookings.edu"
+      ],
+      "blocked_domains": [],
+      "max_results": 20
     }
   ]
 }

@@ -21,8 +21,11 @@ Arguments:
 """
 
 import argparse
+import json
 import subprocess
 import sys
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -53,9 +56,58 @@ from scripts.normalize_search_results import normalize_results
 
 # Configuration paths
 QUERY_CONFIG_PATH = BASE_DIR / "config" / "keyword_queries.json"
+QUERY_PERFORMANCE_PATH = (
+    BASE_DIR / "data" / "candidate_manifests" / "query_performance.json"
+)
 
 # Lane name for keyword discovery
 LANE = "keyword_discovery"
+
+
+# ============================================================================
+# Query Performance Log (#10)
+# ============================================================================
+
+
+def _load_query_performance() -> dict[str, Any]:
+    """Load per-query performance stats from disk."""
+    if not QUERY_PERFORMANCE_PATH.exists():
+        return {}
+    try:
+        with open(QUERY_PERFORMANCE_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return {}
+
+
+def _save_query_performance(perf: dict[str, Any]) -> None:
+    """Atomically save per-query performance stats to disk."""
+    QUERY_PERFORMANCE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = QUERY_PERFORMANCE_PATH.with_suffix(".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(perf, f, indent=2)
+    tmp.replace(QUERY_PERFORMANCE_PATH)
+
+
+def _record_query_run(
+    query_id: str,
+    results_raw: int,
+    candidates_built: int,
+    fetch_success: int,
+) -> None:
+    """Increment cumulative stats for a single query execution."""
+    perf = _load_query_performance()
+    entry = perf.get(
+        query_id,
+        {"runs": 0, "results_raw": 0, "candidates_built": 0, "fetch_success": 0},
+    )
+    entry["runs"] += 1
+    entry["results_raw"] += results_raw
+    entry["candidates_built"] += candidates_built
+    entry["fetch_success"] += fetch_success
+    entry["last_run"] = datetime.now(timezone.utc).isoformat()
+    perf[query_id] = entry
+    _save_query_performance(perf)
 
 
 # ============================================================================
@@ -91,7 +143,10 @@ def execute_query(query_config: dict[str, Any]) -> list[dict[str, Any]]:
     Uses:
     - search_preferred_domains if preferred_domains are specified
     - search_web for general queries
-    - search_news for news-focused queries
+
+    Respects query config fields:
+    - search_type: "news" enables Tavily news topic for recency filtering
+    - days_back: limits results to the last N days (requires search_type="news")
 
     Args:
         query_config: Query configuration dict with query, max_results, etc.
@@ -102,21 +157,43 @@ def execute_query(query_config: dict[str, Any]) -> list[dict[str, Any]]:
     query = query_config.get("query", "")
     max_results = query_config.get("max_results", 10)
     preferred_domains = query_config.get("preferred_domains", [])
+    days_back: int | None = query_config.get("days_back", None)
+    search_type: str = query_config.get("search_type", "general")
 
     if not query:
         return []
 
+    query_id = query_config.get("id", "unknown")
+
     try:
-        # Use preferred_domains search if domains are specified
         if preferred_domains:
             results = search_preferred_domains(
                 query=query,
                 domains=preferred_domains,
                 max_results=max_results,
+                days_back=days_back,
+                search_type=search_type,
             )
+            # #1 Fallback: if the domain-restricted search returned nothing, retry
+            # with an open web search so the query isn't silently wasted.
+            if not results:
+                print(
+                    f"[Discovery] No domain-restricted results for '{query_id}', "
+                    f"retrying with open web search..."
+                )
+                results = search_web(
+                    query=query,
+                    max_results=max_results,
+                    days_back=days_back,
+                    search_type=search_type,
+                )
         else:
-            # Fall back to general web search
-            results = search_web(query=query, max_results=max_results)
+            results = search_web(
+                query=query,
+                max_results=max_results,
+                days_back=days_back,
+                search_type=search_type,
+            )
 
         # Normalize results to standard schema
         normalized = normalize_results(results, provider="tavily")
@@ -124,7 +201,7 @@ def execute_query(query_config: dict[str, Any]) -> list[dict[str, Any]]:
         return normalized
 
     except Exception as e:
-        print(f"[Discovery] Error executing query '{query}': {e}")
+        print(f"[Discovery] Error executing query '{query_id}': {e}")
         return []
 
 
@@ -168,7 +245,27 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
         print("[Discovery] No enabled queries found.")
         return []
 
-    print(f"[Discovery] Loaded {len(enabled_queries)} enabled queries")
+    total_enabled = len(enabled_queries)
+    print(f"[Discovery] Loaded {total_enabled} enabled queries")
+
+    # ---- Query rotation (#4) ------------------------------------------------
+    # If max_queries_per_run is set and less than available, select the queries
+    # that were run least recently so all queries get fair coverage over time.
+    max_per_run: int = config.get("max_queries_per_run", total_enabled)
+    if max_per_run < total_enabled:
+        perf = _load_query_performance()
+
+        def _last_run_key(q: dict[str, Any]) -> str:
+            # Queries never run get empty string which sorts before any ISO timestamp
+            return perf.get(q.get("id", ""), {}).get("last_run", "")
+
+        enabled_queries = sorted(enabled_queries, key=_last_run_key)[:max_per_run]
+        selected_ids = [q.get("id") for q in enabled_queries]
+        print(
+            f"[Discovery] Rotation: running {max_per_run}/{total_enabled} queries "
+            f"(oldest-first): {selected_ids}"
+        )
+    # -------------------------------------------------------------------------
 
     # Execute each query and collect candidates
     all_candidates: list[dict[str, Any]] = []
@@ -183,12 +280,15 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
         # Execute search
         results = execute_query(query_config)
+        results_raw = len(results)
 
         if not results:
             print(f"[Discovery] No results for query '{query_id}'")
+            if not dry_run:
+                _record_query_run(query_id, 0, 0, 0)
             continue
 
-        print(f"[Discovery] Got {len(results)} results for query '{query_id}'")
+        print(f"[Discovery] Got {results_raw} results for query '{query_id}'")
 
         # Build candidates from results
         candidates = build_keyword_candidates(
@@ -196,23 +296,30 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
             query_config=query_config,
             lane=LANE,
         )
+        candidates_built = len(candidates)
 
         if not candidates:
             print(f"[Discovery] No valid candidates from query '{query_id}'")
+            if not dry_run:
+                _record_query_run(query_id, results_raw, 0, 0)
             continue
 
-        print(f"[Discovery] Built {len(candidates)} candidates from query '{query_id}'")
+        print(f"[Discovery] Built {candidates_built} candidates from query '{query_id}'")
 
         # Fetch content for candidates
         if not dry_run:
             fetched_candidates, failed_candidates = fetch_candidate_contents(candidates)
+            fetch_success = len(fetched_candidates)
             if failed_candidates:
                 print(
                     f"[Discovery] Failed to fetch content for {len(failed_candidates)} candidates from query '{query_id}'"
                 )
             print(
-                f"[Discovery] Fetched content for {len(fetched_candidates)} candidates from query '{query_id}'"
+                f"[Discovery] Fetched content for {fetch_success} candidates from query '{query_id}'"
             )
+
+            # Record query-level stats (#10)
+            _record_query_run(query_id, results_raw, candidates_built, fetch_success)
 
             if not fetched_candidates:
                 continue
@@ -222,7 +329,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
                 discovered_ids.append(candidate["candidate_id"])
                 all_candidates.append(candidate)
         else:
-            print(f"[Discovery] [DRY RUN] Would save {len(candidates)} candidates")
+            print(f"[Discovery] [DRY RUN] Would save {candidates_built} candidates")
 
     if not all_candidates:
         print("\n[Pipeline] No candidates discovered. Exiting.")
@@ -249,6 +356,13 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
     candidates, duplicates = process_dedupe(all_candidates, lane=LANE)
     dup_count = len(duplicates)
     print(f"[Dedup] {dup_count}/{len(all_candidates)} candidates were duplicates")
+
+    if duplicates:
+        for dup in duplicates:
+            reason = dup.get("dedupe_status", "unknown")
+            title = dup.get("title", "")[:60]
+            domain = dup.get("source", {}).get("domain", "")
+            print(f"  [Dup/{reason}] {domain} — {title}")
 
     if not candidates:
         print("[Pipeline] No candidates survived deduplication. Exiting.")
@@ -310,6 +424,37 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
     print(f"Keyword Discovery Pipeline Complete")
     print(f"Converted {len(record_ids)} candidates to raw records")
     print(f"{'=' * 60}\n")
+
+    # Print cumulative query performance summary (#10)
+    perf = _load_query_performance()
+    if perf:
+        print("\n[Performance] Cumulative query stats:")
+        for qid, stats in sorted(perf.items()):
+            runs = stats.get("runs", 0)
+            fetched = stats.get("fetch_success", 0)
+            built = stats.get("candidates_built", 0)
+            last = stats.get("last_run", "never")[:10]
+            print(
+                f"  {qid:<32} runs={runs:>3}  built={built:>4}  "
+                f"fetched={fetched:>4}  last={last}"
+            )
+
+    # Step 6: Propose keyword expansions from theme memory.
+    # This closes the feedback loop: accepted documents update theme memory,
+    # which in turn generates proposals to improve future keyword bundles.
+    print("[Pipeline] Step 6: Proposing keyword expansions from theme memory...")
+    try:
+        from scripts.propose_keyword_expansions import main as propose_expansions
+
+        expansion_result = propose_expansions()
+        n = expansion_result.get("proposals_generated", 0)
+        auto = expansion_result.get("auto_activated", 0)
+        if n:
+            print(f"  [Expansions] {n} proposal(s) generated, {auto} auto-activated")
+        else:
+            print("  [Expansions] No new proposals (theme memory may be empty)")
+    except Exception as e:
+        print(f"  [Expansions] Skipped: {e}")
 
     return discovered_ids
 

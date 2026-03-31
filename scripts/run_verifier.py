@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+from datetime import date
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -113,14 +114,23 @@ def collect_hard_blockers(record: dict, metadata: dict, rules: dict) -> list[str
 
 
 def collect_soft_blockers(record: dict, verification: dict) -> list[str]:
+    """
+    Soft blockers send a record to review_queue rather than auto-accepting.
+    A record with confidence 6-7, no hard blockers, and suggested_status==accepted
+    is considered borderline: it goes to review_queue but does NOT require human
+    review unconditionally - a human sweep can promote it later.
+    Records with confidence < 6 or suggested_status != accepted are also soft-blocked.
+    """
     blockers = []
     issues = record.get("llm_review", {}).get("issues_found", [])
     verification_confidence = record.get("llm_review", {}).get(
         "verification_confidence", 0
     )
 
-    if verification_confidence < 8:
+    if verification_confidence < 6:
         blockers.append("low_verification_confidence")
+    elif verification_confidence < 8:
+        blockers.append("borderline_confidence")
     if issues:
         blockers.append("issues_found")
     if verification.get("suggested_status") != "accepted":
@@ -129,18 +139,32 @@ def collect_soft_blockers(record: dict, verification: dict) -> list[str]:
     return blockers
 
 
+MAX_BODY_CHARS = 8_000
+
+
 def build_verify_input(
     prompt_text: str, source_record: dict, research_record: dict
 ) -> str:
     metadata = source_record.get("metadata", {})
     body_text = source_record.get("body", "")
+    today = date.today().isoformat()
+
+    truncated = len(body_text) > MAX_BODY_CHARS
+    if truncated:
+        body_text = body_text[:MAX_BODY_CHARS]
+
+    body_block = body_text
+    if truncated:
+        body_block += "\n[TRUNCATED: source body exceeded character limit]"
+
     return (
         f"{prompt_text}\n\n"
+        f"TODAY: {today}\n\n"
         f"=== SOURCE METADATA START ===\n"
         f"{json.dumps(metadata, indent=2, ensure_ascii=False)}\n"
         f"=== SOURCE METADATA END ===\n\n"
         f"=== SOURCE BODY START ===\n"
-        f"{body_text}\n"
+        f"{body_block}\n"
         f"=== SOURCE BODY END ===\n\n"
         f"=== GENERATED RESEARCH RECORD START ===\n"
         f"{json.dumps(research_record, indent=2)}\n"
@@ -170,7 +194,7 @@ def extract_json_from_response(text: str) -> dict:
     raise ValueError("Model response did not contain valid JSON.")
 
 
-def call_minimax(prompt_input: str) -> dict:
+def call_minimax(prompt_input: str, max_retries: int = 2) -> dict:
     load_dotenv()
 
     api_key = os.getenv("OPENAI_API_KEY")
@@ -181,25 +205,43 @@ def call_minimax(prompt_input: str) -> dict:
         raise EnvironmentError("OPENAI_API_KEY is missing. Add it to your .env file.")
 
     client = OpenAI(api_key=api_key, base_url=base_url)
+    messages = [
+        {
+            "role": "system",
+            "content": "Return only valid JSON. Do not include markdown fences.",
+        },
+        {"role": "user", "content": prompt_input},
+    ]
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {
-                "role": "system",
-                "content": "Return only valid JSON. Do not include markdown fences.",
-            },
-            {"role": "user", "content": prompt_input},
-        ],
-        temperature=0.1,
-        max_completion_tokens=2000,
-    )
+    last_error: Exception | None = None
+    for attempt in range(1, max_retries + 2):
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0.1,
+            max_completion_tokens=2000,
+        )
 
-    content = response.choices[0].message.content
-    if not content:
-        raise ValueError("MiniMax returned an empty response.")
+        content = response.choices[0].message.content
+        if not content:
+            last_error = ValueError("MiniMax returned an empty response.")
+            messages.append({"role": "assistant", "content": ""})
+            messages.append({"role": "user", "content": "Your response was empty. Return only valid JSON."})
+            continue
 
-    return extract_json_from_response(content)
+        try:
+            return extract_json_from_response(content)
+        except ValueError as e:
+            last_error = e
+            if attempt <= max_retries:
+                print(f"  JSON parse failed on attempt {attempt}, retrying...")
+                messages.append({"role": "assistant", "content": content})
+                messages.append({
+                    "role": "user",
+                    "content": "Your response was not valid JSON. Return only the JSON object, no markdown fences or extra text.",
+                })
+
+    raise ValueError(f"MiniMax failed to return valid JSON after {max_retries + 1} attempts: {last_error}")
 
 
 def apply_verification_result(record: dict, verification: dict) -> dict:
@@ -240,6 +282,15 @@ def apply_verification_result(record: dict, verification: dict) -> dict:
 def apply_archive_quality_gate(
     record: dict, verification: dict, metadata: dict, rules: dict
 ) -> dict:
+    """
+    Two-tier acceptance gate:
+      - Hard blockers (container page, language mismatch, etc.) → rejected immediately.
+      - Confidence ≥ 8 + no issues + suggested_status == accepted → auto-accepted.
+      - Confidence 6-7 (borderline_confidence only) → review_queue, human_review not required
+        (pipeline drain script can promote these in bulk).
+      - Any other soft blocker (issues_found, suggested_status_not_accepted,
+        low_verification_confidence < 6) → review_queue, human_review required.
+    """
     hard_blockers = collect_hard_blockers(record, metadata, rules)
     if hard_blockers:
         record["status"] = "rejected"
@@ -249,18 +300,18 @@ def apply_archive_quality_gate(
         return record
 
     soft_blockers = collect_soft_blockers(record, verification)
-    if soft_blockers:
-        record["status"] = "review_queue"
-        record["human_review"]["required"] = True
-        if not record["human_review"].get("notes"):
-            record["human_review"]["notes"] = ", ".join(soft_blockers)
+
+    if not soft_blockers:
+        record["status"] = "accepted"
         return record
 
-    if record["human_review"].get("required", False):
-        record["status"] = "review_queue"
-        return record
-
-    record["status"] = "accepted"
+    # Borderline-only: confidence 6-7, otherwise clean → review_queue without
+    # forcing human_review so the drain script can sweep them automatically.
+    borderline_only = soft_blockers == ["borderline_confidence"]
+    record["status"] = "review_queue"
+    record["human_review"]["required"] = not borderline_only
+    if not record["human_review"].get("notes"):
+        record["human_review"]["notes"] = ", ".join(soft_blockers)
     return record
 
 
