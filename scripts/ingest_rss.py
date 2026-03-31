@@ -14,7 +14,7 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
-from scripts.ingest_sources import (
+from ingest_sources import (
     RAW_DIR,
     MANIFEST_PATH,
     build_raw_record_text,
@@ -72,7 +72,7 @@ def is_url_allowed(url: str, allowed_prefixes: list[str]) -> bool:
 
 def extract_main_text_from_html(html: str) -> tuple[str, list[str]]:
     """Extract readable text from article HTML, preferring main content."""
-    from scripts.ingest_sources import MAIN_CONTENT_SELECTORS
+    from ingest_sources import MAIN_CONTENT_SELECTORS
 
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript", "header", "footer", "nav", "aside", "form"]):
