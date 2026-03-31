@@ -51,6 +51,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Run quant research pipeline"
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             git push
           fi
