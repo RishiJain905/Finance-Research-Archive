@@ -1,0 +1,16 @@
+# Normalise all text files to LF on commit (eol=lf).
+# This suppresses the "LF will be replaced by CRLF" warning on Windows
+# and keeps the repo consistent across platforms.
+
+*           text=auto eol=lf
+
+# Explicitly mark binary types so Git never tries to diff/merge them.
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.zip       binary
+*.xlsx      binary
+*.xls       binary
