@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a placeholder note with no actual Treasury auction data",
+    "No auction dates, sizes, results, or specifications provided",
+    "Source attribution URL is empty",
+    "PUBLISHED_AT is empty - no publication date available",
+    "Cannot extract any market structure or macro catalyst information from placeholder content",
+    "event_type set to 'unknown' - correct for this source type but confirms lack of categorization",
+    "Source has no archival value - cannot support any research or RAG use cases"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies the placeholder nature of the source. No human decision needed - this is clearly a reject based on lack of substantive content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a placeholder note indicating that Treasury Securities Auctions Data has not yet been fetched from treasury_fiscal_data. No actual auction data, results, or specifications are provided. Real data would need to replace this snapshot before any market structure analysis can be performed.",
+    "why_it_matters": "This placeholder provides no actionable information for market structure analysis. Treasury auction data (bid-to-cover ratios, tail sizes, participation rates) is critical for understanding market demand for U.S. debt and potential market structure implications. This record cannot support any research or RAG use cases until real data replaces the placeholder.",
+    "macro_context": "",
+    "market_structure_context": "The intended target (Treasury Securities Auctions Data) relates to primary market structure, specifically how the Treasury issues debt and how markets absorb that supply. However, this placeholder contains no data on auction mechanics, bidder participation, or dealer behavior that would inform market structure analysis."
+  }
+}

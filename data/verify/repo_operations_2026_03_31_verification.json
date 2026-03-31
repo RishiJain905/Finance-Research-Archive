@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly a placeholder with no actual NY Fed repo operations data",
+    "No URL provided in source attribution (url field is empty string)",
+    "source_type is 'placeholder' - not a valid article or data source",
+    "No quantitative information, operation dates, amounts, or counterparties available",
+    "Record cannot provide any market-relevant analysis given placeholder content",
+    "Archival value is zero - this is a development/catchpoint placeholder, not research content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut case: source is explicitly a placeholder with no actual data. The generated record accurately identifies this limitation, but the source itself does not meet minimum quality thresholds for archival. Rule 6 applies - thin/noisy sources bias toward reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

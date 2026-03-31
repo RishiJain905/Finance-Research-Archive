@@ -1,0 +1,59 @@
+{
+  "id": "upcoming_treasury_auctions_2026_03_31",
+  "created_at": "2026-03-31T14:44:31.879949+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions",
+  "source": {
+    "name": "treasury_fiscal_data",
+    "url": "",
+    "published_at": "",
+    "source_type": "treasury_fiscal_data",
+    "domain": ""
+  },
+  "summary": "This source is a placeholder entry indicating that real Treasury auction data has not yet been populated. The content consists only of a development note stating the dataset should be replaced with actual API fetches. No auction details, dates, amounts, or securities are available.",
+  "key_points": [
+    "Source contains only placeholder text: 'This is still a placeholder dataset snapshot for Upcoming Treasury Auctions from treasury_fiscal_data.'",
+    "No actual auction dates, amounts, or security types are provided.",
+    "Content explicitly states replacement with real data is needed: 'Next we can replace this with real dataset/API fetches.'",
+    "SNAPSHOT_DATE field shows 2026_03_31, indicating current date context but no temporal data about auctions themselves."
+  ],
+  "why_it_matters": "This placeholder provides no archival value. Treasury auction data is critical for understanding near-term government bond supply, market structure dynamics, and potential rate pressures. Without actual auction schedules and sizes, market participants cannot assess near-term Treasury supply conditions or bid coverage expectations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The intended topic (market structure via Treasury auctions) cannot be assessed because no auction data exists in this source. Treasury issuance schedules directly affect market structure by determining bond supply, cash management needs, and dealer inventory dynamics.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-auctions",
+    "placeholder",
+    "no-data",
+    "market-structure",
+    "us-treasury"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only a single placeholder/dev note with no actual Treasury auction data",
+      "No auction dates, amounts, security types, coupon rates, or bid coverage data present",
+      "Source explicitly states it needs replacement with real data: 'Next we can replace this with real dataset/API fetches'",
+      "URL is empty in source metadata - missing source attribution",
+      "Published_at timestamp is missing from source metadata",
+      "Domain is empty in source metadata",
+      "Source has no archival value - it is a development placeholder, not actual market data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_03_31.txt",
+  "notes": "SOURCE IS A PLACEHOLDER. Contains no actual Treasury auction data. Only a single development note is present indicating the dataset needs to be populated with real API data. This record should be discarded and replaced with actual auction schedule data when available."
+}

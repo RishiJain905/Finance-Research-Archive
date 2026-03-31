@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only a single placeholder/dev note with no actual Treasury auction data",
+    "No auction dates, amounts, security types, coupon rates, or bid coverage data present",
+    "Source explicitly states it needs replacement with real data: 'Next we can replace this with real dataset/API fetches'",
+    "URL is empty in source metadata - missing source attribution",
+    "Published_at timestamp is missing from source metadata",
+    "Domain is empty in source metadata",
+    "Source has no archival value - it is a development placeholder, not actual market data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as a placeholder with no actual data. The verification is straightforward - the source provides zero market-relevant information. No judgment call is needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a placeholder entry indicating that real Treasury auction data has not yet been populated. The content consists only of a development note stating the dataset should be replaced with actual API fetches. No auction details, dates, amounts, or securities are available.",
+    "why_it_matters": "This placeholder provides no archival value. Treasury auction data is critical for understanding near-term government bond supply, market structure dynamics, and potential rate pressures. Without actual auction schedules and sizes, market participants cannot assess near-term Treasury supply conditions or bid coverage expectations.",
+    "macro_context": "",
+    "market_structure_context": "The intended topic (market structure via Treasury auctions) cannot be assessed because no auction data exists in this source. Treasury issuance schedules directly affect market structure by determining bond supply, cash management needs, and dealer inventory dynamics."
+  }
+}
