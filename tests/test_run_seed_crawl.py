@@ -45,16 +45,17 @@ class TestSeedCrawlOrchestration:
     @patch("scripts.run_seed_crawl.process_dedupe")
     @patch("scripts.run_seed_crawl.score_candidate")
     @patch("scripts.run_seed_crawl.filter_by_score")
+    @patch("scripts.run_seed_crawl.fetch_candidate_contents")
     @patch("scripts.run_seed_crawl.convert_candidates")
     def test_run_seed_crawl_calls_pipeline_steps(
         self,
         mock_convert,
+        mock_fetch,
         mock_filter,
         mock_score,
         mock_dedupe,
         mock_crawl,
         mock_load_config,
-        tmp_path,
     ):
         """Test that run_seed_crawl calls all pipeline steps in order."""
         from scripts.run_seed_crawl import run_seed_crawl
@@ -103,6 +104,17 @@ class TestSeedCrawlOrchestration:
             [],  # filtered
         )
 
+        # Mock fetch to return the same candidates (content fetched successfully)
+        mock_fetch.return_value = (
+            [
+                {
+                    "candidate_id": "seed_crawl_example_test_abc123",
+                    "candidate_scores": {"total_score": 50},
+                }
+            ],
+            [],  # failed
+        )
+
         # Mock convert to return record paths
         mock_convert.return_value = [Path("/fake/path/record.txt")]
 
@@ -115,6 +127,7 @@ class TestSeedCrawlOrchestration:
         mock_dedupe.assert_called()
         mock_score.assert_called()
         mock_filter.assert_called()
+        mock_fetch.assert_called()
         mock_convert.assert_called()
 
     @patch("scripts.run_seed_crawl.load_seed_config")
@@ -234,22 +247,21 @@ class TestSeedCrawlStats:
 class TestSeedCrawlCLI:
     """Test CLI interface for seed crawl."""
 
-    def test_seed_crawl_cli_runs(self):
+    @patch("scripts.run_seed_crawl.load_seed_config")
+    def test_seed_crawl_cli_runs(self, mock_load_config):
         """Test that the CLI runs without error."""
-        result = subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "scripts.run_seed_crawl",
-            ],
-            cwd=Path(__file__).resolve().parent.parent,
-            capture_output=True,
-            text=True,
-            timeout=30,
-        )
+        from scripts.run_seed_crawl import main
 
-        # Should complete (may succeed or fail due to missing config)
-        assert result.returncode in [0, 1]
+        # Use a minimal config so the CLI exits quickly without network calls
+        mock_load_config.return_value = {"seeds": []}
+
+        # Mock sys.argv so argparse doesn't pick up pytest's CLI arguments
+        with patch("sys.argv", ["run_seed_crawl"]):
+            # Capture SystemExit from sys.exit(0)
+            try:
+                main()
+            except SystemExit as e:
+                assert e.code == 0
 
     def test_seed_crawl_cli_help(self):
         """Test that --help works."""
