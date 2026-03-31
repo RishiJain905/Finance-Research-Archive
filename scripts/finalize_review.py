@@ -86,6 +86,19 @@ def main() -> None:
         raise ValueError("Decision must be 'approve' or 'reject'.")
 
     record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
+
+    if not record_path.exists():
+        for alt_dir, label in [(ACCEPTED_DIR, "accepted"), (REJECTED_DIR, "rejected")]:
+            alt_path = alt_dir / f"{record_id}.json"
+            if alt_path.exists():
+                print(f"Record '{record_id}' was already finalized and is in {label}/. Nothing to do.")
+                return
+        raise FileNotFoundError(
+            f"Record '{record_id}' not found in review_queue, accepted, or rejected.\n"
+            "This may mean the record was committed to a different branch, "
+            "or the record ID is incorrect."
+        )
+
     canonicalize_verification_artifact(record_id)
 
     record = load_json_file(record_path)

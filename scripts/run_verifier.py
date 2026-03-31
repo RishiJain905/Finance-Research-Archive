@@ -204,7 +204,7 @@ def call_minimax(prompt_input: str, max_retries: int = 2) -> dict:
     if not api_key:
         raise EnvironmentError("OPENAI_API_KEY is missing. Add it to your .env file.")
 
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    client = OpenAI(api_key=api_key, base_url=base_url, timeout=120.0)
     messages = [
         {
             "role": "system",
@@ -283,13 +283,30 @@ def apply_archive_quality_gate(
     record: dict, verification: dict, metadata: dict, rules: dict
 ) -> dict:
     """
-    Two-tier acceptance gate:
-      - Hard blockers (container page, language mismatch, etc.) → rejected immediately.
-      - Confidence ≥ 8 + no issues + suggested_status == accepted → auto-accepted.
-      - Confidence 6-7 (borderline_confidence only) → review_queue, human_review not required
-        (pipeline drain script can promote these in bulk).
-      - Any other soft blocker (issues_found, suggested_status_not_accepted,
-        low_verification_confidence < 6) → review_queue, human_review required.
+    Acceptance gate routing logic:
+
+      Hard blockers (container page, language mismatch, etc.)
+        → rejected immediately, no human review.
+
+      No soft blockers (confidence ≥ 8, no issues, suggested_status == accepted)
+        → auto-accepted.
+
+      suggested_status == "rejected" (with any soft blockers)
+        → auto-rejected, no human review. The LLM already made a clear rejection
+           decision; escalating to Telegram would only spam the human review queue.
+
+      suggested_status == "accepted", confidence ≥ 8, human_review_required == False
+        (only soft blocker is issues_found — LLM noted something minor but still
+         recommends accepting with high confidence)
+        → auto-accepted. Trusting a high-confidence LLM "accept" with noted
+           trivialities avoids unnecessary Telegram notifications.
+
+      Borderline-only: confidence 6-7, suggested_status != rejected, no other issues
+        → review_queue, human_review NOT required (drain script promotes in bulk).
+
+      Any other soft blocker (low_verification_confidence < 6, issues_found when
+        suggested_status == "review_queue", etc.)
+        → review_queue, human_review required → sent to Telegram.
     """
     hard_blockers = collect_hard_blockers(record, metadata, rules)
     if hard_blockers:
@@ -302,6 +319,32 @@ def apply_archive_quality_gate(
     soft_blockers = collect_soft_blockers(record, verification)
 
     if not soft_blockers:
+        record["status"] = "accepted"
+        return record
+
+    suggested_status = verification.get("suggested_status", "review_queue")
+
+    # If the LLM explicitly suggests rejection, auto-reject rather than routing to
+    # the human review queue. This prevents clearly-rejected records from spamming
+    # Telegram — only genuinely ambiguous records need human eyes.
+    if suggested_status == "rejected":
+        record["status"] = "rejected"
+        record["human_review"]["required"] = False
+        if not record["human_review"].get("notes"):
+            record["human_review"]["notes"] = ", ".join(soft_blockers)
+        return record
+
+    # High-confidence "accept" where the LLM noted a minor issue but explicitly
+    # said no human review is needed. The only soft blocker in this scenario is
+    # issues_found; there are no confidence or status blockers. Trust the LLM.
+    llm_no_human = not verification.get("human_review_required", True)
+    confidence = record.get("llm_review", {}).get("verification_confidence", 0)
+    if (
+        suggested_status == "accepted"
+        and llm_no_human
+        and confidence >= 8
+        and soft_blockers == ["issues_found"]
+    ):
         record["status"] = "accepted"
         return record
 

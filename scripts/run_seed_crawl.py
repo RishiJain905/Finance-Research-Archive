@@ -516,27 +516,46 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
     total_stats["converted"] = len(record_paths)
     update_lane_stats(LANE, "converted", len(record_paths))
 
-    # Step 5: Process each record through process_record.py
-    print(f"\n[Pipeline] Step 5: Processing {len(record_paths)} records...")
+    # Step 5: Process each record through the minimax cycle
+    # (summarize → verify → route to accepted / review_queue / rejected)
+    print(f"\n[Pipeline] Step 5: Running minimax cycle for {len(record_paths)} records...")
     record_ids = [p.stem for p in record_paths]
 
-    for record_id in record_ids:
-        print(f"  - Processing {record_id}...")
+    routing_counts: dict[str, int] = {"accepted": 0, "rejected": 0, "review_queue": 0, "failed": 0}
+    PROCESS_RECORD_TIMEOUT = 300  # 5 minutes per record
+
+    for idx, record_id in enumerate(record_ids, 1):
+        print(f"  [{idx}/{len(record_ids)}] Processing {record_id}...")
         try:
             result = subprocess.run(
                 [sys.executable, "-m", "scripts.process_record", record_id],
                 cwd=BASE_DIR,
                 capture_output=True,
                 text=True,
+                timeout=PROCESS_RECORD_TIMEOUT,
             )
             if result.returncode != 0:
-                print(
-                    f"    [Warning] process_record failed for {record_id}: {result.stderr}"
-                )
+                routing_counts["failed"] += 1
+                stderr_preview = (result.stderr or "").strip().splitlines()
+                err_line = stderr_preview[-1] if stderr_preview else "unknown error"
+                print(f"    [FAILED] {err_line}")
             else:
-                print(f"    [OK] Processed {record_id}")
+                # Determine where the record was routed from stdout
+                stdout = result.stdout or ""
+                if "Moved record to accepted" in stdout:
+                    outcome = "accepted"
+                elif "Moved record to rejected" in stdout:
+                    outcome = "rejected"
+                else:
+                    outcome = "review_queue"
+                routing_counts[outcome] += 1
+                print(f"    [OK] → {outcome}")
+        except subprocess.TimeoutExpired:
+            routing_counts["failed"] += 1
+            print(f"    [TIMEOUT] process_record exceeded {PROCESS_RECORD_TIMEOUT}s — skipping")
         except Exception as e:
-            print(f"    [Warning] Error processing {record_id}: {e}")
+            routing_counts["failed"] += 1
+            print(f"    [ERROR] {e}")
 
     # Save stats
     _save_stats(total_stats)
@@ -544,6 +563,13 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
     print(f"\n{'=' * 60}")
     print(f"Seed Crawl Pipeline Complete")
     print(f"Converted {len(record_paths)} candidates to raw records")
+    print(f"")
+    print(f"Minimax Cycle Results:")
+    print(f"  Accepted   : {routing_counts['accepted']}")
+    print(f"  Review     : {routing_counts['review_queue']}")
+    print(f"  Rejected   : {routing_counts['rejected']}")
+    if routing_counts["failed"]:
+        print(f"  Failed     : {routing_counts['failed']}")
     print(f"{'=' * 60}\n")
 
     return discovered_ids
