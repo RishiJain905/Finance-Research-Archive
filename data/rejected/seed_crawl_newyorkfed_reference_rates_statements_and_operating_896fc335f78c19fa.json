@@ -1,0 +1,62 @@
+{
+  "id": "seed_crawl_newyorkfed_reference_rates_statements_and_operating_896fc335f78c19fa",
+  "created_at": "2026-03-30T06:49:58.233919+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "regulatory_statement",
+  "title": "Reference Rates: Statements and Operating Policies - Federal Reserve Bank of New York",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This page is an index/archive listing of statements issued by the Federal Reserve Bank of New York regarding reference rates, spanning from 2015 to 2026. The statements cover SOFR (Secured Overnight Financing Rate), EFFR (Effective Federal Funds Rate), OBFR (Overnight Bank Funding Rate), and Treasury Repo Reference Rates. The page does not contain the substantive content of any individual statement—it only provides dates and titles. This is a navigation/archive index page, not a primary source document.",
+  "key_points": [
+    "This is an index page listing dates and titles of reference rate statements, not the statements themselves",
+    "Covered rate types include SOFR, EFFR, OBFR, and Treasury Repo Reference Rates",
+    "Statements span from January 2015 through March 2026",
+    "Topics include IOSCO compliance, publication schedules, methodology modifications, and historical data updates",
+    "The page is a container/navigation page with no substantive analytical content"
+  ],
+  "why_it_matters": "Reference rates administered by the Federal Reserve Bank of New York form the backbone of money market and derivatives pricing. However, this source is merely an index page and does not contain the actual policy content needed for research purposes. Individual statements would need to be retrieved separately for substantive analysis.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "",
+  "market_structure_context": "SOFR, EFFR, OBFR, and Treasury Repo Reference Rates are foundational benchmarks for short-term funding markets, derivatives pricing, and transition from LIBOR. However, this source only lists statement titles without providing the actual policy content.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "sofr",
+    "reference-rates",
+    "money-market",
+    "ny-fed",
+    "libor-transition",
+    "repo"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page/index page, explicitly disallowed per Rule 9",
+      "No substantive content - page contains only dates and statement titles, not actual policy content",
+      "Archive value is too low as standalone record - individual statements would need to be retrieved separately",
+      "URL field is blank, preventing source verification",
+      "Source quality is insufficient for research purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_reference_rates_statements_and_operating_896fc335f78c19fa.txt",
+  "notes": "Source is a low-quality, container-like page. Per Rule 9, listing pages should be treated as non-archiveable. The page provides no substantive content—it is merely a chronological index of statement titles and dates. To be useful for RAG, individual statements (e.g., the SOFR methodology modifications, IOSCO compliance statements) would need to be retrieved and archived separately."
+}

@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a press release listing/index page, not a complete article - violates Rule 8 (container pages must be rejected)",
+    "URL is blank - cannot verify or access source for further validation",
+    "Extremely thin content with no background, policy context, or successor information",
+    "Source metadata title 'Press releases' confirms this is a listing page",
+    "Content body explicitly states 'Content Type(s) : Press , Press releases' indicating a metadata/catalog entry rather than full article",
+    "Archive value is too low - record summarizes all available source content but source lacks substantive information",
+    "Missing numerical evidence or policy discussion that would make this record useful for macro catalyst analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source identified as a listing page with minimal content. While the generated record is factually accurate against the source, the source itself fails quality thresholds. A listing page cannot be accepted per Rule 8, and this record has no standalone archive value without the full press release text.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

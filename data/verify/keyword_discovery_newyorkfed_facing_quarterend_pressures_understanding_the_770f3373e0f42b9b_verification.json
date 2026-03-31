@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source attribution uses generic homepage URL (https://www.newyorkfed.org/) rather than the specific speech URL - this is a container page, not the source article",
+    "event_type field is empty but should indicate 'speech_remarks' based on source content",
+    "Presentation slides referenced in the speech are not reproduced in source text, limiting completeness of underlying data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record demonstrates high factual accuracy and faithful representation of the source content. However, the source attribution points to the New York Fed homepage rather than the specific speech URL, which violates the principle that container pages should bias toward reject. Human review is needed to: (1) verify the correct specific URL for the speech, and (2) determine whether the high quality of content outweighs the attribution deficiency. If corrected attribution is obtainable, this record should be accepted given its technical depth, accurate characterization of SRF mechanics, and valuable three-segment repo market taxonomy.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

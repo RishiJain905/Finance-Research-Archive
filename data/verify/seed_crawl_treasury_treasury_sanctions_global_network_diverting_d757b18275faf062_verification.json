@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is blank in both metadata and record - source attribution is incomplete but source name is present",
+    "market_impact.directional_bias 'risk_off' is inferred, not stated in source",
+    "market_impact.confidence of 3 is appropriately conservative given no explicit market guidance in source",
+    "llm_review.verification_confidence is 0 (placeholder) despite substantive review being performed"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the record is largely faithful to the source with accurate figures ($100 million, 16 entities), specific dates, entity names, and legal authorities, the blank URL is a data quality concern. The directional bias inference and low confidence rating are reasonable given the source type, but human judgment confirms the source is suitable for macro catalyst classification despite lacking explicit market impact language.",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "The U.S. Treasury's Office of Foreign Assets Control (OFAC) designated a network of 16 individuals and entities led by Alaa Hassan Hamieh for funneling funds to Hizballah. The network, spanning Lebanon, Syria, Poland, Slovenia, Qatar, and Canada, is estimated to have diverted over $100 million since 2020. The sanctions target individuals who abused positions in Lebanon's government and operated front companies for procurement and money laundering. Alaa Hamieh previously served as Vice President of the Investment Development Authority of Lebanon (IDAL) and used this role to divert funds from an Iraq-Lebanon trade agreement for reconstruction. Alaa Hamieh personally received millions of U.S. dollars for Hizballah-associated projects.",
+    "why_it_matters": "This sanctions action represents a significant U.S. counterterrorism financing effort that could affect regional financial networks and companies with ties to Hizballah. Secondary sanctions risk for foreign financial institutions engaging with designated entities creates compliance pressure across the global banking system. The geographic breadth of the network (6+ countries) increases potential for broader market impact on regional currencies and financial institutions. The involvement of a former Lebanese government official in diverting reconstruction funds signals corruption risks in regional economic arrangements.",
+    "macro_context": "This sanctions announcement reflects ongoing U.S. counterterrorism priorities and signals heightened enforcement against proxies of Iran. The diversion of reconstruction funds from an Iraq-Lebanon trade agreement through a former government official indicates systemic corruption risks in regional economic arrangements. The source provides no explicit market context; impact on regional currencies (Lebanese pound, Syrian pound) and potential secondary sanctions effects on foreign financial institutions are inferred but not quantified.",
+    "market_structure_context": "The designated network includes telecommunications companies (Calllync entities across multiple jurisdictions), logistics firms (Seven Seas), and money exchange operations. These front companies operating across six countries create potential for downstream effects on regional trade and financial networks. Financial institutions worldwide face compliance risks if they process transactions involving designated entities or their 50%+ owned subsidiaries."
+  }
+}

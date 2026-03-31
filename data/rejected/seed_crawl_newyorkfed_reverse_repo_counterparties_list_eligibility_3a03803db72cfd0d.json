@@ -1,0 +1,62 @@
+{
+  "id": "seed_crawl_newyorkfed_reverse_repo_counterparties_list_eligibility_3a03803db72cfd0d",
+  "created_at": "2026-03-30T06:23:45.533601+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "policy_implementation",
+  "title": "Reverse Repo Counterparties: List & Eligibility Requirements",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "",
+    "published_at": "",
+    "source_type": "official_institution"
+  },
+  "summary": "The Federal Reserve Bank of New York maintains an official list of reverse repo counterparties who participate in overnight reverse repo (ON RRP) operations alongside primary dealers. The ON RRP facility is used by the New York Fed Trading Desk to keep the effective federal funds rate from falling below the FOMC target range. Counterparties include banks meeting specific asset thresholds, government-sponsored enterprises, and SEC-registered 2a-7 money market funds meeting net asset or RRP transaction minimums.",
+  "key_points": [
+    "Reverse repo counterparties must transact in at least two ON RRP operations every six months to test trading and settlement systems",
+    "Bank eligibility requires either $30 billion in total assets or $10 billion in reserve balances per FFIEC reporting",
+    "SEC-registered 2a-7 money market funds must have $2 billion in net assets OR $500 million average outstanding RRP transactions over six consecutive month-ends",
+    "Current counterparties include major banks (e.g., JPMorgan Chase, Bank of America, Goldman Sachs), GSEs (e.g., Fannie Mae, Freddie Mac, Federal Home Loan Banks), and numerous money market funds managed by BlackRock, Fidelity, Vanguard, and others",
+    "Single-owner funds are ineligible; the facility is designed for broadly-held funds, GSEs, banks, and primary dealers",
+    "RRP counterparties must already operate in the triparty repo market collateralized by U.S. government debt, agency debt, and agency MBS"
+  ],
+  "why_it_matters": "The ON RRP facility forms part of the Fed's floor system for short-term interest rates. The size and composition of RRP usage affects money market rates, bank reserve levels, and the effective transmission of monetary policy. Changes in eligible counterparties or RRP usage can signal shifts in money market dynamics and liquidity conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "The RRP facility serves as a backstop for money market rates, preventing the effective federal funds rate from falling below the FOMC target range. During periods of excess reserves, RRP usage typically increases as money market funds seek safe overnight placements with the Fed.",
+  "market_structure_context": "The list defines the official participant structure for the Fed's ON RRP operations, a key component of the monetary policy transmission mechanism and short-term funding market infrastructure. The eligibility criteria establish thresholds for bank capitalization, fund size, and operational capabilities.",
+  "important_numbers": [
+    30000000000,
+    10000000000,
+    2000000000,
+    500000000
+  ],
+  "tags": [
+    "federal_reserve",
+    "reverse_repo",
+    "on_rrp",
+    "rrp_counterparties",
+    "money_market_funds",
+    "monetary_policy_implementation",
+    "new_york_fed_trading_desk"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "reject",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_reverse_repo_counterparties_list_eligibility_3a03803db72cfd0d.txt",
+  "notes": "Source is authoritative NY Fed official page. Contains exhaustive counterparty list with historical additions/removals from 2010-2025 and detailed eligibility criteria. High value for understanding Fed operational framework and money market structure. No publication date provided; page content reflects current state as of crawl date."
+}

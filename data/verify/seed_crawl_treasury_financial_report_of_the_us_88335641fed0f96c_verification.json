@@ -1,1 +1,22 @@
-{}
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "No URL provided in source metadata - violates source attribution requirement",
+    "No published date available",
+    "Source body is an extremely thin seed crawl record with only one sentence of generic description",
+    "No specific macro catalyst data, fiscal figures, debt levels, revenue figures, or actionable information present",
+    "PAGE_TYPE is seed_crawl - a container/navigation type that per Rule 8 must not be accepted",
+    "Archive value is effectively zero for macro catalysts research - no catalyst events, no numerical evidence, no dates",
+    "Source is metadata about a document rather than the actual document itself"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a seed crawl metadata record with no URL, no published date, and no actionable content. The source body contains only a generic one-sentence description of the Financial Report of the United States Government as a document that provides 'a comprehensive view of the federal government's finances.' No specific fiscal data, debt figures, deficit numbers, revenue figures, macro catalyst events, or any numerical evidence is present.",
+    "why_it_matters": "This source cannot serve as a macro catalyst research record because it contains zero specific financial data, catalyst events, or actionable information. It is a crawl metadata record rather than an actual document, and lacks both URL attribution and publication date. The record title references the Financial Report but the source body is not the actual report.",
+    "macro_context": "Not applicable - source contains no macro catalyst content, fiscal statistics, or event data that could inform macro research.",
+    "market_structure_context": "Not applicable - source contains no market structure relevant information."
+  }
+}

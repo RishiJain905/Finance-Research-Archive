@@ -1,0 +1,57 @@
+{
+  "id": "seed_crawl_federalreserve_press_releases_960d261125cccc95",
+  "created_at": "2026-03-30T06:01:32.209952+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "",
+  "title": "Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This source is a Federal Reserve navigation/listing page containing only year-based links to FOMC press release archives (2006-2026). The page itself contains no substantive research content—just a hierarchical menu structure and a 'Please enable JavaScript' notice. The last update timestamp is March 13, 2017. This page type is explicitly excluded from archival per Rule 8.",
+  "key_points": [
+    "Source is a navigation/listing page, not an actual research document",
+    "No URL provided in source metadata",
+    "Contains only year-based links to FOMC press release archives (2006-2026)",
+    "No actual press release content present in the source body",
+    "Last update recorded as March 13, 2017"
+  ],
+  "why_it_matters": "Container pages provide no standalone research value. This page cannot serve as a source for macro catalyst analysis as it contains only navigation links to other pages, not actual FOMC content.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Not applicable - no macro catalyst content present on this listing page.",
+  "market_structure_context": "Not applicable - no market structure content present on this listing page.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "fomc",
+    "press-releases",
+    "listing-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 10,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page/navigation container with no substantive content - explicitly excluded per Rule 8",
+      "No URL provided - missing source attribution per Rule 9",
+      "Contains only year-based navigation links (2006-2026), no actual press release content",
+      "No macro catalyst information present despite TARGET: macro catalysts",
+      "Page type disqualifies this source from being archived as a research record",
+      "Cannot create meaningful research record from thin container page"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_press_releases_960d261125cccc95.txt",
+  "notes": "This source was flagged as TARGET: macro catalysts but contains no macro catalyst information. It is a container page (listing all FOMC press releases by year) with no actual research content. Per rule 9, listing_pages are non-archiveable. No meaningful archive record can be created from this source."
+}

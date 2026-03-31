@@ -1,0 +1,71 @@
+{
+  "id": "seed_crawl_ecb.europa_annual_report_e3def0da4f9ee91e",
+  "created_at": "2026-03-30T07:23:20.852853+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "annual_report",
+  "title": "ECB Annual Report 2024 - Landing Page",
+  "source": {
+    "name": "European Central Bank",
+    "url": "",
+    "published_at": "2024",
+    "source_type": "landing_page"
+  },
+  "summary": "Landing/navigation page for ECB Annual Report 2024 containing only summary statistics (2.4% inflation, -100bp rate cuts to 3.00% deposit facility rate) and links to the full report. No substantive policy analysis present.",
+  "key_points": [
+    "Headline inflation declined to 2.4% in December 2024 from 2.9% in December 2023, moving closer to the 2% target",
+    "ECB cut interest rates four times in 2024, cumulative reduction of 100 basis points",
+    "Deposit facility rate reached 3.00% by end of 2024",
+    "ECB Visitor Centre hosted 21,325 visitors in 2024",
+    "Annual Report 2024 published 28 April 2025",
+    "Page is a container/navigation page linking to full report and related documents"
+  ],
+  "why_it_matters": "This page has no independent archive value - it is merely a navigation hub to the actual report, speech, and financial accounts. The summary statistics are verifiable but too thin to constitute a useful research record.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "risk_on",
+    "confidence": 4
+  },
+  "macro_context": "ECB cut rates 100 basis points across four meetings in 2024, reducing deposit facility rate to 3.00%, while headline inflation declined from 2.9% to 2.4%. These are summary metrics only, not substantive policy analysis.",
+  "market_structure_context": "",
+  "important_numbers": [
+    2.4,
+    2.9,
+    2,
+    100,
+    3.0,
+    21325
+  ],
+  "tags": [
+    "ecb",
+    "annual-report",
+    "inflation",
+    "interest-rates",
+    "monetary-policy",
+    "europe",
+    "deposit-facility-rate"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a container/landing page, not the actual report content - contains only summary statistics and navigation links",
+      "URL is blank - source cannot be verified or revisited",
+      "Lacks substantive policy analysis - only high-level summary metrics present",
+      "Archive value is too low - no actual ECB policy analysis or detailed assessment",
+      "Rule 8 violation: source is a landing page/navigation page which must not be accepted",
+      "Published_at date (2024) refers to the report year, not the page publication date"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_annual_report_e3def0da4f9ee91e.txt",
+  "notes": "Container/navigation page. Confirmed via DOMAIN_TRUST_TIER: high and crawl discovery method. Source quality is thin - contains only summary metrics and navigation links. Actual report content not present. Confidence lowered due to lack of substantive analysis and missing URL. The numbers (2.4% inflation, -100bp rate cuts, 3.00% deposit rate) are explicitly stated in the source and verifiable against ECB policy history."
+}

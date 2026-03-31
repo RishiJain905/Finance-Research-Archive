@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a container/listing page with no substantive analytical content",
+    "No actual balance sheet figures or numerical data present in source body",
+    "Source only contains links to downloadable CSV/XLS files",
+    "No URL provided in source metadata - cannot verify or revisit source",
+    "No published_at date provided",
+    "Cannot assess market impact or macro relevance without actual data",
+    "Archive value is too low for standalone research record"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a thin container page with no substantive content. While the Eurosystem balance sheet topic is relevant to macro catalysts, this particular page is merely a download index without actual data. The generated record accurately identifies this limitation. Human review needed to determine if the actual data files (CSV/XLS) should be fetched separately as primary sources, rather than archiving this navigation page.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a container page on the ECB website that provides links to download annual consolidated balance sheet data for the Eurosystem (1999-2025) and weekly financial statements. The page does not contain actual balance sheet figures, analytical commentary, or substantive research content. It references a consolidated balance sheet as of 31 December 2025 published 26 February 2026, and Annual Accounts 2025 also published 26 February 2026. Changes to presentation format were made in line with Guideline (EU) 2024/2941.",
+    "why_it_matters": "The Eurosystem balance sheet provides aggregate data on central bank assets and liabilities across the euro area. However, this source page does not contain the actual numerical data—it only provides download links to CSV and XLS files. The raw data files would be needed for any substantive macro analysis.",
+    "macro_context": "Central bank balance sheet data is a key macro indicator for assessing monetary policy stance, liquidity conditions, and potential QE or QT programs. The 2025 year-end balance sheet data (referenced but not present in this source) would be relevant for analyzing ECB policy trajectory.",
+    "market_structure_context": ""
+  }
+}
