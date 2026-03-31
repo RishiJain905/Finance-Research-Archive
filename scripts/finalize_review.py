@@ -10,6 +10,7 @@ if str(BASE_DIR) not in sys.path:
 from scripts.filter_raw_records import parse_raw_record
 from scripts.run_verifier import collect_hard_blockers
 from scripts.verification_store import canonicalize_verification_artifact
+from scripts.assign_quality_tier import assign_quality_tier
 
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
@@ -44,7 +45,9 @@ def load_review_context(record_id: str, record: dict) -> tuple[dict, dict]:
     if raw_text_path:
         candidate_path = BASE_DIR / Path(raw_text_path)
         if candidate_path.exists():
-            metadata = parse_raw_record(candidate_path.read_text(encoding="utf-8", errors="ignore")).get("metadata", {})
+            metadata = parse_raw_record(
+                candidate_path.read_text(encoding="utf-8", errors="ignore")
+            ).get("metadata", {})
 
     if INGESTION_MANIFEST_PATH.exists():
         ingestion_manifest = load_json_file(INGESTION_MANIFEST_PATH)
@@ -53,7 +56,9 @@ def load_review_context(record_id: str, record: dict) -> tuple[dict, dict]:
     return metadata, rules
 
 
-def apply_review_decision(record: dict, decision: str, hard_blockers: list[str]) -> dict:
+def apply_review_decision(
+    record: dict, decision: str, hard_blockers: list[str]
+) -> dict:
     if decision == "approve" and hard_blockers:
         record["status"] = "rejected"
         record["human_review"]["required"] = False
@@ -77,7 +82,9 @@ def apply_review_decision(record: dict, decision: str, hard_blockers: list[str])
 
 def main() -> None:
     if len(sys.argv) < 3:
-        raise SystemExit("Usage: python scripts/finalize_review.py <record_id> <approve|reject>")
+        raise SystemExit(
+            "Usage: python scripts/finalize_review.py <record_id> <approve|reject>"
+        )
 
     record_id = sys.argv[1]
     decision = sys.argv[2].strip().lower()
@@ -91,7 +98,9 @@ def main() -> None:
         for alt_dir, label in [(ACCEPTED_DIR, "accepted"), (REJECTED_DIR, "rejected")]:
             alt_path = alt_dir / f"{record_id}.json"
             if alt_path.exists():
-                print(f"Record '{record_id}' was already finalized and is in {label}/. Nothing to do.")
+                print(
+                    f"Record '{record_id}' was already finalized and is in {label}/. Nothing to do."
+                )
                 return
         raise FileNotFoundError(
             f"Record '{record_id}' not found in review_queue, accepted, or rejected.\n"
@@ -111,10 +120,24 @@ def main() -> None:
     if record["status"] == "accepted":
         target_record_path = ACCEPTED_DIR / record_path.name
 
-        move_file_if_exists(record_path, target_record_path)
+        # Assign quality tier before moving to accepted
+        tier_block = assign_quality_tier(record)
+        record["quality_tier"] = tier_block["quality_tier"]
+
+        # Write updated record (with tier) to target location
+        target_record_path.parent.mkdir(parents=True, exist_ok=True)
+        with target_record_path.open("w", encoding="utf-8") as f:
+            json.dump(record, f, indent=2, ensure_ascii=False)
+
+        # Remove the original from review_queue
+        if record_path.exists():
+            record_path.unlink()
 
         print("Approved and moved to accepted:")
         print(target_record_path.relative_to(BASE_DIR))
+        print(
+            f"  Quality tier: {tier_block['quality_tier']['tier']} (score: {tier_block['quality_tier']['score']})"
+        )
     else:
         target_record_path = REJECTED_DIR / record_path.name
 

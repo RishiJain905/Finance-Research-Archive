@@ -11,6 +11,7 @@ if str(BASE_DIR) not in sys.path:
 
 from scripts.verification_store import canonicalize_verification_artifact
 from scripts.ingest_sources import ensure_manifest_shape, load_json, save_json
+from scripts.assign_quality_tier import assign_quality_tier
 
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
@@ -31,7 +32,9 @@ def move_file_if_exists(source: Path, destination: Path) -> None:
         shutil.move(str(source), str(destination))
 
 
-def compute_event_fingerprint(domain: str, published_at: str, event_type: str) -> str | None:
+def compute_event_fingerprint(
+    domain: str, published_at: str, event_type: str
+) -> str | None:
     """Return a sha1 fingerprint for (domain, date, event_type), or None if inputs are missing."""
     date_part = (published_at or "")[:10].strip()
     if not domain or not date_part or not event_type:
@@ -91,10 +94,25 @@ def main() -> None:
 
         if status == "accepted":
             target_record_path = ACCEPTED_DIR / record_path.name
-            move_file_if_exists(record_path, target_record_path)
+
+            # Assign quality tier before moving to accepted
+            tier_block = assign_quality_tier(record)
+            record["quality_tier"] = tier_block["quality_tier"]
+
+            # Write updated record (with tier) to target location
+            target_record_path.parent.mkdir(parents=True, exist_ok=True)
+            with target_record_path.open("w", encoding="utf-8") as f:
+                json.dump(record, f, indent=2, ensure_ascii=False)
+
+            # Remove the original from review_queue
+            if record_path.exists():
+                record_path.unlink()
 
             print("Moved record to accepted:")
             print(target_record_path.relative_to(BASE_DIR))
+            print(
+                f"  Quality tier: {tier_block['quality_tier']['tier']} (score: {tier_block['quality_tier']['score']})"
+            )
 
             # Register event fingerprint so future duplicates are caught.
             if event_fp:
