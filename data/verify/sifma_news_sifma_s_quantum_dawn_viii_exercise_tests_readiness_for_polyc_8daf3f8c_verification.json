@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'financial_stability_report' is valid but somewhat imprecise - the source is an industry association after-action report rather than an official financial stability report from a regulator or central bank; 'research_paper' or 'unknown' might be more technically accurate",
+    "market_impact confidence is set to 0 with empty asset_classes - this field appears unfilled, though for a resilience exercise report a neutral/no direct market impact assessment is reasonable"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is mostly accurate and well-supported; minor classification uncertainty does not require human review given valid taxonomy options available.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

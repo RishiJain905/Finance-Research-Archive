@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "PAGE_TYPE in source metadata is 'data_release' but content is clearly a blog_post - this metadata inconsistency was correctly flagged by the LLM review",
+    "No specific numerical values for the credit-to-GDP gap are provided in the source - the record correctly does not fabricate numbers",
+    "The record's event_type 'blog_post' is appropriate and correct; source_type 'data_release' from metadata appears incorrect for this content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The primary issue is a metadata inconsistency where PAGE_TYPE is labeled 'data_release' but the content is clearly a blog post. The generated record has correctly classified it as 'blog_post'. While the content is factually accurate and well-summarized, the source_type mismatch in the record (inherited from metadata) should be verified - it may need correction to 'blog_post' to align with event_type and actual content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

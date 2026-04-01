@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an index/listing page containing multiple heterogeneous press releases, not a single substantive policy document",
+    "PAGE_TYPE metadata incorrectly identifies the source as 'press_release' when it is actually a chronological archive/listing page",
+    "Cannot extract specific rate decisions, forward guidance, or market-moving data from this listing format",
+    "Source age is approximately 39 months (12/22/2022 vs TODAY 2026-04-01), exceeding the 90-day threshold - archival value is historical/contextual only",
+    "event_type set to 'unknown' is appropriate given heterogeneous content but signals the page lacks a single identifiable event type"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record appropriately self-identifies its limitations and accurately characterizes the source. The suggested_status of 'review_queue' is consistent with verification_confidence of 0 (which appropriately indicates inability to verify content quality for this source type). No automatic rejection is triggered because the source is a legitimate Federal Reserve archive with historical reference value, and the record does not fabricate claims. The record correctly recommends treating individual press releases as more appropriate archival targets.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is a listing/index page of Federal Reserve Board press releases from calendar year 2022, containing dozens of announcements spanning monetary policy, banking applications, enforcement actions, regulatory guidance, and institutional announcements. The page is not a single substantive document but rather an archive index of multiple disparate press releases. Published December 22, 2022, this is a historical record approximately 3 years and 3 months old.",
+    "why_it_matters": "This index page aggregates diverse Federal Reserve communications from 2022 but does not itself contain substantive policy details. Individual press releases would need to be accessed separately for actionable information on FOMC decisions, rate guidance, or regulatory frameworks. The listing is too broad to serve as a focused research source for market structure or macro catalysts.",
+    "market_structure_context": "Several items in the listing touch on market structure: the SOFR/LIBOR transition rule identifies benchmark replacement rates; FedNow Service update relates to payment infrastructure; intraday credit policy updates affect bank liquidity operations. However, actual details are not present in this index page.",
+    "macro_context": "The index contains references to FOMC minutes and discount rate actions that would have macro relevance if accessed individually, but the listing page itself does not provide the content needed to assess macro implications."
+  }
+}

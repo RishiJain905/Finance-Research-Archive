@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "PAGE_TYPE classification 'article' conflicts with actual content structure—page functions as an operational index/hub with minimal original prose",
+    "Content is thin (395 words), primarily comprising navigation links and list items rather than substantive analysis",
+    "No PUBLISHED_AT date provided, preventing recency assessment",
+    "record.summary and notes acknowledge the page is 'primarily an index to data resources' with 'minimal original research or analytical content'—self-identifying as low-value",
+    "Actual decision-useful data (operation schedules, holdings, transaction data) requires navigating to linked resources, not contained in this source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record sits at the boundary of reject/review. While the content accurately describes NY Fed MBS operations (authoritative source), the page itself is an operational index rather than substantive research. The record correctly identifies this limitation but may still have archival value as a reference page for Fed market structure documentation. Human judgment needed on whether operational index pages have sufficient archival value for a finance research archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This page serves as an operational hub for the New York Fed's agency MBS activities within the System Open Market Account (SOMA), authorized by the FOMC. The page primarily functions as an index linking to data resources including Agency MBS Operations, SOMA Holdings, Transaction Data, and Operation Schedules. Recent announcements include March 3, 2026 (small value exercises), November 5, 2025 (small value exercises), and October 29, 2025 (reinvestment of principal payments). The page contains approximately 395 words of operational text with minimal standalone analytical content.",
+    "why_it_matters": "Agency MBS operations are a key component of Fed balance sheet management and monetary policy implementation. This page documents the operational framework through which the NY Fed's Open Market Trading Desk executes MBS purchases, reinvestments, dollar roll, and coupon swap transactions with primary dealers. Relevant for understanding fixed income market structure and Fed QE/QT mechanics, though the page itself is a navigation index rather than substantive analysis.",
+    "macro_context": "Since end of 2008, the FOMC has directed agency MBS purchases and reinvestment for SOMA on multiple occasions to implement monetary policy. The NY Fed executes these transactions with primary dealers. Additional securities purchases have included Treasury securities, agency debt securities, and agency commercial mortgage-backed securities.",
+    "market_structure_context": "This page documents the operational infrastructure for Fed agency MBS purchases within SOMA. MBS operations affect mortgage markets and broader fixed income plumbing. Dollar roll and coupon swap transactions facilitate settlement of outstanding MBS purchases. Data on operations, SOMA holdings, and transaction details are published with varying lag times, with transaction data released quarterly approximately two years post-transaction per Dodd-Frank requirements."
+  }
+}
