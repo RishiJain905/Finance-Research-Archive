@@ -1,7 +1,7 @@
 {
   "id": "bank_of_canada_press_browse_monetary_policy_report_january_2026_bank_of_canada_450527af",
   "created_at": "2026-04-01T00:54:29.253054+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "monetary_policy_report",
   "title": "Monetary Policy Report—January 2026",
@@ -62,31 +62,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Record is substantively accurate and well-constructed from the available source content. The PUBLISHED_AT date is a reasonable inference from the URL. However, since the source is a summary/landing page rather than the full report, a human should verify whether: (1) the full PDF report should be captured separately for archival completeness, and (2) the 2026-01-28 published date can be confirmed from another Bank of Canada source."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-01T00:59:41.881898+00:00"
   },
   "raw_text_path": "data/raw/bank_of_canada_press_browse_monetary_policy_report_january_2026_bank_of_canada_450527af.txt",
   "notes": "This is a landing page for the Bank of Canada's January 2026 Monetary Policy Report. The source body contains an executive summary/overview rather than the full report. The actual detailed projections, conditional forecasts, and full Governing Council deliberations would be in the linked PDF. Published_at was not provided in source metadata; URL and report contents indicate January 28, 2026. The source is relevant to macro catalysts through its discussion of monetary policy, trade disruptions, growth outlook, and inflation trajectory. No market structure content identified.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "standard",
-    "score": 7,
+    "tier": "tier_2",
+    "score": 68.0,
     "reasoning": [
-      "Substantive policy content from authoritative central bank source",
-      "Clear articulation of rate decision, growth outlook, and inflation trajectory",
-      "Covers relevant macro catalysts including trade uncertainty and policy rate path",
-      "Minor limitation: source body is overview/landing page rather than full report",
-      "Published date unverifiable from source body—metadata gap noted"
+      "quality score: 68.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
