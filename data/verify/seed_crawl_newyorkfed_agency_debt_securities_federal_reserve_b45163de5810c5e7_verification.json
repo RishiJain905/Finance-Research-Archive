@@ -2,15 +2,15 @@
   "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "URL field is blank - source cannot be fully verified or linked back to origin",
-    "Published date is missing - temporal context unavailable for research purposes",
-    "Source is a general informational/educational page about Fed operations, not a specific research document or analytical article",
-    "Content provides institutional overview rather than original research findings or market insights",
-    "Archive value is limited - page appears to be a static reference/educational page rather than dynamic content with research value",
-    "PAGE_TYPE classification as 'seed_crawl' suggests this may be a navigation or listing page"
+    "URL is blank in source metadata - source attribution is incomplete and unverifiable",
+    "published_at is empty - cannot assess source recency or staleness",
+    "Source is an institutional/informational page with no new policy decisions, data releases, or actionable market intelligence",
+    "Reinvestment announcements (Oct 29, 2025; Mar 19, 2025) are referenced but not detailed - reader cannot access the actual announcements",
+    "event_type is 'unknown' which is acceptable but highlights the source has no specific event taxonomy fit",
+    "Source contains only historical procedural context and does not contain current market-relevant content"
   ],
   "human_review_required": false,
-  "human_review_reason": "The source is an institutional informational page from the NY Fed, and while content is factual, the record has critical verification gaps (blank URL, no date) and represents a low-value archive candidate. The 'seed_crawl' classification and general informational nature indicate this is likely a reference page rather than archival-quality research content.",
+  "human_review_reason": "Clear reject due to missing source attribution (blank URL), no publication date for recency assessment, and source being purely informational with no actionable market intelligence or new policy content.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

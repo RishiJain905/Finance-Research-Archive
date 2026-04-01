@@ -1,17 +1,19 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
+  "verification_confidence": 4,
+  "verdict": "reject",
   "issues_found": [
-    "URL field is blank in source metadata - domain and institutional attribution are present, but specific page URL is unavailable",
-    "Source is institutional educational content rather than event-driven research; it describes the framework rather than providing current catalysts or market-moving information"
+    "URL is blank - source attribution is incomplete, violating core requirements",
+    "PUBLISHED_AT is blank - cannot verify recency or staleness",
+    "event_type is 'unknown' when a more specific classification is possible for institutional/research documentation",
+    "Source is educational/institutional content rather than a specific policy event, data release, or research finding",
+    "Record lacks a specific publication date, making it difficult to assess archival relevance relative to TODAY (2026-03-31)"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "This is institutional documentation rather than a reportable event. While the content accurately describes Fed operational framework and has reference value, the missing source attribution (blank URL) and publication date violate minimum requirements. Human review needed to determine if educational/institutional pages should be archived at all, and if so, how to properly classify and date them.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This is an educational page from the New York Fed describing the general framework for implementing monetary policy, including the mechanisms for controlling the federal funds rate (IORB, ON RRP, SRP), open market operations, and additional liquidity tools. It is not a report of a specific monetary policy decision, data release, or market event.",
+    "why_it_matters": "This page describes the operational infrastructure that underpins federal funds rate control and market plumbing. Understanding IORB, ON RRP, and SRP mechanics is essential for comprehending how Fed policy decisions transmit to money markets. However, this is educational background material rather than a record of a specific policy event or market development. The source lacks a publication date and URL, limiting its utility as a dated archival record.",
+    "market_structure_context": "This page directly describes market structure elements including: the Fed's administered rates framework (IORB), standing facilities (ON RRP, SRP), the discount window, and FIMA repo facility. It explains how the Desk executes open market operations and how these tools maintain the federal funds rate within the target range."
   }
 }

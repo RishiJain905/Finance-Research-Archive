@@ -1,21 +1,20 @@
 {
   "verification_confidence": 4,
-  "verdict": "reject",
+  "verdict": "review",
   "issues_found": [
-    "Source is a listing/index page containing only press release titles and dates, not substantive content",
-    "PAGE_TYPE metadata indicates 'press_release' but content structure matches a listing or index page",
-    "No actionable details, market signals, or policy content present in the source",
-    "Archive value is too low - individual press releases (FOMC minutes, enforcement actions, regulatory proposals) should be sourced directly",
-    "Cannot assess actual market impact without document content",
-    "Reference to monetary policy items (FOMC minutes, discount rate minutes) provides no substantive information beyond their existence"
+    "This is a listing/index page aggregating 26 separate Fed announcements - the page itself contains only titles and dates without substantive content",
+    "Individual substantive items (FOMC minutes, capital rule proposals, stress test frameworks) should be extracted as separate records with full source content",
+    "Some items listed are not relevant to market structure or macro catalysts (e.g., banking application approvals, routine enforcement actions against former employees)",
+    "PAGE_TYPE in metadata is 'press_release' but content is actually a chronological listing/index, making this a container page rather than an article",
+    "Record correctly identifies the source limitations and recommends breaking out individual items, but the source itself is too thin for direct archiving"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source is an index page with no substantive content. The PAGE_TYPE metadata contradicts the actual content structure. Record correctly identifies this as a listing page with low archival value. Rejection is appropriate but human review confirms the assessment aligns with verification rules.",
-  "suggested_status": "rejected",
+  "human_review_reason": "The record accurately describes the source's nature as a listing page and appropriately recommends breaking out individual items. However, the source itself cannot be accepted as-is because it provides only titles/dates without substantive content. Human review is needed to: (1) confirm rejection of this listing page, (2) authorize extraction of individual substantive items (FOMC minutes 1/27-28/2026, capital rule modernization proposal 3/19/2026, tokenized securities guidance 3/5/2026, stress test finalization 2/4/2026) as separate archive records with full source content.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "This is an index page of Federal Reserve Board press releases from 2026 containing only titles and dates of approximately 30 separate announcements. No substantive policy content is included. Monetary policy references (FOMC minutes, discount rate minutes) exist only as titles without content details.",
-    "why_it_matters": "Provides no actionable research value. Documents existence of Fed communications but offers no insight into content, implications, or market impact. Individual press releases must be sourced directly for meaningful archival research.",
-    "macro_context": "Cannot assess macro context from this index. References to monetary policy items (FOMC minutes from January 27-28, 2026; discount rate meetings) are not actually present in the document, only listed as external links.",
-    "market_structure_context": "References to banking application approvals (Home BancShares, Associated Banc-Corp, Fulton Financial, Fifth Third Bancorp), enforcement actions, and regulatory proposals appear only as titles without substantive content."
+    "summary": "This is a listing page aggregating Federal Reserve Board press releases from January through March 2026. The page contains 26 individual announcements spanning banking applications, enforcement actions, monetary policy items (FOMC minutes, discount rate meeting minutes), regulatory proposals (capital rule modernization, tokenized securities capital treatment), and other administrative notices. The page is not a single source document but an index requiring individual archive records for each substantive press release.",
+    "why_it_matters": "This listing page serves as a reference index to Fed communications but cannot substitute for individual source documents. Researchers should extract individual press releases for substantive items like FOMC minutes, regulatory proposals, and stress test frameworks. The page provides visibility into the breadth of Fed activity in Q1 2026 including supervisory priorities and enforcement trends.",
+    "macro_context": "This page aggregates Fed communications relevant to macro conditions including FOMC minutes, discount rate decisions, and capital regulation proposals. The FOMC minutes from January 27-28, 2026 would contain policy deliberations for potential rate actions. The capital rule modernization proposal (3/19/2026) could affect bank lending capacity and credit availability.",
+    "market_structure_context": "The tokenized securities capital treatment clarification (3/5/2026) and stress test scenarios finalization (2/4/2026) are relevant to market structure. The page notes the Fed will maintain current stress test-related capital requirements while considering public feedback."
   }
 }

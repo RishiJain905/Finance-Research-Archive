@@ -1,0 +1,67 @@
+{
+  "id": "bea_news_releases_u_s_bureau_of_economic_analysis_bea_f22a8491",
+  "created_at": "2026-03-31T16:58:48.189570+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_gdp",
+  "title": "Releases | U.S. Bureau of Economic Analysis (BEA)",
+  "source": {
+    "name": "BEA News",
+    "url": "https://www.bea.gov/news/current-releases",
+    "domain": "www.bea.gov",
+    "published_at": "2026-03-25T08:30:00-04:00",
+    "source_type": "data_release"
+  },
+  "summary": "The BEA current releases index page lists recent U.S. economic data publications by title and date, including Q4 2025 GDP (Second Estimate), Personal Income and Outlays for January 2026, and U.S. International Trade for January 2026. This is a navigation index page with no actual data figures — only release titles and publication dates.",
+  "key_points": [
+    "Q4 2025 GDP Second Estimate released March 13, 2026",
+    "Personal Income and Outlays for January 2026 released March 13, 2026",
+    "U.S. International Trade in Goods and Services for January 2026 released March 12, 2026",
+    "U.S. International Transactions and Investment Position for Q4 and Year 2025 released March 25, 2026 (most recent)",
+    "Outdoor Recreation Economic Statistics for 2024 released March 5, 2026",
+    "Page is an index listing multiple releases; actual data figures not included in source text"
+  ],
+  "why_it_matters": "This index page provides no substantive economic data. For actionable macro catalyst content, specific individual BEA release pages containing actual data values must be sourced directly rather than relying on this listing page.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The listed releases reference three major macro series (GDP, Personal Income and Outlays, International Trade) but the source itself contains no actual figures, making it impossible to assess economic conditions from this page alone.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bea",
+    "gdp",
+    "personal-income",
+    "trade",
+    "macro-data",
+    "economic-accounts",
+    "us-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "PAGE_TYPE mismatch: metadata claims 'data_release' but content is a listing/index page showing release titles and dates, not actual economic data",
+      "Source contains no actual data values: only release titles and publication dates (170 word count, all navigation/listing content)",
+      "event_type 'data_release_gdp' is misleading: source does not contain GDP data, only indicates a GDP release exists elsewhere",
+      "market_impact.asset_classes lists 'bonds, equities, fx' but directional_bias is 'unknown' and confidence is 0 — no substantive market analysis possible from this thin source",
+      "why_it_matters states this page 'feeds into Fed policy decisions' but the source itself provides no numbers to support such claims",
+      "CORE RULE 6 violation: thin low-signal source with no actual data content lacks archival value for research or RAG purposes",
+      "Record correctly identifies the source as an 'index page' but the classification and event_type do not reflect this"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "placeholder_source"
+  },
+  "raw_text_path": "data/raw/bea_news_releases_u_s_bureau_of_economic_analysis_bea_f22a8491.txt",
+  "notes": "Thin source: index page showing release titles and dates only. No actual economic data values present. The March 25, 2026 publish date corresponds to the International Transactions release, but that data is not contained in this source. Recommend linking to specific individual release URLs for substantive content. Within 90-day window relative to TODAY (2026-03-31), so recent but low utility."
+}

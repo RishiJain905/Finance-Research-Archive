@@ -1,18 +1,22 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 4,
   "verdict": "review",
   "issues_found": [
-    "Published date inconsistency: record shows 2017-03-01 but source metadata indicates 'Revised May 2018' - more accurate date would be May 2018",
-    "Source text is thin - contains only abstract/description rather than full paper content; full PDF was not captured in crawl",
-    "Document is historical (2018) - while it has archival value as historical research, it's not current or relevant for near-term policy signals"
+    "Generated record is essentially empty - all major fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are blank",
+    "published_at is missing - source metadata shows March 2017 (revised May 2018)",
+    "event_type is missing (should be 'research_paper' based on Staff Report format)",
+    "source_type is missing (should be 'research_paper')",
+    "No author attribution captured (Authors: Alexander Kroeger, John P. McGowan, and Asani Sarkar)",
+    "Summary and key_points not generated from source content",
+    "Source is a PDF-only Staff Report with limited extractable content"
   ],
   "human_review_required": true,
-  "human_review_reason": "Historical research paper with thin source text. The published_at date should likely reflect the May 2018 revision. While the source is relevant to market structure and the summary accurately reflects the available text, the inability to access full paper content limits verification depth. Human review needed to confirm archival value decision given the document's age.",
+  "human_review_reason": "The generated record is nearly blank with all key fields empty. While the source document (a New York Fed Staff Report on pre-crisis monetary policy implementation) is high-quality and relevant to market structure, the record was not properly populated. Human review needed to extract meaningful summary and key points from this research paper.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This Federal Reserve Bank of New York Staff Report (Number 809) describes the Federal Reserve's monetary policy operating framework prior to the expansion of the Fed's balance sheet during the 2008 financial crisis. The report explains how the FOMC set a target for the overnight rate in the federal funds market, where banks trade reserve balances. In the pre-crisis framework, aggregate reserves were scarce such that relatively small changes in the level of reserves affected fed funds rates. The New York Fed's trading desk forecasted daily reserve supply and demand, conducting repo operations with primary dealers to maintain equilibrium rates near target.",
+    "why_it_matters": "Understanding the pre-crisis implementation framework provides historical context for how monetary policy transmission worked before the Fed's large-scale asset purchases. The shift from a scarce-reserves to abundant-reserves framework has significant implications for understanding current monetary policy operations and potential future framework changes.",
+    "macro_context": "The research examines monetary policy implementation from a historical perspective, covering the period before and during the 2008 financial crisis. It documents how the Desk successfully controlled rates pre-crisis through repo operations but notes the framework had to be abandoned when the balance sheet expanded. Since the crisis, a new framework has successfully controlled the policy rate.",
+    "market_structure_context": "The report details federal funds market operations, repo market mechanics with primary dealers, reserve scarcity dynamics, and intraday overdraft mechanisms for payment settlement. It compares pre-crisis (scarce reserves) and post-crisis (abundant reserves) operating frameworks for monetary policy implementation."
   }
 }

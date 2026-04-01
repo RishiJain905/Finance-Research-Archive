@@ -1,14 +1,18 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "The source content is a web-based summary/TOC version of the full PDF report; detailed projection tables, vote tallies, and full policy analysis are not visible in this excerpt. The record captures the high-level summary accurately but may not reflect all nuances from the complete report.",
+    "Published date: source metadata shows '2024-07' without a specific day. The record states 'July 24, 2024' which may be inferred from context (announcement of rate cut) but is not explicitly stated in this source excerpt.",
+    "Source is approximately 21 months old relative to TODAY (2026-03-31), though it has clear archival value as the first rate cut in the current easing cycle."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is generally accurate and well-supported by the source excerpt, but the web-based summary provides limited visibility into full projection details, voting breakdown, or detailed policy deliberations. Human review should verify whether the complete PDF report contains additional material that materially changes the record's accuracy or completeness.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Bank of Canada reduced its target for the overnight rate by 25 basis points to 4½% on July 24, 2024 (per context), marking the first rate cut in the current cycle. Core inflation is expected to ease to about 2½% in H2 2024 and return sustainably to the 2% target later in 2025. The Bank considers risks to its inflation outlook to be balanced, with upside risks including persistent services price inflation and downside risks including weaker household spending.",
+    "why_it_matters": "This report provides the Bank of Canada's official assessment of the Canadian economy and signals the beginning of an easing cycle after prolonged rate hikes. The balance of risks being deemed 'balanced' suggests the Bank sees symmetric uncertainty around its inflation forecast, leaving room for further rate cuts if conditions warrant. The focus on services inflation persistence and shelter costs highlights the most challenging components for achieving the 2% target.",
+    "macro_context": "The Bank shifted to an easing stance with this cut, but emphasized that inflation progress will be uneven and some pressures, particularly services and shelter, remain sticky. The forecast shows CPI temporarily dipping below core inflation due to energy prices before rebounding, suggesting a choppy disinflation path. The global backdrop shows US slowing and euro area stabilizing, with inflation still above central bank targets in both regions.",
+    "market_structure_context": "The Bank is continuing its policy of balance sheet normalization. No changes to the operating framework or tools were mentioned in the excerpt."
   }
 }

@@ -1,9 +1,14 @@
 {
-  "verification_confidence": 10,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE is listing_page; core rule 5 explicitly rejects listing pages",
+    "Source is an archive index containing ~100+ unrelated press releases, not a single coherent document",
+    "No single archiveable research note can be extracted from this listing page",
+    "Individual press releases (FOMC statements, minutes, projections) should be extracted and archived separately"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The generated record correctly identifies this as a non-archivable listing page. No human review needed—the rejection is straightforward per core rule 5.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

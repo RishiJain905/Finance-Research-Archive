@@ -2,19 +2,19 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/index page with no actual Beige Book content per Rule 8 and Rule 9",
-    "No URL provided in source metadata - missing source attribution",
-    "No substantive economic data, district commentary, or macro catalyst information present",
-    "Source contains only publication schedule dates and generic methodology description",
-    "Archive value is too low - thin low-signal page with no research utility",
-    "Rule 8 explicitly states navigation_page must not be accepted"
+    "Source is a navigation page (source_type: navigation_page) - per Rule 5, this must be rejected",
+    "No actual Beige Book content present - only a landing page describing what the Beige Book is and listing publication dates",
+    "source.url is blank in source metadata - no link to actual Beige Book content",
+    "event_type is 'unknown' - correctly identified as problematic, but the real issue is this is not archiveable source material at all",
+    "No district-level economic commentary or data to support any macro catalyst analysis",
+    "The 'Last Update: March 04, 2026' in source body contradicts the record's claim that 'source.published_at is blank' - the date is present in the page content"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately identifies the source as a navigation page with no content, but the source itself is not acceptable per Rule 8 and Rule 9. No human review needed as the judgment is unambiguous.",
+  "human_review_reason": "The record's self-assessment is correct and well-documented. This is a clear rejection case: the source is a navigation page with no actual Beige Book content. No human review needed as the generated record already properly identified the issues and recommended rejection.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This source is a Federal Reserve navigation page for the Beige Book report, not the actual Beige Book content. It describes the Beige Book as a summary of commentary on current economic conditions gathered from the twelve Federal Reserve Districts. The page lists 2026 publication dates (January 14, March 4, April 15, June 3, July 15, September 2, October 14, November 25) and was last updated March 4, 2026. No actual district-level economic data or commentary is present in this source.",
+    "why_it_matters": "This page is not archiveable content. The actual Beige Book reports containing district-level economic conditions are not present here. Researchers seeking Beige Book data must access the linked HTML or PDF documents for the January 14 or March 4, 2026 releases.",
     "macro_context": "",
     "market_structure_context": ""
   }

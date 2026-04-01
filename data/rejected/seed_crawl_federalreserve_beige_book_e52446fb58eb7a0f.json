@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_beige_book_e52446fb58eb7a0f",
-  "created_at": "2026-03-30T06:15:07.193236+00:00",
+  "created_at": "2026-03-31T18:40:53.301778+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -9,18 +9,19 @@
     "name": "Federal Reserve",
     "url": "",
     "published_at": "",
-    "source_type": "navigation_page"
+    "source_type": "navigation_page",
+    "domain": ""
   },
-  "summary": "This page is a Federal Reserve navigation/index page describing the Beige Book report. It does not contain actual economic data or commentary. The Beige Book is described as a summary of anecdotal information on current economic conditions gathered from Federal Reserve Districts, published eight times per year. The page lists 2026 publication dates but provides no substantive economic content.",
+  "summary": "This source is a Federal Reserve navigation page for the Beige Book report, not the actual Beige Book content. It describes the Beige Book as a summary of commentary on current economic conditions gathered from the twelve Federal Reserve Districts. The page lists 2026 publication dates (January 14, March 4, April 15, June 3, July 15, September 2, October 14, November 25) and was last updated March 4, 2026. No actual district-level economic data or commentary is present in this source.",
   "key_points": [
-    "This is a navigation/index page, not an actual Beige Book content page",
-    "The Beige Book compiles anecdotal economic information from all twelve Federal Reserve Districts",
-    "Information is gathered from Bank directors, Branch directors, and key business contacts",
-    "Published eight times per year on a scheduled rotating basis",
-    "2026 scheduled dates provided: January 14, March 4, April 15, June 3, July 15, September 2, October 14, November 25",
-    "No actual economic data, commentary, or macro catalyst information present in this source"
+    "This is a navigation/landing page, not the actual Beige Book report content",
+    "The Beige Book is published eight times per year by the Federal Reserve",
+    "Each District report is gathered by the respective Federal Reserve Bank through contacts with business leaders and economists",
+    "2026 publication dates listed: January 14, March 4, April 15, June 3, July 15, September 2, October 14, November 25",
+    "Last update to the page was March 4, 2026",
+    "No actual economic commentary or district-level data is contained in this source"
   ],
-  "why_it_matters": "",
+  "why_it_matters": "This page is not archiveable content. The actual Beige Book reports containing district-level economic conditions are not present here. Researchers seeking Beige Book data must access the linked HTML or PDF documents for the January 14 or March 4, 2026 releases.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -33,19 +34,21 @@
     "federal-reserve",
     "beige-book",
     "navigation-page",
-    "no-content"
+    "economic-conditions",
+    "district-reports",
+    "non-archiveable"
   ],
   "llm_review": {
     "initial_confidence": 1,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/index page with no actual Beige Book content per Rule 8 and Rule 9",
-      "No URL provided in source metadata - missing source attribution",
-      "No substantive economic data, district commentary, or macro catalyst information present",
-      "Source contains only publication schedule dates and generic methodology description",
-      "Archive value is too low - thin low-signal page with no research utility",
-      "Rule 8 explicitly states navigation_page must not be accepted"
+      "Source is a navigation page (source_type: navigation_page) - per Rule 5, this must be rejected",
+      "No actual Beige Book content present - only a landing page describing what the Beige Book is and listing publication dates",
+      "source.url is blank in source metadata - no link to actual Beige Book content",
+      "event_type is 'unknown' - correctly identified as problematic, but the real issue is this is not archiveable source material at all",
+      "No district-level economic commentary or data to support any macro catalyst analysis",
+      "The 'Last Update: March 04, 2026' in source body contradicts the record's claim that 'source.published_at is blank' - the date is present in the page content"
     ]
   },
   "human_review": {
@@ -54,5 +57,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_beige_book_e52446fb58eb7a0f.txt",
-  "notes": "Low-quality source. This is a Federal Reserve navigation page describing the Beige Book rather than containing actual Beige Book content. No economic indicators, district reports, or macro data are present. The source provides only publication schedule dates and a generic description of the Beige Book's methodology. Not suitable for research archive without the actual Beige Book report content."
+  "notes": "Non-archiveable: This source is a Federal Reserve website navigation page for the Beige Book, not the actual report content. The page merely describes what the Beige Book is and lists publication dates. No district-level economic commentary, data, or analysis is present. The actual Beige Book releases (January 14 and March 4, 2026) would need to be sourced separately. SOURCE METADATA TARGET was 'macro catalysts' but the source content does not contain macro data."
 }

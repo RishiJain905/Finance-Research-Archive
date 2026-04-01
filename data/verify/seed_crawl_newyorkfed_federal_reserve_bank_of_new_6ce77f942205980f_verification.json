@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 7,
-  "verdict": "accept",
+  "verification_confidence": 5,
+  "verdict": "review",
   "issues_found": [
-    "Low informational density for research purposes - document is procedural/policy in nature rather than containing market-moving information",
-    "No specific numbers, dates, forecasts, or data points in the source",
-    "The document serves as reference material for understanding Fed operational infrastructure rather than providing actionable research content"
+    "No URL provided in source metadata - source link unavailable for verification",
+    "No publication date (published_at is empty) - cannot assess currency or determine if document is current or historical",
+    "event_type is 'unknown' but the source content clearly indicates this is a financial_stability_report or regulatory_guidance type document describing Fed operational framework",
+    "Source is a standing policy framework rather than a specific event with actionable market-moving information",
+    "Source type is 'unknown' when the document is clearly institutional policy content from a high-trust domain"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "While the source content is factually accurate and the summary correctly captures the policy framework, the record has critical metadata gaps (missing URL and publication date) that prevent complete verification. The source domain (newyorkfed.org) is high-trust and the content is relevant to market structure, but without a publication date we cannot assess whether this is a current operational document or historical reference. Additionally, the event_type being set to 'unknown' when the document type is obvious suggests field correction is needed.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Federal Reserve Bank of New York has published its operating policy governing relationships with private sector counterparties for market operations. The policy outlines that the NY Fed transacts primarily with regulated banks and broker-dealers for open market operations conducted under FOMC direction. The document establishes eligibility criteria, operational expectations, and compliance standards that counterparties must meet, including adherence to TMPG best practices and FX Global Code standards.",
-    "why_it_matters": "This policy document describes the foundational counterparty infrastructure through which the Federal Reserve conducts monetary policy implementation in markets. Understanding which institutions are eligible to participate in Fed operations provides context for market structure, particularly in repo markets, Treasury markets, and FX markets where the NY Fed actively operates.",
-    "macro_context": "This document establishes the framework for how the Federal Reserve Bank of New York selects and manages counterparties for open market operations executed under Section 14 of the Federal Reserve Act at FOMC direction. It covers multiple counterparty categories (primary dealers, standing repo, reverse repo, FX, and foreign reserves management) and sets baseline eligibility standards including regulatory capital requirements and industry best practice compliance.",
-    "market_structure_context": "This document describes the counterparty framework for Fed market operations, including primary dealers (who participate in Treasury auctions and market-making), repo counterparties, and FX counterparties. This framework is foundational to market structure as it defines which institutions can access Federal Reserve operations and execute trades on behalf of the central bank. The document references the Treasury Market Practices Group (TMPG) and FX Global Code as compliance benchmarks, indicating industry-standard best practices that govern participant behavior in these markets."
+    "summary": "The Federal Reserve Bank of New York published its general policy framework governing relationships with private sector counterparties used for executing market operations. The policy outlines that the NY Fed transacts primarily with regulated banks and broker-dealers, sets credit risk and operational scale expectations, and requires counterparties to adhere to market best practices standards.",
+    "why_it_matters": "This policy document establishes the foundational framework for who the Federal Reserve transacts with when executing monetary policy operations, including open market operations and repo transactions. The counterparty framework is critical market infrastructure—understanding which entities are eligible to participate in Fed operations provides insight into the plumbing of monetary policy implementation and potential concentration risks in market structure.",
+    "macro_context": "",
+    "market_structure_context": "This document describes the NY Fed's counterparty eligibility criteria and operational expectations for market operations. It covers the framework for primary dealers, repo counterparties, and FX counterparties that participate in Federal Reserve market operations. The policy explicitly references the Treasury Market Practices Group (TMPG) best practices and FX Global Code as standards counterparties must follow."
   }
 }

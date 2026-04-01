@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Incorrect event_type: 'economic_commentary' is invalid for a speech/remarks transcript. Per taxonomy, should be 'speech_neutral', 'speech_hawkish', or 'speech_dovish' depending on tone, but cannot determine without content.",
+    "Source type misclassified as 'blog_post' when source metadata shows this is a Treasury 'Remarks and Statements' press release/transcript.",
+    "Source body was truncated - actual speech content not captured. Only website navigation structure and metadata were retrieved. Cannot verify any specific policy positions, quotes, or forward guidance.",
+    "No substantive content to archive. The record contains only metadata (title, date, speaker) but no actual remarks or analysis.",
+    "market_impact confidence set to 0, which is honest but indicates the record has no extractable market-relevant content."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source content extraction failed - the actual remarks transcript was not captured, only navigation elements. While the metadata (title, date, speaker) is verifiable, there is no substantive speech content to verify the record against. This record has no archival value as-is because it contains only metadata without the actual remarks. Either full transcript needs to be retrieved or the record should be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

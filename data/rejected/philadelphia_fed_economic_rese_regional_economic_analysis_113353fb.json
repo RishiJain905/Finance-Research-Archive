@@ -1,62 +1,59 @@
 {
   "id": "philadelphia_fed_economic_rese_regional_economic_analysis_113353fb",
-  "created_at": "2026-03-30T01:55:44.662962+00:00",
+  "created_at": "2026-03-31T17:38:58.781602+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "listing_page",
+  "event_type": "unknown",
   "title": "Regional Economic Analysis",
   "source": {
     "name": "Philadelphia Fed Economic Research",
     "url": "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis",
+    "domain": "www.philadelphiafed.org",
     "published_at": "",
     "source_type": "article"
   },
-  "summary": "This is a portal page from the Philadelphia Fed listing Third District economic surveys and data products, including the Beige Book, manufacturing and nonmanufacturing outlook surveys, and state coincident indexes. The page functions as an index to resources rather than providing substantive economic analysis or data. No specific macro catalyst events, data releases, or analysis are present in this source.",
+  "summary": "This page is a directory/index of the Philadelphia Fed's regional economic data products, linking to surveys and datasets covering the Third District (PA, NJ, DE). It contains no substantive research findings, policy signals, or macro analysis. Most recent survey update dates visible are March 2026 for Manufacturing and Nonmanufacturing Business Outlook Surveys.",
   "key_points": [
-    "Lists Third District Beige Book (qualitative economic assessment) updated 04 Mar '26",
-    "Lists Manufacturing Business Outlook Survey updated 19 Mar '26",
-    "Lists Nonmanufacturing Business Outlook Survey updated 24 Mar '26",
-    "Lists Price and Inflation Expectations Survey updated 25 Feb '26",
-    "Lists State Coincident Indexes updated 30 Jan '26",
-    "State Leading Indexes release suspended indefinitely due to pandemic impact on jobless claims"
+    "Page functions as an index of regional economic data products, not a research document",
+    "Lists Third District Beige Book (updated 04 Mar '26) and other Third District surveys",
+    "Contains Manufacturing and Nonmanufacturing Business Outlook Surveys (updated 19 and 24 Mar '26)",
+    "Price and Inflation Expectations Survey listed with most recent update 25 Feb '26",
+    "No actual survey results, data releases, or analysis included on this page",
+    "Historical context: State Leading Indexes suspended indefinitely due to COVID-19 pandemic methodology issues"
   ],
-  "why_it_matters": "This page is a directory to regional economic data sources that track Third District (PA, NJ, DE) business conditions. The Beige Book and business outlook surveys are inputs to FOMC decision-making, but this source only points to those resources rather than containing the actual analysis or data. This page should not be archived for macro catalyst research.",
+  "why_it_matters": "This is a navigation hub, not a research archive entry. It has no direct market or macro relevance. The individual surveys it links to (Beige Book, manufacturing survey, etc.) would be candidates for archiving, but this page itself contains no actionable information.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "While the listed surveys (Beige Book, business outlook surveys, price expectations) are macro-relevant indicators, this source contains no actual data or analysis. It is merely a catalog of available resources. The actual macro catalysts exist on separate pages and should be archived individually.",
+  "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "Philadelphia Fed",
-    "Third District",
-    "Beige Book",
-    "regional economic data",
-    "business surveys",
-    "FOMC preparation"
+    "philadelphia-fed",
+    "regional-data",
+    "third-district",
+    "surveys",
+    "listing-page"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "PAGE_TYPE metadata incorrectly says 'article' but content is functionally a listing/navigation page",
-      "Source contains only links and brief descriptions of resources, no substantive economic analysis",
-      "Content word count of 377 words confirms thin, navigational content",
-      "published_at is empty, limiting source provenance and dating",
-      "No actual macro catalyst data, events, or analysis present - only catalog of resources",
-      "Cannot serve as reliable archive record for macro catalyst research purposes",
-      "Per Rule 8: listing pages must not be accepted",
-      "Per Rule 9: thin low-signal container pages should bias toward reject"
+      "event_type is set to 'unknown' which is not a valid taxonomy value; given the source content, no valid event_type applies as this is not a research document",
+      "Source is functionally a listing/navigation page despite metadata listing PAGE_TYPE as 'article'; content is entirely an index of links to data products with no substantive research, analysis, or policy content",
+      "Source is too thin to have archival value—377 words of navigation menus and product descriptions with no original findings",
+      "Record includes 'listing-page' tag which correctly identifies the source type, confirming it should be rejected per rule 5",
+      "Record correctly notes 'This is a navigation hub' in why_it_matters, confirming the source lacks standalone archival value"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "rejected_by_human",
-    "notes": "Rejected from Telegram review flow."
+    "decision": "",
+    "notes": "The source is a pure navigation/index page that should be rejected per rule 5, but the generated record has already correctly identified this issue. Human review needed to confirm the rejection and note that individual survey pages (Beige Book, Manufacturing BOS, etc.) would be better archival candidates."
   },
   "raw_text_path": "data/raw/philadelphia_fed_economic_rese_regional_economic_analysis_113353fb.txt",
-  "notes": "Low-quality source for archival purposes. This is a portal/index page listing regional economic resources rather than containing the resources themselves. The actual macro catalysts (Beige Book releases, survey results, state coincident indexes) exist on separate pages. Recommend identifying and archiving specific survey result pages rather than this navigation hub. Note: State Leading Indexes indefinitely suspended due to pandemic-related methodology issues with jobless claims."
+  "notes": "PAGE_TYPE listed as 'article' but content is functionally a listing/index page with links to multiple data products. No original research, analysis, or policy content present. Content word count of 377 is primarily navigation and product descriptions. Not suitable as a standalone archive entry. The individual linked surveys (Third District Beige Book, Manufacturing BOS, Nonmanufacturing BOS, Price Expectations Survey) would each be stronger candidates for archival if they contain substantive findings."
 }

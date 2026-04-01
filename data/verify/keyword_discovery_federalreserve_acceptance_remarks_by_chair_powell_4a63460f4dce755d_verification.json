@@ -1,10 +1,15 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "All record fields are empty - no summary, key_points, why_it_matters, or any content generated",
+    "Source attribution completely missing: name, url, domain, published_at, and source_type all empty",
+    "No event_type captured in the record",
+    "Record provides no basis for verification against source content"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "The generated record is completely empty - no content was captured from the source. This is a technical failure, not a judgment call. Rejection is automatic because there is nothing to verify.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

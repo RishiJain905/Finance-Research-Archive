@@ -1,20 +1,18 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 8,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/landing page (navigation_page) - per CORE RULE 6, archive must reject container and navigation pages",
-    "No published_at date in source metadata - cannot assess content recency",
-    "event_type is set to 'unknown' but correct type is also unknowable since no specific event is documented",
-    "Source contains only general explanatory content about ECB monetary policy framework - no specific decisions, rate levels, or statements",
-    "Source has no market catalyst value as it lacks actionable macro information"
+    "Source is a navigation_page (source_type: navigation_page), which triggers automatic rejection per Core Rule 5",
+    "No specific monetary policy event, decision, statement, or data release is contained in this page",
+    "Source is institutional background/explainer content only—no market-moving or catalyst content"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record is correctly self-assessed as a navigation page with no archival value for macro catalyst research. Auto-reject is appropriate.",
+  "human_review_reason": "The generated record accurately identifies the source as a navigation page and correctly notes it lacks market-moving content. The rejection is clear-cut based on source type per Core Rule 5. Human review is not needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This is a navigational overview page on the ECB website explaining the institution's monetary policy framework, including the three key policy rates and the broader toolkit of instruments available to the Governing Council. The page does not contain specific decisions, statements, or recent macro catalyst events—it serves as institutional background content.",
+    "why_it_matters": "This page provides foundational context on ECB monetary policy operations but does not itself constitute a market-moving event or catalyst. It is reference material explaining how ECB tools work rather than a specific policy decision or release.",
+    "macro_context": "The page explains that ECB monetary policy tools influence the amount and cost of loans to affect financing conditions and economic activity in the euro area, ultimately targeting 2% inflation. No current macro data or policy decisions are presented.",
+    "market_structure_context": "Describes the transmission mechanism from policy rates (deposit facility, MRO, marginal lending facility) to short-term money market rates. Notes that post-financial crisis, ECB expanded tools when short-term rates approached the effective lower bound."
   }
 }

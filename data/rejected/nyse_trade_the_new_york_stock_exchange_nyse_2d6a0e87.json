@@ -1,67 +1,70 @@
 {
   "id": "nyse_trade_the_new_york_stock_exchange_nyse_2d6a0e87",
-  "created_at": "2026-03-27T22:37:03.663141+00:00",
+  "created_at": "2026-03-31T17:36:00.096828+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "market_commentary",
-  "title": "Weekly Market Recap: S&P 500 Falls for Fifth Consecutive Week, Tech Weakness Dominates",
+  "event_type": "economic_commentary",
+  "title": "Today's Stock Market (NYSE Trade Weekly Recap)",
   "source": {
     "name": "NYSE Trade",
     "url": "https://www.nyse.com/index",
+    "domain": "www.nyse.com",
     "published_at": "2026-03-27T17:00:00-05:00",
-    "source_type": "exchange_report"
+    "source_type": "homepage"
   },
-  "summary": "The S&P 500 declined approximately 2% for the week ending March 27, 2026, marking its fifth consecutive weekly decline and falling about 9% from all-time highs. The index definitively broke below the October/November lows around 6,550, though daily RSI readings are approaching oversold territory below 30. Tech stocks were the primary source of weakness, with Communication Services down 7% following a landmark social media addiction ruling affecting Meta and Alphabet, while AI-related news weighed on software and cybersecurity sectors.",
+  "summary": "The NYSE Trade weekly market recap covers the period ending March 27, 2026, with the S&P 500 declining 2% for the week and down approximately 9% from its all-time high, marking five consecutive weeks of declines. The index broke below the October/November 2025 lows around 6,550, with tech weakness driven by AI-related news from Anthropic/Claude and a landmark social media addiction ruling weighing on communication services stocks.",
   "key_points": [
-    "S&P 500 declined 2% for the week and broke below the ~6,550 October/November lows",
-    "Equal-weight S&P 500 outperformed, down less than 1%, suggesting breadth improvement",
-    "Small/midcap indices ended the week modestly higher, showing rotation away from large-cap",
-    "Communication Services sector fell 7% due to landmark social media addiction ruling affecting Meta and Alphabet",
-    "Anthropic's Claude release and leak of codenamed 'Mythos' model weighed on software and cybersecurity stocks",
-    "Daily RSI approaching oversold levels (under 30) but weekly RSI not yet oversold"
+    "S&P 500 fell 2% for the week (March 27, 2026) and is down five weeks in a row, approximately 9% off all-time high",
+    "Index definitively broke below October/November 2025 lows (~6,550 level)",
+    "Equal-weight S&P 500 ended down less than 1%; small/midcap indices ended modestly higher",
+    "Communication Services sector declined 7% this week; Meta and Alphabet traded sharply lower after landmark social media addiction ruling",
+    "Daily RSI moving under 30 but not oversold on weekly basis; daily ranges increasing suggesting potential technical bounce setup",
+    "Escalation of Iran conflict diverted attention from AI-Anxiety; Anthropic Claude release and 'Mythos' model leak weighed on software and cybersecurity stocks"
   ],
-  "why_it_matters": "The technical breakdown below the 6,550 support level signals potential further downside risk, though approaching oversold conditions increase the probability of a technical bounce. The divergence between cap-weighted and equal-weight indices, combined with small/midcap outperformance, suggests investors are rotating toward broader market exposure and away from concentrated tech positions. This rotation pattern and sector-specific catalysts could influence trading strategies and sector allocation decisions.",
+  "why_it_matters": "This weekly market recap provides near-term technical and sentiment context for equity market participants. The five-week decline and breakdown below key support levels (6,550) signal potential trend deterioration, while the divergence between cap-weighted and equal-weight indices suggests selective weakness concentrated in large-cap tech. The technical indicators suggest the market may be approaching a bounce, but the critical test will be price reaction around the broken support level.",
   "market_impact": {
     "asset_classes": [
       "equities",
       "volatility"
     ],
     "directional_bias": "risk_off",
-    "confidence": 6
+    "confidence": 5
   },
-  "macro_context": "Iran conflict escalation dominated headlines over the past month, diverting attention from AI-related market concerns. However, AI-Anxiety returned this week driven by Anthropic's Claude developments. Upcoming economic data includes ISM surveys, retail sales, and Friday's jobs report (though markets will be closed). Quarter-end rebalancing expected over the next week could amplify volatility.",
-  "market_structure_context": "Technical structure deteriorated with S&P 500 breaking below key support at 6,550. Daily RSI moving under 30 indicates near-term oversold conditions, but weekly RSI remains above oversold levels, suggesting the drawdown may not be complete. Increasing daily ranges suggest heightened volatility and potential for a technical bounce. Equal-weight index outperforming cap-weight suggests improving market breadth, which is a constructive sign for potential stabilization.",
+  "macro_context": "The recap mentions the Iran conflict as a diverting factor from AI-related concerns, and flags next week's economic data calendar including ISM surveys, retail sales, and the jobs report (noted as occurring on a market-closed day). The weekly decline occurred despite overall S&P 500 being only down 2%, indicating relatively contained damage but persistent negative momentum.",
+  "market_structure_context": "",
   "important_numbers": [
-    2,
-    1,
-    5,
-    9,
-    30,
-    6550,
-    7
+    "2% weekly S&P 500 decline",
+    "9% off all-time high",
+    "5 consecutive weeks down",
+    "~6,550 October/November 2025 lows",
+    "7% Communication Services weekly decline",
+    "daily RSI moving under 30"
   ],
   "tags": [
+    "nyse-trade",
+    "weekly-recap",
     "sp500",
-    "tech-selloff",
-    "communication-services",
-    "anthropic-claude",
-    "social-media-ruling",
-    "technical-analysis",
-    "oversold",
-    "small-cap-rotation",
-    "weekly-recap"
+    "equities",
+    "tech-weakness",
+    "market-technical",
+    "march-2026"
   ],
   "llm_review": {
-    "initial_confidence": 7,
-    "verification_confidence": 8,
-    "verdict": "accept",
-    "issues_found": []
+    "initial_confidence": 3,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source type is homepage (nyse.com/index) - contains primarily institutional marketing and navigation content with embedded article",
+      "TOPIC is 'market structure' but source content focuses on equity market performance commentary (price action, technical indicators, sector rotations) rather than market structure topics (trading mechanisms, exchange operations, market microstructure, order flow, execution quality)",
+      "Rule 5 violation: homepage source type triggers automatic rejection per CORE RULES",
+      "Record summary and key_points accurately capture the embedded market recap content but the record misrepresents the source as a standalone research commentary rather than a homepage with embedded content"
+    ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "non_article_page_type"
+    "notes": "container_page"
   },
-  "raw_text_path": "data\\raw\\nyse_trade_the_new_york_stock_exchange_nyse_2d6a0e87.txt",
-  "notes": "Source is from NYSE Trade's official market commentary section. Contains specific market data, technical indicators, and sector analysis. No specific numerical performance data for bonds, FX, or commodities was provided. The AI-related catalyst information is sourced from the article but represents market commentary rather than confirmed news events. Date published shows 2026 which may indicate this is a template or future-dated content."
+  "raw_text_path": "data/raw/nyse_trade_the_new_york_stock_exchange_nyse_2d6a0e87.txt",
+  "notes": "Source is the NYSE homepage (nyse.com/index) rather than a specific article. The primary content is institutional marketing and navigation. An embedded market recap article dated March 27, 2026 provides equity market commentary but focuses on price action, technical indicators, and sector performance rather than market structure. The TOPIC field specifies 'market structure' but the source content does not substantively address market structure topics (exchange operations, trading mechanisms, market plumbing, order types, execution quality, etc.). Low relevance to market structure mandate."
 }

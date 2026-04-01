@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/index page, explicitly non-archiveable per Rule 5",
+    "Source provides only titles and dates—no substantive article content",
+    "URL field is blank in source metadata, making individual entries inaccessible",
+    "event_type is set to 'unknown', which is technically correct but indicates thin source quality",
+    "Cannot assess macro catalyst relevance without full-text content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record already correctly identifies this as a non-archiveable listing page and recommends rejection. The self-assessment is accurate—no additional human review is needed since the source clearly fails multiple explicit rejection criteria (Rule 5 listing page, Rule 6 missing URL, no archiveable content).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a listing page aggregating Treasury Secretary statements and remarks from December 2025 through March 2026, including congressional testimony and Economic Club speeches. The actual full-text content of individual statements is not included in this source; only titles and dates are provided. No archiveable research content can be extracted from this index page alone.",
+    "why_it_matters": "This page serves as an index to Treasury Secretary communications but provides no substantive content for research purposes. Individual statements on topics such as economic security, financial literacy, and Somali fraud enforcement cannot be evaluated without accessing the full texts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

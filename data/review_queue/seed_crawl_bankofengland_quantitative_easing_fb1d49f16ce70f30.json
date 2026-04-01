@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofengland_quantitative_easing_fb1d49f16ce70f30",
-  "created_at": "2026-03-31T10:26:13.777287+00:00",
+  "created_at": "2026-03-31T18:02:24.905154+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
   "event_type": "economic_commentary",
@@ -10,19 +10,18 @@
     "url": "https://www.bankofengland.co.uk/monetary-policy/quantitative-easing",
     "domain": "www.bankofengland.co.uk",
     "published_at": "2025-12-05",
-    "source_type": "informational_page"
+    "source_type": "unknown"
   },
-  "summary": "The Bank of England provides an educational overview of quantitative easing (QE), a monetary policy tool used to lower long-term borrowing costs when Bank Rate is already very low. The UK first implemented QE in March 2009 during the Global Financial Crisis, ultimately purchasing £895 billion in bonds (£875bn government gilts, £20bn corporate bonds). QT (quantitative tightening) began in February 2022 to reduce the bond stock, with the stated aim of preserving the ability to use QE again in future rather than directly targeting interest rates or inflation.",
+  "summary": "The Bank of England has published an educational explainer on quantitative easing (QE), describing it as a tool to meet the 2% inflation target by lowering long-term borrowing costs when Bank Rate is constrained. The UK first used QE in March 2009 during the Global Financial Crisis, eventually purchasing £875 billion in UK government gilts and £20 billion in UK corporate bonds, totaling £895 billion. The last QE expansion was announced in November 2020, and quantitative tightening (QT) began in February 2022 as the Bank began reducing its bond holdings.",
   "key_points": [
-    "QE is the Bank of England's secondary monetary policy tool after Bank Rate, used to lower long-term interest rates when Bank Rate cannot be lowered further",
-    "The Bank purchased £875 billion of UK government bonds (gilts) and £20 billion of UK corporate bonds, totaling £895 billion",
-    "QE was first used in March 2009 during the Global Financial Crisis when Bank Rate could not be lowered further",
-    "The last QE expansion was announced in November 2020, and QT began in February 2022",
-    "QE works by increasing bond prices, which lowers bond yields that serve as benchmark rates for mortgages and other financial products",
-    "Research cited by the Bank suggests QE was most effective during stressed market conditions: post-2009, post-2016 EU referendum, and spring 2020 pandemic",
-    "The Bank states its research finds the 'overwhelming majority' of people benefited from QE when considering both wealth and employment effects"
+    "The Bank of England's primary monetary policy tool is Bank Rate, with QE as a secondary tool used when Bank Rate is near the zero lower bound.",
+    "UK total QE bond purchases reached £895 billion, comprising £875 billion in UK government bonds (gilts) and £20 billion in UK corporate bonds.",
+    "QE works by buying bonds, pushing up their prices, which reduces their yield (effective interest rate); lower gilt yields feed through to lower mortgage and loan rates.",
+    "When QE is reversed via QT, bonds mature or are sold, causing the digitally-created money used to purchase them to disappear from the economy.",
+    "The BoE states QT's purpose is to ensure QE can be used again in future if needed, rather than to directly affect interest rates or inflation.",
+    "Research cited by the BoE indicates QE was most effective during market stress: after the 2009 GFC, the 2016 Brexit vote, and the 2020 Covid pandemic onset."
   ],
-  "why_it_matters": "This page provides the Bank of England's official framework for understanding QE and QT. While it contains no new policy announcements, it establishes the institutional narrative that QE is intended to support inflation toward the 2% target, is distinct from active interest rate policy, and that QT's purpose is preserving future QE capacity rather than being inflationary or deflationary in itself. This framing is relevant for interpreting future BoE policy communications.",
+  "why_it_matters": "This Bank of England educational resource provides authoritative institutional context on how QE functions as a monetary policy tool and its historical implementation in the UK. The page explains the mechanics of bond purchases, yield effects, and transmission to broader financial conditions. Key figures confirmed: £895bn total purchases, QT initiated February 2022, and the stated rationale for portfolio unwinding. Note: This source does not provide current policy signals or forward guidance—it is historical and educational in nature.",
   "market_impact": {
     "asset_classes": [
       "bonds",
@@ -32,14 +31,14 @@
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "QE lowers long-term borrowing costs by pushing down bond yields, which stimulates spending and puts upward pressure on inflation. QT reverses this by allowing bonds to mature and selling others, removing money from the economy. The BoE characterizes these as distinct operations: QE supports inflation when it is too low; QT aims to restore policy flexibility, not to tighten conditions directly.",
-  "market_structure_context": "The page explains that the BoE creates central bank reserves digitally to purchase bonds, and that QT causes these reserves and associated money to disappear when bonds mature or are sold. This describes the basic mechanics of the BoE's balance sheet operations.",
+  "macro_context": "The source explains QE's role in the monetary policy framework: when inflation is below target, QE lowers long-term rates to stimulate spending and lift inflation; when inflation is above target, the BoE raises rates and conducts QT. The page notes that QE's effectiveness varied across 'rounds,' with the largest economic impact after the first round (2009), post-Brexit (2016), and early Covid (2020) when markets were stressed. QT's stated purpose is to ensure future QE capacity, not to directly affect rates or inflation.",
+  "market_structure_context": "The source describes the operational mechanics of QE: the BoE creates central bank reserves digitally to purchase bonds from asset managers, which increases bond prices and reduces yields. It explains how lower gilt yields serve as a benchmark rate for other financial products including household mortgages. When QT occurs, bond maturities and sales cause the created money to be withdrawn from the economy. The process affects bond markets, equity valuations, and broader financial conditions through portfolio rebalancing effects.",
   "important_numbers": [
+    "£875 billion in UK government bonds (gilts) purchased",
+    "£20 billion in UK corporate bonds purchased",
+    "£895 billion total bonds purchased",
     "2% inflation target",
-    "£875 billion in UK government bonds (gilts)",
-    "£20 billion in UK corporate bonds",
-    "£895 billion total bond purchases",
-    "March 2009 (first QE implementation)",
+    "March 2009 (first UK QE)",
     "November 2020 (last QE expansion announced)",
     "February 2022 (QT began)"
   ],
@@ -49,29 +48,29 @@
     "qe",
     "qt",
     "monetary policy",
-    "bond purchases",
-    "gilts",
-    "central bank reserves",
+    "gilt purchases",
+    "bond yields",
     "inflation target",
-    "uk"
+    "central bank reserves"
   ],
   "llm_review": {
     "initial_confidence": 6,
     "verification_confidence": 7,
     "verdict": "review",
     "issues_found": [
-      "event_type 'economic_commentary' is borderline; 'monetary_policy_report' may be more accurate for this BoE institutional explainer, though neither is clearly wrong",
-      "Source is informational/explanatory rather than original research or commentary, reducing direct utility for macro catalyst tracking",
-      "No current policy announcements or new data; content is historical overview suitable as institutional background"
+      "event_type 'economic_commentary' is imprecise; source is an educational explainer page describing QE mechanics, not original economic research or commentary",
+      "source_type is 'unknown' in metadata; content is educational/informational rather than article-like research or commentary",
+      "Record lacks forward guidance or current policy signals—describes historical QE program and mechanics without providing actionable macro catalyst information",
+      "The page is institutional reference material rather than new research findings; archival value is contextual rather than substantive"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Minor classification uncertainty but no factual errors. The record is accurate and well-structured; auto-routing to review queue is appropriate to confirm event_type classification."
+    "notes": "This record is factually accurate and from a high-trust institutional source (BoE). However, the event_type is a loose fit (educational explainer vs. economic commentary), and the source lacks new policy signals or research findings—it is primarily background material. Human review should confirm whether educational explainers meet the archive's relevance threshold for macro catalysts."
   },
   "raw_text_path": "data/raw/seed_crawl_bankofengland_quantitative_easing_fb1d49f16ce70f30.txt",
-  "notes": "This Bank of England explainer page describes the mechanics and history of QE/QT. While authoritative and clearly written, it contains no new policy information, forecasts, or data points not already in the public domain. The page is best characterized as institutional educational content. It provides useful context for understanding BoE monetary policy framework but should be considered low-priority for a research archive focused on actionable macro catalysts unless paired with more current policy documents.",
+  "notes": "This is a Bank of England educational/explanatory page about QE, last updated December 5, 2025. It does not announce new policy but provides authoritative background on QE mechanics, scale (£895bn total purchases), and the distinction between QE (stimulus) and QT (portfolio normalization). The source is relevant for macro catalyst context as it explains how central bank bond purchases affect yields, asset prices, and the broader economy. Not actionable for current trading but valuable as institutional reference material. Page type in source metadata is 'unknown' rather than a recognized content type, suggesting this may be a general informational page.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "fc368d3992c9da9239404c5cf4ac60f032c41bf6"
+  "telegram_review_fingerprint": "750acf9cbd7089605c48dbee29f98cb718734278"
 }

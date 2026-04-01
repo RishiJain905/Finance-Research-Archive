@@ -1,56 +1,64 @@
 {
   "id": "seed_crawl_ecb.europa_webcasts_ecb_monetary_policy_decisions_6efbb07df903300c",
-  "created_at": "2026-03-31T14:34:13.015239+00:00",
+  "created_at": "2026-03-31T18:19:57.907327+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "rate_decision",
   "title": "Webcasts: ECB monetary policy decisions",
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/press/press_conference/html/index.en.html",
-    "domain": "www.ecb.europa.eu",
-    "published_at": "unknown",
-    "source_type": "navigation_page"
+    "published_at": "2026-03-31",
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This is a navigation/portal page for ECB press conferences, not an actual monetary policy decision or statement. It contains links to press releases, statements, and projections, along with current ECB interest rates as of June 11, 2025 (deposit facility 2.00%, main refinancing operations 2.15%, marginal lending facility 2.40%). No specific policy decision or new information is presented on this page.",
+  "summary": "This is the ECB monetary policy press conference landing page, which serves as an index to past and upcoming Governing Council rate decisions. Current ECB rates (effective 11 June 2025): deposit facility at 2.00%, main refinancing operations at 2.15%, and marginal lending facility at 2.40%. The page references recent meetings on 5 February 2026 and 19 March 2026, with the next press conference scheduled for December.",
   "key_points": [
-    "Page is a navigation hub linking to ECB press conference resources, not a standalone policy document",
-    "Current ECB rates as of June 11, 2025: deposit facility 2.00%, MRO 2.15%, marginal lending facility 2.40%",
-    "References upcoming press conference dates but does not contain policy content",
-    "No publication date provided for this page",
-    "Provides access to visual statements, projections, and audio streams"
+    "Current ECB rates as of 11 June 2025: deposit facility 2.00%, main refinancing operations 2.15%, marginal lending facility 2.40%",
+    "Recent ECB Governing Council meetings referenced: 5 February 2026 and 19 March 2026",
+    "Next ECB press conference scheduled for December (specific date not stated)",
+    "Page provides access to press releases, statements, Q&A, visual statements, and audio streams for press conferences",
+    "Page includes macroeconomic projections and satellite downlink parameters for TV coverage"
   ],
-  "why_it_matters": "This page serves as a gateway to ECB monetary policy communications but contains no new actionable information. It is useful for locating actual press conference content but should not be archived as a standalone policy record.",
+  "why_it_matters": "This page is the central hub for accessing ECB monetary policy decisions and their accompanying documentation. The current rate levels (2.00%/2.15%/2.40%) reflect the ECB's policy stance as of mid-2025. Traders and analysts use this page to navigate to specific policy statements and press conference recordings for recent ECB decisions.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "fx",
+      "bonds",
+      "equities"
+    ],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "ECB rates at deposit facility 2.00%, MRO 2.15%, MLF 2.40% represent the current policy rate corridor as of June 2025. The page references recent meetings in early 2026, suggesting the ECB has continued its rate-setting cycle through those dates. Specific decisions from the February and March 2026 meetings are not included in this source.",
   "market_structure_context": "",
   "important_numbers": [
-    "2.00% (deposit facility rate)",
-    "2.15% (main refinancing operations rate)",
-    "2.40% (marginal lending facility rate)"
+    "2.00%",
+    "2.15%",
+    "2.40%",
+    "11 June 2025"
   ],
   "tags": [
     "ecb",
+    "rate-decision",
     "monetary-policy",
+    "euro-area",
+    "governing-council",
     "press-conference",
-    "interest-rates",
-    "euro-area"
+    "deposit-facility",
+    "interest-rates"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 3,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing page (source_type: navigation_page) - explicitly rejected per Rule 5",
-      "No substantive policy content - only links to press releases, statements, and projections",
-      "No publication date provided - cannot assess recency or staleness",
-      "ECB interest rates displayed are from June 11, 2025 (deposit 2.00%, MRO 2.15%, marginal lending 2.40%) - approximately 9 months stale as of TODAY",
-      "event_type set to 'unknown' - appropriate for navigation page but confirms lack of archiveable content",
-      "Cannot serve as standalone archival record - only a portal linking to actual policy documents"
+      "PAGE_TYPE is listing_page - per Rule 5, listing pages must be rejected",
+      "event_type incorrectly set to 'rate_decision' but no rate decision is contained in this source; it is an index page linking to press conferences",
+      "Source is a navigation/listing hub with no substantive policy content - actual rate decisions require navigating to linked press releases",
+      "The rates shown (2.00%/2.15%/2.40%) are from 11 June 2025, over 9 months stale as of TODAY (2026-03-31)",
+      "Published_at set to TODAY is misleading - this index page has no specific publication date and is perpetually maintained",
+      "References to February and March 2026 meetings suggest they exist but the actual decisions are not included here"
     ]
   },
   "human_review": {
@@ -59,5 +67,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_webcasts_ecb_monetary_policy_decisions_6efbb07df903300c.txt",
-  "notes": "Non-archiveable navigation page. Does not contain actual monetary policy content. Source appears to be a portal page linking to press conference materials. The rates displayed (2.00%, 2.15%, 2.40%) are from June 11, 2025 and may not reflect current ECB policy as of March 2026. Recommend accessing specific press release or statement linked from this page instead."
+  "notes": "This source is a navigation hub for ECB monetary policy press conferences rather than a standalone policy document. It contains current (as of June 2025) ECB rate levels and references to recent and upcoming Governing Council meetings. The source quality is limited because it is a listing page that links to policy documents rather than containing the documents themselves. SOURCE_TYPE is listing_page per PAGE_TYPE taxonomy. Published_at set to TODAY as no specific document publication date is associated with this index page."
 }

@@ -1,76 +1,62 @@
 {
   "id": "seed_crawl_federalreserve_2008_press_releases_06a5db7d8553bc62",
-  "created_at": "2026-03-30T06:20:04.327239+00:00",
+  "created_at": "2026-03-31T18:22:15.973607+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
-  "title": "2008 Federal Reserve Press Releases (Index Page)",
+  "title": "2008 Press Releases",
   "source": {
     "name": "Federal Reserve",
     "url": "",
-    "published_at": "2008-01-01 to 2008-12-31",
-    "source_type": "listing_page"
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": ""
   },
-  "summary": "This is a chronological index page listing Federal Reserve press releases from throughout 2008, covering the financial crisis period. The page itself is not an archiveable document but rather a navigation aid pointing to individual press releases. It catalogs thousands of Fed actions including Term Auction Facility operations, bank holding company approvals, enforcement actions, and various liquidity facilities. The actual substantive content exists in the individual linked press releases, not in this index.",
+  "summary": "This is a listing page (index) of Federal Reserve press releases from calendar year 2008. It contains no substantive source content; only a chronological table of contents linking to individual press releases spanning monetary policy announcements, enforcement actions, banking applications, and regulatory updates. The page requires JavaScript to navigate to actual content.",
   "key_points": [
-    "This is a listing/index page, not an archiveable source document itself",
-    "Contains catalog of Federal Reserve press releases spanning the entire 2008 calendar year",
-    "References significant 2008 crisis events including AIG bailout ($85 billion), TAF auctions, and bank holding company conversions",
-    "Individual items include monetary policy announcements, banking applications approvals, enforcement actions, and regulatory policy updates",
-    "URL is blank, making individual press releases not directly accessible from this index",
-    "Cannot serve as a standalone research archive record due to lack of specific document content"
+    "This is a navigation/listing page, not an archiveable source document.",
+    "Content covers Federal Reserve communications from 2008, which is approximately 17 years stale relative to TODAY (2026-03-31).",
+    "The page lists mixed content types including monetary policy, enforcement actions, banking applications, and regulatory announcements.",
+    "No single publication date is associated with this index page; individual press releases span December 2008 onward.",
+    "URL field is blank, meaning no specific source document can be accessed.",
+    "JavaScript is required to navigate to actual press release content, making direct archival impractical."
   ],
-  "why_it_matters": "This index page serves as a roadmap to 2008 Federal Reserve crisis response documentation. However, as a listing page without the actual press release content, it cannot function as an archive record on its own. Researchers seeking specific macro catalyst information must access the individual press releases directly.",
+  "why_it_matters": "This source provides no actionable content for the finance research archive. It is a navigational index that cannot be archived in its current form. Researchers seeking 2008 Federal Reserve communications would need to access individual press release URLs directly.",
   "market_impact": {
-    "asset_classes": [
-      "equities",
-      "bonds",
-      "crypto",
-      "fx",
-      "commodities",
-      "volatility"
-    ],
+    "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The index references a comprehensive range of Federal Reserve actions during the 2008 financial crisis, including the creation and expansion of liquidity facilities (TAF, CPFF, TALF, MMIFF), emergency lending programs, discount rate actions, and major bank restructuring approvals. Specific policy details would require accessing individual press release documents.",
+  "macro_context": "",
   "market_structure_context": "",
-  "important_numbers": [
-    85000000000,
-    150000000000,
-    75000000000,
-    50000000000,
-    30000000000,
-    25000000000
-  ],
+  "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "2008-financial-crisis",
-    "press-releases-index",
+    "press-releases",
+    "index",
     "listing-page",
-    "non-archiveable",
-    "term-auction-facility",
-    "liquidity-facilities",
-    "bank-holding-companies"
+    "non-archivable",
+    "2008"
   ],
   "llm_review": {
     "initial_confidence": 1,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page per Rule 8 - must not be accepted",
-      "URL is blank - no source attribution present",
-      "No substantive document content - only a chronological catalog of press release titles and dates",
-      "Cannot verify any specific claims, facts, or events without accessing individual press releases",
-      "Archive value too low as standalone record - serves only as a navigation aid",
-      "PAGE_TYPE is listing_page which explicitly triggers rejection per verification rules"
+      "Source is a listing_page/index, not an archiveable source document per Rule 5",
+      "URL field is blank - no specific source document can be accessed or verified",
+      "Source contains only a table of contents/navigation links with no substantive content",
+      "Content is from 2008 (approximately 17 years stale) with no single publication date",
+      "JavaScript dependency prevents direct content access",
+      "Mixed content types (monetary policy, enforcement, banking applications) without unified focus",
+      "event_type is 'unknown' - cannot be determined from a navigation index"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "reject",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2008_press_releases_06a5db7d8553bc62.txt",
-  "notes": "NON-ARCHIVEABLE: This is a listing page/index of Federal Reserve press releases, not a standalone archiveable document. The page contains only a chronological catalog of press release titles and dates with category labels (Monetary Policy, Orders on Banking Applications, Enforcement Actions, etc.). No substantive document content is present. Rule 9 explicitly states that listing_page type sources should be treated as non-archiveable. While the index references historically significant events from the 2008 financial crisis (AIG bailout, TAF operations, Goldman Sachs/Morgan Stanley conversions), these facts are not directly present in the source text itself. To create a valid research archive record, individual press releases must be accessed and processed separately. Confidence set to minimum due to lack of specific source content."
+  "notes": "This record is essentially a stub. The source is a Federal Reserve website index page for 2008 press releases. It is NOT relevant as a standalone source because: (1) it is a listing_page per source metadata, (2) no substantive content exists in the record, (3) URL is blank preventing access to actual documents, (4) content is from 2008 and extremely stale. Individual press releases from 2008 (FOMC statements, TAF announcements, TALF creation, MBS purchase programs) would be relevant for market structure and macro catalysts research, but this index page itself is not archiveable content."
 }

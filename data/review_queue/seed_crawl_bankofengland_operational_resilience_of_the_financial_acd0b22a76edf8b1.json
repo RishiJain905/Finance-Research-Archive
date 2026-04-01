@@ -1,67 +1,64 @@
 {
   "id": "seed_crawl_bankofengland_operational_resilience_of_the_financial_acd0b22a76edf8b1",
-  "created_at": "2026-03-31T10:31:51.621131+00:00",
+  "created_at": "2026-03-31T18:01:26.809965+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "regulatory_guidance",
   "title": "Operational resilience of the financial sector",
   "source": {
     "name": "Bank of England",
     "url": "https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector",
+    "domain": "www.bankofengland.co.uk",
     "published_at": "",
-    "source_type": "unknown",
-    "domain": "www.bankofengland.co.uk"
+    "source_type": "unknown"
   },
-  "summary": "This Bank of England overview page describes the UK's operational resilience framework for financial firms, including banks, insurers, and Financial Market Infrastructures. It outlines requirements under PRA Supervisory Statement SS1/21 for firms to identify important business services, set impact tolerances, and test their ability to remain within those tolerances during severe but plausible disruptions. The content focuses on cyber resilience, third-party risk management, and incident reporting requirements.",
+  "summary": "The Bank of England provides an overview of its operational resilience framework for UK financial firms and Financial Market Infrastructures (FMIs), requiring them to identify important business services, set impact tolerances, and ensure they can remain within those tolerances during severe but plausible disruptions. The framework includes supervisory statement SS1/21 and proposed reporting requirements for operational incidents and third-party arrangements (CP17/24).",
   "key_points": [
-    "Operational resilience means the ability of firms and the financial sector to prevent, adapt, respond to, recover from, and learn from operational disruptions",
-    "Firms must identify important business services and set impact tolerances specifying acceptable service interruption levels during severe but plausible scenarios",
-    "The PRA's SS1/21 policy requires firms to prepare written operational resilience self-assessments documenting their resilience journey",
-    "Third-party risk management is a key component, with firms required to ensure third parties are sufficiently resilient",
-    "The PRA is proposing a new framework (CP17/24) for timely and consistent reporting of operational incidents and material third-party arrangements",
-    "Incident management proposals aim to enhance the PRA's understanding of sector threats and vulnerabilities through improved data collection"
+    "Firms must identify important business services, set impact tolerances, and test their capacity to remain within those tolerances during severe but plausible disruptions",
+    "The PRA assumes operational disruptions are inevitable and requires firms to manage periods of service interruption effectively (SS1/21)",
+    "Firms must prepare written operational resilience self-assessments documenting their resilience journey and identifying risks",
+    "The PRA is proposing a framework (CP17/24) for timely reporting of operational incidents and notification of material third-party arrangements",
+    "Third-party risk management is a key component, with requirements outlined in Supervisory Statement SS2/21",
+    "The Financial Policy Committee (FPC) sets impact tolerances at the system level while PRC and FMIC focus on regulated firms and FMIs respectively"
   ],
-  "why_it_matters": "This framework establishes regulatory expectations for how UK financial institutions must manage operational risks including cyber attacks, IT outages, and third-party failures. While not a direct market catalyst, operational resilience failures at systemically important firms can create market disruptions, liquidity issues, or contagion effects. However, this source is informational overview content rather than a specific policy decision or market-moving event.",
+  "why_it_matters": "This framework establishes the operational resilience standards UK financial institutions must meet. While not a direct market catalyst, systemic operational resilience failures could theoretically disrupt market plumbing and financial services. The reporting requirements (CP17/24) would enhance regulators' visibility into sector vulnerabilities but represent an ongoing compliance burden rather than near-term market-moving information.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "This source describes operational resilience requirements (cyber security, third-party dependencies, incident reporting) rather than market structure topics such as trading venues, clearing and settlement, market participant behavior, or liquidity dynamics.",
+  "macro_context": "The Bank of England's operational resilience framework applies to banks, insurers, building societies, and Financial Market Infrastructures (FMIs). The framework assumes disruptions are inevitable and requires firms to manage service interruptions effectively while maintaining safety, soundness, and policyholder protection. The Financial Policy Committee (FPC) sets system-level impact tolerances, while the PRA and FMIC oversee implementation at the firm and infrastructure level.",
+  "market_structure_context": "While operational resilience is tangentially related to financial stability and market infrastructure stability, this source does not discuss trading venues, market making, order flow, or other market structure topics. It addresses firm-level operational risk management rather than market microstructure or trading mechanics.",
   "important_numbers": [],
   "tags": [
-    "operational-resilience",
     "bank-of-england",
-    "regulatory-framework",
-    "cyber-resilience",
-    "third-party-risk",
-    "uk-financial-sector",
+    "operational-resilience",
+    "regulatory",
     "ss1-21",
-    "incident-reporting",
-    "financial-stability"
+    "ss2-21",
+    "cp17-24",
+    "third-party-risk",
+    "financial-stability",
+    "uk-financial-sector"
   ],
   "llm_review": {
-    "initial_confidence": 5,
-    "verification_confidence": 3,
-    "verdict": "reject",
+    "initial_confidence": 3,
+    "verification_confidence": 6,
+    "verdict": "review",
     "issues_found": [
-      "event_type is 'unknown' but should be 'regulatory_guidance' given the source clearly describes Bank of England/PRA regulatory policy framework",
-      "source_type is 'unknown' but should be 'regulatory_guidance'",
-      "published_at is empty - no publication date provided to assess currency or archival value",
-      "Source is informational overview content describing regulatory framework, not a dated publication with specific policy decision or market-moving information",
-      "Topic mismatch: TARGET is 'macro catalysts' but source covers operational resilience policy (cyber security, third-party risk, incident reporting) which is regulatory/infrastructure content, not macro catalysts",
-      "Source does not contain market-moving information, economic data, or policy decisions with clear market impact",
-      "Source appears to be an ongoing overview/hub page rather than a specific research paper, statement, or dated publication"
+      "Source is an informational overview page about existing regulatory framework, not a specific policy announcement or new development",
+      "Missing published_at date prevents assessment of source recency",
+      "Source content is general and explanatory rather than providing actionable market or macro information",
+      "While correctly categorized as regulatory_guidance, the record appropriately notes the source is tangential to typical macro catalysts and market structure topics"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Clear rejection criteria met: topic mismatch (operational resilience vs macro catalysts), event_type missing when correct type is obvious, and source is informational overview content without market-moving specifics or dated publication"
+    "notes": "This record accurately describes the Bank of England's operational resilience framework from a high-trust domain, but the source is a general informational overview rather than a specific policy announcement or market-moving document. Human review needed to determine if operational resilience framework documentation has sufficient archival value for a finance research archive focused on macro catalysts and market structure."
   },
   "raw_text_path": "data/raw/seed_crawl_bankofengland_operational_resilience_of_the_financial_acd0b22a76edf8b1.txt",
-  "notes": "Source does not address market structure or macro catalysts as defined in the task. Topic mismatch: this is about operational resilience requirements (cyber security, third-party risk, incident reporting frameworks) for UK financial institutions, not macroeconomic drivers or market structure dynamics. Published date not provided; likely a persistent overview page rather than a dated publication. Low relevance for finance research focused on market-moving events.",
+  "notes": "Source is an informational overview page about the Bank of England's operational resilience framework. While published by a high-trust domain (BoE), it does not contain market-moving information, macro catalysts, or market structure content. Classified as regulatory guidance for completeness but should be lower priority for a finance research archive focused on market structure and macro catalysts. Missing published_at date prevents recency assessment. The content references specific policy documents (SS1/21, SS2/21, CP17/24) which may be more substantive sources if available.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "4723fdc9191300934e342a46142cba3ecce09c62"
+  "telegram_review_fingerprint": "d90ffbfa41d910533858816889cdd809dc5051f1"
 }

@@ -1,0 +1,63 @@
+{
+  "id": "nyse_trade_nyse_pillar_3fbc9787",
+  "created_at": "2026-03-31T17:35:08.231796+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "NYSE Pillar®",
+  "source": {
+    "name": "NYSE Trade",
+    "url": "https://www.nyse.com/trade/pillar",
+    "domain": "www.nyse.com",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "NYSE Pillar is an integrated trading technology platform enabling member firms to connect to NYSE equities and options markets via standard protocols. The page functions as a technical documentation hub rather than providing substantive research or policy content. [NO CHANGE NEEDED - summary is accurate]",
+  "key_points": [
+    "NYSE Pillar integrates trading technology across NYSE, NYSE American Equities, NYSE Arca Equities, NYSE National, NYSE Texas, NYSE American Options, and NYSE Arca Options",
+    "The platform supports Binary Gateway and FIX Gateway protocols for equities and options",
+    "Latency statistics are provided for 4Q 2025 showing P50 latencies ranging from 17µs (NYSE Texas BIN) to 75µs (NYSE American FIX)",
+    "Trade Ops Portal (TOP) is a free web-based tool for managing orders, trade details, risk controls, and post-trade clearing",
+    "Contact information for Technology Member Services and Relationship Management is provided"
+  ],
+  "why_it_matters": "This page is purely technical product documentation for NYSE's trading infrastructure. It has no relevance to macro catalysts, policy decisions, or market analysis. The latency statistics provide operational performance data for a major US equity exchange. [NO CHANGE NEEDED - assessment is correct]",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "NYSE Pillar is exchange trading infrastructure that provides connectivity protocols (BIN, FIX) for NYSE equities and options markets. The platform's latency performance metrics (P01-P99.9 percentiles for 4Q 2025) are available but this is operational/reference data rather than analytical content. [NO CHANGE NEEDED - description is accurate]",
+  "important_numbers": [
+    "NYSE P50 latency: 17-75µs depending on market and protocol",
+    "NYSE P99 latency: 48-133µs depending on market and protocol"
+  ],
+  "tags": [
+    "nyse",
+    "trading-technology",
+    "market-infrastructure",
+    "protocols",
+    "connectivity",
+    "exchange-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation/documentation page (navigation_page), explicitly rejected per Rule 6",
+      "No publication date provided in source metadata",
+      "Source is purely technical product documentation with no research, analysis, or policy content",
+      "No relevance to macro catalysts or market analysis - only operational/reference data",
+      "event_type correctly set to 'unknown' as there is no event; however, this type of source should be rejected outright",
+      "No market_impact can be derived from this source - asset_classes empty and directional_bias 'unknown' is correct but confirms the source lacks analytical value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/nyse_trade_nyse_pillar_3fbc9787.txt",
+  "notes": "This source is a navigation/hub page for NYSE Pillar technical documentation. It contains no research findings, market analysis, or policy content. The majority of text consists of navigation links, protocol specifications, and contact information. While technically related to market structure (exchange trading technology), this is operational documentation rather than archival research. No publication date could be extracted. Not suitable for research archive."
+}

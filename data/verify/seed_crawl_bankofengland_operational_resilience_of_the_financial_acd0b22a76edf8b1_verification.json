@@ -1,22 +1,19 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "event_type is 'unknown' but should be 'regulatory_guidance' given the source clearly describes Bank of England/PRA regulatory policy framework",
-    "source_type is 'unknown' but should be 'regulatory_guidance'",
-    "published_at is empty - no publication date provided to assess currency or archival value",
-    "Source is informational overview content describing regulatory framework, not a dated publication with specific policy decision or market-moving information",
-    "Topic mismatch: TARGET is 'macro catalysts' but source covers operational resilience policy (cyber security, third-party risk, incident reporting) which is regulatory/infrastructure content, not macro catalysts",
-    "Source does not contain market-moving information, economic data, or policy decisions with clear market impact",
-    "Source appears to be an ongoing overview/hub page rather than a specific research paper, statement, or dated publication"
+    "Source is an informational overview page about existing regulatory framework, not a specific policy announcement or new development",
+    "Missing published_at date prevents assessment of source recency",
+    "Source content is general and explanatory rather than providing actionable market or macro information",
+    "While correctly categorized as regulatory_guidance, the record appropriately notes the source is tangential to typical macro catalysts and market structure topics"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Clear rejection criteria met: topic mismatch (operational resilience vs macro catalysts), event_type missing when correct type is obvious, and source is informational overview content without market-moving specifics or dated publication",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "This record accurately describes the Bank of England's operational resilience framework from a high-trust domain, but the source is a general informational overview rather than a specific policy announcement or market-moving document. Human review needed to determine if operational resilience framework documentation has sufficient archival value for a finance research archive focused on macro catalysts and market structure.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Bank of England provides an overview of its operational resilience framework for UK financial firms and Financial Market Infrastructures (FMIs), requiring them to identify important business services, set impact tolerances, and ensure they can remain within those tolerances during severe but plausible disruptions. The framework includes supervisory statement SS1/21 and proposed reporting requirements for operational incidents and third-party arrangements (CP17/24).",
+    "why_it_matters": "This framework establishes the operational resilience standards UK financial institutions must meet. While not a direct market catalyst, systemic operational resilience failures could theoretically disrupt market plumbing and financial services. The reporting requirements (CP17/24) would enhance regulators' visibility into sector vulnerabilities but represent an ongoing compliance burden rather than near-term market-moving information.",
+    "macro_context": "The Bank of England's operational resilience framework applies to banks, insurers, building societies, and Financial Market Infrastructures (FMIs). The framework assumes disruptions are inevitable and requires firms to manage service interruptions effectively while maintaining safety, soundness, and policyholder protection. The Financial Policy Committee (FPC) sets system-level impact tolerances, while the PRA and FMIC oversee implementation at the firm and infrastructure level.",
+    "market_structure_context": "While operational resilience is tangentially related to financial stability and market infrastructure stability, this source does not discuss trading venues, market making, order flow, or other market structure topics. It addresses firm-level operational risk management rather than market microstructure or trading mechanics."
   }
 }

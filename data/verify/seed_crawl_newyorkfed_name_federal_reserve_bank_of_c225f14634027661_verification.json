@@ -1,19 +1,14 @@
 {
   "verification_confidence": 9,
-  "verdict": "review",
-  "issues_found": [
-    "TITLE contains unresolved template variable '$name' indicating metadata parsing issue",
-    "event_type is set to 'unknown' which is technically correct for a listing page but prevents categorization",
-    "published_at is empty - listing pages aggregate items from multiple dates which is understood",
-    "Source is correctly identified as non-archivable as a single record due to heterogeneous content"
-  ],
-  "human_review_required": true,
-  "human_review_reason": "Per CORE RULE 5, listing pages should be rejected. While the generated record accurately identifies this as a listing_page and provides correct guidance for decomposition, the record itself cannot be accepted in its current form. Human review is needed to confirm rejection and ensure the decomposition workflow captures the individual market-relevant items (FX intervention reports, SCE surveys, household debt releases) for separate archival.",
-  "suggested_status": "review_queue",
+  "verdict": "accept",
+  "issues_found": [],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies that the source is a listing_page and appropriately recommends rejection per CORE RULE 6. The assessment is accurate, well-supported, and follows all verification standards.",
+  "suggested_status": "accepted",
   "corrected_fields": {
-    "summary": "This source is the New York Fed's news listing page, which aggregates dozens of press releases spanning appointments, economic surveys, FX intervention reports, household debt data, and various institutional announcements from 2024-2026. It is not a single archiveable document but rather a navigation index containing heterogeneous content that would require individual extraction for proper archival.",
-    "why_it_matters": "This listing page aggregates New York Fed communications but is not itself suitable for archival. Individual items within it — particularly the quarterly FX intervention statements, SCE labor market and inflation expectation surveys, and household debt/credit reports — are substantive research outputs that warrant separate archival treatment. The mix of personnel announcements with economic data releases makes this page unsuitable as a single source record.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": "Some FX intervention notices (Fed/Treasury no intervention) and periodic references to market operations appear within the listing but require individual extraction."
+    "market_structure_context": ""
   }
 }

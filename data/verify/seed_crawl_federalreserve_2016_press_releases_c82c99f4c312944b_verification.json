@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source_type assessment - violates CORE RULE 6",
+    "No substantive policy content present - only titles and categorical tags",
+    "Event type set to 'unknown' which is acceptable given listing_page nature, but confirms this is not a valid archivable document",
+    "Published date of 2016-12-31 is approximately 9 years and 3 months before TODAY (2026-03-31), making it stale for current analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately identifies all critical issues with this source. The generated record correctly flags that this is a listing_page with no extractable content, and correctly suggests rejection. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a listing page that indexes Federal Reserve press releases from 2016, organized chronologically with brief titles and categorical tags (e.g. Monetary Policy, Enforcement Actions, Banking and Consumer Regulatory Policy). It does not contain the actual content of individual releases. The index references FOMC statements from November and December 2016, but the substantive policy content would require accessing each release individually.",
+    "why_it_matters": "This listing page is not directly usable for research as it contains only titles and dates of press releases without content. To extract actual macro catalyst information (FOMC statements, rate decisions, economic data), each individual release would need to be accessed separately. The page serves only as a finding aid.",
+    "macro_context": "The index references FOMC statements and economic projections from late 2016, but the actual policy content is not present in this listing. Historical FOMC statements from 2016 would be relevant for macro catalyst analysis but must be accessed as separate documents.",
+    "market_structure_context": ""
+  }
+}

@@ -1,14 +1,24 @@
 {
-  "verification_confidence": 10,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is completely empty - no content extracted from source",
+    "Source attribution completely missing: name, url, and domain fields are all empty strings",
+    "Published_at field is empty - source date (2026-03-18) not recorded",
+    "Source_type field is empty - record type not specified",
+    "Summary field is empty - no content extracted from FOMC statement",
+    "Key_points array is empty - no key points captured from the statement",
+    "Why_it_matters field is empty - no market impact or significance captured",
+    "Macro_context and market_structure_context fields are empty",
+    "Market_impact object is empty - no directional bias or asset classes specified",
+    "Event_type is missing from record - cannot verify against taxonomy"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Record is entirely empty with no extractable content. No human review needed to determine rejection - the record failed to populate any fields from the source material.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The FOMC voted 11-1 to maintain the federal funds rate target range at 3-1/2 to 3-3/4 percent. The statement noted solid economic expansion, low job gains, and somewhat elevated inflation. Stephen I. Miran dissented, preferring a 25bps rate cut. The Committee emphasized commitment to the 2% inflation target while monitoring economic risks including Middle East developments.",
+    "why_it_matters": "The unanimous decision to hold rates signals the Fed remains cautious despite solid growth. The lone dissent from Miran suggests some members see room for easing. The unchanged stance with emphasis on data dependency keeps markets attentive to incoming economic releases for future rate guidance.",
+    "macro_context": "Fed maintains rates at 3.5-3.75% with 11-1 vote, citing solid growth and stable employment while monitoring Middle East uncertainty and inflation risks above 2% target."
   }
 }

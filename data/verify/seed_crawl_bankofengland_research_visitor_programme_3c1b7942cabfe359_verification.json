@@ -2,17 +2,17 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page (rule 6: reject listing pages)",
-    "Source has no content relevant to macro catalysts or market structure",
-    "event_type correctly set to 'unknown' but source is non-archivable by definition",
-    "No policy signals, data releases, speeches, or market-moving content present"
+    "Source is a listing_page containing only a historical roster of research visitors - no market catalysts or policy content",
+    "event_type set to 'unknown' - but the correct action is to reject entirely since this is a container page per Rule 5",
+    "No summary, key_points, or any substantive research content captured - page is simply a visitor roster",
+    "Source has no relevance to market structure or macro catalysts per core relevance standards"
   ],
   "human_review_required": false,
-  "human_review_reason": "The source is unambiguously a listing page with no macro catalyst or market structure content. The generated record correctly identifies this and recommends rejection. No human review needed.",
+  "human_review_reason": "Auto-reject based on explicit rule: listing pages must be rejected per Rule 5",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This page is a static listing of academic researchers who have visited the Bank of England through its Research Visitor Programme from 2017 to 2025. It contains no policy announcements, data releases, or analysis relevant to macro catalysts or market structure. The most recent visitor listed is Ester Faia (November 2025) and Julian Di Giovanni (October 2025).",
-    "why_it_matters": "This source has no direct relevance to macro catalysts or market structure. It is an administrative record of the Bank of England's research collaboration outreach, not a source of policy signals, data, or market intelligence.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

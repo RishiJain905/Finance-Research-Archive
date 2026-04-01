@@ -1,67 +1,76 @@
 {
   "id": "seed_crawl_federalreserve_policy_normalization_a4ddb21f64065d55",
-  "created_at": "2026-03-30T06:05:39.300077+00:00",
+  "created_at": "2026-03-31T18:48:02.051521+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "monetary_policy",
+  "event_type": "economic_commentary",
   "title": "Policy Normalization",
   "source": {
     "name": "Federal Reserve",
     "url": "",
+    "domain": "federalreserve.gov",
     "published_at": "2025-11-26",
-    "source_type": "government"
+    "source_type": "homepage"
   },
-  "summary": "The Federal Reserve announced on October 29, 2025, that it would cease balance sheet runoff starting December 1, 2025, concluding a process that began in June 2022. Since then, Fed securities holdings declined by more than $2.2 trillion, reducing holdings as a share of nominal GDP from 33% to 20%. The Committee judged reserves were approaching ample levels, making the cessation of runoff appropriate.",
+  "summary": "The Federal Reserve's FOMC announced on October 29, 2025, that it would cease balance sheet runoff starting December 1, 2025, after reducing securities holdings by more than $2.2 trillion since June 2022. The balance sheet reduction included approximately $1.6 trillion in Treasury securities and $600 billion in agency mortgage-backed securities, bringing Fed securities holdings as a share of nominal GDP from 33 percent to 20 percent.",
   "key_points": [
-    "FOMC announced cessation of securities runoff effective December 1, 2025, rolling over all Treasury principal payments and reinvesting agency MBS principal into Treasury bills",
-    "Since June 2022, total Fed securities holdings declined by more than $2.2 trillion, including $1.6 trillion in Treasuries and $600 billion in agency MBS",
-    "Fed securities as share of nominal GDP fell 13 percentage points, from 33% to 20%",
-    "Original runoff caps were $30B/month for Treasuries (rising to $60B after 3 months) and $17.5B/month for agency MBS (rising to $35B after 3 months)",
-    "Committee will maintain securities holdings in amounts needed for the ample reserves regime",
-    "The decision was driven by money market conditions suggesting reserve levels were approaching ample levels"
+    "On October 29, 2025, the FOMC announced cessation of balance sheet runoff starting December 1, 2025",
+    "Since June 2022, Fed total securities holdings declined by more than $2.2 trillion",
+    "Treasury redemptions totaled approximately $1.6 trillion; agency MBS redemptions totaled approximately $600 billion",
+    "Fed securities as share of nominal GDP declined 13 percentage points (from 33% to 20%)",
+    "Desk directed to roll over all Treasury principal payments at auction and reinvest agency MBS principal payments into Treasury bills",
+    "Original May 2022 runoff caps: $30bn/month Treasury (rising to $60bn after 3 months); $17.5bn/month agency MBS (rising to $35bn after 3 months)"
   ],
-  "why_it_matters": "The conclusion of quantitative tightening represents a significant shift in Fed policy after 3.5 years of balance sheet reduction. This affects bank liquidity conditions, money market dynamics, and the overall supply of reserves in the financial system. The shift to reinvestment mode signals the Fed views financial conditions as stabilized and reserve levels as sufficiently abundant.",
+  "why_it_matters": "This source documents the Federal Reserve's balance sheet normalization timeline, providing the official framework for how QT was implemented and concluded. The cessation of runoff marks a significant shift in Fed operations, as the balance sheet will now stabilize, affecting bank reserves and money market conditions. Understanding these parameters is essential for assessing future monetary policy implementation.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "equities",
-      "money_market"
+      "repo",
+      "money markets"
     ],
     "directional_bias": "neutral",
-    "confidence": 7
+    "confidence": 0
   },
-  "macro_context": "This policy change occurs after an extended period of QT that removed substantial liquidity from the financial system. The cessation of runoff means the Fed will no longer be a net seller of Treasuries and MBS, which could affect Treasury bill supply dynamics and money market conditions.",
-  "market_structure_context": "The transition from active balance sheet reduction to reinvestment represents a structural shift in how the Fed operates in secondary markets. With the ample reserves framework, the Fed will manage securities holdings as needed to maintain reserves without active QT.",
+  "macro_context": "The conclusion of balance sheet runoff signals that the Federal Reserve judges reserve levels are approaching ample levels. This operational change means the Fed's balance sheet will no longer shrink, potentially reducing upward pressure on short-term rates from reserve scarcity and affecting the dynamics of money market funding conditions.",
+  "market_structure_context": "With the cessation of runoff, the Fed Desk will now roll over all Treasury principal payments at auction and reinvest agency MBS payments into Treasury bills. This changes the supply dynamics in the Treasury bill market and affects the composition of the Fed's SOMA portfolio.",
   "important_numbers": [
-    2200000000000,
-    1600000000000,
-    600000000000,
-    33,
-    20,
-    30,
-    60,
-    17.5,
-    35
+    "$2.2 trillion",
+    "$1.6 trillion",
+    "$600 billion",
+    "33%",
+    "20%",
+    "$30 billion/month",
+    "$60 billion/month",
+    "$17.5 billion/month",
+    "$35 billion/month"
   ],
   "tags": [
-    "federal_reserve",
-    "balance_sheet",
-    "quantitative_tightening",
-    "policy_normalization",
-    "FOMC",
-    "QT_end"
+    "fed",
+    "balance-sheet",
+    "qt",
+    "normalization",
+    "fomc",
+    "soma",
+    "reserves",
+    "treasury-bills"
   ],
   "llm_review": {
-    "initial_confidence": 8,
-    "verification_confidence": 8,
+    "initial_confidence": 6,
+    "verification_confidence": 3,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "URL field is empty - source attribution is incomplete and unverifiable",
+      "source_type is 'homepage' - per rule #5, homepage pages must be rejected as non-archivable",
+      "event_type 'economic_commentary' is incorrect - the source is an aggregation/index page for FOMC balance sheet communications, not a commentary; should be 'balance_sheet_update' if archived as operational documentation",
+      "Published_at date (2025-11-26) reflects page last update, not publication of the referenced content (which includes statements from 2022 and 2025)",
+      "Source is a container page that indexes multiple primary documents rather than a standalone primary source"
+    ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "missing_source_attribution"
+    "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_policy_normalization_a4ddb21f64065d55.txt",
-  "notes": "Source is authoritative Federal Reserve official documentation. Contains substantive policy details and specific numbers. Historical context from 2022-2025 QT program included. Document captures the conclusion of a major monetary policy normalization cycle."
+  "notes": "This is a Federal Reserve homepage that serves as an index/aggregation page for FOMC communications related to balance sheet normalization. It references multiple individual FOMC statements and principles documents but does not itself constitute a primary source. The key new information is the October 29, 2025 announcement about ceasing runoff starting December 1, 2025, and the summary statistics about the $2.2 trillion reduction achieved since June 2022. Source type 'homepage' typically indicates non-archivable content per guidelines, but the aggregate data and historical framework it contains may still have research value. Recommend human review to determine if individual referenced documents (October 2025 statement, May 2022 statement, January 2022 principles) should be archived separately as primary sources."
 }

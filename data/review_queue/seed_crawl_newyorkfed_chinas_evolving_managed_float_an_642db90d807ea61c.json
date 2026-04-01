@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_chinas_evolving_managed_float_an_642db90d807ea61c",
-  "created_at": "2026-03-31T13:47:17.419266+00:00",
+  "created_at": "2026-03-31T18:58:04.290551+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -8,61 +8,61 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/research/staff_reports/sr828.html",
+    "domain": "www.newyorkfed.org",
     "published_at": "2017-11-01",
-    "source_type": "research_paper",
-    "domain": "www.newyorkfed.org"
+    "source_type": "research_paper"
   },
-  "summary": "This Federal Reserve Bank of New York Staff Report (Number 828) examines the drivers of daily changes in the CNY/USD exchange rate following the regime change in early 2016 that introduced a new method for setting the daily fix. The research finds that the fix is highly predictable, responding to prior-day onshore CNY/USD movements and dollar cross-rate changes, but has uneven predictive power for subsequent currency evolution depending on intervention intensity. The paper documents how the short-run behavior of the CNY/USD rate has increasingly resembled freely floating currencies while maintaining unusually low daily volatility.",
+  "summary": "This Staff Report (Number 828) by John Clark examines the drivers of daily CNY/USD exchange rate changes since early 2016, when a new regime for setting the fix was introduced. The research finds that daily changes in the fix are highly predictable and responsive to previous day's onshore trading session rates and dollar cross rate changes. While the CNY/USD behavior has evolved to resemble freely floating currencies, it still exhibits unusually low daily volatility. On days of broad dollar strengthening, the CNY depreciates against the dollar but appreciates against the CFETS basket index, with the CNY now appreciating less than half as much as when it was primarily managed against the dollar.",
   "key_points": [
-    "Daily changes in the CNY fix are highly predictable, responding to the prior day's CNY/USD rate change during onshore trading and to dollar cross-rate movements",
-    "The fix has uneven predictive power for the subsequent exchange rate: daily closing values centered on fix-implied changes more in high-intervention months, less in 2017 as intervention waned",
-    "Short-run behavior of CNY/USD has evolved to more closely resemble freely floating currencies, while maintaining unusually low daily volatility",
-    "On days of broad dollar strengthening, the CNY depreciates against the dollar but appreciates against the CFETS index (the authorities' main reference basket)",
-    "The CNY now typically appreciates less than half as much as previously when it was managed primarily against the dollar",
-    "The paper studies daily changes since early 2016 when the new fix-setting regime was introduced"
+    "The fix (midpoint of CNY's daily trading range against USD) is set just prior to onshore trading onset and is highly predictable based on prior day's CNY/USD rate and dollar cross rates",
+    "Daily closing value changes centered on fix more during high intervention periods, less in 2017 as intervention intensity declined",
+    "Short-run behavior of CNY/USD has evolved to resemble freely floating currencies while maintaining unusually low daily volatility",
+    "On broad dollar strengthening days, CNY depreciates against USD but appreciates against CFETS index (authorities' main reference basket)",
+    "CNY now typically appreciates less than half as much as when managed primarily against the dollar",
+    "The fix has uneven predictive power for the subsequent evolution of the currency's exchange value"
   ],
-  "why_it_matters": "Understanding how China's managed float operates is critical for FX traders, multinational corporations, and policymakers. The research documents the transition from a dollar-peg-like regime to a more nuanced basket-based system, showing that the CNY exhibits mixed characteristics of both managed and free-floating currencies. This has implications for dollar dynamics, carry trades, and the transmission of U.S. monetary policy through currency channels. Note: Specific regime behavior documented pertains to 2016-2017 period and may have evolved since publication.",
+  "why_it_matters": "This research illuminates the mechanics of China's managed exchange rate regime and how it has evolved since the 2016 reform. Understanding these dynamics is valuable for forex traders, multinational corporations with CNY exposure, and policymakers assessing currency intervention patterns. The finding that CNY behavior increasingly resembles floating currencies while retaining low volatility suggests the PBOC achieved a hybrid equilibrium—useful historical context for understanding subsequent CNY policy.",
   "market_impact": {
     "asset_classes": [
       "fx"
     ],
-    "directional_bias": "mixed",
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "This paper analyzes the operational mechanics of China's currency fixing mechanism, the role of the daily fix as a reference point for onshore trading, the impact of intervention intensity on price discovery, and the relationship between the CNY/USD rate and broader dollar indices including the CFETS basket. It examines the microstructure of a major currency market. Note: Findings reflect Chinese FX regime behavior circa 2016-2017; current regime mechanics may differ.",
+  "macro_context": "China reformed its CNY fixing mechanism in early 2016, moving away from pure dollar-peg management toward a more flexible regime referencing the CFETS basket. This research from late 2017 provides early empirical analysis of how this new regime functioned during its first ~1.5 years, capturing the transition period before intervention intensity declined further.",
+  "market_structure_context": "This paper directly addresses market structure by examining China's managed float regime operational mechanics: the fix-setting mechanism (set prior to onshore trading onset), intervention intensity dynamics, and how CNY/USD behavior compares to freely floating currencies. Key structural features analyzed include the relationship between fix, onshore trading session rates, and closing values; the role of the CFETS basket index as the authorities' reference; and the evolving intervention patterns over 2016-2017.",
   "important_numbers": [],
   "tags": [
     "china",
     "cny",
-    "rmb",
-    "exchange-rate",
     "managed-float",
-    "fixing-mechanism",
-    "dollar",
+    "fix",
+    "exchange-rate",
     "cfets",
+    "pboc",
+    "usd-cny",
+    "intervention",
+    "currency-regime",
     "federal-reserve",
-    "fx",
-    "new-york-fed",
     "research-paper"
   ],
   "llm_review": {
-    "initial_confidence": 6,
+    "initial_confidence": 7,
     "verification_confidence": 7,
     "verdict": "review",
     "issues_found": [
-      "Published November 2017 - approximately 8.4 years old as of TODAY (March 2026), making it a historical document rather than current research",
-      "Source excerpt contains only abstract/metadata, not full paper content - cannot verify quantitative findings, statistical results, or detailed methodology",
-      "Specific findings pertain to regime behavior circa 2016-2017 and may not reflect current Chinese FX management practices"
+      "Source body contains only abstract/summary content, not full paper text - limited source depth but standard for institutional research papers",
+      "No specific quantitative findings in source body (e.g., volatility figures, intervention amounts) - important_numbers field appropriately empty",
+      "Source age is 8+ years (published November 2017) - may have reduced relevance for near-term market analysis but has archival value as historical policy research"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The record is well-constructed and accurately reflects the source abstract. However, the paper's age (8+ years) raises questions about whether its findings remain relevant to current Chinese currency regime dynamics. Additionally, since only the abstract was available in the crawl, key quantitative findings could not be independently verified. Human review is needed to assess archival value for a historical research document versus more current market structure research."
+    "notes": "Record is mostly accurate and well-structured; human review not strictly required as the issues are minor and the source is from a high-trust domain (NY Fed). The abstract-only source content is expected for institutional research papers available only in PDF."
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_chinas_evolving_managed_float_an_642db90d807ea61c.txt",
-  "notes": "Source is a research paper from November 2017, making it a historical record relative to TODAY (March 2026). The excerpt contains only the abstract and metadata, not the full paper content. The paper studies the CNY/USD exchange rate regime change from early 2016, analyzing how the fix-setting mechanism works and how the currency's behavior has evolved. While the topic (China's FX regime) remains relevant to market structure, the specific findings pertain to a period now nearly a decade old and may not reflect current Chinese currency management practices. Initial confidence slightly lowered due to age and limited content in crawl.",
+  "notes": "This is a historical research paper published November 2017. The source body contains only the abstract and metadata, not the full paper content. Available only in PDF format per source disclosure. While the paper is highly relevant to market structure (exchange rate regime analysis), its age (8+ years) significantly limits its relevance for near-term market analysis. The New York Fed is a high-trust domain, but the thin source body (abstract only) constrains extraction confidence.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "f10f86d747165a673e8dcd6bf66b3dd170499986"
+  "telegram_review_fingerprint": "8cf4da65566fb7a08283c07734a6b9fb3b814a75"
 }

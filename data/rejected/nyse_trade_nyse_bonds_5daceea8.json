@@ -1,0 +1,74 @@
+{
+  "id": "nyse_trade_nyse_bonds_5daceea8",
+  "created_at": "2026-03-31T17:34:12.595029+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "NYSE Bonds",
+  "source": {
+    "name": "NYSE Trade",
+    "url": "https://www.nyse.com/trade/bonds",
+    "domain": "www.nyse.com",
+    "published_at": "",
+    "source_type": "unknown"
+  },
+  "summary": "This source is an informational/product page describing the operational mechanics of the NYSE Bond marketplace, covering order types, trading hours, fee structure, auction processes, and post-trade clearance and settlement via DTCC/NSCC. It is not a research document, news article, or event-driven content.",
+  "key_points": [
+    "NYSE Bond marketplace operates with firm orders matched on strict price/time priority; no subject orders are permitted",
+    "Trading hours: Early Trading 4:00 a.m. ET – 8:00 a.m. ET; Core Trading 8:00 a.m. ET – 5:00 p.m. ET; Late Trading 5:00 p.m. ET – 8:00 p.m. ET",
+    "Two daily bond auctions: Opening Bond Auction at 4:00 a.m. ET and Core Bond Auction at 8:00 a.m. ET",
+    "Execution fees are $0.00 per bond for all order sizes; liquidity provider rebate is $0.05 per bond with $50 maximum per execution",
+    "All DTCC/NSCC RIO eligible bond trades are submitted to NSCC as locked-in transactions without an omnibus account",
+    "Bonds trade in decimal increments to 2 decimal places and are represented by nine-character CUSIPs"
+  ],
+  "why_it_matters": "This source provides baseline operational documentation of NYSE's fixed income trading infrastructure. It is relevant for understanding market structure elements such as order matching rules, auction mechanisms, and settlement processes, but contains no analytical content, forecasts, or macro-relevant commentary.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page describes NYSE Bond's price/time priority order matching model, reserve interest handling (displayed orders yield to undisplayed at same price), two daily bond auctions (opening at 4am ET, core at 8am ET), decimal pricing to 2 places, and post-trade locked-in transaction processing via DTCC/NSCC with RIO interface. Settlement is T+2 for CNS-eligible bonds with accrued interest included in reported prices.",
+  "important_numbers": [
+    "4:00 a.m. ET – 8:00 a.m. ET (Early Trading)",
+    "8:00 a.m. ET – 5:00 p.m. ET (Core Trading)",
+    "5:00 p.m. ET – 8:00 p.m. ET (Late Trading)",
+    "$0.00 per bond execution fee",
+    "$0.05 per bond liquidity provider rebate",
+    "$50.00 maximum rebate per execution",
+    "2 decimal places pricing increment"
+  ],
+  "tags": [
+    "nyse",
+    "bond-market",
+    "market-structure",
+    "order-matching",
+    "trading-hours",
+    "clearing-settlement",
+    "dtcc",
+    "cusip"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is static operational documentation (informational/product page), not research or news content",
+      "No publication date provided; content has no temporal relevance to macro catalysts",
+      "No analytical content, forecasts, commentary, or event-driven information present",
+      "event_type is correctly 'unknown' but the source fundamentally cannot be classified into any valid event taxonomy",
+      "Copyright 2026 suggests current but no specific publication or update timestamp",
+      "Low archival value for a finance research archive; more appropriate as technical reference documentation in a systems database",
+      "Source describes platform mechanics without providing any research findings, policy implications, or market-relevant commentary"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "defer",
+    "notes": "The record accurately identifies that this source is static operational documentation with no research value, analytical content, or event-driven information. No human judgment needed—the source fails multiple explicit rejection criteria."
+  },
+  "raw_text_path": "data/raw/nyse_trade_nyse_bonds_5daceea8.txt",
+  "notes": "Source is a static informational page about NYSE's bond trading platform. No publication date, no author, no analytical content. Content describes operational mechanics (order types, trading hours, fees, settlement) rather than providing research or market commentary. Relevance to macro catalysts: none. Relevance to market structure: tangential (describes exchange mechanics but not analytical). Low archival value for research purposes; more suitable as technical reference documentation."
+}

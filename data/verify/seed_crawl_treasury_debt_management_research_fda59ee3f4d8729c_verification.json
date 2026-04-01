@@ -1,1 +1,21 @@
-{}
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page/index page, not an archiveable document - violates Core Rule #5 (reject listing pages)",
+    "Source attribution URL is empty - violates requirement for valid source attribution",
+    "event_type set to 'research_paper' but source is a listing page, not a research paper - incorrect event type classification",
+    "No publication date provided for the index itself",
+    "Source contains no substantive content - only links to other documents spanning 1992-2019",
+    "Cannot extract macro catalysts, policy signals, or market-moving data from this format"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies that this is a low-value listing page. Core rules explicitly mandate rejection for listing_page source types. No human review needed - verdict is clear-cut.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a Treasury.gov index page listing various research documents on Treasury market structure and debt management, spanning multiple decades from 1992 to 2019. It is not a single coherent source but rather a navigation hub providing links to conference archives, joint staff reports, regulatory studies, and auction evaluations. No specific publication date is provided for the index itself.",
+    "why_it_matters": "This index has no standalone archival value as a macro catalyst or market structure source. Individual linked documents (e.g., the 2014 Joint Staff Report on October 15 volatility) would have significant archival value if retrieved separately.",
+    "macro_context": "",
+    "market_structure_context": "This source indexes multiple market structure documents but does not contain substantive content of those documents."
+  }
+}

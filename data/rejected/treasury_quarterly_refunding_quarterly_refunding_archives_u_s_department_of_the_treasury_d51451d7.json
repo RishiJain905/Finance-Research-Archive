@@ -1,0 +1,57 @@
+{
+  "id": "treasury_quarterly_refunding_quarterly_refunding_archives_u_s_department_of_the_treasury_d51451d7",
+  "created_at": "2026-03-31T20:03:28.563369+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Quarterly Refunding Archives | U.S. Department of the Treasury",
+  "source": {
+    "name": "Treasury Quarterly Refunding",
+    "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/quarterly-refunding-archives",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "This source is a Treasury website listing/archive index page for Quarterly Refunding documents. It contains only navigation menus, link lists, and press release summaries—no substantive research, data, or policy analysis. It is a container page that points to actual content rather than containing meaningful content itself.",
+  "key_points": [
+    "This is an archive index/listing page, not a standalone research document",
+    "The page provides navigation links to archived quarterly refunding documents",
+    "No specific quarterly refunding research, auction results, or policy content is present in the page body",
+    "The page contains Treasury department navigation menus and links to press releases and archives"
+  ],
+  "why_it_matters": "As a listing page, this has no archival value for research purposes. Individual archived quarterly refunding documents (auction results, policy announcements, investor presentations) should be sourced directly instead of this index.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "N/A - listing page has no macro context",
+  "market_structure_context": "N/A - listing page has no market structure content",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "quarterly-refunding",
+    "listing-page",
+    "archive-index",
+    "treasury.gov"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing/archive index page (PAGE_TYPE: listing_page), which per CORE RULE 5 requires rejection",
+      "No substantive research content present in source body—only Treasury navigation menus, link lists, and press release summaries",
+      "event_type is 'unknown' and no valid taxonomy value is present",
+      "Cannot assess relevance to market structure or macro catalysts from this listing page",
+      "Source should be non-archiveable per rules; actual quarterly refunding content exists in linked documents, not this index"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/treasury_quarterly_refunding_quarterly_refunding_archives_u_s_department_of_the_treasury_d51451d7.txt",
+  "notes": "Per CORE RULE 6: PAGE_TYPE listing_page treated as non-archiveable. The source body shows only Treasury navigation menus, link lists, and press release summaries—none of which constitute actual quarterly refunding research content. The meaningful content would be in the individual archived documents linked from this page, not this index itself."
+}

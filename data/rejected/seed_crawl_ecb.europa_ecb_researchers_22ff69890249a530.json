@@ -1,26 +1,26 @@
 {
   "id": "seed_crawl_ecb.europa_ecb_researchers_22ff69890249a530",
-  "created_at": "2026-03-31T14:32:22.368050+00:00",
+  "created_at": "2026-03-31T18:10:52.501973+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
-  "title": "ECB researchers",
+  "title": "ECB Researchers",
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/pub/researchers/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.ecb.europa.eu"
+    "source_type": "listing_page"
   },
-  "summary": "This page is an alphabetical staff directory listing ECB researchers by name, interest area, and business area (e.g., Monetary Policy, Economics, Research, Macro Prud Policy & Financial Stability). No substantive research content, findings, or policy-relevant information is present.",
+  "summary": "This source is a directory page listing ECB staff members organized alphabetically by name, with their business area affiliations (e.g., Monetary Policy, Research, Macro Prud Policy & Financial Stability). The page contains no research papers, policy statements, economic data, speeches, or any actionable content related to market structure or macro catalysts.",
   "key_points": [
-    "Page contains only an alphabetical roster of ECB staff members",
-    "Staff are categorized by business area: Monetary Policy, Economics, Research, Macro Prud Policy & Financial Stability, International & European Relations, Market Operations, and others",
-    "No research papers, working papers, data releases, or policy statements are included",
-    "No publication dates or research findings are provided",
-    "Page functions as a navigation/directory page for ECB researcher contacts"
+    "Source is a staff directory/list of ECB researchers, not a research document",
+    "No published date, publication date, or content date provided",
+    "No policy announcements, economic data releases, or speeches present",
+    "No actionable macro or market-related insights available",
+    "PAGE_TYPE is listing_page, classified as non-archiveable per processing rules"
   ],
-  "why_it_matters": "This source provides no actionable information for finance research, market analysis, or macro catalyst tracking. It is a static staff directory with no content relevant to market structure or macroeconomics.",
+  "why_it_matters": "This source provides no actionable information for finance research or RAG purposes. It is a personnel directory that cannot support any market structure or macro catalyst analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -32,29 +32,21 @@
   "tags": [
     "ecb",
     "staff-directory",
-    "researchers",
+    "non-archivable",
     "listing-page",
-    "non-archivable"
+    "no-content"
   ],
   "llm_review": {
     "initial_confidence": 0,
-    "verification_confidence": 0,
+    "verification_confidence": 10,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a staff directory/listing page with no substantive research content",
-      "Source type is correctly identified as 'listing_page' - per Rule 5 this is an automatic rejection criterion",
-      "No publication date provided in source metadata",
-      "Source contains only alphabetical roster of ECB staff names organized by business area",
-      "No research papers, working papers, data releases, policy statements, or economic commentary present",
-      "Source provides no actionable information for finance research or macro catalyst tracking",
-      "No archival value - this is a navigation/directory page, not a research output"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "reject",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_ecb_researchers_22ff69890249a530.txt",
-  "notes": "Source is a low-quality directory page. Contains no research findings, no economic data, no policy content, and no market-relevant information. Entirely unsuitable for finance research archive or RAG purposes. Marked as listing_page per source type guidance."
+  "notes": "Low-quality source - staff directory page containing only alphabetical list of ECB employees with their departmental affiliations. No research papers, policy content, economic commentary, or any information relevant to market structure or macro catalysts. Source type is listing_page, which is explicitly non-archiveable per CORE RULE 6. Recommended for rejection from archive."
 }

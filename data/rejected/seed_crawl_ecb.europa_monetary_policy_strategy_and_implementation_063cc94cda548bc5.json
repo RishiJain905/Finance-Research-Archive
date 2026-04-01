@@ -1,53 +1,55 @@
 {
   "id": "seed_crawl_ecb.europa_monetary_policy_strategy_and_implementation_063cc94cda548bc5",
-  "created_at": "2026-03-30T07:47:03.283594+00:00",
+  "created_at": "2026-03-31T18:18:25.658598+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Monetary policy, strategy and implementation",
   "source": {
-    "name": "ECB",
+    "name": "European Central Bank",
     "url": "",
+    "domain": "ecb.europa.eu",
     "published_at": "",
-    "source_type": "navigation_page"
+    "source_type": "listing_page"
   },
-  "summary": "This is a navigation/listing page from the ECB's website that catalogs broad research topic categories rather than containing actual research findings, data, or actionable macro catalysts. No URL or publication date provided.",
+  "summary": "This page is a high-level index describing the ECB's monetary policy research framework, outlining broad areas of interest including transmission channels, side effects of accommodative policy, forward guidance, implementation challenges, and policy normalisation. No specific policy decisions, dates, or concrete data are provided.",
   "key_points": [
-    "ECB research focuses on monetary policy transmission channels across households, firms, and banks",
-    "Research addresses side effects of prolonged accommodative monetary policy including asset prices and inequality",
-    "Forward guidance effectiveness is a key research area for central banks",
-    "The effective lower bound (ELB) constraint is a major focus of research on the 'new normal'",
-    "Policy normalisation considerations are part of current ECB research agenda",
-    "Climate change implications for monetary policy transmission and implementation are emerging research areas"
+    "ECB research covers monetary policy transmission channels including heterogeneity across households, firms, and banks",
+    "Research examines side effects of prolonged accommodative monetary policy including negative rate costs, inequality, and financial stability",
+    "Forward guidance research focuses on effectiveness in theory and optimal design",
+    "Implementation research covers money market functioning, Basel III implications, and collateral framework effects",
+    "Policy normalisation research addresses pace and combination of interest rate and balance sheet adjustments",
+    "The page is an index/navigation page listing research categories rather than containing substantive research output"
   ],
-  "why_it_matters": "",
+  "why_it_matters": "This page provides institutional context on ECB research priorities but does not contain actionable market information. It is useful for understanding the ECB's analytical framework but lacks specific policy signals, data, or guidance relevant to immediate market positioning.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "The research areas described indicate ECB concerns about effective lower bound constraints, financial stability risks from accommodative policy, and the optimal path for policy normalisation. However, no specific forecasts, timelines, or policy recommendations are provided.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "ECB",
-    "monetary policy",
-    "research index",
-    "navigation page"
+    "ecb",
+    "monetary-policy",
+    "research-framework",
+    "transmission-channels",
+    "forward-guidance",
+    "policy-normalisation",
+    "financial-stability"
   ],
   "llm_review": {
-    "initial_confidence": 1,
+    "initial_confidence": 2,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing page - violates Rule 8 (navigation_page must not be accepted)",
-      "No URL provided - source attribution is missing",
-      "Contains only broad research topic categories, no specific findings, data, or actionable macro catalysts",
-      "No publication date present",
-      "Content is structural overview of ECB research areas rather than actual research output",
-      "Ends with 'All pages in this section' confirming navigation page status",
-      "Tagged as navigation page in both source classification and generated record",
-      "Archive value is too low - individual research pages should be crawled instead"
+      "PAGE_TYPE is listing_page per source content ('All pages in this section'), triggering automatic rejection per CORE RULE 5",
+      "Empty URL field prevents source verification",
+      "No published_at date provided; cannot establish recency or archival value",
+      "Content is an index/navigation page describing research categories rather than substantive research output",
+      "No specific policy decisions, numbers, dates, or actionable market signals present",
+      "event_type set to 'unknown' but the page contains no specific event to classify"
     ]
   },
   "human_review": {
@@ -56,5 +58,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_monetary_policy_strategy_and_implementation_063cc94cda548bc5.txt",
-  "notes": "This source is a navigation/index page that lists ECB research categories rather than containing actual research content. It should not be archived as a standalone research record. The page describes broad research themes (monetary policy transmission, forward guidance, ELB constraints, normalisation) but provides no specific findings, dates, numbers, or concrete catalysts. No URL was provided in metadata. Labeled as seed_crawl with high domain trust tier, but content type disqualifies it from archival processing. Recommend crawling individual pages under this section to capture actual research materials."
+  "notes": "SOURCE_TYPE classified as listing_page per CORE RULE 6. This is a navigation/index page describing ECB research categories rather than a specific policy document, speech, or data release. Contains no published date, no specific numbers, and no actionable market signals. Low utility for RAG applications requiring specific macro catalyst events. Confidence set to 2 due to thin content and lack of specificity."
 }

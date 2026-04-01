@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source type is navigation_page - per Rule 5, navigation pages must be rejected",
+    "Source is a portal/directory page providing links to FOMC materials rather than containing substantive policy content itself",
+    "No specific rate decisions, economic projections, policy signals, or market-relevant data present",
+    "event_type incorrectly set to 'unknown' when the page is clearly a navigation/index resource",
+    "The page references a March 18, 2026 FOMC press conference, but the actual policy content would be in linked documents (statements, minutes) not this page",
+    "Per Rule 6, navigation pages and thin low-signal sources bias toward reject"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly self-identifies this as a navigation page with no standalone archival value. The source fails clear, objective criteria under Rule 5. No judgment call needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

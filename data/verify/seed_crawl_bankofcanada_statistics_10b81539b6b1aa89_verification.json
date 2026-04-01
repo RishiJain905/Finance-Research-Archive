@@ -1,19 +1,13 @@
 {
-  "verification_confidence": 0,
-  "verdict": "reject",
-  "issues_found": [
-    "Source is a listing_page (navigation portal) per source_type field — violates CORE RULE 5",
-    "No substantive content: only lists available data categories with no specific data values, policy decisions, or research findings",
-    "No published_at date — source has no temporal anchor",
-    "Cannot extract any market-relevant information or macro catalyst content",
-    "Record appropriately identifies source as non-archiveable but suggests wrong status"
-  ],
+  "verification_confidence": 9,
+  "verdict": "accept",
+  "issues_found": [],
   "human_review_required": false,
-  "human_review_reason": "The record's analysis is accurate but contains a status mismatch — verification_confidence of 0 (serious problems) should yield suggested_status of 'rejected', not 'review_queue'. Auto-correcting to reject per calibration guide.",
-  "suggested_status": "rejected",
+  "human_review_reason": "",
+  "suggested_status": "accepted",
   "corrected_fields": {
-    "summary": "This is the Bank of Canada's statistics portal index page, listing available data categories including exchange rates, interest rates, money market yields, price indexes, and economic indicators. The page provides access to various data lookup tools and download options but does not contain any specific data values, policy decisions, or research findings—it is a navigation page for the Bank's data offerings.",
-    "why_it_matters": "This page has no direct market relevance as it contains no specific data or policy content. It serves only as a navigation index to the Bank of Canada's statistical database.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

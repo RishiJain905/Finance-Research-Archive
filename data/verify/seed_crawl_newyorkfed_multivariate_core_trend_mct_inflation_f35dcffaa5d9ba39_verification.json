@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "TOPIC MISMATCH: SOURCE METADATA specifies 'market structure' target, but content describes inflation measurement methodology (macro research tool). Market structure refers to market operations, trading mechanics, and plumbing—not econometric models for inflation persistence.",
+    "EVENT_TYPE INCORRECT: Source is labeled 'research_paper' but is actually a methodology/product documentation page, not a research paper. No actual research findings or paper are presented.",
+    "SOURCE TYPE UNCERTAIN: Page describes a statistical model's methodology and release schedule, not an article, paper, or data release. Closer to a product documentation or methodology explainer.",
+    "PUBLISHED_AT MISSING: No publication date provided in source, making it impossible to assess recency or archival value per the 90-day rule.",
+    "SUMMARY FACTUALLY ACCURATE BUT: The summary correctly describes the methodology, but the source doesn't provide actionable content—no current estimates, no policy conclusions, just methodology documentation.",
+    "LOW ARCHIVAL VALUE FOR STATED TARGET: Even if methodology pages have value, this doesn't fit an archive targeting 'market structure' content."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Critical topic mismatch requires human decision. SOURCE METADATA says target is 'market structure' but content is macro/economic research methodology. Need to determine: (1) Should methodology/documentation pages be archived at all? (2) If yes, should topic be reassigned to 'macro catalysts' or 'research infrastructure'? (3) Is event_type 'research_paper' acceptable for a methodology page, or should it be 'economic_commentary' or another type?",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The New York Fed's Multivariate Core Trend (MCT) model is a statistical tool that estimates inflation persistence across 17 core PCE price index sectors using a dynamic factor model with time-varying parameters. The model decomposes sectoral inflation into common trends, sector-specific trends, and transitory components to distinguish persistent inflation from temporary shocks. This record summarizes the methodology page, not a specific research paper or data release.",
+    "why_it_matters": "The MCT provides policymakers and researchers with a more sophisticated measure of underlying inflation persistence than simple core inflation exclusion. By distinguishing common trends from sector-specific and transitory components, it helps identify whether inflation pressures are broad-based or concentrated in specific sectors. This is a macro research methodology tool, not a market structure resource. Note: This is methodology documentation, not current inflation data or a policy statement.",
+    "macro_context": "The MCT tool provides inputs relevant to understanding inflation dynamics, which directly influences monetary policy expectations. The model's estimates of trend inflation versus transitory shocks help market participants assess whether price pressures are likely to persist. However, this source is a methodology/documentation page from the NY Fed's Applied Macroeconomics and Econometrics Center (AMEC) rather than a data release, research paper, or policy statement.",
+    "market_structure_context": ""
+  }
+}

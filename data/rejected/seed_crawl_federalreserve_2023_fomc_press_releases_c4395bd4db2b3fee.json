@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2023_fomc_press_releases_c4395bd4db2b3fee",
-  "created_at": "2026-03-31T13:35:55.033175+00:00",
+  "created_at": "2026-03-31T18:37:57.012914+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,46 +8,45 @@
   "source": {
     "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2023-press-fomc.htm",
-    "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.federalreserve.gov"
+    "domain": "www.federalreserve.gov",
+    "published_at": "unknown",
+    "source_type": "listing_page"
   },
-  "summary": "This page is an index listing all Federal Reserve FOMC press releases from 2023, including statements from eight FOMC meetings and four economic projection releases. It does not contain the substantive content of any individual FOMC statement—it is a navigation page that links to separate documents.",
+  "summary": "This page is a navigation index listing all Federal Reserve FOMC statements and economic projections released in 2023. It contains only dates and titles linking to individual press releases, not the actual policy content itself. As a listing page, it is non-archiveable per ingestion rules and provides no direct policy details, vote tallies, rate decisions, or forward guidance.",
   "key_points": [
-    "This is a listing/index page containing links to 2023 FOMC statements dated 2/1, 3/22, 5/3, 6/14, 7/26, 9/20, and 12/13.",
-    "The page also indexes four economic projection releases from March, June, September, and December 2023.",
-    "One additional link references the Committee's reaffirmation of its Statement on Longer-Run Goals and Monetary Policy Strategy dated 2/1/2023.",
-    "No substantive FOMC statement text, rate decisions, or policy language is present on this page."
+    "This is a listing/navigation page, not an archiveable source document",
+    "Lists 13 items from 2023: 8 FOMC statements and 5 economic projection releases",
+    "Covers FOMC meetings: February 1, March 22, May 3, June 14, July 26, September 20, November 1, December 13",
+    "Actual policy content resides in individual linked press releases, not this index page",
+    "Last Update on page footer shows February 26, 2026, but all content pertains to 2023 events"
   ],
-  "why_it_matters": "This page serves as a directory to 2023 FOMC decisions but does not itself constitute an archiveable policy document. Researchers must navigate to individual FOMC statements for actual policy content. Per CORE RULE 5, listing pages should be rejected in favor of sourceable individual statements.",
+  "why_it_matters": "This page serves as an organizational index but contains no policy substance. Researchers seeking 2023 Fed policy details must access individual FOMC statement pages and economic projections documents directly. The listing itself cannot serve as a source for RAG or research purposes.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "",
     "confidence": 0
   },
   "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
+    "fed",
     "fomc",
-    "federal-reserve",
-    "2023",
     "listing-page",
+    "non-archiveable",
+    "2023",
     "index",
-    "press-releases",
-    "economic-projections"
+    "navigation"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 3,
+    "initial_confidence": 1,
+    "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page per source_type classification - violates CORE RULE 5",
-      "No substantive policy content present - only links to individual FOMC statements",
-      "event_type is 'unknown' but cannot be meaningfully assigned to a navigation/listing page",
-      "No published_at date provided in source metadata",
-      "Record has no archival value as it does not contain actual FOMC statement text, rate decisions, or policy language",
-      "Researcher guidance in why_it_matters ('researchers must navigate to individual FOMC statements') confirms this is not itself archiveable"
+      "Source is a listing_page — non-archiveable per Rule 5",
+      "event_type set to 'unknown' which is appropriate for a listing page but confirms this is not a valid archival target",
+      "No policy content, vote tallies, rate decisions, or forward guidance present",
+      "Source is a container/navigation page with thin signal value"
     ]
   },
   "human_review": {
@@ -56,5 +55,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2023_fomc_press_releases_c4395bd4db2b3fee.txt",
-  "notes": "PAGE_TYPE classified as listing_page per CORE RULE 6—non-archiveable. Source is a navigational index with no substantive policy content. The actual FOMC statements from 2023 (when the Fed held rates steady at 5.25-5.50% after July 2023) should be sourced from individual statement URLs. Historical record: all 2023 FOMC meetings are over 2 years old relative to TODAY (2026-03-31)."
+  "notes": "Non-archivable listing page. Does not contain FOMC policy content. Recommend archiving individual FOMC statements from 2023 separately (e.g., December 13, 2023 statement and projections) for research value. The December 2023 meeting included the first rate cut expectation messaging and updated dot plot projections which would be high-value archival targets."
 }

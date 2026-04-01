@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'monetary_policy_report' is borderline; this is a press release announcing framework approval, not a full report—the more precise type would be 'fomc_statement' or similar",
+    "Source is inherently thin—announces the update but does not specify what changes were made to the framework statement",
+    "The actual framework changes are in a linked PDF not included in this source, limiting archival value for substantive content",
+    "No specific policy signals or forward guidance language provided in this source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and source attribution is correct, but the event_type may be imprecise and the source is thin with no substantive content on actual framework changes. Human review needed to assess if 'monetary_policy_report' is the correct event_type or if this should be reclassified as something like 'fomc_statement'. Also note the source was published 221 days before TODAY (well past 90-day threshold)—acceptable as historical policy document but worth flagging.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The why_it_matters correctly notes that 'the source does not specify what changes were made'—this is accurate and appropriately caveats the record.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

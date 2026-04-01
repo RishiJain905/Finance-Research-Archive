@@ -1,0 +1,64 @@
+{
+  "id": "treasury_quarterly_refunding_most_recent_quarterly_refunding_documents_u_s_department_of_a2a8cb19",
+  "created_at": "2026-03-31T20:02:28.980251+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Most Recent Quarterly Refunding Documents | U.S. Department of the Treasury",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents",
+    "domain": "home.treasury.gov",
+    "published_at": "unknown",
+    "source_type": "listing_page"
+  },
+  "summary": "This Treasury.gov page is a navigation hub linking to quarterly refunding documents but contains no actual document content in the source body. The page is structured as a directory/index listing rather than the actual quarterly refunding statements, auction results, or borrowing plans. Recent press releases visible on the page include Financial Stability Oversight Council proposed guidance on nonbank financial company designations (March 25, 2026) and remarks on liquidity regulation (March 3, 2026), but these are not part of the quarterly refunding documentation itself.",
+  "key_points": [
+    "This is a listing/navigation page for quarterly refunding documents, not the actual documents themselves",
+    "No specific quarterly refunding amounts, auction details, or borrowing strategies are present in the source body",
+    "Source body is truncated and appears to contain only website navigation elements and menu structures",
+    "Published_at date not provided in source metadata or body",
+    "Page type is listing_page, which per rules should be treated as non-archiveable",
+    "Recent press releases visible include FSOC nonbank designation guidance and Treasury Secretary remarks on liquidity regulation",
+    "No specific interest rate, coupon issuance, or debt maturity details stated",
+    "Actual quarterly refunding statement content not included in this source"
+  ],
+  "why_it_matters": "This page serves as an entry point to Treasury's quarterly refunding documentation but does not itself contain the policy-relevant content. For market structure research, the actual quarterly refunding announcements, auction schedules, and borrowing forecasts would be needed. This source alone cannot support any analysis of Treasury market operations or issuance strategy.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page references Treasury financing operations in its URL and navigation structure, but provides no actual market structure content. No information about auction formats, settlement procedures, or dealer involvement is present.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "quarterly-refunding",
+    "financing",
+    "listing-page",
+    "no-content",
+    "navigation",
+    "treasury-issuance"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page (index/navigation hub) with no actual quarterly refunding document content",
+      "Source body contains only website navigation elements, menu structures, and recent press release links",
+      "event_type 'treasury_issuance' is factually misleading - the source contains no issuance data, auction details, or borrowing strategies",
+      "published_at date is missing, preventing staleness assessment",
+      "Per CORE RULE 5 and 6, listing_page sources must be rejected as non-archiveable",
+      "The record's summary correctly identifies this as a navigation page but the event_type assignment is incorrect given the lack of actual content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/treasury_quarterly_refunding_most_recent_quarterly_refunding_documents_u_s_department_of_a2a8cb19.txt",
+  "notes": "LOW QUALITY / INSUFFICIENT CONTENT: This source is a website index page for quarterly refunding documents. The source body contains only website navigation, menu structures, and references to recent press releases. The actual quarterly refunding documents (which would include issuance amounts, auction details, and policy statements) are not present in the source body. This is not a standalone archivable document. To obtain usable content for market structure research on Treasury quarterly refunding, the actual document pages (quarterly refunding statements, auction announcements) should be retrieved directly. This page should be treated as non-archiveable per CORE RULE 6 (listing_page source_type)."
+}

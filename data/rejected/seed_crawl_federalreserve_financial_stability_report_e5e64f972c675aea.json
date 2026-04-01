@@ -1,25 +1,27 @@
 {
   "id": "seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea",
-  "created_at": "2026-03-30T06:08:17.103888+00:00",
+  "created_at": "2026-03-31T18:45:15.328081+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
-  "title": "Federal Reserve Financial Stability Report - Archive Index",
+  "event_type": "financial_stability_report",
+  "title": "Financial Stability Report",
   "source": {
     "name": "Federal Reserve Board",
     "url": "",
-    "published_at": "",
+    "domain": "federalreserve.gov",
+    "published_at": "2025-11-07",
     "source_type": "listing_page"
   },
-  "summary": "This page is a navigation index for the Federal Reserve's Financial Stability Report publications, listing links to HTML and PDF versions across multiple years (2018-2025). It provides no substantive content about market structure or macro catalysts, serving only as a directory to archived reports. No specific financial stability assessments, risk factors, or market-moving information is present in this source.",
+  "summary": "This page is an index/navigation listing of Federal Reserve Financial Stability Reports dating from May 2018 through November 2025. The page does not contain the substantive content of any specific report—it merely provides links to HTML, PDF, and chart data files organized by publication date. The most recent report listed is from November 2025.",
   "key_points": [
-    "This is a navigation/listing page, not an actual report",
-    "Contains only links to archived Financial Stability Report editions (2018-2025)",
-    "No substantive content about financial system resilience or risk assessments present",
-    "URL is blank, making source identification impossible",
-    "No market structure or macro catalyst information available in this page body"
+    "Source is a listing page, not an actual Financial Stability Report document",
+    "Available reports span May 2018 through November 2025 (approximately semi-annual publications)",
+    "Links provided to HTML, PDF, and Chart Data formats for each report",
+    "Some reports include supplementary statements (e.g., Vice Chair or Governor statements)",
+    "Last update date shown: November 7, 2025",
+    "No substantive policy content, data, or analysis present in this source"
   ],
-  "why_it_matters": "",
+  "why_it_matters": "This source does not provide archiveable content. It is a navigation index that merely points to report files hosted elsewhere. A researcher seeking Financial Stability Report content would need to follow the specific report links (e.g., the November 2025 HTML or PDF) rather than rely on this page.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,20 +33,19 @@
   "tags": [
     "federal-reserve",
     "financial-stability",
-    "navigation-page",
-    "non-archivable"
+    "listing-page",
+    "no-content"
   ],
   "llm_review": {
     "initial_confidence": 1,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing page containing only links to archived report editions, not substantive content",
-      "No actual financial stability assessments, risk factors, or market-moving information present",
-      "URL field is blank, making source attribution impossible",
-      "Per Rule #8, homepage, navigation_page, and listing_page sources must not be accepted",
-      "Per Rule #9, container/listing pages should bias toward reject",
-      "No relevance to market structure or macro catalysts as the page contains no analytical content"
+      "Source is a navigation/listing page with no substantive content (per Core Rule 6: reject)",
+      "URL field is blank/missing",
+      "event_type 'financial_stability_report' is misleading since the source is not an actual report, just an index to reports",
+      "No archiveable policy content, data, or analysis present",
+      "Record correctly identifies this as a listing_page source_type but suggested_status should be 'rejected' not 'review_queue'"
     ]
   },
   "human_review": {
@@ -53,5 +54,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea.txt",
-  "notes": "NON-ARCHIVABLE: This source is a navigation/listing page that only contains links to archived Financial Stability Report editions. The page body contains no substantive information about market structure or macro catalysts. Source URL is blank, preventing proper attribution. Per rule #9, container/listing pages should not be treated as acceptable archive records. Recommend linking to specific individual report editions instead of this index page."
+  "notes": "Source is a Federal Reserve Financial Stability Report index page (listing_page type). Per Core Rule 6, listing pages and navigation pages are non-archiveable. This page contains only metadata and links—no substantive report content. The actual reports (e.g., November 2025, April 2025) must be fetched directly as separate documents. Initial confidence is very low (1) because this source provides no policy-relevant information beyond confirming that Financial Stability Reports exist and follow a semi-annual cadence."
 }

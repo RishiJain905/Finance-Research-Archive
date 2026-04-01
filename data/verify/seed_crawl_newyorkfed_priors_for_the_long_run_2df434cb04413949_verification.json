@@ -1,14 +1,16 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 5,
   "verdict": "reject",
   "issues_found": [
-    "Record is essentially empty - no summary, no key_points, or any substantive content was generated",
-    "Source content is about econometric methodology (prior distributions for VAR forecasting), not market structure",
-    "Source is 8.5 years old (November 2017) with uncertain current relevance",
-    "published_at field in source section is empty string"
+    "Source content does not address market structure as defined (market plumbing, operations, microstructure) — it is an econometric methodology paper on VAR forecasting priors",
+    "Source content does not address macro catalysts relevant to trading or investment decisions",
+    "Topic mismatch: TARGET metadata indicates 'market structure' but actual content is econometric methodology (JEL C11, C32, C33, E37)",
+    "Source is thin/abstract-only: 'Available only in PDF' means full content is not captured; only metadata/abstract provided",
+    "Published November 2017 (8.4 years before TODAY) with no specific historical policy significance that would justify archival value for market structure research",
+    "Not suitable for finance research archive focused on market structure and macro catalysts"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The generated record contains no substantive content whatsoever. The source appears to be a methodologically-focused research paper on econometric forecasting rather than market structure analysis. Given the empty record and questionable relevance to the stated topic, human review is required to determine if this source merits archiving.",
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate against the source text, but the source itself is out of scope for this archive. No human review needed — the mismatch between archive purpose (market structure/macro catalysts) and source content (econometric methodology) is clear from the source metadata and body.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

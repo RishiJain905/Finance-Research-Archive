@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2021_press_releases_bbe773a6b871fd76",
-  "created_at": "2026-03-31T13:29:23.330203+00:00",
+  "created_at": "2026-03-31T18:35:46.052780+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,49 +8,41 @@
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2021-press.htm",
+    "domain": "www.federalreserve.gov",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.federalreserve.gov"
+    "source_type": "listing_page"
   },
-  "summary": "This is a non-archiveable listing page from the Federal Reserve website containing an index of 60+ press releases from calendar year 2021, covering FOMC minutes, discount rate meeting minutes, enforcement actions, banking applications, and regulatory announcements. No single document or detailed analysis can be extracted from this source.",
+  "summary": "This is a Federal Reserve website listing page containing links to all press releases issued during 2021, not a single archived document. The page aggregates dozens of disparate announcements including FOMC minutes, rate decisions, enforcement actions, banking applications, and regulatory guidance. No specific publication date is provided for this index page itself; the URL indicates 2021 content, making this approximately 4-5 years old.",
   "key_points": [
-    "This is a listing page/index, not an individual archiveable document",
-    "Contains links to multiple FOMC minutes releases from 2021",
-    "Contains links to discount rate meeting minutes from 2021",
-    "Contains links to various enforcement actions and banking application approvals",
-    "Contains links to joint agency statements on crypto-asset policy (November 2021)",
-    "Contains link to October 2021 announcement of new rules prohibiting Fed policymakers from purchasing individual securities",
-    "No substantive policy content or analysis is present; only hyperlinks and dates"
+    "This is a listing/index page, not a specific policy document or research paper",
+    "Contains links to 2021 FOMC minutes (November 2-3, September 21-22, July 27-28 meetings)",
+    "Contains links to discount rate meeting minutes from various dates in 2021",
+    "Lists numerous enforcement actions against banks and former employees",
+    "Includes banking application approvals (WSFS, Webster Financial, First Citizens, etc.)",
+    "Contains regulatory guidance items including crypto-asset policy initiatives, computer-security incident notification rules, and third-party risk management guidance",
+    "No single coherent macro catalyst or market structure event can be extracted from this listing"
   ],
-  "why_it_matters": "This listing page serves as a navigation index to Federal Reserve press releases but does not contain archiveable research content. Individual press releases should be accessed and archived separately for substantive information.",
+  "why_it_matters": "Listing pages like this are not suitable for archival storage in a research database. The actual substantive content resides in the individual linked documents. This page provides navigation to 2021 Fed activity but cannot be used alone for RAG retrieval without accessing each specific press release.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "",
     "confidence": 0
   },
-  "macro_context": "Source is a heterogeneous listing of 2021 Federal Reserve communications - not a single macro catalyst document.",
-  "market_structure_context": "Not applicable - listing page has no market structure content.",
+  "macro_context": "",
+  "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "press-releases",
     "listing-page",
-    "2021",
-    "non-archivable",
-    "fomc-minutes",
-    "enforcement-actions"
+    "not-archiveable",
+    "2021-archive",
+    "stale-content"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 1,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page (index of press releases) - violates Core Rule #5 requiring rejection of listing pages",
-      "Source is non-archivable - contains no single document with substantive content, only hyperlinks and dates",
-      "event_type is 'unknown' which is technically correct but the record should acknowledge this is a container page",
-      "Source topic labeled as 'macro catalysts' in metadata is misleading - the listing contains heterogeneous content (enforcement actions, banking applications, FOMC minutes, etc.)",
-      "No published_at date in record, though source metadata indicates 2021 content (over 4 years stale as of 2026-03-31)"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -58,5 +50,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2021_press_releases_bbe773a6b871fd76.txt",
-  "notes": "CLASSIFIED AS NON-ARCHIVABLE: This is a listing page/index of Federal Reserve press releases, not an individual research document. Per rule #6, homepage, navigation_page, and listing_page types should be marked as non-archiveable. The most relevant individual items from this listing for macro catalysts research would be the FOMC minutes releases and the joint crypto-asset policy statement, but those should be crawled and archived as separate documents. Source contains 2021 content which is over 4 years old as of TODAY (2026-03-31)."
+  "notes": "NON-ARCHIVEABLE: This is a listing/index page from the Federal Reserve website, not a specific policy document. Contains links to 2021 press releases only. No specific content can be extracted for market structure or macro catalyst research. Recommend crawling individual press releases from this index for actual archival material. Source is stale (2021 content). Source type listing_page per CORE RULE 6 guidance."
 }

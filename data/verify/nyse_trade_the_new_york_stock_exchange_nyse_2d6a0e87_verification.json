@@ -1,10 +1,15 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source type is homepage (nyse.com/index) - contains primarily institutional marketing and navigation content with embedded article",
+    "TOPIC is 'market structure' but source content focuses on equity market performance commentary (price action, technical indicators, sector rotations) rather than market structure topics (trading mechanisms, exchange operations, market microstructure, order flow, execution quality)",
+    "Rule 5 violation: homepage source type triggers automatic rejection per CORE RULES",
+    "Record summary and key_points accurately capture the embedded market recap content but the record misrepresents the source as a standalone research commentary rather than a homepage with embedded content"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Clear rule violations make this an automatic reject - no judgment call needed",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

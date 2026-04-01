@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_name_federal_reserve_bank_of_c225f14634027661",
-  "created_at": "2026-03-31T10:01:05.354098+00:00",
+  "created_at": "2026-03-31T19:06:47.444104+00:00",
   "status": "rejected",
   "topic": "market structure",
   "event_type": "unknown",
@@ -8,45 +8,44 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/newsevents/news",
-    "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.newyorkfed.org"
+    "domain": "www.newyorkfed.org",
+    "published_at": "2026-03-26",
+    "source_type": "listing_page"
   },
-  "summary": "This source is the New York Fed's news listing page, which aggregates dozens of press releases spanning appointments, economic surveys, FX intervention reports, household debt data, and various institutional announcements from 2024-2026. It is not a single archiveable document but rather a navigation index containing heterogeneous content that would require individual extraction for proper archival.",
+  "summary": "This is the New York Fed's news events listing page, containing multiple unrelated press releases spanning 2024-2026. The page aggregates announcements on FX intervention reports, household debt and credit data, inflation and labor market expectations surveys, board appointments, and research on tokenization/smart contracts. Most recent item is dated March 26, 2026.",
   "key_points": [
-    "Source is a listing page, not a single document — contains mixed press releases including appointments, economic surveys, and FX reports",
-    "Notable market-relevant items present: quarterly FX intervention reports (Fed/Treasury no intervention in multiple quarters), SCE (Survey of Consumer Expectations) labor market and inflation expectation releases",
-    "Household debt and delinquency data releases appear periodically (quarterly)",
-    "Personnel announcements (Markets Group head changes, board directors) are interspersed with substantive economic content",
-    "SOURCE METADATA TARGET indicates market structure focus, but listing page contains broad mix of topics",
-    "Individual items (FX reports, SCE surveys, household debt reports) would be separate archiveable sources"
+    "SOURCE_TYPE is listing_page (homepage) - non-archiveable per rules",
+    "Multiple unrelated press releases are aggregated on this page",
+    "Recent FX-related items: Fed did not intervene in Q4 2025; Treasury did intervene during same period (Feb 12, 2026)",
+    "Jan 2025 item announced Michelle Neal's resignation as Head of Markets Group; Apr 2025 item announced Anna Nordstrom as replacement",
+    "May 2024 item mentioned joint study on feasibility of central bank operations using tokenization and smart contracts",
+    "Regular recurring releases: quarterly FX intervention reports, monthly SCE (Survey of Consumer Expectations) on inflation and labor market",
+    "Contains household debt balance reports and community development financial institution reports"
   ],
-  "why_it_matters": "This listing page aggregates New York Fed communications but is not itself suitable for archival. Individual items within it — particularly the quarterly FX intervention statements, SCE labor market and inflation expectation surveys, and household debt/credit reports — are substantive research outputs that warrant separate archival treatment. The mix of personnel announcements with economic data releases makes this page unsuitable as a single source record.",
+  "why_it_matters": "This listing page does not contain a specific archiveable document. Individual press releases from this page would need to be extracted and processed separately for meaningful research records.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "Some FX intervention notices (Fed/Treasury no intervention) and periodic references to market operations appear within the listing but require individual extraction.",
+  "market_structure_context": "Potential market structure relevance in: (1) FX intervention transparency reports (Q4 2025: Fed inactive, Treasury active), (2) Tokenization/smart contracts research (May 2024 joint study), (3) Markets Group leadership transitions. However, these are not directly accessible from this listing page.",
   "important_numbers": [],
   "tags": [
     "new-york-fed",
     "listing-page",
     "press-releases",
-    "mixed-content",
-    "non-archivable"
+    "fx-intervention",
+    "household-debt",
+    "inflation-expectations",
+    "markets-group",
+    "tokenization"
   ],
   "llm_review": {
-    "initial_confidence": 4,
+    "initial_confidence": 2,
     "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "TITLE contains unresolved template variable '$name' indicating metadata parsing issue",
-      "event_type is set to 'unknown' which is technically correct for a listing page but prevents categorization",
-      "published_at is empty - listing pages aggregate items from multiple dates which is understood",
-      "Source is correctly identified as non-archivable as a single record due to heterogeneous content"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -54,5 +53,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_name_federal_reserve_bank_of_c225f14634027661.txt",
-  "notes": "Non-archivable as a single record. This is a listing/navigation page that mixes: (a) market-relevant items (FX intervention statements, SCE surveys, household debt data) with (b) governance items (board appointments, advisory council memberships). Per CORE RULE 6, listing pages should be flagged and their constituent items extracted individually. The SOURCE METADATA shows TARGET=topic but the actual page content does not match — it's a general news hub. Recommend crawler configuration be updated to archive individual press release URLs rather than aggregation pages."
+  "notes": "NON-ARCHIVABLE: This is a homepage/listing page containing an index of press releases. Per CORE RULE 6, listing pages are non-archiveable and should be stated as such. The individual press releases linked from this page (e.g., specific FX intervention reports, SCE data releases, appointment announcements) should be crawled and processed individually for proper archival. The most recent substantive items date to March 2026 (5 days ago from TODAY)."
 }

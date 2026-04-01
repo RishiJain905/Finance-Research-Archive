@@ -1,0 +1,65 @@
+{
+  "id": "seed_crawl_newyorkfed_macroeconomic_nowcasting_and_forecasting_with_64dc0e3730751471",
+  "created_at": "2026-03-31T19:02:49.004971+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Macroeconomic Nowcasting and Forecasting with Big Data",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/research/staff_reports/sr830.html",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2017-11-01",
+    "source_type": "research_paper"
+  },
+  "summary": "This is a 2017 Federal Reserve Bank of New York Staff Report describing the methodology behind the NY Fed Staff Nowcast, which synthesizes macroeconomic data to produce early estimates of GDP growth. The report reviews how econometric techniques have evolved to handle large datasets for real-time macroeconomic monitoring. The source provides only introductory metadata; full content is PDF-only and not accessible in this crawl.",
+  "key_points": [
+    "Authors: Brandyn Bok, Daniele Caratelli, Domenico Giannone, Argia M. Sbordone, and Andrea Tambalotti",
+    "Published November 2017 as Staff Report Number 830",
+    "JEL classification: C32, C53, C55, E32",
+    "Report describes methodology for the NY Fed Staff Nowcast system",
+    "Techniques described as mimicking practices used on trading desks and at central banks",
+    "Full report available only in PDF format; crawl contains only page metadata"
+  ],
+  "why_it_matters": "This research paper documents the methodological foundation for the NY Fed's real-time GDP nowcasting system, which is a key input for monetary policy analysis. However, this source is from November 2017 (over 8 years old) and provides only metadata rather than full content.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The report reviews methods for tracking economic conditions using big data, which inform real-time macroeconomic monitoring and policy decisions. As a 2017 methodological paper, it does not contain current market-relevant data or forecasts.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "830",
+    "2017"
+  ],
+  "tags": [
+    "research-paper",
+    "ny-fed",
+    "nowcasting",
+    "gdp-forecast",
+    "big-data",
+    "econometrics",
+    "methodology"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source content is severely limited - crawl captured only page metadata and introductory text, not substantive research content; full report is PDF-only and inaccessible",
+      "Topic mismatch: SOURCE METADATA.target='market structure' but actual content is macroeconomic forecasting methodology (GDP nowcasting), which is macro/monetary policy research, not market structure",
+      "Source published November 2017 - over 8 years before TODAY; lacks current relevance and cannot be verified against actual content",
+      "Record cannot be meaningfully verified as the summary and key_points are based on metadata only, not the actual research paper",
+      "event_type 'research_paper' is valid but cannot confirm accuracy since full source content is not available",
+      "Source provides no actionable information for current market structure or macro catalyst analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Auto-rejection is appropriate given the source contains only page metadata with no substantive content. The topic mismatch (labeled 'market structure' but about macroeconomic forecasting) and inability to verify any claims from the actual research paper make this unsuitable for archiving."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_macroeconomic_nowcasting_and_forecasting_with_64dc0e3730751471.txt",
+  "notes": "CRITICAL ISSUES: (1) This is a 2017 research paper that is 8+ years stale and does not reflect current methodology or market conditions. (2) The crawl captured only page metadata and introductory text, not the full research content. (3) Topic mismatch: SOURCE METADATA.target='market structure' but actual content is about macroeconomic forecasting/nowcasting methodology, which is not market structure. (4) Source provides no actionable information for current market structure or macro catalysts analysis. Recommend rejecting this source or sourcing the actual PDF directly."
+}

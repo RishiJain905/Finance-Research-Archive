@@ -1,21 +1,22 @@
 {
   "verification_confidence": 3,
-  "verdict": "review",
+  "verdict": "reject",
   "issues_found": [
-    "URL is blank - prevents independent verification and access to original source",
-    "Published date not provided - temporal context unknown",
-    "Source is an institutional explainer page rather than research, analysis, or data",
-    "Content lacks specific analytical value, market-moving information, or novel data points",
-    "No quantitative metrics beyond the '200 central banks' reference",
-    "Record describes Fed operations but contains no specific market catalyst, event, or finding"
+    "URL is blank - violates requirement for source attribution and prevents verification",
+    "PUBLISHED_AT is 'unknown' - no publication date in source metadata",
+    "Source is an institutional/informational page rather than a specific research document, article, or data release",
+    "No specific policy decision, data release, forward guidance, or research finding contained in this page",
+    "event_type set to 'unknown' and source does not fit any specific taxonomy category - page is generic institutional description",
+    "Content describes operational framework without any specific events or findings to archive",
+    "Source is thin low-signal institutional content that would be better served by archiving the referenced data exports and operation schedules instead"
   ],
   "human_review_required": true,
-  "human_review_reason": "The source is from a high-trust domain (nyfed.org) and the content accurately describes market structure elements (SOMA, primary dealers, FOMC directive framework). However, the record is fundamentally an institutional description of how the Fed operates rather than research, analysis, or data with archival value. The missing URL is a significant verification gap. Consider whether institutional explainer content warrants archival in a research database, or if this is better suited as background reference material. The record itself is accurate but thin.",
-  "suggested_status": "review_queue",
+  "human_review_reason": "While the source is from a high-trust domain (newyorkfed.org) and the record's summary is factually accurate, critical verification requirements are violated: URL is missing, publication date is unknown, and the source is institutional framework text rather than a specific archiveable event. Per Rule 6, missing source attribution and thin low-signal sources bias toward reject. The record itself acknowledges this is a low-priority archival candidate.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This page describes the New York Fed's Open Market Trading Desk operations, including management of the System Open Market Account (SOMA) portfolio, Treasury outright purchases/sales, and rollover operations executed with primary dealers as directed by the FOMC. The Fed also provides limited Treasury transaction services to approximately 200 central banks and official institutions.",
-    "why_it_matters": "Understanding the Fed's Treasury market operations is foundational to understanding Treasury market structure and liquidity provision. The Desk's operations represent a significant flow in the Treasury market, and primary dealer relationships form a core part of the market's institutional architecture.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": "This source describes core market structure elements: the role of primary dealers as counterparties to Fed operations, the SOMA portfolio as a mechanism for Fed Treasury holdings, and the institutional framework through which the Federal Reserve participates in Treasury markets. The relationship between the FOMC, the Desk, and primary dealers represents key market infrastructure."
+    "market_structure_context": ""
   }
 }

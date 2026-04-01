@@ -1,15 +1,17 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "Source URL is blank, limiting full verification capability"
+    "Source URL is blank in both metadata and generated record - cannot verify source authenticity or access the document",
+    "Source is a Treasury press release summarizing the proposed guidance, not the guidance document itself",
+    "event_type 'regulatory_guidance' is valid but 'financial_stability_report' may be more precise given FSOC's role"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "Source URL is blank, preventing verification of source authenticity. While the content appears faithful to the source text, the missing URL is a significant attribution gap that requires human review to determine if the source can be reliably traced.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "The statement that this could affect 'capital requirements and business operations' is inferential rather than directly supported by the source. The source describes the proposal's framework but does not specify concrete operational impacts. This is a reasonable interpretation but should be understood as analytical inference rather than documented effect.",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

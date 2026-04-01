@@ -1,58 +1,55 @@
 {
   "id": "seed_crawl_federalreserve_2009_press_releases_2e90cb6f565aa878",
-  "created_at": "2026-03-31T09:09:19.070331+00:00",
+  "created_at": "2026-03-31T18:22:58.911453+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2009 Press Releases",
   "source": {
-    "name": "Board of Governors of the Federal Reserve System",
+    "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2009all.htm",
-    "published_at": "2009-01-01 to 2009-12-31",
+    "published_at": "2009-12-31",
     "source_type": "listing_page",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This page is a historical index listing Federal Reserve press releases from calendar year 2009. It is not a single research document but rather a navigational listing containing links to various press release categories including FOMC statements, enforcement actions, monetary policy announcements, and regulatory actions. The content is stale (over 16 years old) and the page itself is a non-archiveable listing page that does not contain substantive research or analysis suitable for a finance research archive.",
+  "summary": "This is an index page listing all Federal Reserve press releases from 2009, covering FOMC statements, Term Auction Facility operations, enforcement actions, and regulatory proposals. The page aggregates dozens of individual press releases from the 2009 calendar year. As a listing page, this is not a single archiveable document but rather a navigation index to separate press releases.",
   "key_points": [
-    "This is a listing page indexing Federal Reserve press releases from January through December 2009",
-    "Contains links to multiple FOMC statements from 2009, a period during the zero lower bound era following the 2008 financial crisis",
-    "Includes Term Auction Facility (TAF) auction results and announcements, relevant to market structure and liquidity operations",
-    "References enforcement actions against various financial institutions, regulatory policy updates, and CRA threshold adjustments",
-    "The page is classified as non-archiveable per source-type guidance for listing pages",
-    "Content is historical (2009) and over 90 days before TODAY (2026-03-31)"
+    "Listing page from Federal Reserve website containing all press releases dated 2009",
+    "Contains references to two FOMC statements (November 4, 2009 and December 16, 2009)",
+    "References multiple Term Auction Facility operations offering $25-75 billion in 28-day and 42-day credit",
+    "Includes FOMC minutes from November 3-4, 2009 meeting (released November 24, 2009)",
+    "Includes regulatory proposals: Regulation D amendment for term deposit facility, TALF rules, overdraft fee restrictions",
+    "Contains numerous enforcement actions (written agreements, cease and desist orders)"
   ],
-  "why_it_matters": "This source is a low-quality index page from 2009, not suitable for direct archival. Researchers seeking 2009 Fed content would need to access individual press releases linked from this page. The listing provides evidence that Term Auction Facility operations and FOMC statements from 2009 exist as historical records, but the page itself does not contain the substantive content.",
+  "why_it_matters": "This listing page aggregates 2009 Federal Reserve communications but is not itself an archiveable research document. Individual press releases within this listing would be more suitable for archival, particularly the FOMC statements, minutes, and Term Auction Facility announcements which have historical relevance to understanding the Fed's crisis response. Per Rule 5, listing pages are non-archiveable.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "The page references Term Auction Facility operations ($75 billion 28-day credit auctions, $25 billion 42-day credit auctions) and proposed amendments to Regulation D for a term deposit facility, which were market structure elements of the Fed's crisis response in 2009.",
-  "important_numbers": [
-    "$75 billion (28-day TAF credit)",
-    "$25 billion (42-day TAF credit)"
-  ],
+  "macro_context": "2009 represents the peak crisis response period following the 2008 financial collapse. The Term Auction Facility operations and FOMC statements from this period reflect the Fed's use of unconventional monetary policy tools. This listing page does not provide the detailed content needed to assess macro implications.",
+  "market_structure_context": "References to Term Auction Facility operations ($25-75 billion auctions) and regulatory proposals (Regulation D amendments, TALF rules) indicate Fed work on emergency lending facilities and regulatory structure during the financial crisis. This listing page does not contain the detailed operational content required for market structure analysis.",
+  "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "listing-page",
-    "historical",
     "2009",
-    "non-archivable",
+    "listing-page",
+    "fomc",
     "term-auction-facility",
     "enforcement-actions",
-    "regulatory-policy"
+    "crisis-response",
+    "historical"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 7,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page, explicitly rejected per CORE RULE 5",
-      "No substantive research content - page is a navigational index linking to individual press releases",
-      "event_type correctly set to 'unknown' but this is because listing pages have no specific event type",
-      "Source is over 16 years old (2009) and contains no single publication date",
-      "Record correctly identifies source as non-archivable but status should be 'rejected', not 'review_queue'"
+      "Source is correctly identified as a listing_page per source_type and URL pattern (2009all.htm is an archive index)",
+      "Rule 5 explicitly requires rejection of listing_page types - this source is non-archiveable as a single document",
+      "Source predates TODAY by over 16 years (2009-12-31) - flagged as historical, but still subject to listing_page rejection rule",
+      "Content is truncated in source body, preventing complete verification of all listed items",
+      "event_type correctly set to 'unknown' as a listing page has no single event type"
     ]
   },
   "human_review": {
@@ -61,5 +58,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2009_press_releases_2e90cb6f565aa878.txt",
-  "notes": "Non-archiveable listing page. This page indexes Federal Reserve press releases from 2009 but is itself just a navigation/index page. The actual content of interest (FOMC statements, TAF operations, regulatory proposals) exists in linked documents, not this listing. MARKED FOR EXCLUSION from archive - individual press releases from 2009 should be crawled and archived separately if relevant to macro catalysts or market structure."
+  "notes": "NON-ARCHIVABLE: This is a listing page aggregating Federal Reserve press releases from calendar year 2009. Per Rule 6, listing pages should be treated as non-archiveable. The individual press releases referenced (FOMC statements, TAF operations, enforcement actions, regulatory proposals) would each require separate archival if their full content is needed. Source predates TODAY by over 16 years and is historical in nature. Content is truncated, preventing complete verification."
 }

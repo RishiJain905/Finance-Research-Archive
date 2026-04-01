@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/landing page (source_type correctly identified as navigation_page) - per Rule 5 this triggers rejection",
+    "No substantive content about quarterly refunding operations, auction schedules, sizes, or results present in source",
+    "No published_at date available in source metadata",
+    "Source is a container page with no actionable market structure information",
+    "event_type 'treasury_issuance' is not supported by source content - the page contains no issuance data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source type is clearly a navigation page with no substantive content. The generated record has already correctly identified this issue. Auto-rejection is appropriate per Rule 5.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is a navigation hub for Treasury Quarterly Refunding information but contains no substantive content about current auction schedules, sizes, results, or financing operations. The page primarily displays navigation menus, policy category links, and recent press releases from March 2026.",
+    "why_it_matters": "This source does not provide actionable market structure information. Treasury Quarterly Refunding pages typically contain critical auction calendars, borrowing estimates, and debt management announcements that affect Treasury market liquidity and yield dynamics. Users seeking quarterly refunding data should navigate to the linked 'Most Recent Documents' or 'Archives' sections for actual auction results and schedules.",
+    "macro_context": "",
+    "market_structure_context": "Treasury Quarterly Refunding operations are a core component of U.S. government debt market structure, affecting primary dealer obligations, auction dynamics, and Treasury market liquidity. This page serves as an entry point but provides no operational details."
+  }
+}
