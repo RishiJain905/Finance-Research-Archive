@@ -1,7 +1,7 @@
 {
   "id": "sifma_news_sifma_fsi_statement_on_order_vacating_the_dol_2024_fiduciary_d6623757",
   "created_at": "2026-04-01T00:53:37.953301+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
   "title": "SIFMA, FSI Statement on Order Vacating the DOL 2024 Fiduciary Rule and Related PTEs",
@@ -53,30 +53,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate based on the source, but the source itself may fall outside the archive's focus on market structure and macro catalysts. The quality_tier correctly identifies this as low-value content, but the human should decide whether even accurate, well-structured records should be accepted when the source material is tangentially relevant to the archive's scope."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-01T00:59:21.637083+00:00"
   },
   "raw_text_path": "data/raw/sifma_news_sifma_fsi_statement_on_order_vacating_the_dol_2024_fiduciary_d6623757.txt",
   "notes": "This source is a SIFMA press release celebrating a court ruling. While metadata tags this as 'market structure,' the content is about fiduciary duty regulations for investment advisors in retirement accounts. This is regulatory/compliance content, not market structure (market microstructure, trading operations, order flow, settlement, etc.) nor macro catalysts. The relevance to the archive's focus areas is tangential at best. No market impact information is provided in the source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 3,
+    "tier": "tier_3",
+    "score": 46.5,
     "reasoning": [
-      "Not relevant to market structure or macro catalysts as defined",
-      "Trade association press release is advocacy material, not primary source",
-      "No market impact data or numbers provided",
-      "Content is about investor protection regulation, not market operations"
+      "quality score: 46.5/100 (acceptable)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "lower-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
