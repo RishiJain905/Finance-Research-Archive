@@ -404,16 +404,16 @@ class TestExtractLaneReliabilityScore:
         assert score == 100.0
 
     def test_keyword_discovery_medium(self, scoring_rules):
-        """keyword_discovery lane → 50."""
+        """keyword_discovery lane → 70."""
         score = extract_lane_reliability_score("keyword_discovery", scoring_rules)
 
-        assert score == 50.0
+        assert score == 70.0
 
     def test_seed_crawl_lower(self, scoring_rules):
-        """seed_crawl lane → 30."""
+        """seed_crawl lane → 60."""
         score = extract_lane_reliability_score("seed_crawl", scoring_rules)
 
-        assert score == 30.0
+        assert score == 60.0
 
     def test_unknown_lane_defaults(self, scoring_rules):
         """Unknown lane returns 0."""

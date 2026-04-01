@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Accepted Record Quality Tier",
+  "description": "Quality tier metadata for accepted research records, used for retrieval ranking and archive management.",
+  "type": "object",
+  "required": ["tier", "reasoning"],
+  "properties": {
+    "tier": {
+      "type": "string",
+      "enum": ["tier_1", "tier_2", "tier_3"],
+      "description": "Quality tier: tier_1 (highly reusable), tier_2 (useful context), tier_3 (acceptable but lower-value)."
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Numeric quality score (0-100) that determined the tier assignment."
+    },
+    "reasoning": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Human-readable reasons for the tier assignment, one string per contributing factor."
+    }
+  },
+  "additionalProperties": false
+}

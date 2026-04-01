@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Linked Context",
+  "description": "Schema for bidirectional article-quant linking metadata embedded in research records",
+  "type": "object",
+  "properties": {
+    "linked_quant_context": {
+      "type": "array",
+      "description": "Quant records linked to this article record",
+      "items": {
+        "$ref": "#/definitions/linkEntry"
+      },
+      "default": []
+    },
+    "linked_article_context": {
+      "type": "array",
+      "description": "Article records linked to this quant record",
+      "items": {
+        "$ref": "#/definitions/linkEntry"
+      },
+      "default": []
+    }
+  },
+  "definitions": {
+    "linkEntry": {
+      "type": "object",
+      "description": "A single link entry connecting this record to another",
+      "required": ["record_id", "relationship", "reason"],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "description": "The ID of the linked record"
+        },
+        "relationship": {
+          "type": "string",
+          "description": "The type of relationship between the records",
+          "enum": [
+            "nearest_relevant_quant_snapshot",
+            "narrative_context_for_quant_snapshot",
+            "temporally_proximate_quant",
+            "temporally_proximate_article"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "description": "Human-readable explanation of why this link exists"
+        },
+        "topic_overlap": {
+          "type": "array",
+          "description": "Shared topic tags between the linked records",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "link_score": {
+          "type": "number",
+          "description": "Combined relevance score used to rank and threshold links",
+          "default": 0
+        }
+      }
+    }
+  }
+}

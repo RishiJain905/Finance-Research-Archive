@@ -1,0 +1,100 @@
+name: Manual Backlog Processing
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_records:
+        description: "Max backlog records to process"
+        required: false
+        type: number
+        default: 30
+      process_workers:
+        description: "Parallel process_record workers"
+        required: false
+        type: number
+        default: 2
+      send_review_max_items:
+        description: "Max Telegram reviews to send in this run"
+        required: false
+        type: number
+        default: 5
+      send_review_daily_budget:
+        description: "Daily Telegram review budget (UTC)"
+        required: false
+        type: number
+        default: 20
+      skip_send_reviews:
+        description: "Skip Telegram send step"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  process-backlog:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    env:
+      OPENAI_BASE_URL: https://api.minimax.io/v1
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_MODEL: MiniMax-M2.7
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+    concurrency:
+      group: backlog-pipeline-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run backlog processing
+        run: >
+          python scripts/run_ingest_and_process.py
+          --include-backlog
+          --max-records ${{ inputs.max_records }}
+          --process-workers ${{ inputs.process_workers }}
+          --send-review-max-items ${{ inputs.send_review_max_items }}
+          --send-review-daily-budget ${{ inputs.send_review_daily_budget }}
+          ${{ inputs.skip_send_reviews && '--skip-send-reviews' || '' }}
+
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit generated files if changed
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Run manual backlog processing"
+            pushed_to_main=0
+            for i in 1 2 3; do
+              if git push origin HEAD:main; then
+                pushed_to_main=1
+                break
+              fi
+              echo "Push attempt $i to main failed, retrying..."
+              sleep 5
+            done
+
+            if [ "$pushed_to_main" -ne 1 ]; then
+              backup_branch="automation/${GITHUB_WORKFLOW// /-}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+              echo "Could not push to main after retries; pushing to ${backup_branch} to preserve results."
+              git push origin "HEAD:refs/heads/${backup_branch}"
+              echo "::warning::Unable to push to main. Results were saved to branch ${backup_branch}."
+            fi
+          fi

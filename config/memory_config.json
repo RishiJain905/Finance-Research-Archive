@@ -59,6 +59,37 @@
         }
       }
     },
+    "feedback_weights": {
+      "type": "object",
+      "description": "Weights for human feedback-driven trust adjustments (V2.5 Part 7)",
+      "properties": {
+        "bad_source_weight": {
+          "type": "number",
+          "default": 15,
+          "description": "Points subtracted per bad_source feedback (stronger than rejected_human)"
+        },
+        "good_source_weight": {
+          "type": "number",
+          "default": 30,
+          "description": "Points added per good_source feedback (stronger than accepted_human)"
+        },
+        "weak_accept_weight": {
+          "type": "number",
+          "default": 10,
+          "description": "Points added per weak_accept feedback (weaker than accepted_human)"
+        },
+        "promote_weight": {
+          "type": "number",
+          "default": 40,
+          "description": "Points added per promote feedback (stronger than accepted_human)"
+        },
+        "suppress_weight": {
+          "type": "number",
+          "default": 10,
+          "description": "Points subtracted per suppress feedback (for filtering signals)"
+        }
+      }
+    },
     "trust_score_bounds": {
       "type": "object",
       "description": "Trust score bounds",

@@ -1,0 +1,77 @@
+{
+  "tiers": {
+    "tier_1": {
+      "min_score": 80,
+      "label": "highly_reusable",
+      "description": "Strong signal, core RAG asset, likely to remain valuable over time"
+    },
+    "tier_2": {
+      "min_score": 55,
+      "label": "useful_context",
+      "description": "Good supporting context, somewhat reusable, may be topic-specific"
+    },
+    "tier_3": {
+      "min_score": 0,
+      "label": "acceptable",
+      "description": "Acceptable but lower-value, narrow utility, transient or structurally weaker"
+    }
+  },
+  "features": {
+    "verification_confidence": {
+      "weight": 0.25,
+      "scale": [0, 10],
+      "description": "LLM verification confidence score (0-10 scale from llm_review.verification_confidence)"
+    },
+    "human_approved": {
+      "weight": 0.15,
+      "boost": 10,
+      "description": "Binary: whether human_review.decision is 'approved_by_human'. Adds a direct score boost."
+    },
+    "issues_found_count": {
+      "weight": 0.10,
+      "scale": [0, 10],
+      "description": "Number of issues found during verification (0-10, inverted: fewer issues = higher score)"
+    },
+    "why_it_matters_quality": {
+      "weight": 0.15,
+      "scale": [0, 1],
+      "description": "Quality of why_it_matters field: 1.0 if present and substantive (>30 chars), 0.5 if short, 0.0 if empty/missing"
+    },
+    "has_structured_numbers": {
+      "weight": 0.10,
+      "description": "Binary: whether important_numbers array is non-empty"
+    },
+    "source_trust_score": {
+      "weight": 0.10,
+      "scale": [0, 100],
+      "description": "Domain trust score from domain_trust_tiers config (high=100, medium=50, low=10)"
+    },
+    "topic_centrality": {
+      "weight": 0.10,
+      "scale": [0, 1],
+      "description": "How central the topic is: 1.0 for monetary_policy/fiscal_policy/liquidity, 0.7 for market_structure, 0.5 for other"
+    },
+    "event_significance": {
+      "weight": 0.05,
+      "scale": [0, 1],
+      "description": "Event type significance: 1.0 for fed_policy/central_bank_action, 0.8 for fiscal_policy, 0.6 for data_release, 0.4 for other"
+    }
+  },
+  "topic_centrality_map": {
+    "monetary policy": 1.0,
+    "fiscal policy": 1.0,
+    "market structure": 0.7,
+    "macro data": 0.8,
+    "regulation": 0.6,
+    "default": 0.5
+  },
+  "event_significance_map": {
+    "fed_policy": 1.0,
+    "central_bank_action": 1.0,
+    "fiscal_policy": 0.8,
+    "data_release": 0.6,
+    "liquidity": 0.7,
+    "yield_curve": 0.6,
+    "default": 0.4
+  }
+}

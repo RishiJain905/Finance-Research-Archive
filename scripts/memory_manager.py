@@ -55,6 +55,13 @@ def _default_memory_config() -> dict[str, Any]:
             "review_weight": 0,
             "human_multiplier": 2.0,
         },
+        "feedback_weights": {
+            "bad_source_weight": 15,
+            "good_source_weight": 30,
+            "weak_accept_weight": 10,
+            "promote_weight": 40,
+            "suppress_weight": 10,
+        },
         "trust_score_bounds": {
             "min": 1,
             "max": 100,
@@ -227,7 +234,8 @@ def update_domain_memory_on_outcome(
     Args:
         domain: Domain name
         outcome: Outcome type (accepted, accepted_human, rejected, rejected_human,
-                 review, review_human, filtered_out)
+                 review, review_human, filtered_out, bad_source, good_source,
+                 weak_accept, promote, expand_topic, suppress)
         candidate_id: Optional candidate ID for logging
 
     Returns:
@@ -259,6 +267,30 @@ def update_domain_memory_on_outcome(
         memory["review_human_count"] = memory.get("review_human_count", 0) + 1
     elif outcome == "filtered_out":
         memory["filtered_out_count"] = memory.get("filtered_out_count", 0) + 1
+    elif outcome == "bad_source":
+        # Stronger negative signal than rejected_human (3x)
+        memory["rejected_count"] = memory.get("rejected_count", 0) + 1
+        memory["bad_source_count"] = memory.get("bad_source_count", 0) + 1
+    elif outcome == "good_source":
+        # Stronger positive signal than accepted_human (3x)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["good_source_count"] = memory.get("good_source_count", 0) + 1
+    elif outcome == "weak_accept":
+        # Weaker positive signal (0.5x accepted_human)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["weak_accept_count"] = memory.get("weak_accept_count", 0) + 1
+    elif outcome == "promote":
+        # Stronger positive signal (2x accepted_human)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["promote_count"] = memory.get("promote_count", 0) + 1
+    elif outcome == "expand_topic":
+        # Neutral for trust, but flags theme expansion (handled separately)
+        # Still increment total_candidates for tracking
+        pass
+    elif outcome == "suppress":
+        # Negative signal for filtering (2x rejected_human)
+        memory["rejected_count"] = memory.get("rejected_count", 0) + 1
+        memory["suppress_count"] = memory.get("suppress_count", 0) + 1
 
     # Recalculate trust score
     memory["trust_score"] = compute_trust_score(
@@ -269,6 +301,11 @@ def update_domain_memory_on_outcome(
         review=memory.get("review_count", 0),
         accepted_human=memory.get("accepted_human_count", 0),
         rejected_human=memory.get("rejected_human_count", 0),
+        bad_source=memory.get("bad_source_count", 0),
+        good_source=memory.get("good_source_count", 0),
+        weak_accept=memory.get("weak_accept_count", 0),
+        promote=memory.get("promote_count", 0),
+        suppress=memory.get("suppress_count", 0),
         baseline_trust=memory.get("baseline_trust", 10.0),
     )
 
@@ -418,6 +455,29 @@ def update_path_memory_on_outcome(
         memory["review_human_count"] = memory.get("review_human_count", 0) + 1
     elif outcome == "filtered_out":
         memory["filtered_out_count"] = memory.get("filtered_out_count", 0) + 1
+    elif outcome == "bad_source":
+        # Stronger negative signal than rejected_human (3x)
+        memory["rejected_count"] = memory.get("rejected_count", 0) + 1
+        memory["bad_source_count"] = memory.get("bad_source_count", 0) + 1
+    elif outcome == "good_source":
+        # Stronger positive signal than accepted_human (3x)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["good_source_count"] = memory.get("good_source_count", 0) + 1
+    elif outcome == "weak_accept":
+        # Weaker positive signal (0.5x accepted_human)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["weak_accept_count"] = memory.get("weak_accept_count", 0) + 1
+    elif outcome == "promote":
+        # Stronger positive signal (2x accepted_human)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["promote_count"] = memory.get("promote_count", 0) + 1
+    elif outcome == "expand_topic":
+        # Neutral for trust, but flags theme expansion (handled separately)
+        pass
+    elif outcome == "suppress":
+        # Negative signal for filtering (2x rejected_human)
+        memory["rejected_count"] = memory.get("rejected_count", 0) + 1
+        memory["suppress_count"] = memory.get("suppress_count", 0) + 1
 
     # Recalculate trust score
     memory["trust_score"] = compute_trust_score(
@@ -428,6 +488,11 @@ def update_path_memory_on_outcome(
         review=memory.get("review_count", 0),
         accepted_human=memory.get("accepted_human_count", 0),
         rejected_human=memory.get("rejected_human_count", 0),
+        bad_source=memory.get("bad_source_count", 0),
+        good_source=memory.get("good_source_count", 0),
+        weak_accept=memory.get("weak_accept_count", 0),
+        promote=memory.get("promote_count", 0),
+        suppress=memory.get("suppress_count", 0),
         baseline_trust=memory.get("baseline_trust", 10.0),
     )
 
@@ -547,6 +612,29 @@ def update_source_memory_on_outcome(
         memory["review_human_count"] = memory.get("review_human_count", 0) + 1
     elif outcome == "filtered_out":
         memory["filtered_out_count"] = memory.get("filtered_out_count", 0) + 1
+    elif outcome == "bad_source":
+        # Stronger negative signal than rejected_human (3x)
+        memory["rejected_count"] = memory.get("rejected_count", 0) + 1
+        memory["bad_source_count"] = memory.get("bad_source_count", 0) + 1
+    elif outcome == "good_source":
+        # Stronger positive signal than accepted_human (3x)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["good_source_count"] = memory.get("good_source_count", 0) + 1
+    elif outcome == "weak_accept":
+        # Weaker positive signal (0.5x accepted_human)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["weak_accept_count"] = memory.get("weak_accept_count", 0) + 1
+    elif outcome == "promote":
+        # Stronger positive signal (2x accepted_human)
+        memory["accepted_count"] = memory.get("accepted_count", 0) + 1
+        memory["promote_count"] = memory.get("promote_count", 0) + 1
+    elif outcome == "expand_topic":
+        # Neutral for trust, but flags theme expansion (handled separately)
+        pass
+    elif outcome == "suppress":
+        # Negative signal for filtering (2x rejected_human)
+        memory["rejected_count"] = memory.get("rejected_count", 0) + 1
+        memory["suppress_count"] = memory.get("suppress_count", 0) + 1
 
     # Recalculate trust score
     memory["trust_score"] = compute_trust_score(
@@ -557,6 +645,11 @@ def update_source_memory_on_outcome(
         review=memory.get("review_count", 0),
         accepted_human=memory.get("accepted_human_count", 0),
         rejected_human=memory.get("rejected_human_count", 0),
+        bad_source=memory.get("bad_source_count", 0),
+        good_source=memory.get("good_source_count", 0),
+        weak_accept=memory.get("weak_accept_count", 0),
+        promote=memory.get("promote_count", 0),
+        suppress=memory.get("suppress_count", 0),
         baseline_trust=memory.get("baseline_trust", 50.0),
     )
 
@@ -595,6 +688,11 @@ def compute_trust_score(
     review: int,
     accepted_human: int = 0,
     rejected_human: int = 0,
+    bad_source: int = 0,
+    good_source: int = 0,
+    weak_accept: int = 0,
+    promote: int = 0,
+    suppress: int = 0,
     baseline_trust: float = 10.0,
 ) -> float:
     """Compute trust score based on outcomes and cold-start blending.
@@ -608,6 +706,12 @@ def compute_trust_score(
     - filtered_weight * filtered_out_count (negative)
     - review_weight * review_count (neutral/partial)
     - Human decisions get human_multiplier applied
+    - Feedback-specific signals:
+        - bad_source: 3x rejected_human weight (stronger negative)
+        - good_source: 3x accepted_human weight (stronger positive)
+        - weak_accept: 0.5x accepted_human weight (weaker positive)
+        - promote: 2x accepted_human weight (stronger positive)
+        - suppress: 2x rejected_human weight (negative for filtering)
 
     Cold-start blending:
     - Before min_samples: mostly baseline (e.g., 90% baseline, 10% learned)
@@ -621,6 +725,11 @@ def compute_trust_score(
     - weights.rejected_weight = 5
     - weights.filtered_weight = 3
     - weights.human_multiplier = 2.0
+    - feedback_weights.bad_source_weight = 15
+    - feedback_weights.good_source_weight = 30
+    - feedback_weights.weak_accept_weight = 10
+    - feedback_weights.promote_weight = 40
+    - feedback_weights.suppress_weight = 10
     - trust_score_bounds.min = 1 (prevent zero-trust)
 
     Args:
@@ -631,6 +740,11 @@ def compute_trust_score(
         review: Number of review queue candidates
         accepted_human: Number of human-accepted candidates
         rejected_human: Number of human-rejected candidates
+        bad_source: Number of bad_source feedback signals
+        good_source: Number of good_source feedback signals
+        weak_accept: Number of weak_accept feedback signals
+        promote: Number of promote feedback signals
+        suppress: Number of suppress feedback signals
         baseline_trust: Initial baseline trust score
 
     Returns:
@@ -650,6 +764,14 @@ def compute_trust_score(
     filtered_weight = weights.get("filtered_weight", 3)
     review_weight = weights.get("review_weight", 0)
     human_multiplier = weights.get("human_multiplier", 2.0)
+
+    # Get feedback weights
+    feedback_weights = config.get("feedback_weights", {})
+    bad_source_weight = feedback_weights.get("bad_source_weight", 15)
+    good_source_weight = feedback_weights.get("good_source_weight", 30)
+    weak_accept_weight = feedback_weights.get("weak_accept_weight", 10)
+    promote_weight = feedback_weights.get("promote_weight", 40)
+    suppress_weight = feedback_weights.get("suppress_weight", 10)
 
     # Get bounds
     bounds = config.get("trust_score_bounds", {})
@@ -672,10 +794,24 @@ def compute_trust_score(
         human_rejected_contribution + auto_rejected_contribution
     )
 
+    # Feedback signal contributions
+    # These are additional signals beyond the base accepted/rejected counts
+    good_source_contribution = good_source * good_source_weight
+    promote_contribution = promote * promote_weight
+    weak_accept_contribution = weak_accept * weak_accept_weight
+
+    bad_source_contribution = bad_source * bad_source_weight
+    suppress_contribution = suppress * suppress_weight
+
     # Calculate net adjustment from all outcomes
     adjustment = (
         total_accepted_contribution
+        + good_source_contribution
+        + promote_contribution
+        + weak_accept_contribution
         - total_rejected_contribution
+        - bad_source_contribution
+        - suppress_contribution
         - (filtered_out * filtered_weight)
         + (review * review_weight)
     )
@@ -771,7 +907,8 @@ def update_all_memory_on_outcome(
     Args:
         domain: Domain name
         outcome: Outcome type (accepted, accepted_human, rejected, rejected_human,
-                review, review_human, filtered_out)
+                review, review_human, filtered_out, bad_source, good_source,
+                weak_accept, promote, expand_topic, suppress)
         source_id: Optional source identifier
         source_type: Type of source (manual, trusted_sources, keyword_discovery, seed_crawl)
         url: Full URL for path pattern extraction

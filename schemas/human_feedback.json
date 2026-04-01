@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Human Feedback",
+    "description": "Rich human feedback block for research record review with granular action types",
+    "type": "object",
+    "properties": {
+        "decision": {
+            "type": "string",
+            "enum": [
+                "approve",
+                "reject",
+                "approve_but_weak",
+                "approve_and_promote",
+                "bad_source",
+                "good_source",
+                "expand_this_topic",
+                "suppress_similar_items"
+            ],
+            "description": "The reviewer's decision/action"
+        },
+        "notes": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Optional reviewer notes (max 500 characters)"
+        },
+        "source_feedback": {
+            "type": ["string", "null"],
+            "enum": ["good_source", "bad_source", null],
+            "description": "Feedback on the source quality"
+        },
+        "topic_feedback": {
+            "type": ["string", "null"],
+            "enum": ["expand_this_topic", null],
+            "description": "Feedback indicating topic should be expanded"
+        },
+        "reviewed_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 datetime when the review occurred"
+        },
+        "reviewer_id": {
+            "type": "string",
+            "description": "Optional identifier of the reviewer"
+        }
+    },
+    "required": ["decision", "reviewed_at"]
+}

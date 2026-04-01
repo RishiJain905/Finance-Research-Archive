@@ -86,7 +86,11 @@ class TestCheckUrlDedup:
         url = "https://example.com/article"
         url_hash = compute_url_hash(url)
         candidate = {"url": url}
-        index = {"seen_url_hashes": {url_hash: {"candidate_id": "prev_id"}}}
+        index = {
+            "seen_url_hashes": {
+                url_hash: {"candidate_id": "prev_id", "timestamp": time.time()}
+            }
+        }
         assert check_url_dedupe(candidate, index) is True
 
     def test_url_not_duplicate_when_different(self):
@@ -140,7 +144,11 @@ class TestCheckContentDedup:
         content_hash = compute_content_hash(content_file.read_text())
 
         candidate = {"raw_text_path": str(content_file)}
-        index = {"seen_content_hashes": {content_hash: {"candidate_id": "prev_id"}}}
+        index = {
+            "seen_content_hashes": {
+                content_hash: {"candidate_id": "prev_id", "timestamp": time.time()}
+            }
+        }
 
         assert check_content_dedupe(candidate, index) is True
 
@@ -245,7 +253,9 @@ class TestProcessDedup:
 
         existing_hash = compute_url_hash("https://example.com/article")
         existing_index = {
-            "seen_url_hashes": {existing_hash: {"candidate_id": "cand_1"}},
+            "seen_url_hashes": {
+                existing_hash: {"candidate_id": "cand_1", "timestamp": time.time()}
+            },
             "seen_title_hashes": {},
             "seen_content_hashes": {},
             "candidate_map": {},

@@ -8,9 +8,24 @@ on:
         required: true
         type: string
       decision:
-        description: "Human decision: approve or reject"
+        description: "Human decision: approve, reject, promote, or weak"
         required: true
         type: string
+      source_feedback:
+        description: "Source quality feedback: good_source or bad_source (optional)"
+        required: false
+        type: string
+        default: ""
+      topic_feedback:
+        description: "Topic feedback: expand_this_topic or empty (optional)"
+        required: false
+        type: string
+        default: ""
+      notes:
+        description: "Optional reviewer notes"
+        required: false
+        type: string
+        default: ""
 
 jobs:
   finalize-review:
@@ -23,7 +38,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -35,7 +50,19 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Finalize record
-        run: python scripts/finalize_review.py "${{ inputs.record_id }}" "${{ inputs.decision }}"
+        run: |
+          set -euo pipefail
+          ARGS=("${{ inputs.record_id }}" "${{ inputs.decision }}")
+          if [ -n "${{ inputs.source_feedback }}" ]; then
+            ARGS+=("--source-feedback" "${{ inputs.source_feedback }}")
+          fi
+          if [ -n "${{ inputs.topic_feedback }}" ]; then
+            ARGS+=("--topic-feedback" "${{ inputs.topic_feedback }}")
+          fi
+          if [ -n "${{ inputs.notes }}" ]; then
+            ARGS+=("--notes" "${{ inputs.notes }}")
+          fi
+          python scripts/finalize_review.py "${ARGS[@]}"
 
       - name: Configure git author
         run: |
@@ -49,5 +76,5 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Finalize review: ${{ inputs.record_id }} (${{ inputs.decision }})"
-            git push origin HEAD:main
+            git push origin "HEAD:${{ github.ref_name }}"
           fi

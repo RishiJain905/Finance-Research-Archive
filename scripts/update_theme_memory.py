@@ -415,6 +415,87 @@ def process_accepted_record(
     return themes
 
 
+def apply_topic_expansion(
+    record: dict[str, Any], themes: dict[str, dict[str, Any]]
+) -> dict[str, dict[str, Any]]:
+    """Apply topic expansion feedback to theme memory.
+
+    When a reviewer marks expand_this_topic, increase the priority score
+    for matching themes and add the record's topic/terms as positive evidence.
+
+    Args:
+        record: The accepted record with topic/theme information
+        themes: Current theme memory dictionary
+
+    Returns:
+        Updated themes dictionary
+    """
+    # Get the record's topic
+    topic = record.get("topic", "")
+    if not topic:
+        return themes
+
+    # Normalize topic for matching
+    topic_normalized = topic.lower().strip()
+
+    # Get key_points as positive terms
+    key_points = record.get("key_points", [])
+    positive_terms = []
+    if isinstance(key_points, list):
+        for point in key_points:
+            if isinstance(point, str):
+                positive_terms.append(point.lower().strip())
+            elif isinstance(point, dict):
+                # Handle structured key_points
+                term = point.get("term", "") or point.get("point", "")
+                if term:
+                    positive_terms.append(term.lower().strip())
+
+    # Also try to get terms from title and abstract
+    title = record.get("title", "")
+    if title:
+        positive_terms.append(title.lower().strip())
+
+    # Find themes matching the record's topic
+    matching_theme_id = None
+    for theme_id, theme in themes.items():
+        theme_label = theme.get("theme_label", "").lower()
+        theme_terms = set(theme.get("positive_terms", []))
+        # Check if topic matches theme label or any theme term
+        if topic_normalized == theme_label or topic_normalized in theme_terms:
+            matching_theme_id = theme_id
+            break
+
+    now = datetime.now(timezone.utc).isoformat()
+
+    if matching_theme_id:
+        # Update existing theme
+        theme = themes[matching_theme_id]
+        theme["priority_score"] = min(100, theme.get("priority_score", 0) + 20)
+        theme["accepted_count"] = theme.get("accepted_count", 0) + 1
+        theme["last_seen"] = now
+        # Add new positive terms
+        existing_positive = set(theme.get("positive_terms", []))
+        new_positive = set(positive_terms)
+        theme["positive_terms"] = list(existing_positive | new_positive)
+        themes[matching_theme_id] = theme
+    else:
+        # Create a new theme with the record's topic as label
+        new_theme_data = {
+            "theme_label": topic,
+            "positive_terms": positive_terms,
+            "negative_terms": [],
+        }
+        new_theme = _create_new_theme(
+            theme_id=_generate_theme_id(topic),
+            theme_data=new_theme_data,
+        )
+        new_theme["priority_score"] = 30  # Base priority for new expansion theme
+        themes[new_theme["theme_id"]] = new_theme
+
+    return themes
+
+
 def process_rejected_record(
     record: dict[str, Any], themes: dict[str, dict[str, Any]]
 ) -> dict[str, dict[str, Any]]:
@@ -498,6 +579,12 @@ def main():
         action="store_true",
         help="Print theme memory statistics",
     )
+    parser.add_argument(
+        "--expand-topic",
+        type=str,
+        metavar="RECORD_FILE",
+        help="Apply topic expansion from a specific accepted record file",
+    )
 
     args = parser.parse_args()
 
@@ -533,6 +620,17 @@ def main():
 
         for record in rejected_records:
             themes = process_rejected_record(record, themes)
+
+    # Apply topic expansion from a specific record
+    if args.expand_topic:
+        record_path = Path(args.expand_topic)
+        if record_path.exists():
+            with open(record_path, "r", encoding="utf-8") as f:
+                record = json.load(f)
+            themes = apply_topic_expansion(record, themes)
+            print(f"Applied topic expansion from: {record_path.name}")
+        else:
+            print(f"Warning: Record file not found: {record_path}")
 
     # Merge similar themes
     if args.merge_threshold > 0:

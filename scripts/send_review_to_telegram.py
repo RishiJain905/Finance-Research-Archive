@@ -48,13 +48,23 @@ def build_message(record_id: str, record: dict) -> str:
     issues = record.get("llm_review", {}).get("issues_found", [])
     review_notes = record.get("human_review", {}).get("notes", "")
 
+    # Source domain if available
+    source = record.get("source", "")
+    source_line = f"Source: {source}\n" if source else ""
+
+    # Quality tier if already assigned
+    quality_tier = record.get("llm_review", {}).get("quality_tier", "")
+    tier_line = f"Quality tier: {quality_tier}\n" if quality_tier else ""
+
     issue_text = "\n".join(f"- {issue}" for issue in issues[:5]) if issues else "- none"
 
     text = (
         f"Review needed for: {record_id}\n\n"
         f"Title: {title}\n"
+        f"{source_line}"
         f"Topic: {topic}\n"
         f"Event type: {event_type}\n"
+        f"{tier_line}"
         f"LLM verdict: {verdict}\n\n"
         f"Summary:\n{summary}\n\n"
         f"Issues found:\n{issue_text}\n\n"
@@ -85,8 +95,81 @@ def send_telegram_message(
         response = requests.post(url, json=payload, timeout=30)
 
         if response.status_code == 429:
-            retry_after = int(response.json().get("parameters", {}).get("retry_after", 5))
-            print(f"Rate limited by Telegram; waiting {retry_after}s before retry {attempt + 1}/{max_retries}")
+            retry_after = int(
+                response.json().get("parameters", {}).get("retry_after", 5)
+            )
+            print(
+                f"Rate limited by Telegram; waiting {retry_after}s before retry {attempt + 1}/{max_retries}"
+            )
+            time.sleep(retry_after + 1)
+            continue
+
+        response.raise_for_status()
+        return
+
+    response.raise_for_status()
+
+
+def send_rich_review_message(
+    token: str, chat_id: str, text: str, record_id: str, max_retries: int = 5
+) -> None:
+    """Send a review message with a richer 3-row inline keyboard.
+
+    Row 1: Approve | Reject
+    Row 2: Promote | Weak
+    Row 3: Good Src | Bad Src
+    """
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    callback_key = make_callback_key(record_id)
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "reply_markup": {
+            "inline_keyboard": [
+                [
+                    {
+                        "text": "\u2705 Approve",
+                        "callback_data": f"approve:{callback_key}",
+                    },
+                    {
+                        "text": "\u274c Reject",
+                        "callback_data": f"reject:{callback_key}",
+                    },
+                ],
+                [
+                    {
+                        "text": "\ud83d\udcc8 Promote",
+                        "callback_data": f"promote:{callback_key}",
+                    },
+                    {
+                        "text": "\u26a0\ufe0f Weak",
+                        "callback_data": f"weak:{callback_key}",
+                    },
+                ],
+                [
+                    {
+                        "text": "\ud83d\udc4d Good Src",
+                        "callback_data": f"good_source:{callback_key}",
+                    },
+                    {
+                        "text": "\ud83d\udc4e Bad Src",
+                        "callback_data": f"bad_source:{callback_key}",
+                    },
+                ],
+            ]
+        },
+    }
+
+    for attempt in range(max_retries):
+        response = requests.post(url, json=payload, timeout=30)
+
+        if response.status_code == 429:
+            retry_after = int(
+                response.json().get("parameters", {}).get("retry_after", 5)
+            )
+            print(
+                f"Rate limited by Telegram; waiting {retry_after}s before retry {attempt + 1}/{max_retries}"
+            )
             time.sleep(retry_after + 1)
             continue
 
