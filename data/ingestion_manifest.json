@@ -203,7 +203,10 @@
     "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/agency-debt-securities": "27abb034558e4114f9301f456d68b96ef1c942e813baf000a15189902ed126eb",
     "https://www.ecb.europa.eu/press/blog/date/2024/html/ecb.blog20240403~f3e74210a9.en.html": "0864277fd04da61150a98590aead91fc2875dfea3730543181943518a08e326e",
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260310~b738caf5b4.en.html": "03a0256afe9d2f0fb1f26a0e8b24f1e943fbeb36b54c9f40c5c6da635c076828",
-    "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "9cbf299f3638c36f7484969c3c2116dbf03dc0f07ff6a88debd0570bb2dfa1fc"
+    "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "9cbf299f3638c36f7484969c3c2116dbf03dc0f07ff6a88debd0570bb2dfa1fc",
+    "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-11": "9bdaed2d30bd0fb13207c15af4b75d013f47c45e42e392e70c3c228a4ff45c32",
+    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "6b626cf9c16bad37edd59b47bdcb6b15c655b3851227ccc82ca1572ad244cddd",
+    "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": "a71aeb3db8443e6216dac122633ca032f5715c69b9b73c2d5498d288f4e6d215"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -409,7 +412,10 @@
     "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/agency-debt-securities": "new_york_fed_markets_data_hub_agency_debt_securities_federal_reserve_bank_of_new_york_af895a35",
     "https://www.ecb.europa.eu/press/blog/date/2024/html/ecb.blog20240403~f3e74210a9.en.html": "ecb_blog_fiscal_and_monetary_policy_debating_optimal_interactions_336fe39c",
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260310~b738caf5b4.en.html": "ecb_blog_why_the_economy_needs_healthy_oceans_f4a92406",
-    "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128"
+    "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128",
+    "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-11": "richmond_fed_economic_brief_what_is_trend_inflation_richmond_fed_368e4e20",
+    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "bank_of_england_publications_r_enhancing_the_resilience_of_the_gilt_repo_market_discussion_638600ab",
+    "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": "bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4333,6 +4339,71 @@
       ],
       "target_name": "New York Fed Liberty Street Economics",
       "topic": "market structure"
+    },
+    "richmond_fed_economic_brief_what_is_trend_inflation_richmond_fed_368e4e20": {
+      "required_keywords": [
+        "inflation",
+        "economy",
+        "rates",
+        "growth",
+        "policy"
+      ],
+      "blocked_keywords": [
+        "museum",
+        "career",
+        "classroom"
+      ],
+      "min_word_count": 170,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Richmond Fed Economic Brief",
+      "topic": "macro catalysts"
+    },
+    "bank_of_england_publications_r_enhancing_the_resilience_of_the_gilt_repo_market_discussion_638600ab": {
+      "required_keywords": [
+        "bank of england",
+        "monetary policy",
+        "interest rate",
+        "inflation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Bank of England Publications RSS",
+      "topic": "macro catalysts"
+    },
+    "bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b": {
+      "required_keywords": [
+        "bank of england",
+        "monetary policy",
+        "interest rate",
+        "inflation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Bank of England Publications RSS",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -4509,7 +4580,10 @@
     "4e8f787f1b65bca2c731d26cab83eeb0938a0acb": "new_york_fed_markets_data_hub_agency_debt_securities_federal_reserve_bank_of_new_york_af895a35",
     "ff11276d013eae27727eec5963b750c8b7103d64": "ecb_blog_fiscal_and_monetary_policy_debating_optimal_interactions_336fe39c",
     "2fed980c0ce83093488c7361991cd9922727ca51": "ecb_blog_why_the_economy_needs_healthy_oceans_f4a92406",
-    "73693e34eda3595bb9a45fc4c48df45ee9670dab": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128"
+    "73693e34eda3595bb9a45fc4c48df45ee9670dab": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128",
+    "b5c6ded76de2a405c382f80b65f79cec2d6afee3": "richmond_fed_economic_brief_what_is_trend_inflation_richmond_fed_368e4e20",
+    "6f3bd2852e2ebbea1b05356696b6d3f95480186d": "bank_of_england_publications_r_enhancing_the_resilience_of_the_gilt_repo_market_discussion_638600ab",
+    "758b7c1666bbfc094923f46301cac6fd5b3ce44f": "bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -4751,7 +4825,10 @@
     "2a973e8731f660b2c917e9db1644eb5c79e09bd4": "chicago_fed_insights_annual_report_federal_reserve_bank_of_chicago_7e5d64ec",
     "66cfa7ea6dcd959c05f81cd9ed6fb85cd4eac541": "ecb_blog_fiscal_and_monetary_policy_debating_optimal_interactions_336fe39c",
     "8c6d6f8d1d4880252a1b01221d7e7833dbc435ff": "ecb_blog_why_the_economy_needs_healthy_oceans_f4a92406",
-    "4fe5302ebe064d7a2620d1effb2aa5894f3b29a1": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128"
+    "4fe5302ebe064d7a2620d1effb2aa5894f3b29a1": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128",
+    "7c98651bff9675ec833b183cc8d341a705df3a26": "richmond_fed_economic_brief_what_is_trend_inflation_richmond_fed_368e4e20",
+    "71c7448b3b68d5033a32a5c634306b86d857fba8": "bank_of_england_publications_r_enhancing_the_resilience_of_the_gilt_repo_market_discussion_638600ab",
+    "bd4e9d7b8b71beb134fef4f0b1dd191a7d19a123": "bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
@@ -4840,7 +4917,8 @@
     "https://www.ecb.europa.eu/press/blog/date/2024/html/ecb.blog240704~a2363df64d.en.html": true,
     "https://www.ecb.europa.eu/press/blog/date/2024/html/ecb.blog20241003~44069e813f.en.html": true,
     "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/agency-commercial-mortgage-backed-securities": true,
-    "https://www.federalreserve.gov/newsevents/pressreleases/2021-press-fomc.htm": true
+    "https://www.federalreserve.gov/newsevents/pressreleases/2021-press-fomc.htm": true,
+    "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": true
   },
   "event_fingerprints": {
     "f1df9a7292a5b92b1163438346b6fae3a7f03a62": "keyword_discovery_federalreserve_federal_reserve_issues_fomc_statement_459ed78faf1dfd41",
@@ -4893,6 +4971,7 @@
     "5000ccc6616f449acade4b7b3722239e6c4c12b1": "rba_speeches_monetary_policy_decision_speeches_rba_96652fb8",
     "cd197977de8936f5bf0ce0d3ff3ad9713e4b18b2": "ecb_blog_monetary_policy_transmission_why_consumers_housing_situation_5e5d4996",
     "bc11966526e466cea43507e5d268f7a9e1a34740": "federal_reserve_press_releases_federal_reserve_board_2021_fomc_press_releases_10a06a1a",
-    "8854a57d1ce99095c548729cc4a169180a8d64b5": "seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0"
+    "8854a57d1ce99095c548729cc4a169180a8d64b5": "seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0",
+    "34a1bf8ffe12daf2f05a055cdde59d9575dfe961": "bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b"
   }
 }
