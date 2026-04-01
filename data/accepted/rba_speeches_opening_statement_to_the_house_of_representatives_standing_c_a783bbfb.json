@@ -1,7 +1,7 @@
 {
   "id": "rba_speeches_opening_statement_to_the_house_of_representatives_standing_c_a783bbfb",
   "created_at": "2026-04-01T01:46:44.210066+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "congressional_testimony",
   "title": "Opening Statement to the House of Representatives Standing Committee on Economics",
@@ -63,26 +63,32 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is largely accurate and well-supported with good factual grounding from the source. However, it contains two minor issues: (1) an inference about this being the 'first rate increase in the current cycle' that isn't explicitly stated in the source, and (2) a market expectations claim that isn't supported by the source text. These are not serious enough to reject but warrant verification before accepting."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-01T02:23:24.130674+00:00"
   },
   "raw_text_path": "data/raw/rba_speeches_opening_statement_to_the_house_of_representatives_standing_c_a783bbfb.txt",
   "notes": "Source is a transcript of RBA Governor's congressional testimony, classified as a speech for source_type purposes. The speech confirms a rate decision made earlier in the week (Feb 3-4, 2026 board meeting). Source is recent (Feb 6, 2026) and highly relevant to macro catalysts. The source body was truncated at the end, but the key policy content is captured. No explicit market reaction commentary is provided in the source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "",
-    "score": 0,
-    "reasoning": []
+    "tier": "tier_2",
+    "score": 64.0,
+    "reasoning": [
+      "quality score: 64.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "minor issues found (2)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
   },
   "telegram_review_sent": true,
   "telegram_review_fingerprint": "48fdf5daa7ce7f971e21ff2596787448491e8bd6"
