@@ -1779,10 +1779,14 @@
     },
     "sifma_news_speeches_6e10041a": {
       "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed",
+        "text_too_short",
         "word_count_too_low",
-        "too_much_boilerplate_noise"
+        "missing_required_keywords"
       ],
       "rules_used": {
+        "record_type": "article",
         "required_keywords": [
           "treasury",
           "fixed income",
@@ -1796,6 +1800,14 @@
           "career center"
         ],
         "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
         "target_name": "SIFMA News",
         "topic": "market structure"
       }
@@ -4416,6 +4428,223 @@
     "valid_1": {
       "reasons": [
         "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "federal_reserve_press_releases_federal_reserve_board_2021_press_releases_e9623df4": {
+      "reasons": [
+        "contains_blocked_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "liquidity",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases",
+        "topic": "macro catalysts"
+      }
+    },
+    "seed_crawl_bankofcanada_annual_exchange_rates_741db621ac7b377b": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_bankofcanada_currency_converter_d4d2fd4e586ad438": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_bankofcanada_daily_exchange_rates_c230f26d7f263135": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_bankofcanada_daily_exchange_rates_lookup_tool_94a949ceb8f8dab0": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_bankofcanada_exchange_rates_6b29d7ca044fdc79": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_bankofcanada_historical_canadiandollar_effective_exchange_rate_fa391b564047a281": {
+      "reasons": [
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_economic_bulletin_language_versions_0d7e2965ec21a10e": {
+      "reasons": [
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_focus_7abad468826ba41c": {
+      "reasons": [
+        "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_forecasting_and_business_cycle_analysis_f98ebff0d5163103": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_papers_by_authors_ece8b3781ccc1b5b": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_real_sector_and_microeconomic_analysis_127365baca6dc143": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_2026_fomc_press_releases_65f5277892a84a92": {
+      "reasons": [
+        "word_count_too_low"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_labor_market_tightness_index_de1eb2723f33ee54": {
+      "reasons": [
+        "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_mapping_home_price_changes_077a321b5eaa91d1": {
+      "reasons": [
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_regional_employment_trends_c94ede4a5a67c019": {
+      "reasons": [
+        "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_reserve_demand_elasticity_da698a9f0a0d9437": {
+      "reasons": [
+        "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_the_yield_curve_as_a_ab0f8de85363eaf1": {
+      "reasons": [
+        "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_treasury_term_premia_4bbb907493ecee89": {
+      "reasons": [
+        "text_too_short",
+        "word_count_too_low",
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_visiting_scholars_federal_reserve_bank_04bbf237cf427866": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_1603_program_payments_for_specified_6d2dec39fd5f1d73": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_federal_insurance_office_373cd9abeb4814cf": {
+      "reasons": [
         "word_count_too_low",
         "not_enough_relevant_keywords"
       ],
@@ -7122,6 +7351,357 @@
         ],
         "target_name": "SIFMA News",
         "topic": "market structure"
+      }
+    },
+    "ecb_blog_how_euro_area_firms_inflation_expectations_affect_their_busi_71eba238": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "ecb"
+        ],
+        "blocked_keywords": [
+          "banknotes",
+          "careers",
+          "legal framework"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "ECB Blog",
+        "topic": "macro catalysts"
+      }
+    },
+    "ecb_blog_monetary_policy_transmission_why_consumers_housing_situation_5e5d4996": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "ecb"
+        ],
+        "blocked_keywords": [
+          "banknotes",
+          "careers",
+          "legal framework"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "ECB Blog",
+        "topic": "macro catalysts"
+      }
+    },
+    "federal_reserve_press_releases_federal_reserve_board_2021_fomc_press_releases_10a06a1a": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "liquidity",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases",
+        "topic": "macro catalysts"
+      }
+    },
+    "new_york_fed_liberty_street_ec_firms_inflation_expectations_return_to_2024_levels_liberty_s_fb01e3b2": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "market",
+          "treasury",
+          "inflation",
+          "rates",
+          "liquidity",
+          "repo"
+        ],
+        "blocked_keywords": [
+          "community",
+          "museum",
+          "student"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "New York Fed Liberty Street Economics",
+        "topic": "market structure"
+      }
+    },
+    "new_york_fed_markets_data_hub_agency_commercial_mortgage_backed_securities_federal_reserve_392f1806": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "sofr",
+          "repo",
+          "market",
+          "operations",
+          "treasury",
+          "funding"
+        ],
+        "blocked_keywords": [
+          "consumer",
+          "education"
+        ],
+        "min_word_count": 120,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "New York Fed Markets Data Hub",
+        "topic": "market structure"
+      }
+    },
+    "rba_speeches_monetary_policy_decision_speeches_rba_96652fb8": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "financial stability",
+          "rba"
+        ],
+        "blocked_keywords": [
+          "opening remarks",
+          "welcome remarks",
+          "staff appointment"
+        ],
+        "min_word_count": 220,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "RBA Speeches",
+        "topic": "macro catalysts"
+      }
+    },
+    "seed_crawl_bankofcanada_canadian_effective_exchange_rates_591df56abe608092": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_economic_bulletin_issue_1_2026_9d40211f4f5f79c8": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_international_macro_and_finance_073f1ffec9fb47aa": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_ecb.europa_the_ecb_blog_b3d9add0dfb060c9": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_2025_fomc_press_releases_62103aeea0f5292c": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_2025_press_releases_8879805e4bcc5c86": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_2026_press_releases_4b6cd197c58a4cd2": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_federal_reserve_issues_fomc_statement_5b4f711c5d85b296": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_implementation_note_issued_april_28_225149e2d5f13cd9": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_implementation_note_issued_january_27_58732d1e9511c225": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_implementation_note_issued_june_16_4e374bfdaa5f8a49": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_federalreserve_implementation_note_issued_march_17_b0c87a924a6cf75e": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_applied_macroeconomics_econometrics_center_9a3773e90053af08": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_early_benchmarked_employment_data_ebc4f631a6c49fdb": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_economic_heterogeneity_indicators_93a63e6493cab37d": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_economic_indicators_calendar_new_york_6c61833a6a22a32b": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_new_york_fed_releases_report_9ac737d7c8551af4": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_new_york_fed_releases_reports_6893957819946878": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_new_york_fed_releases_special_e336e23ed0dece00": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_new_york_fed_research_resident_ab12bbfec451f71d": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_outside_journals_federal_reserve_bank_96cb2b53608ad312": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_people_federal_reserve_bank_of_2eef52d962a366ea": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_publications_7d2cd0a49dc45e73": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_newyorkfed_the_labor_market_for_recent_c7cff5f1cf8630fe": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_cash_and_debt_forecasting_9c8917f9f3d76ef3": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_debt_limit_473bf7fd285cb8b1": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_financial_stability_oversight_council_300c471fb877bec2": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_restore_act_d3151d4fdf5a3524": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "seed_crawl_treasury_treasury_and_artificial_intelligence_ea446cf9239fb3e0": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
       }
     }
   }
