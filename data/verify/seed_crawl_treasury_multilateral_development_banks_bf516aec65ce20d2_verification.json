@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE: Source is a policy topic landing/overview page (home.treasury.gov/policy-issues/), which qualifies as a navigation/listing page per Rule #5 — reject required",
+    "PUBLISHED_AT missing: No date provided to assess recency of the source content",
+    "EVENT_TYPE: Set to 'unknown' — correct in this case, but source lacks any specific event type that would make it suitable for the archive",
+    "No market-moving content: Page is purely institutional/descriptive overview; contains no specific policy decisions, rate actions, data releases, forecasts, or macro catalyst information",
+    "Source is informational background material, not archival-worthy research or policy action",
+    "Summary and why_it_matters correctly identify the page's nature but this confirms the source lacks archival value for a finance research archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is clearly an institutional overview page on a government website (home.treasury.gov/policy-issues/). This is a navigation/landing page type, not an article or research document. The record correctly identifies it lacks market-moving content, has no published date, and is thin for archival purposes. Auto-rejection is appropriate per Rule #5 and Rule #6.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an institutional overview page from the U.S. Treasury describing the Administration's engagement with multilateral development banks (MDBs) including the World Bank, regional development banks, and the European Bank for Reconstruction and Development. The page outlines U.S. priorities for MDB governance, transparency, and lending policies but does not contain specific current policy announcements or market-moving information.",
+    "why_it_matters": "This page provides background context on U.S. policy toward multilateral development institutions but does not contain specific near-term market-moving information. It is relevant for understanding the institutional framework through which the U.S. engages with global development finance but lacks concrete current policy decisions or economic forecasts.",
+    "macro_context": "While MDBs can have macroeconomic influence through development financing, this source is an informational overview page that does not discuss current macro conditions or near-term economic outlook. It does not provide specific macro catalyst information.",
+    "market_structure_context": ""
+  }
+}

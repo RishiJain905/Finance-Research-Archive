@@ -1,0 +1,90 @@
+{
+  "id": "seed_crawl_federalreserve_plans_for_reducing_the_size_af80a8a5a2e60bc4",
+  "created_at": "2026-04-01T13:43:52.419167+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Plans for Reducing the Size of the Federal Reserve's Balance Sheet",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504b.htm",
+    "published_at": "2022-05-04",
+    "source_type": "fomc_statement",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve announced plans for quantitative tightening beginning June 1, 2022, with monthly caps on securities runoff set at $30 billion for Treasuries and $17.5 billion for agency MBS initially, doubling to $60 billion and $35 billion respectively after three months. All FOMC participants agreed to the plan, which is designed to reduce the balance sheet in a predictable manner while maintaining an ample reserves regime.",
+  "key_points": [
+    "Reinvestment caps begin June 1, 2022: Treasury securities capped at $30bn/month initially, rising to $60bn/month after three months",
+    "Agency debt and mortgage-backed securities capped at $17.5bn/month initially, rising to $35bn/month after three months",
+    "Treasury runoff includes Treasury coupon securities and Treasury bills to the extent coupon maturities fall below the monthly cap",
+    "The Committee intends to slow and stop balance sheet decline when reserve balances are \"somewhat above\" ample reserves level",
+    "The Fed will manage securities holdings as needed to maintain ample reserves over time after runoff ceases",
+    "The Committee retains flexibility to adjust any details of the approach based on economic and financial developments"
+  ],
+  "why_it_matters": "This announcement formalized the Fed's quantitative tightening (QT) program, representing a significant shift in monetary policy after years of asset purchases. The specific caps and timeline gave markets a predictable framework for understanding the pace of balance sheet reduction. The distinction between Treasuries and MBS caps, along with the phase-in schedule, provided forward guidance on the structural composition of the Fed's balance sheet going forward.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The announcement formalized the transition from the Fed's post-2008 ample reserves framework, describing how principal payments would be capped and reinvestment would cease once caps are exceeded. The language around maintaining 'ample reserves' and the commitment to adjust QT pace based on financial conditions indicated the Fed was preserving flexibility in its reserve management operations.",
+  "important_numbers": [
+    "$30 billion/month (initial Treasury cap)",
+    "$60 billion/month (Treasury cap after 3 months)",
+    "$17.5 billion/month (initial agency MBS/debt cap)",
+    "$35 billion/month (agency cap after 3 months)"
+  ],
+  "tags": [
+    "fed",
+    "balance-sheet",
+    "quantitative-tightening",
+    "qt",
+    "soma",
+    "fomc",
+    "monetary-policy",
+    "reserve-management",
+    "runoff"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "source_type field incorrectly set to 'fomc_statement' - source is a Federal Reserve press release (monetary20220504b.htm in newsevents/pressreleases/), not an FOMC statement document. Should be 'press_release'. While the press release describes Committee decisions, it is a separate accompanying document, not the FOMC statement itself."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Historical document from 2022. Still valid as archival record of QT framework announcement but should be flagged as historical for context."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_plans_for_reducing_the_size_af80a8a5a2e60bc4.txt",
+  "notes": "This is a historical record of the Fed's May 2022 QT announcement. While the technical details remain accurate as historical reference, the publication date is significantly before TODAY (2026-04-01). The source represents the initial framework announcement and does not reflect subsequent adjustments to QT pace that occurred later in 2022-2023. Archive for historical reference on Fed balance sheet policy evolution, but do not treat as current policy guidance.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 73.0,
+    "reasoning": [
+      "quality score: 73.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

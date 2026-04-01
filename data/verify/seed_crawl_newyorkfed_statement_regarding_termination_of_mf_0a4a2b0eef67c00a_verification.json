@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Summary states the termination occurred 'during the MF Global collapse' and mentions 'substantial exposure to European sovereign debt' - these claims are not in the source text itself; they are historical inferences",
+    "macro_context adds detailed context about 'counterparty risk' and 'European sovereign debt exposure' that is not present in the source",
+    "market_impact with directional_bias 'mixed' is speculative - the source contains no information about market impact",
+    "The source is a single-paragraph factual notice with no substantive analysis or detail beyond the termination announcement"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is from a high-trust domain (Federal Reserve) and documents a legitimate market structure event (primary dealer termination), which has historical archival value. However, the record adds substantive historical context (MF Global collapse details, European sovereign debt exposure) that is not present in the source text itself. The balance between faithful representation and useful context needs human judgment. The source is extremely thin - essentially a one-paragraph notice - but the event it documents is historically significant for primary dealer market structure research.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve Bank of New York terminated MF Global Inc.'s status as a primary dealer on October 31, 2011.",
+    "why_it_matters": "This statement documents the formal removal of MF Global Inc. from the Federal Reserve's primary dealer network. Primary dealers are essential counterparties in Treasury market operations, and their removal affects market liquidity infrastructure.",
+    "macro_context": "The source is a brief factual notice providing no additional context about MF Global or the broader market environment.",
+    "market_structure_context": "The termination of MF Global as a primary dealer represents a direct change to the Federal Reserve's official counterparty list for Treasury market operations. Primary dealers serve as essential intermediaries in Treasury auctions and market-making."
+  }
+}

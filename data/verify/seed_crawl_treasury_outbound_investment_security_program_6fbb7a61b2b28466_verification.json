@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "published_at date not provided in source metadata - cannot verify currency against TODAY (2026-04-01)",
+    "Source is an institutional program overview page rather than a specific regulatory guidance document - content appears to be static program description",
+    "Source lacks distinct publication date, making it difficult to assess whether it represents current program status or historical snapshot"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the generated record accurately summarizes the source content and the event_type (regulatory_guidance) is valid, the missing published_at date prevents verification of currency. The source is a Treasury program overview page with indirect market implications. Human judgment is needed to determine if institutional policy overview pages without publication dates meet the archival threshold for macro catalysts, given that the source itself lacks market-moving content or specific financial data.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

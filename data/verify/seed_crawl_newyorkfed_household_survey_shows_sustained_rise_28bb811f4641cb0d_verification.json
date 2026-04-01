@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "SOURCE TARGET specifies 'market structure' but content is consumer spending survey data with no market structure or trading operations implications",
+    "Published 2022-01-24, over 4 years old relative to TODAY (2026-04-01) — exceeds 90-day threshold, requires assessment of archival value",
+    "Record correctly identifies topic mismatch in macro_context but does not suggest correcting the topic field itself"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-sourced, but the topic assignment ('market structure') is misaligned with content type (consumer spending expectations). Human review needed to determine whether this record should be reclassified to 'macro catalysts' or 'economic data', or whether it should be excluded from the archive based on topic mismatch. Age (4+ years) also warrants confirmation of archival intent.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "This release provides data on consumer spending expectations from the December 2021 Survey of Consumer Expectations. Rising spending growth expectations (4.6% year-ahead) combined with lower reported likelihood of large purchases suggests households anticipate elevated prices, which could reinforce inflationary pressures. Historical record from early post-pandemic period (January 2022) — serves as a benchmark for consumer behavior during that era. Topic note: SOURCE TARGET 'market structure' is misaligned with this content type; consumer spending expectations data would be better categorized under 'macro catalysts' or 'economic data'.",
+    "market_structure_context": ""
+  }
+}

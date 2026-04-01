@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an informational/administrative hub page about CFIUS, not a market-moving document",
+    "No published_at date provided in source metadata",
+    "Event_type set to 'unknown' which is technically correct but the page references multiple document types (RFI, final rules)",
+    "The page aggregates multiple sub-documents rather than containing original substantive content",
+    "Source may be out of scope for an archive focused on market structure and macro catalysts, despite being tagged as 'macro catalysts' in metadata"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record accurately describes the source content and is well-structured, but the fundamental question is whether this type of informational hub page about CFIUS procedures belongs in an archive focused on market structure and macro catalysts. The 'why_it_matters' field correctly identifies this as non-market-moving. Human judgment is needed to determine if historical CFIUS policy information has sufficient archival value for this specific archive's mandate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

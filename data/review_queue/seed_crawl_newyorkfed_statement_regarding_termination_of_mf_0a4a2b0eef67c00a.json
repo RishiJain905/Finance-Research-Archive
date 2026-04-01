@@ -1,0 +1,79 @@
+{
+  "id": "seed_crawl_newyorkfed_statement_regarding_termination_of_mf_0a4a2b0eef67c00a",
+  "created_at": "2026-04-01T13:53:54.498608+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "Statement Regarding Termination of MF Global Inc. as a Primary Dealer",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/statements/2011/1031_2011a",
+    "published_at": "2011-10-31",
+    "source_type": "statement",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The Federal Reserve Bank of New York terminated MF Global Inc.'s status as a primary dealer on October 31, 2011.",
+  "key_points": [
+    "The Federal Reserve Bank of New York formally terminated MF Global Inc.'s status as a primary dealer on October 31, 2011",
+    "Primary dealer relationships are administered by the Federal Reserve Bank of New York",
+    "The termination of primary dealer status is a formal market structure action documented by the New York Fed"
+  ],
+  "why_it_matters": "This statement documents the formal removal of MF Global Inc. from the Federal Reserve's primary dealer network. Primary dealers are essential counterparties in Treasury market operations, and their removal affects market liquidity infrastructure.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 3
+  },
+  "macro_context": "The source is a brief factual notice providing no additional context about MF Global or the broader market environment.",
+  "market_structure_context": "The termination of MF Global as a primary dealer represents a direct change to the Federal Reserve's official counterparty list for Treasury market operations. Primary dealers serve as essential intermediaries in Treasury auctions and market-making.",
+  "important_numbers": [],
+  "tags": [
+    "primary-dealer",
+    "mf-global",
+    "fed",
+    "new-york-fed",
+    "market-structure",
+    "counterparty",
+    "treasury-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Summary states the termination occurred 'during the MF Global collapse' and mentions 'substantial exposure to European sovereign debt' - these claims are not in the source text itself; they are historical inferences",
+      "macro_context adds detailed context about 'counterparty risk' and 'European sovereign debt exposure' that is not present in the source",
+      "market_impact with directional_bias 'mixed' is speculative - the source contains no information about market impact",
+      "The source is a single-paragraph factual notice with no substantive analysis or detail beyond the termination announcement"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is from a high-trust domain (Federal Reserve) and documents a legitimate market structure event (primary dealer termination), which has historical archival value. However, the record adds substantive historical context (MF Global collapse details, European sovereign debt exposure) that is not present in the source text itself. The balance between faithful representation and useful context needs human judgment. The source is extremely thin - essentially a one-paragraph notice - but the event it documents is historically significant for primary dealer market structure research."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_statement_regarding_termination_of_mf_0a4a2b0eef67c00a.txt",
+  "notes": "This source is a historical record from October 31, 2011. While it documents a real market structure event (termination of primary dealer status), the source text contains only the bare announcement with no additional context. The MF Global collapse was a significant market structure event, but this particular source provides minimal extractable information beyond the core fact of termination. Confidence lowered due to age (14+ years), thin content, and lack of supporting detail.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source content is minimal - single paragraph notice",
+      "Historical record (2011) outside typical research window",
+      "Provides only a factual statement without context or analysis",
+      "Limited extractable information for RAG purposes"
+    ]
+  }
+}

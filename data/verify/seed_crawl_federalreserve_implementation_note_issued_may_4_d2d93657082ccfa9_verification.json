@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 8,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'fomc_statement' but the source is an 'Implementation Note' - this is an operational/implementation document distinct from the actual FOMC statement issued on May 4, 2022. The correct event_type should likely be 'rate_decision' or possibly 'monetary_policy_report', not 'fomc_statement'."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is otherwise well-constructed with accurate data and strong archival value, but the event_type classification requires human judgment. Implementation Notes are operational documents that implement the FOMC's policy decision, not the statement itself. A human reviewer should confirm whether 'fomc_statement' is acceptable shorthand for this document type or whether it should be reclassified.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve unanimously raised the target range for the federal funds rate to 3/4 to 1 percent, effective May 5, 2022, implementing the FOMC's policy decision through changes to reserve balance interest rates, repo and reverse repo operational parameters, and balance sheet reinvestment caps. The Board also approved a 1/2 percentage point increase in the primary credit rate to 1.0 percent.",
+    "why_it_matters": "This implementation note details the operational mechanics of the Fed's May 2022 policy tightening, including the specific target range (75-100 bps), the key policy rate floors (0.9% IORB, 1.0% repo minimum bid), and the pace of balance sheet runoff. These parameters directly affect short-term funding markets, money market fund yields, and the overall stance of monetary policy. The $500 billion RRP facility cap and the reinvestment caps signal the Fed's approach to normalizing its balance sheet while managing short-term rate volatility.",
+    "macro_context": "The May 2022 FOMC meeting marked a significant escalation in the Fed's anti-inflation campaign, moving from a 25 bps hike in March 2022 to a 50 bps hike. The combination of rate increases and balance sheet runoff (QT) represented a significant tightening of financial conditions. The 0.9% interest on reserve balances and the 1.0% repo rate floor set important benchmarks for money market rates during this tightening cycle.",
+    "market_structure_context": "The implementation note specifies operational parameters for monetary policy execution: (1) RRP facility at 0.8% offering rate with $160bn per-counterparty limit, (2) repo operations at 1.0% minimum bid rate with $500bn aggregate limit, and (3) monthly caps for Treasury ($30bn) and MBS ($17.5bn) reinvestments. These parameters define the Fed's interest rate floor system and balance sheet normalization approach."
+  }
+}
