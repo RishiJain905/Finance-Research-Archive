@@ -1,0 +1,85 @@
+{
+  "id": "federal_reserve_press_releases_federal_reserve_board_2023_press_releases_042fe275",
+  "created_at": "2026-04-01T00:55:31.877150+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Federal Reserve Board - 2023 Press Releases",
+  "source": {
+    "name": "Federal Reserve Press Releases",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2023-press.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "12/20/2023",
+    "source_type": "press_release"
+  },
+  "summary": "This is an annual index page listing Federal Reserve Board press releases from calendar year 2023. The page contains dozens of disparate announcements including enforcement actions, banking applications, regulatory proposals, committee appointments, and FOMC/discount rate meeting minutes. Most items relate to regulatory and supervisory matters rather than direct macro catalysts or market structure. The source is not a single archiveable document but rather a chronological archive index requiring individual item review.",
+  "key_points": [
+    "The source is a listing/index page, not a single document, containing approximately 60+ separate press releases from 2023",
+    "FOMC minutes referenced include meetings from July 25-26, September 19-20, and October 31-November 1, 2023",
+    "Discount rate meeting minutes were released for multiple periods in 2023",
+    "A survey of senior financial officers regarding reserve balance management strategies was published (August 1 and December 15)",
+    "Reserve requirement exemption amount and low reserve tranche were indexed for 2024 (November 27)",
+    "Most items are enforcement actions, banking applications, and regulatory policy updates (CRA, debt requirements, appraisal thresholds)"
+  ],
+  "why_it_matters": "This index page aggregates Federal Reserve communications but is too broad for direct use in RAG applications. Researchers seeking macro catalyst or market structure information must identify and access individual press releases from this archive. The FOMC minutes and reserve balance survey contain potentially relevant information but require separate extraction.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Reserve balance management survey results published August 1 and December 15, 2023 may contain relevant information on bank reserve strategies but require individual document review.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "press-releases",
+    "archive-index",
+    "2023",
+    "enforcement-actions",
+    "regulatory",
+    "fomc-minutes"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "PAGE_TYPE metadata claims 'press_release' but actual content is a listing/index page containing dozens of separate press releases",
+      "Source is a container page (listing of ~60+ disparate announcements) — not a single archiveable document",
+      "Most contained items are not relevant to macro catalysts or market structure (enforcement actions, banking applications, CRA updates)",
+      "No single coherent topic; source aggregates unrelated Federal Reserve communications from 2023",
+      "Published_at (12/20/2023) is the index compilation date, not representative of any contained item",
+      "Content was truncated per source warning, further reducing archival value",
+      "event_type set to 'unknown' but source type is inherently not archivable as a single record",
+      "Cannot support meaningful summary or key_points for RAG applications due to lack of topical coherence"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is a listing page requiring individual document extraction. PAGE_TYPE metadata is misclassified. Human review needed to confirm rejection and note that FOMC minutes and reserve balance surveys from this index should be extracted as separate records."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/federal_reserve_press_releases_federal_reserve_board_2023_press_releases_042fe275.txt",
+  "notes": "CRITICAL: This source is a listing page containing multiple unrelated press releases. PAGE_TYPE metadata incorrectly shows 'press_release' but content is clearly an index/archive page. Individual FOMC minutes releases and reserve balance surveys should be extracted separately for proper archival. This listing page itself is not suitable for RAG use due to lack of coherent topical focus. The page date of 12/20/2023 makes this a historical record (over 90 days before TODAY 2026-04-01).",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "not_archivable",
+    "score": 2,
+    "reasoning": [
+      "Source is a listing page, not a single coherent document",
+      "Contains 60+ disparate announcements unrelated to each other",
+      "Most content not relevant to macro catalysts or market structure",
+      "Requires individual document extraction for proper archival",
+      "Historical record with reduced relevance for current market conditions"
+    ]
+  }
+}

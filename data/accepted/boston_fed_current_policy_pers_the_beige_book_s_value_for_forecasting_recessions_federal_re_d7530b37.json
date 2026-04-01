@@ -1,0 +1,88 @@
+{
+  "id": "boston_fed_current_policy_pers_the_beige_book_s_value_for_forecasting_recessions_federal_re_d7530b37",
+  "created_at": "2026-04-01T00:52:43.837901+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "The Beige Book's Value for Forecasting Recessions",
+  "source": {
+    "name": "Boston Fed Current Policy Perspectives",
+    "url": "https://www.bostonfed.org/publications/current-policy-perspectives/2025/beige-book-for-forecasting-recessions.aspx",
+    "domain": "www.bostonfed.org",
+    "published_at": "2025-11-06T15:00:00.000Z",
+    "source_type": "article"
+  },
+  "summary": "This research paper from the Federal Reserve Bank of Boston investigates whether Beige Book sentiment indexes improve recession forecasting beyond established financial indicators. The authors find that incorporating Beige Book-derived sentiment measures into models using the term spread, lagged term spread, and S&P 500 improves short-term (3-month) recession forecasting. However, the added value is less clear for longer-term (12-month) forecasts. The study also finds that District-level sentiment is more predictive than the national summary, and Beige Book content overlaps with but is not wholly redundant to financial indicators.",
+  "key_points": [
+    "Beige Book sentiment indexes constructed using FinBERT-Tone (a large language model) were tested against models using term spread, excess bond premium, and S&P 500.",
+    "Adding Beige Book sentiment improves 3-month recession forecasting models when combined with term spread, lagged term spread, and S&P 500.",
+    "For 12-month horizon forecasts using term spread and excess bond premium, Beige Book sentiment does not unambiguously improve accuracy.",
+    "District-level sentiment provides more predictive value than national summary sentiment for detecting and forecasting recessions.",
+    "Beige Book information overlaps with financial indicators but captures additional subjective factors like business and investor confidence.",
+    "The authors analyzed Beige Books from May 1970 through August 2025 using sentence-level sentiment classification ranging from -1 (all negative) to +1 (all positive)."
+  ],
+  "why_it_matters": "This research is relevant for understanding the incremental information content of Federal Reserve communications. For market participants and policymakers, the finding that qualitative Beige Book data adds value over purely quantitative financial indicators for short-term recession risk assessment suggests the anecdotal intelligence gathered from business contacts captures genuine forward-looking economic signals that are not fully priced into Treasury spreads or equity markets. The District-level finding implies that regional economic divergences may be particularly informative for recession forecasting.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The paper contributes to understanding recession risk assessment methodology. It demonstrates that the Beige Book's qualitative information captures non-redundant economic signals, particularly about near-term recession risk. The analysis suggests business and investor confidence factors, as captured in District-level sentiment, provide incremental predictive power for 3-month recession forecasting horizons.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3-month horizon (short-term forecast)",
+    "12-month horizon (longer-term forecast)",
+    "-1 minimum sentiment value (all negative sentences)",
+    "+1 maximum sentiment value (all positive sentences)",
+    "May 1970 through August 2025 (data sample period)"
+  ],
+  "tags": [
+    "beige-book",
+    "recession-forecasting",
+    "sentiment-analysis",
+    "federal-reserve",
+    "term-spread",
+    "excess-bond-premium",
+    "district-level-data",
+    "large-language-model",
+    "financial-indicators",
+    "economic-research"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/boston_fed_current_policy_pers_the_beige_book_s_value_for_forecasting_recessions_federal_re_d7530b37.txt",
+  "notes": "This is a research paper with no direct market-moving implications. The source is well-sourced and credible, originating from Federal Reserve Bank of Boston staff economists. Published 2025-11-06, which is approximately 5 months before TODAY (2026-04-01), so it remains relatively recent. The paper does not discuss current monetary policy decisions or near-term economic conditions. Market impact is marked as 0 because this is methodological research on recession forecasting, not a policy announcement or economic data release that would immediately affect markets. Note: source body was truncated in provided text, though the core methodology and findings are captured.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 65.5,
+    "reasoning": [
+      "quality score: 65.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "lower-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}
