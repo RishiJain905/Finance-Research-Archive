@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "SOURCE IS OUT OF SCOPE: Source content is a 1998 regional employment forecast with no relevance to market structure (trading mechanisms, market plumbing, order flow, exchange operations) or macro catalysts (central bank policy, rate decisions, economic data releases with market-moving implications)",
+    "SOURCE METADATA MISLEADING: TOPIC field shows 'market structure' but source contains only regional labor market analysis",
+    "AGE EXCEEDS RETENTION VALUE: Published 1998-04-07, approximately 28 years before TODAY (2026-04-01). Per rule: 'If PUBLISHED_AT is more than 90 days before TODAY, the record may still be accepted if it has clear archival value.' This source lacks archival value for finance research—no historical policy decisions, key research findings, or relevance to current market analysis",
+    "The generated record accurately summarizes the source content, but the source itself is outside the archive's scope and should be rejected"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately represents source content, but source is clearly out of scope. No ambiguity—regional employment forecast from 1998 has no relevance to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

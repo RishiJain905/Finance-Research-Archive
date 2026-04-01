@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be a valid taxonomy value. This is an informational/government reference page about tax expenditure methodology. A more appropriate event_type would be 'economic_commentary' or similar research category.",
+    "No published_at date provided in source metadata - cannot assess whether source is current or stale",
+    "Source is informational/reference material (FAQ/guide page) rather than a market-moving event or catalyst",
+    "verification_confidence in the record is set to 0, which appears to be an unset or error value rather than an intentional score"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type is missing a valid taxonomy value, which is a core requirement. The record correctly identifies this as informational reference material rather than a market catalyst, but the missing event_type classification and lack of publication date require human decision on appropriate categorization and archival value.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This Treasury page provides a comprehensive FAQ explaining the definition, methodology, and scope of federal tax expenditures—revenue losses from special exclusions, deductions, credits, or preferential tax rates. The page includes FY2026 estimates for the largest tax expenditures, with employer medical insurance contributions totaling $296 billion and capital gains exclusions at $135 billion. The content is informational and methodological rather than a policy announcement or market-moving release.",
+    "why_it_matters": "This page provides foundational reference material for understanding U.S. fiscal policy and the scope of tax subsidies. While not market-moving in itself, the $296 billion employer medical exclusion and $135 billion capital gains exclusion represent significant fiscal levers that influence labor markets, housing, and investment decisions. Fiscal analysts and macro researchers use these estimates to assess the cost and distributional impact of current tax policy.",
+    "macro_context": "Tax expenditures function as alternative policy instruments alongside direct spending and regulation. The largest categories—health insurance exclusions, retirement savings incentives, and capital gains preferences—represent substantial implicit fiscal commitments. Understanding their scale is essential for assessing potential fiscal consolidation scenarios, tax reform proposals, and the true cost of current tax policy relative to direct appropriation spending.",
+    "market_structure_context": ""
+  }
+}

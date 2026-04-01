@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/listing page containing only links, not substantive policy content",
+    "Source type is incorrectly labeled as 'unknown' - it should be 'navigation_page' per Core Rule 5",
+    "No actual revenue proposal details, figures, or tax policy changes stated on the page",
+    "Source provides no actionable macro catalyst information",
+    "Missing published_at date in metadata",
+    "This page should be rejected per Core Rule 6 - navigation pages are not archiveable as primary content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the generated record correctly identifies this as a thin navigation page, the event_type is incorrectly set to 'unknown' instead of properly noting it as a navigation_page. Human review needed to confirm rejection and potentially redirect to the actual FY2025 budget documents (linked PDFs/Excel files) which would contain substantive revenue proposal content suitable for archiving.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a navigation page on Treasury.gov that lists links to the General Explanations of the Administration's Revenue Proposals for FY2025 (released March 2024) and prior fiscal years back to 1991. The page does not contain the actual revenue proposal content—only references to accompanying budget documents, Excel tables, and prior year archives.",
+    "why_it_matters": "This page serves as an index to Treasury revenue proposal documents but contains no actionable information. Actual macro catalyst potential would depend on the content of linked FY2025 budget documents, which are not present in this source body.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "seed_crawl_federalreserve_implementation_note_issued_june_15_a6cad0f0fcebf657",
+  "created_at": "2026-04-01T17:07:27.139832+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "fomc_statement",
+  "title": "Implementation Note issued June 15, 2022",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a1.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2022-06-15",
+    "source_type": "press_release"
+  },
+  "summary": "The Federal Reserve unanimously raised the federal funds rate target range to 1-1/2 to 1-3/4 percent, implementing a 75 basis point increase, effective June 16, 2022. The Board also raised the primary credit rate to 1.75 percent and the interest rate on reserve balances to 1.65 percent. The FOMC maintained its reinvestment caps of $30 billion for Treasuries and $17.5 billion for agency MBS per month.",
+  "key_points": [
+    "Board of Governors voted unanimously to raise interest rate paid on reserve balances to 1.65 percent, effective June 16, 2022",
+    "Federal funds rate target range raised to 1-1/2 to 1-3/4 percent (75 bps increase)",
+    "Overnight repurchase agreement operations: minimum bid rate of 1.75 percent, aggregate limit of $500 billion",
+    "Overnight reverse repurchase agreement operations: offering rate of 1.55 percent, per-counterparty limit of $160 billion per day",
+    "Treasury reinvestment cap of $30 billion per month for June and July; agency MBS reinvestment cap of $17.5 billion per month",
+    "Primary credit rate increased by 3/4 percentage point to 1.75 percent, approved unanimously"
+  ],
+  "why_it_matters": "This Implementation Note operationalizes the June 2022 FOMC decision, which represented the Fed's most aggressive rate hike since 1994. The 75 basis point increase, combined with ongoing reinvestment caps, signaled a significant shift toward tighter monetary policy to combat inflation. Market participants rely on these implementation details to understand the actual mechanics of policy transmission.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "equities"
+    ],
+    "directional_bias": "risk_off",
+    "confidence": 7
+  },
+  "macro_context": "This rate decision was implemented during a period of elevated inflation in mid-2022. The document shows the Fed maintained its gradualist approach to quantitative tightening by keeping reinvestment caps in place, rather than allowing full runoff of maturing securities.",
+  "market_structure_context": "The document specifies operational parameters for the Fed's monetary policy tools: the ON RRP rate (1.55%), repo minimum bid rate (1.75%), and the $500 billion aggregate repo limit. These represent the interest rate corridors for short-term funding markets.",
+  "important_numbers": [
+    "1.50-1.75% (federal funds target range)",
+    "1.65% (interest rate on reserve balances)",
+    "1.75% (primary credit rate, minimum bid rate)",
+    "1.55% (overnight reverse repo offering rate)",
+    "$500 billion (overnight repo aggregate limit)",
+    "$160 billion (RRP per-counterparty limit)",
+    "$30 billion/month (Treasury reinvestment cap)",
+    "$17.5 billion/month (agency MBS reinvestment cap)"
+  ],
+  "tags": [
+    "fomc",
+    "fed-funds-rate",
+    "rate-hike",
+    "75-basis-points",
+    "monetary-policy",
+    "quantitative-tightening",
+    "reverse-repo",
+    "primary-credit"
+  ],
+  "llm_review": {
+    "initial_confidence": 9,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'fomc_statement' but source is an 'Implementation Note' — these are distinct document types. The FOMC Statement announces the policy decision; the Implementation Note describes operational implementation details. The source should be classified as 'rate_decision' or 'monetary_policy_report' instead.",
+      "summary states 'from the prior 0.75-1.00% range' — the source does not specify the prior target range, only the new 1-1/2 to 1-3/4 percent range. This prior range detail is not in the source text and should be removed."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The event_type mismatch is significant: 'fomc_statement' implies the document that announces the policy decision, but this source is an Implementation Note that operationalizes an already-announced decision. While the numerical content is accurate and the source is high-quality, the classification error could mislead downstream users about document type. Human review needed to confirm whether 'rate_decision' or 'monetary_policy_report' is more appropriate."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_implementation_note_issued_june_15_a6cad0f0fcebf657.txt",
+  "notes": "This is a primary source Federal Reserve implementation note. Historical record (published 2022-06-15; TODAY is 2026-04-01, over 90 days prior). Contains precise operational parameters for the June 2022 FOMC decision. Source is high-quality, authoritative, and directly relevant to macro catalysts. Note: The 75 bps hike was implemented through the target range change; the primary credit rate was raised to 1.75%, effectively matching the upper bound of the fed funds target range.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 9,
+    "reasoning": [
+      "Primary source from Federal Reserve",
+      "Contains exact numerical values for all policy parameters",
+      "Unanimous vote stated for all decisions",
+      "Clear operational directives for Desk implementation"
+    ]
+  }
+}

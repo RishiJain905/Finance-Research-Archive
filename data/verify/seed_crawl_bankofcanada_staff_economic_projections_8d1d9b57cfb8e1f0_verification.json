@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' and cannot be properly classified as this is database documentation, not a research paper, commentary, or any recognizable event type",
+    "Source is a technical metadata/documentation page describing a database structure, not actual economic projections or forecasts",
+    "All projection vintages end at 2019Q4, making content over 6 years old and irrelevant for current macro catalyst analysis",
+    "No published_at date provided in source metadata",
+    "Source does not contain substantive economic content, forecasts, or policy analysis—only describes database variable definitions and API access",
+    "event_type 'unknown' when the correct type should be identified as metadata-only content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This source is database documentation describing how to access historical staff projections via API. It contains no actual projections, forecasts, or economic analysis. The record correctly identifies staleness and lack of relevance, but the fundamental issue is that this documentation page should not be in a macro catalyst archive at all—it is not a policy document, research finding, or market-relevant event.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is technical documentation for the Bank of Canada's Staff Economic Projections database, explaining variable definitions, data formats, series notation, and API access via Valet. It is NOT the projections themselves—all actual projection data (vintages through 2019Q4) must be accessed separately via API. This metadata page has no relevance to current macro catalyst analysis.",
+    "why_it_matters": "This documentation page has no current market relevance. Actual historical projections (vintage 2019Q4 and earlier) could be accessed via the Valet API for retrospective analysis of Bank of Canada forecasting methodology, but this documentation page itself contains no economic data or policy insights.",
+    "macro_context": "This is purely technical documentation. No current or historical macroeconomic data or forecasts are contained in this page. The actual staff projection data is accessible via API with a five-year lag.",
+    "market_structure_context": ""
+  }
+}
