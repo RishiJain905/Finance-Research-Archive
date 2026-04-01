@@ -38,7 +38,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -51,17 +51,18 @@ jobs:
 
       - name: Finalize record
         run: |
-          ARGS="${{ inputs.record_id }} ${{ inputs.decision }}"
+          set -euo pipefail
+          ARGS=("${{ inputs.record_id }}" "${{ inputs.decision }}")
           if [ -n "${{ inputs.source_feedback }}" ]; then
-            ARGS="$ARGS --source-feedback ${{ inputs.source_feedback }}"
+            ARGS+=("--source-feedback" "${{ inputs.source_feedback }}")
           fi
           if [ -n "${{ inputs.topic_feedback }}" ]; then
-            ARGS="$ARGS --topic-feedback ${{ inputs.topic_feedback }}"
+            ARGS+=("--topic-feedback" "${{ inputs.topic_feedback }}")
           fi
           if [ -n "${{ inputs.notes }}" ]; then
-            ARGS="$ARGS --notes \"${{ inputs.notes }}\""
+            ARGS+=("--notes" "${{ inputs.notes }}")
           fi
-          python scripts/finalize_review.py $ARGS
+          python scripts/finalize_review.py "${ARGS[@]}"
 
       - name: Configure git author
         run: |
@@ -75,5 +76,5 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Finalize review: ${{ inputs.record_id }} (${{ inputs.decision }})"
-            git push origin HEAD:main
+            git push origin "HEAD:${{ github.ref_name }}"
           fi

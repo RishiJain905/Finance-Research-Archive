@@ -279,3 +279,32 @@ class TestSeedCrawlCLI:
 
         assert result.returncode == 0
         assert "seed" in result.stdout.lower() or "help" in result.stdout.lower()
+
+
+class TestSeedCrawlProcessingCap:
+    """Tests for processing-cap helper functions."""
+
+    def test_select_candidates_for_conversion_caps_by_score(self):
+        from scripts.run_seed_crawl import select_candidates_for_conversion
+
+        candidates = [
+            {"candidate_id": "a", "candidate_scores": {"total_score": 10}},
+            {"candidate_id": "b", "candidate_scores": {"total_score": 90}},
+            {"candidate_id": "c", "candidate_scores": {"total_score": 60}},
+        ]
+
+        selected = select_candidates_for_conversion(candidates, max_process_records=2)
+
+        assert [c["candidate_id"] for c in selected] == ["b", "c"]
+
+    def test_select_candidates_for_conversion_no_cap_when_zero(self):
+        from scripts.run_seed_crawl import select_candidates_for_conversion
+
+        candidates = [
+            {"candidate_id": "a", "candidate_scores": {"total_score": 10}},
+            {"candidate_id": "b", "candidate_scores": {"total_score": 90}},
+        ]
+
+        selected = select_candidates_for_conversion(candidates, max_process_records=0)
+
+        assert [c["candidate_id"] for c in selected] == ["a", "b"]

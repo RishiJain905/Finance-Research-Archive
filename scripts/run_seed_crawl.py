@@ -303,7 +303,23 @@ def _create_mock_candidates(seed: dict[str, Any]) -> list[dict[str, Any]]:
 # ============================================================================
 
 
-def run_seed_crawl(dry_run: bool = False) -> list[str]:
+def select_candidates_for_conversion(
+    candidates: list[dict[str, Any]], max_process_records: int
+) -> list[dict[str, Any]]:
+    """Select highest-scoring candidates for expensive process_record stage."""
+    if max_process_records <= 0 or len(candidates) <= max_process_records:
+        return candidates
+
+    def score_of(candidate: dict[str, Any]) -> float:
+        return float(candidate.get("candidate_scores", {}).get("total_score", 0))
+
+    ranked = sorted(candidates, key=score_of, reverse=True)
+    return ranked[:max_process_records]
+
+
+def run_seed_crawl(
+    dry_run: bool = False, max_process_records: int = 25
+) -> list[str]:
     """
     Main entry point for seed site crawling.
 
@@ -504,9 +520,18 @@ def run_seed_crawl(dry_run: bool = False) -> list[str]:
         _save_stats(total_stats)
         return discovered_ids
 
+    selected_candidates = select_candidates_for_conversion(
+        fetched_candidates, max_process_records=max_process_records
+    )
+    if len(selected_candidates) < len(fetched_candidates):
+        print(
+            f"[Pipeline] Capped conversion/processing to top {len(selected_candidates)} "
+            f"of {len(fetched_candidates)} candidates by score."
+        )
+
     # Step 4: Convert to raw records
     print(f"\n[Pipeline] Step 4: Converting to raw records...")
-    record_paths = convert_candidates(fetched_candidates)
+    record_paths = convert_candidates(selected_candidates)
 
     if not record_paths:
         print("[Pipeline] No records were created. Exiting.")
@@ -630,11 +655,19 @@ def main() -> None:
         action="store_true",
         help="Execute crawls but don't save candidates or run pipeline",
     )
+    parser.add_argument(
+        "--max-process-records",
+        type=int,
+        default=25,
+        help="Maximum records to convert/process per run (0 means no cap)",
+    )
 
     args = parser.parse_args()
 
     try:
-        discovered_ids = run_seed_crawl(dry_run=args.dry_run)
+        discovered_ids = run_seed_crawl(
+            dry_run=args.dry_run, max_process_records=args.max_process_records
+        )
 
         if args.dry_run:
             print(f"\n[DRY RUN] Would have discovered {len(discovered_ids)} candidates")

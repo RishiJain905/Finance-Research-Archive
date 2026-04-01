@@ -20,6 +20,7 @@ Examples:
 """
 
 import json
+import hashlib
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -60,6 +61,73 @@ ACCEPT_DECISIONS = [
     "good_source",
     "expand_this_topic",
 ]
+
+
+def make_callback_key(record_id: str) -> str:
+    """Create the Telegram callback key used in review buttons."""
+    return hashlib.sha1(record_id.encode()).hexdigest()[:28]
+
+
+def _find_record_by_id(record_id: str) -> tuple[str, Path, str] | None:
+    """Find a record by exact ID across review states."""
+    candidates = [
+        ("review_queue", REVIEW_QUEUE_DIR / f"{record_id}.json"),
+        ("accepted", ACCEPTED_DIR / f"{record_id}.json"),
+        ("rejected", REJECTED_DIR / f"{record_id}.json"),
+    ]
+    for location, path in candidates:
+        if path.exists():
+            return record_id, path, location
+    return None
+
+
+def _find_record_by_callback_key(callback_key: str) -> tuple[str, Path, str] | None:
+    """Resolve a Telegram callback key to a record in review states."""
+    matches: list[tuple[str, Path, str]] = []
+    for location, directory in [
+        ("review_queue", REVIEW_QUEUE_DIR),
+        ("accepted", ACCEPTED_DIR),
+        ("rejected", REJECTED_DIR),
+    ]:
+        if not directory.exists():
+            continue
+        for record_path in directory.glob("*.json"):
+            if record_path.name.endswith("_verification.json"):
+                continue
+            record_id = record_path.stem
+            if make_callback_key(record_id) == callback_key:
+                matches.append((record_id, record_path, location))
+
+    if not matches:
+        return None
+    if len(matches) == 1:
+        return matches[0]
+
+    matching_ids = ", ".join(match[0] for match in matches)
+    raise ValueError(
+        f"Callback key '{callback_key}' matches multiple records: {matching_ids}"
+    )
+
+
+def resolve_record_identifier(record_identifier: str) -> tuple[str, Path, str]:
+    """Resolve either a full record ID or Telegram callback key.
+
+    Returns:
+        Tuple of (resolved_record_id, path, location)
+    """
+    exact_match = _find_record_by_id(record_identifier)
+    if exact_match:
+        return exact_match
+
+    callback_match = _find_record_by_callback_key(record_identifier)
+    if callback_match:
+        return callback_match
+
+    raise FileNotFoundError(
+        f"Record '{record_identifier}' not found in review_queue, accepted, or rejected.\n"
+        "This can happen when a Telegram callback key was sent but no matching record "
+        "exists in this branch, or when the record ID is incorrect."
+    )
 
 
 def load_json_file(path: Path) -> dict[str, Any]:
@@ -316,23 +384,20 @@ Examples:
 
     args = parser.parse_args()
 
-    record_id = args.record_id
+    requested_record_id = args.record_id
     decision = args.decision
 
-    record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
+    record_id, record_path, location = resolve_record_identifier(requested_record_id)
 
-    if not record_path.exists():
-        for alt_dir, label in [(ACCEPTED_DIR, "accepted"), (REJECTED_DIR, "rejected")]:
-            alt_path = alt_dir / f"{record_id}.json"
-            if alt_path.exists():
-                print(
-                    f"Record '{record_id}' was already finalized and is in {label}/. Nothing to do."
-                )
-                return
-        raise FileNotFoundError(
-            f"Record '{record_id}' not found in review_queue, accepted, or rejected.\n"
-            "This may mean the record was committed to a different branch, "
-            "or the record ID is incorrect."
+    if location != "review_queue":
+        print(
+            f"Record '{record_id}' was already finalized and is in {location}/. Nothing to do."
+        )
+        return
+
+    if requested_record_id != record_id:
+        print(
+            f"Resolved callback key '{requested_record_id}' to record ID '{record_id}'."
         )
 
     canonicalize_verification_artifact(record_id)

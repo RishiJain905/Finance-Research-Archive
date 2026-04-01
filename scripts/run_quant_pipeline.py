@@ -74,10 +74,11 @@ def main() -> None:
             f"process_record ({record_id})"
         )
 
-    run_command(
-        [python_cmd, "scripts/send_pending_reviews.py"],
-        "send pending reviews"
-    )
+    send_command = [python_cmd, "scripts/send_pending_reviews.py", "--max-items", "8"]
+    for record_id in record_ids:
+        send_command.extend(["--record-id", record_id])
+
+    run_command(send_command, "send pending reviews")
 
     print("\nQuant pipeline finished.")
 

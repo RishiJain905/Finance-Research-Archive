@@ -19,7 +19,7 @@ jobs:
       MINIMAX_MODEL: MiniMax-M2.7
 
     concurrency:
-      group: data-pipeline
+      group: seed-crawl-pipeline-${{ github.ref }}
       cancel-in-progress: false
 
     steps:
@@ -35,7 +35,7 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       - name: Run seed crawl
-        run: python -m scripts.run_seed_crawl
+        run: python -m scripts.run_seed_crawl --max-process-records 25
 
       - name: Configure git author
         run: |
@@ -48,14 +48,21 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git stash
-            git pull --rebase origin main
-            git stash pop
-            git add data/
             git commit -m "Run seed crawl pipeline"
+            pushed_to_main=0
             for i in 1 2 3; do
-              git push && break
-              echo "Push attempt $i failed, retrying..."
-              git pull --rebase origin main
+              if git push origin HEAD:main; then
+                pushed_to_main=1
+                break
+              fi
+              echo "Push attempt $i to main failed, retrying..."
+              sleep 5
             done
+
+            if [ "$pushed_to_main" -ne 1 ]; then
+              backup_branch="automation/${GITHUB_WORKFLOW// /-}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+              echo "Could not push to main after retries; pushing to ${backup_branch} to preserve results."
+              git push origin "HEAD:refs/heads/${backup_branch}"
+              echo "::warning::Unable to push to main. Results were saved to branch ${backup_branch}."
+            fi
           fi

@@ -43,6 +43,15 @@ def resolve_record_id(callback_key: str) -> str | None:
     return None
 
 
+def normalize_decision_for_workflow(decision: str) -> str:
+    """Map Telegram button actions to finalize_review decisions."""
+    decision_map = {
+        "promote": "approve_and_promote",
+        "weak": "approve_but_weak",
+    }
+    return decision_map.get(decision, decision)
+
+
 def trigger_github_workflow(
     record_id: str,
     decision: str,
@@ -277,10 +286,19 @@ def telegram_webhook():
 
     record_id = resolve_record_id(callback_key)
     if record_id is None:
-        answer_callback_query(callback_id, "Record not found")
-        return jsonify(
-            {"ok": False, "message": f"No record matched key {callback_key!r}"}
-        ), 404
+        answer_callback_query(
+            callback_id,
+            "Record not found in queue (already finalized or from old branch).",
+        )
+        return (
+            jsonify(
+                {
+                    "ok": True,
+                    "message": f"Stale callback key {callback_key!r}; no matching review_queue record.",
+                }
+            ),
+            200,
+        )
 
     result_text = f"Processing {decision} for {record_id}"
     try:
@@ -305,20 +323,9 @@ def telegram_webhook():
             if chat_id and message_id and original_text:
                 send_followup_prompt(chat_id, message_id, original_text, decision)
 
-        elif decision in {"promote", "weak"}:
-            # Final decision — promote or weak (like approve_and_promote / approve_but_weak)
-            trigger_github_workflow(record_id, decision)
-            result_text = f"{decision.title()} recorded for {record_id}"
-            print(result_text)
-            answer_callback_query(callback_id, result_text)
-
-            if chat_id and message_id and original_text:
-                edit_message_after_decision(
-                    chat_id, message_id, original_text, decision
-                )
-
         else:
-            # approve or reject — check for pending source feedback first
+            # Final decision path (approve/reject/promote/weak).
+            # Attach any pending source feedback collected from a prior button click.
             record = load_record(record_id)
             source_feedback = ""
             if record:
@@ -330,7 +337,9 @@ def telegram_webhook():
                     save_record(record_id, record)
 
             trigger_github_workflow(
-                record_id, decision, source_feedback=source_feedback
+                record_id,
+                normalize_decision_for_workflow(decision),
+                source_feedback=source_feedback,
             )
             result_text = f"{decision.title()} sent for {record_id}"
             print(result_text)

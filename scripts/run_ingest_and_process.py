@@ -2,6 +2,7 @@ import json
 import shutil
 import subprocess
 import sys
+import argparse
 from pathlib import Path
 
 
@@ -129,30 +130,86 @@ def verify_manifest_consistency() -> None:
         print("==========================================\n")
 
 
+def select_records_to_process(
+    raw_ids_before_run: set[str],
+    raw_ids_after_filter: set[str],
+    include_backlog: bool,
+    max_records: int,
+) -> list[str]:
+    """Select which raw records this run should process.
+
+    By default we only process records created in this run to avoid
+    cross-lane backlog explosions. Backlog processing can be enabled manually.
+    """
+    if include_backlog:
+        candidates = sorted(raw_ids_after_filter)
+    else:
+        candidates = sorted(raw_ids_after_filter - raw_ids_before_run)
+
+    if max_records > 0:
+        return candidates[:max_records]
+    return candidates
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Run article ingest/filter/process pipeline with bounded scope."
+    )
+    parser.add_argument(
+        "--include-backlog",
+        action="store_true",
+        help="Also process pre-existing raw backlog (default: current-run records only)",
+    )
+    parser.add_argument(
+        "--max-records",
+        type=int,
+        default=40,
+        help="Maximum number of records to process in one run (0 means no cap)",
+    )
+    args = parser.parse_args()
+
     python_cmd = sys.executable
 
     print("\n=== Verifying manifest consistency ===")
     verify_manifest_consistency()
+
+    raw_ids_before_run = {f.stem for f in RAW_DIR.glob("*.txt")}
 
     run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
     run_command([python_cmd, "scripts/ingest_rss.py"], "RSS ingestion")
 
     run_command([python_cmd, "scripts/filter_raw_records.py"], "raw record filtering")
 
-    # Scan RAW_DIR after filtering so orphaned files from previous failed runs
-    # are also picked up, not just records from the current ingest.
-    records_to_process = sorted(f.stem for f in RAW_DIR.glob("*.txt"))
+    raw_ids_after_filter = {f.stem for f in RAW_DIR.glob("*.txt")}
+    records_to_process = select_records_to_process(
+        raw_ids_before_run,
+        raw_ids_after_filter,
+        include_backlog=args.include_backlog,
+        max_records=args.max_records,
+    )
 
     if not records_to_process:
-        print("\nNo records to process.")
+        if args.include_backlog:
+            print("\nNo records to process in raw backlog.")
+        else:
+            print("\nNo newly-created records to process.")
         return
+
+    if not args.include_backlog:
+        newly_created_count = len(raw_ids_after_filter - raw_ids_before_run)
+        print(
+            f"\nProcessing only records created in this run: {len(records_to_process)}/{newly_created_count}"
+        )
+
+    if args.max_records > 0 and len(records_to_process) >= args.max_records:
+        print(f"\nApplied max-records cap: {args.max_records}")
 
     print("\nRecords to process:")
     for record_id in records_to_process:
         print(f"- {record_id}")
 
     failed_ids = []
+    processed_ids: list[str] = []
     for record_id in records_to_process:
         try:
             run_command(
@@ -160,6 +217,7 @@ def main() -> None:
                 f"process_record ({record_id})",
             )
             mark_record_processed(record_id)
+            processed_ids.append(record_id)
         except RuntimeError as e:
             print(f"\n  Warning: processing failed for {record_id}: {e}")
             failed_ids.append(record_id)
@@ -168,6 +226,17 @@ def main() -> None:
         print(f"\n{len(failed_ids)} record(s) failed to process:")
         for rid in failed_ids:
             print(f"  - {rid}")
+
+    if processed_ids:
+        send_command = [
+            python_cmd,
+            "scripts/send_pending_reviews.py",
+            "--max-items",
+            "8",
+        ]
+        for record_id in processed_ids:
+            send_command.extend(["--record-id", record_id])
+        run_command(send_command, "send pending reviews")
 
     print("\nIngestion + filtering + processing pipeline finished.")
 

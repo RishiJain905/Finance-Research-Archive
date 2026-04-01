@@ -2,6 +2,7 @@ import json
 import subprocess
 import sys
 import time
+import argparse
 from pathlib import Path
 import hashlib
 
@@ -63,15 +64,55 @@ def send_review_with_retry(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Send pending human-review records to Telegram with queue guards."
+    )
+    parser.add_argument(
+        "--record-id",
+        action="append",
+        default=[],
+        help="Only consider specific record IDs (repeatable)",
+    )
+    parser.add_argument(
+        "--max-items",
+        type=int,
+        default=8,
+        help="Maximum pending review messages to send in one run",
+    )
+    args = parser.parse_args()
+
     python_cmd = sys.executable
     sent_any = False
+    sent_count = 0
+    requested_ids = set(args.record_id or [])
 
     if not REVIEW_QUEUE_DIR.exists():
         print("Review queue directory does not exist.")
         return
 
-    for record_path in sorted(REVIEW_QUEUE_DIR.glob("*.json")):
+    # Newest first so current-run records are prioritized over stale backlog.
+    record_paths = sorted(
+        (
+            p
+            for p in REVIEW_QUEUE_DIR.glob("*.json")
+            if not p.name.endswith("_verification.json")
+        ),
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+
+    skipped_for_cap = 0
+
+    for record_path in record_paths:
         if record_path.name.endswith("_verification.json"):
+            continue
+
+        record_id = record_path.stem
+        if requested_ids and record_id not in requested_ids:
+            continue
+
+        if sent_count >= args.max_items:
+            skipped_for_cap += 1
             continue
 
         try:
@@ -83,7 +124,6 @@ def main() -> None:
         if not should_send_review(record):
             continue
 
-        record_id = record_path.stem
         current_review_fp = build_review_fingerprint(record)
         last_review_fp = record.get("telegram_review_fingerprint", "")
 
@@ -107,7 +147,13 @@ def main() -> None:
         save_json_file(record_path, record)
 
         sent_any = True
+        sent_count += 1
         time.sleep(1.5)
+
+    if skipped_for_cap:
+        print(
+            f"Skipped {skipped_for_cap} additional pending review(s) due to --max-items={args.max_items}."
+        )
 
     if not sent_any:
         print("No pending review messages were sent.")
