@@ -1,7 +1,7 @@
 {
   "id": "federal_reserve_press_releases_federal_reserve_board_2022_press_releases_5254d14b",
   "created_at": "2026-04-01T01:51:03.158093+00:00",
-  "status": "review_queue",
+  "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Federal Reserve Board - 2022 Press Releases",
@@ -55,17 +55,13 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record appropriately self-identifies its limitations and accurately characterizes the source. The suggested_status of 'review_queue' is consistent with verification_confidence of 0 (which appropriately indicates inability to verify content quality for this source type). No automatic rejection is triggered because the source is a legitimate Federal Reserve archive with historical reference value, and the record does not fabricate claims. The record correctly recommends treating individual press releases as more appropriate archival targets."
+    "required": false,
+    "decision": "rejected_by_human",
+    "notes": "Rejected from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "reject",
+    "reviewed_at": "2026-04-01T02:23:47.567690+00:00"
   },
   "raw_text_path": "data/raw/federal_reserve_press_releases_federal_reserve_board_2022_press_releases_5254d14b.txt",
   "notes": "Source is a Federal Reserve index page listing all 2022 press releases. While it contains references to market-structure-relevant items (SOFR/LIBOR final rule, FedNow timing, intraday credit policy) and macro-catalyst items (FOMC minutes, discount rate actions), it is a listing/index format rather than substantive content. Individual press releases would need to be retrieved separately for detailed analysis. The source is historical (2022 data) and should be treated as stale. Not suitable for direct archiving as an actionable research document.",
