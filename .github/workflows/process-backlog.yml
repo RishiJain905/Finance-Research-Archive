@@ -1,12 +1,36 @@
-name: Quant Research Pipeline
+name: Manual Backlog Processing
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "15 13 * * *"
+    inputs:
+      max_records:
+        description: "Max backlog records to process"
+        required: false
+        type: number
+        default: 30
+      process_workers:
+        description: "Parallel process_record workers"
+        required: false
+        type: number
+        default: 2
+      send_review_max_items:
+        description: "Max Telegram reviews to send in this run"
+        required: false
+        type: number
+        default: 5
+      send_review_daily_budget:
+        description: "Daily Telegram review budget (UTC)"
+        required: false
+        type: number
+        default: 20
+      skip_send_reviews:
+        description: "Skip Telegram send step"
+        required: false
+        type: boolean
+        default: false
 
 jobs:
-  ingest-and-process-quant:
+  process-backlog:
     runs-on: ubuntu-latest
 
     permissions:
@@ -18,10 +42,9 @@ jobs:
       MINIMAX_MODEL: MiniMax-M2.7
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
 
     concurrency:
-      group: quant-pipeline-${{ github.ref }}
+      group: backlog-pipeline-${{ github.ref }}
       cancel-in-progress: false
 
     steps:
@@ -36,8 +59,15 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Run quant pipeline
-        run: python scripts/run_quant_pipeline.py --process-workers 2
+      - name: Run backlog processing
+        run: >
+          python scripts/run_ingest_and_process.py
+          --include-backlog
+          --max-records ${{ inputs.max_records }}
+          --process-workers ${{ inputs.process_workers }}
+          --send-review-max-items ${{ inputs.send_review_max_items }}
+          --send-review-daily-budget ${{ inputs.send_review_daily_budget }}
+          ${{ inputs.skip_send_reviews && '--skip-send-reviews' || '' }}
 
       - name: Configure git author
         run: |
@@ -50,7 +80,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Run quant research pipeline"
+            git commit -m "Run manual backlog processing"
             pushed_to_main=0
             for i in 1 2 3; do
               if git push origin HEAD:main; then

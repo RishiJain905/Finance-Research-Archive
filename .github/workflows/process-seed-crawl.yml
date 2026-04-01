@@ -35,7 +35,7 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       - name: Run seed crawl
-        run: python -m scripts.run_seed_crawl --max-process-records 25
+        run: python -m scripts.run_seed_crawl --max-process-records 20 --process-workers 2
 
       - name: Configure git author
         run: |

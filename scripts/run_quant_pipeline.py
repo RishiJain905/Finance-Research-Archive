@@ -1,6 +1,9 @@
 import json
 import subprocess
 import sys
+import argparse
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
@@ -51,12 +54,25 @@ def extract_created_ids(output: str) -> list[str]:
 
 
 def main() -> None:
-    python_cmd = sys.executable
+    parser = argparse.ArgumentParser(description="Run quant pipeline.")
+    parser.add_argument(
+        "--process-workers",
+        type=int,
+        default=2,
+        help="Parallel workers for process_record stage (1 for sequential)",
+    )
+    args = parser.parse_args()
 
+    python_cmd = sys.executable
+    timings: dict[str, float] = {}
+    pipeline_start = time.perf_counter()
+
+    start = time.perf_counter()
     quant_output = run_command(
         [python_cmd, "scripts/ingest_quant_data.py"],
         "quant ingestion"
     )
+    timings["ingest"] = time.perf_counter() - start
 
     record_ids = extract_created_ids(quant_output)
 
@@ -68,18 +84,51 @@ def main() -> None:
     for record_id in record_ids:
         print(f"- {record_id}")
 
-    for record_id in record_ids:
-        run_command(
-            [python_cmd, "scripts/process_record.py", record_id],
-            f"process_record ({record_id})"
-        )
+    start = time.perf_counter()
+    workers = max(1, args.process_workers)
+    if workers == 1:
+        for record_id in record_ids:
+            run_command(
+                [python_cmd, "scripts/process_record.py", record_id],
+                f"process_record ({record_id})"
+            )
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {
+                executor.submit(
+                    subprocess.run,
+                    [python_cmd, "scripts/process_record.py", record_id],
+                    cwd=BASE_DIR,
+                    text=True,
+                    capture_output=True,
+                ): record_id
+                for record_id in record_ids
+            }
+            for future in as_completed(futures):
+                rid = futures[future]
+                result = future.result()
+                if result.returncode != 0:
+                    raise RuntimeError(
+                        f"process_record ({rid}) failed with exit code {result.returncode}"
+                    )
+                if result.stdout:
+                    print(result.stdout)
+                if result.stderr:
+                    print(result.stderr)
+    timings["process"] = time.perf_counter() - start
 
     send_command = [python_cmd, "scripts/send_pending_reviews.py", "--max-items", "8"]
     for record_id in record_ids:
         send_command.extend(["--record-id", record_id])
 
+    start = time.perf_counter()
     run_command(send_command, "send pending reviews")
+    timings["send_reviews"] = time.perf_counter() - start
+    timings["total"] = time.perf_counter() - pipeline_start
 
+    print("\nTiming summary:")
+    for name, seconds in timings.items():
+        print(f"  - {name}: {seconds:.1f}s")
     print("\nQuant pipeline finished.")
 
 

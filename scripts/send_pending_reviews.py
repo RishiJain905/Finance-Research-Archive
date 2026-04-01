@@ -3,12 +3,14 @@ import subprocess
 import sys
 import time
 import argparse
+from datetime import datetime, timezone
 from pathlib import Path
 import hashlib
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
+REVIEW_BUDGET_STATE_PATH = BASE_DIR / "data" / "candidate_manifests" / "review_budget_state.json"
 
 
 def build_review_fingerprint(record: dict) -> str:
@@ -37,6 +39,31 @@ def should_send_review(record: dict) -> bool:
     human_review = record.get("human_review", {})
     status = record.get("status", "")
     return human_review.get("required", False) and status == "review_queue"
+
+
+def load_budget_state() -> dict:
+    if not REVIEW_BUDGET_STATE_PATH.exists():
+        return {}
+    try:
+        return json.loads(REVIEW_BUDGET_STATE_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def save_budget_state(state: dict) -> None:
+    REVIEW_BUDGET_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    REVIEW_BUDGET_STATE_PATH.write_text(
+        json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
+def record_priority(record: dict, record_path: Path) -> tuple[float, float]:
+    """Higher tuple values are prioritized first."""
+    llm_review = record.get("llm_review", {})
+    confidence = float(llm_review.get("verification_confidence", 0))
+    score = float(record.get("candidate_scores", {}).get("total_score", 0))
+    # Confidence first, score second, newest file time as tie-breaker.
+    return confidence + (score / 1000.0), float(record_path.stat().st_mtime)
 
 
 def send_review_with_retry(
@@ -79,6 +106,12 @@ def main() -> None:
         default=8,
         help="Maximum pending review messages to send in one run",
     )
+    parser.add_argument(
+        "--daily-budget",
+        type=int,
+        default=20,
+        help="Maximum new Telegram review sends allowed per UTC day (0 means unlimited)",
+    )
     args = parser.parse_args()
 
     python_cmd = sys.executable
@@ -90,35 +123,41 @@ def main() -> None:
         print("Review queue directory does not exist.")
         return
 
-    # Newest first so current-run records are prioritized over stale backlog.
-    record_paths = sorted(
-        (
-            p
-            for p in REVIEW_QUEUE_DIR.glob("*.json")
-            if not p.name.endswith("_verification.json")
-        ),
-        key=lambda p: p.stat().st_mtime,
-        reverse=True,
+    candidate_records: list[tuple[Path, dict]] = []
+    for p in REVIEW_QUEUE_DIR.glob("*.json"):
+        if p.name.endswith("_verification.json"):
+            continue
+        rid = p.stem
+        if requested_ids and rid not in requested_ids:
+            continue
+        try:
+            rec = load_json_file(p)
+        except Exception as e:
+            print(f"Skipping unreadable file {p.name}: {e}")
+            continue
+        candidate_records.append((p, rec))
+
+    candidate_records.sort(key=lambda item: record_priority(item[1], item[0]), reverse=True)
+
+    state = load_budget_state()
+    today_key = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    sent_today = int(state.get(today_key, 0))
+    remaining_daily_budget = (
+        max(args.daily_budget - sent_today, 0) if args.daily_budget > 0 else None
     )
 
     skipped_for_cap = 0
+    skipped_for_budget = 0
 
-    for record_path in record_paths:
-        if record_path.name.endswith("_verification.json"):
-            continue
-
+    for record_path, record in candidate_records:
         record_id = record_path.stem
-        if requested_ids and record_id not in requested_ids:
-            continue
 
         if sent_count >= args.max_items:
             skipped_for_cap += 1
             continue
 
-        try:
-            record = load_json_file(record_path)
-        except Exception as e:
-            print(f"Skipping unreadable file {record_path.name}: {e}")
+        if remaining_daily_budget is not None and remaining_daily_budget <= 0:
+            skipped_for_budget += 1
             continue
 
         if not should_send_review(record):
@@ -148,12 +187,24 @@ def main() -> None:
 
         sent_any = True
         sent_count += 1
+        if remaining_daily_budget is not None:
+            remaining_daily_budget -= 1
+            sent_today += 1
         time.sleep(1.5)
 
     if skipped_for_cap:
         print(
             f"Skipped {skipped_for_cap} additional pending review(s) due to --max-items={args.max_items}."
         )
+    if skipped_for_budget:
+        print(
+            f"Held {skipped_for_budget} pending review(s) due to daily budget --daily-budget={args.daily_budget}."
+        )
+
+    if args.daily_budget > 0:
+        state[today_key] = sent_today
+        save_budget_state(state)
+        print(f"Daily review budget usage (UTC): {sent_today}/{args.daily_budget}")
 
     if not sent_any:
         print("No pending review messages were sent.")

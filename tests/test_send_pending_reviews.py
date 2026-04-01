@@ -42,6 +42,11 @@ def test_send_pending_reviews_honors_max_items(tmp_path, monkeypatch):
 
     monkeypatch.setattr(send_pending_reviews, "REVIEW_QUEUE_DIR", queue_dir)
     monkeypatch.setattr(
+        send_pending_reviews,
+        "REVIEW_BUDGET_STATE_PATH",
+        tmp_path / "review_budget_state.json",
+    )
+    monkeypatch.setattr(
         send_pending_reviews, "send_review_with_retry", lambda *_args, **_kwargs: True
     )
     monkeypatch.setattr(send_pending_reviews.time, "sleep", lambda *_args, **_kwargs: None)
@@ -73,6 +78,11 @@ def test_send_pending_reviews_can_target_specific_ids(tmp_path, monkeypatch):
 
     monkeypatch.setattr(send_pending_reviews, "REVIEW_QUEUE_DIR", queue_dir)
     monkeypatch.setattr(
+        send_pending_reviews,
+        "REVIEW_BUDGET_STATE_PATH",
+        tmp_path / "review_budget_state.json",
+    )
+    monkeypatch.setattr(
         send_pending_reviews, "send_review_with_retry", lambda *_args, **_kwargs: True
     )
     monkeypatch.setattr(send_pending_reviews.time, "sleep", lambda *_args, **_kwargs: None)
@@ -89,3 +99,32 @@ def test_send_pending_reviews_can_target_specific_ids(tmp_path, monkeypatch):
 
     assert keep_data.get("telegram_review_sent") is True
     assert skip_data.get("telegram_review_sent") is not True
+
+
+def test_send_pending_reviews_honors_daily_budget(tmp_path, monkeypatch):
+    queue_dir = tmp_path / "review_queue"
+    queue_dir.mkdir()
+    r1 = queue_dir / "r1.json"
+    r2 = queue_dir / "r2.json"
+    _write_record(r1)
+    _write_record(r2)
+
+    budget_path = tmp_path / "review_budget_state.json"
+    monkeypatch.setattr(send_pending_reviews, "REVIEW_QUEUE_DIR", queue_dir)
+    monkeypatch.setattr(send_pending_reviews, "REVIEW_BUDGET_STATE_PATH", budget_path)
+    monkeypatch.setattr(
+        send_pending_reviews, "send_review_with_retry", lambda *_args, **_kwargs: True
+    )
+    monkeypatch.setattr(send_pending_reviews.time, "sleep", lambda *_args, **_kwargs: None)
+    monkeypatch.setattr(
+        sys, "argv", ["send_pending_reviews.py", "--max-items", "5", "--daily-budget", "1"]
+    )
+
+    send_pending_reviews.main()
+
+    d1 = json.loads(r1.read_text(encoding="utf-8"))
+    d2 = json.loads(r2.read_text(encoding="utf-8"))
+    sent_count = int(d1.get("telegram_review_sent") is True) + int(
+        d2.get("telegram_review_sent") is True
+    )
+    assert sent_count == 1

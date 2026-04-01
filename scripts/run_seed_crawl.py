@@ -25,7 +25,9 @@ import json
 import re
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any, Optional
 
@@ -318,7 +320,7 @@ def select_candidates_for_conversion(
 
 
 def run_seed_crawl(
-    dry_run: bool = False, max_process_records: int = 25
+    dry_run: bool = False, max_process_records: int = 20, process_workers: int = 2
 ) -> list[str]:
     """
     Main entry point for seed site crawling.
@@ -335,6 +337,8 @@ def run_seed_crawl(
     print(f"\n{'=' * 60}")
     print("Seed Site Crawling Lane")
     print(f"{'=' * 60}")
+    pipeline_start = time.perf_counter()
+    timings: dict[str, float] = {}
 
     # Ensure directories exist
     ensure_candidate_directories()
@@ -384,6 +388,7 @@ def run_seed_crawl(
     all_candidates: list[dict[str, Any]] = []
     discovered_ids: list[str] = []
 
+    crawl_start = time.perf_counter()
     for seed in enabled_seeds:
         seed_id = seed.get("id", "unknown")
 
@@ -412,6 +417,7 @@ def run_seed_crawl(
         except Exception as e:
             print(f"[Discovery] Error crawling seed '{seed_id}': {e}")
             continue
+    timings["crawl"] = time.perf_counter() - crawl_start
 
     if not all_candidates:
         print("\n[Pipeline] No candidates discovered. Exiting.")
@@ -441,10 +447,12 @@ def run_seed_crawl(
     else:
         # Step 1: Dedupe
         print(f"\n[Pipeline] Step 1: Deduplicating {len(all_candidates)} candidates...")
+        dedupe_start = time.perf_counter()
         deduped_candidates, duplicates = process_dedupe(all_candidates, lane=LANE)
         dup_count = len(duplicates)
         total_stats["deduped_out"] = dup_count
         print(f"[Dedup] {dup_count}/{len(all_candidates)} candidates were duplicates")
+        timings["dedupe"] = time.perf_counter() - dedupe_start
 
     if not deduped_candidates:
         print("[Pipeline] No candidates survived deduplication. Exiting.")
@@ -457,12 +465,14 @@ def run_seed_crawl(
     else:
         # Step 2: Score
         print(f"\n[Pipeline] Step 2: Scoring {len(deduped_candidates)} candidates...")
+        score_start = time.perf_counter()
         scored_candidates = []
         for candidate in deduped_candidates:
             scored = score_candidate(candidate)
             score = scored.get("candidate_scores", {}).get("total_score", 0)
             print(f"  - {scored['candidate_id']}: score={score}")
             scored_candidates.append(scored)
+        timings["score"] = time.perf_counter() - score_start
 
     if filter_by_score is None:
         print("[Pipeline] Shared filtering module not available. Skipping filter.")
@@ -473,6 +483,7 @@ def run_seed_crawl(
         print(
             f"\n[Pipeline] Step 3: Filtering by score (threshold={SEED_CRAWL_SCORE_THRESHOLD})..."
         )
+        filter_start = time.perf_counter()
         filtered_candidates, filtered_out = filter_by_score(
             scored_candidates, threshold=SEED_CRAWL_SCORE_THRESHOLD
         )
@@ -481,6 +492,7 @@ def run_seed_crawl(
             f"[Filter] {len(filtered_out)} candidates did not pass score filter "
             f"(threshold={SEED_CRAWL_SCORE_THRESHOLD})"
         )
+        timings["filter"] = time.perf_counter() - filter_start
 
     if not filtered_candidates:
         print("[Pipeline] No candidates survived scoring filter. Exiting.")
@@ -501,6 +513,7 @@ def run_seed_crawl(
         print(
             f"\n[Pipeline] Step 3.5: Fetching content for {len(filtered_candidates)} candidates..."
         )
+        fetch_start = time.perf_counter()
         fetched_candidates, failed_candidates = fetch_candidate_contents(
             filtered_candidates
         )
@@ -509,6 +522,7 @@ def run_seed_crawl(
                 f"[Pipeline] Failed to fetch content for {len(failed_candidates)} candidates"
             )
         print(f"[Pipeline] Fetched content for {len(fetched_candidates)} candidates")
+        timings["fetch"] = time.perf_counter() - fetch_start
 
     if not fetched_candidates:
         print("[Pipeline] No candidates had content fetched. Exiting.")
@@ -531,6 +545,7 @@ def run_seed_crawl(
 
     # Step 4: Convert to raw records
     print(f"\n[Pipeline] Step 4: Converting to raw records...")
+    convert_start = time.perf_counter()
     record_paths = convert_candidates(selected_candidates)
 
     if not record_paths:
@@ -540,6 +555,7 @@ def run_seed_crawl(
 
     total_stats["converted"] = len(record_paths)
     update_lane_stats(LANE, "converted", len(record_paths))
+    timings["convert"] = time.perf_counter() - convert_start
 
     # Step 5: Process each record through the minimax cycle
     # (summarize → verify → route to accepted / review_queue / rejected)
@@ -549,8 +565,10 @@ def run_seed_crawl(
     routing_counts: dict[str, int] = {"accepted": 0, "rejected": 0, "review_queue": 0, "failed": 0}
     PROCESS_RECORD_TIMEOUT = 300  # 5 minutes per record
 
-    for idx, record_id in enumerate(record_ids, 1):
-        print(f"  [{idx}/{len(record_ids)}] Processing {record_id}...")
+    process_start = time.perf_counter()
+    workers = max(1, process_workers)
+
+    def _process(record_id: str) -> tuple[str, str]:
         try:
             result = subprocess.run(
                 [sys.executable, "-m", "scripts.process_record", record_id],
@@ -560,30 +578,46 @@ def run_seed_crawl(
                 timeout=PROCESS_RECORD_TIMEOUT,
             )
             if result.returncode != 0:
-                routing_counts["failed"] += 1
                 stderr_preview = (result.stderr or "").strip().splitlines()
                 err_line = stderr_preview[-1] if stderr_preview else "unknown error"
-                print(f"    [FAILED] {err_line}")
+                return record_id, f"failed:{err_line}"
+            stdout = result.stdout or ""
+            if "Moved record to accepted" in stdout:
+                return record_id, "accepted"
+            if "Moved record to rejected" in stdout:
+                return record_id, "rejected"
+            return record_id, "review_queue"
+        except subprocess.TimeoutExpired:
+            return record_id, "failed:timeout"
+        except Exception as e:
+            return record_id, f"failed:{e}"
+
+    if workers == 1:
+        for idx, record_id in enumerate(record_ids, 1):
+            print(f"  [{idx}/{len(record_ids)}] Processing {record_id}...")
+            _, outcome = _process(record_id)
+            if outcome.startswith("failed:"):
+                routing_counts["failed"] += 1
+                print(f"    [FAILED] {outcome.replace('failed:', '')}")
             else:
-                # Determine where the record was routed from stdout
-                stdout = result.stdout or ""
-                if "Moved record to accepted" in stdout:
-                    outcome = "accepted"
-                elif "Moved record to rejected" in stdout:
-                    outcome = "rejected"
-                else:
-                    outcome = "review_queue"
                 routing_counts[outcome] += 1
                 print(f"    [OK] → {outcome}")
-        except subprocess.TimeoutExpired:
-            routing_counts["failed"] += 1
-            print(f"    [TIMEOUT] process_record exceeded {PROCESS_RECORD_TIMEOUT}s — skipping")
-        except Exception as e:
-            routing_counts["failed"] += 1
-            print(f"    [ERROR] {e}")
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {executor.submit(_process, rid): rid for rid in record_ids}
+            for future in as_completed(futures):
+                rid, outcome = future.result()
+                if outcome.startswith("failed:"):
+                    routing_counts["failed"] += 1
+                    print(f"  [FAILED] {rid}: {outcome.replace('failed:', '')}")
+                else:
+                    routing_counts[outcome] += 1
+                    print(f"  [OK] {rid} → {outcome}")
+    timings["process"] = time.perf_counter() - process_start
 
     # Save stats
     _save_stats(total_stats)
+    timings["total"] = time.perf_counter() - pipeline_start
 
     print(f"\n{'=' * 60}")
     print(f"Seed Crawl Pipeline Complete")
@@ -595,6 +629,9 @@ def run_seed_crawl(
     print(f"  Rejected   : {routing_counts['rejected']}")
     if routing_counts["failed"]:
         print(f"  Failed     : {routing_counts['failed']}")
+    print("Timing summary:")
+    for name, seconds in timings.items():
+        print(f"  {name:>8}: {seconds:.1f}s")
     print(f"{'=' * 60}\n")
 
     return discovered_ids
@@ -658,15 +695,23 @@ def main() -> None:
     parser.add_argument(
         "--max-process-records",
         type=int,
-        default=25,
+        default=20,
         help="Maximum records to convert/process per run (0 means no cap)",
+    )
+    parser.add_argument(
+        "--process-workers",
+        type=int,
+        default=2,
+        help="Parallel workers for process_record stage (1 for sequential)",
     )
 
     args = parser.parse_args()
 
     try:
         discovered_ids = run_seed_crawl(
-            dry_run=args.dry_run, max_process_records=args.max_process_records
+            dry_run=args.dry_run,
+            max_process_records=args.max_process_records,
+            process_workers=args.process_workers,
         )
 
         if args.dry_run:

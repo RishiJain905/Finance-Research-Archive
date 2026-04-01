@@ -3,6 +3,8 @@ import shutil
 import subprocess
 import sys
 import argparse
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
@@ -142,13 +144,37 @@ def select_records_to_process(
     cross-lane backlog explosions. Backlog processing can be enabled manually.
     """
     if include_backlog:
-        candidates = sorted(raw_ids_after_filter)
+        candidates = set(raw_ids_after_filter)
     else:
-        candidates = sorted(raw_ids_after_filter - raw_ids_before_run)
+        candidates = set(raw_ids_after_filter - raw_ids_before_run)
+
+    # Priority-first: newest raw files first.
+    ranked = sorted(candidates)
+    ranked = sorted(
+        ranked,
+        key=lambda rid: (RAW_DIR / f"{rid}.txt").stat().st_mtime
+        if (RAW_DIR / f"{rid}.txt").exists()
+        else 0,
+        reverse=True,
+    )
 
     if max_records > 0:
-        return candidates[:max_records]
-    return candidates
+        return ranked[:max_records]
+    return ranked
+
+
+def process_record_id(record_id: str, python_cmd: str) -> tuple[str, bool, str]:
+    """Run process_record for one ID and return success + message."""
+    result = subprocess.run(
+        [python_cmd, "scripts/process_record.py", record_id],
+        cwd=BASE_DIR,
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode == 0:
+        return record_id, True, ""
+    message = result.stderr.strip() or result.stdout.strip() or "unknown error"
+    return record_id, False, message
 
 
 def main() -> None:
@@ -163,22 +189,51 @@ def main() -> None:
     parser.add_argument(
         "--max-records",
         type=int,
-        default=40,
+        default=30,
         help="Maximum number of records to process in one run (0 means no cap)",
+    )
+    parser.add_argument(
+        "--process-workers",
+        type=int,
+        default=2,
+        help="Parallel process_record workers (1 for sequential)",
+    )
+    parser.add_argument(
+        "--skip-send-reviews",
+        action="store_true",
+        help="Process records but skip Telegram send step",
+    )
+    parser.add_argument(
+        "--send-review-max-items",
+        type=int,
+        default=8,
+        help="Maximum Telegram reviews to send after processing",
+    )
+    parser.add_argument(
+        "--send-review-daily-budget",
+        type=int,
+        default=20,
+        help="Daily Telegram review budget for send step (0 means unlimited)",
     )
     args = parser.parse_args()
 
     python_cmd = sys.executable
+    stage_start = time.perf_counter()
+    timings: dict[str, float] = {}
 
     print("\n=== Verifying manifest consistency ===")
     verify_manifest_consistency()
 
     raw_ids_before_run = {f.stem for f in RAW_DIR.glob("*.txt")}
 
+    start = time.perf_counter()
     run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
     run_command([python_cmd, "scripts/ingest_rss.py"], "RSS ingestion")
+    timings["ingest"] = time.perf_counter() - start
 
+    start = time.perf_counter()
     run_command([python_cmd, "scripts/filter_raw_records.py"], "raw record filtering")
+    timings["filter"] = time.perf_counter() - start
 
     raw_ids_after_filter = {f.stem for f in RAW_DIR.glob("*.txt")}
     records_to_process = select_records_to_process(
@@ -210,34 +265,57 @@ def main() -> None:
 
     failed_ids = []
     processed_ids: list[str] = []
-    for record_id in records_to_process:
-        try:
-            run_command(
-                [python_cmd, "scripts/process_record.py", record_id],
-                f"process_record ({record_id})",
-            )
-            mark_record_processed(record_id)
-            processed_ids.append(record_id)
-        except RuntimeError as e:
-            print(f"\n  Warning: processing failed for {record_id}: {e}")
-            failed_ids.append(record_id)
+    process_start = time.perf_counter()
+    workers = max(1, args.process_workers)
+    if workers == 1:
+        for record_id in records_to_process:
+            rid, ok, error = process_record_id(record_id, python_cmd)
+            if ok:
+                mark_record_processed(rid)
+                processed_ids.append(rid)
+            else:
+                print(f"\n  Warning: processing failed for {rid}: {error}")
+                failed_ids.append(rid)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {
+                executor.submit(process_record_id, record_id, python_cmd): record_id
+                for record_id in records_to_process
+            }
+            for future in as_completed(futures):
+                rid, ok, error = future.result()
+                if ok:
+                    mark_record_processed(rid)
+                    processed_ids.append(rid)
+                else:
+                    print(f"\n  Warning: processing failed for {rid}: {error}")
+                    failed_ids.append(rid)
+    timings["process"] = time.perf_counter() - process_start
 
     if failed_ids:
         print(f"\n{len(failed_ids)} record(s) failed to process:")
         for rid in failed_ids:
             print(f"  - {rid}")
 
-    if processed_ids:
+    if processed_ids and not args.skip_send_reviews:
         send_command = [
             python_cmd,
             "scripts/send_pending_reviews.py",
             "--max-items",
-            "8",
+            str(args.send_review_max_items),
+            "--daily-budget",
+            str(args.send_review_daily_budget),
         ]
         for record_id in processed_ids:
             send_command.extend(["--record-id", record_id])
+        send_start = time.perf_counter()
         run_command(send_command, "send pending reviews")
+        timings["send_reviews"] = time.perf_counter() - send_start
 
+    timings["total"] = time.perf_counter() - stage_start
+    print("\nTiming summary:")
+    for name, seconds in timings.items():
+        print(f"  - {name}: {seconds:.1f}s")
     print("\nIngestion + filtering + processing pipeline finished.")
 
 

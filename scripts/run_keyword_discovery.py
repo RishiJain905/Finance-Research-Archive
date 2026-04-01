@@ -226,6 +226,8 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
     print(f"\n{'=' * 60}")
     print("Keyword Discovery Lane")
     print(f"{'=' * 60}")
+    pipeline_start = time.perf_counter()
+    timings: dict[str, float] = {}
 
     # Ensure directories exist
     ensure_candidate_directories()
@@ -271,6 +273,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
     all_candidates: list[dict[str, Any]] = []
     discovered_ids: list[str] = []
 
+    discovery_start = time.perf_counter()
     for query_config in enabled_queries:
         query_id = query_config.get("id", "unknown")
         query_text = query_config.get("query", "")
@@ -330,6 +333,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
                 all_candidates.append(candidate)
         else:
             print(f"[Discovery] [DRY RUN] Would save {candidates_built} candidates")
+    timings["discovery"] = time.perf_counter() - discovery_start
 
     if not all_candidates:
         print("\n[Pipeline] No candidates discovered. Exiting.")
@@ -353,9 +357,11 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
     # Step 1: Dedupe
     print(f"\n[Pipeline] Step 1: Deduplicating {len(all_candidates)} candidates...")
+    start = time.perf_counter()
     candidates, duplicates = process_dedupe(all_candidates, lane=LANE)
     dup_count = len(duplicates)
     print(f"[Dedup] {dup_count}/{len(all_candidates)} candidates were duplicates")
+    timings["dedupe"] = time.perf_counter() - start
 
     if duplicates:
         for dup in duplicates:
@@ -370,19 +376,23 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
     # Step 2: Score
     print(f"\n[Pipeline] Step 2: Scoring {len(candidates)} candidates...")
+    start = time.perf_counter()
     for candidate in candidates:
         candidate = score_candidate(candidate)
         score = candidate.get("candidate_scores", {}).get("total_score", 0)
         print(f"  - {candidate['candidate_id']}: score={score}")
+    timings["score"] = time.perf_counter() - start
 
     # Step 3: Filter by score
     print(f"\n[Pipeline] Step 3: Filtering by score...")
     threshold = 25
+    start = time.perf_counter()
     candidates, filtered = filter_by_score(candidates, threshold=threshold)
     filtered_count = len(filtered)
     print(
         f"[Filter] {filtered_count} candidates did not pass score filter (threshold={threshold})"
     )
+    timings["filter"] = time.perf_counter() - start
 
     if not candidates:
         print("[Pipeline] No candidates survived scoring filter. Exiting.")
@@ -390,6 +400,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
     # Step 4: Convert to raw records
     print(f"\n[Pipeline] Step 4: Converting to raw records...")
+    start = time.perf_counter()
     record_paths = convert_candidates(candidates)
 
     if not record_paths:
@@ -397,11 +408,13 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
         return []
 
     update_lane_stats(LANE, "converted", len(record_paths))
+    timings["convert"] = time.perf_counter() - start
 
     # Step 5: Process each record through process_record.py
     print(f"\n[Pipeline] Step 5: Processing {len(record_paths)} records...")
     record_ids = [p.stem for p in record_paths]
 
+    start = time.perf_counter()
     for record_id in record_ids:
         print(f"  - Processing {record_id}...")
         try:
@@ -419,6 +432,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
                 print(f"    [OK] Processed {record_id}")
         except Exception as e:
             print(f"    [Warning] Error processing {record_id}: {e}")
+    timings["process"] = time.perf_counter() - start
 
     print(f"\n{'=' * 60}")
     print(f"Keyword Discovery Pipeline Complete")
@@ -455,6 +469,11 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
             print("  [Expansions] No new proposals (theme memory may be empty)")
     except Exception as e:
         print(f"  [Expansions] Skipped: {e}")
+
+    timings["total"] = time.perf_counter() - pipeline_start
+    print("Timing summary:")
+    for name, seconds in timings.items():
+        print(f"  {name:>9}: {seconds:.1f}s")
 
     return discovered_ids
 
