@@ -1,0 +1,81 @@
+{
+  "id": "seed_crawl_treasury_most_recent_quarterly_refunding_documents_0f057472103a8e6c",
+  "created_at": "2026-04-01T06:01:54.677493+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "treasury_issuance",
+  "title": "Most Recent Quarterly Refunding Documents",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents",
+    "published_at": "2026-02-04",
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "This Treasury webpage is an index/listing page of documents related to quarterly government financing operations, including TBAC reports, auction schedules, buyback schedules, and financing estimates. The page contains no substantive content—it merely lists document names, release dates, and links to the actual documents.",
+  "key_points": [
+    "Page is a document index/listing page, not a substantive policy or research document",
+    "Documents listed include TBAC Report to Secretary, TBAC Minutes, Auction Schedule, Buyback Schedule, and Financing Estimates for 2026 Q1",
+    "Release dates shown: February 2, 2026 (Financing Estimates), February 4, 2026 (TBAC reports), January 16, 2026 (Primary Dealer Meeting)",
+    "Next releases scheduled for May 4 and May 6, 2026",
+    "No actual document content, data, or policy statements are present on this listing page"
+  ],
+  "why_it_matters": "This page serves as a directory to Treasury borrowing and debt management documents. The actual TBAC reports, auction schedules, and financing estimates it links to would contain relevant information for macro catalysts and market structure. This specific page provides no actionable data—it only points to other documents.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "quarterly-refunding",
+    "tbac",
+    "auction-schedule",
+    "debt-management",
+    "listing-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page, which per CORE RULE 5 must be rejected",
+      "Page contains only document titles, release dates, and links—no substantive policy content, data, or analysis",
+      "event_type 'treasury_issuance' is misleading; the page itself contains no issuance data, only links to documents",
+      "No extractable macro catalyst or market structure information present",
+      "Low archival value; the linked documents (TBAC reports, auction schedules) would be the appropriate archival targets instead"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_most_recent_quarterly_refunding_documents_0f057472103a8e6c.txt",
+  "notes": "This source is a document listing/index page, not a substantive research document. Per CORE RULE 6, listing pages should be treated as non-archiveable. The page contains only document titles and release dates with no actual policy content, data, or analysis. The TBAC reports and auction schedules it references would be the appropriate archival targets. Initial confidence very low because the page itself provides no extractable information about market structure or macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Listing page with no substantive content",
+      "No policy data or analysis present",
+      "Low value for RAG retrieval purposes",
+      "Should be replaced with linked documents if available"
+    ]
+  }
+}

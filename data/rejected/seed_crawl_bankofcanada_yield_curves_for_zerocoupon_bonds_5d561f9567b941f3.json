@@ -1,0 +1,65 @@
+{
+  "id": "seed_crawl_bankofcanada_yield_curves_for_zerocoupon_bonds_5d561f9567b941f3",
+  "created_at": "2026-04-01T05:58:15.275413+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Yield curves for zero-coupon bonds",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/bond-yield-curves",
+    "published_at": "",
+    "source_type": "data_page",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "This is a data repository page from the Bank of Canada that provides access to downloadable files containing daily yield curves for zero-coupon Government of Canada bonds and treasury bills. The page describes the data format (terms to maturity from 0.25 to 30 years, expressed as decimals) and update schedule (each Thursday by 16:30 ET with a two-week lag). No macro analysis, commentary, or policy signals are present on this page.",
+  "key_points": [
+    "Page provides access to daily zero-coupon yield curve data for Government of Canada bonds and treasury bills",
+    "Data terms to maturity range from 0.25 years (column 1) to 30.00 years (column 120)",
+    "Yields are expressed as decimals (e.g., 0.0500 = 5.00%)",
+    "Data are updated each Thursday by 16:30 ET with a two-week lag",
+    "Methodology reference: Bolder, Johnson, and Metzler (2004)"
+  ],
+  "why_it_matters": "This page is purely a data access point. It contains no macro analysis, no policy commentary, and no market signals. It does not discuss what the yield curves indicate about the economy, rate expectations, or market conditions. Researchers seeking macro catalysts or Bank of Canada policy signals should consult FOMC-equivalent statements, rate decisions, speeches, or monetary policy reports instead.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "0.25 years (minimum term to maturity)",
+    "30.00 years (maximum term to maturity)",
+    "Thursday 16:30 ET (update schedule)",
+    "2-week lag (data latency)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "yield-curve",
+    "zero-coupon",
+    "canada-bonds",
+    "data-repository"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a pure data access/repo page with no macro analysis, commentary, or policy signals",
+      "TARGET topic is 'macro catalysts' but page provides only raw yield data with no interpretation or context",
+      "Page describes how to retrieve/download data but does not analyze what the data means for markets or policy",
+      "event_type set to 'unknown' is technically correct but underscores lack of event-like content",
+      "No published_at date available; update frequency described but no content date",
+      "Low archival value for research retrieval - this is technical documentation for data access, not research content",
+      "Source type 'data_page' is a utility/container page that should be rejected per CORE RULE #5"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately describes the source's nature (data repository with no macro content), and the suggested reject verdict aligns with verification standards. The mismatch between TARGET='macro catalysts' and actual content is clear. No human review needed."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_yield_curves_for_zerocoupon_bonds_5d561f9567b941f3.txt",
+  "notes": "Source is a low-value data access page. It describes how to retrieve zero-coupon yield curve data but provides no analysis, commentary, or macro context. The metadata assigns 'macro catalysts' as the target, but the content is purely technical documentation for a data download. This page has no relevance for RAG retrieval on macro catalysts or market structure topics unless the raw yield data itself is separately ingested and analyzed elsewhere. Not archiveable as a research note with substantive content."
+}

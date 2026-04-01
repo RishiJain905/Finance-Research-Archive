@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 8,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page/navigation portal with no substantive content - only lists available data products without providing actual rate values or policy content",
+    "No published date is present in the source metadata",
+    "source_type correctly identified as 'listing_page' which per CORE RULE #5 should be rejected",
+    "event_type set to 'unknown' which is valid for this non-archivable content type"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record already correctly identifies this source as a listing page with no substantive content. The assessment aligns with CORE RULE #6 (listing pages bias toward reject) and the verification can proceed automatically.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a navigation/index page for the Bank of Canada's interest rate data portal. The page lists available data products including Treasury bill yields, bond yields, CORRA (Canadian Overnight Repo Rate Average), yield curves, money market yields, U.S. interest rate lookups, and a policy interest rate comparison tool. No specific rate values, policy decisions, or substantive content are provided in this source.",
+    "why_it_matters": "This page serves as an access point to Bank of Canada interest rate data but provides no substantive policy or market information itself. It has no direct relevance for research or market analysis beyond serving as a navigation hub.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

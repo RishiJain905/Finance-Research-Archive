@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source published November 8, 2010—extremely stale (over 15 years old, exceeding the 90-day recency threshold by a significant margin)",
+    "TARGET metadata indicates 'market structure' but content is macroeconomic household debt data with no market structure relevance (no discussion of market plumbing, operations, microstructure, or trading mechanisms)",
+    "topic field correctly identifies 'macro catalysts' which matches the content, but this differs from the stated TARGET of 'market structure'",
+    "Per rule 6, missing source attribution and low-signal sources bias toward reject—this source is high-quality but extremely dated"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record summary and key_points are factually accurate and well-supported by the source. However, the source's extreme age (15+ years) and the topic mismatch between TARGET metadata ('market structure') and actual content ('macro catalysts') require human judgment on whether this historical household debt report has sufficient archival value for this specific archive. The 90-day recency exception for 'historical policy decision, key research finding' likely does not apply to a routine quarterly statistical report.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_quarterly_report_f487f85feb5dd08c",
+  "created_at": "2026-04-01T06:03:03.639403+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "",
+  "title": "New York Fed Quarterly Report Shows Student Loan Debt Continues to Grow",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2012/an120531",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2012-05-31",
+    "source_type": "research_paper"
+  },
+  "summary": "The NY Fed's Q1 2012 Quarterly Report on Household Debt and Credit reported student loan debt reached $904 billion, surpassing credit card debt as the second-largest form of consumer debt. The report documented ongoing consumer deleveraging with total household indebtedness declining to $11.44 trillion. Student loan 90+ day delinquency rates stood at 8.69%, higher than mortgages, auto loans, and HELOCs.",
+  "key_points": [
+    "Student loan debt reached $904 billion in Q1 2012, up $30 billion from Q4 2011",
+    "Total household indebtedness declined to $11.44 trillion ($100 billion decrease from Q4 2011)",
+    "Student loans were the only consumer debt category increasing since household debt peaked in Q3 2008",
+    "90+ day student loan delinquency rate was 8.69%, higher than mortgages, auto loans, and HELOCs",
+    "Mortgage balances fell $81 billion; credit card balances at $679 billion (21.6% below Q4 2008 peak)",
+    "Published May 31, 2012 — nearly 14 years prior to TODAY (2026-04-01)"
+  ],
+  "why_it_matters": "This source is a historical household debt data release from 2012. While it documents important trends in consumer credit and deleveraging, it does not address market structure (trading venue operations, market making, order flow, clearing/settlement) or macro catalysts (policy decisions, economic data releases that move markets). The data is 14 years stale and has no actionable relevance for current market structure or macro catalyst research.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "This Q1 2012 report captures the post-financial crisis consumer deleveraging period. Student loan debt was the only debt category growing since the household debt peak in Q3 2008, while mortgages and credit cards were declining. The 90+ day student loan delinquency rate of 8.69% exceeded other debt categories. The data predates major student loan policy changes and the pandemic period.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$904 billion in student loan debt",
+    "$11.44 trillion total household indebtedness",
+    "8.69% 90+ day student loan delinquency rate",
+    "$679 billion in credit card balances",
+    "$412 billion in mortgage originations",
+    "$72 billion in auto loan originations"
+  ],
+  "tags": [
+    "household-debt",
+    "student-loans",
+    "delinquency",
+    "consumer-credit",
+    "deleveraging",
+    "not-market-structure",
+    "historical-data",
+    "not-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Topic mismatch: Source content is about household debt/consumer credit trends, not market structure (trading mechanisms, market making, clearing/settlement) or macro catalysts (policy decisions, economic releases that move markets)",
+      "event_type is empty/missing - this is a data release (Quarterly Report on Household Debt and Credit) which should be classified as 'data_release_other'",
+      "Source is severely outdated: published 2012-05-31, nearly 14 years prior to TODAY (2026-04-01)",
+      "No archival value for specified collection scope: content discusses historical household debt snapshot with no discussion of market structure or macro catalyst implications",
+      "Metadata TARGET 'market structure' appears to be an error; source does not address market structure topics"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record correctly identifies the fundamental issues with this source for the archive's collection mandate. The content is factually accurate but entirely about household debt trends rather than market structure or macro catalysts. The event_type field is empty, which violates the requirement that it be set. Human review confirms the reject decision."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_quarterly_report_f487f85feb5dd08c.txt",
+  "notes": "SOURCE REJECTED: This source does not qualify for the archive. (1) Topic mismatch: content is household debt/credit trends, not market structure or macro catalysts as specified in collection mandate. (2) Severe staleness: published 2012-05-31, approximately 13 years and 10 months prior to TODAY (2026-04-01), well beyond the 90-day historical record threshold. (3) No market structure content: no discussion of trading mechanisms, market making, order flow, clearing/settlement, or market operations. (4) No macro catalyst content: no discussion of policy decisions, economic data releases, or events that trigger market moves. Recommend marking as rejected and excluding from RAG corpus.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "Topic does not match collection criteria (market structure or macro catalysts)",
+      "Source is 14 years old — severely stale for financial research archive",
+      "Content provides historical snapshot of household debt, not actionable market structure or catalyst intelligence",
+      "Original metadata TARGET appears to be an error"
+    ]
+  }
+}
