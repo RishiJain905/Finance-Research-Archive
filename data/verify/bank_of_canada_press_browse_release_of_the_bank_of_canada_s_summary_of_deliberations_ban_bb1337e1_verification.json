@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' when the source clearly relates to an upcoming monetary policy document release (summary of deliberations is analogous to fomc_minutes)",
+    "Source contains no substantive policy content—only a media advisory announcing a future document release at 13:30 ET",
+    "Internal discrepancy in source: 'Topic' field references January rate decision while body references March 18, 2026 decision",
+    "Content is extremely thin (167 words), consisting almost entirely of boilerplate scheduling information",
+    "PUBLISHED_AT in metadata is empty, though date April 1, 2026 is derivable from body",
+    "Generated record accurately identifies source limitations but event_type 'unknown' should be corrected"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a thin administrative advisory with no policy content. The record correctly identifies this as low-value but needs to determine whether to archive this announcement-only record or wait for the actual summary of deliberations content. Also requires clarification on which rate decision the summary pertains to (January vs March 2026).",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Bank of Canada issued a media advisory on April 1, 2026, announcing the publication of a summary of deliberations from ahead of its interest rate decision on March 18, 2026, scheduled for release at 13:30 ET the same day. The advisory states there will be no lock-up, media briefing, webcast, or media availability for this release. Note: The source contains an internal discrepancy—the 'Topic' field references the January interest rate decision while the body references the March 18, 2026 decision.",
+    "why_it_matters": "This is a media advisory announcing the release of a Bank of Canada summary of deliberations, not the summary itself. The source provides no insight into actual policy discussions, deliberation content, or economic assessments. It contains only administrative details about release timing and access procedures. The actual deliberation summary is expected at 13:30 ET on April 1, 2026.",
+    "macro_context": "The source does not discuss macroeconomic implications, rate decisions, or policy direction. It is solely an administrative notice announcing the release time of an upcoming monetary policy document. Note: There is a discrepancy between the Topic field (January rate decision) and body text (March 18, 2026 rate decision) regarding which deliberations summary this pertains to.",
+    "market_structure_context": ""
+  }
+}
