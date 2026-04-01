@@ -1,0 +1,94 @@
+{
+  "id": "seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0",
+  "created_at": "2026-04-01T09:16:32.411067+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Canadian Overnight Repo Rate Average",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/corra",
+    "published_at": "2026-03-30",
+    "source_type": "seed_crawl",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "The Bank of Canada publishes daily CORRA (Canadian Overnight Repo Rate Average) data, which serves as Canada's risk-free reference rate. The most recent published CORRA values show rates ranging from 2.27% to 2.33% across the week of March 24-30, 2026, with total daily dollar trading volume between approximately $47.5 billion and $57.4 billion.",
+  "key_points": [
+    "CORRA is Canada's risk-free rate measuring the cost of overnight general collateral funding in Canadian dollars using Government of Canada securities as collateral",
+    "Latest published CORRA rates: March 24 at 2.30%, March 25 at 2.33%, March 26 at 2.32%, March 27 at 2.29%, March 30 at 2.27%",
+    "Total eligible trading volume ranged from $47.50B to $57.42B daily during the observed period",
+    "Number of unique data submitters remained stable at 14-15 participants daily",
+    "Trimmed dollar volume (after removing outliers) ranged from $35.62B to $43.06B",
+    "CORRA transparency metrics include percentile distributions (5th, 25th, 75th, 95th) and trimmed volume rates"
+  ],
+  "why_it_matters": "CORRA serves as Canada's equivalent to SOFR and is used to calculate interest for floating rate notes, loans, and derivatives. Market participants use CORRA data to assess short-term funding conditions in Canadian dollar markets. The stability of 14-15 data submitters and the narrow spread between percentiles indicates healthy market functioning.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "CORRA represents the cost of overnight secured borrowing in Canadian dollars and serves as a benchmark for broader monetary conditions. The observed rates of 2.27-2.33% are consistent with the Bank of Canada's current monetary policy stance. This is raw reference rate data without commentary on policy implications.",
+  "market_structure_context": "CORRA is calculated from overnight repo transactions using Government of Canada securities as collateral. The data includes trimmed volume calculations that remove outliers to produce a more stable rate. The 14-15 unique data submitters represent the core dealer community contributing to this benchmark.",
+  "important_numbers": [
+    "2.27%",
+    "2.29%",
+    "2.30%",
+    "2.32%",
+    "2.33%",
+    "$47.5-57.4 billion total daily trading volume",
+    "$35.6-43.1 billion trimmed volume",
+    "14-15 unique data submitters",
+    "CORRA Compounded Index base value 100 on June 12, 2020",
+    "CORRA Compounded Index values 115.935-115.979 for March 25-31, 2026"
+  ],
+  "tags": [
+    "bank of canada",
+    "corre",
+    "repo rate",
+    "risk-free rate",
+    "canadian dollar",
+    "overnight rate",
+    "reference rate",
+    "market data"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0.txt",
+  "notes": "This is a daily data publication page from the Bank of Canada, not an analytical article or policy commentary. The page provides raw CORRA values and transparency metrics for download. CORRA is a legitimate macro/market structure data point as Canada's risk-free overnight rate benchmark. The data is current (within days of TODAY) and from a high-trust domain. No policy signals or commentary are present—only raw numbers and methodology references.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 74.5,
+    "reasoning": [
+      "quality score: 74.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

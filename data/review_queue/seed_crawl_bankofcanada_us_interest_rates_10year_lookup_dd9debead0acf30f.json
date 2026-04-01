@@ -1,0 +1,84 @@
+{
+  "id": "seed_crawl_bankofcanada_us_interest_rates_10year_lookup_dd9debead0acf30f",
+  "created_at": "2026-04-01T09:12:48.741667+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "U.S. interest rates: 10-year lookup",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/us-rates-lookup",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "unknown"
+  },
+  "summary": "This Bank of Canada webpage is a data lookup interface for historical U.S. interest rate series, not an actual research document or data release. The page provides form controls for selecting date ranges and viewing Federal Funds Rate, Prime Rate, Commercial Paper, and U.S. Treasury yields, but displays no actual rate values in this content. No published date, headline figures, or policy commentary is present.",
+  "key_points": [
+    "Page is a data query interface for U.S. interest rate series, not an actual data release or research document",
+    "Available series include: Federal Funds Rate, U.S. Prime Rate, Commercial Paper (1 and 3 month), U.S. Treasuries (5-year, 10-year), and Forward Premium data",
+    "Each series has corresponding CANSIM V identifiers (e.g., V121821 for Federal Funds Rate daily, V122150 for monthly)",
+    "Query interface supports date ranges from 1 week to 60 weeks (weekly series) or 1 month to 60 months (monthly series)",
+    "No actual rate values, dates, or data are displayed in the source content",
+    "No published_at date provided in source metadata"
+  ],
+  "why_it_matters": "This page is a data access portal, not a substantive research document. It provides no actual information about current or historical U.S. interest rates, macro conditions, or policy signals. It cannot serve as a source for macro catalyst analysis without user interaction to retrieve specific data.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "data-lookup-tool",
+    "us-interest-rates",
+    "federal-funds",
+    "treasuries",
+    "prime-rate",
+    "commercial-paper",
+    "interface-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "pending",
+    "issues_found": [
+      "Source is a data query interface, not an actual data release or research document",
+      "No published_at date provided - cannot assess recency",
+      "No actual rate values, commentary, or policy signals present in the content",
+      "Source is non-archiveable - contains only form interface elements",
+      "Conflicting metadata: TARGET shows 'macro catalysts' but content does not provide any macro data or analysis",
+      "Cannot extract any market-relevant information without user interaction with the tool"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This source is a data lookup interface page with no actual research content. It cannot be archived as a macro catalyst source. Recommend discarding or converting to a reference to the actual data series."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_us_interest_rates_10year_lookup_dd9debead0acf30f.txt",
+  "notes": "Source is a Bank of Canada data lookup tool page for U.S. interest rate series. The page contains only interface controls (date pickers, series selectors) and metadata about available data series. No actual rate data, commentary, or research is present. This is not an archiveable research document - it is a navigation/data query tool. The metadata indicates TARGET is 'macro catalysts' but the page itself provides no macro catalyst information, only the means to query for it.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "No substantive content - only interface elements",
+      "No publication date - cannot assess recency",
+      "No actual data or analysis present",
+      "Not a research document or data release",
+      "Cannot be used as a source for macro catalyst research"
+    ]
+  }
+}

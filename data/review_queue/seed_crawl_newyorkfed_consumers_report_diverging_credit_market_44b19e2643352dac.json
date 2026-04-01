@@ -1,0 +1,93 @@
+{
+  "id": "seed_crawl_newyorkfed_consumers_report_diverging_credit_market_44b19e2643352dac",
+  "created_at": "2026-04-01T09:13:35.258224+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Consumers Report Diverging Credit Market Experiences and Expectations",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2017/an170717",
+    "published_at": "2017-07-17",
+    "source_type": "research_paper",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The Federal Reserve Bank of New York released results from its June 2017 Survey of Consumer Expectations (SCE) Credit Access Survey, showing a notable divergence between increased credit application rates and higher rejection rates. Application rates rose to 50.6%, the highest since the survey began in October 2013, while per-applicant rejection rates increased from 17.4% to 21.2%. Despite this, consumers became slightly more optimistic about future approval rates for credit cards, mortgages, and auto loans.",
+  "key_points": [
+    "Credit application rates increased sharply from 46.1% in February to 50.6% in June 2017, the highest reading since October 2013",
+    "Per-applicant rejection rate rose from 17.4% to 21.2%, driven primarily by middle-age respondents ages 41-59",
+    "Share of 'discouraged' credit applicants fell to a series low of 5.9%, down from 8.2% in February 2017",
+    "Voluntary account closures increased to 17.3%, the highest level since June 2014; involuntary closures reached 6.7%, a series high",
+    "Proportion of respondents expecting to apply for credit in the next 12 months decreased to a series low of 25.5%",
+    "Perceived financial fragility worsened slightly: probability of needing $2,000 for unexpected expense rose from 31.4% to 32.2%"
+  ],
+  "why_it_matters": "This survey provides a real-time indicator of credit market conditions and consumer sentiment. Rising application rates alongside higher rejection rates suggest tightening credit standards despite strong consumer demand. The divergence between current experiences and future expectations offers insight into household financial health and potential lending market direction. Note: certain data were edited in August 2018 due to data processing issues.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "The survey captures consumer credit dynamics during mid-2017, a period of ongoing economic recovery. Rising rejection rates alongside higher application demand may signal lenders becoming more selective. The slight improvement in perceived approval expectations despite higher actual rejections could indicate consumer optimism or adjustment to new credit market realities.",
+  "market_structure_context": "While this survey focuses on consumer credit access rather than core market structure (trading infrastructure, settlement, clearing), credit market conditions can influence broader financial system functioning. The data on rejection rates, application behavior, and financial fragility provide context for household credit availability.",
+  "important_numbers": [
+    "50.6% - credit application rate (highest since Oct 2013)",
+    "21.2% - per-applicant rejection rate",
+    "16.5% - per-application rejection rate",
+    "5.9% - share of 'discouraged' credit applicants (series low)",
+    "25.5% - proportion expecting to apply for credit next 12 months (series low)",
+    "32.2% - probability of needing $2,000 for unexpected expense",
+    "67.1% - probability of being able to come up with $2,000",
+    "29.5% - credit card application rate",
+    "10.5% - mortgage refinance application rate"
+  ],
+  "tags": [
+    "consumer-credit",
+    "credit-access",
+    "survey",
+    "rejection-rates",
+    "federal-reserve",
+    "household-finance",
+    "credit-market",
+    "consumer-expectations"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'research_paper' is incorrect - the source is a press release announcing survey results, not a research paper with methodology and analysis",
+      "event_type should likely be 'economic_commentary' or 'blog_post' as this is a NY Fed news release summarizing survey findings",
+      "Topic mismatch: source metadata declares 'market structure' but content focuses on consumer credit survey results (application rates, rejection rates, household expectations) rather than trading infrastructure, settlement systems, or market microstructure",
+      "Source age is ~8.7 years (2017-07-17), outside the 90-day window for current relevance; archival value for market structure analysis is questionable",
+      "Source notes 'data processing issues' with data edited in August 2018 - this caveat is not mentioned in the summary or key_points"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record contains factually accurate data from the source, but has three compounding issues: (1) event_type misclassification - press release is labeled as research_paper, (2) topic relevance gap - declared 'market structure' topic does not match consumer credit survey content, (3) age makes archival value questionable for market structure use cases. Human reviewer should assess whether this NY Fed consumer credit survey has sufficient market structure context or if the topic/event_type should be recategorized."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_consumers_report_diverging_credit_market_44b19e2643352dac.txt",
+  "notes": "This source is a NY Fed research release on consumer credit survey results, not directly related to core market structure topics (trading systems, market infrastructure, settlement, clearing). It reflects consumer credit market conditions and lending standards rather than structural market mechanics. The 2017 publication date makes this a historical record; relevance for current market structure analysis is limited. Recommend human review to assess archival value for specific use cases.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "c",
+    "score": 4,
+    "reasoning": [
+      "Publication date 2017-07-17 is outside the 90-day relevance window, reducing practical utility for current market analysis",
+      "Content focuses on consumer credit survey results rather than market structure or macro catalysts as defined in taxonomy",
+      "High domain trust tier (Federal Reserve Bank of New York) partially offsets age concerns",
+      "Contains specific quantitative data points and clear methodology",
+      "Source quality is good but temporal relevance is low for current applications"
+    ]
+  }
+}
