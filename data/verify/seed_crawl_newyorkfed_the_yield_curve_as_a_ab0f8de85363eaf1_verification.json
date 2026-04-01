@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body contains only website navigation elements, cookie notices, and Terms of Use text with zero substantive content",
+    "The actual article 'The Yield Curve as a Leading Indicator' content was not captured by the crawl",
+    "Cannot verify event_type, extract meaningful data, or assess archival value due to missing content",
+    "Crawl method failed to render JavaScript-heavy interactive FAQ page",
+    "Published date is unknown and cannot be assessed against the 90-day staleness threshold",
+    "Source attribution alone is insufficient without actual content to archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The crawled source contains only site navigation and boilerplate text from the New York Fed website. The actual substantive content of the article 'The Yield Curve as a Leading Indicator' was not captured by the crawl. This record cannot be meaningfully archived without the article's actual content.",
+    "why_it_matters": "This crawl appears to have failed to capture the actual article content, only retrieving the page shell. Archives require actual content for meaningful retrieval and RAG use. Without the substantive text, this record has no research value.",
+    "macro_context": "",
+    "market_structure_context": "The yield curve is a fundamental market structure indicator used to assess the term structure of interest rates. The specific New York Fed FAQ on this topic would normally contain valuable educational content about recession prediction models and term spread analysis. However, this information is not present in the source body."
+  }
+}

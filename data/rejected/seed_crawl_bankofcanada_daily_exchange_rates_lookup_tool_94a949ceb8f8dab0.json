@@ -1,0 +1,79 @@
+{
+  "id": "seed_crawl_bankofcanada_daily_exchange_rates_lookup_tool_94a949ceb8f8dab0",
+  "created_at": "2026-04-01T03:00:41.497915+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Daily exchange rates: Lookup tool",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates-lookup",
+    "published_at": "",
+    "source_type": "seed_crawl",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "This is a Bank of Canada utility interface for searching and downloading daily exchange rate data, not a research document or commentary. The page lists available currencies and explains the data publication schedule (by 16:30 ET each business day) but contains no analytical content, macro commentary, or policy-relevant findings.",
+  "key_points": [
+    "Source is a data lookup utility tool, not a research or commentary document",
+    "Bank of Canada publishes daily average exchange rates once each business day by 16:30 ET",
+    "Rates are described as indicative only, obtained from averages of aggregated price quotes from financial institutions",
+    "Available currencies include CAD cross-rates against major currencies (USD, EUR, GBP, JPY, etc.)",
+    "No macro analysis, policy commentary, or research findings present in the source"
+  ],
+  "why_it_matters": "This page is a functional data access tool, not a source of macro catalysts or market structure insights. It provides raw exchange rate data but contains no analysis, interpretation, or policy commentary that would be relevant for a finance research archive.",
+  "market_impact": {
+    "asset_classes": [
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "exchange-rates",
+    "cad",
+    "utility-tool",
+    "data-lookup"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 10,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a functional utility/data lookup interface, not research content",
+      "Contains no macro analysis, commentary, or policy-relevant findings",
+      "event_type correctly set to 'unknown' but this confirms unsuitability for archive",
+      "Quality tier 'excluded' is appropriate - source is functionally equivalent to a navigation page"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is not relevant to macro catalysts or market structure research. This is a functional utility page for accessing exchange rate data, not a research document, commentary, or policy release. Recommend excluding from archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_daily_exchange_rates_lookup_tool_94a949ceb8f8dab0.txt",
+  "notes": "Non-archivable. This source is a Bank of Canada exchange rate lookup tool/interface. It provides no research content, macro analysis, or market commentary. It is functionally equivalent to a navigation page or search interface. The source only describes how to access exchange rate data and lists available currencies. Contains no event_type-classifiable content such as rate decisions, speeches, data releases with actual numbers, or research findings.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Not a research document or commentary",
+      "Functional utility interface with no analytical content",
+      "Cannot be classified into any EVENT_TYPE taxonomy category",
+      "Provides no macro catalyst or market structure insights"
+    ]
+  }
+}

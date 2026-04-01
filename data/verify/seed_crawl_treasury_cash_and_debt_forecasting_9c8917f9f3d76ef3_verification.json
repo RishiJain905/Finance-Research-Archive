@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/landing page (home.treasury.gov/policy-issues/...) - Core Rule 5 requires rejection of navigation pages",
+    "Source contains no specific data, forecasts, or policy decisions",
+    "No published_at date available to assess recency",
+    "event_type set to 'unknown' - correct for this source type, but confirms it lacks the characteristics of any valid event taxonomy",
+    "Source has no direct market-moving information or macro catalyst content",
+    "Does not qualify as a research paper, economic commentary, or data release"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear-cut reject case. The source is unambiguously a navigation page describing Treasury report schedules. It contains no actual data, analysis, or policy content. The generated record already correctly identifies this as a low-value source and recommends rejection. No human judgment needed - Core Rule 5 is deterministic.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a Treasury.gov landing page that describes the existence and release schedules of three Treasury reporting mechanisms: the Daily Treasury Statement (DTS), the Monthly Treasury Statement of Receipts and Outlays (MTS), and the Monthly Statement of the Public Debt (MSPD). No specific data, forecasts, or policy decisions are contained in this page.",
+    "why_it_matters": "This page describes Treasury reporting infrastructure but contains no actionable data. It is a navigation/description page for understanding what Treasury reports exist and when they are released, rather than the reports themselves. It has no direct market-moving information.",
+    "macro_context": "",
+    "market_structure_context": "The page describes Treasury cash management operations and reporting structure, including where Treasury maintains operating cash (FRBNY account and Tax and Loan accounts at commercial banks). This represents institutional market plumbing information but the page itself does not contain specific operational data."
+  }
+}
