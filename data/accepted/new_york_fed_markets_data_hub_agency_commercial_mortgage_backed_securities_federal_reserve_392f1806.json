@@ -1,7 +1,7 @@
 {
   "id": "new_york_fed_markets_data_hub_agency_commercial_mortgage_backed_securities_federal_reserve_392f1806",
   "created_at": "2026-04-01T04:44:28.989778+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "balance_sheet_update",
   "title": "Agency Commercial Mortgage-Backed Securities",
@@ -57,31 +57,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate and faithfully represents the source content. While the source is operationally-focused rather than analytically rich, it provides an authoritative institutional record of the Fed's pandemic-era agency CMBS program. The BlackRock vendor relationship and timeline are correctly documented. Given that this documents a specific historical Fed balance sheet operation during COVID-19, it has archival value even if the content is thin."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-01T05:32:40.681749+00:00"
   },
   "raw_text_path": "data/raw/new_york_fed_markets_data_hub_agency_commercial_mortgage_backed_securities_federal_reserve_392f1806.txt",
   "notes": "Source is an operational reference page from the New York Fed documenting the timeline and mechanics of the Fed's agency CMBS purchase program. No published_at date provided in metadata, making recency assessment impossible. The content is factual but thin, primarily consisting of dates and vendor information with links to data rather than analytical commentary. Historical record of Fed balance sheet operations during COVID pandemic. Source provides authoritative institutional detail but limited research value.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 4,
+    "tier": "tier_2",
+    "score": 70.0,
     "reasoning": [
-      "Limited analytical content; primarily a landing page with operational details",
-      "No publication date makes recency assessment impossible",
-      "350-word content count is thin for substantive research",
-      "Historical record rather than current/relevant analysis",
-      "Well-sourced to official New York Fed documentation"
+      "quality score: 70.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
