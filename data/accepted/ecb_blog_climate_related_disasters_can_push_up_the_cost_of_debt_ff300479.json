@@ -1,7 +1,7 @@
 {
   "id": "ecb_blog_climate_related_disasters_can_push_up_the_cost_of_debt_ff300479",
   "created_at": "2026-04-01T00:51:27.330447+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "blog_post",
   "title": "Climate-related disasters can push up the cost of debt",
@@ -64,32 +64,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is mostly accurate and from a high-quality primary source, but contains minor overstatement in the summary and includes unsupported asset class references in market_impact. The empty market_structure_context is a missed opportunity to capture relevant market microstructure details. These are not critical errors but warrant human review to determine if corrections are needed."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-01T01:00:12.574932+00:00"
   },
   "raw_text_path": "data/raw/ecb_blog_climate_related_disasters_can_push_up_the_cost_of_debt_ff300479.txt",
   "notes": "Source is a substantive ECB staff research blog post with empirical analysis covering 52 countries over two decades. The article was published on 2026-02-19, which is recent relative to the processing date (2026-04-01). The source is relevant to macro catalysts as it demonstrates how climate events function as macro drivers affecting sovereign credit conditions. Chart 1 referenced in the text (plotting yield responses by debt level) is not fully displayed due to truncation, but the qualitative findings are well-supported in the available text. Authors are ECB staff members (Sofia Anyfantaki, Marianna Blix Grimaldi, Carlos Madeira, Simona Malovana and Georgios Papadopoulos).",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "primary",
-    "score": 8,
+    "tier": "tier_2",
+    "score": 67.0,
     "reasoning": [
-      "Empirical research from official central bank source",
-      "Covers 52 countries over 20-year period",
-      "Clear methodology distinguishing transition and physical risks",
-      "Provides concrete historical examples (Thailand, Pakistan floods)",
-      "Source is recent (6 weeks before processing date)",
-      "Minor limitation: chart referenced but not visible in extracted text"
+      "quality score: 67.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
