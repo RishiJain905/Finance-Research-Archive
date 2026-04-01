@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a press release summarizing a research paper, not the full paper itself - 'event_type' as 'research_paper' and language calling it 'research paper' in summary is slightly misleading",
+    "Source is 27 years old (1999) - while New York Fed research has archival value, marginal relevance to current 'market structure' focus as defined in archive scope (does not address trading infrastructure, settlement, or market operations)",
+    "Record quality tier rated 'low' with score of 3 - suggests limited current utility"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the record is factually accurate and properly attributed, the source is a 27-year-old press release with marginal relevance to the archive's market structure focus. Human review needed to assess whether historical mortgage market research has sufficient archival value given the tangential topic fit.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This New York Fed Current Issues in Economics and Finance article (March 1999 press release) examines why mortgage refinancing activity surged in 1998, finding that the concentration of outstanding mortgages in the 7.25-8.75% coupon range created a large refinancing wave when market rates dropped toward 7%. The authors identify two additional factors: low unemployment boosting borrower creditworthiness and mortgage 'seasoning' (2-5 year old loans being most likely to refinance).",
+    "why_it_matters": "Understanding the concentration of mortgage coupons helps explain refinancing sensitivity to rate changes. This research documents how a clustered distribution of outstanding loans can create outsized refinancing waves when rates cross threshold levels, relevant to MBS prepayments and mortgage-backed securities valuation.",
+    "macro_context": "",
+    "market_structure_context": "This research examines mortgage market structure through the lens of coupon distribution and refinancing behavior, which affects MBS prepayment risk and mortgage-backed securities valuation. However, it does not address trading infrastructure, settlement, or market operations."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "seed_crawl_ecb.europa_other_decisions_622b6e2956e2a994",
+  "created_at": "2026-04-01T20:57:27.388872+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Other decisions",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/govcdec/otherdec/html/index.en.html",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
+  },
+  "summary": "This source is an ECB Governing Council website index page for 'Other decisions' containing only crawl metadata (LANE: seed_crawl) and no substantive content. The page is a non-archiveable navigation listing.",
+  "key_points": [
+    "Page is an ECB press release index/listing for 'Other decisions' with no actual decision content",
+    "Source body contains only crawl metadata (LANE: seed_crawl, DISCOVERY_METHOD: crawl)",
+    "No rate decisions, policy statements, or economic data are present in the source",
+    "The source provides no usable information for research or RAG purposes"
+  ],
+  "why_it_matters": "This is a thin, non-archiveable navigation page that does not contain any actual ECB policy content. It cannot be used as a source for macro catalyst research and should be rejected per Rule 5 (listing_page prohibition).",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "governing-council",
+    "other-decisions",
+    "index-page",
+    "no-content"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page (ECB 'Other decisions' index) - per Rule 5, listing pages must be rejected",
+      "Source contains only crawl metadata with no substantive content - only 'LANE: seed_crawl' and 'Other decisions All pages in this section'",
+      "No actual decision text, policy content, data, or commentary present",
+      "source_type correctly identified as 'listing_page' but status should be rejected, not review_queue",
+      "No archival value - cannot extract any policy-relevant information",
+      "published_at is empty, but this is minor given the fundamental content issue"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_other_decisions_622b6e2956e2a994.txt",
+  "notes": "Source is non-archiveable index page with no actual decision content. Only contains internal crawl metadata (LANE: seed_crawl). The ECB 'Other decisions' section may contain governance decisions, personnel changes, or administrative matters, but this specific crawl captured only the empty listing page. Recommend targeting specific decision URLs rather than this index.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "non-usable",
+    "score": 1,
+    "reasoning": [
+      "No substantive source content available",
+      "Crawl captured empty listing page only",
+      "Cannot extract any policy-relevant information",
+      "Fails minimum quality threshold for archive"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "seed_crawl_ecb.europa_financial_stability_publications_4ade07f40246f515",
+  "created_at": "2026-04-01T20:56:46.064040+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Financial stability publications",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/financial-stability-publications/html/index.en.html",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
+  },
+  "summary": "This is an ECB landing page serving as a directory to financial stability publications. The actual page content from this crawl is empty—just a page title and navigation text with no actual publication content, dates, or substantive information included.",
+  "key_points": [
+    "Source is an ECB index page for financial stability publications, not an actual publication itself",
+    "Page content is empty; only crawl metadata and navigation text present",
+    "No publication dates, titles, or content available in this crawl",
+    "Cannot classify into any event type as no actual document is present",
+    "Listed under TARGET: macro catalysts but contains no macro catalyst information"
+  ],
+  "why_it_matters": "This crawl captured only a navigation/index page rather than actual publication content. It has no archival value in its current form and cannot be used for research or RAG purposes. A subsequent crawl targeting specific publication links would be required.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "financial-stability",
+    "listing-page",
+    "no-content",
+    "crawl-artifact"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per source_type, which should be rejected per core rules",
+      "No actual publication content captured - only navigation/index page",
+      "event_type set to 'unknown' but cannot be classified because no content exists",
+      "No published_at date available",
+      "No archival value - cannot be used for research or RAG purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_financial_stability_publications_4ade07f40246f515.txt",
+  "notes": "Non-archiveable listing page. The crawl captured only the index/landing page with no actual publication content. This is a crawl artifact, not a research document. To obtain archiveable ECB financial stability content, individual publication URLs must be crawled separately. Domain is high-trust (ecb.europa.eu) but this specific crawl result is thin.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "No content present in crawl",
+      "Listing page per source_type",
+      "Empty page body",
+      "Cannot extract any meaningful financial, macro, or market structure information"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source_type, which should be rejected per core rules",
+    "No actual publication content captured - only navigation/index page",
+    "event_type set to 'unknown' but cannot be classified because no content exists",
+    "No published_at date available",
+    "No archival value - cannot be used for research or RAG purposes"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies that this is a non-archivable listing page with no content. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
