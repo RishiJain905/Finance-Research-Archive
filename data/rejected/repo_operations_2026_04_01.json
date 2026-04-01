@@ -1,0 +1,78 @@
+{
+  "id": "repo_operations_2026_04_01",
+  "created_at": "2026-04-01T14:47:20.929365+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Placeholder: NY Fed Repo Operations Dataset",
+  "source": {
+    "name": "NY Federal Reserve",
+    "url": "",
+    "domain": "nyfed.gov",
+    "published_at": "2026-04-01",
+    "source_type": "unknown"
+  },
+  "summary": "This record contains placeholder text for NY Fed Repo Operations data. The source explicitly states it is a placeholder dataset snapshot intended to be replaced with real data from API fetches. No actual repo operations data is provided.",
+  "key_points": [
+    "Source is explicitly marked as a placeholder by the data provider",
+    "No actual repo operation details (amounts, counterparties, rates, or dates) are contained in the source",
+    "NY Fed Repo Operations are a key component of money market plumbing and short-term funding markets",
+    "The snapshot date is 2026-04-01 but the content does not reflect actual market operations from that date"
+  ],
+  "why_it_matters": "NY Fed repo operations are fundamental to short-term funding markets and monetary policy implementation. This placeholder record cannot be used for research or RAG purposes as it contains no substantive information about actual operations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "NY Fed repo operations are a core component of the federal funds market and short-term funding plumbing. This placeholder provides no data on current operations, which limits the ability to assess current money market conditions.",
+  "important_numbers": [],
+  "tags": [
+    "repo-operations",
+    "ny-fed",
+    "market-structure",
+    "placeholder",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is placeholder text only - no actual NY Fed repo operations data present",
+      "Source explicitly states it will be replaced with real data - content is not finalized",
+      "No substantive information about repo operations, amounts, rates, counterparties, or dates can be extracted",
+      "url field is empty - incomplete source attribution",
+      "Source_type is 'unknown' but source is clearly not an article - placeholder data page",
+      "Record cannot serve any research or RAG purpose in current form"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_01.txt",
+  "notes": "This is a placeholder snapshot for NY Fed Repo Operations. The source body contains only a single statement indicating this is test/placeholder data. No actual repo operation information is available. This record should not be used for any research or market analysis. The target topic (market structure) is appropriate given the subject domain, but the source content does not support that classification.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Placeholder content only - no substantive data",
+      "Source explicitly states it will be replaced with real data",
+      "Cannot extract any market structure or macro information",
+      "No numbers, dates, or operational details present"
+    ]
+  }
+}
