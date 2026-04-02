@@ -1,9 +1,12 @@
+import json
 import subprocess
 import sys
 from pathlib import Path
+from typing import Optional
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+TRIAGE_DIR = BASE_DIR / "data" / "triage"
 
 
 def run_step(command: list[str], step_name: str) -> None:
@@ -19,6 +22,45 @@ def run_step(command: list[str], step_name: str) -> None:
 
     if result.returncode != 0:
         raise RuntimeError(f"{step_name} failed with exit code {result.returncode}")
+
+
+def persist_triage_metadata(record_id: str, triage_data: dict) -> Path:
+    """Persist triage metadata for a record.
+
+    Args:
+        record_id: The record ID
+        triage_data: Triage metadata dict with priority_score, priority_band, lane, reasons
+
+    Returns:
+        Path where the metadata was saved
+    """
+    TRIAGE_DIR.mkdir(parents=True, exist_ok=True)
+    save_path = TRIAGE_DIR / f"{record_id}_triage.json"
+
+    with open(save_path, "w", encoding="utf-8") as f:
+        json.dump(triage_data, f, indent=2, ensure_ascii=False)
+
+    return save_path
+
+
+def load_triage_metadata_for_record(record_id: str) -> Optional[dict]:
+    """Load triage metadata for a record.
+
+    Args:
+        record_id: The record ID
+
+    Returns:
+        Triage metadata dict or None if not found
+    """
+    triage_path = TRIAGE_DIR / f"{record_id}_triage.json"
+    if not triage_path.exists():
+        return None
+
+    try:
+        with open(triage_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return None
 
 
 def main() -> None:

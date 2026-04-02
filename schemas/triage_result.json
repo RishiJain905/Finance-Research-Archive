@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "V2.7 Triage Result",
+  "description": "Triage result for a candidate record",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "priority_score",
+    "priority_band",
+    "scoring",
+    "reasons",
+    "action"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Unique identifier for the candidate"
+    },
+    "priority_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Computed priority score (0-100)"
+    },
+    "priority_band": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low", "discard"],
+      "description": "Priority band classification"
+    },
+    "scoring": {
+      "type": "object",
+      "required": [
+        "source_trust",
+        "freshness",
+        "topic_relevance",
+        "title_quality",
+        "url_quality",
+        "novelty",
+        "quant_value",
+        "duplicate_risk"
+      ],
+      "properties": {
+        "source_trust": {
+          "type": "number",
+          "description": "Source trust score component"
+        },
+        "freshness": {
+          "type": "number",
+          "description": "Freshness score component"
+        },
+        "topic_relevance": {
+          "type": "number",
+          "description": "Topic relevance score component"
+        },
+        "title_quality": {
+          "type": "number",
+          "description": "Title quality score component"
+        },
+        "url_quality": {
+          "type": "number",
+          "description": "URL quality score component"
+        },
+        "novelty": {
+          "type": "number",
+          "description": "Novelty score component"
+        },
+        "quant_value": {
+          "type": "number",
+          "description": "Quant value score component"
+        },
+        "duplicate_risk": {
+          "type": "number",
+          "description": "Duplicate risk score component (negative signal)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Human-readable explanations for the score"
+    },
+    "action": {
+      "type": "string",
+      "enum": ["process_now", "defer", "discard"],
+      "description": "Recommended action for this candidate"
+    }
+  },
+  "additionalProperties": false
+}

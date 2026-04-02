@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "V2.7 Triage Candidate",
+  "description": "Candidate record for V2.7 triage and prioritization engine",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "lane",
+    "source_name",
+    "source_domain",
+    "source_url",
+    "discovered_at",
+    "topic",
+    "title",
+    "anchor_text",
+    "raw_path",
+    "source_type",
+    "discovery_context"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Unique identifier for the candidate"
+    },
+    "lane": {
+      "type": "string",
+      "enum": ["trusted_sources", "keyword_discovery", "seed_crawling", "quant"],
+      "description": "Discovery lane that found this candidate"
+    },
+    "source_name": {
+      "type": "string",
+      "description": "Human-readable source name"
+    },
+    "source_domain": {
+      "type": "string",
+      "description": "Source domain (e.g., federalreserve.gov)"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Full URL of the candidate"
+    },
+    "discovered_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when candidate was discovered"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Topic category for the candidate"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title or headline of the candidate"
+    },
+    "anchor_text": {
+      "type": "string",
+      "description": "Anchor text from discovery source (if applicable)"
+    },
+    "raw_path": {
+      "type": "string",
+      "description": "Path to raw content file if downloaded"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["article", "speech", "press_release", "quant_snapshot", "policy_statement", "blog", "research_note"],
+      "description": "Type of source content"
+    },
+    "discovery_context": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Search query that led to discovery (optional)"
+        },
+        "seed_domain": {
+          "type": "string",
+          "description": "Seed domain for crawl-based discovery (optional)"
+        },
+        "parent_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Parent URL where link was found (optional)"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}
