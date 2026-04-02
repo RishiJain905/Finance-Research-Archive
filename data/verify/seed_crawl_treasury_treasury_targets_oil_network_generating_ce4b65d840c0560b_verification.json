@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect - this is a sanctions enforcement action (OFAC designations), not regulatory guidance. 'market_notice' would be more appropriate, or possibly 'unknown' given the mismatch with available taxonomy",
+    "Source age is 14 months (published February 8, 2025, TODAY is April 2, 2026) - while within the 90-day exception window for archival value, the record should note this explicitly",
+    "Source describes enforcement action with specific shipment data, but does not provide forward guidance on sanctions enforcement trajectory or explicit market impact estimates - market_impact confidence of 2 appears appropriate"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Event type is materially misclassified - 'regulatory_guidance' implies policy guidance documents, but this is an OFAC sanctions enforcement action. While the content is factually accurate and well-sourced, the event_type field is substantively wrong. Human decision needed to correct event_type before acceptance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
