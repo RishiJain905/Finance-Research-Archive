@@ -173,7 +173,7 @@
     "https://www.federalreserve.gov/newsevents/pressreleases/2024-press.htm": "6d074772ab06e13042804a348b7eaf5a17c6201efe05a4de574321041ed96fc0",
     "https://www.federalreserve.gov/newsevents/pressreleases/2023-press-fomc.htm": "7124bffab69a8d17150bff24a9e22986c9ac845250fd6fd588548fd120ed02f5",
     "https://www.federalreserve.gov/newsevents/pressreleases/2023-press.htm": "6dd97d301a23e8c50313dd735857a0f7ad7c63e1687921822d22f16917c1c6b0",
-    "https://www.bea.gov/news/for-journalists": "07d6c01e19ace50d52f7ef3a9430c454319b7dd5672ff76cc91f3b1b0b693403",
+    "https://www.bea.gov/news/for-journalists": "dfbe6867bb6a29757737b369ea37ae677e8fe7bf9817ab579ba3a9fa97bf2b3f",
     "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/treasury-securities": "2c77e72a79bc5a0386392ba1baa27d09c24e0b47d9a3d568bfc6d13bf903f097",
     "https://www.bankofcanada.ca/publications/mpr/mpr-2026-01-28/": "8184a0abf9a715ff11380f7e11d4e9f1691b20289b09a67e0212ae024a9afdee",
     "https://www.ice.com/insights/topic/energy-markets": "fa945f04bd34c2f4d3fd06696ad0a5cef7ba5d39bc490079a8991cc2a320b2e9",
@@ -215,7 +215,8 @@
     "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "61a2e6afc5907c97ee3878f48fa148fe35a2164b3768eb45c1a923ebf7a53a43",
     "https://home.treasury.gov/news/press-releases/sb0431": "24da54febd0b0846bb5ec41f083354cf20d7840b272ee7fa83443826aa6ac950",
     "https://www.bankofengland.co.uk/decision-maker-panel/2026/march-2026": "2604eacca11b940e132a08b543126b97abf4e80c9db1907915a52741e8e0a4ca",
-    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": "2a1d85296f539d96df77562fe9d5ef6221e617f05e50e7d8e032503fddfbaad4"
+    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": "2a1d85296f539d96df77562fe9d5ef6221e617f05e50e7d8e032503fddfbaad4",
+    "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": "37832a5ef4992edcc580bf04a6b5bb54af1d6e765b12aea73b4f56fb4e24637f"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -433,7 +434,8 @@
     "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
     "https://home.treasury.gov/news/press-releases/sb0431": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e",
     "https://www.bankofengland.co.uk/decision-maker-panel/2026/march-2026": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865",
-    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1"
+    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
+    "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4644,6 +4646,32 @@
       ],
       "target_name": "ECB Blog",
       "topic": "macro catalysts"
+    },
+    "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9": {
+      "required_keywords": [
+        "market",
+        "treasury",
+        "inflation",
+        "rates",
+        "liquidity",
+        "repo"
+      ],
+      "blocked_keywords": [
+        "community",
+        "museum",
+        "student"
+      ],
+      "min_word_count": 180,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "New York Fed Liberty Street Economics",
+      "topic": "market structure"
     }
   },
   "title_fingerprints": {
@@ -4832,7 +4860,8 @@
     "97ebac6d8473a16e011fa6f9448b6ede1ddb26f7": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
     "b1c4cf59eb8f4ec8ffef2081aa168009160db2a0": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e",
     "7ab839ef45f7dfb1cc14addf02833e133b113ed5": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865",
-    "4c502f339a6c8e7a5238ddacf372251a80f5fa41": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1"
+    "4c502f339a6c8e7a5238ddacf372251a80f5fa41": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
+    "7e347f938854b3a0d50b80f94d64d5ca9096208b": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5087,7 +5116,9 @@
     "a860ff4121d57008f632370639d46a1a46b9e695": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
     "00be813907601a1277d6bcfb3c7e116301157b59": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e",
     "a56600faf1f36f4631f9393addc2d0b1e09f4a97": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865",
-    "9f22b2717cd7bd4c2103514712db2ba03a308c65": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1"
+    "9f22b2717cd7bd4c2103514712db2ba03a308c65": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
+    "48246bb463f615b66936974e684811650b37555e": "bea_news_for_journalists_u_s_bureau_of_economic_analysis_bea_4e00dcdb",
+    "b57c4cb4e2eb24bb376dbfad97cf64a834ad418f": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
@@ -5182,7 +5213,8 @@
     "https://www.bankofcanada.ca/2026/02/cfec-releases-results-of-october-2025-foreign-exchange-volume-survey/": true,
     "https://www.bankofcanada.ca/2026/04/release-the-bank-canadas-summary-deliberations-2026-04-01/": true,
     "https://www.bankofengland.co.uk/decision-maker-panel/2026/march-2026": true,
-    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": true
+    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": true,
+    "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": true
   },
   "event_fingerprints": {
     "f1df9a7292a5b92b1163438346b6fae3a7f03a62": "keyword_discovery_federalreserve_federal_reserve_issues_fomc_statement_459ed78faf1dfd41",
@@ -5247,6 +5279,7 @@
     "5c36ea0595061a53cea34718bcd88bc4ff0366bb": "seed_crawl_treasury_a_third_quarter_update_to_cfe1f72c715c3ec0",
     "b858616993d9242ed297d087aee634795e42a951": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865",
     "37792e2f362f886f2f487485f47bfa45a24237a2": "seed_crawl_ecb.europa_economic_bulletin_issue_2_2026_f4a6fa2769b9586a",
-    "fa45b1b5d7c19f9bccad3e6256dd5719f9a1c410": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1"
+    "fa45b1b5d7c19f9bccad3e6256dd5719f9a1c410": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
+    "d267445b1b618df882b7933b3c05d4b9819e623f": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9"
   }
 }
