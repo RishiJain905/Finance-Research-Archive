@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic mismatch: metadata claims 'macro catalysts' but source is administrative tax relief for DHS workers with no financial market or macro relevance",
+    "event_type set to 'unknown' when a more accurate classification could be identified",
+    "Source is operational/HR-focused administrative announcement with no monetary policy content, economic data, or market operations",
+    "why_it_matters correctly identifies this as non-market-moving but record still submitted for verification despite low archival value",
+    "The 'ongoing DHS shutdown' reference suggests macro context is missing, but no analysis of shutdown economic impact is present in source"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is clearly not relevant to market structure or macro catalysts per the core rules. It's an administrative tax filing extension announcement. The record's own assessment (quality_tier: low, score: 2) and why_it_matters correctly identify this as non-market-relevant. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

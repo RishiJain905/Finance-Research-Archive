@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when 'blog_post' or 'regulatory_guidance' would be more appropriate given the source is clearly a policy guidance blog post from Treasury",
+    "Topic alignment gap: source target is 'macro catalysts' but the document is administrative guidance on LIHTC program mechanics rather than a market-moving event or data release"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source text and the summary correctly captures the content. However, event_type is incorrectly set to 'unknown' when a valid taxonomy value (blog_post) is clearly applicable. Additionally, human should verify whether policy guidance documents on housing program administration meet the archive's relevance threshold for 'macro catalysts' topics.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
