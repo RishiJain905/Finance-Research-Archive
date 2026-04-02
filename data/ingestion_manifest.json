@@ -212,7 +212,8 @@
     "https://www.bankofcanada.ca/2026/04/release-the-bank-canadas-summary-deliberations-2026-04-01/": "1596450357ca444a020dd2ddebda52afec3ef4ee33753121d21c193a1c5a1870",
     "https://www.bankofcanada.ca/2026/02/cfec-releases-results-of-october-2025-foreign-exchange-volume-survey/": "139eb187c59c3e6a5803db448aa9019e6060218f8aaba61ab2f1b4920c54c684",
     "https://www.bankofcanada.ca/2026/03/speech-carolyn-rogers-2026-03-26/": "c9c05bce2d5ac538ff4e995f59465dfd15f822cbed5a1ec12d16ca2a9aa6366a",
-    "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "61a2e6afc5907c97ee3878f48fa148fe35a2164b3768eb45c1a923ebf7a53a43"
+    "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "61a2e6afc5907c97ee3878f48fa148fe35a2164b3768eb45c1a923ebf7a53a43",
+    "https://home.treasury.gov/news/press-releases/sb0431": "24da54febd0b0846bb5ec41f083354cf20d7840b272ee7fa83443826aa6ac950"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -427,7 +428,8 @@
     "https://www.bankofcanada.ca/2026/04/release-the-bank-canadas-summary-deliberations-2026-04-01/": "bank_of_canada_press_browse_release_of_the_bank_of_canada_s_summary_of_deliberations_ban_bb1337e1",
     "https://www.bankofcanada.ca/2026/02/cfec-releases-results-of-october-2025-foreign-exchange-volume-survey/": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "https://www.bankofcanada.ca/2026/03/speech-carolyn-rogers-2026-03-26/": "bank_of_canada_press_browse_speech_by_carolyn_rogers_senior_deputy_governor_of_the_bank_e9e69f47",
-    "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b"
+    "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
+    "https://home.treasury.gov/news/press-releases/sb0431": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4568,6 +4570,31 @@
       ],
       "target_name": "Bank of Canada Market Notices",
       "topic": "market structure"
+    },
+    "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e": {
+      "required_keywords": [
+        "refunding",
+        "auction",
+        "issuance",
+        "treasury",
+        "borrowing"
+      ],
+      "blocked_keywords": [
+        "sanctions",
+        "secretary",
+        "foreign policy"
+      ],
+      "min_word_count": 180,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Treasury Quarterly Refunding",
+      "topic": "market structure"
     }
   },
   "title_fingerprints": {
@@ -4753,7 +4780,8 @@
     "d5e6f764214bd33594dac6d10f5d6be290f78e0f": "bank_of_canada_press_browse_release_of_the_bank_of_canada_s_summary_of_deliberations_ban_bb1337e1",
     "e7756b7a418f295f370c10d617b6f6acdae92568": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "5c915e408922159c0ebc93a747a04de8fede2a48": "bank_of_canada_press_browse_speech_by_carolyn_rogers_senior_deputy_governor_of_the_bank_e9e69f47",
-    "97ebac6d8473a16e011fa6f9448b6ede1ddb26f7": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b"
+    "97ebac6d8473a16e011fa6f9448b6ede1ddb26f7": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
+    "b1c4cf59eb8f4ec8ffef2081aa168009160db2a0": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5005,7 +5033,8 @@
     "2ea3aa1ccb75978b3892d70ee05a02ddca7147fb": "bank_of_canada_press_browse_release_of_the_bank_of_canada_s_summary_of_deliberations_ban_bb1337e1",
     "4a83dfae284f0b56cb0b43c47c40cc7631f0b05c": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "15ca1dd9b93fff85637194f62aa70912ab57c65c": "bank_of_canada_press_browse_speech_by_carolyn_rogers_senior_deputy_governor_of_the_bank_e9e69f47",
-    "a860ff4121d57008f632370639d46a1a46b9e695": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b"
+    "a860ff4121d57008f632370639d46a1a46b9e695": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
+    "00be813907601a1277d6bcfb3c7e116301157b59": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
