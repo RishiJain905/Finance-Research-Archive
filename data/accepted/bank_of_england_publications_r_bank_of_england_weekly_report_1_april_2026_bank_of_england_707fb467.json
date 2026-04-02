@@ -1,7 +1,7 @@
 {
   "id": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
   "created_at": "2026-04-02T14:48:35.203210+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "balance_sheet_update",
   "title": "Bank of England Weekly Report 1 April 2026",
@@ -56,30 +56,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate and the event_type (balance_sheet_update) is correct. However, the source is a pure data dump with no commentary, policy signals, or analysis. The human should decide whether this level of thin content has sufficient archival value for the research archive, or whether it should be excluded as providing minimal research signal beyond the raw numbers."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-02T14:52:50.554846+00:00"
   },
   "raw_text_path": "data/raw/bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467.txt",
   "notes": "Source is a routine weekly balance sheet disclosure. Contains only tabular data with no accompanying analysis, commentary, or policy signals. Relevant to market structure as it tracks BoE operational positions, but thin content limits archival value. No stale date concerns as this is current data.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "tier-4",
-    "score": 2,
+    "tier": "tier_2",
+    "score": 65.5,
     "reasoning": [
-      "Thin content: only 267 words of mechanical balance sheet data",
-      "No policy commentary or forward guidance",
-      "No narrative explaining the data or its significance",
-      "Suitable for balance sheet monitoring but limited research value"
+      "quality score: 65.5/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
