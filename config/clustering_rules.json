@@ -1,0 +1,25 @@
+{
+  "similarity_threshold": 60,
+  "time_window_days": 7,
+  "min_cluster_size": 1,
+  "stable_cluster_accepts_new_records": true,
+  "stable_threshold": 5,
+  "archived_threshold_days": 14,
+  "title_generation": "deterministic",
+  "weight_overrides": {
+    "topic_compatibility": 0.30,
+    "phrase_overlap": 0.25,
+    "time_proximity": 0.20,
+    "source_diversity": 0.15,
+    "quant_support": 0.10
+  },
+  "event_types": [
+    "fed_speech",
+    "treasury_update",
+    "ny_fed_market_note",
+    "quant_move",
+    "rate_change",
+    "liquidity_event",
+    "yield_curve_shift"
+  ]
+}
