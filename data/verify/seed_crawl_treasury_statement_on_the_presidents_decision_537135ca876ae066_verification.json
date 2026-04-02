@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source content (CFIUS national security enforcement action) does not align with TARGET specification of 'macro catalysts'",
+    "The source is a targeted enforcement action about a specific foreign investment in semiconductors, not a macro catalyst event such as rate decisions, inflation data, or GDP releases",
+    "While the summary and key_points are factually accurate to the source, the topic classification is misaligned",
+    "Source is a press release about a specific case disposition, explicitly stating it 'is not indicative of a general position on the transaction parties, countries, or industries involved'"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly sourced, but the topic classification (macro catalysts) does not match the source content (CFIUS national security enforcement). Human decision needed on whether to archive this under a different topic category (e.g., regulatory/geopolitical) or reject based on topic mismatch.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "This is a single CFIUS enforcement action regarding a specific foreign investment in semiconductor technology. The source explicitly states this case-by-case disposition is not indicative of a general position on transaction parties, countries, or industries. This does not constitute a macro catalyst as it does not involve monetary policy, economic data releases, or broad market-moving events.",
+    "market_structure_context": ""
+  }
+}
