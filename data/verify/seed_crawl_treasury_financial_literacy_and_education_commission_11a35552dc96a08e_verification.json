@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source type is 'homepage' per record metadata, which triggers automatic rejection per CORE RULE #5",
+    "Topic mismatch: TARGET is 'macro catalysts' but content is federal financial literacy/consumer education policy with no macro relevance",
+    "No market or macro content present - page describes an institutional overview of a consumer education commission",
+    "Source is a navigation/overview page with links to reports rather than substantive analysis",
+    "event_type is 'unknown' - cannot be mapped to any valid taxonomy value as source contains no policy decision, speech, data release, or research finding",
+    "No published_at date provided in source metadata",
+    "Record correctly identifies the source has no actionable information for market participants"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automatic rejection is warranted: homepage source type, topic mismatch (macro catalysts vs consumer education), and complete absence of market-relevant content. The record's assessment is accurate and self-consistent.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

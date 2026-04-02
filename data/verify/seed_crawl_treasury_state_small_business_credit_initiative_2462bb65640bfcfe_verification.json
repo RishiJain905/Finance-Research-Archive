@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'regulatory_guidance' - the page describes an existing federal program structure, which falls under regulatory guidance type",
+    "Source is a policy/program information portal page (source_type: 'policy_page'), not an article-like document - borderline for archival value",
+    "No published_at date provided in source metadata, making recency assessment difficult",
+    "TARGET specifies 'macro catalysts' but the source is informational program description rather than a market-moving announcement"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is a government program information portal that accurately describes SSBCI but lacks market-moving content. The record correctly identifies this is not a macro catalyst, but the event_type 'unknown' is incorrect (should be 'regulatory_guidance'). Human decision needed on whether to archive policy description pages when they don't contain new announcements or data.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The State Small Business Credit Initiative (SSBCI) is a nearly $10 billion federal program reauthorized and expanded by the American Rescue Plan Act to support small businesses through state-administered capital programs including equity/venture capital, loan participation, loan guarantees, and collateral support. The Treasury page serves as a program information portal rather than a market-moving announcement.",
+    "why_it_matters": "This source is a program information portal describing an existing federal credit initiative. It does not contain new policy announcements, rate decisions, or economic data that would affect market expectations. The SSBCI page provides no actionable information for financial market participants beyond general program structure.",
+    "macro_context": "SSBCI represents a fiscal transfer to small businesses (~$10B), but this Treasury webpage does not announce new policy measures or provide economic data. It is informational content about an existing program structure. The TARGET classification as 'macro catalysts' appears mismatched with the source content."
+  }
+}
