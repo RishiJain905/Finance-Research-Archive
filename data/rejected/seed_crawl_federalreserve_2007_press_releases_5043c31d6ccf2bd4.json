@@ -1,51 +1,60 @@
 {
   "id": "seed_crawl_federalreserve_2007_press_releases_5043c31d6ccf2bd4",
-  "created_at": "2026-03-30T06:18:50.458175+00:00",
+  "created_at": "2026-03-31T18:21:30.982956+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "listing_page",
+  "event_type": "unknown",
   "title": "2007 Press Releases",
   "source": {
     "name": "Federal Reserve",
     "url": "",
-    "published_at": "",
-    "source_type": "listing_page"
+    "published_at": "2007-01-01",
+    "source_type": "listing_page",
+    "domain": ""
   },
-  "summary": "This is a container page listing Federal Reserve press releases from calendar year 2007. It contains links to hundreds of individual announcements including monetary policy actions, regulatory proposals, enforcement actions, and other administrative matters. The page does not contain the substantive text of any individual release; only titles and dates. Per rule #8, listing pages must not be accepted as archiveable research documents.",
+  "summary": "This is a Federal Reserve website listing page containing an index of press releases from calendar year 2007. It is a navigation/aggregation page, not an individual source document, and does not contain substantive research or analysis. The page references numerous FOMC statements, Term Auction Facility announcements, regulatory actions, and banking applications from 2007.",
   "key_points": [
-    "This is a listing/container page, not an individual research document",
-    "Contains links to Federal Reserve press releases spanning full year 2007",
-    "Notable macro catalyst entries include multiple Term Auction Facility (TAF) auctions of $20 billion in 35-day and 28-day credit",
-    "December 12, 2007 entry documents coordinated central bank action to address short-term funding market pressures",
-    "Multiple FOMC statements and meeting minutes are listed under Monetary Policy",
-    "Page URL is blank; individual releases would need separate archival treatment"
+    "This is a listing page/index, not an archiveable individual source document",
+    "Contains references to multiple FOMC statements from 2007 (dates: 12/11, 10/31, 9/18)",
+    "References multiple Term Auction Facility (TAF) credit auctions of $20 billion",
+    "References central bank coordination announcement on 12/12/2007 addressing short-term funding pressures",
+    "References Basel II final rules implementation (11/2/2007) and various regulatory actions",
+    "Source is from 2007 - approximately 19 years old relative to TODAY (2026-03-31)"
   ],
-  "why_it_matters": "This page serves as an index to Federal Reserve communications during 2007, a period significant for macro catalysts including the emergence of subprime mortgage stress, Term Auction Facility (TAF) launches, and coordinated central bank actions. However, the substantive content of these events is not present in this source - individual press releases would require separate archival.",
+  "why_it_matters": "This listing page itself is not directly usable for research. The individual press releases it references (FOMC statements, TAF operations, regulatory actions) may be separately archiveable and relevant to market structure and macro catalysts during the 2007 financial crisis period.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "2007 was a pivotal year for macro catalysts including TAF auctions initiated in December 2007 to address funding market pressures, multiple FOMC statements, and regulatory actions related to subprime mortgage lending. These items are referenced by title/date only in this source.",
-  "market_structure_context": "",
-  "important_numbers": [],
+  "macro_context": "The page references several items from the 2007 period relevant to macro catalysts: FOMC statements (October 31, September 18, December 11, 2007), TAF auctions responding to funding market stress, and a 12/12/2007 coordinated central bank announcement addressing short-term funding pressures. However, this listing page does not contain the substantive content of these individual releases.",
+  "market_structure_context": "This listing page references Term Auction Facility (TAF) operations from 2007, which were market structure interventions during the financial crisis. The page also references Basel II implementation rules and various discount rate actions, which relate to banking/financial system structure.",
+  "important_numbers": [
+    "$20 billion (TAF auction amounts)"
+  ],
   "tags": [
     "federal-reserve",
-    "listing-page",
-    "non-archivable",
     "2007",
-    "press-releases"
+    "press-releases",
+    "listing-page",
+    "historical",
+    "non-archivable",
+    "fomc",
+    "term-auction-facility",
+    "basel-ii",
+    "financial-crisis"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 0,
+    "initial_confidence": 2,
+    "verification_confidence": 1,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/container page per SOURCE METADATA and page structure - violates rule #8",
-      "URL is blank making source non-locatable",
-      "No substantive text content - only titles and dates of individual press releases",
-      "Thin low-signal page with no research value as standalone document",
-      "Individual macro catalyst items (TAF auctions, FOMC statements, central bank coordination) exist within but require separate archival as individual documents"
+      "Source is a listing_page per source metadata - explicitly non-archivable per Rule 5",
+      "Source URL is blank - violates source attribution requirement (name + url must be present)",
+      "No substantive content - only an index of press release titles and dates",
+      "Event type set to 'unknown' but the page itself has no inherent event type (listing page)",
+      "The individual referenced items (FOMC statements, TAF announcements) are not contained in this source",
+      "Source is ~19 years old with no substantive content to warrant archival value"
     ]
   },
   "human_review": {
@@ -54,5 +63,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2007_press_releases_5043c31d6ccf2bd4.txt",
-  "notes": "WEAK SOURCE: Listing page with no substantive content. Contains only titles and dates of press releases. Individual macro catalyst items (e.g., 12/12/2007 central bank coordination, TAF auctions, FOMC statements) exist within this index but would need to be archived separately as individual documents. SOURCE METADATA indicates PAGE_TYPE is effectively a container/navigation page, which is non-archiveable per rule #9."
+  "notes": "Non-archivable listing page. This is a Federal Reserve website index page from 2007 containing references to press releases rather than substantive research content. The page type is listing_page per source metadata guidance, which should be treated as non-archiveable. Individual referenced items (FOMC statements, TAF operations, regulatory announcements) from this 2007 period would be more appropriate for separate archival if they contain substantive content relevant to market structure or macro catalysts."
 }

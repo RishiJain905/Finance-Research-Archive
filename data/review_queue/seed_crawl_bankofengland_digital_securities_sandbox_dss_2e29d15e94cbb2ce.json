@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofengland_digital_securities_sandbox_dss_2e29d15e94cbb2ce",
-  "created_at": "2026-03-31T10:29:14.891832+00:00",
+  "created_at": "2026-03-31T17:55:14.126712+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
@@ -10,18 +10,18 @@
     "url": "https://www.bankofengland.co.uk/financial-stability/digital-securities-sandbox",
     "domain": "www.bankofengland.co.uk",
     "published_at": "2024-12-23",
-    "source_type": "landing_page"
+    "source_type": "unknown"
   },
-  "summary": "The Bank of England and FCA have established a Digital Securities Sandbox (DSS) to test distributed ledger technology for securities issuance, trading, and settlement in a live regulated environment. The DSS runs until 8 January 2029 and allows participants to scale from initial testing through Gate 1 (testing), Gate 2 (go-live), Gate 3 (scaling), and potentially Gate 4 (new permanent regime) toward full authorisation. Instruments in scope include equities, corporate and government bonds, money market instruments, fund units, and emissions allowances. Derivatives and unbacked cryptocurrencies are explicitly out of scope.",
+  "summary": "The Bank of England and FCA jointly operate the Digital Securities Sandbox (DSS), a regulated live environment established to test how developing technologies such as distributed ledgers can be used for securities issuance, trading, and settlement in the UK. The DSS runs until 8 January 2029 and features a multi-gate structure with calibrated limits and a modified legal regime to balance innovation with financial stability and market integrity.",
   "key_points": [
-    "DSS is a joint Bank of England and FCA initiative to test DLT in securities post-trade processes",
-    "Sandbox has four stages: initial application, Gate 1 (testing), Gate 2 (go-live), Gate 3 (scaling), with a glidepath design to full authorisation",
-    "DSS operates under a modified legal regime introduced by the Bank of England to remove regulatory barriers to new technology",
-    "Activity is subject to calibrated limits based on market analysis to mitigate financial stability risks",
-    "End state: participants may transition to a new permanent regime if technology is successfully adopted",
-    "Derivatives and unbacked cryptocurrencies (e.g. Bitcoin) are explicitly out of scope"
+    "The DSS enables testing of distributed ledger technology for notary, maintenance, and settlement activities for financial securities, including equities, corporate/government bonds, money market instruments, and fund units",
+    "The sandbox operates through four gates: Initial Application, Testing (Gate 1), Go-Live (Gate 2), Scaling (Gate 3), and transition to a new permanent regime (Gate 4)",
+    "Live activities commence after Gate 2, meaning real securities can be issued, traded, and settled; these can be used in repurchase agreements and derivative contracts",
+    "The DSS includes calibrated limits, a flexible modified legal regime, and a glidepath design allowing participants to scale as they demonstrate regulatory compliance",
+    "Cryptocurrency and derivative trading are explicitly out of scope for the DSS",
+    "The experience and feedback from DSS participants will help shape a future permanent regulatory regime for digital securities"
   ],
-  "why_it_matters": "This represents a significant regulatory infrastructure experiment that could reshape UK securities market plumbing. If DLT adoption succeeds, it could reduce post-trade costs for pension funds, investment firms, and banks, potentially making UK capital markets more efficient. The sandbox operates under a modified legal regime with calibrated limits to balance innovation with financial stability protection. For market participants, this is a forward-looking structural development rather than an immediate market catalyst.",
+  "why_it_matters": "The DSS represents a significant regulatory innovation in UK financial market infrastructure. If successful, DLT adoption could materially reduce post-trade processing costs for pension funds, investment firms, and banks, potentially making UK capital markets more efficient and competitive. This is a long-term market structure initiative rather than an immediate macro catalyst.",
   "market_impact": {
     "asset_classes": [
       "equities",
@@ -30,36 +30,38 @@
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The DSS is part of broader UK regulatory efforts to maintain financial market competitiveness while ensuring stability. It runs until January 2029 with potential extension by HM Treasury if needed for transition to a permanent regime.",
-  "market_structure_context": "The DSS directly addresses financial market infrastructure by testing DLT for issuance, trading, and settlement of securities. It creates a pathway for distributed ledger technology to potentially replace or supplement traditional settlement infrastructure, with implications for market liquidity, settlement speed, and post-trade processing efficiency. The three-aim approach (innovation facilitation, financial stability protection, market integrity) provides a regulatory framework balancing these sometimes-competing objectives.",
+  "macro_context": "",
+  "market_structure_context": "The DSS is a direct intervention in UK financial market infrastructure, specifically targeting post-trade processes (settlement, notary, maintenance) through DLT. It creates a pathway for digital securities to integrate with existing market plumbing such as repo and derivatives markets. The glidepath design and gate structure represent a novel regulatory approach to transitioning novel technology into permanent market infrastructure.",
   "important_numbers": [
-    "2029-01-08 (sandbox end date)"
+    "8 January 2029 (sandbox end date)"
   ],
   "tags": [
-    "bank-of-england",
-    "digital-securities-sandbox",
-    "dlc",
+    "digital-securities",
+    "dlp",
     "market-infrastructure",
-    "regulatory-sandbox",
+    "bank-of-england",
     "fca",
-    "financial-stability",
-    "securities-settlement"
+    "sandbox",
+    "settlement",
+    "post-trade"
   ],
   "llm_review": {
-    "initial_confidence": 8,
-    "verification_confidence": 8,
-    "verdict": "accept",
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
     "issues_found": [
-      "source_type labeled as 'landing_page' but content is substantive and informational, not merely navigation"
+      "Gate count inconsistency: key_points lists 'four gates: Initial Application, Testing (Gate 1), Go-Live (Gate 2), Scaling (Gate 3), and transition to Gate 4' - this is five items. The source describes 'Initial application stage' as a separate stage, then Gates 1-4. Minor inaccuracy in how gates are counted.",
+      "Source type set to 'unknown' when source_type should identify the page type (e.g., 'web_page', 'information_page') for diagnostics",
+      "SOURCE_METADATA TARGET is 'macro catalysts' but the source is about financial market infrastructure regulation, not macro catalysts. The record correctly identifies this mismatch."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "issues_found"
+    "notes": "While the source is high-quality (Bank of England, authoritative domain), it is informational/regulatory in nature rather than a macro catalyst. The record correctly classifies this as market structure content. The publication date (2024-12-23) makes this 15+ months old. Need to verify whether archival value justifies inclusion for a finance research archive focused on market structure/macro catalysts, and confirm gate counting is accurate."
   },
   "raw_text_path": "data/raw/seed_crawl_bankofengland_digital_securities_sandbox_dss_2e29d15e94cbb2ce.txt",
-  "notes": "Source correctly reclassified from 'macro catalysts' to 'market structure' in metadata. This is a regulatory infrastructure initiative describing the framework for testing DLT in UK securities markets. Not an immediate market catalyst but represents significant potential for future market structure evolution. Published date slightly exceeds 90-day threshold from TODAY but content appears to reflect current regulatory framework.",
+  "notes": "Source classified as regulatory_guidance. While TARGET specified 'macro catalysts', this content concerns financial market infrastructure regulation and DLT adoption in securities markets. Relevant to market_structure but not macro catalysts. Published 2024-12-23 is historical; verify whether DSS status or participants have changed since publication. No price/action market impact described in source.",
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "832efe37044c138dfe50500c913ce572d189f398"
+  "telegram_review_fingerprint": "5a3b64e3f7233e1832b4cf61adca148921bf5e40"
 }

@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 5,
+  "verdict": "review",
   "issues_found": [
-    "Topic mismatch: Source metadata TARGET is 'market structure' but source content addresses internal bank corporate governance, behavioral risk culture, and banking regulation—not financial market structure (trading venues, market making, order flow, market operations)",
-    "Source is a press release announcing a research publication; the actual research papers are not included, only summarized by title and brief description",
-    "No relevance to macro catalysts as defined: no rate decisions, data releases, speeches, or monetary policy actions",
-    "Age: published August 2016 (~9.5 years old), exceeds 90-day threshold but lacks clear archival value for market structure or macro catalyst research",
-    "Human review notes correctly identify this as borderline irrelevant to archive scope"
+    "Source published 2016-08-22, approximately 9.5 years before TODAY (2026-03-31), exceeding the 90-day threshold",
+    "Topic alignment with TARGET 'market structure' is weak: content focuses on corporate governance, banking culture, and institutional risk management—not trading mechanisms, market plumbing, order flow, or price discovery",
+    "Source is a press release announcing research papers, not the papers themselves; body contains only abstracts/descriptions rather than full research content",
+    "No current market relevance identified; record correctly notes 'historical record only'"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record accurately describes the source content, but the source itself is not relevant to the archive's target topics of market structure (market microstructure, trading venues) or macro catalysts (rate decisions, data releases, speeches). Internal bank governance and behavioral culture research falls outside the specified scope.",
-  "suggested_status": "rejected",
+  "human_review_reason": "Source has high institutional credibility (New York Fed) and archival value for governance/risk management research, but its relevance to TARGET 'market structure' is questionable. The record accurately describes the source but appropriately flags that this is governance/compliance research rather than market microstructure. Human decision needed to determine if governance-related financial stability research qualifies for archiving under the market structure mandate.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "Consider adding explicit note that this source addresses institutional risk management and governance practices at banks, which has indirect relevance to market stability and financial infrastructure resilience, though it does not directly address trading mechanisms or market microstructure.",
     "macro_context": "",
     "market_structure_context": ""
   }

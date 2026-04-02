@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_treasury_securities_federal_reserve_bank_62982eb3150677b2",
-  "created_at": "2026-03-30T06:48:19.991871+00:00",
+  "created_at": "2026-03-31T19:35:13.694807+00:00",
   "status": "rejected",
   "topic": "market structure",
   "event_type": "unknown",
@@ -8,50 +8,52 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "",
-    "published_at": "",
-    "source_type": "informational_page"
+    "domain": "newyorkfed.org",
+    "published_at": "unknown",
+    "source_type": "unknown"
   },
-  "summary": "This page describes the New York Fed's Open Market Trading Desk operations, including management of the System Open Market Account (SOMA) portfolio, Treasury outright purchases/sales, and rollover operations executed with primary dealers as directed by the FOMC. The Fed also provides limited Treasury transaction services to approximately 200 central banks and official institutions.",
+  "summary": "This is an informational institutional page describing the New York Fed's role in Treasury securities operations for the System Open Market Account (SOMA). The page explains that the Open Market Trading Desk purchases and sells Treasury securities as directed by the FOMC, historically to match currency circulation and more recently to implement monetary policy. The Desk executes transactions with primary dealers and also provides limited transaction services to approximately 200 central banks and official institutions.",
   "key_points": [
-    "The New York Fed's Open Market Trading Desk executes Treasury securities transactions for the SOMA portfolio as directed by the FOMC",
-    "Transactions are executed exclusively with primary dealers in the secondary market",
-    "SOMA holdings have been expanded on multiple occasions since end of 2008 to implement monetary policy",
-    "Other securities in the SOMA portfolio include agency MBS, agency debt, and agency CMBS",
-    "Transaction data is published quarterly, approximately two years after execution, per Dodd-Frank Act requirements",
-    "The New York Fed provides Treasury transaction services to approximately 200 central banks and official institutions"
+    "The New York Fed's Open Market Trading Desk conducts Treasury outright purchases and sales, and rollovers, as directed by the FOMC",
+    "Transactions are executed with primary dealers in the secondary market",
+    "Since end of 2008, the FOMC has directed Treasury portfolio expansion on several occasions to implement monetary policy",
+    "The Desk also provides transaction services to approximately 200 central banks, governments, and official institutions",
+    "Recent statements referenced include FedTrade operations updates from Mar 12, 2026 and Feb 23, 2026"
   ],
-  "why_it_matters": "Understanding the Fed's Treasury market operations is foundational to understanding Treasury market structure and liquidity provision. The Desk's operations represent a significant flow in the Treasury market, and primary dealer relationships form a core part of the market's institutional architecture.",
+  "why_it_matters": "This page provides institutional context on how the Federal Reserve conducts Treasury market operations through the SOMA portfolio. While not a policy decision or data release, it describes the operational framework that affects Treasury market liquidity and the Fed's balance sheet implementation. Relevant for understanding Fed market structure and plumbing.",
   "market_impact": {
     "asset_classes": [
       "bonds"
     ],
     "directional_bias": "neutral",
-    "confidence": 3
+    "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "This source describes core market structure elements: the role of primary dealers as counterparties to Fed operations, the SOMA portfolio as a mechanism for Fed Treasury holdings, and the institutional framework through which the Federal Reserve participates in Treasury markets. The relationship between the FOMC, the Desk, and primary dealers represents key market infrastructure.",
+  "market_structure_context": "Describes the operational framework for Fed Treasury operations: (1) secondary market purchases/sales with primary dealers, (2) SOMA portfolio rollovers at auction, (3) transaction services for official sector account holders (~200 central banks/governments). The page references recent statements on FedTrade operations (Mar 12, 2026) and Treasury small value exercises (Feb 23, 2026).",
   "important_numbers": [
-    200
+    "200 central banks, governments, and official institutions served"
   ],
   "tags": [
     "federal-reserve",
-    "treasury-market",
     "soma",
+    "treasury-operations",
+    "open-market",
+    "new-york-fed",
     "primary-dealers",
-    "open-market-operations",
-    "fomc"
+    "market-structure"
   ],
   "llm_review": {
     "initial_confidence": 3,
     "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "URL is blank - prevents independent verification and access to original source",
-      "Published date not provided - temporal context unknown",
-      "Source is an institutional explainer page rather than research, analysis, or data",
-      "Content lacks specific analytical value, market-moving information, or novel data points",
-      "No quantitative metrics beyond the '200 central banks' reference",
-      "Record describes Fed operations but contains no specific market catalyst, event, or finding"
+      "URL is blank - violates requirement for source attribution and prevents verification",
+      "PUBLISHED_AT is 'unknown' - no publication date in source metadata",
+      "Source is an institutional/informational page rather than a specific research document, article, or data release",
+      "No specific policy decision, data release, forward guidance, or research finding contained in this page",
+      "event_type set to 'unknown' and source does not fit any specific taxonomy category - page is generic institutional description",
+      "Content describes operational framework without any specific events or findings to archive",
+      "Source is thin low-signal institutional content that would be better served by archiving the referenced data exports and operation schedules instead"
     ]
   },
   "human_review": {
@@ -60,5 +62,5 @@
     "notes": "missing_source_attribution"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_treasury_securities_federal_reserve_bank_62982eb3150677b2.txt",
-  "notes": "Thin source content. This is an institutional explainer page rather than research or data. While the topic (Treasury market structure) is relevant to the target, the content lacks specific analytical value, market-moving information, or data points. The missing URL prevents verification. The single quantitative reference (200 central banks served) is marginal. Suitable as background context on market structure but weak as a standalone research record. Consider whether institutional explainer content warrants archival in a research database."
+  "notes": "Source is an informational/institutional page rather than an actionable research document. It describes the New York Fed's role in Treasury operations without providing specific data, decisions, or analysis. Contains links to data resources (SOMA Holdings, Transaction Data, Operation Schedule) but the page itself is static institutional content. Event_type set to 'unknown' as it does not fit any specific event taxonomy category. If this domain is being crawled for market structure research, the actual data exports and operation schedules (referenced but not included in body) would be more valuable to archive."
 }

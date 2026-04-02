@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/container page providing links to FOMC documents, not the actual content itself",
+    "URL points to press conference page but source body only contains navigation links and accessibility instructions",
+    "Generated record has empty summary, key_points, why_it_matters, macro_context, and all other substantive fields",
+    "source.name is incorrectly set to 'macro catalysts' instead of the actual source 'Board of Governors of the Federal Reserve System'",
+    "published_at is empty despite metadata indicating release date of January 28, 2026",
+    "No actual FOMC statement, rate decision, or substantive content is present in the source",
+    "Container pages are explicitly excluded from acceptance per RULE 5"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

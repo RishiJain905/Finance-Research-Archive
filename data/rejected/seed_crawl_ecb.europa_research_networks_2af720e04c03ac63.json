@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_research_networks_2af720e04c03ac63",
-  "created_at": "2026-03-31T14:30:32.648697+00:00",
+  "created_at": "2026-03-31T18:19:15.009508+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,45 +8,48 @@
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/pub/research-networks/html/index.en.html",
-    "domain": "www.ecb.europa.eu",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This ECB page lists 15 research networks coordinated by the central bank, covering topics from macro-prudential research to price-setting microdata, but provides no specific research findings, data, or actionable insights. The page functions as an institutional index rather than a source of market-relevant information.",
+  "summary": "ECB listing page cataloging internal research networks covering capital markets, monetary policy transmission, competitiveness, household finance, inflation persistence, and related macro-prudential topics.",
   "key_points": [
-    "Page is a directory/index listing ECB research networks, not a research output itself",
-    "Networks listed include: Capital Markets and Financial Integration, CompNet, EABCN, HFCN, IPN, MaRs, PRISMA, RTF, WDN, and others",
-    "Networks cover areas such as macro-prudential policy, inflation persistence, wage dynamics, household finance, and competitiveness",
-    "No publication date, authorship, or specific research findings are provided",
-    "No market structure or macro catalyst information is contained in this listing"
+    "ECB coordinates multiple research networks including Capital Markets and Financial Integration, Competitiveness (CompNet), Household Finance (HFCN), and Inflation Persistence",
+    "Additional networks address monetary policy transmission challenges, currency analysis, wage dynamics, and international spill-overs",
+    "Research networks span critical policy areas: macro-prudential stability, price-setting microdata, and economic linkages"
   ],
-  "why_it_matters": "This source has no immediate market relevance. It merely enumerates research coordination structures at the ECB without providing any findings, data, or signals that could influence market expectations or trading decisions.",
+  "why_it_matters": "Provides structural overview of ECB's research infrastructure for policy analysis",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "ECB maintains coordinated research networks to support monetary policy decisions and financial stability analysis",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "ecb",
     "research-networks",
-    "institutional-listing",
-    "no-content",
-    "archive-candidate"
+    "macro-research",
+    "monetary-policy"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 9,
+    "verification_confidence": 1,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "Source is a listing/navigation page cataloging research network names, not a substantive research document",
+      "No publication date available - source metadata shows empty published_at",
+      "No substantive research content or findings present - only lists network titles",
+      "event_type set to 'unknown' but source type correctly identified as 'listing_page'",
+      "Rule 5 violation: listing_page type sources must be rejected per verification standards"
+    ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "exclude",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_research_networks_2af720e04c03ac63.txt",
-  "notes": "Non-archiveable listing page. Contains only network names and brief descriptions without any substantive research findings. No market structure or macro catalyst content present. SOURCE METADATA target may have been applied incorrectly—this page does not contain macro catalyst information."
+  "notes": "Listing page for ECB research networks. Not a substantive research document or market catalyst."
 }

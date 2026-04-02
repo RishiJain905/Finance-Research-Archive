@@ -1,26 +1,27 @@
 {
   "id": "seed_crawl_ecb.europa_economic_bulletin_7ac125bf2d4a48b3",
-  "created_at": "2026-03-30T07:31:23.449977+00:00",
+  "created_at": "2026-03-31T18:11:26.547244+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
-  "title": "Economic Bulletin - ECB Publication Landing Page",
+  "title": "Economic Bulletin",
   "source": {
     "name": "European Central Bank",
-    "url": "https://www.ecb.europa.eu/pub/ecb/html/index.en.html",
+    "url": "",
+    "domain": "ecb.europa.eu",
     "published_at": "",
-    "source_type": "navigation_page"
+    "source_type": "listing_page"
   },
-  "summary": "This is a container/listing page for ECB Economic Bulletins, not a specific analytical document. The page describes what the Economic Bulletin is (policy decision basis, released eight times yearly) and lists previous release dates. No actual economic data, projections, inflation figures, growth analysis, or macro catalyst information is contained in this source.",
+  "summary": "This is a navigation/landing page for the ECB Economic Bulletin section, not an actual archived release. The page describes what the Economic Bulletin is (economic and monetary information released eight times yearly, two weeks after each ECB policy meeting) and provides links to download specific issues. No actual economic data, policy analysis, or market-relevant content is present in this source.",
   "key_points": [
-    "Source is a navigation/listing page for ECB Economic Bulletin publications",
-    "Economic Bulletins released eight times yearly, two weeks after monetary policy meetings",
-    "March, June, September, December issues include staff macroeconomic projections",
-    "Latest release listed is Issue 1, 2026 (19 February 2026)",
-    "Next release: Issue 2, 2026 scheduled for 2 April 2026",
-    "No specific economic data or catalyst information present in this page"
+    "Page is a navigation listing for ECB Economic Bulletin issues, not the actual publication content",
+    "Economic Bulletin is described as presenting economic and monetary information for Governing Council policy decisions",
+    "Publication schedule: eight releases per year, two weeks after monetary policy meetings",
+    "March, June, September, and December issues include staff macroeconomic projections on inflation, growth, public finances, and external trade",
+    "Latest archived issue referenced is Issue 1, 2026 (published 19 February 2026)",
+    "No actual economic data, figures, or policy content is present on this page"
   ],
-  "why_it_matters": "This is a meta-page about ECB publications rather than an actual economic report. It does not contain data suitable for macro catalyst analysis. Per Rule 8, navigation/listing pages must be rejected.",
+  "why_it_matters": "This page provides no actionable macro or market information. It is a structural metadata page describing the ECB Economic Bulletin publication framework. Researchers seeking ECB economic analysis should access the specific downloadable issues rather than this landing page. Per CORE RULE #6, listing pages are not archiveable.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -32,20 +33,19 @@
   "tags": [
     "ecb",
     "economic-bulletin",
-    "navigation-page",
     "listing-page",
-    "no-content"
+    "no-content",
+    "landing-page"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
+    "initial_confidence": 3,
+    "verification_confidence": 8,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing page - contains no substantive macro catalyst data",
-      "Per Rule 8: navigation_page types must not be accepted",
-      "No economic projections, inflation figures, growth data, or catalyst information present",
-      "Archive value is too low - only provides access points to actual reports",
-      "No specific numerical evidence or analytical content"
+      "URL is blank - cannot verify page location in live web",
+      "source_type correctly identified as listing_page, which triggers CORE RULE #6 rejection",
+      "event_type is 'unknown' - could reasonably be 'monetary_policy_report' given ECB Economic Bulletin content",
+      "PUBLISHED_AT is empty - cannot assess currency against TODAY"
     ]
   },
   "human_review": {
@@ -54,5 +54,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_economic_bulletin_7ac125bf2d4a48b3.txt",
-  "notes": "Low-quality source for macro catalysts research. This is a container page describing the ECB Economic Bulletin publication series with release dates. No substantive economic analysis, data points, or catalyst information is present. The source itself is not relevant to market structure or macro catalysts as defined - it merely provides access points to where such information could be obtained. Recommend indexing specific release PDFs instead."
+  "notes": "SOURCE METADATA indicates TARGET of macro catalysts but this page is merely a navigation/landing page for ECB Economic Bulletin releases. No economic data, policy analysis, or macro content is present. The page describes the publication's purpose and schedule but does not contain the actual bulletins. Recommend targeting specific issue downloads (Issue 1, 2026 from February 2026, or the upcoming Issue 2, 2026) for actual archived content."
 }

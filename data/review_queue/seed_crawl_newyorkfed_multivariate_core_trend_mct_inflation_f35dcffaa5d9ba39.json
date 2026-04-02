@@ -1,0 +1,65 @@
+{
+  "id": "seed_crawl_newyorkfed_multivariate_core_trend_mct_inflation_f35dcffaa5d9ba39",
+  "created_at": "2026-03-31T19:05:38.204712+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Multivariate Core Trend (MCT) Inflation",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/research/policy/mct#--:mct-inflation:trend-inflation",
+    "domain": "www.newyorkfed.org",
+    "published_at": "unknown",
+    "source_type": "research_paper"
+  },
+  "summary": "The New York Fed's Multivariate Core Trend (MCT) model is a statistical tool that estimates inflation persistence across 17 core PCE price index sectors using a dynamic factor model with time-varying parameters. The model decomposes sectoral inflation into common trends, sector-specific trends, and transitory components to distinguish persistent inflation from temporary shocks. This record summarizes the methodology page, not a specific research paper or data release.",
+  "key_points": [
+    "MCT model estimates inflation persistence using a dynamic factor model on 17 major sectors of the PCE price index",
+    "The model decomposes each sector's inflation into: common trend, sector-specific trend, common transitory shock, and sector-specific transitory shock",
+    "MCT excludes volatile food and energy components (similar to core PCE) but further filters out transitory variation from core sectors",
+    "Release schedule: estimates publish monthly on the first business day following BEA's PCE price index release",
+    "Methodology builds on Stock and Watson's 2016 'Core Inflation and Trend Inflation' research",
+    "Model allows for outliers, data noisiness, and time-varying relations with common components",
+    "Estimates are explicitly disclaimed as not official NY Fed, Federal Reserve System, or FOMC estimates"
+  ],
+  "why_it_matters": "The MCT provides policymakers and researchers with a more sophisticated measure of underlying inflation persistence than simple core inflation exclusion. By distinguishing common trends from sector-specific and transitory components, it helps identify whether inflation pressures are broad-based or concentrated in specific sectors. This is a macro research methodology tool, not a market structure resource. Note: This is methodology documentation, not current inflation data or a policy statement.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The MCT tool provides inputs relevant to understanding inflation dynamics, which directly influences monetary policy expectations. The model's estimates of trend inflation versus transitory shocks help market participants assess whether price pressures are likely to persist. However, this source is a methodology/documentation page from the NY Fed's Applied Macroeconomics and Econometrics Center (AMEC) rather than a data release, research paper, or policy statement.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "new-york-fed",
+    "mct-inflation",
+    "inflation-persistence",
+    "pce-price-index",
+    "dynamic-factor-model",
+    "research-methodology",
+    "applied-macroeconomics"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "TOPIC MISMATCH: SOURCE METADATA specifies 'market structure' target, but content describes inflation measurement methodology (macro research tool). Market structure refers to market operations, trading mechanics, and plumbing—not econometric models for inflation persistence.",
+      "EVENT_TYPE INCORRECT: Source is labeled 'research_paper' but is actually a methodology/product documentation page, not a research paper. No actual research findings or paper are presented.",
+      "SOURCE TYPE UNCERTAIN: Page describes a statistical model's methodology and release schedule, not an article, paper, or data release. Closer to a product documentation or methodology explainer.",
+      "PUBLISHED_AT MISSING: No publication date provided in source, making it impossible to assess recency or archival value per the 90-day rule.",
+      "SUMMARY FACTUALLY ACCURATE BUT: The summary correctly describes the methodology, but the source doesn't provide actionable content—no current estimates, no policy conclusions, just methodology documentation.",
+      "LOW ARCHIVAL VALUE FOR STATED TARGET: Even if methodology pages have value, this doesn't fit an archive targeting 'market structure' content."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Critical topic mismatch requires human decision. SOURCE METADATA says target is 'market structure' but content is macro/economic research methodology. Need to determine: (1) Should methodology/documentation pages be archived at all? (2) If yes, should topic be reassigned to 'macro catalysts' or 'research infrastructure'? (3) Is event_type 'research_paper' acceptable for a methodology page, or should it be 'economic_commentary' or another type?"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_multivariate_core_trend_mct_inflation_f35dcffaa5d9ba39.txt",
+  "notes": "DISCREPANCY DETECTED: SOURCE METADATA specifies TARGET as 'market structure' but the content is an inflation measurement methodology page from NY Fed's Applied Macroeconomics and Econometrics Center (AMEC). This is not market structure content—it's macro/economic research methodology. The page describes the MCT model's statistical approach to decomposing PCE inflation into trend and transitory components. While useful for macro analysis, it has no direct market structure relevance (no discussion of market operations, trading mechanics, plumbing, or operations). Published date unknown. Low actionability for trading/investing without current estimates. Consider re-tagging as macro/inflation research if archiving research infrastructure.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "68954e29e8d17bb8916bc6585c4268c61224080c"
+}

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2024_fomc_press_releases_cd616c83cc94c1b0",
-  "created_at": "2026-03-31T13:38:59.243571+00:00",
+  "created_at": "2026-03-31T18:39:23.614261+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,53 +8,54 @@
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2024-press-fomc.htm",
-    "published_at": "",
+    "published_at": "2024-01-01",
     "source_type": "listing_page",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This is an index page listing all FOMC press releases and economic projections from 2024, including statements from January, March, May, June, July, September, and December, along with projection releases from March, June, and September. The page does not contain the actual statements themselves.",
+  "summary": "This is a listing page (index) from the Federal Reserve website containing links to 2024 FOMC press releases. The actual content of the FOMC statements and projections is not present in this source; only dates and titles are listed. This page serves as an index and cannot be used as a standalone archiveable document for research purposes.",
   "key_points": [
-    "12/18/2024 - FOMC statement and economic projections",
-    "11/7/2024 - FOMC statement",
-    "9/18/2024 - FOMC statement and economic projections",
-    "7/31/2024 - FOMC statement",
-    "6/12/2024 - FOMC statement and economic projections",
-    "5/1/2024 - FOMC statement",
-    "3/20/2024 - FOMC statement and economic projections",
-    "1/31/2024 - FOMC statement and reaffirmation of longer-run goals and monetary policy strategy",
-    "Contains links to FOMC statements and economic projections, not the actual content"
+    "Page is a listing/index page containing links to 2024 FOMC materials, not the actual statements or projections",
+    "Lists 8 FOMC statement dates: January 31, March 20, May 1, June 12, July 31, September 18, November 7, and December 18, 2024",
+    "Lists 3 economic projections (dot plot) releases: March 20, June 12, September 18, and December 18, 2024",
+    "January 31, 2024 includes reaffirmation of longer-run goals statement and updates to trading policy",
+    "Actual statement text, projections details, and voting records are not included in this source",
+    "Last update date shown is February 26, 2026"
   ],
-  "why_it_matters": "This page serves as a historical archive index for 2024 Federal Reserve communications. It documents when key FOMC meetings occurred and what materials were released, but does not provide the substantive policy content. Relevant for understanding the timeline of Fed communications in 2024.",
+  "why_it_matters": "This listing page provides a catalog of 2024 Federal Reserve communications but lacks the substantive content needed for research. To properly archive FOMC decisions, individual statement pages and projection releases must be accessed separately.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "This page catalogs the timing of 2024 FOMC statements and economic projections, which were significant macro catalysts throughout the year. The statements themselves, not this index, would contain the actual policy decisions and forward guidance that moved markets.",
+  "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "fomc",
     "federal-reserve",
-    "monetary-policy",
+    "press-releases",
     "2024",
-    "listing-page"
+    "listing-page",
+    "index"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page (index of FOMC press release links), which violates Rule 5 requiring rejection of homepage, navigation_page, listing_page, or search_page",
-      "event_type is 'unknown' - while correctly identified as unknown, listing pages do not fit any valid event_type taxonomy value",
-      "No actual FOMC statement content is present - only links to statements",
-      "Source provides no substantive policy content, only dates and titles of statements"
+      "Source is a listing_page (index) with no substantive content - Core Rule 5 prohibits archiving homepage, navigation, listing, or search pages",
+      "Only contains dates and titles of FOMC releases; actual statement text, projections data, rate decisions, and voting records are absent",
+      "event_type set to 'unknown' when source is clearly monetary_policy-related FOMC material - should be more specific",
+      "published_at set to '2024-01-01' appears fabricated; the listing page itself was last updated 2026-02-26, not published in 2024",
+      "Source is too thin/noisy to have archival value per Core Rule 6 - individual FOMC statement pages should be crawled separately",
+      "No policy details, forward guidance, or market-relevant content can be extracted from this index"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "not_needed",
     "notes": "container_page"
   },
-  "notes": ""
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2024_fomc_press_releases_cd616c83cc94c1b0.txt",
+  "notes": "Non-archiveable listing page. This is an index of 2024 FOMC press releases with dates and titles only. The actual policy statements, forward guidance, rate decisions, vote tallies, and projection details are not present in this source. For research purposes, each individual FOMC statement and projections release should be crawled as separate documents. The listing indicates 8 FOMC meetings in 2024 (January, March, May, June, July, September, November, December) with associated economic projections released at 4 of those meetings."
 }

@@ -1,0 +1,63 @@
+{
+  "id": "treasury_press_releases_remarks_a_reset_on_liquidity_regulation_u_s_department_of_th_3a33cc0d",
+  "created_at": "2026-03-31T19:59:49.667794+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "economic_commentary",
+  "title": "Remarks: A Reset on Liquidity Regulation",
+  "source": {
+    "name": "Treasury Press Releases",
+    "url": "https://home.treasury.gov/news/press-releases/sb0412",
+    "domain": "home.treasury.gov",
+    "published_at": "2026-03-03",
+    "source_type": "blog_post"
+  },
+  "summary": "Treasury Secretary Scott Bessent delivered remarks on March 3, 2026 titled 'A Reset on Liquidity Regulation,' signaling a shift in the Department's approach to bank liquidity requirements. The speech appears focused on regulatory adjustments related to liquidity rules and potentially the Basel III endgame framework. Full speech content was not captured due to truncation in the source.",
+  "key_points": [
+    "Source is a remarks transcript from Treasury Secretary Scott Bessent dated March 3, 2026",
+    "Topic concerns 'A Reset on Liquidity Regulation'",
+    "Speaker is Secretary of the Treasury, an authoritative voice on financial regulation policy",
+    "Announced under Treasury's 'Remarks and Statements' press section",
+    "The speech content beyond the title and metadata was truncated/not captured",
+    "Source is recent (within 90 days of TODAY) but content is incomplete"
+  ],
+  "why_it_matters": "Liquidity regulation changes can affect how banks manage their balance sheets, reserve requirements, and ultimately credit availability in markets. A 'reset' from Treasury suggests potential revisions to the Basel III endgame liquidity requirements (LCR/NSFR), which would have downstream effects on Treasury market functioning and bank lending capacity.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Liquidity regulation is directly relevant to market structure as it governs how banks maintain liquid assets (including Treasury securities), affects repo market dynamics, and influences bank willingness to intermediate in fixed income markets.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "liquidity-regulation",
+    "bessent",
+    "basel-iii",
+    "regulatory-reset",
+    "bank-regulation"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Incorrect event_type: 'economic_commentary' is invalid for a speech/remarks transcript. Per taxonomy, should be 'speech_neutral', 'speech_hawkish', or 'speech_dovish' depending on tone, but cannot determine without content.",
+      "Source type misclassified as 'blog_post' when source metadata shows this is a Treasury 'Remarks and Statements' press release/transcript.",
+      "Source body was truncated - actual speech content not captured. Only website navigation structure and metadata were retrieved. Cannot verify any specific policy positions, quotes, or forward guidance.",
+      "No substantive content to archive. The record contains only metadata (title, date, speaker) but no actual remarks or analysis.",
+      "market_impact confidence set to 0, which is honest but indicates the record has no extractable market-relevant content."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source content extraction failed - the actual remarks transcript was not captured, only navigation elements. While the metadata (title, date, speaker) is verifiable, there is no substantive speech content to verify the record against. This record has no archival value as-is because it contains only metadata without the actual remarks. Either full transcript needs to be retrieved or the record should be rejected."
+  },
+  "raw_text_path": "data/raw/treasury_press_releases_remarks_a_reset_on_liquidity_regulation_u_s_department_of_th_3a33cc0d.txt",
+  "notes": "Source extraction failed to capture the actual speech content. Only website navigation structure and metadata were retrieved. The title and date are verifiable from source metadata, but specific policy positions, quotes, or forward guidance on liquidity regulation cannot be confirmed. Recommend re-fetching source for complete transcript before archiving."
+}

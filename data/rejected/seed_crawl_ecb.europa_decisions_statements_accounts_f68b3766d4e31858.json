@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_decisions_statements_accounts_f68b3766d4e31858",
-  "created_at": "2026-03-31T10:05:19.853136+00:00",
+  "created_at": "2026-03-31T18:07:19.931220+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,46 +8,48 @@
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/mopo/decisions/html/index.en.html",
-    "domain": "www.ecb.europa.eu",
     "published_at": "",
-    "source_type": "navigation_page"
+    "source_type": "navigation_page",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This page is a navigation/landing page for ECB monetary policy decisions that contains only general explanatory content about how the ECB's monetary policy framework works. It describes the three key policy rates (deposit facility, main refinancing operations, marginal lending facility) and various monetary policy tools (TLTROs, asset purchases, negative rates, forward guidance) but does not contain any specific current decisions, statements, or data.",
+  "summary": "This is a navigational overview page on the ECB website explaining the institution's monetary policy framework, including the three key policy rates and the broader toolkit of instruments available to the Governing Council. The page does not contain specific decisions, statements, or recent macro catalyst events—it serves as institutional background content.",
   "key_points": [
-    "Page is a navigation hub with links to decisions, statements, and accounts rather than the actual content",
-    "Describes ECB's three key rates: deposit facility rate, main refinancing operations rate, and marginal lending facility rate",
-    "Explains that since March 2024, the ECB steers monetary policy through the deposit facility rate",
-    "Mentions short-term money market rates should evolve in the vicinity of the deposit facility rate",
-    "Lists historical monetary policy tools: central bank loans, negative interest rates, TLTROs, asset purchases, and forward guidance",
-    "No specific current interest rates, decisions, or economic data are provided on this page"
+    "ECB's three policy rates are: deposit facility rate, main refinancing operations rate, and marginal lending facility rate",
+    "Since March 2024, the Governing Council steers monetary policy stance through the deposit facility rate",
+    "Short-term money market rates are expected to evolve in vicinity of deposit facility rate with tolerance for volatility",
+    "ECB policy tools include: central bank loans against collateral at fixed rates, negative interest rates, TLTROs, asset purchases, and forward guidance",
+    "The page references a strategy review but provides no specific details about outcomes",
+    "No current interest rate values or recent decisions are provided in this page"
   ],
-  "why_it_matters": "This source has no immediate market relevance as it contains only educational content about the ECB's monetary policy framework. It does not contain any current policy decisions, rate levels, or specific guidance that could serve as a macro catalyst. This is a structural reference page, not a news or decision source.",
+  "why_it_matters": "This page provides foundational context on ECB monetary policy operations but does not itself constitute a market-moving event or catalyst. It is reference material explaining how ECB tools work rather than a specific policy decision or release.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "The page explains the ECB's operating framework including the deposit facility rate as the primary steering rate since March 2024, and describes how short-term money market rates should evolve near the deposit facility rate with tolerance for volatility. This represents the ECB's monetary policy transmission mechanism.",
-  "important_numbers": [],
+  "macro_context": "The page explains that ECB monetary policy tools influence the amount and cost of loans to affect financing conditions and economic activity in the euro area, ultimately targeting 2% inflation. No current macro data or policy decisions are presented.",
+  "market_structure_context": "Describes the transmission mechanism from policy rates (deposit facility, MRO, marginal lending facility) to short-term money market rates. Notes that post-financial crisis, ECB expanded tools when short-term rates approached the effective lower bound.",
+  "important_numbers": [
+    "2% inflation target"
+  ],
   "tags": [
     "ecb",
     "monetary-policy",
-    "navigation-page",
-    "explanatory-content",
-    "euro-area",
-    "policy-rates"
+    "policy-rates",
+    "deposit-facility",
+    "tlrtos",
+    "negative-rates",
+    "forward-guidance",
+    "euro-area"
   ],
   "llm_review": {
     "initial_confidence": 3,
-    "verification_confidence": 0,
+    "verification_confidence": 8,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/landing page (navigation_page) - per CORE RULE 6, archive must reject container and navigation pages",
-      "No published_at date in source metadata - cannot assess content recency",
-      "event_type is set to 'unknown' but correct type is also unknowable since no specific event is documented",
-      "Source contains only general explanatory content about ECB monetary policy framework - no specific decisions, rate levels, or statements",
-      "Source has no market catalyst value as it lacks actionable macro information"
+      "Source is a navigation_page (source_type: navigation_page), which triggers automatic rejection per Core Rule 5",
+      "No specific monetary policy event, decision, statement, or data release is contained in this page",
+      "Source is institutional background/explainer content only—no market-moving or catalyst content"
     ]
   },
   "human_review": {
@@ -56,5 +58,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_decisions_statements_accounts_f68b3766d4e31858.txt",
-  "notes": "SOURCE_TYPE is navigation_page per DOMAIN_TRUST_TIER and content structure. This page contains only links and general educational content about ECB monetary policy framework. No specific decisions, statements, or current policy data present. Published_at date not provided - cannot assess recency. Recommended for exclusion from archive as it does not contain actionable macro catalyst information. If retained, should be tagged as reference material only."
+  "notes": "Non-archiveable navigation page. This is institutional explainer content about ECB monetary policy tools, not a specific policy decision or release. Contains background information only—no current rates, no recent decisions, no specific macro catalyst data. Recommend not treating as standalone research note."
 }

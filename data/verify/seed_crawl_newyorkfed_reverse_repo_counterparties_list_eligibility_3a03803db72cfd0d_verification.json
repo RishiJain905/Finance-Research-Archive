@@ -1,13 +1,20 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source type is 'listing_page' per metadata - CORE RULES explicitly mandate rejection of homepage, navigation_page, listing_page, and search_page types",
+    "URL is blank in source metadata - source attribution requirement violated",
+    "event_type is 'unknown' when the page's function (documenting RRP counterparty eligibility framework) suggests 'financial_stability_report' or 'market_notice' would be more appropriate",
+    "Source contains no news, commentary, or policy announcement - only a static reference list with no market-moving information",
+    "published_at date is missing, preventing assessment of content recency",
+    "Source body was truncated, raising concerns about completeness of captured data"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Core rule violation is unambiguous - listing_page type requires rejection per explicit rule 5. No human judgment needed.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "The stated significance is overstated. This is an administrative reference page showing counterparty eligibility, not a policy announcement or operational update. While it defines the RRP counterparty universe, it contains no new information or analysis that would affect market assessments.",
     "macro_context": "",
     "market_structure_context": ""
   }

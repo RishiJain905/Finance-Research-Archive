@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "URL is blank in both source metadata and generated record - while consistent, this limits verifiability",
+    "event_type 'financial_stability_report' is a valid taxonomy value but the source is more precisely a meeting readout/minutes rather than a formal financial stability report",
+    "The source is a meeting readout that summarizes discussions broadly without specific quantitative findings or forward-looking commitments that would constitute strong trading signals"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is accurate and well-supported against source text. The issues are minor: URL was not provided in source metadata (consistent blank), and event_type classification, while not perfectly precise, is a valid taxonomy value. The record correctly captures all major meeting outcomes and presents appropriate interpretive analysis in why_it_matters.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

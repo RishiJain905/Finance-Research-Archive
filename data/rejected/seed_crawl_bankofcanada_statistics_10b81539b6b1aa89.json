@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_statistics_10b81539b6b1aa89",
-  "created_at": "2026-03-31T09:49:33.157981+00:00",
+  "created_at": "2026-03-31T17:51:52.254151+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -12,50 +12,46 @@
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This is the Bank of Canada's statistics portal index page, listing available data categories including exchange rates, interest rates, money market yields, price indexes, and economic indicators. The page provides access to various data lookup tools and download options but does not contain any specific data values, policy decisions, or research findings—it is a navigation page for the Bank's data offerings.",
+  "summary": "This is a navigation portal page for the Bank of Canada's statistical data offerings, listing available data categories including exchange rates, interest rates, money market yields, price indexes, and economic indicators. The page provides access to data lookup tools and API documentation but contains no specific data values, publication dates, policy decisions, or market-moving information.",
   "key_points": [
-    "Page is a data portal index listing available statistical categories from the Bank of Canada",
-    "Categories include: exchange rates (daily/monthly/annual), money market yields, bond yields, key monetary policy variables",
-    "Data available in XML, JSON, and CSV formats via the Valet API",
-    "Publication schedules noted: exchange rates at 16:30 ET, interest rates at 12:15-12:30 ET, bond yields at 09:30-10:00 ET",
-    "No specific data values, policy announcements, or analysis contained on this page",
-    "Staff economic projections released with a five-year lag"
+    "This is a listing/navigation page for Bank of Canada statistical resources, not a specific data release or research document",
+    "Available data categories listed include: daily exchange rates, money market yields, key monetary policy variables, treasury bill yields, bond yields, and price indexes",
+    "The page provides access to the Canadian Effective Exchange Rate (CEER) index and Canadian Overnight Repo Rate Average (CORRA)",
+    "Data is available via lookup tools, downloadable formats (XML, JSON, CSV), and a Valet API",
+    "Publication times are listed for data updates (exchange rates: 16:30 ET; interest rates: 12:15-12:30 ET; bond yields: 09:30-10:00 ET)",
+    "Staff economic projections are noted as released once yearly with a five-year lag",
+    "No specific numerical data, policy announcements, or macro catalysts are contained in this page"
   ],
-  "why_it_matters": "This page has no direct market relevance as it contains no specific data or policy content. It serves only as a navigation index to the Bank of Canada's statistical database.",
+  "why_it_matters": "This page serves as a directory to Bank of Canada statistical resources but does not itself contain actionable macro information. It is not a data release, research paper, or policy document—merely a catalog of available data feeds.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "neutral",
     "confidence": 0
   },
   "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "bank of canada",
+    "bank-of-canada",
     "statistics",
-    "data portal",
-    "listing page",
-    "exchange rates",
-    "interest rates",
-    "price indexes"
+    "data-portal",
+    "exchange-rates",
+    "interest-rates",
+    "price-indexes",
+    "api",
+    "listing-page"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 0,
+    "initial_confidence": 2,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page (navigation portal) per source_type field — violates CORE RULE 5",
-      "No substantive content: only lists available data categories with no specific data values, policy decisions, or research findings",
-      "No published_at date — source has no temporal anchor",
-      "Cannot extract any market-relevant information or macro catalyst content",
-      "Record appropriately identifies source as non-archiveable but suggests wrong status"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "container_page"
+    "notes": "container_page, placeholder_source"
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_statistics_10b81539b6b1aa89.txt",
-  "notes": "This source is a Bank of Canada statistics portal index page (listing_page), not a research document or data release. It contains no specific content suitable for archiving—only links and descriptions of available data categories. Per CORE RULE 6, listing pages and navigation pages should be treated as non-archiveable. The page has no published_at date as it is a persistent portal. No macro catalyst or market structure content is present."
+  "notes": "Non-archivable listing page. No specific publication date, no actual data values, no policy content. Per CORE RULE 6, listing and navigation pages should be marked as such. Topic is 'macro catalysts' per TARGET but this source is merely a data catalog with no specific macro catalyst content."
 }

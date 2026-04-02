@@ -1,22 +1,22 @@
 {
-  "verification_confidence": 0,
-  "verdict": "reject",
+  "verification_confidence": 4,
+  "verdict": "review",
   "issues_found": [
-    "URL is blank - missing source attribution violates verification requirements",
-    "Source is an institutional FAQ page explaining Fed projection methodology, not a source of macro catalysts or market-moving data",
-    "Content is procedural/educational only - provides no actual projections, forecasts, or numerical data",
-    "FAQ pages are container/informational pages per Rule 8 - must not be accepted",
-    "No specific macro catalyst information present - purely process explanation",
-    "Source quality is low for archival purposes - no preservable facts, forecasts, or market-relevant content",
-    "Last updated January 2024 - no current relevance for macro catalyst research"
+    "Source URL is missing from metadata, preventing verification of the exact source page",
+    "Source is an FAQ/static informational page explaining Fed procedures, not a substantive policy communication or research finding",
+    "Published January 5, 2024—over 2 years before TODAY (2026-03-31); lacks currency",
+    "No specific policy decisions, forecasts, or forward guidance contained in source",
+    "The page describes how projections work, but contains no actual projections or data",
+    "Event type 'economic_commentary' is borderline; FAQ page is more accurately described as institutional/reference content",
+    "Low archival value for a macro catalysts archive given the purely explanatory nature with no new information"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record's own internal review correctly identifies the fundamental problems. No human review needed because the verdict is clear: this FAQ page is a container page with no macro catalyst data and missing URL attribution.",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "Source is an FAQ page with missing URL and no market-moving content. While the factual content accurately reflects the source text, the record describes an informational FAQ explaining Fed projection methodology—not substantive policy content. The source is thin, dated (2024), and lacks specificity. Human judgment needed to determine if reference material explaining Fed processes has sufficient archival value for a macro catalysts research archive.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "This Federal Reserve FAQ page explains the mechanics of how the FOMC collects and publishes economic projections from policymakers. Projections are collected four times yearly (March, June, September, December) and cover real GDP growth, unemployment rate, PCE inflation, and core PCE inflation. The page defines how ranges and central tendencies are calculated but does not provide actual projection figures.",
-    "why_it_matters": "Understanding FOMC projection methodology is foundational for interpreting Fed communications, but this FAQ contains no specific forecasts, data points, or current macro catalysts. It is an educational page about Fed process, not a source of market-relevant information.",
-    "macro_context": "",
+    "summary": "This Federal Reserve FAQ page explains how the FOMC collects and publishes economic projections (Summary of Economic Projections) from Board members and Reserve Bank presidents four times per year in March, June, September, and December. The projections include real GDP growth, unemployment rate, PCE inflation, and core PCE inflation forecasts, as well as participants' views on the appropriate target federal funds rate path.",
+    "why_it_matters": "This FAQ provides foundational context for understanding the Federal Reserve's Summary of Economic Projections (SEP), commonly known as the 'dot plot.' Market participants rely on SEP releases to gauge policymakers' views on appropriate monetary policy and economic trajectory. Knowing how to interpret ranges, central tendencies, and projection horizons is essential for following Fed communications.",
+    "macro_context": "This page explains the mechanics of how FOMC projections are structured and collected, which informs how markets interpret subsequent projection releases. The longer-run projections represent estimates of potential GDP growth, natural unemployment rate, and the inflation target consistent with the Fed's dual mandate.",
     "market_structure_context": ""
   }
 }

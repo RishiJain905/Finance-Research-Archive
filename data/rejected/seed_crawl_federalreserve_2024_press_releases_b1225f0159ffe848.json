@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2024_press_releases_b1225f0159ffe848",
-  "created_at": "2026-03-31T13:41:05.756792+00:00",
+  "created_at": "2026-03-31T18:40:04.921823+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,52 +8,57 @@
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2024-press.htm",
-    "published_at": "",
-    "source_type": "listing_page",
-    "domain": "www.federalreserve.gov"
+    "domain": "www.federalreserve.gov",
+    "published_at": "2024-01-01 to 2024-12-31",
+    "source_type": "listing_page"
   },
-  "summary": "This is an index page listing Federal Reserve press releases from calendar year 2024. The page contains only titles, dates, and category labels with links to individual press releases—it does not contain substantive content itself. The listed items include FOMC minutes, enforcement actions, banking applications, regulatory policy statements, and other Fed announcements.",
+  "summary": "This is a listing/index page aggregating all Federal Reserve press releases from calendar year 2024. The page contains dozens of items spanning diverse categories including monetary policy (FOMC minutes, discount rate meetings), enforcement actions, banking applications, regulatory policy, and institutional announcements. No single document or specific macro catalyst is the subject of this source.",
   "key_points": [
-    "This is a listing page (not an archiveable document)—it contains only titles and dates with links, no substantive content",
-    "Listed items span multiple categories: Monetary Policy (FOMC minutes), Banking and Consumer Regulatory Policy, Enforcement Actions, Orders on Banking Applications, and Other Announcements",
-    "Key FOMC-related items include minutes from meetings on 11/6-7/2024, 9/17-18/2024, and 7/30-31/2024",
-    "Notable enforcement actions include $123.5M fine against Toronto-Dominion Bank for AML violations",
-    "Several discount rate meeting minutes are listed under Monetary Policy category",
-    "The page does not provide actual content of any press release—individual releases must be accessed separately"
+    "Page is an index of 2024 Fed press releases, not a single document or research piece",
+    "Contains FOMC minutes releases from July, September, and November 2024",
+    "Includes enforcement actions against multiple financial institutions",
+    "Lists banking application approvals for various bank mergers and acquisitions",
+    "Contains regulatory policy announcements including stress test framework changes and discount window operational practices",
+    "Source is historical (2024) and TODAY (2026-03-31) is approximately 15 months later"
   ],
-  "why_it_matters": "This page serves only as a navigational index. It cannot be used directly as a research source. Individual press releases linked from this page would need to be retrieved and archived separately for substantive research.",
+  "why_it_matters": "This listing page has no standalone research value. Individual press releases within it (such as FOMC minutes or rate decisions) would be separately archivable, but this index page itself is too broad and thin to serve as a meaningful research record. Users seeking Fed policy information from 2024 should consult specific individual press releases.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
   "market_structure_context": "",
-  "important_numbers": [],
+  "important_numbers": [
+    "$123.5 million (TD Bank fine for AML violations, 10/10/2024)"
+  ],
   "tags": [
     "federal-reserve",
-    "listing-page",
-    "index",
-    "2024",
     "press-releases",
-    "non-archiveable"
+    "listing-page",
+    "2024",
+    "fomc-minutes",
+    "enforcement-actions",
+    "regulatory-policy",
+    "banking-applications"
   ],
   "llm_review": {
-    "initial_confidence": 3,
+    "initial_confidence": 2,
     "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page per source metadata — violates Rule 5 requiring rejection of listing pages",
-      "No substantive content to archive — only titles, dates, and category labels with links to individual press releases",
-      "event_type correctly set to 'unknown' since a listing page has no specific event type",
-      "Published_at is empty (no single publication date), which is expected for an index page"
+      "Source is a listing_page per source_type and URL pattern (listing/index of 2024 Fed press releases)",
+      "CORE RULE #5 explicitly states: 'If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page — reject'",
+      "Content is a broad aggregation of dozens of distinct press releases with no substantive detail on any single item",
+      "This page has no standalone archival value; individual FOMC minutes, enforcement actions, and regulatory announcements within it would each warrant separate records",
+      "event_type is 'unknown' which is correct for a listing page that spans multiple event types"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "non-archivable",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2024_press_releases_b1225f0159ffe848.txt",
-  "notes": "NON-ARCHIVEABLE: This is a listing/index page that provides no substantive content. It only contains titles, dates, and category labels with links to individual Federal Reserve press releases from 2024. The FOMC minutes and other policy-relevant items referenced here would need to be accessed as separate documents. This source should be excluded from the archive and individual releases should be retrieved directly."
+  "notes": "NON-ARCHIVABLE LISTING PAGE. This Federal Reserve index page contains aggregate links to all 2024 press releases but provides no substantive content itself. Topics span monetary policy, enforcement, regulatory policy, and banking applications. Not directly useful as a research record; individual press releases within this listing would be separately valuable. Historical record—2024 data is 15 months stale relative to TODAY."
 }

@@ -1,17 +1,15 @@
 {
-  "verification_confidence": 1,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "PAGE_TYPE violation: source is a listing_page per source metadata, which CORE RULE 6 explicitly requires rejection",
-    "Source has no archival value as a standalone document - it is a navigation index containing links to dozens of separate press releases",
-    "event_type incorrectly set to 'unknown' - listing pages with mixed content do not have a single event type",
-    "source.published_at shows '2020-01-01' which is inaccurate - this is a year-spanning listing page with items dated throughout 2020 (earliest seen 10/7/2020, latest 12/29/2020)",
-    "No individual macro catalyst or market structure content can be extracted from this index format",
-    "The summary and key_points correctly identify the page as non-archiveable, but the record was still submitted for archival rather than properly rejected at intake",
-    "Historical age (2020 vs TODAY 2026-03-31) further compounds lack of current relevance"
+    "Source is a listing_page per source_type, violating Rule 5 which mandates rejection of listing pages",
+    "Source contains no single coherent document - only links to hundreds of individual press releases",
+    "event_type set to 'unknown' which is correct for a listing page, but this confirms the source lacks the specificity needed for archival",
+    "Source cannot meaningfully support any individual research record as it is merely an index",
+    "Historical age (2020 data is ~6 years stale from TODAY 2026-03-31) further reduces archival value"
   ],
   "human_review_required": false,
-  "human_review_reason": "The issues are clear-cut: this is explicitly a listing_page per source metadata, which CORE RULE 6 mandates rejection. The generated record itself acknowledges this in its summary and notes. No human review needed - the decision follows directly from the stated rules.",
+  "human_review_reason": "Record correctly identifies the fundamental problem with the source. Rejection is straightforward per Rule 5 (listing pages must be rejected). No human judgment needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

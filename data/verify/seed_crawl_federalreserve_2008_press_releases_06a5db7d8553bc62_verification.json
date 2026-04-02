@@ -2,19 +2,20 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page per Rule 8 - must not be accepted",
-    "URL is blank - no source attribution present",
-    "No substantive document content - only a chronological catalog of press release titles and dates",
-    "Cannot verify any specific claims, facts, or events without accessing individual press releases",
-    "Archive value too low as standalone record - serves only as a navigation aid",
-    "PAGE_TYPE is listing_page which explicitly triggers rejection per verification rules"
+    "Source is a listing_page/index, not an archiveable source document per Rule 5",
+    "URL field is blank - no specific source document can be accessed or verified",
+    "Source contains only a table of contents/navigation links with no substantive content",
+    "Content is from 2008 (approximately 17 years stale) with no single publication date",
+    "JavaScript dependency prevents direct content access",
+    "Mixed content types (monetary policy, enforcement, banking applications) without unified focus",
+    "event_type is 'unknown' - cannot be determined from a navigation index"
   ],
   "human_review_required": false,
-  "human_review_reason": "No ambiguity present - source is definitively a listing/index page with no substantive content and missing URL attribution. Rule 8 explicitly requires rejection of listing_page sources.",
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This is a listing page (index) of Federal Reserve press releases from calendar year 2008. It contains no substantive source content; only a chronological table of contents linking to individual press releases spanning monetary policy announcements, enforcement actions, banking applications, and regulatory updates. The page requires JavaScript to navigate to actual content.",
+    "why_it_matters": "This source provides no actionable content for the finance research archive. It is a navigational index that cannot be archived in its current form. Researchers seeking 2008 Federal Reserve communications would need to access individual press release URLs directly.",
     "macro_context": "",
     "market_structure_context": ""
   }

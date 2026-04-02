@@ -1,14 +1,21 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page (listing_page) containing only titles and dates, not substantive content - violates CORE RULE #5",
+    "URL is blank (\"\"), making the source unlocatable and non-archivable",
+    "event_type set to 'unknown' but correct type is unknowable for a listing page with heterogeneous content",
+    "No actionable market structure or macro catalyst content present - only metadata",
+    "Source is approximately 20 years old (2006) with no substantive archival value in this form",
+    "Cannot serve as a research record as it provides no detailed text, data, or analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This source is a navigation/listing page with no substantive content and a blank URL. Per CORE RULE #5, listing pages must be rejected. The record cannot be salvaged as it lacks both content and locatability.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This page is a chronological index of Federal Reserve Board press releases from 2006, containing links to FOMC statements, enforcement actions, banking applications, and regulatory policy announcements. It is a container/listing page with no single cohesive event or narrative. The individual releases referenced here are not included in full text. This source does not qualify as an archivable research document because it contains no substantive original content—just references to other documents.",
-    "why_it_matters": "This listing page provides no actionable macro research material. Individual FOMC statements and regulatory documents would need to be retrieved separately for actual analysis.",
-    "macro_context": "This index covers 2006 Federal Reserve communications during a period of active monetary policy management. FOMC statements referenced indicate rate decisions were made throughout the year. Basel II implementation proposals were under discussion.",
-    "market_structure_context": "This page represents standard Federal Reserve Board website structure for publishing press releases. No market structure information is contained in this listing."
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

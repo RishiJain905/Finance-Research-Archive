@@ -1,52 +1,46 @@
 {
   "id": "seed_crawl_federalreserve_2011_press_releases_974a467bb400871d",
-  "created_at": "2026-03-31T09:08:14.691977+00:00",
+  "created_at": "2026-03-31T18:24:52.441662+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2011 Press Releases",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2011all.htm",
     "domain": "www.federalreserve.gov",
-    "published_at": "",
+    "published_at": "unknown",
     "source_type": "listing_page"
   },
-  "summary": "This is a listing/index page aggregating Federal Reserve press releases from calendar year 2011. The page contains links to hundreds of diverse items including FOMC statements, enforcement actions, banking applications, regulatory proposals, and other announcements. It is not a single archiveable document but rather a chronological index of disparate press releases.",
+  "summary": "This source is an archive index page listing all Federal Reserve press releases from calendar year 2011. It is a navigation/listing page containing hundreds of distinct documents including FOMC statements, enforcement actions, banking applications, regulatory proposals, and other announcements. As a listing page, it does not constitute a single archiveable research document.",
   "key_points": [
-    "This is a listing page, not an individual research document or data release",
-    "Contains links to multiple FOMC statements from 2011 (including statements, minutes, and projections)",
-    "Includes enforcement actions, banking applications, regulatory proposals, and other announcements",
-    "Content is from 2011, approximately 15 years before the current date (2026)",
-    "No specific macro catalyst or market structure data is contained in this listing page itself"
+    "This is a listing page (listing_page), not a single document - per rule 6, must be treated as non-archiveable",
+    "Contains press releases spanning the entire 2011 calendar year (December 2011 back to at least September 2011 visible)",
+    "Includes multiple categories: Monetary Policy (FOMC statements, minutes, projections), Enforcement Actions, Banking Applications, Regulatory Policy, Other Announcements",
+    "Notable 2011 items visible: November 2 FOMC statement and economic projections, multiple enforcement actions, Volcker Rule proposal (October 2011), capital plans rule (November 2011), coordinated central bank action on global money markets (November 30, 2011)",
+    "Published_at date is not a single date - this is a chronological archive of an entire year's press releases"
   ],
-  "why_it_matters": "This page is not suitable for individual archival as a research note. It is a navigation index that would need to be disaggregated into individual press releases for meaningful analysis. Any specific FOMC statements or data releases from 2011 would need to be accessed via their individual URLs.",
+  "why_it_matters": "This listing page serves as an index to 2011 Federal Reserve documents but is not itself an archiveable research note. Individual FOMC statements, minutes, and policy documents from 2011 would need to be processed separately for proper research archiving.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "The page covers a historically significant period (2011) including the Fed's response to the post-2008 recovery, European debt crisis concerns, and implementation of Dodd-Frank provisions. However, as a listing page, it contains no specific macro analysis to extract.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "listing-page",
+    "press-releases",
     "2011",
-    "historical",
-    "not-archiveable"
+    "listing-page",
+    "non-archivable"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
+    "initial_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page, which per RULE 5 requires rejection",
-      "Source contains only an index of links, not individual archiveable documents",
-      "Content is 15 years stale (2011) with no specific macro catalyst data on this page itself",
-      "No meaningful research, analysis, or data can be extracted from the listing page format",
-      "event_type correctly set to 'unknown' - no single event type applies to a listing page"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -54,5 +48,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2011_press_releases_974a467bb400871d.txt",
-  "notes": "Non-archiveable: listing_page containing links to 2011 Federal Reserve press releases. Contains no specific macro catalyst or market structure data. Source is 15 years stale. Individual FOMC statements (e.g., 12/13/2011 FOMC statement, 11/2/2011 FOMC statement) would need to be accessed separately if archival is desired."
+  "notes": "Non-archivable: This is a listing page containing an index of all 2011 Federal Reserve press releases. Per CORE RULE 6, listing pages are non-archiveable. To build a quality research archive, individual documents (e.g., specific FOMC statements, enforcement actions, regulatory proposals) should be processed separately with their own SOURCE METADATA. The 2011 vintage makes this historically stale relative to TODAY (2026-03-31)."
 }

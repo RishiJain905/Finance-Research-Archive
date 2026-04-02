@@ -1,53 +1,62 @@
 {
   "id": "seed_crawl_federalreserve_faqs_017c4bd8d457221f",
-  "created_at": "2026-03-30T06:11:23.755804+00:00",
+  "created_at": "2026-03-31T18:41:42.678263+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
-  "title": "FOMC FAQs: Summary of Economic Projections",
+  "event_type": "economic_commentary",
+  "title": "FAQs - FOMC Economic Projections",
   "source": {
     "name": "Federal Reserve",
     "url": "",
+    "domain": "federalreserve.gov",
     "published_at": "2024-01-05",
-    "source_type": "institutional_faq"
+    "source_type": "static_page"
   },
-  "summary": "This Federal Reserve FAQ page explains the mechanics of how the FOMC collects and publishes economic projections from policymakers. Projections are collected four times yearly (March, June, September, December) and cover real GDP growth, unemployment rate, PCE inflation, and core PCE inflation. The page defines how ranges and central tendencies are calculated but does not provide actual projection figures.",
+  "summary": "This Federal Reserve FAQ page explains how the FOMC collects and publishes economic projections (Summary of Economic Projections) from Board members and Reserve Bank presidents four times per year in March, June, September, and December. The projections include real GDP growth, unemployment rate, PCE inflation, and core PCE inflation forecasts, as well as participants' views on the appropriate target federal funds rate path.",
   "key_points": [
-    "Economic projections collected from Board of Governors members and Federal Reserve Bank presidents four times per year",
-    "Projections include real GDP growth, unemployment rate, PCE inflation, and core PCE inflation measured Q4-to-Q4",
-    "March/June projections cover current year, next two years, and longer run; September/December extend to three years forward",
-    "Longer-run projections represent expected convergence rates absent further shocks under appropriate monetary policy",
-    "Central tendency excludes three highest and three lowest projections from the range",
-    "Initial projections due Friday before FOMC meeting; revisions allowed until morning of second meeting day"
+    "Projections are collected from all Board Governors and Federal Reserve Bank presidents four times yearly at March, June, September, and December FOMC meetings.",
+    "Each policymaker provides forecasts for real GDP, unemployment rate, PCE inflation, and core PCE inflation, measured Q4-to-Q4.",
+    "Since January 2012, projections include each policymaker's estimate of appropriate federal funds rate at end of current year, subsequent years, and longer run.",
+    "March and June projections cover current year, next two years, and longer run; September and December extend to three years forward.",
+    "The range includes all projections; central tendency excludes three highest and three lowest projections.",
+    "Initial projections are due the Friday before the meeting; revisions allowed until the morning of the second meeting day.",
+    "Last Update: January 05, 2024"
   ],
-  "why_it_matters": "Understanding FOMC projection methodology is foundational for interpreting Fed communications, but this FAQ contains no specific forecasts, data points, or current macro catalysts. It is an educational page about Fed process, not a source of market-relevant information.",
+  "why_it_matters": "This FAQ provides foundational context for understanding the Federal Reserve's Summary of Economic Projections (SEP), commonly known as the 'dot plot.' Market participants rely on SEP releases to gauge policymakers' views on appropriate monetary policy and economic trajectory. Knowing how to interpret ranges, central tendencies, and projection horizons is essential for following Fed communications.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "This page explains the mechanics of how FOMC projections are structured and collected, which informs how markets interpret subsequent projection releases. The longer-run projections represent estimates of potential GDP growth, natural unemployment rate, and the inflation target consistent with the Fed's dual mandate.",
   "market_structure_context": "",
-  "important_numbers": [],
+  "important_numbers": [
+    "4 times per year (projections collected)",
+    "March, June, September, December (FOMC meeting months for projections)",
+    "January 2012 (when funds rate projections began)"
+  ],
   "tags": [
-    "federal_reserve",
+    "fed",
     "fomc",
-    "economic_projections",
-    "monetary_policy",
-    "process_explainer"
+    "economic-projections",
+    "dot-plot",
+    "monetary-policy",
+    "inflation-forecasting",
+    "gdp-forecast",
+    "unemployment-forecast"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 5,
+    "verification_confidence": 4,
     "verdict": "reject",
     "issues_found": [
-      "URL is blank - missing source attribution violates verification requirements",
-      "Source is an institutional FAQ page explaining Fed projection methodology, not a source of macro catalysts or market-moving data",
-      "Content is procedural/educational only - provides no actual projections, forecasts, or numerical data",
-      "FAQ pages are container/informational pages per Rule 8 - must not be accepted",
-      "No specific macro catalyst information present - purely process explanation",
-      "Source quality is low for archival purposes - no preservable facts, forecasts, or market-relevant content",
-      "Last updated January 2024 - no current relevance for macro catalyst research"
+      "Source URL is missing from metadata, preventing verification of the exact source page",
+      "Source is an FAQ/static informational page explaining Fed procedures, not a substantive policy communication or research finding",
+      "Published January 5, 2024—over 2 years before TODAY (2026-03-31); lacks currency",
+      "No specific policy decisions, forecasts, or forward guidance contained in source",
+      "The page describes how projections work, but contains no actual projections or data",
+      "Event type 'economic_commentary' is borderline; FAQ page is more accurately described as institutional/reference content",
+      "Low archival value for a macro catalysts archive given the purely explanatory nature with no new information"
     ]
   },
   "human_review": {
@@ -56,5 +65,5 @@
     "notes": "missing_source_attribution"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_faqs_017c4bd8d457221f.txt",
-  "notes": "This source is an informational FAQ page about Federal Reserve projection methodology, not a source of macro catalysts. It explains how the Fed collects and reports economic projections but provides no actual projection data, forecasts, or market-relevant figures. The blank URL and institutional FAQ format limit archival value. Confidence severely reduced due to lack of specific, preservable facts and absence of direct market-moving information."
+  "notes": "Source is a Federal Reserve FAQ page explaining the mechanics of FOMC economic projections. No specific policy decisions, forecasts, or forward guidance are contained herein. The page was last updated January 5, 2024—making it over two years old. While the source is from a high-trust domain and is topically related to macro catalysts (it describes Fed projection methodology), it contains no actionable information for market participants. This is institutional/reference content rather than a substantive policy communication. market_impact.confidence set to 0 as no market-moving content is present."
 }

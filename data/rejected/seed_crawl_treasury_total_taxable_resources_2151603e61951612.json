@@ -1,0 +1,62 @@
+{
+  "id": "seed_crawl_treasury_total_taxable_resources_2151603e61951612",
+  "created_at": "2026-03-31T19:51:22.485581+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Total Taxable Resources",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/economic-policy/total-taxable-resources",
+    "published_at": "",
+    "source_type": "navigation_page",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "This Treasury Department page documents the Total Taxable Resources (TTR) methodology used to estimate the relative fiscal capacity of U.S. states for federal block grant allocations. TTR estimates are mandated by Public Law 102-321 and are used in formulas allocating Community Mental Health Service and Substance Abuse Prevention and Treatment block grants among states. The page primarily serves as a listing/navigation portal to historical TTR estimate documents spanning 1999-2024.",
+  "key_points": [
+    "TTR is a congressionally mandated estimate of state fiscal capacity developed from a 1986 Treasury study on Federal-State-Local Fiscal Relations.",
+    "TTR estimates are used exclusively to allocate Community Mental Health Service and Substance Abuse Prevention and Treatment block grants administered by SAMHSA.",
+    "The page is a navigation/listing portal containing links to methodology papers and annual TTR estimates from 1999 through 2024.",
+    "No market-moving data, policy decisions, or economic forecasts are presented on this page.",
+    "The most recent estimates listed are dated 09/30/2024 and 09/30/2023.",
+    "This page does not discuss monetary policy, interest rates, or any financial market catalysts."
+  ],
+  "why_it_matters": "This page has no relevance to financial markets or trading. It is a fiscal administration reference page documenting the methodology for distributing federal block grants to states based on estimated fiscal capacity. It contains no information that would affect interest rates, asset prices, or market expectations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "federal-state-fiscal-relations",
+    "block-grants",
+    "treasury-methodology",
+    "samhsa",
+    "fiscal-capacity",
+    "state-allocations",
+    "ttre"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation_page per source_type field; per Rule 5, navigation pages must be rejected",
+      "Source body contains only document links and metadata with no substantive content - no analysis, data, or market-relevant information",
+      "event_type is 'unknown' when it should reflect this is a document listing/navigation page, not a research paper or commentary",
+      "Topic mismatch: metadata claims 'macro catalysts' target but content is about federal block grant allocation methodology with no market relevance",
+      "No published_at date provided in source body; cannot verify recency",
+      "Source has zero relevance to financial markets, trading, or market structure per why_it_matters field"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_total_taxable_resources_2151603e61951612.txt",
+  "notes": "Source is a low-value navigation page listing historical TTR methodology documents. The body contains only document titles and dates with no substantive analysis or data. No relevance to macro catalysts or market structure. Published date not stated in source; most recent linked document is dated 09/30/2024 per URL context."
+}

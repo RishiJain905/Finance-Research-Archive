@@ -1,20 +1,19 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/index page for ECB research agenda - per Rule 6, listing pages are rejected",
-    "No publication date provided in source",
-    "No specific research findings, policy decisions, or market-moving information present",
-    "Contains only broad categorical descriptions of research areas",
-    "event_type correctly set to 'unknown' but correct outcome is rejection, not retention",
-    "Source has no archival value for finance research - it is a navigation container"
+    "Source is a listing page (index.en.html) - non-archivable per CORE RULE 6",
+    "No published_at date provided in source metadata",
+    "Source contains only broad research topic headings, no specific policy content, data, or forecasts",
+    "event_type is 'unknown' - but listing pages should not be archived regardless of event type",
+    "No market-moving information or macro catalysts present"
   ],
   "human_review_required": false,
-  "human_review_reason": "Automated rejection is appropriate - source is explicitly a listing page (source_type: listing_page) which per Rule 6 must be rejected. The record correctly identifies all deficiencies including missing publication date, no actionable content, and low informational value.",
+  "human_review_reason": "Auto-reject is appropriate because the source is clearly a listing page (URL ends with /index.en.html and contains 'All pages in this section' text). The generated record correctly identifies this and applies the correct logic.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is an ECB research agenda index page listing broad areas of institutional research interest including microprudential policy, central bank liquidity and collateral frameworks, bank supervision, and fintech/digital currencies. It provides no specific policy decisions, data releases, or actionable market information. This is a non-archiveable listing page per Rule 6.",
-    "why_it_matters": "This source has no immediate market relevance. It is a navigational index of ECB research priorities rather than a published policy paper, data release, speech, or event. It cannot be used for trading decisions or market analysis. Per verification rules, listing pages must be rejected.",
+    "summary": "This is the ECB's research agenda page outlining areas of scholarly interest regarding financial institutions, microprudential policy, financial markets, and payments. It is not an actual policy document, data release, or market-moving announcement. The page lists research themes including central bank liquidity and collateral policies, bank supervision architecture, and fintech/digital currencies without providing specific policy decisions, numbers, or forecasts.",
+    "why_it_matters": "This page has no direct market impact as it contains only a research agenda rather than actual policy or data. It may be useful for understanding the ECB's analytical priorities but provides no actionable information for traders or investors.",
     "macro_context": "",
     "market_structure_context": ""
   }

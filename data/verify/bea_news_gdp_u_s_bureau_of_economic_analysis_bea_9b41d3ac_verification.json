@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/landing page (source_type: navigation_page), which per Rule 5 must be rejected",
+    "Contains no actual GDP figures, growth rates, or economic data",
+    "No publication date provided (published_at is empty string)",
+    "No research value as a standalone source - only provides links to data categories",
+    "event_type is correctly 'unknown' as this is not an actual GDP data release"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately identifies the source as a navigation page with no substantive content. Auto-rejection is appropriate per Rule 5.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is the BEA GDP landing page, which serves as a navigation hub listing various GDP-related data categories and tools rather than presenting actual GDP data or a news release. The page contains no specific GDP figures, no release date, and no policy-relevant content.",
+    "why_it_matters": "This page has no research value as it contains no actual economic data. It is a directory page that links to GDP data tools and categories. Actual GDP data would be found in separate news releases under 'News Releases' rather than this landing page."
+  }
+}

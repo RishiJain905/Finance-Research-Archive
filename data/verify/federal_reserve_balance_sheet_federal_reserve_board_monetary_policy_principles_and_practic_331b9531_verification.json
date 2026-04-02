@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/landing page with no substantive research content per Core Rule 6",
+    "TARGET metadata says 'Federal Reserve Balance Sheet Developments' but actual page is 'Monetary Policy Principles and Practice' - mismatch between intended target and actual source",
+    "No balance sheet data, developments, or quantitative information present",
+    "Source contains only website navigation structure and boilerplate text",
+    "Actual note content referenced in the source is not included in the extraction",
+    "published_at is empty - no publication date provided in source",
+    "event_type set to 'unknown' - appropriate for navigation page but confirms non-archivable nature"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately identifies all issues with the source. This is a clear reject case per Core Rule 6 (navigation page) and Core Rule 5 (container pages). No human review needed as the record's assessment is correct.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a navigation/landing page on the Federal Reserve website that provides links to a sequence of short notes on monetary policy principles and central bank practices. The actual content notes are not present in this source; only the navigation structure and introductory text are available. No specific balance sheet data, developments, or research findings are contained in this page.",
+    "why_it_matters": "This source does not contain archiveable research or data. It is merely a website navigation page that users would interact with to find the actual content. Researchers seeking Federal Reserve balance sheet information or monetary policy analysis would need to follow the links to access the substantive notes, which are not present in this extraction.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

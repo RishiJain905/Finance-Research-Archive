@@ -1,22 +1,17 @@
 {
-  "verification_confidence": 9,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/calendar page (listing_page type), not an archiveable research document per Rule 8",
-    "No substantive macro catalyst or market structure content present",
-    "URL field is blank in metadata, violating source attribution requirement",
-    "Source name field is blank despite source body identifying Federal Reserve as origin",
-    "Page contains only dates, times, and links to documents—no analysis, no factual claims suitable for independent verification",
-    "Low-quality container page with no direct, specific facts worth preserving in a research archive",
-    "Publishing date field is blank, reducing source reliability for historical reference"
+    "Source is a navigation_page per source_type classification",
+    "No substantive policy content exists—only calendar dates and links to external documents",
+    "event_type set to 'unknown' which is correct since no specific FOMC event or policy content is contained herein",
+    "This page is an index/utility page, not an archiveable policy document"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The record correctly identifies this as a navigation page with no archiveable content. Auto-rejection is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is a FOMC meeting calendar and navigation page from the Federal Reserve website, listing scheduled Federal Open Market Committee meeting dates from 2021 through 2027 along with associated document links. The page does not contain substantive analysis, discussion of macro catalysts, or market structure content—it is purely an index of meeting dates with links to statements, minutes, and projection materials. This is a container/listing page that should be rejected per archive quality rules.",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This source is the Federal Reserve's official FOMC meeting calendar page, listing scheduled meeting dates for 2021-2027 along with links to historical statements, minutes, and press conference materials. It is a navigation/index page, not an archiveable policy document itself. No policy decisions, economic data, or substantive commentary are contained herein.",
+    "why_it_matters": "This is a utility reference page for locating FOMC policy documents. The actual archiveable content resides in the linked statements, minutes, and projection materials—not in this calendar index itself. Researchers should navigate to specific meeting documents for policy-relevant content."
   }
 }

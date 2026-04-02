@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2022_press_releases_86659082f842adbb",
-  "created_at": "2026-03-31T13:37:59.040363+00:00",
+  "created_at": "2026-03-31T18:37:08.741206+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -9,39 +9,49 @@
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2022-press.htm",
     "domain": "www.federalreserve.gov",
-    "published_at": "2022-01-01/2022-12-31",
+    "published_at": "2022-01-01 to 2022-12-31",
     "source_type": "listing_page"
   },
-  "summary": "This is a chronological index page listing all Federal Reserve press releases from calendar year 2022, including FOMC minutes, regulatory announcements, enforcement actions, banking application approvals, and other Fed communications. It does not contain a single archiveable document but rather serves as a navigation hub to individual press releases.",
+  "summary": "This is a chronological index/listing page of all Federal Reserve press releases from calendar year 2022, containing approximately 50+ separate announcements spanning monetary policy (FOMC minutes, discount rate actions), banking applications, enforcement actions, regulatory guidance, climate risk initiatives, and infrastructure updates. It is not a single archiveable document but rather a navigation index. As a listing page, it should not be archived as a standalone research record.",
   "key_points": [
-    "Listing page containing links to multiple Fed press releases from throughout 2022",
-    "Includes references to FOMC minutes releases (November 1-2, September 20-21, July 26-27 meetings)",
-    "Contains regulatory actions including LIBOR transition final rule and climate-related risk guidance",
-    "Lists discount rate action announcements from multiple Reserve Banks",
-    "Includes enforcement action terminations and new enforcement actions",
-    "References banking application approvals and master account proposal"
+    "This is a listing page containing links to ~50+ separate 2022 Fed press releases, not a single cohesive document",
+    "Monetary policy-related items include: FOMC minutes (November 1-2, July 26-27, September 20-21) and discount rate actions",
+    "Regulatory items include: LIBOR/SOFR transition final rule, resolution plan reviews, climate scenario analysis pilot, debit card transaction rule updates",
+    "Banking applications: multiple approval announcements for various bank holding companies",
+    "Enforcement actions: terminations and new actions against various institutions including Deutsche Bank, HSBC, Agricultural Bank of China",
+    "Fed infrastructure: FedNow Service timing updated to mid-2023, new payment services pricing announced"
   ],
-  "why_it_matters": "This page is not directly actionable for market research as it is merely an index. Individual press releases linked from this page would need to be retrieved separately for meaningful analysis.",
+  "why_it_matters": "This index page itself is not actionable for research. Individual press releases from this index may contain macro-catalyst-relevant content (FOMC minutes, rate decisions, economic data), but those must be accessed as separate source documents. This listing page serves only as a navigation aid, not a research artifact.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "",
+  "macro_context": "The index references FOMC minutes and discount rate actions which are macro-catalyst-relevant, but the actual content of those documents is not present in this listing page. Separate archival records should be created for each individual FOMC minutes release.",
+  "market_structure_context": "Market-structure-relevant items referenced include: FedNow Service update (payment infrastructure), LIBOR to SOFR transition final rule, intraday credit policy updates, and master account transparency proposal.",
   "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "press-releases",
     "listing-page",
-    "non-archivable"
+    "non-archivable",
+    "2022",
+    "fomc-minutes",
+    "discount-rate",
+    "banking-applications",
+    "enforcement-actions",
+    "libor-sofr"
   ],
   "llm_review": {
-    "initial_confidence": 1,
+    "initial_confidence": 2,
     "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "suggested_status should be 'rejected' instead of 'review_queue' since source_type is listing_page per CORE RULE 5"
+      "SOURCE_TYPE is listing_page - per CORE RULE #5, listing pages must be rejected",
+      "Source is a navigation index, not an article-like document with actionable research content",
+      "event_type set to 'unknown' is appropriate since no single event applies to an index page",
+      "No extractable forward guidance, rate decisions, economic data prints, or substantive commentary present",
+      "The generated record correctly identifies this as a non-archivable listing page and recommends declining to archive",
+      "Historical record (2022) adds to staleness concern for real-time market analysis"
     ]
   },
   "human_review": {
@@ -50,5 +60,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2022_press_releases_86659082f842adbb.txt",
-  "notes": "This source is a Federal Reserve press release index/listing page for calendar year 2022. It contains links to dozens of separate announcements but is not itself an archiveable document. Per CORE RULE 6, listing_page sources should be treated as non-archiveable. The actual substantive documents (FOMC minutes, rate decisions, regulatory actions) would need to be accessed individually. Source is historical (2022 data); content is stale relative to TODAY (2026-03-31). Low confidence in utility as standalone research record."
+  "notes": "Non-archivable listing page. Contains an index of ~50+ Fed press releases from 2022. Topics span monetary policy, banking applications, enforcement, regulatory guidance, and payment infrastructure. Does not contain the actual content of any individual press release. This record should be used only to identify relevant discrete source documents for separate archival. The referenced FOMC minutes (Nov 1-2, Jul 26-27, Sep 20-21, 2022) and discount rate actions represent macro-catalyst opportunities if archived individually. Historical record (2022 data) - substantially stale for real-time market analysis purposes."
 }

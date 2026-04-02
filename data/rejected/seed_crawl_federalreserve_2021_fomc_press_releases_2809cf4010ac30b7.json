@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_2021_fomc_press_releases_2809cf4010ac30b7",
-  "created_at": "2026-03-31T13:34:17.372962+00:00",
+  "created_at": "2026-03-31T18:34:59.534798+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,52 +8,45 @@
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2021-press-fomc.htm",
-    "domain": "www.federalreserve.gov",
-    "published_at": "2026-02-26",
-    "source_type": "listing_page"
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This Federal Reserve website page serves as an index to all 2021 FOMC press releases and economic projections, listing 12 FOMC statement dates and 4 economic projections releases throughout the year. The page is a navigation/listing page that provides links to individual documents rather than containing the substantive content of any FOMC statement itself. It does not archive well as a standalone research note because it contains no detailed policy content, only metadata about documents that exist elsewhere.",
+  "summary": "This Federal Reserve webpage is a navigation index listing links to all FOMC statements and projection materials released during 2021 (January, March, April, June, July, September, November, and December). It does not contain the actual FOMC statement text or substantive policy content—only references to separate linked documents.",
   "key_points": [
-    "This is a listing page indexing 2021 FOMC press releases, not a single archival document",
-    "Lists 12 FOMC statement dates spanning January through December 2021: 1/27, 3/17, 4/28, 6/16, 7/28, 9/22, 11/3, and 12/15",
-    "Lists 4 economic projections releases from March, June, September, and December 2021 FOMC meetings",
-    "Page last updated February 26, 2026; content pertains to 2021 events over 4 years ago",
-    "Contains a Statement Regarding Repurchase Agreement Arrangements dated 7/28/2021",
-    "Contains a reaffirmation of the Statement on Longer-Run Goals and Monetary Policy Strategy dated 1/27/2021",
-    "The page itself contains no substantive policy content, only links to individual press releases"
+    "This is a listing/index page containing links to 8 separate FOMC statement dates in 2021: January 27, March 17, April 28, June 16, July 28, September 22, November 3, and December 15.",
+    "The page also references 4 economic projection releases associated with the March, June, September, and December FOMC meetings.",
+    "The page includes a separate link regarding 'Repurchase Agreement Arrangements' from July 28, 2021.",
+    "One link references a January 27, 2021 reaffirmation of the 'Statement on Longer-Run Goals and Monetary Policy Strategy'.",
+    "Last Update shown on page: February 26, 2026.",
+    "No actual FOMC statement text, voting records, or policy content is present in this source."
   ],
-  "why_it_matters": "This page is not useful as a standalone research archive entry. It is a navigation index that references multiple FOMC documents from 2021. To properly capture the 2021 Fed policy decisions for research purposes, each individual FOMC statement should be archived separately rather than this aggregate listing page.",
+  "why_it_matters": "This source cannot serve as a standalone archive record because it contains no substantive policy text. It is a directory page requiring navigation to individual linked documents to access actual FOMC statements. For archival purposes, each linked statement should be processed separately.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The page references historical 2021 FOMC meetings during a period when the Fed was transitioning from pandemic-era accommodation to tighter policy, but provides no substantive policy content to analyze.",
+  "macro_context": "",
   "market_structure_context": "",
-  "important_numbers": [
-    12,
-    4
-  ],
+  "important_numbers": [],
   "tags": [
     "fomc",
     "listing-page",
     "federal-reserve",
-    "2021",
     "navigation",
-    "index",
-    "historical",
+    "2021",
     "non-archivable"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 3,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/navigation page (source_type correctly identified) - contains only an index of links to individual documents, no substantive policy content",
-      "event_type set to 'unknown' - appropriate given the page is not a discrete event but an aggregate index, however this confirms the record lacks a specific FOMC event to archive",
-      "The source has no archival value as a standalone research record - it merely lists metadata about other documents that should be archived individually",
-      "PUBLISHED_AT (2026-02-26) reflects page last update, but content pertains to 2021 FOMC meetings (over 4 years old relative to TODAY 2026-03-31)",
-      "Important numbers [12, 4] in the record are metadata counts from the listing, not substantive market-relevant data"
+      "Source is a listing_page per Rule 5 - must be rejected",
+      "Source contains no substantive policy content, only links to separate documents",
+      "event_type is 'unknown' which is technically correct given no policy content exists, but confirms this is not a valid archive target",
+      "Source is a navigation/index page that cannot serve as a standalone archive record"
     ]
   },
   "human_review": {
@@ -62,5 +55,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2021_fomc_press_releases_2809cf4010ac30b7.txt",
-  "notes": "Source is a navigation/listing page rather than an archival document. Per Rule 6, listing pages should be treated as non-archiveable. The page lists links to 2021 FOMC statements and economic projections but contains no substantive content from those documents. Individual FOMC statements from 2021 should be archived separately if needed. The 'Last Update: February 26, 2026' date suggests this is a live web page, but the content it describes (2021 FOMC meetings) is historical. This record serves only as evidence that the index exists and what it contains, not as a substantive source."
+  "notes": "NON-ARCHIVABLE: This is a listing/navigation page that aggregates links to 2021 FOMC press releases. Per CORE RULE 6, listing pages are non-archiveable. The actual archiveable content resides in the individually linked pages. Recommend crawling each FOMC statement date as separate source documents for the archive. The source is historically relevant (2021 FOMC meetings) but the page itself provides no extractable policy content."
 }

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_financial_institutions_microprudential_policy_financial_80cd1b45252366e7",
-  "created_at": "2026-03-31T14:27:39.709540+00:00",
+  "created_at": "2026-03-31T18:16:00.980340+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,22 +8,23 @@
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/pub/economic-research/research_agenda/financial_institutions/html/index.en.html",
-    "domain": "www.ecb.europa.eu",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This source is an ECB research agenda index page listing broad areas of institutional research interest including microprudential policy, central bank liquidity and collateral frameworks, bank supervision, and fintech/digital currencies. It provides no specific policy decisions, data releases, or actionable market information. This is a non-archiveable listing page per Rule 6.",
+  "summary": "This is the ECB's research agenda page outlining areas of scholarly interest regarding financial institutions, microprudential policy, financial markets, and payments. It is not an actual policy document, data release, or market-moving announcement. The page lists research themes including central bank liquidity and collateral policies, bank supervision architecture, and fintech/digital currencies without providing specific policy decisions, numbers, or forecasts.",
   "key_points": [
-    "The page lists ECB research interests in microprudential policy and banking regulation",
-    "Central bank liquidity and collateral policy research focuses on optimal design and potential adverse incentive effects",
-    "Bank supervision research covers supervisory architecture centralization, transparency effects on funding costs, and climate change implications",
-    "Digital currency and fintech research examines bigtech effects on banking and CBDC design benefits",
-    "No publication date or specific research findings are provided"
+    "This is a research agenda/index page listing ECB research interests, not a policy statement or data release",
+    "Research areas include: central bank liquidity and collateral policies impact on financial markets",
+    "Research areas include: optimal design of supervisory architecture, including centralisation effects and climate change implications",
+    "Research areas include: fintechs, bigtechs effects on banking industry and potential effects on financial stability",
+    "Research areas include: design and benefits of central bank digital currencies for the financial system",
+    "No specific policy decisions, rate decisions, or quantitative targets are presented on this page"
   ],
-  "why_it_matters": "This source has no immediate market relevance. It is a navigational index of ECB research priorities rather than a published policy paper, data release, speech, or event. It cannot be used for trading decisions or market analysis. Per verification rules, listing pages must be rejected.",
+  "why_it_matters": "This page has no direct market impact as it contains only a research agenda rather than actual policy or data. It may be useful for understanding the ECB's analytical priorities but provides no actionable information for traders or investors.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -33,21 +34,22 @@
     "ecb",
     "research-agenda",
     "microprudential",
+    "banking-regulation",
     "fintech",
-    "cbdc",
+    "digital-currencies",
+    "central-bank-liquidity",
     "listing-page"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/index page for ECB research agenda - per Rule 6, listing pages are rejected",
-      "No publication date provided in source",
-      "No specific research findings, policy decisions, or market-moving information present",
-      "Contains only broad categorical descriptions of research areas",
-      "event_type correctly set to 'unknown' but correct outcome is rejection, not retention",
-      "Source has no archival value for finance research - it is a navigation container"
+      "Source is a listing page (index.en.html) - non-archivable per CORE RULE 6",
+      "No published_at date provided in source metadata",
+      "Source contains only broad research topic headings, no specific policy content, data, or forecasts",
+      "event_type is 'unknown' - but listing pages should not be archived regardless of event type",
+      "No market-moving information or macro catalysts present"
     ]
   },
   "human_review": {
@@ -56,5 +58,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_financial_institutions_microprudential_policy_financial_80cd1b45252366e7.txt",
-  "notes": "Source is a listing/navigation page for ECB economic research agenda. Contains no specific data, policy decisions, or market-moving content. Classified as non-archiveable per Rule 6. No event type applicable."
+  "notes": "This source is a research agenda listing page from the ECB website. Per CORE RULE 6, listing pages should be treated as non-archiveable. The page contains no specific policy decisions, data releases, speeches, or any content that would constitute a macro catalyst. It merely outlines broad research areas of interest (liquidity policies, bank supervision, fintech, digital currencies) without providing concrete findings, numbers, or forecasts. Source confidence is very low due to lack of actionable content."
 }

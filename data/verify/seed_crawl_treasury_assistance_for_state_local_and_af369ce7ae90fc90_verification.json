@@ -1,20 +1,21 @@
 {
-  "verification_confidence": 4,
-  "verdict": "review",
+  "verification_confidence": 2,
+  "verdict": "reject",
   "issues_found": [
-    "event_type set to 'unknown' - source is informational program overview, which could be categorized as 'research_paper', 'economic_commentary', or remain 'unknown' but the record should justify the classification",
-    "published_at is 'unknown' preventing assessment of currency; content describes 2020-2021 COVID legislation making it approximately 4-5 years stale",
-    "Source is an informational hub page summarizing multiple programs rather than original research, data release, or policy decision",
-    "Source contains no forward guidance, current market data, or near-term policy decisions",
-    "Low signal for real-time finance research despite accurate factual content"
+    "event_type is set to 'unknown' - should be 'financial_stability_report' or 'regulatory_guidance' given the source describes government fiscal programs",
+    "Source is a policy information page, not an article-like source - it describes existing programs rather than announcing new policy or market-relevant developments",
+    "Content describes pandemic-era fiscal programs (CARES Act, American Rescue Plan from 2020-2021) with no indication of recent updates or new developments",
+    "No publication date present - cannot determine if this page was recently updated or remains stale",
+    "Source URL (policy-issues page) suggests an informational hub rather than a specific research record or announcement",
+    "The page does not function as a macro catalyst - it provides historical context about existing programs without new policy signals"
   ],
-  "human_review_required": true,
-  "human_review_reason": "Source accurately summarizes COVID-era fiscal programs with correct funding amounts ($350B, $21.6B, $10B, $10B), but is an informational hub page with unknown publication date describing 2020-2021 legislation. While factually faithful and high domain trust, the source lacks market-moving relevance and has unclear archival value for finance research beyond historical policy reference. Human decision needed on whether stale historical program documentation justifies archiving.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "Multiple clear rejection criteria met: source lacks publication date, is not article-like, describes historical pandemic-era programs with no current market relevance, and event_type is incorrectly set to 'unknown' when a more appropriate taxonomy value exists.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "This Treasury Department policy page provides informational descriptions of COVID-19 fiscal relief programs enacted under the American Rescue Plan (2021) and CARES Act (2020). The page has no publication date and appears to be an archival informational resource rather than a current policy announcement or market-relevant document.",
+    "why_it_matters": "Historical fiscal policy documentation. This page describes pandemic-era government spending programs but does not announce new policy, provide updated program information, or contain market-relevant signals. It lacks temporal context to assess relevance to current market conditions.",
+    "macro_context": "Describes fiscal support programs from 2020-2021 COVID-19 relief legislation - these are historical programs, not current macro catalysts.",
     "market_structure_context": ""
   }
 }

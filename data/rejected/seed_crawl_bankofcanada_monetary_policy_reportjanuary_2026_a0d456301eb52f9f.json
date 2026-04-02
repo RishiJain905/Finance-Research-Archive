@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_monetary_policy_reportjanuary_2026_a0d456301eb52f9f",
-  "created_at": "2026-03-31T15:22:10.736176+00:00",
+  "created_at": "2026-03-31T17:48:00.883408+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "monetary_policy_report",
@@ -8,60 +8,55 @@
   "source": {
     "name": "Bank of Canada",
     "url": "",
-    "published_at": "2026-01",
-    "source_type": "crawl",
+    "published_at": "2026-01-01",
+    "source_type": "monetary_policy_report",
     "domain": ""
   },
-  "summary": "The Bank of Canada held its overnight rate target at 2.25% in January 2026, with inflation remaining near the 2% target and growth expected to average around 1.25% over the projection horizon. US tariffs continue to disrupt the Canadian economy, and the future of the Canada-US-Mexico trade agreement remains highly uncertain, creating elevated risks to the outlook.",
+  "summary": "The Bank of Canada held its target for the overnight rate at 2.25% (bank rate at 2.5%, deposit rate at 2.20%) as outlined in its January 2026 Monetary Policy Report. US tariffs continue to disrupt the Canadian economy, with growth expected to remain modest at around 1.25% over the projection horizon while inflation stays close to the 2% target. Risks to the outlook are described as 'unusually high' due to geopolitical uncertainty and the ongoing review of the Canada–United States–Mexico Agreement.",
   "key_points": [
-    "Bank of Canada maintained target overnight rate at 2.25%; Bank Rate at 2.5% and deposit rate at 2.20%",
-    "CPI inflation remains close to the 2% target over the projection horizon",
-    "Canadian economic growth expected to average around 1.25% over the projection horizon",
-    "US tariffs and trade uncertainty continue to weigh on Canadian economic growth",
-    "Canada-US-Mexico Agreement is under review with unclear future outcomes",
+    "Bank of Canada maintained overnight rate target at 2.25%, with bank rate at 2.5% and deposit rate at 2.20%",
+    "CPI inflation remains near the 2% target, with excess supply offsetting upward cost pressures",
+    "Economic growth projected to average around 1.25% over the projection horizon",
+    "US tariffs remain elevated and continue to weigh on the Canadian economy alongside slowing population growth",
     "Canadian businesses are expanding exports to countries other than the United States and reducing reliance on US imports",
-    "Geopolitical uncertainty and trade risks are described as unusually high",
-    "Global growth supported by AI investment boom and fiscal stimulus in major economies"
+    "Global growth expected to remain solid, supported by AI investment boom and fiscal stimulus in major economies",
+    "Risks described as 'unusually high' due to geopolitical uncertainty and CUSMA review uncertainty"
   ],
-  "why_it_matters": "This quarterly monetary policy report provides the Bank of Canada's official assessment of economic conditions and forward guidance for Canada. The maintained 2.25% rate reflects a balanced outlook with inflation near target, but elevated trade uncertainty from US tariffs and the CUSMA review creates significant downside risks for Canadian growth.",
+  "why_it_matters": "This quarterly monetary policy report provides the official outlook of the Bank of Canada's Governing Council, including the rate decision, economic projections, and risk assessment. The held rate at 2.25% signals a cautious approach amid elevated uncertainty from US tariffs and trade agreement negotiations. Markets should monitor the balance between modest growth and controlled inflation against the risks of trade disruption.",
   "market_impact": {
     "asset_classes": [
       "fx",
-      "bonds",
-      "equities"
+      "bonds"
     ],
-    "directional_bias": "neutral",
-    "confidence": 0
+    "directional_bias": "mixed",
+    "confidence": 4
   },
-  "macro_context": "Canada faces a challenging trade environment with elevated US tariffs disrupting economic activity. The Bank projects excess supply will roughly offset upward cost pressures, keeping inflation near 2% despite trade disruptions. The CUSMA review introduces significant structural uncertainty as outcomes could have wide-ranging impacts on the Canadian economy.",
+  "macro_context": "The Bank of Canada projects Canadian GDP growth of approximately 1.25% with inflation near 2% over the projection horizon. Excess supply in the economy roughly offsets upward cost pressures, maintaining inflation close to target. Global conditions are expected to remain supportive due to AI-driven investment and fiscal stimulus in major economies. Trade policy uncertainty—particularly around US tariffs and CUSMA—is the dominant risk factor.",
   "market_structure_context": "",
   "important_numbers": [
     "2.25% (overnight rate target)",
-    "2.5% (Bank Rate)",
+    "2.5% (bank rate)",
     "2.20% (deposit rate)",
     "2% (inflation target)",
-    "1.25% (expected average growth)"
+    "1.25% (projected GDP growth average)"
   ],
   "tags": [
-    "bank of canada",
-    "monetary policy report",
-    "rate decision",
-    "canada economy",
-    "us tariffs",
+    "bank-of-canada",
+    "monetary-policy-report",
+    "rate-decision-held",
+    "overnight-rate",
+    "canadian-dollar",
+    "us-tariffs",
     "cusma",
-    "trade uncertainty",
-    "inflation",
-    "growth outlook",
-    "tiff macklem"
+    "inflation-target"
   ],
   "llm_review": {
     "initial_confidence": 7,
     "verification_confidence": 7,
     "verdict": "reject",
     "issues_found": [
-      "verification_confidence is incorrectly set to 0 in the record; llm_review.initial_confidence is 7, suggesting the correct value should be 7",
-      "The 90-day threshold calculation in human_review.notes contains a minor factual error: 75 days is correctly within the 90-day window, not 'approximately 75 days before TODAY'",
-      "source.url is empty in source metadata, which is a data quality issue for archival purposes"
+      "URL field is blank - direct source link not provided, preventing external verification",
+      "Published date set to 2026-01-01 is an approximation; source body only indicates 'January 2026' without exact date"
     ]
   },
   "human_review": {
@@ -69,6 +64,6 @@
     "decision": "",
     "notes": "missing_source_attribution"
   },
-  "raw_text_path": "data\\raw\\seed_crawl_bankofcanada_monetary_policy_reportjanuary_2026_a0d456301eb52f9f.txt",
-  "notes": "Source is a high-tier domain (Bank of Canada) and directly relevant to macro catalysts through official monetary policy assessment. Contains Bank of Canada's official economic projections and rate decision. The Governing Council members are named (Tiff Macklem, Carolyn Rogers, Toni Gravelle, Sharon Kozicki, Nicolas Vincent, Rhys Mendes, Michelle Alexopoulos). Rate decision details are clearly stated: held at 2.25% overnight target. Trade policy uncertainty from US tariffs and CUSMA review is the dominant macro catalyst discussed."
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_monetary_policy_reportjanuary_2026_a0d456301eb52f9f.txt",
+  "notes": "This is a quarterly monetary policy report from the Bank of Canada, approximately 3 months prior to TODAY. The source is highly relevant to macro catalysts as it contains official economic projections, a rate decision, and detailed risk assessment for the Canadian economy. The document is authoritative as it represents the official views of the Governing Council. However, verification is needed for exact publication date and URL confirmation."
 }

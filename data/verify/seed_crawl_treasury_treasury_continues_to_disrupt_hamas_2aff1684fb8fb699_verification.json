@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is out of scope: This is a counterterrorism sanctions press release, not relevant to macro catalysts or market structure",
+    "event_type is set to 'unknown' when it should be 'treasury_issuance' or 'market_notice'",
+    "Source metadata misclassified as 'macro catalysts' TARGET; should be categorized as geopolitical/security content",
+    "The generated record correctly identifies this as out of scope but still produced an incomplete record"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source clearly falls outside the archive's scope (macro catalysts and market structure). The source is a counterterrorism sanctions action about Hamas-affiliated charities with no relevance to financial market catalysts, monetary policy, or market structure. This can be auto-rejected without human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

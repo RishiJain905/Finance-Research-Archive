@@ -2,12 +2,11 @@
   "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "verification_confidence is incorrectly set to 0 in the record; llm_review.initial_confidence is 7, suggesting the correct value should be 7",
-    "The 90-day threshold calculation in human_review.notes contains a minor factual error: 75 days is correctly within the 90-day window, not 'approximately 75 days before TODAY'",
-    "source.url is empty in source metadata, which is a data quality issue for archival purposes"
+    "URL field is blank - direct source link not provided, preventing external verification",
+    "Published date set to 2026-01-01 is an approximation; source body only indicates 'January 2026' without exact date"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record content is factually accurate and well-supported by the source, but verification_confidence is inconsistently set to 0 despite initial_confidence of 7. Human review needed to reconcile this scoring discrepancy and verify the record quality. Additionally, the missing source URL should be located if possible from the Bank of Canada domain.",
+  "human_review_reason": "The record is substantively accurate and the content aligns well with the source text. All key figures (2.25% overnight rate, 1.25% growth projection, 2% inflation target) are correctly captured, and the 'unusually high' risk characterization is properly attributed. However, the blank URL prevents full verification of source authenticity and limits reproducibility. While the Bank of Canada is a high-tier institutional source with clear authority, the missing URL is a metadata issue that requires human confirmation before final acceptance.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",

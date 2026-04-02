@@ -1,0 +1,64 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_releases_reports_777bda24f96add95",
+  "created_at": "2026-03-31T19:13:31.141391+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "New York Fed Releases Reports Focused on the Impact of Recessions on Schools and 'Regular and Predictable' Treasury Bill Issuance",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2017/an170113",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2017-01-13",
+    "source_type": "research_paper"
+  },
+  "summary": "The New York Fed announced two research articles for its Economic Policy Review journal: one on school finance impacts during the Great Recession (comparing New York and New Jersey), and another on Treasury bill issuance practices. The Treasury article found that adhering to a regular and predictable Treasury bill issuance schedule adds less than one basis point in additional financing cost compared to pure cost-minimization strategies.",
+  "key_points": [
+    "The New York Fed released two Economic Policy Review articles on January 13, 2017",
+    "The Treasury-focused article examines whether 'regular and predictable' issuance minimizes cost of financing government debt",
+    "Authors compared cost-minimization auction sizing strategies versus regular/predictable strategies",
+    "The estimated additional cost of adhering to regular and predictable issuance is less than one basis point",
+    "Authors include Paul Glasserman (Columbia) and former Treasury Department officials Allen Zhang and Amit Sirohi"
+  ],
+  "why_it_matters": "This research is relevant to Treasury market operations and debt management practices. It provides empirical evidence that the U.S. Treasury's approach of maintaining predictable auction schedules does not meaningfully increase borrowing costs—less than 1 basis point—supporting the rationale for stable, scheduled debt issuance as a market structure feature.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The event_type should be 'economic_commentary' or similar, not 'research_paper', as this is a press release summarizing forthcoming research rather than the research itself. If accepted, the event_type needs correction.",
+  "important_numbers": [
+    "<1 basis point (additional cost of regular and predictable issuance)"
+  ],
+  "tags": [
+    "treasury",
+    "debt-management",
+    "bill-issuance",
+    "auction-efficiency",
+    "market-structure",
+    "economic-policy-review",
+    "research-paper"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is set to 'research_paper' but the source is a press release announcing forthcoming research, not an actual research paper. The press release explicitly states 'Both articles will be published in a forthcoming edition of the Economic Policy Review.'",
+      "Source is a press release with minimal quantitative detail—no methodology, underlying data, or full findings are provided",
+      "Source is nearly 9 years old (published 2017-01-13), far exceeding the 90-day threshold and the 9 years would need strong archival justification",
+      "The first article on school finances is completely irrelevant to market structure or macro catalysts—only 1 of 2 topics in the press release is relevant",
+      "Record provides no information about current applicability or whether findings remain relevant to today's Treasury market structure"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record incorrectly classifies a press release as a research_paper. While the content summary is factually accurate to the source, the fundamental nature of the source has been misrepresented. The actual research papers referenced in the press release may not have been accessible for verification. Additionally, the 9-year age and thin source material (press release only) suggest limited archival value for a finance research archive focused on market structure."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_releases_reports_777bda24f96add95.txt",
+  "notes": "This is a press release announcing two research articles, not the articles themselves. The second article on Treasury bill issuance is tangentially relevant to market structure as it discusses auction design and cost efficiency. However, the source is nearly 9 years old, is a press release summary rather than the actual research paper, and contains limited quantitative detail. The primary finding—that regular issuance costs less than 1 basis point more than pure cost-minimization—is noted, but no underlying data or methodology is provided. The first article on school finances is not relevant to market structure or macro catalysts."
+}

@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is static operational documentation (informational/product page), not research or news content",
+    "No publication date provided; content has no temporal relevance to macro catalysts",
+    "No analytical content, forecasts, commentary, or event-driven information present",
+    "event_type is correctly 'unknown' but the source fundamentally cannot be classified into any valid event taxonomy",
+    "Copyright 2026 suggests current but no specific publication or update timestamp",
+    "Low archival value for a finance research archive; more appropriate as technical reference documentation in a systems database",
+    "Source describes platform mechanics without providing any research findings, policy implications, or market-relevant commentary"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies that this source is static operational documentation with no research value, analytical content, or event-driven information. No human judgment needed—the source fails multiple explicit rejection criteria.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is an informational/product page describing the operational mechanics of the NYSE Bond marketplace, covering order types, trading hours, fee structure, auction processes, and post-trade clearance and settlement via DTCC/NSCC. It is not a research document, news article, or event-driven content.",
+    "why_it_matters": "This source provides baseline operational documentation of NYSE's fixed income trading infrastructure. It is relevant for understanding market structure elements such as order matching rules, auction mechanisms, and settlement processes, but contains no analytical content, forecasts, or macro-relevant commentary.",
+    "macro_context": "",
+    "market_structure_context": "The page describes NYSE Bond's price/time priority order matching model, reserve interest handling (displayed orders yield to undisplayed at same price), two daily bond auctions (opening at 4am ET, core at 8am ET), decimal pricing to 2 places, and post-trade locked-in transaction processing via DTCC/NSCC with RIO interface. Settlement is T+2 for CNS-eligible bonds with accrued interest included in reported prices."
+  }
+}

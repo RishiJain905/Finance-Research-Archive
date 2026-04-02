@@ -1,20 +1,20 @@
 {
-  "verification_confidence": 9,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/navigation page (container page) containing only links to historical Monetary Policy Reports, not actual report content",
-    "No substantive monetary policy analysis, economic data, or policy discussion present",
-    "Per Rule 8: listing_page type must not be accepted",
-    "Per Rule 9: container pages should bias toward reject, not accept",
-    "Archive value is too low - this page serves only as a directory index",
-    "Individual Monetary Policy Reports must be accessed via separate document links"
+    "Source is a navigation/index page, not an actual report or article (violates Rule 5)",
+    "URL is blank - missing source attribution (violates Rule 6)",
+    "No substantive monetary policy content, decisions, or analysis present in source",
+    "event_type is 'unknown' but correct classification is clear: this is a navigation page, not a monetary_policy_report",
+    "Source has no standalone archival value - merely lists links to reports that must be retrieved individually",
+    "Source quality is too thin for research archive purposes"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Automated rejection is appropriate. The source is explicitly a navigation page with no substantive content. The generated record has correctly identified all critical issues. No human review needed when core rules explicitly mandate rejection for navigation pages and missing attribution.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is a navigation/index page listing historical Monetary Policy Report links from 1996 to 2025. It contains no substantive content from any actual report—no policy discussions, economic data, or analysis. The page merely enumerates dates and document formats (HTML/PDF) available for each reporting period.",
-    "why_it_matters": "This page has no standalone archival value for research purposes. It provides no actionable information about monetary policy, economic developments, or market-relevant content. Actual reports must be accessed via individual document links.",
+    "summary": "This source is a Federal Reserve index page listing historical Monetary Policy Report testimonies from 1996 through 2025 (June). The page provides only navigation links without any substantive policy content, actual reports, or data. No specific monetary policy decisions, statements, or analysis can be extracted from this navigation page.",
+    "why_it_matters": "This index page has no standalone research value. It merely provides links to underlying reports which would need to be retrieved individually. For a finance research archive, the actual testimonies and reports—not this directory—should be archived.",
     "macro_context": "",
     "market_structure_context": ""
   }

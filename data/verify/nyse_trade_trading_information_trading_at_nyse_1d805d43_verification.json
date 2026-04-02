@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when the source type is clearly operational reference documentation - this page does not fit the event taxonomy (not monetary policy, speech, data release, research, or treasury/operations)",
+    "No publication date present in source metadata - cannot assess currency or staleness",
+    "Source is operational reference documentation, not research content - contains no analysis, commentary, or market interpretation",
+    "event_type set to 'unknown' when the correct type should be identified as operational/reference documentation",
+    "Per Core Rule 5: operational reference pages with no publication date and no market-moving content lack archival value for a finance research archive",
+    "The record correctly identifies this as low-value but suggests 'review_queue' when rejection is more appropriate given the source type"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is clearly operational documentation (trading hours, auction procedures, circuit breaker rules) with no publication date, no author, and no analytical content. While the factual summary is accurate, the page does not meet the archival value threshold for a finance research archive. No human review needed - this is a straightforward rejection based on source type.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a static reference page providing operational trading information for NYSE venues, including trading hours, auction procedures, and market integrity mechanisms such as Limit Up/Limit Down (LULD) and Market-Wide Circuit Breakers (MWCB). The page covers NYSE, NYSE American, NYSE Arca, NYSE National, and NYSE Texas trading schedules.",
+    "why_it_matters": "This page documents the operational framework of NYSE trading venues, including auction mechanisms, trading hours across multiple platforms, and volatility control systems. It provides the baseline rules and timing structure for equity and options trading on NYSE markets.",
+    "market_structure_context": "The page details NYSE market structure elements including: pre-opening order queuing, opening and closing auction procedures, imbalance freeze periods, MOO/LOO cancellation cutoffs, circuit breaker mechanisms (LULD and MWCB), and clearly erroneous execution review procedures. NYSE Bonds conducts two daily auctions at 4:00 a.m. and 8:00 a.m. ET."
+  }
+}

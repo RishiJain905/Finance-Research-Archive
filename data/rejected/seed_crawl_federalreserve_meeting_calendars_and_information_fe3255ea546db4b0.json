@@ -1,26 +1,26 @@
 {
   "id": "seed_crawl_federalreserve_meeting_calendars_and_information_fe3255ea546db4b0",
-  "created_at": "2026-03-30T06:12:44.461676+00:00",
+  "created_at": "2026-03-31T18:46:33.658272+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Meeting calendars and information",
   "source": {
-    "name": "macro catalysts",
-    "url": "",
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "navigation_page",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This source is a FOMC meeting calendar and navigation page from the Federal Reserve website, listing scheduled Federal Open Market Committee meeting dates from 2021 through 2027 along with associated document links. The page does not contain substantive analysis, discussion of macro catalysts, or market structure content—it is purely an index of meeting dates with links to statements, minutes, and projection materials. This is a container/listing page that should be rejected per archive quality rules.",
+  "summary": "This source is the Federal Reserve's official FOMC meeting calendar page, listing scheduled meeting dates for 2021-2027 along with links to historical statements, minutes, and press conference materials. It is a navigation/index page, not an archiveable policy document itself. No policy decisions, economic data, or substantive commentary are contained herein.",
   "key_points": [
-    "FOMC holds eight regularly scheduled meetings per year plus additional meetings as needed",
-    "Meeting minutes are released three weeks after each policy decision date",
-    "Meetings marked with asterisks (*) include a Summary of Economic Projections",
-    "Committee membership changes at the first regularly scheduled meeting of each year",
-    "Meeting dates are tentative until confirmed at the preceding meeting",
-    "Page provides links to statements, implementation notes, press conference materials, and minutes in PDF and HTML formats"
+    "The FOMC holds eight regularly scheduled meetings per year plus additional meetings as needed.",
+    "Meeting minutes are released three weeks after each policy decision date.",
+    "Meetings marked with asterisk (*) are associated with a Summary of Economic Projections (SEP/dot plot).",
+    "The page provides links to PDF and HTML versions of all statements, minutes, and implementation notes from 2021-2027.",
+    "Future 2027 meeting dates are listed: January 26-27, March 16-17, April 27-28, June 8-9, July 27-28, September 14-15, October 26-27, December 7-8."
   ],
-  "why_it_matters": "",
+  "why_it_matters": "This is a utility reference page for locating FOMC policy documents. The actual archiveable content resides in the linked statements, minutes, and projection materials—not in this calendar index itself. Researchers should navigate to specific meeting documents for policy-relevant content.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -28,33 +28,33 @@
   },
   "macro_context": "",
   "market_structure_context": "",
-  "important_numbers": [],
+  "important_numbers": [
+    "8 regularly scheduled FOMC meetings per year",
+    "3 weeks after meeting for minute release"
+  ],
   "tags": [
     "fomc",
+    "calendar",
     "federal-reserve",
-    "meeting-calendar",
     "monetary-policy",
-    "federal-open-market-committee"
+    "navigation-page"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
+    "initial_confidence": 4,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/calendar page (listing_page type), not an archiveable research document per Rule 8",
-      "No substantive macro catalyst or market structure content present",
-      "URL field is blank in metadata, violating source attribution requirement",
-      "Source name field is blank despite source body identifying Federal Reserve as origin",
-      "Page contains only dates, times, and links to documents—no analysis, no factual claims suitable for independent verification",
-      "Low-quality container page with no direct, specific facts worth preserving in a research archive",
-      "Publishing date field is blank, reducing source reliability for historical reference"
+      "Source is a navigation_page per source_type classification",
+      "No substantive policy content exists—only calendar dates and links to external documents",
+      "event_type set to 'unknown' which is correct since no specific FOMC event or policy content is contained herein",
+      "This page is an index/utility page, not an archiveable policy document"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "reject",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_meeting_calendars_and_information_fe3255ea546db4b0.txt",
-  "notes": "NON-ARCHIVEABLE SOURCE: This is a Federal Reserve FOMC meeting calendar page containing only a list of scheduled meeting dates and links to documents (2021-2027). The page is a navigation/index type, not a research document. No macro catalyst content, no market structure content, and no substantive analysis is present. This source does not meet the threshold for inclusion in a finance research archive. The source name and URL are blank in metadata, making proper attribution impossible. Human review recommended to verify source identification before any further processing."
+  "notes": "This source is classified as a navigation_page per SOURCE-TYPE GUIDANCE. It contains no policy decisions, economic data, speeches, or research findings—only a chronological listing of FOMC meeting dates with links to documents. While it is a high-trust domain (federalreserve.gov), the content itself is structural metadata rather than substantive research material. Actual archiveable content would include the linked PDF/HTML statements, minutes, and projection materials from individual meetings."
 }

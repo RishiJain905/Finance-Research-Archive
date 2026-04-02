@@ -1,20 +1,17 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/navigation page (source_type correctly identified) - contains only an index of links to individual documents, no substantive policy content",
-    "event_type set to 'unknown' - appropriate given the page is not a discrete event but an aggregate index, however this confirms the record lacks a specific FOMC event to archive",
-    "The source has no archival value as a standalone research record - it merely lists metadata about other documents that should be archived individually",
-    "PUBLISHED_AT (2026-02-26) reflects page last update, but content pertains to 2021 FOMC meetings (over 4 years old relative to TODAY 2026-03-31)",
-    "Important numbers [12, 4] in the record are metadata counts from the listing, not substantive market-relevant data"
+    "Source is a listing_page per Rule 5 - must be rejected",
+    "Source contains no substantive policy content, only links to separate documents",
+    "event_type is 'unknown' which is technically correct given no policy content exists, but confirms this is not a valid archive target",
+    "Source is a navigation/index page that cannot serve as a standalone archive record"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The record accurately identifies that this source is a non-archivable listing page, which is the correct conclusion. However, the record itself describes a source with no standalone research value - it only indexes other documents. Per Rule 5 and 6, listing pages should be rejected. The record could serve as metadata about the existence of the index, but individual FOMC statements and projections from 2021 should be archived separately as actual research documents.",
+  "human_review_required": false,
+  "human_review_reason": "The verification is conclusive: this is a listing_page with no substantive content. Rule 5 explicitly requires rejection of listing pages. The generated record already correctly identifies this as non-archivable. No ambiguity exists that requires human judgment - the record should be rejected and each linked FOMC statement archived separately.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This Federal Reserve webpage is a navigation index listing links to all FOMC statements and projection materials released during 2021 (January, March, April, June, July, September, November, and December). It does not contain the actual FOMC statement text or substantive policy content—only references to separate linked documents.",
+    "why_it_matters": "This source cannot serve as a standalone archive record because it contains no substantive policy text. It is a directory page requiring navigation to individual linked documents to access actual FOMC statements. For archival purposes, each linked statement should be processed separately."
   }
 }

@@ -1,19 +1,22 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is not relevant to market structure or macro catalysts - describes historical COVID-19 fiscal relief programs from 2020-2021 with no current market-moving information",
-    "Source is an informational overview page rather than a policy announcement, data release, or research paper",
-    "No publication date provided in source metadata, making currency assessment impossible",
-    "event_type set to 'unknown' when a more specific type could apply",
-    "Source is thin with limited signal value for a finance research archive",
-    "Programs described (American Rescue Plan, Economic Impact Payments) are 4-5 years old and have no forward-looking relevance"
+    "event_type is set to 'unknown' when it should at least be a valid taxonomy value like 'research_paper' or 'economic_commentary' if anything - but no valid type fits this informational page",
+    "No published_at date in source metadata; cannot determine recency or age of content",
+    "Source describes historical COVID-era fiscal programs (2020-2021) with no current market relevance or forward-looking analysis",
+    "Source is an informational/descriptive government page, not an article, research paper, data release, or policy announcement",
+    "Source attribution (name + url) is present but source_type is 'unknown' in the generated record",
+    "No macro implications, market impact, or policy path forward discussed in source",
+    "Topic 'macro catalysts' is mismatched with actual content scope - this is a program description page, not a macro catalyst source"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record and source are clearly misaligned with archive criteria. The source describes historical COVID-19 fiscal programs with no relevance to current macro catalysts or market structure. Auto-reject is appropriate.",
+  "human_review_reason": "Clear reject case: informational page with no market relevance, no publication date, no valid event type, and no archival value for finance research",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This Treasury Department webpage provides a high-level overview of COVID-19 economic relief programs including Economic Impact Payments, Unemployment Compensation, Child Tax Credit expansions, and Emergency Rental Assistance. These programs were part of the American Rescue Plan and earlier COVID relief legislation from 2020-2021. The page is informational and does not contain current market-moving data, policy decisions, or forward-looking guidance.",
-    "why_it_matters": "This page is not relevant for a finance research archive focused on market structure or macro catalysts. It is a historical informational page describing COVID-19 fiscal relief programs from 2020-2021, with no current policy announcements, economic data releases, or market-moving information."
+    "summary": "This page describes four COVID-19 related fiscal assistance programs administered by the Treasury Department: Economic Impact Payments (direct relief sent in three rounds), Unemployment Compensation (extended via American Rescue Plan), an expanded Child Tax Credit, and Emergency Rental Assistance. The content is informational and describes historical programs from 2020-2021 rather than providing current market-relevant analysis or policy announcements.",
+    "why_it_matters": "This source provides no current market-relevant information. It describes historical COVID-era fiscal stimulus programs that have already concluded. There is no discussion of macro implications, market impact, or policy path forward. Not useful for real-time or forward-looking financial analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

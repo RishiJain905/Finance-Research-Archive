@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "URL is empty - source cannot be verified or retrieved",
+    "published_at is empty - no publication date visible in source text",
+    "Source is an informational program description page, not a specific event, announcement, or research document",
+    "event_type 'market_notice' is incorrect - this is a program overview page, not a market notice itself",
+    "Last key_point references a March 12, 2026 statement about April 3, 2026 operations, but the statement content is not included in the source body",
+    "market_structure_context contains 'временный' (Russian text artifact) suggesting encoding or generation error",
+    "Source lacks quantitative details, specific loan amounts, rates, or participation levels",
+    "Source functions as a navigation portal with links to data rather than an archiveable document"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Critical source attribution missing (empty URL) prevents verification. Source is a thin informational landing page about an ongoing program rather than a specific event or document with archival value. Event type is misclassified. Source metadata indicates it is a crawl/seed page with no specific publication date, making age assessment impossible.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Federal Reserve Bank of New York operates a securities lending program authorized by the FOMC, lending Treasury and agency debt securities from the SOMA portfolio to primary dealers via daily competitive bidding auctions at noon. The program is voluntary for primary dealers and promotes smooth clearing of Treasury and agency securities in support of monetary policy implementation.",
+    "why_it_matters": "The NY Fed's securities lending program is a key component of Treasury market plumbing, allowing dealers to source securities for delivery obligations while ensuring market liquidity and efficient settlement. This supports the smooth functioning of the $25+ trillion Treasury market, which is foundational to broader financial markets and monetary policy transmission.",
+    "macro_context": "",
+    "market_structure_context": "The securities lending program is part of the NY Fed's market operations infrastructure. It provides temporary access to Treasuries from the SOMA portfolio, supporting repo and settlement markets. The daily noon auction and public release of results provide transparency into dealer demand for securities."
+  }
+}

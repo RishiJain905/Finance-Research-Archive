@@ -1,18 +1,18 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "event_type 'research_paper' is misleading - the source is a press release announcing a staff report, not the report itself. Should be 'economic_commentary' or 'blog_post'.",
-    "source_type in record is listed as 'blog_post' which is acceptable but the source is more precisely a press release announcing research.",
-    "The summary correctly describes the MBR proposal but overstates the record's nature by implying it IS the research paper rather than an announcement of it."
+    "event_type 'research_paper' is technically incorrect for this source - the source is a press release/news announcement about a research paper, not the paper itself. 'blog_post' or 'economic_commentary' would be more accurate for this specific source.",
+    "The 'why_it_matters' field references 'Reserve Primary Fund breaking the buck' (2008) and 'SEC reforms (2014, 2016)' - these specific historical references are not mentioned in the source text and appear to be LLM-added context beyond what the source provides.",
+    "Record correctly notes the 2012 age but treats this as archival context appropriately."
   ],
   "human_review_required": false,
-  "human_review_reason": "Minor classification issue - the content is accurate and the record has clear archival value as early MMF reform thinking from 2012. The event_type could be refined but the record is functionally correct.",
+  "human_review_reason": "Minor issues - event_type classification is debatable but not egregious, and the 'why_it_matters' additions are reasonable historical context even if not verbatim from source. Record is substantively accurate and has clear archival value for MMF reform history.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Federal Reserve Bank of New York released a 2012 staff report proposing a 'minimum balance at risk' (MBR) mechanism for money market mutual funds to reduce systemic risk and prevent investor runs. The MBR would delay redemption of a small portion of shares for 30 days during fund stress, creating a disincentive to flee and distributing losses more equitably among investors. Note: This record summarizes an announcement of a staff report - the report itself would be the 'research_paper'.",
-    "why_it_matters": "This 2012 research proposal represents early regulatory thinking on addressing money market fund vulnerability, a topic that subsequently led to SEC reforms (2014, 2016) and further changes post-2023. The MBR concept introduced a market structure solution to first-mover advantage problems in MMFs that continue to be relevant for systemic risk discussions. The proposal itself was not adopted in this form but influenced the policy discourse.",
+    "summary": "",
+    "why_it_matters": "The source text states President Dudley endorsed the proposal, saying 'further reform of money funds is essential for our nation's financial stability.' While the source itself does not reference the 2008 crisis or later SEC reforms, the MBR concept discussed here is foundational to thinking about MMF run dynamics and reform proposals. This historical document should be treated as an authoritative source on early Federal Reserve thinking about MMF structural reform.",
     "macro_context": "",
-    "market_structure_context": "The paper addresses money market fund market structure, specifically the first-mover advantage problem that enabled runs during the 2008 financial crisis. The MBR proposal represents a structural intervention to change redemption incentives at the fund level. This proposal pre-dated the actual SEC reforms that were implemented."
+    "market_structure_context": "This report directly addresses market structure: money market fund architecture, redemption mechanics, run dynamics, and systemic risk transmission through fire sales. It proposes modifying the fundamental contractual terms of MMF redemptions to change investor behavior during stress. The 'first-mover advantage' problem described (investors fleeing a troubled fund first to get 100 cents on the dollar) is a core market structure issue addressed by the MBR proposal."
   }
 }

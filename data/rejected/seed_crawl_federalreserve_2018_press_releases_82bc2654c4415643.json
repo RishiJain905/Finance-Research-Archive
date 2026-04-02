@@ -1,62 +1,54 @@
 {
   "id": "seed_crawl_federalreserve_2018_press_releases_82bc2654c4415643",
-  "created_at": "2026-03-31T13:36:53.805813+00:00",
+  "created_at": "2026-03-31T18:31:58.863612+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2018 Press Releases",
   "source": {
-    "name": "Board of Governors of the Federal Reserve System",
+    "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2018-press.htm",
-    "published_at": "2018-01-01",
-    "source_type": "listing_page",
-    "domain": "www.federalreserve.gov"
+    "domain": "www.federalreserve.gov",
+    "published_at": "2018-12-28",
+    "source_type": "listing_page"
   },
-  "summary": "This is a listing page containing approximately 50+ individual Federal Reserve press releases from calendar year 2018, including FOMC statements, minutes, regulatory actions, enforcement actions, and banking application approvals. The page is historical (2018) and mixes macro-relevant items (FOMC decisions, projections) with non-macro content (enforcement actions, community development announcements). Individual press releases should be accessed separately for detailed analysis.",
+  "summary": "This source is a chronological listing/index page of Federal Reserve press releases from throughout 2018. It contains links to dozens of distinct announcements spanning multiple categories including monetary policy, banking regulation, enforcement actions, and administrative matters. As a navigation index rather than a specific document, it cannot be meaningfully archived as a single research note.",
   "key_points": [
-    "This is a listing page (listing_page type), not an individual archiveable document per CORE RULE 6.",
-    "The page contains 2018 FOMC statements (12/19/2018, 11/8/2018) and FOMC minutes (11/29/2018, 10/23/2018) which are macro catalyst items.",
-    "Economic projections from the December 18-19, 2018 FOMC meeting were released 12/19/2018.",
-    "Source is 8+ years old relative to TODAY (2026-03-31), making it a historical record with stale relevance for current macro catalysts.",
-    "Most items on the page are regulatory/enforcement content (Volcker rule proposals, CECL accounting, enforcement actions, banking applications) not relevant to macro catalysts.",
-    "Individual press releases must be extracted and accessed separately for proper archival and analysis."
+    "This is a listing page, not a single sourceable document—individual releases must be accessed via their specific URLs",
+    "The page contains releases from throughout 2018 (January through December), making the published_at date ambiguous",
+    "Releases span multiple categories: monetary policy statements, banking regulation, enforcement actions, application approvals, and administrative announcements",
+    "Notable 2018 items include: multiple FOMC statements, FOMC minutes, discount rate meeting minutes, stress test framework announcements, Volcker rule proposals, and enforcement actions against Société Générale ($81.3M)",
+    "The Federal Reserve announced plans in November 2018 to publish a semiannual financial stability assessment report",
+    "The page also includes non-monetary items such as the College Fed Challenge winners and the Janet L. Yellen Award announcement"
   ],
-  "why_it_matters": "This listing page aggregates Federal Reserve communications from 2018 but is not itself a research-ready source. Analysts seeking macro catalyst information should access individual FOMC statements, minutes, and economic projections directly rather than relying on this index page.",
+  "why_it_matters": "This index page serves as a navigation tool to access individual 2018 Fed communications but itself contains no substantive research content. Researchers seeking specific Fed documents from 2018 must retrieve individual press releases rather than this index. The content is approximately 8 years old and historical in nature.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The listing includes several macro-relevant items from 2018: December FOMC statement raising rates to 2.25-2.50%, November FOMC statement, associated minutes, and December economic projections (SEP/dot plot). However, these items are not analyzable from this listing page and require direct access to individual press releases.",
-  "market_structure_context": "Some items relate to banking regulation (Volcker rule proposals, CECL accounting standard phase-in, supervisory stress test framework) which could affect market structure, but this listing page does not provide the detail needed for analysis.",
+  "macro_context": "",
+  "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "listing-page",
-    "2018",
-    "historical",
-    "fomc",
     "press-releases",
-    "macro-catalysts"
+    "2018",
+    "index",
+    "listing-page",
+    "non-archivable"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page per explicit metadata classification - per CORE RULE 6, listing pages must be rejected",
-      "Source is over 7 years old (2018) relative to TODAY (2026-03-31), making it stale for current macro catalyst analysis",
-      "Mixed content: many items (enforcement actions, banking applications, CRA announcements) are not macro catalyst relevant",
-      "Listing page provides no substantive content to archive - individual press releases must be accessed separately",
-      "Cannot assess market impact, directional bias, or detailed macro context from an index page",
-      "event_type set to 'unknown' which is technically correct for listing pages but indicates this should not be archived as a record"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "non-archivable",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2018_press_releases_82bc2654c4415643.txt",
-  "notes": "NON-ARCHIVABLE AS SINGLE RECORD: This is a listing page (listing_page source_type) containing ~50+ press releases from 2018. Per CORE RULE 6, listing pages should not be treated as archiveable documents. Individual press releases (FOMC statements, minutes, regulatory proposals) should be extracted separately for proper archival. The source is stale (2018 vs 2026) and contains mixed content (enforcement actions, banking applications, CRA announcements, etc. alongside macro-relevant items). Domain trust is high (federalreserve.gov) but the listing page format limits research utility."
+  "notes": "Non-archivable listing page. Contains index of 2018 Federal Reserve press releases but is not itself a sourceable document. Historical record (2018 vintage). Recommend accessing individual press release URLs for substantive content."
 }

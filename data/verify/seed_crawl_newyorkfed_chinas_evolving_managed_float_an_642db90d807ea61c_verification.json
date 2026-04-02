@@ -2,17 +2,17 @@
   "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Published November 2017 - approximately 8.4 years old as of TODAY (March 2026), making it a historical document rather than current research",
-    "Source excerpt contains only abstract/metadata, not full paper content - cannot verify quantitative findings, statistical results, or detailed methodology",
-    "Specific findings pertain to regime behavior circa 2016-2017 and may not reflect current Chinese FX management practices"
+    "Source body contains only abstract/summary content, not full paper text - limited source depth but standard for institutional research papers",
+    "No specific quantitative findings in source body (e.g., volatility figures, intervention amounts) - important_numbers field appropriately empty",
+    "Source age is 8+ years (published November 2017) - may have reduced relevance for near-term market analysis but has archival value as historical policy research"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The record is well-constructed and accurately reflects the source abstract. However, the paper's age (8+ years) raises questions about whether its findings remain relevant to current Chinese currency regime dynamics. Additionally, since only the abstract was available in the crawl, key quantitative findings could not be independently verified. Human review is needed to assess archival value for a historical research document versus more current market structure research.",
+  "human_review_required": false,
+  "human_review_reason": "Record is mostly accurate and well-structured; human review not strictly required as the issues are minor and the source is from a high-trust domain (NY Fed). The abstract-only source content is expected for institutional research papers available only in PDF.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "Understanding how China's managed float operates is critical for FX traders, multinational corporations, and policymakers. The research documents the transition from a dollar-peg-like regime to a more nuanced basket-based system, showing that the CNY exhibits mixed characteristics of both managed and free-floating currencies. This has implications for dollar dynamics, carry trades, and the transmission of U.S. monetary policy through currency channels. Note: Specific regime behavior documented pertains to 2016-2017 period and may have evolved since publication.",
-    "macro_context": "",
-    "market_structure_context": "This paper analyzes the operational mechanics of China's currency fixing mechanism, the role of the daily fix as a reference point for onshore trading, the impact of intervention intensity on price discovery, and the relationship between the CNY/USD rate and broader dollar indices including the CFETS basket. It examines the microstructure of a major currency market. Note: Findings reflect Chinese FX regime behavior circa 2016-2017; current regime mechanics may differ."
+    "why_it_matters": "This research illuminates the mechanics of China's managed exchange rate regime and how it has evolved since the 2016 reform. Understanding these dynamics is valuable for forex traders, multinational corporations with CNY exposure, and policymakers assessing currency intervention patterns. The finding that CNY behavior increasingly resembles floating currencies while retaining low volatility suggests the PBOC achieved a hybrid equilibrium—useful historical context for understanding subsequent CNY policy.",
+    "macro_context": "China reformed its CNY fixing mechanism in early 2016, moving away from pure dollar-peg management toward a more flexible regime referencing the CFETS basket. This research from late 2017 provides early empirical analysis of how this new regime functioned during its first ~1.5 years, capturing the transition period before intervention intensity declined further.",
+    "market_structure_context": "This paper directly addresses market structure by examining China's managed float regime operational mechanics: the fix-setting mechanism (set prior to onshore trading onset), intervention intensity dynamics, and how CNY/USD behavior compares to freely floating currencies. Key structural features analyzed include the relationship between fix, onshore trading session rates, and closing values; the role of the CFETS basket index as the authorities' reference; and the evolving intervention patterns over 2016-2017."
   }
 }

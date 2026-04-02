@@ -1,53 +1,60 @@
 {
-  "id": "ecb_monetary_policy_decisions_nav_page_2026_03_19",
-  "created_at": "2026-03-28T02:26:23.516865+00:00",
+  "id": "ecb_monetary_policy_decisions_monetary_policy_decisions_46cd68ce",
+  "created_at": "2026-03-31T17:06:25.982210+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
-  "title": "Monetary policy decisions - ECB Navigation Page",
+  "title": "Monetary policy decisions",
   "source": {
-    "name": "European Central Bank",
+    "name": "ECB Monetary Policy Decisions",
     "url": "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.bg.html",
+    "domain": "www.ecb.europa.eu",
     "published_at": "unknown",
-    "source_type": "website_navigation"
+    "source_type": "navigation_page"
   },
-  "summary": "This source is an ECB website navigation/menu page for monetary policy decisions, not the actual policy decision content. The page lists available sections including press releases, statements, and Q&A transcripts, but contains no specific monetary policy decisions, interest rate changes, or policy actions. A reference date of March 19, 2026 appears in the source, suggesting future meeting content, but no substantive policy information is provided.",
+  "summary": "This source is the ECB's Bulgarian-language navigation/index page for monetary policy decisions, not an actual policy decision document. It contains links to monetary policy strategy, tools, asset purchase programs, and references a press conference dated March 19, 2026, but does not contain the actual decision content, rate statements, or policy guidance.",
   "key_points": [
-    "This is a navigation page structure, not actual monetary policy decision content",
-    "No specific interest rate decisions, QE announcements, or policy changes are stated",
-    "References indicate ECB publishes decisions at 14:15 CET on Governing Council meeting days",
-    "Page lists various monetary policy tools (TLTRO, asset purchase programs) without specific current decisions",
-    "Bulgaria eurozone accession in 2026 mentioned as context",
-    "Source is primarily site navigation architecture rather than policy documentation"
+    "Page is a navigation hub listing ECB monetary policy sections (strategy, tools, asset purchase programs, press conferences)",
+    "References a monetary policy press conference dated March 19, 2026",
+    "Page is in Bulgarian language (index.bg.html)",
+    "Contains links to TLTRO operations, APP programs, emergency pandemic purchase program (PEPP)",
+    "No actual rate decision, statement text, or forward guidance is present in this source",
+    "Source is a structural index page, not a policy document"
   ],
-  "why_it_matters": "This source cannot be used for market research or macro catalyst analysis as it contains no actual monetary policy decisions. It only provides access points to policy content that must be retrieved separately from linked pages or press releases.",
+  "why_it_matters": "This page serves as an entry point to ECB monetary policy information but contains no actionable policy content. Researchers seeking ECB rate decisions or policy statements should navigate to specific decision pages or press releases rather than this index.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "ECB monetary policy is a primary macro catalyst for eurozone markets. However, this source provides no specific policy content to analyze for macro impact.",
+  "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "ecb",
-    "monetary_policy",
+    "monetary-policy",
     "eurozone",
-    "no_content",
-    "navigation_page",
-    "governing_council"
+    "navigation-page",
+    "no-decision-content"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
-    "verdict": "accept",
-    "issues_found": []
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation/index page (source_type correctly identified as 'navigation_page')",
+      "No actual rate decision, statement text, or policy guidance is present in this source",
+      "Page contains only links to monetary policy sections, no substantive decision content",
+      "Published_at is unknown; page references March 19, 2026 press conference but does not contain that decision",
+      "Published_at is more than 90 days before TODAY but has no archival value as this is a container page",
+      "event_type set to 'unknown' which is correct given the source has no policy event content"
+    ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "missing_raw_navigation_record"
+    "notes": "container_page"
   },
-  "raw_text_path": "data/raw/ecb_monetary_policy_decisions_nav_page_2026_03_19.txt",
-  "notes": "LOW QUALITY SOURCE - This is a website navigation/menu page that does not contain actual monetary policy decisions. To extract meaningful macro catalyst information, the actual press release or policy statement pages (referenced as linked content) would need to be retrieved. The source structure indicates decisions are published at 14:15 CET on Governing Council meeting days, but no specific decisions are visible in this content. Consider this a placeholder requiring the actual policy document."
+  "raw_text_path": "data/raw/ecb_monetary_policy_decisions_monetary_policy_decisions_46cd68ce.txt",
+  "notes": "The page is a structural index listing ECB monetary policy resources. It references the most recent press conference as March 19, 2026, but does not contain the actual decision content. This source should not be archived as a policy decision; instead, the specific decision page (e.g., the March 2026 ECB rate decision press release) should be used."
 }

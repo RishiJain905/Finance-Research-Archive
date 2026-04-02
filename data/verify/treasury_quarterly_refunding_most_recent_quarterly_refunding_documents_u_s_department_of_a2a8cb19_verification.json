@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (index/navigation hub) with no actual quarterly refunding document content",
+    "Source body contains only website navigation elements, menu structures, and recent press release links",
+    "event_type 'treasury_issuance' is factually misleading - the source contains no issuance data, auction details, or borrowing strategies",
+    "published_at date is missing, preventing staleness assessment",
+    "Per CORE RULE 5 and 6, listing_page sources must be rejected as non-archiveable",
+    "The record's summary correctly identifies this as a navigation page but the event_type assignment is incorrect given the lack of actual content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is unambiguously a listing/navigation page with no substantive Treasury issuance content. No judgment call needed - this violates CORE RULE 5 (listing_page rejection) and CORE RULE 6 (container pages bias toward reject). The generated record itself acknowledges this is a 'listing_page' and 'no-content' source.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

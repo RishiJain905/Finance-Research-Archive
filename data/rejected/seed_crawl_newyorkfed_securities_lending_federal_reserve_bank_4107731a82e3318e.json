@@ -1,0 +1,68 @@
+{
+  "id": "seed_crawl_newyorkfed_securities_lending_federal_reserve_bank_4107731a82e3318e",
+  "created_at": "2026-03-31T19:24:16.586937+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "Securities Lending - Federal Reserve Bank of New York",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "",
+    "domain": "newyorkfed.org",
+    "published_at": "",
+    "source_type": "crawl"
+  },
+  "summary": "The Federal Reserve Bank of New York operates a securities lending program authorized by the FOMC, lending Treasury and agency debt securities from the SOMA portfolio to primary dealers via daily competitive bidding auctions at noon. The program is voluntary for primary dealers and promotes smooth clearing of Treasury and agency securities in support of monetary policy implementation.",
+  "key_points": [
+    "NY Fed lends Treasury and agency debt securities from the SOMA portfolio to primary dealers on a temporary basis",
+    "Loans are awarded through competitive bidding in a multiple price auction held each business day at noon",
+    "Participation by primary dealers is entirely voluntary",
+    "The program promotes smooth clearing of Treasury and agency debt securities",
+    "Summary results are released publicly following each day's auction",
+    "Transaction data is published quarterly, approximately two years after the transaction, per Dodd-Frank Act requirements",
+    "A statement regarding Open Market Desk Operations on Friday, April 3, 2026 was issued on March 12, 2026"
+  ],
+  "why_it_matters": "The NY Fed's securities lending program is a key component of Treasury market plumbing, allowing dealers to source securities for delivery obligations while ensuring market liquidity and efficient settlement. This supports the smooth functioning of the $25+ trillion Treasury market, which is foundational to broader financial markets and monetary policy transmission.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The securities lending program is part of the NY Fed's market operations infrastructure. It provides temporary access to Treasuries from the SOMA portfolio, supporting repo and settlement markets. The daily noon auction and public release of results provide transparency into dealer demand for securities.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "securities-lending",
+    "soma",
+    "primary-dealers",
+    "treasury-market",
+    "market-structure",
+    "fomc",
+    "open-market-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "URL is empty - source cannot be verified or retrieved",
+      "published_at is empty - no publication date visible in source text",
+      "Source is an informational program description page, not a specific event, announcement, or research document",
+      "event_type 'market_notice' is incorrect - this is a program overview page, not a market notice itself",
+      "Last key_point references a March 12, 2026 statement about April 3, 2026 operations, but the statement content is not included in the source body",
+      "market_structure_context contains 'временный' (Russian text artifact) suggesting encoding or generation error",
+      "Source lacks quantitative details, specific loan amounts, rates, or participation levels",
+      "Source functions as a navigation portal with links to data rather than an archiveable document"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_securities_lending_federal_reserve_bank_4107731a82e3318e.txt",
+  "notes": "This source is a descriptive informational page about the NY Fed's ongoing securities lending program rather than a specific event or data release. While it describes market structure-relevant operations, the content is high-level and lacks specific quantitative details or recent actionable information. The mention of an April 3, 2026 operations statement (dated March 12, 2026) suggests there may be more recent specific notices available that would be more archive-worthy. This page functions more as a portal to program information than an archiveable document itself."
+}

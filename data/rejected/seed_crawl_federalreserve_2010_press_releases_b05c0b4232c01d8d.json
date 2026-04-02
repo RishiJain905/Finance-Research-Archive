@@ -1,0 +1,63 @@
+{
+  "id": "seed_crawl_federalreserve_2010_press_releases_b05c0b4232c01d8d",
+  "created_at": "2026-03-31T18:24:06.252470+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2010 Press Releases",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2010all.htm",
+    "published_at": "2010-01-01 to 2010-12-31",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This source is a Federal Reserve website listing page containing all press releases from calendar year 2010, organized chronologically. The page is not a single archiveable document but rather a navigation index pointing to dozens of individual announcements including FOMC statements, enforcement actions, regulatory proposals, and other Fed communications. As a listing page, it is non-archiveable as a standalone document. Individual items referenced would need to be retrieved separately for substantive analysis.",
+  "key_points": [
+    "Listing page for Federal Reserve press releases from January through December 2010.",
+    "Contains references to multiple FOMC statements (dates: 12/14/2010, 11/3/2010) and associated minutes releases.",
+    "References 12/21/2010 joint central bank announcement on extending temporary U.S. dollar liquidity swap facilities.",
+    "Includes various enforcement actions against banking organizations throughout 2010.",
+    "Contains references to regulatory proposals including debit card interchange fee standards and Volcker Rule implementation.",
+    "Not a standalone document; actual content exists only in linked individual press releases."
+  ],
+  "why_it_matters": "This listing page has no standalone research value. It serves only as a navigation index. Any macro-catalyst or market-structure relevant content would require accessing the individual press releases directly. The 2010 date makes this an historical record of post-financial-crisis Federal Reserve operations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The page references several macro-relevant events from 2010 including FOMC policy statements and the extension of central bank liquidity swap facilities, but the listing format provides no substantive details on these items.",
+  "market_structure_context": "The listing includes references to enforcement actions, regulatory proposals (including Volcker Rule and Basel II Advanced Approaches), and the Term Deposit Facility, but provides no specific details due to its listing-page nature.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "listing-page",
+    "2010",
+    "historical",
+    "fomc",
+    "enforcement-actions",
+    "regulatory",
+    "not-archiveable"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per source_type metadata — explicitly non-archiveable per rule 6",
+      "No standalone archival value; provides only navigation index to individual press releases",
+      "Source name field contains 'macro catalysts' instead of 'Federal Reserve' — field misconfiguration",
+      "Published date is a range (2010-01-01 to 2010-12-31), not a specific date",
+      "No substantive content can be extracted from this listing page for market or macro analysis",
+      "event_type 'unknown' is correct for a listing page, but this page itself has no event to classify"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2010_press_releases_b05c0b4232c01d8d.txt",
+  "notes": "Source is a Federal Reserve press release index for calendar year 2010. CLASSIFIED AS NON-ARCHIVEABLE per rule 6: listing_page types should not be archived as standalone documents. Individual FOMC statements, rate decisions, and other macro-relevant announcements from 2010 exist as separate documents that should be retrieved and archived individually. Source.name field contains 'macro catalysts' which appears to be erroneous; corrected to 'Federal Reserve' in output. Confidence very low (2) because this is a navigation index providing no substantive information."
+}

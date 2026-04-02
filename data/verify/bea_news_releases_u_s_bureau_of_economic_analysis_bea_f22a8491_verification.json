@@ -2,19 +2,21 @@
   "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/index page with no substantive content beyond release titles and publication dates",
-    "Content word count is only 183 words, providing no actual macro catalyst data, figures, or analysis",
-    "Archive value is minimal - each listed release would constitute a more valuable separate record with actual economic data",
-    "Source does not provide market-moving information; only temporal reference points for releases",
-    "Rules specify listing pages should not be accepted"
+    "PAGE_TYPE mismatch: metadata claims 'data_release' but content is a listing/index page showing release titles and dates, not actual economic data",
+    "Source contains no actual data values: only release titles and publication dates (170 word count, all navigation/listing content)",
+    "event_type 'data_release_gdp' is misleading: source does not contain GDP data, only indicates a GDP release exists elsewhere",
+    "market_impact.asset_classes lists 'bonds, equities, fx' but directional_bias is 'unknown' and confidence is 0 — no substantive market analysis possible from this thin source",
+    "why_it_matters states this page 'feeds into Fed policy decisions' but the source itself provides no numbers to support such claims",
+    "CORE RULE 6 violation: thin low-signal source with no actual data content lacks archival value for research or RAG purposes",
+    "Record correctly identifies the source as an 'index page' but the classification and event_type do not reflect this"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately identifies the source as a thin index page with no substantive data. No human review needed as the rejection is straightforward.",
+  "human_review_reason": "Source classification issues are clear-cut; no subjective judgment needed",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "The BEA current releases index page lists recent U.S. economic data publications by title and date, including Q4 2025 GDP (Second Estimate), Personal Income and Outlays for January 2026, and U.S. International Trade for January 2026. This is a navigation index page with no actual data figures — only release titles and publication dates.",
+    "why_it_matters": "This index page provides no substantive economic data. For actionable macro catalyst content, specific individual BEA release pages containing actual data values must be sourced directly rather than relying on this listing page.",
+    "macro_context": "The listed releases reference three major macro series (GDP, Personal Income and Outlays, International Trade) but the source itself contains no actual figures, making it impossible to assess economic conditions from this page alone.",
     "market_structure_context": ""
   }
 }

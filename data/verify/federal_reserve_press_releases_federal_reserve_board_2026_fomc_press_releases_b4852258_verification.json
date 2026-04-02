@@ -1,14 +1,21 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an index/listing page, not the actual FOMC statements - event_type 'fomc_statement' is incorrect classification",
+    "No policy decisions, rate changes, vote tallies, or forward guidance present",
+    "No actual statement text reproduced - only titles and dates of linked documents",
+    "Content is extremely thin (218 words) - mostly navigation and boilerplate",
+    "Rule 5 violation: source functions as a listing page despite PAGE_TYPE metadata claiming 'press_release'",
+    "Low archival value - the actual policy content must be accessed via separate documents"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately identifies the source's limitations (index page with no actual policy content), but the source itself fails verification standards. Even though the record correctly notes this is a listing page, the source cannot produce a meaningful research record for macro catalyst analysis. The actual FOMC statements and projections referenced (dated 3/18/2026 and 1/28/2026) would need to be scraped from their individual pages to create archival-worthy records.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "This Federal Reserve webpage is an index listing 2026 FOMC press releases. It references FOMC statements issued on March 18, 2026 and January 28, 2026, along with economic projections released March 18, 2026 from the March 17-18 FOMC meeting. However, the actual statement text and policy decisions are not included in this source—only links to those documents.",
+    "why_it_matters": "This source serves as an index to Federal Reserve policy communications but does not contain the actual policy content. Researchers seeking the specific rate decisions, statement language, or economic projections will need to access the linked documents directly. The index confirms that notable FOMC events occurred on the listed dates but provides no substantive policy details.",
+    "macro_context": "The source confirms FOMC activity in early 2026 (January and March statements) but provides no details on policy decisions or economic assessments that would inform macro outlook.",
     "market_structure_context": ""
   }
 }

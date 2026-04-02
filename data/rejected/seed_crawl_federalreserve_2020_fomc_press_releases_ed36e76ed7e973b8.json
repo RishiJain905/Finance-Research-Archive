@@ -1,60 +1,72 @@
 {
   "id": "seed_crawl_federalreserve_2020_fomc_press_releases_ed36e76ed7e973b8",
-  "created_at": "2026-03-31T13:33:28.990142+00:00",
+  "created_at": "2026-03-31T18:33:22.314380+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "fomc_statement",
   "title": "2020 FOMC Press Releases",
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2020-press-fomc.htm",
-    "domain": "www.federalreserve.gov",
-    "published_at": "",
-    "source_type": "listing_page"
+    "published_at": "2020-01-29",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This is a navigation index page listing 14 FOMC statements from 2020. It contains only dates, titles, and category tags for each press release—no substantive policy content, decisions, or statements. The actual individual statements are separate documents not included here.",
+  "summary": "This Federal Reserve page is an index listing all 13 FOMC statements and projection releases from 2020. The page does not contain the substantive text of individual statements; it only provides dates and titles with links. Individual FOMC statement pages must be crawled separately for archiveable content.",
   "key_points": [
-    "Page is an index listing 14 FOMC statements from throughout 2020 (Jan 29 through Dec 16)",
-    "Includes dates, titles, and 'Monetary Policy' category tags for each release",
-    "Six meetings included economic projections in addition to statements",
-    "Actual statement text, decisions, and forward guidance are not present in this source",
-    "Last update date shown is February 26, 2026"
+    "The page indexes 13 FOMC events from 2020: 11 statements, 3 projection releases (June, September, December)",
+    "Emergency FOMC statements were issued on 3/3/2020, 3/15/2020, and 3/23/2020 during the initial COVID-19 crisis",
+    "Key rate action period was March 2020 with two emergency cuts preceding the scheduled March 17-18 meeting",
+    "Regular scheduled statements issued approximately every 6 weeks per FOMC calendar",
+    "Last Update on the page is February 26, 2026 indicating the index is maintained but content is historical",
+    "Individual statement content not present in this source—full text requires navigating to separate press release pages"
   ],
-  "why_it_matters": "This source provides no archiveable policy content. It is a directory page to individual FOMC statements that would need to be fetched separately. The historical 2020 FOMC actions are highly significant (emergency rate cuts, QE programs during COVID), but this page does not contain them.",
+  "why_it_matters": "This listing page is not itself archiveable. Researchers must access individual FOMC statement pages to retrieve the actual policy content (rate decisions, forward guidance, balance sheet details). The 2020 FOMC statements contain critical macro catalyst information including emergency rate cuts and QE programs.",
   "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "",
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "",
-  "important_numbers": [],
+  "macro_context": "2020 FOMC decisions were the primary macro catalysts for global markets that year. The Fed's emergency response to COVID-19—rate cuts, QE expansion, repo operations, and forward guidance changes—directly shaped market structure and risk-asset behavior throughout the year. The actual statements from March 2020 are particularly significant for understanding the Fed's crisis response framework.",
+  "market_structure_context": "This source does not contain market structure information. The 2020 FOMC statements did reference changes to Fed operations, balance sheet expansion, and the introduction of new lending facilities affecting repo markets and money markets, but that content is not present here.",
+  "important_numbers": [
+    "13 FOMC events in 2020",
+    "11 FOMC statements",
+    "3 projection releases"
+  ],
   "tags": [
     "fomc",
-    "listing-page",
-    "no-content",
-    "historical",
+    "federal-reserve",
     "2020",
-    "federal-reserve"
+    "macro-catalysts",
+    "rate-decisions",
+    "covid-response",
+    "listing-page",
+    "historical"
   ],
   "llm_review": {
     "initial_confidence": 2,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page (per source metadata and DOMAIN_TRUST_TIER designation), which Core Rule 5 explicitly requires rejecting",
-      "No substantive content—only dates, titles, and category tags for 14 separate documents",
-      "Cannot fulfill archival purpose as a standalone record; individual FOMC statements not included",
-      "event_type correctly set to 'unknown' but the record has no meaningful event to categorize",
-      "published_at is blank—no publication date applies to an index page",
-      "No rate decisions, forward guidance, or policy content present"
+      "Source is a listing_page per source metadata; Rule 5 mandates rejection for listing_page type",
+      "Source contains only dates and titles of FOMC releases, no substantive statement text",
+      "event_type set to 'fomc_statement' is misleading—source contains no FOMC statement content",
+      "Published_at (2020-01-29) incorrectly reflects earliest listed date rather than source publication date",
+      "No specific policy decisions, vote counts, or forward guidance can be extracted from this index",
+      "No archival value as substantive content—only navigation metadata"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
+    "decision": "reject",
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2020_fomc_press_releases_ed36e76ed7e973b8.txt",
-  "notes": "Source is a non-archiveable navigation index. The individual 2020 FOMC statements (particularly March 3, March 15, March 23, and December 16) contain the actual policy decisions from the COVID emergency response period and would be relevant archive material if fetched separately."
+  "notes": "Non-archiveable listing page. The Federal Reserve maintains this as an index to their 2020 FOMC statements. Each listed item (e.g., '12/16/2020 Federal Reserve issues FOMC statement') links to a separate page with the actual statement text. For a proper research archive, individual FOMC statement pages should be crawled separately. Historical record (2020) with TODAY being 2026-03-31—over 5 years old, but 2020 FOMC decisions remain historically significant for understanding Fed crisis response framework."
 }

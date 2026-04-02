@@ -1,9 +1,9 @@
 {
   "id": "seed_crawl_newyorkfed_revised_staff_reports_federal_reserve_6e9774a6fb8fbd5d",
-  "created_at": "2026-03-31T09:19:31.121466+00:00",
+  "created_at": "2026-03-31T19:22:36.452553+00:00",
   "status": "rejected",
   "topic": "market structure",
-  "event_type": "research_paper",
+  "event_type": "unknown",
   "title": "Revised Staff Reports - Federal Reserve Bank of New York",
   "source": {
     "name": "Federal Reserve Bank of New York",
@@ -12,46 +12,40 @@
     "source_type": "listing_page",
     "domain": "www.newyorkfed.org"
   },
-  "summary": "This page is an index/catalog of revised staff reports from the Federal Reserve Bank of New York, listing titles, authors, original release dates, and revision dates (spanning 2006-2017). It does not contain full text of any individual report, key findings, or actionable data. The page itself has no publication date.",
+  "summary": "This page is a catalog/index listing of revised staff reports from the New York Fed, organized by revision year (2006-2016), containing titles and metadata for approximately 50 research papers but no full-text content. The page is not a standalone archiveable document but rather a navigation interface to individual papers.",
   "key_points": [
-    "This is a listing/index page, not an individual research paper or actionable market document",
-    "Papers were revised across multiple years (2006-2017 revision dates), making the content historical",
-    "Market-structure-relevant papers include: 'Market Liquidity after the Financial Crisis' (No. 796), 'Dealer Balance Sheets and Bond Liquidity Provision' (No. 803), 'The Microstructure of a U.S. Treasury ECN: The BrokerTec Platform' (No. 381), and 'The Use of Collateral in Bilateral Repurchase and Securities Lending Agreements' (No. 758)",
-    "The actual full-text content of individual reports is not provided in this source",
-    "No publication date is provided for the page itself; revision dates for listed papers range from 2006 to 2017",
-    "Source is not actionable for real-time market analysis as it is a historical archive index"
+    "Page is a listing/catalog of New York Fed Staff Reports revised between 2006 and 2016",
+    "Contains approximately 50 paper titles with authors, original release dates, report numbers, and revision dates",
+    "Several papers have market structure relevance: repo market (758), dealer balance sheets (803), Treasury ECN microstructure (381), money market funds (753), and bond liquidity (796)",
+    "No actual research content or findings are included on this page—only metadata and titles",
+    "The page links to individual reports which are not accessible within this source body"
   ],
-  "why_it_matters": "This catalog page has no standalone archival value. Individual research reports must be accessed separately to obtain substantive content. The listing covers market structure topics including dealer balance sheets, Treasury market microstructure, repo markets, and bond liquidity—but provides only metadata, not research.",
+  "why_it_matters": "This source is not directly actionable for market structure or macro catalysts analysis. It is a catalog page that provides access to individual research papers, none of which are contained in this source. The individual papers would need to be accessed separately for their content.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "While the catalog references market-structure-relevant papers (SR 796, SR 803, SR 758, SR 381), this source provides only bibliographic metadata. No research content, data, or analysis is present for archival.",
+  "market_structure_context": "Many of the listed papers address market structure topics (repo markets, dealer balance sheets, Treasury microstructure, money market funds, bond liquidity) but their content is not present in this source.",
   "important_numbers": [],
   "tags": [
-    "ny-fed",
+    "new-york-fed",
     "staff-reports",
-    "research-archive",
-    "market-structure",
+    "research-papers",
     "listing-page",
-    "historical",
-    "dealer-balance-sheets",
-    "treasury-microstructure",
-    "repo-market"
+    "non-archivable"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 1,
+    "initial_confidence": 1,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "PAGE_TYPE is listing_page - violates CORE RULE 6 which mandates rejection for listing pages",
-      "event_type incorrectly set to 'research_paper' - source is a catalog/index, not a research paper",
-      "No substantive research content provided - only titles, authors, and dates",
-      "No publication date for the page itself; revision dates span 2006-2017 making content historical and stale relative to TODAY (2026-03-31)",
-      "Cannot extract actionable market data, key findings, or research content from this source",
-      "Individual reports require separate retrieval - this source has no archival value on its own"
+      "Source is a listing_page/catalog, prohibited per CORE RULE 6",
+      "No full-text content present—only titles, authors, and metadata for ~50 papers",
+      "event_type set to 'unknown' but should reflect the source type is catalog-index content rather than any standard taxonomy category",
+      "Cannot assess individual paper relevance or accuracy without access to their content",
+      "Source has no archival value as a standalone document"
     ]
   },
   "human_review": {
@@ -60,5 +54,5 @@
     "notes": "container_page"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_revised_staff_reports_federal_reserve_6e9774a6fb8fbd5d.txt",
-  "notes": "Non-archiveable listing page per CORE RULE 6. The source provides an index of NY Fed staff reports revised in 2016 (with revision dates spanning 2006-2017) but does not include full-text content. For market structure research, individual reports would need to be retrieved separately. Confidence set to 2 due to listing page type and lack of actionable content. TODAY is 2026-03-31; revision dates of 2006-2017 indicate this is historical archival material."
+  "notes": "Per CORE RULE 6: listing_page source type is non-archivable. This page contains no substantive research content—it is a navigation index. The actual research reports would need to be retrieved from individual URLs. Published_at field left blank as no single publication date applies to this index page; individual papers have varying original and revision dates (e.g., SR 758 revised October 2017, SR 381 revised March 2017)."
 }

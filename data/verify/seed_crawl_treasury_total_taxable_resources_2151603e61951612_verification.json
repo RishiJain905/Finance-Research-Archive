@@ -1,16 +1,16 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/index page listing historical data files, not an article with substantive content (Rule 5 violation)",
-    "Source is not relevant to market structure or macro catalysts - TTR is an internal block grant allocation methodology with no market-moving information",
-    "event_type is set to 'unknown' which is correct since no valid taxonomy category applies to this thin navigation page",
-    "Source contains no actual data, numbers, or figures - only methodology descriptions and links to PDFs",
-    "Source is too thin and low-signal to have archival value for financial research",
-    "Most recent data referenced (09/30/2024) is approximately 18 months prior to TODAY (2026-03-31)"
+    "Source is a navigation_page per source_type field; per Rule 5, navigation pages must be rejected",
+    "Source body contains only document links and metadata with no substantive content - no analysis, data, or market-relevant information",
+    "event_type is 'unknown' when it should reflect this is a document listing/navigation page, not a research paper or commentary",
+    "Topic mismatch: metadata claims 'macro catalysts' target but content is about federal block grant allocation methodology with no market relevance",
+    "No published_at date provided in source body; cannot verify recency",
+    "Source has zero relevance to financial markets, trading, or market structure per why_it_matters field"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Record already correctly identifies the source as a navigation/listing page with no substantive content and no market relevance. Automated rejection is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

@@ -1,21 +1,20 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 1,
   "verdict": "reject",
   "issues_found": [
-    "Source is a container/landing page, not the actual report content - contains only summary statistics and navigation links",
-    "URL is blank - source cannot be verified or revisited",
-    "Lacks substantive policy analysis - only high-level summary metrics present",
-    "Archive value is too low - no actual ECB policy analysis or detailed assessment",
-    "Rule 8 violation: source is a landing page/navigation page which must not be accepted",
-    "Published_at date (2024) refers to the report year, not the page publication date"
+    "Source is a landing page/index page with no substantive article content",
+    "URL is empty, making source completely unverifiable",
+    "Summary and key_points fields are empty - no content to verify",
+    "Source contains only navigation elements and summary statistics linking to deeper content",
+    "source_type correctly identified as 'landing_page' which violates CORE RULE 5"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record itself correctly identifies this as a container/landing page with thin content. No human review needed because the issues are determinative - this is explicitly the type of page that must be rejected per verification rules.",
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "Landing/navigation page for ECB Annual Report 2024 containing only summary statistics (2.4% inflation, -100bp rate cuts to 3.00% deposit facility rate) and links to the full report. No substantive policy analysis present.",
-    "why_it_matters": "This page has no independent archive value - it is merely a navigation hub to the actual report, speech, and financial accounts. The summary statistics are verifiable but too thin to constitute a useful research record.",
-    "macro_context": "ECB cut rates 100 basis points across four meetings in 2024, reducing deposit facility rate to 3.00%, while headline inflation declined from 2.9% to 2.4%. These are summary metrics only, not substantive policy analysis.",
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
     "market_structure_context": ""
   }
 }

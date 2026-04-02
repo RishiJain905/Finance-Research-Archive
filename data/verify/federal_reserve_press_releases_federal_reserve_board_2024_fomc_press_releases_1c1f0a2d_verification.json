@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/index page per source_type field - per rule 6, listing pages should be rejected as they lack archival value",
+    "event_type incorrectly set to 'fomc_statement' when source is a listing page, not an actual FOMC statement",
+    "Source body truncated with '[TRUNCATED: source body exceeded character limit]' - actual FOMC statement text not provided",
+    "Cannot extract policy decisions, vote tallies, or forward guidance without the actual statement content",
+    "Record's own summary acknowledges 'the actual policy decisions and forward guidance language are not available in this source'",
+    "Record's notes explicitly state 'Non-archiveable listing page per rule 6' - contradicts being placed in review_queue",
+    "Published_at (2024-12-18) refers to the most recent listing update, not the publication dates of individual statements",
+    "This source alone is insufficient for research on 2024 Fed policy - only an index/listing"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this as a listing page that should be rejected per rule 6. The record's own internal notes confirm 'Non-archiveable listing page per rule 6', yet the status remains 'review_queue'. This is a clear reject case - the source contains no substantive FOMC statement content, only links to statements. Individual FOMC statements should be archived directly, not this aggregate listing.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an index page listing Federal Reserve FOMC press releases from 2024, including references to statements from September 18, November 7, and December 18, 2024. The source body is truncated and does not contain the full text of any FOMC statement. The actual policy decisions, vote tallies, and forward guidance language are not available in this source. This is a navigation/listing artifact, not a primary research source.",
+    "why_it_matters": "This source serves only as an index to 2024 Fed policy statements. It provides no substantive content for research purposes. The actual FOMC statements (policy decisions, forward guidance, vote breakdowns) must be accessed from the individual linked pages. This listing page has no independent archival value.",
+    "macro_context": "This listing page references three FOMC meetings from 2024 (September, November, December). Without the actual statement text, none of the policy decisions, rate changes, or forward guidance from these meetings can be verified or analyzed from this source alone.",
+    "market_structure_context": ""
+  }
+}

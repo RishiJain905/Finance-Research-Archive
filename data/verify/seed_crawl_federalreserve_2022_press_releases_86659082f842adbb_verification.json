@@ -1,15 +1,20 @@
 {
   "verification_confidence": 9,
-  "verdict": "accept",
+  "verdict": "reject",
   "issues_found": [
-    "suggested_status should be 'rejected' instead of 'review_queue' since source_type is listing_page per CORE RULE 5"
+    "SOURCE_TYPE is listing_page - per CORE RULE #5, listing pages must be rejected",
+    "Source is a navigation index, not an article-like document with actionable research content",
+    "event_type set to 'unknown' is appropriate since no single event applies to an index page",
+    "No extractable forward guidance, rate decisions, economic data prints, or substantive commentary present",
+    "The generated record correctly identifies this as a non-archivable listing page and recommends declining to archive",
+    "Historical record (2022) adds to staleness concern for real-time market analysis"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record correctly identifies all substantive issues with the source. The listing_page type is unambiguous, and the assessment that the source is non-archivable is accurate. Minor correction to suggested_status needed.",
+  "human_review_reason": "The record has correctly identified the source as a non-archivable listing page. The self-contained analysis is accurate and the recommended rejection aligns with CORE RULE #5. No human review needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a chronological index page listing all Federal Reserve press releases from calendar year 2022, including FOMC minutes, regulatory announcements, enforcement actions, banking application approvals, and other Fed communications. It does not contain a single archiveable document but rather serves as a navigation hub to individual press releases.",
-    "why_it_matters": "This page is not directly actionable for market research as it is merely an index. Individual press releases linked from this page would need to be retrieved separately for meaningful analysis.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

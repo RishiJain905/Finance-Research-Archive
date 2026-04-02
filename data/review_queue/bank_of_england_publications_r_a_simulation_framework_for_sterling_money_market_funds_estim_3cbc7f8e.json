@@ -1,0 +1,72 @@
+{
+  "id": "bank_of_england_publications_r_a_simulation_framework_for_sterling_money_market_funds_estim_3cbc7f8e",
+  "created_at": "2026-03-31T16:53:03.105065+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "A simulation framework for sterling money market funds: estimating redemption capacity and evaluating liquidity requirements",
+  "source": {
+    "name": "Bank of England Publications RSS",
+    "url": "https://www.bankofengland.co.uk/working-paper/2026/a-simulation-framework-for-sterling-money-market-funds",
+    "domain": "www.bankofengland.co.uk",
+    "published_at": "2026-03-27",
+    "source_type": "data_release"
+  },
+  "summary": "This Bank of England Staff Working Paper (No. 1,177) by Rishabh Kumar presents a simulation framework for sterling money market funds to model redemption capacity and failure probability under various outflow timing patterns and market-liquidity conditions. The research finds that front-loaded redemptions are most destabilizing to funds and that the 30% weekly liquid asset (WLA) regulatory threshold creates cliff-edge behavior among fund managers. Simulations suggest removing this threshold effect yields significant resilience gains, with optimal WLA levels around 40% under historically extreme shocks.",
+  "key_points": [
+    "Simulation framework estimates redemption capacity and failure probability across alternative redemption profiles and market-liquidity scenarios for sterling MMFs",
+    "Front-loaded redemptions are identified as most destabilizing to money market fund resilience",
+    "The 30% WLA regulatory threshold creates cliff-edge behavior where managers must consider measures to deter further redemptions",
+    "Removing the 30% WLA threshold effect yields sizeable resilience gains by reducing cliff-edge behavior",
+    "Under historically extreme shocks without threshold effects, resilience improvements concentrate around 40% WLA, with diminishing returns beyond that level",
+    "Benefit of asset sales shrinks as market depth thins"
+  ],
+  "why_it_matters": "This research provides quantitative guidance on optimal liquidity buffer levels for sterling money market funds and highlights how regulatory thresholds can inadvertently amplify systemic risk by triggering coordinated redemption behavior during stress. The finding that 40% WLA outperforms the 30% minimum suggests potential regulatory calibration implications for MMF liquidity requirements. For market stability monitoring, the framework offers a tool to stress-test MMF resilience under various outflow scenarios.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "This paper directly addresses market structure by examining money market fund liquidity management, redemption dynamics, and regulatory threshold effects on fund behavior. It provides simulation-based evidence on how the 30% WLA minimum creates systemic vulnerabilities through coordinated manager responses, and quantifies the resilience benefits of higher liquidity buffers. This informs understanding of money market fund operational resilience as part of short-term funding market infrastructure.",
+  "important_numbers": [
+    "30% (WLA regulatory threshold)",
+    "40% (optimal WLA level for resilience under extreme shocks)",
+    "1,177 (Staff Working Paper number)"
+  ],
+  "tags": [
+    "money-market-funds",
+    "liquidity-risk",
+    "sterling",
+    "bank-of-england",
+    "weekly-liquid-assets",
+    "redemption-capacity",
+    "simulation-framework",
+    "regulatory-threshold",
+    "market-structure",
+    "resilience"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source metadata PAGE_TYPE is 'data_release' but actual content is a Staff Working Paper (research_paper); source_type copied from metadata as 'data_release' is incorrect",
+      "Content word count is only 304 words, providing an abstract-level summary only - full paper methodology and detailed quantitative results not available for verification",
+      "Key points are accurate to the abstract but cannot verify simulation methodology or full model outputs from this extract",
+      "Minor: source_type field in generated record inherits incorrect PAGE_TYPE from metadata"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is mostly accurate and well-supported by the abstract text, with correct event_type (research_paper) and appropriate topic (market_structure). All key_points trace back to source text. However, PAGE_TYPE mismatch between metadata and content suggests source classification error, and the 304-word extract is too thin to verify full research validity. Human review recommended to: (1) confirm correct source_type should be 'working_paper' or similar, (2) determine if fuller content exists to validate simulation methodology claims."
+  },
+  "raw_text_path": "data/raw/bank_of_england_publications_r_a_simulation_framework_for_sterling_money_market_funds_estim_3cbc7f8e.txt",
+  "notes": "Recent Bank of England research paper (4 days old). Directly relevant to market structure as it examines MMF liquidity frameworks and regulatory threshold effects. Note: PAGE_TYPE in source metadata is 'data_release' which appears incorrect; actual content is a Staff Working Paper. The 304-word extract provides only an abstract-level summary; full quantitative findings and simulation methodology not available in this source body.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "ede04b9853e57db5ec01b2adccc44d77ae256d46"
+}

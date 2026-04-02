@@ -1,13 +1,19 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page cataloging research network names, not a substantive research document",
+    "No publication date available - source metadata shows empty published_at",
+    "No substantive research content or findings present - only lists network titles",
+    "event_type set to 'unknown' but source type correctly identified as 'listing_page'",
+    "Rule 5 violation: listing_page type sources must be rejected per verification standards"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Decision is clear-cut: listing pages with no substantive content do not meet archival standards. The generated record already correctly identified this as low-value with 'exclude' recommendation.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This ECB page lists 15 research networks coordinated by the central bank, covering topics from macro-prudential research to price-setting microdata, but provides no specific research findings, data, or actionable insights. The page functions as an institutional index rather than a source of market-relevant information.",
-    "why_it_matters": "This source has no immediate market relevance. It merely enumerates research coordination structures at the ECB without providing any findings, data, or signals that could influence market expectations or trading decisions.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

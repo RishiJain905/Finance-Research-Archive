@@ -1,0 +1,71 @@
+{
+  "id": "nyse_trade_trading_information_trading_at_nyse_1d805d43",
+  "created_at": "2026-03-31T17:37:53.758287+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Trading Information | Trading at NYSE",
+  "source": {
+    "name": "NYSE Trade",
+    "url": "https://www.nyse.com/trade/trading-information",
+    "domain": "www.nyse.com",
+    "published_at": "",
+    "source_type": "unknown"
+  },
+  "summary": "This is a static reference page providing operational trading information for NYSE venues, including trading hours, auction procedures, and market integrity mechanisms such as Limit Up/Limit Down (LULD) and Market-Wide Circuit Breakers (MWCB). The page covers NYSE, NYSE American, NYSE Arca, NYSE National, and NYSE Texas trading schedules.",
+  "key_points": [
+    "NYSE Tape A core trading session runs 9:30 a.m. to 4:00 p.m. ET with Opening Auction at 9:30 a.m. and Closing Auction at 4:00 p.m.",
+    "NYSE Arca Equities has the earliest pre-opening session at 2:30 a.m. ET with Early Open Auction at 4:00 a.m.",
+    "NYSE American and NYSE Texas offer Late Trading Sessions from 4:00 p.m. to 8:00 p.m. ET.",
+    "Limit Up/Limit Down (LULD) Plan was approved permanently on April 11, 2019 to prevent trades outside specified price bands.",
+    "Market-Wide Circuit Breakers (MWCB) have three thresholds: 7% (Level 1), 13% (Level 2), and 20% (Level 3) based on S&P 500 single-day decline.",
+    "Clearly Erroneous Execution review requests must be submitted within 30 minutes of execution time."
+  ],
+  "why_it_matters": "This page documents the operational framework of NYSE trading venues, including auction mechanisms, trading hours across multiple platforms, and volatility control systems. It provides the baseline rules and timing structure for equity and options trading on NYSE markets.",
+  "market_impact": {
+    "asset_classes": [
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page details NYSE market structure elements including: pre-opening order queuing, opening and closing auction procedures, imbalance freeze periods, MOO/LOO cancellation cutoffs, circuit breaker mechanisms (LULD and MWCB), and clearly erroneous execution review procedures. NYSE Bonds conducts two daily auctions at 4:00 a.m. and 8:00 a.m. ET.",
+  "important_numbers": [
+    "7% MWCB Level 1 threshold",
+    "13% MWCB Level 2 threshold",
+    "20% MWCB Level 3 threshold",
+    "30 minutes CEE review window",
+    "15 minutes CEE review window for non-customer American/Arca Options orders"
+  ],
+  "tags": [
+    "nyse",
+    "trading-hours",
+    "market-structure",
+    "auctions",
+    "luld",
+    "mwcb",
+    "circuit-breakers",
+    "exchange-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' when the source type is clearly operational reference documentation - this page does not fit the event taxonomy (not monetary policy, speech, data release, research, or treasury/operations)",
+      "No publication date present in source metadata - cannot assess currency or staleness",
+      "Source is operational reference documentation, not research content - contains no analysis, commentary, or market interpretation",
+      "event_type set to 'unknown' when the correct type should be identified as operational/reference documentation",
+      "Per Core Rule 5: operational reference pages with no publication date and no market-moving content lack archival value for a finance research archive",
+      "The record correctly identifies this as low-value but suggests 'review_queue' when rejection is more appropriate given the source type"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The source is clearly operational documentation (trading hours, auction procedures, circuit breaker rules) with no publication date, no author, and no analytical content. While the factual summary is accurate, the page does not meet the archival value threshold for a finance research archive. No human review needed - this is a straightforward rejection based on source type."
+  },
+  "raw_text_path": "data/raw/nyse_trade_trading_information_trading_at_nyse_1d805d43.txt",
+  "notes": "Low-value source for archive purposes. This is a static operational reference page with no publication date, no author attribution, and no news or commentary content. Contains baseline trading schedule and rule documentation that could serve as a reference for market structure research but lacks the specificity or timeliness required for a high-quality research archive entry. The page documents 2026 trading calendars but provides no market analysis or interpretation."
+}

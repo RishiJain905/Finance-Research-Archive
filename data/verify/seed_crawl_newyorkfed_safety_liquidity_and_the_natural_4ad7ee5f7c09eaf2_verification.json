@@ -2,17 +2,18 @@
   "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source text is extremely thin - only abstract and metadata are available, not the full 80-page PDF content",
-    "Published May 2017, approximately 9 years old as of March 2026 - significantly beyond the 90-day threshold",
-    "Relevance to 'market structure' TARGET is marginal; paper is fundamentally macroeconomic research on the natural rate of interest"
+    "Source body contains only abstract/metadata, not the full 80-page paper - verification limited to abstract content only",
+    "Published May 2017 — approximately 9 years old relative to TODAY (2026-03-31); may have limited relevance to current market conditions",
+    "TARGET metadata says 'market structure' but content is macroeconomics research on natural interest rates — metadata mismatch",
+    "Unable to verify detailed findings or methodology claims beyond abstract description"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record accurately reflects the available source content (the abstract/metadata) and correctly identifies all verifiable elements: title, authors, publication date, main findings, and methodology. However, the source itself is problematic: (1) only abstract text is available, not the full 80-page paper, making independent verification of detailed claims impossible; (2) at 9 years old, the research predates the 2018-2023 rate cycle and may have limited current utility; (3) while the safety/liquidity premium discussion touches on Treasury market dynamics, the paper's primary focus is macroeconomic theory rather than market structure. Human review is needed to weigh the archival value of this Federal Reserve research against its age and tangential topic alignment.",
+  "human_review_reason": "Source body is extremely thin (abstract only), limiting verification to metadata and paper description. However, the NY Fed is a high-trust domain, and the abstract provides substantive content that matches the record. The LLM correctly flagged these limitations. Human review needed to determine if abstract-only sources should be accepted for archival given the institutional credibility and research relevance.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "This May 2017 Federal Reserve Bank of New York Staff Report investigates why U.S. interest rates were low, finding that increased premiums for safety and liquidity since the late 1990s were the primary driver, with slower economic growth as a secondary factor. The authors used two complementary methodologies: a flexible time-series model of Treasury and corporate yields, inflation, and long-term survey expectations; and a medium-scale dynamic stochastic general equilibrium (DSGE) model.",
-    "why_it_matters": "This research provides historical context for understanding the secular decline in interest rates and the role of safety/liquidity demand in bond markets. While dated (published during the near-zero rate era, before the 2018-2023 rate cycle), it established a framework for analyzing how flight-to-safety dynamics affect Treasury yields and the broader yield curve - relevant for understanding market structure during stress periods.",
-    "macro_context": "The paper addresses the natural rate of interest - a key macro concept for monetary policy. It provides an analytical framework connecting safety/liquidity premiums to real interest rates, relevant for understanding secular stagnation debates and post-2015 policy normalization. Published during an era of near-zero rates before the 2018-2023 tightening cycle.",
-    "market_structure_context": "The paper addresses market structure elements through its analysis of the safety premium embedded in Treasury yields and the liquidity characteristics that drive demand for government securities versus private assets. This relates to market plumbing and the role of safe assets in financial markets, though the paper's primary contribution is macroeconomic rather than market microstructure analysis."
+    "summary": "",
+    "why_it_matters": "Understanding the drivers of the natural rate of interest has implications for monetary policy calibration. If low rates are driven by structural increases in safety/liquidity premiums rather than weak growth, this suggests different policy responses. This is a May 2017 Federal Reserve research paper — note that it predates COVID-19, the 2022-2024 inflation surge, and significant shifts in Fed policy. As a historical research record, it provides context on pre-pandemic thinking about interest rate dynamics but may have limited direct relevance to current market conditions.",
+    "macro_context": "This NY Fed Staff Report (Number 812) provides a framework for understanding the natural rate of interest as driven by safety/liquidity premiums and trend growth. The finding that premium shifts (rather than pure growth) explain low rates has implications for monetary policy interpretation. Published May 2017 — this analysis predates the post-COVID inflation surge, the 2022-2024 tightening cycle, and subsequent rate environment. Historical research record only.",
+    "market_structure_context": ""
   }
 }
