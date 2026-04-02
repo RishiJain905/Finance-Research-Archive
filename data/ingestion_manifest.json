@@ -205,7 +205,7 @@
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260310~b738caf5b4.en.html": "03a0256afe9d2f0fb1f26a0e8b24f1e943fbeb36b54c9f40c5c6da635c076828",
     "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "9cbf299f3638c36f7484969c3c2116dbf03dc0f07ff6a88debd0570bb2dfa1fc",
     "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-11": "9bdaed2d30bd0fb13207c15af4b75d013f47c45e42e392e70c3c228a4ff45c32",
-    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "6b626cf9c16bad37edd59b47bdcb6b15c655b3851227ccc82ca1572ad244cddd",
+    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "7892b65a208d3cd4047fcb070183ef164e113af893eae4cc595aff32a7067b79",
     "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": "a71aeb3db8443e6216dac122633ca032f5715c69b9b73c2d5498d288f4e6d215",
     "https://home.treasury.gov/news/press-releases/sb0428": "80ad9d97c145f7beeaa0eb47ef88decb7904d9227fd4ed46ac27bf6f58493776",
     "https://home.treasury.gov/news/press-releases/sb0429": "aedaa833393cfd0fe0e4a9976c1bdf6f7a10f0bb86c73502baff12def84ab17f",
@@ -213,7 +213,8 @@
     "https://www.bankofcanada.ca/2026/02/cfec-releases-results-of-october-2025-foreign-exchange-volume-survey/": "139eb187c59c3e6a5803db448aa9019e6060218f8aaba61ab2f1b4920c54c684",
     "https://www.bankofcanada.ca/2026/03/speech-carolyn-rogers-2026-03-26/": "c9c05bce2d5ac538ff4e995f59465dfd15f822cbed5a1ec12d16ca2a9aa6366a",
     "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "61a2e6afc5907c97ee3878f48fa148fe35a2164b3768eb45c1a923ebf7a53a43",
-    "https://home.treasury.gov/news/press-releases/sb0431": "24da54febd0b0846bb5ec41f083354cf20d7840b272ee7fa83443826aa6ac950"
+    "https://home.treasury.gov/news/press-releases/sb0431": "24da54febd0b0846bb5ec41f083354cf20d7840b272ee7fa83443826aa6ac950",
+    "https://www.bankofengland.co.uk/decision-maker-panel/2026/march-2026": "2604eacca11b940e132a08b543126b97abf4e80c9db1907915a52741e8e0a4ca"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -429,7 +430,8 @@
     "https://www.bankofcanada.ca/2026/02/cfec-releases-results-of-october-2025-foreign-exchange-volume-survey/": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "https://www.bankofcanada.ca/2026/03/speech-carolyn-rogers-2026-03-26/": "bank_of_canada_press_browse_speech_by_carolyn_rogers_senior_deputy_governor_of_the_bank_e9e69f47",
     "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/?content_type[]=628&content_type[]=22322": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
-    "https://home.treasury.gov/news/press-releases/sb0431": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e"
+    "https://home.treasury.gov/news/press-releases/sb0431": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e",
+    "https://www.bankofengland.co.uk/decision-maker-panel/2026/march-2026": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4595,6 +4597,26 @@
       ],
       "target_name": "Treasury Quarterly Refunding",
       "topic": "market structure"
+    },
+    "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865": {
+      "required_keywords": [
+        "bank of england",
+        "monetary policy",
+        "interest rate",
+        "inflation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Bank of England Publications RSS",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -4781,7 +4803,8 @@
     "e7756b7a418f295f370c10d617b6f6acdae92568": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "5c915e408922159c0ebc93a747a04de8fede2a48": "bank_of_canada_press_browse_speech_by_carolyn_rogers_senior_deputy_governor_of_the_bank_e9e69f47",
     "97ebac6d8473a16e011fa6f9448b6ede1ddb26f7": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
-    "b1c4cf59eb8f4ec8ffef2081aa168009160db2a0": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e"
+    "b1c4cf59eb8f4ec8ffef2081aa168009160db2a0": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e",
+    "7ab839ef45f7dfb1cc14addf02833e133b113ed5": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5034,7 +5057,8 @@
     "4a83dfae284f0b56cb0b43c47c40cc7631f0b05c": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "15ca1dd9b93fff85637194f62aa70912ab57c65c": "bank_of_canada_press_browse_speech_by_carolyn_rogers_senior_deputy_governor_of_the_bank_e9e69f47",
     "a860ff4121d57008f632370639d46a1a46b9e695": "bank_of_canada_market_notices_annual_report_and_quarterly_financial_report_bank_of_canada_ac3b545b",
-    "00be813907601a1277d6bcfb3c7e116301157b59": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e"
+    "00be813907601a1277d6bcfb3c7e116301157b59": "treasury_quarterly_refunding_treasury_and_irs_announce_tax_filing_relief_to_dhs_personnel_6bf4db6e",
+    "a56600faf1f36f4631f9393addc2d0b1e09f4a97": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
@@ -5127,7 +5151,8 @@
     "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": true,
     "https://home.treasury.gov/news/press-releases/sb0428": true,
     "https://www.bankofcanada.ca/2026/02/cfec-releases-results-of-october-2025-foreign-exchange-volume-survey/": true,
-    "https://www.bankofcanada.ca/2026/04/release-the-bank-canadas-summary-deliberations-2026-04-01/": true
+    "https://www.bankofcanada.ca/2026/04/release-the-bank-canadas-summary-deliberations-2026-04-01/": true,
+    "https://www.bankofengland.co.uk/decision-maker-panel/2026/march-2026": true
   },
   "event_fingerprints": {
     "f1df9a7292a5b92b1163438346b6fae3a7f03a62": "keyword_discovery_federalreserve_federal_reserve_issues_fomc_statement_459ed78faf1dfd41",
@@ -5189,6 +5214,7 @@
     "72983d44fbedf867061af9300d2aa7833a19ede8": "bank_of_canada_market_notices_cfec_releases_results_of_october_2025_foreign_exchange_volum_270db049",
     "7af61f044719e062f69732445f28241a9be709a3": "keyword_discovery_ecb.europa_sovereign_bond_markets_and_financial_c8723d9734cc5f18",
     "819f245c27a4cc2c0cbf643433e19ffcc9f9d8c7": "keyword_discovery_bis_pdf_who_holds_sovereign_debt_ddbf4d6aa0d58ac6",
-    "5c36ea0595061a53cea34718bcd88bc4ff0366bb": "seed_crawl_treasury_a_third_quarter_update_to_cfe1f72c715c3ec0"
+    "5c36ea0595061a53cea34718bcd88bc4ff0366bb": "seed_crawl_treasury_a_third_quarter_update_to_cfe1f72c715c3ec0",
+    "b858616993d9242ed297d087aee634795e42a951": "bank_of_england_publications_r_monthly_decision_maker_panel_data_march_2026_bank_of_england_620fa865"
   }
 }
