@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "source_type is 'research_paper' but source is actually a conference welcome address/speech, not original research; this should be reflected in event_type which is correctly 'speech_neutral'",
+    "Source body is truncated, limiting visibility into full discussion of QT challenges and any forward-looking implications that may have been discussed in later sections",
+    "Speech synthesizes existing IMF data and known trends rather than presenting novel findings, reducing forward-looking trading value",
+    "Published June 2025 (~10 months ago), outside the 90-day currency window but within acceptable range for historical context"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate against the visible source text with good confidence. However, source truncation limits full verification, and the speech's nature as synthesis of existing data (rather than novel research or policy signals) means it has limited forward-looking market-moving value. Human review should confirm truncation does not omit critical policy signals or forward guidance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
