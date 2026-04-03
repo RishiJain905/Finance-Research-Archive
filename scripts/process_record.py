@@ -80,6 +80,14 @@ def main() -> None:
     accepted_path = BASE_DIR / "data" / "accepted" / f"{record_id}.json"
     if accepted_path.exists():
         run_step([python_cmd, "-m", "scripts.link_new_record", record_id], "linker")
+
+        # V2.7 Part 2: Event Clustering - cluster newly accepted records
+        try:
+            from scripts.cluster_records import main as cluster_records_main
+
+            cluster_records_main()
+        except Exception as e:
+            print(f"Warning: Clustering step skipped: {e}")
     else:
         print("\n=== Skipping linker (record not accepted) ===")
 
