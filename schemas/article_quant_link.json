@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Article Quant Link",
+  "description": "Standalone link file schema for article-quant relationships",
+  "type": "object",
+  "required": ["link_id", "article_record_id", "quant_record_id", "relationship", "score", "matched_dimensions", "created_at"],
+  "properties": {
+    "link_id": {"type": "string"},
+    "article_record_id": {"type": "string"},
+    "quant_record_id": {"type": "string"},
+    "event_id": {"type": "string"},
+    "relationship": {"type": "string", "enum": ["supports", "context", "confirms", "weak_context"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 100},
+    "matched_dimensions": {"type": "array", "items": {"type": "string", "enum": ["topic", "time_window", "keyword_overlap", "event_alignment"]}},
+    "created_at": {"type": "string", "format": "date-time"}
+  }
+}

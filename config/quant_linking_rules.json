@@ -1,0 +1,43 @@
+{
+  "topic_to_series": {
+    "macro catalysts": ["fed_funds", "sofr", "2y_yield", "10y_yield"],
+    "market structure": ["sofr", "repo_operations", "treasury_auctions", "2y_yield", "10y_yield"],
+    "monetary policy": ["fed_funds", "iorb", "sofr"],
+    "rates": ["fed_funds", "iorb", "2y_yield", "10y_yield"],
+    "treasury": ["treasury_auctions", "upcoming_treasury_auctions"],
+    "liquidity": ["sofr", "repo_operations"],
+    "yield curve": ["2y_yield", "10y_yield"],
+    "fomc": ["fed_funds", "iorb"],
+    "issuance": ["treasury_auctions", "upcoming_treasury_auctions"],
+    "funding": ["sofr", "repo_operations"]
+  },
+  "keyword_to_series": {
+    "inflation": ["2y_yield", "10y_yield", "fed_funds"],
+    "policy": ["fed_funds", "sofr", "2y_yield"],
+    "liquidity": ["sofr", "repo_operations"],
+    "auction": ["treasury_auctions", "upcoming_treasury_auctions"],
+    "funding": ["sofr", "repo_operations"],
+    "sofr": ["sofr"],
+    "fed_funds": ["fed_funds"],
+    "iorb": ["iorb"],
+    "treasury": ["treasury_auctions", "upcoming_treasury_auctions"],
+    "repo": ["repo_operations"],
+    "rates": ["fed_funds", "2y_yield", "10y_yield"],
+    "yield": ["2y_yield", "10y_yield"],
+    "monetary": ["fed_funds", "iorb"],
+    "fomc": ["fed_funds"]
+  },
+  "scoring_bands": {
+    "strong": {"min": 80, "relationship": "supports"},
+    "contextual": {"min": 60, "relationship": "context"},
+    "weak": {"min": 40, "relationship": "weak_context"},
+    "ignore_below": 40
+  },
+  "dimension_weights": {
+    "topic": 0.30,
+    "time_window": 0.25,
+    "keyword_overlap": 0.25,
+    "event_alignment": 0.20
+  },
+  "time_window_days": 7
+}
