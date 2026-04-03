@@ -201,6 +201,25 @@ def main() -> None:
             if record_path.exists():
                 record_path.unlink()
 
+            # V2.7 Part 3: Watchlist matching for accepted records
+            try:
+                from scripts.watchlist_matcher import (
+                    match_record_against_watchlists,
+                    load_watchlists,
+                )
+                from scripts.watchlist_hit_persistence import save_watchlist_hit
+
+                watchlists = load_watchlists(
+                    str(BASE_DIR / "config" / "watchlists_v27.json")
+                )
+                hits = match_record_against_watchlists(record, watchlists)
+                for hit in hits:
+                    save_watchlist_hit(hit, str(BASE_DIR / "data" / "watchlist_hits"))
+                if hits:
+                    print(f"  Watchlist hits: {len(hits)}")
+            except Exception as e:
+                print(f"  Warning: Watchlist matching skipped: {e}")
+
             print("Moved record to accepted:")
             print(target_record_path.relative_to(BASE_DIR))
             print(
@@ -273,6 +292,31 @@ def main() -> None:
             print(
                 f"Memory updated - domain trust: {result['domain_memory']['trust_score']}"
             )
+
+        # V2.7 Part 3: Watchlist matching for review_queue records
+        # Note: review records stay in review_queue, so we load from there
+        try:
+            from scripts.watchlist_matcher import (
+                match_record_against_watchlists,
+                load_watchlists,
+            )
+            from scripts.watchlist_hit_persistence import save_watchlist_hit
+
+            # Load record from review_queue (it should be there since status is review_queue)
+            review_record_path = REVIEW_QUEUE_DIR / f"{record_id}.json"
+            if review_record_path.exists():
+                with open(review_record_path) as f:
+                    review_record = json.load(f)
+                watchlists = load_watchlists(
+                    str(BASE_DIR / "config" / "watchlists_v27.json")
+                )
+                hits = match_record_against_watchlists(review_record, watchlists)
+                for hit in hits:
+                    save_watchlist_hit(hit, str(BASE_DIR / "data" / "watchlist_hits"))
+                if hits:
+                    print(f"  Watchlist hits: {len(hits)}")
+        except Exception as e:
+            print(f"  Warning: Watchlist matching skipped: {e}")
 
 
 if __name__ == "__main__":
