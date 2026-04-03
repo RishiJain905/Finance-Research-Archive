@@ -218,7 +218,8 @@
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": "2a1d85296f539d96df77562fe9d5ef6221e617f05e50e7d8e032503fddfbaad4",
     "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": "37832a5ef4992edcc580bf04a6b5bb54af1d6e765b12aea73b4f56fb4e24637f",
     "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": "1fd6e34e7801e1f2aa7e59bb3987a6bc099eca6f9c5a594aecdc80eacea2f3cb",
-    "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "2a63a10f2523f134a500ce4da065a134dd7c025330f587fdb344130fe7dfee6d"
+    "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "2a63a10f2523f134a500ce4da065a134dd7c025330f587fdb344130fe7dfee6d",
+    "https://home.treasury.gov/news/press-releases/sb0432": "a0f2810b86030c051b1d9346b86cbd09a5886eddf50db09d450fd054f4ad157a"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -439,7 +440,8 @@
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
     "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9",
     "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
-    "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a"
+    "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
+    "https://home.treasury.gov/news/press-releases/sb0432": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4716,6 +4718,31 @@
       ],
       "target_name": "Bank of England Publications RSS",
       "topic": "macro catalysts"
+    },
+    "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916": {
+      "required_keywords": [
+        "refunding",
+        "auction",
+        "issuance",
+        "treasury",
+        "borrowing"
+      ],
+      "blocked_keywords": [
+        "sanctions",
+        "secretary",
+        "foreign policy"
+      ],
+      "min_word_count": 180,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Treasury Quarterly Refunding",
+      "topic": "market structure"
     }
   },
   "title_fingerprints": {
@@ -4907,7 +4934,8 @@
     "4c502f339a6c8e7a5238ddacf372251a80f5fa41": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
     "7e347f938854b3a0d50b80f94d64d5ca9096208b": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9",
     "5f9e416625ca5e63182a03a2f3751e0940bb73ce": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
-    "b8123e44d1b141f3b67d5d30942862a92ac3812b": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a"
+    "b8123e44d1b141f3b67d5d30942862a92ac3812b": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
+    "1ab00a2396852694e831ee1697c6acb7a090e807": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5167,7 +5195,8 @@
     "b57c4cb4e2eb24bb376dbfad97cf64a834ad418f": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9",
     "fbace7b0f0e38bff5b80db35db1153002b0c03dc": "dallas_fed_economics_president_lorie_logan_speeches_and_publications_dallasfed_or_22a1afa0",
     "9ed66022005a8a28531b302a9d06e14c6c939add": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
-    "f7916b37526e83b68dd0ba79555b225530ea44dd": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a"
+    "f7916b37526e83b68dd0ba79555b225530ea44dd": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
+    "42c3fe995ef8044a20c1bd3ae8e48afd7d4d979a": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
