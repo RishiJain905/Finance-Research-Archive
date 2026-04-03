@@ -1,0 +1,79 @@
+[
+  {
+    "watchlist_id": "wl_repo_stress",
+    "title": "Repo Market Stress",
+    "topic": "repo",
+    "description": "Monitor repo rate spikes, collateral shortages, and funding market stress",
+    "keywords": ["repo", "reverse repo", "SOFR", "collateral", "funding stress", "ON RRP", "tri-party", "secured funding"],
+    "required_terms": ["repo"],
+    "blocked_terms": [],
+    "priority": "high",
+    "enabled": true
+  },
+  {
+    "watchlist_id": "wl_treasury_refunding",
+    "title": "Treasury Refunding / Issuance Pressure",
+    "topic": "treasury",
+    "description": "Track Treasury refunding announcements, issuance pressure, and auction dynamics",
+    "keywords": ["refunding", "Treasury issuance", "auction", "coupon", "bill supply", "debt ceiling", "Treasury General Account"],
+    "required_terms": [],
+    "blocked_terms": [],
+    "priority": "high",
+    "enabled": true
+  },
+  {
+    "watchlist_id": "wl_inflation_persistence",
+    "title": "Inflation Persistence",
+    "topic": "inflation",
+    "description": "Monitor signs of sticky or re-accelerating inflation",
+    "keywords": ["CPI", "core CPI", "PCE", "inflation", "price pressures", "wage growth", "shelter costs", "services inflation"],
+    "required_terms": [],
+    "blocked_terms": ["disinflation", "deflation"],
+    "priority": "high",
+    "enabled": true
+  },
+  {
+    "watchlist_id": "wl_policy_repricing",
+    "title": "Policy Path Repricing",
+    "topic": "monetary_policy",
+    "description": "Track market repricing of Fed policy path, rate expectations, and forward guidance shifts",
+    "keywords": ["rate cut", "rate hike", "Fed funds", "dot plot", "terminal rate", "policy path", "forward guidance", "FOMC"],
+    "required_terms": [],
+    "blocked_terms": [],
+    "priority": "medium",
+    "enabled": true
+  },
+  {
+    "watchlist_id": "wl_labor_cooling",
+    "title": "Labor Market Cooling",
+    "topic": "labor",
+    "description": "Monitor labor market deterioration, job losses, and employment trends",
+    "keywords": ["nonfarm payrolls", "unemployment", "jobless claims", "labor market", "hiring", "layoffs", "JOLTS", "wage growth"],
+    "required_terms": [],
+    "blocked_terms": ["labor shortage", "tight labor"],
+    "priority": "medium",
+    "enabled": true
+  },
+  {
+    "watchlist_id": "wl_yield_curve_steepening",
+    "title": "Yield Curve Steepening",
+    "topic": "rates",
+    "description": "Track yield curve dynamics, steepening, and inversion unwinding",
+    "keywords": ["yield curve", "steepening", "2s10s", "10s30s", "term premium", "curve inversion", "long end", "short end"],
+    "required_terms": [],
+    "blocked_terms": [],
+    "priority": "medium",
+    "enabled": true
+  },
+  {
+    "watchlist_id": "wl_fixed_income_liquidity",
+    "title": "Fixed Income Liquidity Strain",
+    "topic": "market_structure",
+    "description": "Monitor bond market liquidity deterioration, bid-ask spreads, and market functioning",
+    "keywords": ["liquidity", "bid-ask spread", "market depth", "Treasury liquidity", "MOVE index", "volatility", "market functioning", "dealer balance sheet"],
+    "required_terms": [],
+    "blocked_terms": [],
+    "priority": "medium",
+    "enabled": true
+  }
+]
