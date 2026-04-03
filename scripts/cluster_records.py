@@ -25,6 +25,8 @@ DEFAULT_ACCEPTED_DIR = "data/accepted"
 DEFAULT_EVENTS_DIR = "data/events"
 DEFAULT_CONFIG_PATH = "config/clustering_rules.json"
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 def load_config(config_path: str = DEFAULT_CONFIG_PATH) -> dict:
     """Load clustering configuration."""
@@ -522,7 +524,7 @@ def find_recent_clusters(
     return [c[0] for c in matching_clusters]
 
 
-def process_accepted_records(lookback_days: int = 7) -> None:
+def process_accepted_records(lookback_days: int = 7) -> int:
     """
     Main entry point - process accepted records and cluster them.
 
@@ -545,7 +547,7 @@ def process_accepted_records(lookback_days: int = 7) -> None:
     # Get accepted records
     accepted_path = Path(accepted_dir)
     if not accepted_path.exists():
-        return
+        return 0
 
     processed_count = 0
 
@@ -587,6 +589,22 @@ def process_accepted_records(lookback_days: int = 7) -> None:
 
         except (json.JSONDecodeError, IOError, KeyError):
             continue
+
+    # V2.7 Part 3: Watchlist matching for event clusters
+    try:
+        from scripts.watchlist_matcher import (
+            match_cluster_against_watchlists,
+            load_watchlists,
+        )
+        from scripts.watchlist_hit_persistence import save_watchlist_hit
+
+        watchlists = load_watchlists(str(BASE_DIR / "config" / "watchlists_v27.json"))
+        for cluster in existing_clusters:
+            hits = match_cluster_against_watchlists(cluster, watchlists)
+            for hit in hits:
+                save_watchlist_hit(hit, str(BASE_DIR / "data" / "watchlist_hits"))
+    except Exception as e:
+        print(f"Warning: Cluster watchlist matching skipped: {e}")
 
     return processed_count
 
