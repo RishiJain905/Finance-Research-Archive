@@ -76,6 +76,38 @@ def main() -> None:
 
     run_step([python_cmd, "-m", "scripts.route_record", record_id], "router")
 
+    # Step 3.5: Watchlist matching (V2.7 Part 3)
+    # Match accepted/review records against watchlists after routing
+    try:
+        from scripts.watchlist_matcher import (
+            match_record_against_watchlists,
+            load_watchlists,
+        )
+        from scripts.watchlist_hit_persistence import save_watchlist_hit
+
+        # Load record from either accepted or review_queue
+        record_path_accepted = BASE_DIR / "data" / "accepted" / f"{record_id}.json"
+        record_path_review = BASE_DIR / "data" / "review_queue" / f"{record_id}.json"
+
+        match_record = None
+        if record_path_accepted.exists():
+            with open(record_path_accepted) as f:
+                match_record = json.load(f)
+        elif record_path_review.exists():
+            with open(record_path_review) as f:
+                match_record = json.load(f)
+
+        if match_record:
+            watchlists = load_watchlists(
+                str(BASE_DIR / "config" / "watchlists_v27.json")
+            )
+            hits = match_record_against_watchlists(match_record, watchlists)
+            for hit in hits:
+                save_watchlist_hit(hit, str(BASE_DIR / "data" / "watchlist_hits"))
+            print(f"Watchlist matching: {len(hits)} hits found")
+    except Exception as e:
+        print(f"Warning: Watchlist matching step skipped: {e}")
+
     # Step 4: Linker (only if record was accepted)
     accepted_path = BASE_DIR / "data" / "accepted" / f"{record_id}.json"
     if accepted_path.exists():
