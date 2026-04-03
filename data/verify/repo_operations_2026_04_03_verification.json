@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a placeholder stub with no actual NY Fed Repo Operations data",
+    "No URL provided in source attribution",
+    "No published_at date provided",
+    "Cannot extract any meaningful market structure or macro catalyst information",
+    "Source explicitly states it should be replaced with real dataset/API fetches",
+    "Source is thin/noisy with no archival value for research purposes"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as a placeholder. This is a clear reject case per Core Rule 6 (thin low-signal sources bias toward reject) and Core Rule 7 (missing source attribution). No human review needed - the record accurately describes a worthless source.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a placeholder dataset snapshot for NY Fed Repo Operations with no actual operation data. The text explicitly states it should be replaced with real dataset or API fetches. No repo operation details, amounts, dates, or counterparties are present.",
+    "why_it_matters": "This placeholder cannot serve as a research archive record. Any downstream analysis expecting actual NY Fed repo operation data (operation type, amounts, counterparties, dates, rates) will be unable to extract meaningful information.",
+    "macro_context": "",
+    "market_structure_context": "The source is intended to represent NY Fed repo operations, which are market structure/money market operations, but contains no actual operational data to analyze."
+  }
+}

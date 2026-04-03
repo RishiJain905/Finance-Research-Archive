@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly a placeholder with no actual content",
+    "Source explicitly states it needs to be replaced with real data",
+    "No Treasury auction data of any kind is present (no dates, amounts, terms, or schedule)",
+    "URL is empty, providing no way to verify or access source",
+    "Cannot support any market structure or macro analysis",
+    "Archive value is zero - no substantive information to preserve"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as a non-archivable placeholder. No human judgment needed - this source contains no data whatsoever and must be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a placeholder dataset snapshot for Treasury auction data. It explicitly states it is not real data and is awaiting replacement with actual dataset or API fetches. No auction details, dates, amounts, or pricing information are available.",
+    "why_it_matters": "This source cannot be used for any market structure or macro analysis as it contains no actual data. Treasury auction schedules are important for understanding debt issuance, market demand, and potential yield impacts, but this placeholder provides no actionable information.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
