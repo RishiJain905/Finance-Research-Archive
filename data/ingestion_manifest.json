@@ -203,9 +203,9 @@
     "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/agency-debt-securities": "27abb034558e4114f9301f456d68b96ef1c942e813baf000a15189902ed126eb",
     "https://www.ecb.europa.eu/press/blog/date/2024/html/ecb.blog20240403~f3e74210a9.en.html": "0864277fd04da61150a98590aead91fc2875dfea3730543181943518a08e326e",
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260310~b738caf5b4.en.html": "03a0256afe9d2f0fb1f26a0e8b24f1e943fbeb36b54c9f40c5c6da635c076828",
-    "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "9cbf299f3638c36f7484969c3c2116dbf03dc0f07ff6a88debd0570bb2dfa1fc",
+    "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "f446c0fea4ebdb37f30bb81a65fcb842f931df7167237d63a68d668ed44e124f",
     "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-11": "9bdaed2d30bd0fb13207c15af4b75d013f47c45e42e392e70c3c228a4ff45c32",
-    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "32c96e102653ba36148f965f3c5446b84f0743675b26b8820a27021971532ace",
+    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "99a93bf48790488b669c49f0952947c9f83298c749976436f7158c9e27c866f1",
     "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": "a71aeb3db8443e6216dac122633ca032f5715c69b9b73c2d5498d288f4e6d215",
     "https://home.treasury.gov/news/press-releases/sb0428": "80ad9d97c145f7beeaa0eb47ef88decb7904d9227fd4ed46ac27bf6f58493776",
     "https://home.treasury.gov/news/press-releases/sb0429": "aedaa833393cfd0fe0e4a9976c1bdf6f7a10f0bb86c73502baff12def84ab17f",
@@ -219,7 +219,8 @@
     "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": "37832a5ef4992edcc580bf04a6b5bb54af1d6e765b12aea73b4f56fb4e24637f",
     "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": "1fd6e34e7801e1f2aa7e59bb3987a6bc099eca6f9c5a594aecdc80eacea2f3cb",
     "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "2a63a10f2523f134a500ce4da065a134dd7c025330f587fdb344130fe7dfee6d",
-    "https://home.treasury.gov/news/press-releases/sb0432": "a0f2810b86030c051b1d9346b86cbd09a5886eddf50db09d450fd054f4ad157a"
+    "https://home.treasury.gov/news/press-releases/sb0432": "a0f2810b86030c051b1d9346b86cbd09a5886eddf50db09d450fd054f4ad157a",
+    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260403a.htm": "ac508d41a5eadeaaf36d1d4958fce7ed0a33ec2fbe52e2a258ba4290bd936804"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -441,7 +442,8 @@
     "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9",
     "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
     "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
-    "https://home.treasury.gov/news/press-releases/sb0432": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916"
+    "https://home.treasury.gov/news/press-releases/sb0432": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916",
+    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260403a.htm": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4743,6 +4745,33 @@
       ],
       "target_name": "Treasury Quarterly Refunding",
       "topic": "market structure"
+    },
+    "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75": {
+      "required_keywords": [
+        "federal reserve",
+        "policy",
+        "rates",
+        "inflation",
+        "fomc",
+        "statement"
+      ],
+      "blocked_keywords": [
+        "community development",
+        "consumer help",
+        "student",
+        "holiday"
+      ],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Federal Reserve Press Releases RSS",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -4935,7 +4964,8 @@
     "7e347f938854b3a0d50b80f94d64d5ca9096208b": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9",
     "5f9e416625ca5e63182a03a2f3751e0940bb73ce": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
     "b8123e44d1b141f3b67d5d30942862a92ac3812b": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
-    "1ab00a2396852694e831ee1697c6acb7a090e807": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916"
+    "1ab00a2396852694e831ee1697c6acb7a090e807": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916",
+    "e5c9d339449398d755a0360110a95ff082d89bd7": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5196,7 +5226,9 @@
     "fbace7b0f0e38bff5b80db35db1153002b0c03dc": "dallas_fed_economics_president_lorie_logan_speeches_and_publications_dallasfed_or_22a1afa0",
     "9ed66022005a8a28531b302a9d06e14c6c939add": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
     "f7916b37526e83b68dd0ba79555b225530ea44dd": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
-    "42c3fe995ef8044a20c1bd3ae8e48afd7d4d979a": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916"
+    "42c3fe995ef8044a20c1bd3ae8e48afd7d4d979a": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916",
+    "0c9519458045cba9dba0e0aa7796000654693c3c": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128",
+    "8b1c82914e7829ab303c32076d884a28829927ac": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
