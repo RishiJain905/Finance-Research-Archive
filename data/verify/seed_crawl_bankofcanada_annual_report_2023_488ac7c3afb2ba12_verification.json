@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a thin landing/navigation page, not the actual Annual Report PDF - extracted content includes only a brief foreword summary and navigation menu",
+    "No specific policy numbers, rate decisions, inflation figures, or quantitative data provided",
+    "Published_at date is unknown - cannot verify recency or archival value",
+    "Content is too thin to have meaningful archival value for macro catalyst research",
+    "The page links to sections (PDF, etc.) but the actual substantive report content is not present",
+    "Key_points mention 'foreign bank failures' but source text only says 'foreign bank failures' without specifics - this is a paraphrase"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is a landing page with extremely limited content. While the generated record accurately describes what little text was extracted, the source itself does not contain the substantive policy content that would make this worth archiving. The actual Bank of Canada 2023 Annual Report PDF would be needed for meaningful archival value. The record is honest about the thinness but the underlying source choice appears suboptimal.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Bank of Canada's Annual Report 2023 landing page provides only a brief excerpt from the Governor's foreword and section navigation links. The extracted content states that in 2023 the Bank made progress fighting inflation while acknowledging cost-of-living pressures on Canadians, and references global uncertainty from foreign bank failures and geopolitical conflicts.",
+    "why_it_matters": "This landing page does not contain substantive policy content. The actual Annual Report PDF would need to be retrieved for meaningful archival value. The page serves as an index to the full report sections but provides minimal extractable information.",
+    "macro_context": "The limited extracted content references the 2023 macro environment where the Bank of Canada pursued restrictive monetary policy to reduce inflation, but provides no specific data points or policy details."
+  }
+}

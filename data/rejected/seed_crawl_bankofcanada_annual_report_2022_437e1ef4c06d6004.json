@@ -1,0 +1,77 @@
+{
+  "id": "seed_crawl_bankofcanada_annual_report_2022_437e1ef4c06d6004",
+  "created_at": "2026-04-04T13:04:49.646093+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Annual Report 2022",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/publications/annual-reports-quarterly-financial-reports/annual-report-2022",
+    "published_at": "unknown",
+    "source_type": "listing_page",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "This is the Bank of Canada's Annual Report 2022 landing page, containing only a table of contents and minimal descriptive text. The extracted content confirms that Canadian inflation rose from just under 5% to 8% in June 2022 before falling to just over 6% by year-end, and that the Bank undertook its most rapid tightening cycle in Canada's history. The substantive content of the annual report is not present in this extraction.",
+  "key_points": [
+    "Source is a landing page/table of contents for the full Annual Report 2022, not the actual report content",
+    "Canadian inflation rose from just under 5% at the start of 2022 to 8% in June 2022, then fell to just over 6% by year-end",
+    "The Bank of Canada undertook the most rapid tightening cycle in Canada's history during 2022",
+    "Report sections listed include: mandate and planning framework, monetary policy, financial system, retail payments supervision, funds management, currency, communications, global engagement, governance, risk management, and financial statements",
+    "Actual substantive analysis and data from the report are not included in this extraction"
+  ],
+  "why_it_matters": "This source is too thin to provide actionable research value. It is a navigation page for the Bank of Canada Annual Report 2022, not the report itself. The only substantive information is high-level inflation trajectory and the characterization of the 2022 tightening cycle as the most rapid in Canadian history.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Historical record of Canadian inflation trajectory in 2022 and Bank of Canada monetary policy response. The data confirms inflation peaked at 8% in June 2022 and retreated to just over 6% by year-end, with the Bank responding through aggressive rate hikes.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "8% (Canadian inflation peak in June 2022)",
+    "6% (Canadian inflation at end of 2022)",
+    "5% (Canadian inflation at start of 2022)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "annual-report",
+    "inflation",
+    "monetary-policy",
+    "tightening-cycle",
+    "canada",
+    "2022"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a landing page/table of contents (listing_page), which violates Rule 5 - homepage, navigation_page, listing_page, and search_page types must be rejected",
+      "event_type is set to 'unknown' when 'monetary_policy_report' would be the correct classification given the Bank of Canada Annual Report covering inflation and monetary policy",
+      "Extracted content is extremely thin - only table of contents structure and minimal descriptive headings",
+      "No substantive policy analysis, data tables, or detailed discussion present in this extraction",
+      "Published date remains 'unknown' despite this being a historical 2022 document",
+      "Record has no actionable research value as-is; full PDF content needed for proper archival"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_annual_report_2022_437e1ef4c06d6004.txt",
+  "notes": "This record has extremely low utility for research purposes. The source is the table of contents landing page for the Bank of Canada Annual Report 2022, not the actual report. The extraction contains only navigation elements and minimal summary text. Any research requiring Bank of Canada 2022 Annual Report content should seek the full PDF. The only factual data present is the inflation trajectory (5% → 8% → 6%) and characterization of the tightening cycle.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Source is a navigation page, not substantive content",
+      "Extraction contains only table of contents and headings",
+      "No detailed analysis, data, or policy discussion present",
+      "Historical document with no recent relevance"
+    ]
+  }
+}
