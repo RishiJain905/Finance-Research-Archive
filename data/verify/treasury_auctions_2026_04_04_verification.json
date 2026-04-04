@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a placeholder with no actual content - contains only placeholder text",
+    "No Treasury auction data, dates, results, bid-to-cover ratios, or yields present",
+    "Source explicitly states it will be replaced with real data in the future",
+    "Cannot support any research, analysis, or RAG use cases",
+    "source.url is empty string - missing source attribution",
+    "source.domain is empty string - missing source attribution",
+    "event_type set to 'unknown' which is technically correct given placeholder nature, but the record correctly identifies no event occurred"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record has already undergone human review and correctly identified this as a reject case. The generated record accurately describes the placeholder nature of the source and appropriately recommends fetching actual Treasury auction data. No additional human review needed - auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
