@@ -263,13 +263,13 @@ def main() -> None:
     )
     parser.add_argument(
         "--max-records",
-        type=int,
+        type=lambda x: int(float(x)),
         default=30,
         help="Maximum number of records to process in one run (0 means no cap)",
     )
     parser.add_argument(
         "--process-workers",
-        type=int,
+        type=lambda x: int(float(x)),
         default=2,
         help="Parallel process_record workers (1 for sequential)",
     )
@@ -280,13 +280,13 @@ def main() -> None:
     )
     parser.add_argument(
         "--send-review-max-items",
-        type=int,
+        type=lambda x: int(float(x)),
         default=8,
         help="Maximum Telegram reviews to send after processing",
     )
     parser.add_argument(
         "--send-review-daily-budget",
-        type=int,
+        type=lambda x: int(float(x)),
         default=20,
         help="Daily Telegram review budget for send step (0 means unlimited)",
     )
