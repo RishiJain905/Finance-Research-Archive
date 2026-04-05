@@ -76,5 +76,12 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Finalize review: ${{ inputs.record_id }} (${{ inputs.decision }})"
-            git push origin "HEAD:${{ github.ref_name }}"
+            # Rebase onto any remote commits that landed after our checkout,
+            # then retry the push up to 3 times to handle rare concurrent runs.
+            for attempt in 1 2 3; do
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}" && break
+              echo "Push attempt $attempt failed, retrying..."
+              sleep 5
+            done
           fi

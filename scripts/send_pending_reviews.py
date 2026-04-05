@@ -66,21 +66,36 @@ def record_priority(record: dict, record_path: Path) -> tuple[float, float]:
     return confidence + (score / 1000.0), float(record_path.stat().st_mtime)
 
 
+TELEGRAM_SEND_TIMEOUT = 60  # seconds per attempt
+
+
 def send_review_with_retry(
     python_cmd: str, record_id: str, base_dir: Path, max_retries: int = 3
 ) -> bool:
     for attempt in range(max_retries):
-        result = subprocess.run(
-            [python_cmd, "scripts/send_review_to_telegram.py", record_id],
-            cwd=base_dir,
-            text=True,
-            capture_output=True,
-        )
+        try:
+            result = subprocess.run(
+                [python_cmd, "scripts/send_review_to_telegram.py", record_id],
+                cwd=base_dir,
+                text=True,
+                capture_output=True,
+                timeout=TELEGRAM_SEND_TIMEOUT,
+            )
+        except subprocess.TimeoutExpired:
+            if attempt < max_retries - 1:
+                wait_time = (attempt + 1) * 2
+                print(
+                    f"Retry {attempt + 2}/{max_retries} for {record_id}: send timed out after {TELEGRAM_SEND_TIMEOUT}s, retrying in {wait_time}s"
+                )
+                time.sleep(wait_time)
+            else:
+                print(f"All {max_retries} attempts timed out for {record_id}")
+            continue
 
         if result.returncode == 0:
             return True
 
-        if result.returncode != 0 and attempt < max_retries - 1:
+        if attempt < max_retries - 1:
             wait_time = (attempt + 1) * 2
             print(
                 f"Retry {attempt + 2}/{max_retries} for {record_id} after {wait_time}s. Error: {result.stderr}"

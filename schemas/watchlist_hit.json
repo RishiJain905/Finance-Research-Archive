@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Watchlist Hit",
+  "description": "A match between a record/cluster and a watchlist",
+  "type": "object",
+  "required": ["watchlist_id", "record_id", "match_score", "matched_terms", "thesis_signal", "created_at"],
+  "properties": {
+    "watchlist_id": {
+      "type": "string",
+      "description": "ID of the watchlist that was matched"
+    },
+    "record_id": {
+      "type": "string",
+      "description": "ID of the matched record or cluster"
+    },
+    "event_id": {
+      "type": ["string", "null"],
+      "description": "Event cluster ID if this hit is from cluster-level matching"
+    },
+    "match_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Normalized match score (0-1)"
+    },
+    "matched_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "List of keywords that matched"
+    },
+    "thesis_signal": {
+      "type": "string",
+      "enum": ["strengthening", "weakening", "neutral"],
+      "description": "Signal direction for thesis tracking"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when hit was created"
+    }
+  },
+  "additionalProperties": false
+}

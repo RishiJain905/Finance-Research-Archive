@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Article Source Families",
+  "description": "Master registry of source families, target classes, and priority tiers for V2.7 article source expansion",
+  "families": {
+    "central_bank": {
+      "label": "Central Banks",
+      "description": "Official central bank press, speech, and news sources",
+      "default_priority_tier": "A",
+      "default_topic": "macro catalysts",
+      "batch": 1,
+      "target_count": 22
+    },
+    "regional_fed": {
+      "label": "Regional Federal Reserve Banks",
+      "description": "Regional Fed research, economic briefs, and publications",
+      "default_priority_tier": "A",
+      "default_topic": "macro catalysts",
+      "batch": 1,
+      "target_count": 15
+    },
+    "regulator": {
+      "label": "Regulators and Policy Infrastructure",
+      "description": "Financial regulators and policy-making bodies",
+      "default_priority_tier": "A",
+      "default_topic": "market structure",
+      "batch": 2,
+      "target_count": 16
+    },
+    "exchange_infrastructure": {
+      "label": "Exchanges, Clearing, and Market Infrastructure",
+      "description": "Trading venues, clearinghouses, and market infrastructure providers",
+      "default_priority_tier": "A",
+      "default_topic": "market structure",
+      "batch": 2,
+      "target_count": 15
+    },
+    "research_institution": {
+      "label": "Institutional and Think-Tank Research",
+      "description": "High-signal institutional research and policy analysis",
+      "default_priority_tier": "B",
+      "default_topic": "macro catalysts",
+      "batch": 3,
+      "target_count": 20
+    },
+    "treasury_fiscal": {
+      "label": "Treasury and Fiscal / Debt Context",
+      "description": "Treasury financing, debt management, and fiscal policy sources",
+      "default_priority_tier": "A",
+      "default_topic": "macro catalysts",
+      "batch": 3,
+      "target_count": 10
+    },
+    "global_macro": {
+      "label": "Global Macro Institutions",
+      "description": "International macroeconomic institutions and publications",
+      "default_priority_tier": "B",
+      "default_topic": "macro catalysts",
+      "batch": 3,
+      "target_count": 10
+    }
+  },
+  "target_classes": {
+    "press_release": {
+      "description": "Official press releases and announcements",
+      "typical_max_links": 3
+    },
+    "speech": {
+      "description": "Speeches and remarks by officials",
+      "typical_max_links": 3
+    },
+    "policy_statement": {
+      "description": "Policy statements and decisions",
+      "typical_max_links": 2
+    },
+    "research_article": {
+      "description": "Research papers, working papers, and analysis",
+      "typical_max_links": 4
+    },
+    "blog": {
+      "description": "Blog posts and commentary",
+      "typical_max_links": 4
+    },
+    "market_notice": {
+      "description": "Market notices and operational updates",
+      "typical_max_links": 3
+    },
+    "infrastructure_update": {
+      "description": "Infrastructure and technical updates",
+      "typical_max_links": 3
+    }
+  },
+  "priority_tiers": {
+    "S": {
+      "description": "Core trusted official sources",
+      "enabled_by_default": true
+    },
+    "A": {
+      "description": "Strong central-bank / regulator / infrastructure pages",
+      "enabled_by_default": true
+    },
+    "B": {
+      "description": "Broader research and commentary pages",
+      "enabled_by_default": false
+    },
+    "C": {
+      "description": "Experimental or noisier sources",
+      "enabled_by_default": false
+    }
+  }
+}

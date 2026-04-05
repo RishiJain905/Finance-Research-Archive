@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event Cluster",
+  "description": "Cluster of related records forming a coherent market/event narrative",
+  "type": "object",
+  "required": [
+    "event_id",
+    "title",
+    "topic",
+    "event_type",
+    "summary",
+    "status",
+    "created_at",
+    "updated_at",
+    "record_ids",
+    "source_domains",
+    "keywords",
+    "quant_links",
+    "confidence"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Unique identifier for the event cluster"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the event cluster (generated from top keywords + dominant event_type + strongest source title)"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Primary topic category for the event cluster"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Dominant event type (e.g., fed_speech, rate_change, quant_move)"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief summary of the clustered event/development"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "stable", "archived"],
+      "description": "Cluster lifecycle status: open (actively receiving records), stable (verified, continues accepting), archived (no longer accepting)"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when cluster was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when cluster was last updated"
+    },
+    "record_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Array of record IDs belonging to this cluster"
+    },
+    "source_domains": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Unique source domains represented in this cluster"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Top keywords extracted from clustered records"
+    },
+    "quant_links": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Quant record IDs linked to this event cluster"
+    },
+    "article_links": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Article record IDs linked to this event cluster"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Cluster confidence score (0-1, higher = more confident)"
+    }
+  },
+  "additionalProperties": true
+}

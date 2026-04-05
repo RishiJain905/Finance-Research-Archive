@@ -1,0 +1,1399 @@
+{
+  "batch": 1,
+  "description": "Central banks and regional Federal Reserve Banks",
+  "phase": "Phase 1 - add all disabled, enable family-by-family",
+  "families": ["central_bank", "regional_fed"],
+  "targets": [
+    {
+      "name": "Bank of Japan Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.boj.or.jp/en/announcements/press/press_2024/",
+      "allowed_prefixes": [
+        "https://www.boj.or.jp/en/announcements/press/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/programs/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "bank of japan",
+        "monetary policy",
+        "interest rates",
+        "inflation",
+        "economy"
+      ],
+      "blocked_keywords": [
+        "career",
+        "recruitment",
+        "job",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Bank of Japan Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.boj.or.jp/en/about/press/pr_2024/data/pr_2024.htm",
+      "allowed_prefixes": [
+        "https://www.boj.or.jp/en/about/press/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/museum/",
+        "/events/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "bank of japan",
+        "speech",
+        "governor",
+        "monetary policy",
+        "economy"
+      ],
+      "blocked_keywords": [
+        "career",
+        "recruitment",
+        "job"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "Sveriges Riksbank Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.riksbank.se/en-en/press-and-published/press-releases/",
+      "allowed_prefixes": [
+        "https://www.riksbank.se/en-en/press-and-published/press-releases/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "riksbank",
+        "monetary policy",
+        "interest rates",
+        "inflation",
+        "reporate"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "vacancy"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Sveriges Riksbank Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.riksbank.se/en-en/press-and-published/speeches/",
+      "allowed_prefixes": [
+        "https://www.riksbank.se/en-en/press-and-published/speeches/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "riksbank",
+        "speech",
+        "governor",
+        "monetary policy",
+        "economy"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "Swiss National Bank Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.snb.ch/en/about/overview/media",
+      "allowed_prefixes": [
+        "https://www.snb.ch/en/about/overview/media/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "snb",
+        "swiss national bank",
+        "monetary policy",
+        "interest rates",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Swiss National Bank Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.snb.ch/en/about/overview/media/speeches",
+      "allowed_prefixes": [
+        "https://www.snb.ch/en/about/overview/media/speeches"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "snb",
+        "swiss national bank",
+        "speech",
+        "governor",
+        "monetary policy"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "Norges Bank Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.norges-bank.no/en/news-and-events/press-releases/",
+      "allowed_prefixes": [
+        "https://www.norges-bank.no/en/news-and-events/press-releases/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "norges bank",
+        "monetary policy",
+        "interest rates",
+        "inflation",
+        "key rate"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Norges Bank Monetary Policy",
+      "topic": "macro catalysts",
+      "url": "https://www.norges-bank.no/en/topics/Monetary-policy-and-financial-stability/",
+      "allowed_prefixes": [
+        "https://www.norges-bank.no/en/topics/Monetary-policy-and-financial-stability/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 2,
+      "required_keywords": [
+        "norges bank",
+        "monetary policy",
+        "interest rates",
+        "inflation",
+        "policy rate"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment"
+      ],
+      "min_word_count": 180,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "policy_statement",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release", "policy_statement"]
+    },
+    {
+      "name": "Reserve Bank of India Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx",
+      "allowed_prefixes": [
+        "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/programs/",
+        "/category/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "reserve bank of india",
+        "rbi",
+        "monetary policy",
+        "interest rates",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "careers"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Reserve Bank of India Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.rbi.org.in/scripts/BS_SpeechesView.aspx",
+      "allowed_prefixes": [
+        "https://www.rbi.org.in/scripts/BS_SpeechesView.aspx"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/programs/",
+        "/category/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "reserve bank of india",
+        "rbi",
+        "speech",
+        "governor",
+        "monetary policy"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "Banco de Mexico Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.banxico.org.mx/impresion/paginas/",
+      "allowed_prefixes": [
+        "https://www.banxico.org.mx/impresion/paginas/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/category/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "banxico",
+        "banco de mexico",
+        "monetary policy",
+        "interest rates",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "empleo"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "es",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Monetary Authority of Singapore Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.mas.gov.sg/news/press-releases",
+      "allowed_prefixes": [
+        "https://www.mas.gov.sg/news/press-releases/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "monetary authority of singapore",
+        "mas",
+        "monetary policy",
+        "exchange rate",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Hong Kong Monetary Authority Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/",
+      "allowed_prefixes": [
+        "https://www.hkma.gov.hk/eng/news-and-media/press-releases/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "hkma",
+        "hong kong monetary authority",
+        "monetary policy",
+        "exchange rate",
+        "financial stability"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Hong Kong Monetary Authority Research",
+      "topic": "macro catalysts",
+      "url": "https://www.hkma.gov.hk/eng/research/",
+      "allowed_prefixes": [
+        "https://www.hkma.gov.hk/eng/research/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "hkma",
+        "hong kong monetary authority",
+        "research",
+        "economic",
+        "financial"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Bank of Canada Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.bankofcanada.ca/category/speeches/",
+      "allowed_prefixes": [
+        "https://www.bankofcanada.ca/category/speeches/",
+        "https://www.bankofcanada.ca/press/speeches/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "bank of canada",
+        "speech",
+        "governor",
+        "monetary policy",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "museum"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "Bank of England Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.bankofengland.co.uk/speeches",
+      "allowed_prefixes": [
+        "https://www.bankofengland.co.uk/speech/",
+        "https://www.bankofengland.co.uk/news/speeches"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "bank of england",
+        "speech",
+        "governor",
+        "monetary policy",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "museum"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "ECB Speeches",
+      "topic": "macro catalysts",
+      "url": "https://www.ecb.europa.eu/press/key/html/index.en.html",
+      "allowed_prefixes": [
+        "https://www.ecb.europa.eu/press/key/date/",
+        "https://www.ecb.europa.eu/press/key/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/banknotes/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "ecb",
+        "european central bank",
+        "speech",
+        "monetary policy",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "ceremony"
+      ],
+      "min_word_count": 220,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "speech",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "speech"]
+    },
+    {
+      "name": "ECB Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.ecb.europa.eu/press/pr/html/index.en.html",
+      "allowed_prefixes": [
+        "https://www.ecb.europa.eu/press/pr/html/",
+        "https://www.ecb.europa.eu/press/pr/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/banknotes/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "ecb",
+        "european central bank",
+        "press release",
+        "monetary policy",
+        "interest rates"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Reserve Bank of Australia Media Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.rba.gov.au/media-releases/",
+      "allowed_prefixes": [
+        "https://www.rba.gov.au/media-releases/",
+        "https://www.rba.gov.au/speeches/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "rba",
+        "reserve bank of australia",
+        "monetary policy",
+        "interest rates",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "museum"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Reserve Bank of New Zealand Press",
+      "topic": "macro catalysts",
+      "url": "https://www.rbnz.govt.nz/news",
+      "allowed_prefixes": [
+        "https://www.rbnz.govt.nz/news/",
+        "https://www.rbnz.govt.nz/hub/news/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "rbnz",
+        "reserve bank of new zealand",
+        "monetary policy",
+        "ocr",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "museum"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "South African Reserve Bank Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.resbank.co.za/en/home/publications/press-releases",
+      "allowed_prefixes": [
+        "https://www.resbank.co.za/en/home/publications/press-releases/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "south african reserve bank",
+        "resbank",
+        "monetary policy",
+        "interest rates",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Central Bank of Brazil Press Releases",
+      "topic": "macro catalysts",
+      "url": "https://www.bcb.gov.br/en/pressdetail",
+      "allowed_prefixes": [
+        "https://www.bcb.gov.br/en/pressdetail/",
+        "https://www.bcb.gov.br/en/press/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/category/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "banco central do brasil",
+        "brazil central bank",
+        "bcb",
+        "monetary policy",
+        "selic rate"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "central_bank",
+      "target_class": "press_release",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "press_release"]
+    },
+    {
+      "name": "Minneapolis Fed Publications",
+      "topic": "macro catalysts",
+      "url": "https://www.minneapolisfed.org/publications",
+      "allowed_prefixes": [
+        "https://www.minneapolisfed.org/publications/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/people/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "minneapolis fed",
+        "federal reserve",
+        "research",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "classroom"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Richmond Fed Economic Brief",
+      "topic": "macro catalysts",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief",
+      "allowed_prefixes": [
+        "https://www.richmondfed.org/publications/research/economic_brief/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "richmond fed",
+        "federal reserve",
+        "economic brief",
+        "research",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "classroom",
+        "student"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Cleveland Fed Commentary",
+      "topic": "macro catalysts",
+      "url": "https://www.clevelandfed.org/publications/commentary",
+      "allowed_prefixes": [
+        "https://www.clevelandfed.org/publications/commentary/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "cleveland fed",
+        "federal reserve",
+        "commentary",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Dallas Fed Economics Blog",
+      "topic": "macro catalysts",
+      "url": "https://www.dallasfed.org/research/blogs",
+      "allowed_prefixes": [
+        "https://www.dallasfed.org/research/blogs/",
+        "https://www.dallasfed.org/research/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "dallas fed",
+        "federal reserve",
+        "economics",
+        "blog",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "teacher"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "blog",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "blog"]
+    },
+    {
+      "name": "Boston Fed Policy Perspectives",
+      "topic": "macro catalysts",
+      "url": "https://www.bostonfed.org/publications/current-policy-perspectives.htm",
+      "allowed_prefixes": [
+        "https://www.bostonfed.org/publications/current-policy-perspectives",
+        "https://www.bostonfed.org/publications/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "boston fed",
+        "federal reserve",
+        "policy perspectives",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "visitor"
+      ],
+      "min_word_count": 180,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Kansas City Fed Economic Review",
+      "topic": "macro catalysts",
+      "url": "https://www.kansascityfed.org/research/economic-review/",
+      "allowed_prefixes": [
+        "https://www.kansascityfed.org/research/economic-review/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "kansas city fed",
+        "federal reserve",
+        "economic review",
+        "research",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 180,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "San Francisco Fed Economic Letter",
+      "topic": "macro catalysts",
+      "url": "https://www.frbsf.org/research-and-insights/publications/economic-letter/",
+      "allowed_prefixes": [
+        "https://www.frbsf.org/research-and-insights/publications/economic-letter/",
+        "https://www.frbsf.org/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "san francisco fed",
+        "federal reserve",
+        "economic letter",
+        "research",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "community"
+      ],
+      "min_word_count": 180,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "St. Louis Fed On the Economy",
+      "topic": "macro catalysts",
+      "url": "https://www.stlouisfed.org/on-the-economy",
+      "allowed_prefixes": [
+        "https://www.stlouisfed.org/on-the-economy",
+        "https://www.stlouisfed.org/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "st louis fed",
+        "federal reserve",
+        "on the economy",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "blog",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "blog"]
+    },
+    {
+      "name": "Philadelphia Fed Research",
+      "topic": "macro catalysts",
+      "url": "https://www.philadelphiafed.org/surveys-and-data",
+      "allowed_prefixes": [
+        "https://www.philadelphiafed.org/surveys-and-data/",
+        "https://www.philadelphiafed.org/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "philadelphia fed",
+        "federal reserve",
+        "research",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Chicago Fed Letter",
+      "topic": "macro catalysts",
+      "url": "https://www.chicagofed.org/publications/chicago-fed-letter",
+      "allowed_prefixes": [
+        "https://www.chicagofed.org/publications/chicago-fed-letter/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "chicago fed",
+        "federal reserve",
+        "chicago fed letter",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "Atlanta Fed Macro Blog",
+      "topic": "macro catalysts",
+      "url": "https://www.atlantafed.org/blogs/macro-blog",
+      "allowed_prefixes": [
+        "https://www.atlantafed.org/blogs/macro-blog",
+        "https://www.atlantafed.org/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "atlanta fed",
+        "federal reserve",
+        "macro blog",
+        "economic",
+        "inflation"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "community"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "blog",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "blog"]
+    },
+    {
+      "name": "Atlanta Fed GDPNow",
+      "topic": "macro catalysts",
+      "url": "https://www.atlantafed.org/cqer/research/gdpnow",
+      "allowed_prefixes": [
+        "https://www.atlantafed.org/cqer/research/gdpnow"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "atlanta fed",
+        "gdpnow",
+        "gdp forecast",
+        "economic",
+        "growth"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "community"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    },
+    {
+      "name": "New York Fed Liberty Street Economics",
+      "topic": "market structure",
+      "url": "https://libertystreeteconomics.newyorkfed.org/",
+      "allowed_prefixes": [
+        "https://libertystreeteconomics.newyorkfed.org/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "new york fed",
+        "liberty street economics",
+        "federal reserve",
+        "economic",
+        "market"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 150,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "blog",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "blog"]
+    },
+    {
+      "name": "St. Louis Fed FRED Blog",
+      "topic": "market structure",
+      "url": "https://fredblog.stlouisfed.org/",
+      "allowed_prefixes": [
+        "https://fredblog.stlouisfed.org/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 4,
+      "required_keywords": [
+        "st louis fed",
+        "fred",
+        "federal reserve",
+        "economic data",
+        "research"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student"
+      ],
+      "min_word_count": 120,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "blog",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "blog"]
+    },
+    {
+      "name": "New York Fed Staff Reports",
+      "topic": "market structure",
+      "url": "https://www.newyorkfed.org/research/staff_reports",
+      "allowed_prefixes": [
+        "https://www.newyorkfed.org/research/staff_reports/",
+        "https://www.newyorkfed.org/research/"
+      ],
+      "url_blocklist_fragments": [
+        "/about/",
+        "/careers/",
+        "/education/",
+        "/events/",
+        "/museum/"
+      ],
+      "max_links": 3,
+      "required_keywords": [
+        "new york fed",
+        "staff reports",
+        "federal reserve",
+        "research",
+        "economic"
+      ],
+      "blocked_keywords": [
+        "career",
+        "job",
+        "recruitment",
+        "student",
+        "museum"
+      ],
+      "min_word_count": 200,
+      "enabled": false,
+      "disabled_reason": "Phase 1 - not yet enabled",
+      "family": "regional_fed",
+      "target_class": "research_article",
+      "priority_tier": "A",
+      "expected_language": "en",
+      "allowed_page_types": ["article", "research_article"]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Source Stats",
+  "description": "Per-source performance statistics",
+  "type": "object",
+  "required": [
+    "source_name", "source_domain", "records_seen",
+    "accepted_count", "review_count", "rejected_count", "filtered_out_count",
+    "accepted_ratio", "review_ratio", "rejected_ratio", "filtered_ratio",
+    "avg_priority_score", "avg_verification_confidence", "last_seen_at"
+  ],
+  "properties": {
+    "source_name": {"type": "string"},
+    "source_domain": {"type": "string"},
+    "records_seen": {"type": "integer", "minimum": 0},
+    "accepted_count": {"type": "integer", "minimum": 0},
+    "review_count": {"type": "integer", "minimum": 0},
+    "rejected_count": {"type": "integer", "minimum": 0},
+    "filtered_out_count": {"type": "integer", "minimum": 0},
+    "accepted_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+    "review_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+    "rejected_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+    "filtered_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+    "avg_priority_score": {"type": "number", "minimum": 0},
+    "avg_verification_confidence": {"type": "number", "minimum": 0, "maximum": 10},
+    "last_seen_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

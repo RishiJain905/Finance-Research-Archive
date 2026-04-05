@@ -328,17 +328,18 @@ def crawl_seed(seed_config: Dict[str, Any]) -> List[Dict[str, Any]]:
     max_depth = seed_config.get("max_depth", 2)
     max_pages = seed_config.get("max_pages", 20)
 
-    # Load URLs that were processed recently so we can skip them in BFS.
-    # This prevents re-visiting (and re-emitting) the exact same pages on
-    # every run.  We use the same 7-day window as URL-level dedup.
-    recently_crawled = _load_recently_crawled_urls(window_days=7)
+    # Track URLs visited within this single BFS run to avoid fetching the
+    # same page twice if multiple parent pages link to it.  Cross-run
+    # deduplication is handled downstream by process_dedupe, which checks
+    # the persistent candidate index; using the persistent index here was
+    # causing the BFS to skip all depth>=1 links on every repeat run,
+    # preventing new content from ever being discovered.
+    recently_crawled: Set[str] = set()
 
     # Initialize queue
     queue = CrawlQueue(max_pages=max_pages, max_depth=max_depth)
 
     # Seed the queue with start URLs at depth 0.
-    # Start URLs are always enqueued even if recently crawled because they
-    # serve as entry points to discover *new* child links.
     for start_url in start_urls:
         item = create_queue_item(
             url=start_url,
@@ -368,13 +369,10 @@ def crawl_seed(seed_config: Dict[str, Any]) -> List[Dict[str, Any]]:
         if not is_url_in_scope(url, allowed_prefixes, blocked_fragments):
             continue
 
-        # Skip pages we have already processed recently.  This is a
-        # pre-filter before the HTTP fetch to save bandwidth and prevent
-        # duplicate candidates being emitted from the crawl itself.
+        # Skip depth>=1 pages already fetched in this run (e.g., linked
+        # from multiple parents).  Start URLs (depth=0) are always fetched.
         url_hash = hash_url(url)
         if url_hash in recently_crawled and crawl_item.get("depth", 0) > 0:
-            # Still extract child links from start-URL-level pages so we can
-            # discover freshly published content linked from navigation pages.
             continue
 
         # Fetch page

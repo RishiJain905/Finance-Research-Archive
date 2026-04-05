@@ -107,14 +107,15 @@ def verify_manifest_consistency() -> None:
             )
 
     for url in processed_urls:
-        if url not in record_map.values():
+        if url not in record_map:
             issues.append(f"processed_urls has URL not in record_map: {url}")
 
     orphaned_raw_files = []
     if RAW_DIR.exists():
+        record_ids_in_manifest = set(record_map.values())
         for raw_file in RAW_DIR.glob("*.txt"):
             record_id = raw_file.stem
-            if record_id not in record_map:
+            if record_id not in record_ids_in_manifest:
                 orphaned_raw_files.append(record_id)
 
     if issues:
@@ -177,6 +178,81 @@ def process_record_id(record_id: str, python_cmd: str) -> tuple[str, bool, str]:
     return record_id, False, message
 
 
+def create_candidates_from_raw_records(
+    record_ids: list[str], lane: str = "trusted_sources"
+) -> list[dict]:
+    """Convert raw records to candidates for triage.
+
+    Args:
+        record_ids: List of raw record IDs to convert
+        lane: Discovery lane (trusted_sources, keyword_discovery, seed_crawl)
+
+    Returns:
+        List of candidate dicts
+    """
+    from scripts.convert_raw_to_candidate import convert_batch_raw_to_candidates
+
+    return convert_batch_raw_to_candidates(record_ids, lane)
+
+
+def run_triage_on_candidates(
+    candidates: list[dict], lane: str = "trusted_sources"
+) -> tuple[list[dict], list[dict], list[dict]]:
+    """Run triage engine on candidates.
+
+    Args:
+        candidates: List of candidate dicts
+        lane: Lane name for budget config selection
+
+    Returns:
+        Tuple of (process_now, defer, discard) lists
+    """
+    from scripts.triage_engine import run_triage, load_weights, load_budget_config
+    from scripts.triage_budget_gate import apply_budget_gate
+
+    if not candidates:
+        return [], [], []
+
+    weights = load_weights()
+    bands = weights.get("bands", {})
+    budget_config = load_budget_config()
+
+    weights_dict = weights.get("weights", {})
+
+    # Run triage
+    process_now, defer, discard = run_triage(
+        candidates, weights_dict, bands, budget_config
+    )
+
+    return process_now, defer, discard
+
+
+def apply_budget_gate_to_triage_results(
+    process_list: list[dict],
+    defer_list: list[dict],
+    discard_list: list[dict],
+    lane: str = "trusted_sources",
+) -> tuple[list[dict], list[dict], list[dict]]:
+    """Apply budget gate to triage results.
+
+    Args:
+        process_list: Candidates to process
+        defer_list: Deferred candidates
+        discard_list: Discarded candidates
+        lane: Lane for budget limit selection
+
+    Returns:
+        Tuple of (process, defer, discard) after budget applied
+    """
+    from scripts.triage_budget_gate import apply_budget_gate
+    from scripts.triage_engine import load_budget_config
+
+    budget_config = load_budget_config()
+    return apply_budget_gate(
+        process_list, defer_list, discard_list, budget_config, lane
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Run article ingest/filter/process pipeline with bounded scope."
@@ -188,13 +264,13 @@ def main() -> None:
     )
     parser.add_argument(
         "--max-records",
-        type=int,
+        type=lambda x: int(float(x)),
         default=30,
         help="Maximum number of records to process in one run (0 means no cap)",
     )
     parser.add_argument(
         "--process-workers",
-        type=int,
+        type=lambda x: int(float(x)),
         default=2,
         help="Parallel process_record workers (1 for sequential)",
     )
@@ -205,13 +281,13 @@ def main() -> None:
     )
     parser.add_argument(
         "--send-review-max-items",
-        type=int,
+        type=lambda x: int(float(x)),
         default=8,
         help="Maximum Telegram reviews to send after processing",
     )
     parser.add_argument(
         "--send-review-daily-budget",
-        type=int,
+        type=lambda x: int(float(x)),
         default=20,
         help="Daily Telegram review budget for send step (0 means unlimited)",
     )

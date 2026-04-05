@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Story Edge",
+  "description": "Directed edge representing relationship between nodes in the story graph",
+  "type": "object",
+  "required": [
+    "from_type",
+    "from_id",
+    "to_type",
+    "to_id",
+    "relationship",
+    "weight"
+  ],
+  "properties": {
+    "from_type": {
+      "type": "string",
+      "enum": ["record", "event", "quant", "theme"],
+      "description": "Type of the source node (record, event, quant, or theme)"
+    },
+    "from_id": {
+      "type": "string",
+      "description": "ID of the source node"
+    },
+    "to_type": {
+      "type": "string",
+      "enum": ["record", "event", "quant", "theme"],
+      "description": "Type of the target node (record, event, quant, or theme)"
+    },
+    "to_id": {
+      "type": "string",
+      "description": "ID of the target node"
+    },
+    "relationship": {
+      "type": "string",
+      "enum": ["supports", "extends", "quant_context", "contradicts", "duplicate_theme"],
+      "description": "Nature of the relationship: supports (confirms), extends (builds on), quant_context (quant data explains), contradicts (conflicts), duplicate_theme (same theme, different coverage)"
+    },
+    "weight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Edge weight/confidence (0-1, higher = stronger relationship)"
+    }
+  },
+  "additionalProperties": true
+}

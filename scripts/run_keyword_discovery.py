@@ -377,10 +377,10 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
     # Step 2: Score
     print(f"\n[Pipeline] Step 2: Scoring {len(candidates)} candidates...")
     start = time.perf_counter()
-    for candidate in candidates:
-        candidate = score_candidate(candidate)
-        score = candidate.get("candidate_scores", {}).get("total_score", 0)
-        print(f"  - {candidate['candidate_id']}: score={score}")
+    candidates = [score_candidate(c) for c in candidates]
+    for c in candidates:
+        score = c.get("candidate_scores", {}).get("total_score", 0)
+        print(f"  - {c['candidate_id']}: score={score}")
     timings["score"] = time.perf_counter() - start
 
     # Step 3: Filter by score
@@ -414,6 +414,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
     print(f"\n[Pipeline] Step 5: Processing {len(record_paths)} records...")
     record_ids = [p.stem for p in record_paths]
 
+    PROCESS_RECORD_TIMEOUT = 300  # 5 minutes per record
     start = time.perf_counter()
     for record_id in record_ids:
         print(f"  - Processing {record_id}...")
@@ -423,6 +424,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
                 cwd=BASE_DIR,
                 capture_output=True,
                 text=True,
+                timeout=PROCESS_RECORD_TIMEOUT,
             )
             if result.returncode != 0:
                 print(
@@ -430,6 +432,8 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
                 )
             else:
                 print(f"    [OK] Processed {record_id}")
+        except subprocess.TimeoutExpired:
+            print(f"    [Warning] process_record timed out for {record_id} after {PROCESS_RECORD_TIMEOUT}s")
         except Exception as e:
             print(f"    [Warning] Error processing {record_id}: {e}")
     timings["process"] = time.perf_counter() - start

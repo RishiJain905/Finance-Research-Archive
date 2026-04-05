@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Watchlist",
+  "description": "A user-defined watchlist for tracking specific macro/market themes",
+  "type": "object",
+  "required": ["watchlist_id", "title", "topic", "keywords", "priority", "enabled"],
+  "properties": {
+    "watchlist_id": {
+      "type": "string",
+      "description": "Unique identifier for the watchlist (e.g., 'wl_repo_stress')"
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable title for the watchlist"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Primary topic category (e.g., 'repo', 'treasury', 'inflation')"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of what this watchlist monitors"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Keywords used for matching against records and clusters",
+      "minItems": 1
+    },
+    "required_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Terms that MUST be present for a match to occur"
+    },
+    "blocked_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Terms that disqualify a match if present"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Priority level for this watchlist"
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether this watchlist is active for matching"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Source Recommendation",
+  "description": "Actionable recommendation for a source based on performance analytics",
+  "type": "object",
+  "required": ["source_name", "recommended_action", "reasons", "metrics_snapshot", "created_at"],
+  "properties": {
+    "source_name": {"type": "string"},
+    "recommended_action": {
+      "type": "string",
+      "enum": ["keep", "tighten", "lower_max_links", "disable", "investigate"]
+    },
+    "reasons": {"type": "array", "items": {"type": "string"}},
+    "metrics_snapshot": {
+      "type": "object",
+      "required": ["accepted_ratio", "filtered_ratio", "review_ratio"],
+      "properties": {
+        "accepted_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+        "filtered_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+        "review_ratio": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}
