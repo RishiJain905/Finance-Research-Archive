@@ -14,18 +14,22 @@ from typing import Optional
 
 
 def generate_hit_id(
-    watchlist_id: str, record_id: str, timestamp: Optional[str] = None
+    watchlist_id: str,
+    record_id: Optional[str] = None,
+    timestamp: Optional[str] = None,
+    event_id: Optional[str] = None,
 ) -> str:
-    """Generate a unique hit ID from watchlist_id + record_id + timestamp.
+    """Generate a unique hit ID from watchlist_id + record_id/event_id + timestamp.
 
-    Format: {watchlist_id}_{record_id}_{timestamp}
+    Format: {watchlist_id}_{record_id or event_id}_{timestamp}
     If timestamp not provided, use current UTC time in YYYYMMDD_HHMMSS format.
 
     Args:
         watchlist_id: The ID of the watchlist
-        record_id: The ID of the matched record
+        record_id: The ID of the matched record (may be None for cluster hits)
         timestamp: Optional timestamp in YYYYMMDD_HHMMSS format. If not provided,
                    current UTC time is used.
+        event_id: Optional event/cluster ID for cluster hits.
 
     Returns:
         A unique hit ID string
@@ -33,7 +37,10 @@ def generate_hit_id(
     if timestamp is None:
         now = datetime.now(timezone.utc)
         timestamp = now.strftime("%Y%m%d_%H%M%S")
-    return f"{watchlist_id}_{record_id}_{timestamp}"
+
+    # Use record_id if available, fall back to event_id for cluster hits
+    entity_id = record_id if record_id else (event_id or "unknown")
+    return f"{watchlist_id}_{entity_id}_{timestamp}"
 
 
 def save_watchlist_hit(hit: dict, hits_dir: str) -> Path:
@@ -61,7 +68,10 @@ def save_watchlist_hit(hit: dict, hits_dir: str) -> Path:
             # If already in correct format or can't parse, use as-is
             pass
 
-    hit_id = generate_hit_id(hit["watchlist_id"], hit["record_id"], timestamp_str)
+    event_id = hit.get("event_id")
+    hit_id = generate_hit_id(
+        hit["watchlist_id"], hit.get("record_id"), timestamp_str, event_id
+    )
 
     # Ensure directory exists
     os.makedirs(hits_dir, exist_ok=True)

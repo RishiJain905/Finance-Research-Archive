@@ -115,9 +115,9 @@ def main() -> None:
 
         # V2.7 Part 2: Event Clustering - cluster newly accepted records
         try:
-            from scripts.cluster_records import main as cluster_records_main
+            from scripts.cluster_records import cluster_all_records
 
-            cluster_records_main()
+            cluster_all_records()
         except Exception as e:
             print(f"Warning: Clustering step skipped: {e}")
     else:

@@ -609,6 +609,21 @@ def process_accepted_records(lookback_days: int = 7) -> int:
     return processed_count
 
 
+def cluster_all_records(lookback_days: int = 7) -> int:
+    """Run clustering programmatically without CLI arg parsing.
+
+    This is the safe entry point for calling from process_record.py,
+    avoiding sys.argv pollution that would crash argparse.
+
+    Args:
+        lookback_days: Number of days to look back for existing clusters.
+
+    Returns:
+        Number of records processed.
+    """
+    return process_accepted_records(lookback_days)
+
+
 def main():
     """CLI entry point."""
     import argparse
@@ -624,7 +639,7 @@ def main():
     )
     args = parser.parse_args()
 
-    count = process_accepted_records(args.lookback_days)
+    count = cluster_all_records(args.lookback_days)
     if count is not None:
         print(f"Processed {count} accepted records")
 

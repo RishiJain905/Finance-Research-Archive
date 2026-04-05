@@ -564,7 +564,7 @@ def compute_link_score(
     if time_score > 0:
         dimensions.append("time_window")
     if topic_score > 0:
-        dimensions.append("topic_compatibility")
+        dimensions.append("topic")
     if keyword_score > 0:
         dimensions.append("keyword_overlap")
     if event_score > 0:
