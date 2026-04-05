@@ -220,7 +220,13 @@
     "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": "1fd6e34e7801e1f2aa7e59bb3987a6bc099eca6f9c5a594aecdc80eacea2f3cb",
     "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "2a63a10f2523f134a500ce4da065a134dd7c025330f587fdb344130fe7dfee6d",
     "https://home.treasury.gov/news/press-releases/sb0432": "a0f2810b86030c051b1d9346b86cbd09a5886eddf50db09d450fd054f4ad157a",
-    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260403a.htm": "ac508d41a5eadeaaf36d1d4958fce7ed0a33ec2fbe52e2a258ba4290bd936804"
+    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260403a.htm": "ac508d41a5eadeaaf36d1d4958fce7ed0a33ec2fbe52e2a258ba4290bd936804",
+    "https://www.bis.org/publ/bppdf/bispap169.htm": "992e69cdffc81c3e611360f8d0dfcc4f8e6994da87d83c7fb7956f9d5af6d34e",
+    "https://www.bis.org/publ/work1342.htm": "50247287dba0b3fcecb219704bbebc9af8100f939eaa48e34732ba6e541c65c9",
+    "https://www.bis.org/publ/work1341.htm": "93701f15132deb5142095c91766752f0f79bc397e8a4d8d3e482b22ee2b7dfaa",
+    "https://www.bis.org/review/r260331e.htm": "59b719cff5260c3b49dc24c2087d03df77dfd0bc35cd91af2d1827e57048605f",
+    "https://www.bis.org/review/r260331d.htm": "c9160279c29d25f3fec621b41b7f26c11bf76b909a9dde63ae85b740a07efc62",
+    "https://www.bis.org/review/r260331c.htm": "db0c3c57577f265d73e7d96e3172eaf0ca604cc9166a0f121c8930f68cd03d26"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -443,7 +449,13 @@
     "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
     "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
     "https://home.treasury.gov/news/press-releases/sb0432": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916",
-    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260403a.htm": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75"
+    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260403a.htm": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75",
+    "https://www.bis.org/publ/bppdf/bispap169.htm": "bis_publications_rss_climate_change_and_central_banking_macroeconomic_challenges_4b4157c4",
+    "https://www.bis.org/publ/work1342.htm": "bis_publications_rss_quantum_bayesian_inference_an_exploration_be778955",
+    "https://www.bis.org/publ/work1341.htm": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
+    "https://www.bis.org/review/r260331e.htm": "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906",
+    "https://www.bis.org/review/r260331d.htm": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
+    "https://www.bis.org/review/r260331c.htm": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4772,6 +4784,132 @@
       ],
       "target_name": "Federal Reserve Press Releases RSS",
       "topic": "macro catalysts"
+    },
+    "bis_publications_rss_climate_change_and_central_banking_macroeconomic_challenges_4b4157c4": {
+      "required_keywords": [
+        "monetary policy",
+        "financial stability",
+        "banking",
+        "liquidity",
+        "market"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BIS Publications RSS",
+      "topic": "market structure"
+    },
+    "bis_publications_rss_quantum_bayesian_inference_an_exploration_be778955": {
+      "required_keywords": [
+        "monetary policy",
+        "financial stability",
+        "banking",
+        "liquidity",
+        "market"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BIS Publications RSS",
+      "topic": "market structure"
+    },
+    "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc": {
+      "required_keywords": [
+        "monetary policy",
+        "financial stability",
+        "banking",
+        "liquidity",
+        "market"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BIS Publications RSS",
+      "topic": "market structure"
+    },
+    "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906": {
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "financial stability",
+        "rates",
+        "central bank"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 200,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BIS Speeches RSS",
+      "topic": "macro catalysts"
+    },
+    "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831": {
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "financial stability",
+        "rates",
+        "central bank"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 200,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BIS Speeches RSS",
+      "topic": "macro catalysts"
+    },
+    "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287": {
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "financial stability",
+        "rates",
+        "central bank"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 200,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "BIS Speeches RSS",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -4965,7 +5103,13 @@
     "5f9e416625ca5e63182a03a2f3751e0940bb73ce": "bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467",
     "b8123e44d1b141f3b67d5d30942862a92ac3812b": "bank_of_england_publications_r_out_of_work_out_of_the_labour_force_attachment_search_effort_bfafa36a",
     "1ab00a2396852694e831ee1697c6acb7a090e807": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916",
-    "e5c9d339449398d755a0360110a95ff082d89bd7": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75"
+    "e5c9d339449398d755a0360110a95ff082d89bd7": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75",
+    "d68c2a704983a40192e8acd50b26ecd2cbdd937a": "bis_publications_rss_climate_change_and_central_banking_macroeconomic_challenges_4b4157c4",
+    "c3d51cf6d9d14444029358ccc78db8380caabddd": "bis_publications_rss_quantum_bayesian_inference_an_exploration_be778955",
+    "894d5009899e29e5d9a47cb2490f1907af25758c": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
+    "0b0abd618ca2943f9b79934e71f0723d61d7772c": "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906",
+    "d8fd9c52fafb58c898d56ffbb47d87c3dcfff262": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
+    "9f43155c83990dff274056da404a99733d959c73": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5229,7 +5373,13 @@
     "42c3fe995ef8044a20c1bd3ae8e48afd7d4d979a": "treasury_quarterly_refunding_treasury_and_irs_to_provide_guidance_to_religious_organizati_76d61916",
     "0c9519458045cba9dba0e0aa7796000654693c3c": "new_york_fed_liberty_street_ec_regional_analysis_archives_liberty_street_economics_4ca22128",
     "8b1c82914e7829ab303c32076d884a28829927ac": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_issues_enforceme_25062b75",
-    "f6a6534773ff9fd509386df0c130e1f918058f7e": "new_york_fed_liberty_street_ec_sports_betting_is_everywhere_especially_on_credit_reports_li_302bb265"
+    "f6a6534773ff9fd509386df0c130e1f918058f7e": "new_york_fed_liberty_street_ec_sports_betting_is_everywhere_especially_on_credit_reports_li_302bb265",
+    "7905804908f92bfd24568ec93a8eea4ff520c3aa": "bis_publications_rss_climate_change_and_central_banking_macroeconomic_challenges_4b4157c4",
+    "5c2a5ffaec8bb3c4e415c441b12380b47809a6eb": "bis_publications_rss_quantum_bayesian_inference_an_exploration_be778955",
+    "3597ea7a0678970e56db024d7be598e375b95b2f": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
+    "e965f6b53c05cded8416db897f4dedc591136369": "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906",
+    "0cfb154ec42eb470c9e6f1d218ded6ab16c07cbb": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
+    "c6bb3b87bf1f9ba405fd4c6237663e61ba09e901": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
@@ -5327,7 +5477,12 @@
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260331~af8055c801.en.html": true,
     "https://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/": true,
     "https://www.bankofengland.co.uk/working-paper/2026/out-of-work-out-of-the-labour-force": true,
-    "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": true
+    "https://www.bankofengland.co.uk/weekly-report/2026/1-april-2026": true,
+    "https://www.bis.org/review/r260331c.htm": true,
+    "https://www.bis.org/review/r260331d.htm": true,
+    "https://www.bis.org/review/r260331e.htm": true,
+    "https://www.bis.org/publ/work1341.htm": true,
+    "https://www.bis.org/publ/bppdf/bispap169.htm": true
   },
   "event_fingerprints": {
     "f1df9a7292a5b92b1163438346b6fae3a7f03a62": "keyword_discovery_federalreserve_federal_reserve_issues_fomc_statement_459ed78faf1dfd41",
@@ -5395,6 +5550,8 @@
     "fa45b1b5d7c19f9bccad3e6256dd5719f9a1c410": "ecb_blog_from_peak_back_to_target_tracking_expectations_during_the_in_d542f2b1",
     "d267445b1b618df882b7933b3c05d4b9819e623f": "new_york_fed_liberty_street_ec_treasury_market_liquidity_since_april_2025_liberty_street_ec_1e7532d9",
     "77195e75d23a09d8183efef48282b7c8ff7527d3": "seed_crawl_treasury_statement_from_secretary_of_the_65712c4770510505",
-    "c67596f5ecbdbe3a4e8eeba7bc08d617c09d376f": "keyword_discovery_ecb.europa_geopolitics_and_foreign_holdings_of_296f15eca8e3aedd"
+    "c67596f5ecbdbe3a4e8eeba7bc08d617c09d376f": "keyword_discovery_ecb.europa_geopolitics_and_foreign_holdings_of_296f15eca8e3aedd",
+    "ea472c94546e331cf558a4f60cdcb95ece9b2315": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
+    "bd6d055dc705d39497df992859882d3c4dfc1d2a": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc"
   }
 }
