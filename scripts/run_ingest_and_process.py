@@ -107,14 +107,15 @@ def verify_manifest_consistency() -> None:
             )
 
     for url in processed_urls:
-        if url not in record_map.values():
+        if url not in record_map:
             issues.append(f"processed_urls has URL not in record_map: {url}")
 
     orphaned_raw_files = []
     if RAW_DIR.exists():
+        record_ids_in_manifest = set(record_map.values())
         for raw_file in RAW_DIR.glob("*.txt"):
             record_id = raw_file.stem
-            if record_id not in record_map:
+            if record_id not in record_ids_in_manifest:
                 orphaned_raw_files.append(record_id)
 
     if issues:

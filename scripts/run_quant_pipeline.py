@@ -8,6 +8,42 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROCESS_RECORD_TIMEOUT = 300  # 5 minutes per record
+
+
+def _run_process_record(python_cmd: str, record_id: str) -> tuple[str, str]:
+    """Run process_record for a single record.
+
+    Returns (record_id, outcome) where outcome is one of:
+    "accepted", "rejected", "review_queue", or "failed:<reason>".
+    Never raises — all failure modes are captured as "failed:..." outcomes so
+    that a single bad record cannot abort the remaining records or skip the
+    send_pending_reviews step.
+    """
+    try:
+        result = subprocess.run(
+            [python_cmd, "scripts/process_record.py", record_id],
+            cwd=BASE_DIR,
+            text=True,
+            capture_output=True,
+            timeout=PROCESS_RECORD_TIMEOUT,
+        )
+        if result.stdout:
+            print(result.stdout)
+        if result.stderr:
+            print(result.stderr)
+        if result.returncode != 0:
+            return record_id, f"failed:exit_code={result.returncode}"
+        stdout = result.stdout or ""
+        if "Moved record to accepted" in stdout:
+            return record_id, "accepted"
+        if "Moved record to rejected" in stdout:
+            return record_id, "rejected"
+        return record_id, "review_queue"
+    except subprocess.TimeoutExpired:
+        return record_id, "failed:timeout"
+    except Exception as e:
+        return record_id, f"failed:{e}"
 
 
 def run_command(command: list[str], step_name: str) -> str:
@@ -86,36 +122,40 @@ def main() -> None:
 
     start = time.perf_counter()
     workers = max(1, args.process_workers)
+    routing_counts: dict[str, int] = {"accepted": 0, "rejected": 0, "review_queue": 0, "failed": 0}
+
     if workers == 1:
-        for record_id in record_ids:
-            run_command(
-                [python_cmd, "scripts/process_record.py", record_id],
-                f"process_record ({record_id})"
-            )
+        for idx, record_id in enumerate(record_ids, 1):
+            print(f"\n[{idx}/{len(record_ids)}] Processing {record_id}...")
+            _, outcome = _run_process_record(python_cmd, record_id)
+            if outcome.startswith("failed:"):
+                routing_counts["failed"] += 1
+                print(f"  [FAILED] {outcome.removeprefix('failed:')}")
+            else:
+                routing_counts[outcome] += 1
+                print(f"  [OK] → {outcome}")
     else:
         with ThreadPoolExecutor(max_workers=workers) as executor:
             futures = {
-                executor.submit(
-                    subprocess.run,
-                    [python_cmd, "scripts/process_record.py", record_id],
-                    cwd=BASE_DIR,
-                    text=True,
-                    capture_output=True,
-                ): record_id
-                for record_id in record_ids
+                executor.submit(_run_process_record, python_cmd, rid): rid
+                for rid in record_ids
             }
             for future in as_completed(futures):
-                rid = futures[future]
-                result = future.result()
-                if result.returncode != 0:
-                    raise RuntimeError(
-                        f"process_record ({rid}) failed with exit code {result.returncode}"
-                    )
-                if result.stdout:
-                    print(result.stdout)
-                if result.stderr:
-                    print(result.stderr)
+                rid, outcome = future.result()
+                if outcome.startswith("failed:"):
+                    routing_counts["failed"] += 1
+                    print(f"  [FAILED] {rid}: {outcome.removeprefix('failed:')}")
+                else:
+                    routing_counts[outcome] += 1
+                    print(f"  [OK] {rid} → {outcome}")
     timings["process"] = time.perf_counter() - start
+
+    print(f"\nProcessing Results:")
+    print(f"  Accepted   : {routing_counts['accepted']}")
+    print(f"  Review     : {routing_counts['review_queue']}")
+    print(f"  Rejected   : {routing_counts['rejected']}")
+    if routing_counts["failed"]:
+        print(f"  Failed     : {routing_counts['failed']}")
 
     send_command = [python_cmd, "scripts/send_pending_reviews.py", "--max-items", "8"]
     for record_id in record_ids:

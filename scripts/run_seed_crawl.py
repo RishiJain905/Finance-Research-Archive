@@ -381,7 +381,9 @@ def run_seed_crawl(
         "filtered_out": 0,
         "converted": 0,
         "accepted": 0,
+        "review_queue": 0,
         "rejected": 0,
+        "failed": 0,
     }
 
     # Execute crawl for each seed
@@ -419,222 +421,220 @@ def run_seed_crawl(
             continue
     timings["crawl"] = time.perf_counter() - crawl_start
 
-    if not all_candidates:
-        print("\n[Pipeline] No candidates discovered. Exiting.")
-        _save_stats(total_stats)
-        return []
+    try:
+        if not all_candidates:
+            print("\n[Pipeline] No candidates discovered. Exiting.")
+            return []
 
-    print(f"\n{'=' * 60}")
-    print(f"Seed Crawl Summary: {len(all_candidates)} candidates")
-    print(f"{'=' * 60}")
+        print(f"\n{'=' * 60}")
+        print(f"Seed Crawl Summary: {len(all_candidates)} candidates")
+        print(f"{'=' * 60}")
 
-    # Update lane stats for discovered candidates
-    if not dry_run:
-        update_lane_stats(LANE, "discovered", len(all_candidates))
+        # Update lane stats for discovered candidates
+        if not dry_run:
+            update_lane_stats(LANE, "discovered", len(all_candidates))
 
-    # ========================================================================
-    # Shared Pipeline: Dedupe → Scoring → Filtering → Convert → Process
-    # ========================================================================
+        # ========================================================================
+        # Shared Pipeline: Dedupe → Scoring → Filtering → Convert → Process
+        # ========================================================================
 
-    if dry_run:
-        print("\n[Pipeline] [DRY RUN] Skipping shared pipeline")
-        return discovered_ids
+        if dry_run:
+            print("\n[Pipeline] [DRY RUN] Skipping shared pipeline")
+            return discovered_ids
 
-    if process_dedupe is None:
-        print("[Pipeline] Shared dedupe module not available. Skipping dedup.")
-        deduped_candidates = all_candidates
-        duplicates = []
-    else:
-        # Step 1: Dedupe
-        print(f"\n[Pipeline] Step 1: Deduplicating {len(all_candidates)} candidates...")
-        dedupe_start = time.perf_counter()
-        deduped_candidates, duplicates = process_dedupe(all_candidates, lane=LANE)
-        dup_count = len(duplicates)
-        total_stats["deduped_out"] = dup_count
-        print(f"[Dedup] {dup_count}/{len(all_candidates)} candidates were duplicates")
-        timings["dedupe"] = time.perf_counter() - dedupe_start
+        if process_dedupe is None:
+            print("[Pipeline] Shared dedupe module not available. Skipping dedup.")
+            deduped_candidates = all_candidates
+            duplicates = []
+        else:
+            # Step 1: Dedupe
+            print(f"\n[Pipeline] Step 1: Deduplicating {len(all_candidates)} candidates...")
+            dedupe_start = time.perf_counter()
+            deduped_candidates, duplicates = process_dedupe(all_candidates, lane=LANE)
+            dup_count = len(duplicates)
+            total_stats["deduped_out"] = dup_count
+            print(f"[Dedup] {dup_count}/{len(all_candidates)} candidates were duplicates")
+            timings["dedupe"] = time.perf_counter() - dedupe_start
 
-    if not deduped_candidates:
-        print("[Pipeline] No candidates survived deduplication. Exiting.")
-        _save_stats(total_stats)
-        return []
+        if not deduped_candidates:
+            print("[Pipeline] No candidates survived deduplication. Exiting.")
+            return []
 
-    if score_candidate is None:
-        print("[Pipeline] Shared scoring module not available. Skipping scoring.")
-        scored_candidates = deduped_candidates
-    else:
-        # Step 2: Score
-        print(f"\n[Pipeline] Step 2: Scoring {len(deduped_candidates)} candidates...")
-        score_start = time.perf_counter()
-        scored_candidates = []
-        for candidate in deduped_candidates:
-            scored = score_candidate(candidate)
-            score = scored.get("candidate_scores", {}).get("total_score", 0)
-            print(f"  - {scored['candidate_id']}: score={score}")
-            scored_candidates.append(scored)
-        timings["score"] = time.perf_counter() - score_start
+        if score_candidate is None:
+            print("[Pipeline] Shared scoring module not available. Skipping scoring.")
+            scored_candidates = deduped_candidates
+        else:
+            # Step 2: Score
+            print(f"\n[Pipeline] Step 2: Scoring {len(deduped_candidates)} candidates...")
+            score_start = time.perf_counter()
+            scored_candidates = []
+            for candidate in deduped_candidates:
+                scored = score_candidate(candidate)
+                score = scored.get("candidate_scores", {}).get("total_score", 0)
+                print(f"  - {scored['candidate_id']}: score={score}")
+                scored_candidates.append(scored)
+            timings["score"] = time.perf_counter() - score_start
 
-    if filter_by_score is None:
-        print("[Pipeline] Shared filtering module not available. Skipping filter.")
-        filtered_candidates = scored_candidates
-        filtered_out = []
-    else:
-        # Step 3: Filter by score
-        print(
-            f"\n[Pipeline] Step 3: Filtering by score (threshold={SEED_CRAWL_SCORE_THRESHOLD})..."
-        )
-        filter_start = time.perf_counter()
-        filtered_candidates, filtered_out = filter_by_score(
-            scored_candidates, threshold=SEED_CRAWL_SCORE_THRESHOLD
-        )
-        total_stats["filtered_out"] = len(filtered_out)
-        print(
-            f"[Filter] {len(filtered_out)} candidates did not pass score filter "
-            f"(threshold={SEED_CRAWL_SCORE_THRESHOLD})"
-        )
-        timings["filter"] = time.perf_counter() - filter_start
-
-    if not filtered_candidates:
-        print("[Pipeline] No candidates survived scoring filter. Exiting.")
-        _save_stats(total_stats)
-        return []
-
-    total_stats["accepted"] = len(filtered_candidates)
-    total_stats["rejected"] = len(filtered_out)
-
-    # Step 3.5: Fetch content for candidates
-    if fetch_candidate_contents is None:
-        print(
-            "[Pipeline] fetch_candidate_contents not available. Skipping content fetch."
-        )
-        fetched_candidates = filtered_candidates
-        failed_candidates = []
-    else:
-        print(
-            f"\n[Pipeline] Step 3.5: Fetching content for {len(filtered_candidates)} candidates..."
-        )
-        fetch_start = time.perf_counter()
-        fetched_candidates, failed_candidates = fetch_candidate_contents(
-            filtered_candidates
-        )
-        if failed_candidates:
+        if filter_by_score is None:
+            print("[Pipeline] Shared filtering module not available. Skipping filter.")
+            filtered_candidates = scored_candidates
+            filtered_out = []
+        else:
+            # Step 3: Filter by score
             print(
-                f"[Pipeline] Failed to fetch content for {len(failed_candidates)} candidates"
+                f"\n[Pipeline] Step 3: Filtering by score (threshold={SEED_CRAWL_SCORE_THRESHOLD})..."
             )
-        print(f"[Pipeline] Fetched content for {len(fetched_candidates)} candidates")
-        timings["fetch"] = time.perf_counter() - fetch_start
+            filter_start = time.perf_counter()
+            filtered_candidates, filtered_out = filter_by_score(
+                scored_candidates, threshold=SEED_CRAWL_SCORE_THRESHOLD
+            )
+            total_stats["filtered_out"] = len(filtered_out)
+            print(
+                f"[Filter] {len(filtered_out)} candidates did not pass score filter "
+                f"(threshold={SEED_CRAWL_SCORE_THRESHOLD})"
+            )
+            timings["filter"] = time.perf_counter() - filter_start
 
-    if not fetched_candidates:
-        print("[Pipeline] No candidates had content fetched. Exiting.")
-        _save_stats(total_stats)
-        return []
+        if not filtered_candidates:
+            print("[Pipeline] No candidates survived scoring filter. Exiting.")
+            return []
 
-    if convert_candidates is None:
-        print("[Pipeline] Shared convert module not available. Skipping convert.")
-        _save_stats(total_stats)
-        return discovered_ids
+        # Step 3.5: Fetch content for candidates
+        if fetch_candidate_contents is None:
+            print(
+                "[Pipeline] fetch_candidate_contents not available. Skipping content fetch."
+            )
+            fetched_candidates = filtered_candidates
+            failed_candidates = []
+        else:
+            print(
+                f"\n[Pipeline] Step 3.5: Fetching content for {len(filtered_candidates)} candidates..."
+            )
+            fetch_start = time.perf_counter()
+            fetched_candidates, failed_candidates = fetch_candidate_contents(
+                filtered_candidates
+            )
+            if failed_candidates:
+                print(
+                    f"[Pipeline] Failed to fetch content for {len(failed_candidates)} candidates"
+                )
+            print(f"[Pipeline] Fetched content for {len(fetched_candidates)} candidates")
+            timings["fetch"] = time.perf_counter() - fetch_start
 
-    selected_candidates = select_candidates_for_conversion(
-        fetched_candidates, max_process_records=max_process_records
-    )
-    if len(selected_candidates) < len(fetched_candidates):
-        print(
-            f"[Pipeline] Capped conversion/processing to top {len(selected_candidates)} "
-            f"of {len(fetched_candidates)} candidates by score."
+        if not fetched_candidates:
+            print("[Pipeline] No candidates had content fetched. Exiting.")
+            return []
+
+        if convert_candidates is None:
+            print("[Pipeline] Shared convert module not available. Skipping convert.")
+            return discovered_ids
+
+        selected_candidates = select_candidates_for_conversion(
+            fetched_candidates, max_process_records=max_process_records
         )
-
-    # Step 4: Convert to raw records
-    print(f"\n[Pipeline] Step 4: Converting to raw records...")
-    convert_start = time.perf_counter()
-    record_paths = convert_candidates(selected_candidates)
-
-    if not record_paths:
-        print("[Pipeline] No records were created. Exiting.")
-        _save_stats(total_stats)
-        return []
-
-    total_stats["converted"] = len(record_paths)
-    update_lane_stats(LANE, "converted", len(record_paths))
-    timings["convert"] = time.perf_counter() - convert_start
-
-    # Step 5: Process each record through the minimax cycle
-    # (summarize → verify → route to accepted / review_queue / rejected)
-    print(f"\n[Pipeline] Step 5: Running minimax cycle for {len(record_paths)} records...")
-    record_ids = [p.stem for p in record_paths]
-
-    routing_counts: dict[str, int] = {"accepted": 0, "rejected": 0, "review_queue": 0, "failed": 0}
-    PROCESS_RECORD_TIMEOUT = 300  # 5 minutes per record
-
-    process_start = time.perf_counter()
-    workers = max(1, process_workers)
-
-    def _process(record_id: str) -> tuple[str, str]:
-        try:
-            result = subprocess.run(
-                [sys.executable, "-m", "scripts.process_record", record_id],
-                cwd=BASE_DIR,
-                capture_output=True,
-                text=True,
-                timeout=PROCESS_RECORD_TIMEOUT,
+        if len(selected_candidates) < len(fetched_candidates):
+            print(
+                f"[Pipeline] Capped conversion/processing to top {len(selected_candidates)} "
+                f"of {len(fetched_candidates)} candidates by score."
             )
-            if result.returncode != 0:
-                stderr_preview = (result.stderr or "").strip().splitlines()
-                err_line = stderr_preview[-1] if stderr_preview else "unknown error"
-                return record_id, f"failed:{err_line}"
-            stdout = result.stdout or ""
-            if "Moved record to accepted" in stdout:
-                return record_id, "accepted"
-            if "Moved record to rejected" in stdout:
-                return record_id, "rejected"
-            return record_id, "review_queue"
-        except subprocess.TimeoutExpired:
-            return record_id, "failed:timeout"
-        except Exception as e:
-            return record_id, f"failed:{e}"
 
-    if workers == 1:
-        for idx, record_id in enumerate(record_ids, 1):
-            print(f"  [{idx}/{len(record_ids)}] Processing {record_id}...")
-            _, outcome = _process(record_id)
-            if outcome.startswith("failed:"):
-                routing_counts["failed"] += 1
-                print(f"    [FAILED] {outcome.replace('failed:', '')}")
-            else:
-                routing_counts[outcome] += 1
-                print(f"    [OK] → {outcome}")
-    else:
-        with ThreadPoolExecutor(max_workers=workers) as executor:
-            futures = {executor.submit(_process, rid): rid for rid in record_ids}
-            for future in as_completed(futures):
-                rid, outcome = future.result()
+        # Step 4: Convert to raw records
+        print(f"\n[Pipeline] Step 4: Converting to raw records...")
+        convert_start = time.perf_counter()
+        record_paths = convert_candidates(selected_candidates)
+
+        if not record_paths:
+            print("[Pipeline] No records were created. Exiting.")
+            return []
+
+        total_stats["converted"] = len(record_paths)
+        update_lane_stats(LANE, "converted", len(record_paths))
+        timings["convert"] = time.perf_counter() - convert_start
+
+        # Step 5: Process each record through the minimax cycle
+        # (summarize → verify → route to accepted / review_queue / rejected)
+        print(f"\n[Pipeline] Step 5: Running minimax cycle for {len(record_paths)} records...")
+        record_ids = [p.stem for p in record_paths]
+
+        routing_counts: dict[str, int] = {"accepted": 0, "rejected": 0, "review_queue": 0, "failed": 0}
+        PROCESS_RECORD_TIMEOUT = 300  # 5 minutes per record
+
+        process_start = time.perf_counter()
+        workers = max(1, process_workers)
+
+        def _process(record_id: str) -> tuple[str, str]:
+            try:
+                result = subprocess.run(
+                    [sys.executable, "-m", "scripts.process_record", record_id],
+                    cwd=BASE_DIR,
+                    capture_output=True,
+                    text=True,
+                    timeout=PROCESS_RECORD_TIMEOUT,
+                )
+                if result.returncode != 0:
+                    stderr_preview = (result.stderr or "").strip().splitlines()
+                    err_line = stderr_preview[-1] if stderr_preview else "unknown error"
+                    return record_id, f"failed:{err_line}"
+                stdout = result.stdout or ""
+                if "Moved record to accepted" in stdout:
+                    return record_id, "accepted"
+                if "Moved record to rejected" in stdout:
+                    return record_id, "rejected"
+                return record_id, "review_queue"
+            except subprocess.TimeoutExpired:
+                return record_id, "failed:timeout"
+            except Exception as e:
+                return record_id, f"failed:{e}"
+
+        if workers == 1:
+            for idx, record_id in enumerate(record_ids, 1):
+                print(f"  [{idx}/{len(record_ids)}] Processing {record_id}...")
+                _, outcome = _process(record_id)
                 if outcome.startswith("failed:"):
                     routing_counts["failed"] += 1
-                    print(f"  [FAILED] {rid}: {outcome.replace('failed:', '')}")
+                    print(f"    [FAILED] {outcome.replace('failed:', '')}")
                 else:
                     routing_counts[outcome] += 1
-                    print(f"  [OK] {rid} → {outcome}")
-    timings["process"] = time.perf_counter() - process_start
+                    print(f"    [OK] → {outcome}")
+        else:
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                futures = {executor.submit(_process, rid): rid for rid in record_ids}
+                for future in as_completed(futures):
+                    rid, outcome = future.result()
+                    if outcome.startswith("failed:"):
+                        routing_counts["failed"] += 1
+                        print(f"  [FAILED] {rid}: {outcome.replace('failed:', '')}")
+                    else:
+                        routing_counts[outcome] += 1
+                        print(f"  [OK] {rid} → {outcome}")
+        timings["process"] = time.perf_counter() - process_start
 
-    # Save stats
-    _save_stats(total_stats)
-    timings["total"] = time.perf_counter() - pipeline_start
+        # Record actual routing outcomes from process_record into stats.
+        total_stats["accepted"] = routing_counts["accepted"]
+        total_stats["review_queue"] = routing_counts["review_queue"]
+        total_stats["rejected"] = routing_counts["rejected"]
+        total_stats["failed"] = routing_counts["failed"]
 
-    print(f"\n{'=' * 60}")
-    print(f"Seed Crawl Pipeline Complete")
-    print(f"Converted {len(record_paths)} candidates to raw records")
-    print(f"")
-    print(f"Minimax Cycle Results:")
-    print(f"  Accepted   : {routing_counts['accepted']}")
-    print(f"  Review     : {routing_counts['review_queue']}")
-    print(f"  Rejected   : {routing_counts['rejected']}")
-    if routing_counts["failed"]:
-        print(f"  Failed     : {routing_counts['failed']}")
-    print("Timing summary:")
-    for name, seconds in timings.items():
-        print(f"  {name:>8}: {seconds:.1f}s")
-    print(f"{'=' * 60}\n")
+        timings["total"] = time.perf_counter() - pipeline_start
 
-    return discovered_ids
+        print(f"\n{'=' * 60}")
+        print(f"Seed Crawl Pipeline Complete")
+        print(f"Converted {len(record_paths)} candidates to raw records")
+        print(f"")
+        print(f"Minimax Cycle Results:")
+        print(f"  Accepted   : {routing_counts['accepted']}")
+        print(f"  Review     : {routing_counts['review_queue']}")
+        print(f"  Rejected   : {routing_counts['rejected']}")
+        if routing_counts["failed"]:
+            print(f"  Failed     : {routing_counts['failed']}")
+        print("Timing summary:")
+        for name, seconds in timings.items():
+            print(f"  {name:>8}: {seconds:.1f}s")
+        print(f"{'=' * 60}\n")
+
+        return discovered_ids
+    finally:
+        _save_stats(total_stats)
 
 
 def _save_stats(stats: dict[str, int]) -> None:
