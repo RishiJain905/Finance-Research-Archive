@@ -1,0 +1,58 @@
+{
+  "id": "treasury_auctions_2026_04_05",
+  "created_at": "2026-04-05T14:00:41.767766+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Treasury Securities Auctions Data",
+  "source": {
+    "name": "Treasury Securities Auctions Data",
+    "url": "",
+    "published_at": "",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "Placeholder dataset snapshot for Treasury Securities Auctions Data from treasury_fiscal_data. No actual auction data, results, or operational details are present in this source. This is a development/placeholder file that should be replaced with real API data.",
+  "key_points": [
+    "Source is explicitly labeled as a placeholder; no real Treasury auction data present",
+    "Dataset is intended for future API integration to fetch actual auction data",
+    "No auction dates, amounts, bidder participation metrics, or results available",
+    "Source has no relevance for market structure or macro catalyst analysis until populated with real data"
+  ],
+  "why_it_matters": "This source cannot support any market structure or macro analysis because it contains only placeholder text. Treasury auction data is essential for understanding government bond market dynamics, primary dealer participation, and yield curve formation. The record should be rejected and re-evaluated once real data is available from the treasury_fiscal_data API.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "No market structure information available. Treasury securities auctions are a critical component of fixed income market structure (primary market operations, primary dealer system, auction mechanics), but this source provides no actual data on these topics. Reject this record and wait for populated data.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "placeholder",
+    "market-structure",
+    "data-source"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is an explicit placeholder with no actual Treasury auction data present",
+      "Source attribution is entirely missing: no URL, no published date, no source type specified",
+      "Source has no archival value - placeholder text provides no actionable market structure or macro catalyst information",
+      "Source is not article-like and appears to be a metadata/container page rather than a document with substantive content",
+      "No auction dates, amounts, bid-to-cover ratios, tail, primary dealer participation, or any operational details available",
+      "PAGE_TYPE not specified in metadata, violating the requirement to treat metadata as authoritative for page diagnostics"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "placeholder_source"
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_05.txt",
+  "notes": "Low-quality source: placeholder only. No actionable content for market structure or macro catalyst research. Would need real Treasury auction data (e.g., auction date, issued amount, bid-to-cover ratio, tail, primary dealer share) to be useful. Awaiting integration with actual treasury_fiscal_data API or dataset."
+}
