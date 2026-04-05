@@ -1,0 +1,89 @@
+{
+  "id": "new_york_fed_markets_data_hub_agency_commercial_mortgage_backed_securities_federal_reserve_392f1806",
+  "created_at": "2026-04-01T04:44:28.989778+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Agency Commercial Mortgage-Backed Securities",
+  "source": {
+    "name": "New York Fed Markets Data Hub",
+    "url": "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/agency-commercial-mortgage-backed-securities",
+    "domain": "www.newyorkfed.org",
+    "published_at": "",
+    "source_type": "article"
+  },
+  "summary": "The Federal Reserve's Open Market Trading Desk at the New York Fed conducted agency CMBS purchases on behalf of SOMA from March 23, 2020 through November 4, 2021, purchasing securities backed by multifamily mortgages guaranteed by Fannie Mae, Freddie Mac, and Ginnie Mae. BlackRock Financial Markets Advisory was retained as a third-party vendor to operationalize these purchases but the contract was terminated on May 2, 2022.",
+  "key_points": [
+    "FOMC directed the Desk to purchase agency CMBS effective March 23, 2020 as part of emergency pandemic response",
+    "Purchases were limited to agency CMBS secured primarily by multifamily home mortgages guaranteed by Fannie Mae, Freddie Mac, and Ginnie Mae",
+    "Desk ceased purchasing agency CMBS effective November 4, 2021 to sustain smooth functioning",
+    "BlackRock Financial Markets Advisory was retained on March 24, 2020 as investment manager; contract terminated May 2, 2022",
+    "Transaction data is published quarterly with approximately two-year lag per Dodd-Frank Act requirements"
+  ],
+  "why_it_matters": "This source documents a specific Federal Reserve balance sheet operation conducted during the COVID-19 crisis. The agency CMBS purchase program represents an unusual expansion of the Fed's securities holdings into commercial mortgage-backed securities, typically outside the traditional Treasury/agency MBS framework. Understanding the scope and timeline of these operations provides context for how the Fed deployed its balance sheet as a market support tool.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The Fed's agency CMBS purchase program (March 2020 – November 2021) was a notable expansion of the Fed's balance sheet toolkit during the COVID-19 pandemic, extending purchases beyond traditional Treasury and agency MBS into commercial mortgage-backed securities. This operation was temporary and specifically designed for crisis response, with purchases ceasing when market functioning stabilized.",
+  "market_structure_context": "The source describes the operational mechanics of how the Fed implemented agency CMBS purchases, including the use of an external investment manager (BlackRock) to transact with approved counterparties in the secondary market. This illustrates the Fed's operational framework for deploying balance sheet capacity through market intermediaries rather than direct purchases.",
+  "important_numbers": [
+    "March 23, 2020",
+    "November 4, 2021",
+    "March 24, 2020",
+    "May 2, 2022"
+  ],
+  "tags": [
+    "fed",
+    "balance-sheet",
+    "agency-cmbS",
+    "soma",
+    "blackrock",
+    "new-york-fed",
+    "pandemic",
+    "monetary-policy-implementation"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "PUBLISHED_AT is blank in metadata, making it impossible to verify source recency through standard means",
+      "Content is thin (350 words) and primarily factual/operational rather than analytical",
+      "Source contains many navigation elements (FAQs, Program Terms, Approved Counterparties links) rather than substantive analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
+  },
+  "human_feedback": {
+    "decision": "approve",
+    "reviewed_at": "2026-04-01T05:32:40.681749+00:00"
+  },
+  "raw_text_path": "data/raw/new_york_fed_markets_data_hub_agency_commercial_mortgage_backed_securities_federal_reserve_392f1806.txt",
+  "notes": "Source is an operational reference page from the New York Fed documenting the timeline and mechanics of the Fed's agency CMBS purchase program. No published_at date provided in metadata, making recency assessment impossible. The content is factual but thin, primarily consisting of dates and vendor information with links to data rather than analytical commentary. Historical record of Fed balance sheet operations during COVID pandemic. Source provides authoritative institutional detail but limited research value.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 70.0,
+    "reasoning": [
+      "quality score: 70.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "ffc7df683001d1beb6e43dfae3811822048af41e"
+}

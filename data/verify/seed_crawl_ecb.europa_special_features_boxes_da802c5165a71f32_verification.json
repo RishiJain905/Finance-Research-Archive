@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a LISTING PAGE per CORE RULES #6 - must reject regardless of content quality",
+    "event_type 'financial_stability_report' is valid but the source is an index page, not the actual report",
+    "Source contains only abstracts/metadata for 5 boxes, not substantive research content",
+    "Content is too thin to have meaningful archival value - requires crawling individual article URLs",
+    "Multiple unrelated topics bundled without coherent narrative",
+    "Published November 2025 (4+ months old) with only listing page content - marginal historical value at best"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is explicitly a listing page violation of CORE RULES #6. Even though human_review fields are populated, the record should be auto-rejected. Individual ECB Financial Stability Review boxes should be crawled separately as standalone research records for proper archival value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

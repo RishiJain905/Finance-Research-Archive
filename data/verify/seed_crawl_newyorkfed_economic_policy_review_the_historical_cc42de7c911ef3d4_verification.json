@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "TOPIC/TARGET mismatch: SOURCE METADATA specifies TARGET as 'market structure' but content is about inflation economics and monetary policy research, which aligns with 'macro catalysts' instead",
+    "Source is a press release announcing a forthcoming paper, not the full research paper itself - contains only a summary of findings without methodology or full data",
+    "Published May 13, 2004 - over 21 years old, which exceeds the 90-day threshold and requires clear archival value justification",
+    "Record acknowledges 'research_paper' as source_type but notes it's a press release summary; this inconsistency should be corrected",
+    "No specific numerical forecasts or actionable data points for current market analysis",
+    "Asset classes listed (bonds, fx) with 0 confidence suggests uncertain market relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Multiple issues require human judgment: (1) TOPIC/TARGET mismatch between metadata and content must be resolved - content is clearly macroeconomics/inflation, not market structure; (2) source age (21+ years) and type (press release vs. full paper) affect archival value determination; (3) unclear whether 2004 inflation research methodology has enduring relevance for current RAG applications versus historical context only",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This Federal Reserve Bank of New York press release (May 13, 2004) announces a forthcoming Economic Policy Review paper examining the historically wide gap between services and goods inflation, finding that despite record divergence since the late 1990s, there is no strong evidence for either imminent acceleration or dramatic slowing of overall U.S. inflation. The paper analyzes quarterly core PCE deflator data from 1967-2002 and finds that the gap between services and goods inflation tends to revert to its long-run average.",
+    "why_it_matters": "This research provided empirical grounding for Fed views on inflation dynamics around 2004, supporting the position that the unusual goods-services inflation divergence was likely temporary and would normalize. However, the document's age (pre-dating 2008 financial crisis and subsequent monetary policy innovations) limits its relevance for current market analysis.",
+    "macro_context": "The paper addressed a key debate in 2004 about whether overall U.S. inflation would gravitate toward high services inflation or deflationary goods prices. The authors argued for mean reversion in the goods-services inflation gap, suggesting the divergence was temporary.",
+    "market_structure_context": ""
+  }
+}

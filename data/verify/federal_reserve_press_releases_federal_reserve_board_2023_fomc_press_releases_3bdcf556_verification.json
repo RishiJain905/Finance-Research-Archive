@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/index page containing only links to individual FOMC releases, not substantive content",
+    "PAGE_TYPE in metadata incorrectly labeled as 'press_release' but source body confirms it is a listing page",
+    "No full statement text, quotes, or policy details present - only date/title metadata",
+    "Content is only 176 words, insufficient for archival value",
+    "event_type set to 'unknown' when correct classification is listing_page (per rule 5, should be rejected outright)",
+    "Published_at (12/13/2023) is approximately 2.5 years before TODAY (2026-04-01)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record has already correctly identified all material issues with the source. The source is definitively a listing page with no substantive content. No additional human review is needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is a listing/index of all 2023 FOMC press releases and economic projections releases. It does not contain the full text of any specific statement. The page lists 14 items including FOMC statements from February, March, May, June, July, September, and November 2023, plus associated economic projections. Content is minimal (176 words) and serves only as a navigation aid.",
+    "why_it_matters": "This is not a usable source for research. Researchers seeking FOMC statements should access the individual press release URLs. The content provides no substantive policy information, only a chronological list of links.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

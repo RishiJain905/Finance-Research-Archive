@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source text is truncated mid-sentence ('Treasury has launched to rally the nation's philanthropists around a common cause. Expect to see more...') — cannot verify completeness of program details",
+    "Key point claims employer matching from 'Broadcom, Intel, IBM' appear only in a partial clause 'And today, Steak 'n Shake, Broadcom, Intel, IBM, JP Morgan, Chipotle, Coinbase, and Comcast all announced...' — verification confidence reduced due to truncation",
+    "Projections for account values ($500,000+, $1 million+) are attributed to Council of Economic Advisers estimates, not included in source body — flagged appropriately in why_it_matters",
+    "The policy appears to be executive initiative without Congressional authorization — this limitation is appropriately noted"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is well-constructed with appropriate caveats. Key facts (seed amount, timeline, Dell/Dalio pledges, participating employers) are verifiable from source. The truncation is a limitation but not disqualifying given the clear policy framing. Appropriate that event_type is speech_neutral and that macro_context notes speculation vs. confirmed policy.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "The Trump Accounts initiative, if implemented at scale, could shift household savings from traditional bank deposits into equity index funds, potentially affecting retail investor flows, money market fund balances, and household cash positions. The immediate market impact is negligible since the program requires Congressional funding, has contribution limits of $5,000/year per account, and the $1,000 seed is limited to newborns born 2025-2028. The effect on equity markets would be gradual and distributed over decades rather than immediate."
+  }
+}

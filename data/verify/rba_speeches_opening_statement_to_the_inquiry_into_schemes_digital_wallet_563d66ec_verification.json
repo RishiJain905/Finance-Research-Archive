@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is thin (319 words) with limited quantitative detail",
+    "Record does not explicitly mention this is a congressional testimony, though event_type correctly captures it",
+    "No forward guidance, rate implications, or market-moving data present in source",
+    "Project Acacia mentioned but no concrete implementation timeline or details provided"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor issues are procedural (thin content, vague forward-looking language) rather than factual errors. The record is largely accurate and well-structured. Human review not required; automated routing to review_queue is appropriate given the borderline confidence score.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Consider adding that this is an opening statement for a parliamentary inquiry, which means it sets the RBA's initial position but does not constitute final policy. The mid-2026 consultations will be the substantive opportunity for stakeholder input.",
+    "macro_context": "",
+    "market_structure_context": "The testimony discusses structural reforms to Australia's payment system including: (1) expanded regulatory remit under amended PSRA covering new payment participants and systems; (2) upcoming consultations on three-party card schemes, mobile wallets, BNPL and e-commerce platforms; (3) account-to-account payments modernization workstream; (4) Project Acacia exploring tokenised asset market infrastructure. The source outlines the regulatory framework but does not quantify balance sheet implications or specify implementation timelines beyond mid-2026 consultations. As an opening statement, this testimony establishes the RBA's preliminary position for the inquiry rather than announcing finalized policy."
+  }
+}

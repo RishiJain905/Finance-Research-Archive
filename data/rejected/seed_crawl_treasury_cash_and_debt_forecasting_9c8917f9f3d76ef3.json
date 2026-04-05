@@ -1,0 +1,80 @@
+{
+  "id": "seed_crawl_treasury_cash_and_debt_forecasting_9c8917f9f3d76ef3",
+  "created_at": "2026-04-01T03:06:45.830274+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Cash and Debt Forecasting",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/cash-and-debt-forecasting",
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "This is a Treasury.gov landing page that describes the existence and release schedules of three Treasury reporting mechanisms: the Daily Treasury Statement (DTS), the Monthly Treasury Statement of Receipts and Outlays (MTS), and the Monthly Statement of the Public Debt (MSPD). No specific data, forecasts, or policy decisions are contained in this page.",
+  "key_points": [
+    "The Daily Treasury Statement (DTS) summarizes Treasury cash and debt operations and is available by 4:00 p.m. the following business day",
+    "Treasury's operating cash is maintained at the Federal Reserve Bank of New York and in Tax and Loan accounts at commercial banks",
+    "The Monthly Treasury Statement (MTS) is normally released on the 8th workday of the month following the reporting month",
+    "The Monthly Statement of the Public Debt (MSPD) is published on the fourth business day of each month",
+    "The MSPD provides data on the status of government borrowing including outstanding Treasury securities and statutory debt limit information"
+  ],
+  "why_it_matters": "This page describes Treasury reporting infrastructure but contains no actionable data. It is a navigation/description page for understanding what Treasury reports exist and when they are released, rather than the reports themselves. It has no direct market-moving information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page describes Treasury cash management operations and reporting structure, including where Treasury maintains operating cash (FRBNY account and Tax and Loan accounts at commercial banks). This represents institutional market plumbing information but the page itself does not contain specific operational data.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-operations",
+    "daily-treasury-statement",
+    "monthly-treasury-statement",
+    "debt-reporting",
+    "fiscal-service",
+    "treasury-cash"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation/landing page (home.treasury.gov/policy-issues/...) - Core Rule 5 requires rejection of navigation pages",
+      "Source contains no specific data, forecasts, or policy decisions",
+      "No published_at date available to assess recency",
+      "event_type set to 'unknown' - correct for this source type, but confirms it lacks the characteristics of any valid event taxonomy",
+      "Source has no direct market-moving information or macro catalyst content",
+      "Does not qualify as a research paper, economic commentary, or data release"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_cash_and_debt_forecasting_9c8917f9f3d76ef3.txt",
+  "notes": "This source is a Treasury.gov landing/navigation page describing Treasury reporting mechanisms. It does not contain actual data, analysis, or macro catalysts. Per Core Rule 6, navigation pages should be treated as non-archiveable. The page describes release schedules and report purposes but has no specific numbers, forecasts, or actionable content. Low quality source for research purposes.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Navigation page with no substantive content",
+      "No specific data or analysis",
+      "No published date to assess recency",
+      "Does not qualify as macro catalyst or meaningful market structure content"
+    ]
+  }
+}

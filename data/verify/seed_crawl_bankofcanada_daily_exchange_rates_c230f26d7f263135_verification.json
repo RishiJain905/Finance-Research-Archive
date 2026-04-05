@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a raw data table (homepage) with no analysis, commentary, or macro catalyst content",
+    "PAGE_TYPE is homepage — explicitly non-archiveable per core rule #5",
+    "event_type is 'unknown' which is correct but the source has no event-type characteristics to classify",
+    "Source provides no policy signals, economic interpretation, or actionable intelligence",
+    "No archival value as standalone raw FX data without analytical framing"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record has correctly identified all issues. Source is a homepage with raw exchange rate data and no macro catalyst content. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Bank of Canada publishes daily average exchange rates for 24 currencies against the Canadian dollar, covering the period 2026-03-25 through 2026-03-31. The page provides raw rate data only without any analysis, commentary, or macro catalyst discussion.",
+    "why_it_matters": "This page is a raw data feed providing daily exchange rate snapshots. It does not constitute a macro catalyst event, market commentary, or analytical content. It has no direct relevance for macro catalyst research without accompanying analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page (home.treasury.gov listing archived documents) - violates Rule 5 reject criteria",
+    "Source contains no substantive content - only links to historical remarks and fact sheets",
+    "Most recent content is dated 06/07/2016 and 06/25/2015, nearly 10 years before TODAY (2026-04-01)",
+    "event_type is set to 'unknown' - correct taxonomy value should be identified or source should be rejected for lack of substantive content",
+    "Source has no archival value as macro catalyst - cannot support RAG retrieval for current market analysis",
+    "Generated record correctly identifies all source deficiencies but suggests 'review_queue' when rejection criteria are clearly met"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source fails multiple independent reject criteria (listing page, stale content ~10 years old, no substantive policy content, no macro catalyst relevance). The generated record accurately documents these problems. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is a navigation/listing page on home.treasury.gov that provides links to archived U.S.-China dialogue documents from 2007 to 2016, including Strategic and Economic Dialogue (S&ED) and Comprehensive Economic Dialogue (CED) framework references. The page contains no substantive policy content—just an index of Treasury Secretary remarks and joint fact sheets. Most recent content dates to mid-2016, making this page irrelevant as a macro catalyst source for current market analysis.",
+    "why_it_matters": "This source provides no current analytical value. As a listing page with 2016-era historical document links, it cannot serve as a macro catalyst source or support RAG retrieval for market-relevant intelligence. The actual substantive documents (remarks, fact sheets) referenced here should be archived individually if they have historical value.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

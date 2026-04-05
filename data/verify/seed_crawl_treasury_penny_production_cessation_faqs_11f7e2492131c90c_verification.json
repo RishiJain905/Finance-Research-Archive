@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but source could reasonably be classified as 'treasury_issuance' or 'financial_stability_report' given Treasury's role in coinage policy",
+    "Source has no relevance to market structure or macro catalysts as defined - it is administrative guidance on coin production and cash rounding procedures, not financial market research",
+    "Source does not discuss financial markets, trading mechanisms, liquidity, clearing/settlement, monetary policy, or market-moving catalysts"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is factually accurate and well-represented in the record. However, it falls outside the archive's defined scope (market structure or macro catalysts). Human judgment is needed to determine whether to accept records that are factually correct but topically irrelevant to the archive's purpose.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is administrative guidance on coin production policy. It has no direct relevance to financial markets, interest rate policy, or macroeconomic conditions. The rounding mechanism described applies only to cash transactions and is designed to be revenue-neutral (rounding up as often as rounding down).",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

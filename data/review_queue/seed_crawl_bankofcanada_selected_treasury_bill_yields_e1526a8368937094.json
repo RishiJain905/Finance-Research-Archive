@@ -1,0 +1,86 @@
+{
+  "id": "seed_crawl_bankofcanada_selected_treasury_bill_yields_e1526a8368937094",
+  "created_at": "2026-04-01T09:11:57.537237+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Selected treasury bill yields",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/t-bill-yields",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "data_release_page"
+  },
+  "summary": "The Bank of Canada publishes daily treasury bill yield data as an average of sample secondary market yields taken throughout the business day. Recent data shows Canadian T-bill yields rising from late February to late March 2026, with the 1-year tenor moving from 2.29% to 2.64%.",
+  "key_points": [
+    "3-month T-bill average yields were 2.22% on 2026-03-03 and 2.31% on 2026-03-31",
+    "6-month T-bill average yields were 2.29% on 2026-03-03 and 2.45% on 2026-03-31",
+    "1-year T-bill average yields were 2.44% on 2026-03-03 and 2.76% on 2026-03-31",
+    "Individual series data shows consistent upward yield movement across all maturities from 2026-02-25 to 2026-03-25",
+    "1-month yields rose from 2.15% (2026-02-25) to 2.27% (2026-03-25)",
+    "Data is sourced from secondary market yields sampled throughout each business day"
+  ],
+  "why_it_matters": "Canadian T-bill yields serve as a key benchmark for short-term borrowing costs and market expectations for Bank of Canada policy. The steady upward movement in yields from late February through late March 2026 suggests tightening market conditions or shifting rate expectations.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Rising T-bill yields indicate higher short-term borrowing costs in Canada. The upward shift across all maturities (1-month through 1-year) suggests the yield curve is repricing, potentially reflecting updated expectations for Bank of Canada policy or changing economic conditions. However, this source provides only raw yield data without commentary on the drivers.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3-month yield: 2.22% (2026-03-03) to 2.31% (2026-03-31)",
+    "6-month yield: 2.29% (2026-03-03) to 2.45% (2026-03-31)",
+    "1-year yield: 2.44% (2026-03-03) to 2.76% (2026-03-31)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "treasury-bills",
+    "t-bill-yields",
+    "canada",
+    "interest-rates",
+    "short-term-rates",
+    "secondary-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 0,
+    "verdict": "pending",
+    "issues_found": [
+      "No explicit publication date in the source body",
+      "Data is raw yield observations without commentary or interpretation",
+      "Cannot infer macro drivers or policy signals from yield data alone",
+      "Low analytical value for RAG purposes without additional context"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_selected_treasury_bill_yields_e1526a8368937094.txt",
+  "notes": "This is a data release page presenting historical yield data. The source provides raw numerical values without any analytical commentary, interpretation of trends, or context on what drove the yield changes. While relevant to macro catalysts as raw rate data, the source has limited value for research archiving without accompanying narrative. The upward yield movement from February to March 2026 could reflect various factors not explained in this data page.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Raw data only, no analytical content",
+      "No publication date to assess recency",
+      "Limited value for RAG without narrative context"
+    ]
+  }
+}

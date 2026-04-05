@@ -1,0 +1,80 @@
+{
+  "id": "seed_crawl_ecb.europa_governing_council_decisions_6270cf79b34f5f14",
+  "created_at": "2026-04-01T20:57:12.109325+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Governing Council decisions",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/govcdec/html/index.en.html",
+    "published_at": "",
+    "source_type": "navigation_page",
+    "domain": "www.ecb.europa.eu"
+  },
+  "summary": "This ECB webpage is an informational page describing the Governing Council's meeting schedule and publication procedures rather than containing any actual monetary policy decisions. The Council meets biweekly with monetary policy decisions occurring every six weeks, published at 14:15 CET on decision days, with meeting accounts released four weeks afterward and non-monetary decisions on the Friday after month-end meetings.",
+  "key_points": [
+    "The Governing Council meets every two weeks; monetary policy decisions occur every six weeks",
+    "Monetary policy decisions are published at 14:15 CET on the day of the Governing Council meeting",
+    "Meeting accounts (rationale for decisions) are published four weeks after each monetary policy meeting",
+    "Other (non-monetary) decisions are published at 15:00 CET on the Friday after the last meeting of each calendar month",
+    "The Council also handles decisions on payment systems, financial stability, statistics, banknotes, legal affairs, and banking supervision",
+    "This page contains no actual policy decisions, data, or numerical values"
+  ],
+  "why_it_matters": "This page serves as an index explaining how ECB Governing Council decisions are structured and published. It is not a source of actual monetary policy content and should be used only to understand the ECB's publication framework, not to retrieve specific policy decisions or rate guidance.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "governing-council",
+    "monetary-policy",
+    "procedures",
+    "publication-schedule",
+    "euro-area"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation_page per source metadata - explicitly violates CORE RULE 5 which mandates rejection for navigation pages",
+      "No actual monetary policy decision content in source - only procedural descriptions of meeting schedules and publication timing",
+      "event_type set to 'unknown' - correct in this case but also indicates the source has no classifiable event",
+      "Empty published_at date limits verifiability and archival dating",
+      "Source has zero market impact or substantive research value - it is purely meta-information about where to find decisions"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_governing_council_decisions_6270cf79b34f5f14.txt",
+  "notes": "This is a navigation/informational page describing the ECB Governing Council's meeting schedule and publication protocols. Contains no actual monetary policy decisions, rate guidance, or substantive financial content. Treated as non-archiveable per CORE RULE 6. The page explains where to find decisions but is not itself a decision source. Low utility for finance research archive unless specifically cataloging ECB procedural documentation.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "No substantive content - only procedural description",
+      "No published_at date limits verifiability",
+      "Navigation page type per Rule 6 guidance",
+      "No numerical data or policy content to extract"
+    ]
+  }
+}

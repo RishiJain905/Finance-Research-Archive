@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when the source is about exchange rate data services - a more specific type like 'data_release_other' or 'treasury/operations' might be more appropriate, though this page itself is a container",
+    "source_type correctly identified as 'listing_page', which triggers automatic rejection per core rules",
+    "The record's assessment is accurate: this is a navigation page with no substantive exchange rate data, analysis, or macro catalyst content",
+    "Published_at is empty, which is noted but acceptable for this page type"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately identifies this as a listing_page and recommends rejection, which aligns with core rule 5. However, human review is warranted to confirm: (1) whether the record's rejection recommendation should be accepted given the strict 'listing_page' rule, and (2) whether any downstream process might want to use this as a starting point to capture the actual exchange rate data pages instead.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

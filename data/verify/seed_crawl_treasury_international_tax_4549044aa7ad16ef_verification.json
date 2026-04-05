@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/listing page (home.treasury.gov/policy-issues/tax-policy/international-tax) — per rule #5 this must be rejected",
+    "No substantive content: page merely indexes document categories (treaties, TIEAs, FATCA, congressional testimony)",
+    "No published_at date available — source metadata lacks temporal signal",
+    "Not relevant to market structure or macro catalysts — lacks policy content, data, or analysis",
+    "event_type set to 'unknown' which is acceptable since no specific event is present",
+    "Record correctly identifies this as non-archivable and the assessment is well-supported"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as a navigation page with no substantive content. The analysis is thorough and correct. No human review needed — automated rejection is appropriate per core rules.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

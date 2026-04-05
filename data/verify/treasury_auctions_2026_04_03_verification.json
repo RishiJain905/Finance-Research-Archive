@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data - only a placeholder message explicitly stating 'This is still a placeholder dataset snapshot'",
+    "Missing source attribution - URL is empty string and domain is empty string, making this unverifiable and unretrievable",
+    "No archival value - a placeholder cannot support any market structure or macro catalyst analysis",
+    "source_type is 'placeholder_dataset' indicating the infrastructure nature rather than actual content",
+    "Cannot extract any meaningful numbers, dates of actual auctions, or results"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This source is a placeholder with no actual Treasury auction data. The generated record correctly identifies this limitation, but the fundamental problem is that the source itself has no archival value. A placeholder snapshot provides no retrievable content for RAG retrieval or market analysis. The source should be replaced with actual Treasury auction records before archival.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "seed_crawl_federalreserve_implementation_note_issued_june_16_4e374bfdaa5f8a49",
+  "created_at": "2026-04-01T03:08:00.593333+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "fomc_statement",
+  "title": "Implementation Note issued June 16, 2021",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a1.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2021-06-16",
+    "source_type": "monetary_policy_statement"
+  },
+  "summary": "The Federal Reserve Board unanimously set the interest rate paid on required and excess reserve balances at 0.15 percent, effective June 17, 2021, to support smooth functioning of short-term funding markets. The FOMC directive maintained the federal funds rate target range at 0 to 1/4 percent while continuing asset purchases at $80 billion per month in Treasuries and $40 billion per month in agency MBS.",
+  "key_points": [
+    "Board of Governors voted unanimously to set IOER at 0.15 percent (15 bps above bottom of target range), effective June 17, 2021",
+    "Federal funds rate target range maintained at 0 to 1/4 percent",
+    "Monthly asset purchase pace: $80 billion Treasuries and $40 billion agency MBS",
+    "Overnight reverse repurchase agreement operations at 0.05 percent with $80 billion per day per-counterparty limit",
+    "Primary credit rate established at 0.25 percent",
+    "All principal payments from Treasury holdings rolled over at auction; agency debt and MBS principal reinvested into agency MBS"
+  ],
+  "why_it_matters": "This implementation note documents the operational details of the Fed's highly accommodative monetary policy stance during mid-2021. The setting of IOER 15 bps above the bottom of the target range was specifically designed to anchor fed funds trading within the target range. The document also confirms ongoing QE at $120 billion per month combined pace and the RRP facility parameters that were critical for managing short-term dollar funding markets.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "This document reflects Fed policy from June 2021, when the Federal Reserve was maintaining maximum accommodation following the pandemic emergency rate cuts to zero in March 2020. The operational framework described was designed to keep short-term funding markets functioning properly while pursuing asset purchases to provide additional accommodation. This is a historical record from nearly 5 years prior to the current date and does not reflect current Fed policy.",
+  "market_structure_context": "The note describes the technical implementation of monetary policy, including the IOER rate as a floor tool, the RRP facility parameters, and the operational details for MBS settlement including dollar roll and coupon swap transactions. These are market plumbing details related to how the Fed executes its policy stance.",
+  "important_numbers": [
+    "0.15%",
+    "0.00-0.25%",
+    "$80 billion/month",
+    "$40 billion/month",
+    "0.05%",
+    "$80 billion/day",
+    "0.25%"
+  ],
+  "tags": [
+    "fed",
+    "fomc",
+    "qe",
+    "asset-purchases",
+    "rrp",
+    "ioer",
+    "monetary-policy-implementation"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "event_type 'fomc_statement' is technically valid per taxonomy but imprecise — this is an Implementation Note, which is operationally distinct from the FOMC policy statement itself (which was issued separately on June 16, 2021)",
+      "Source is a historical document from June 2021 (~4 years 9 months old) but has clear archival value as a primary source documenting pandemic-era Fed operational framework"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Historical record requiring verification of continued relevance. The SOURCE METADATA topic 'macro catalysts' is accurate insofar as this is the implementation of Fed policy decisions, but the primary relevance is to the monetary policy decision itself rather than external macro catalysts."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_implementation_note_issued_june_16_4e374bfdaa5f8a49.txt",
+  "notes": "This is an official Federal Reserve implementation note that accompanies the FOMC statement from June 16, 2021. It provides the operational details of monetary policy implementation. The document is dated June 16, 2021, making it approximately 4 years and 9 months old relative to the current date of April 1, 2026. While this is an authoritative primary source, it represents historical Fed policy during the pandemic-era accommodation period. No specific forward guidance or policy shift signals are present - the document merely restates the existing policy stance with operational parameters.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 70.0,
+    "reasoning": [
+      "quality score: 70.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (2)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

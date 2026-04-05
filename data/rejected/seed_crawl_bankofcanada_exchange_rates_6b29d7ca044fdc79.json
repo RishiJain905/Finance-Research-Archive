@@ -1,0 +1,80 @@
+{
+  "id": "seed_crawl_bankofcanada_exchange_rates_6b29d7ca044fdc79",
+  "created_at": "2026-04-01T03:03:00.416520+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Exchange rates",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/exchange",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This Bank of Canada webpage is a navigation and information page describing available exchange rate data services, tools, and historical data downloads. It does not contain actual exchange rate values, specific market analysis, or macro catalyst information. All rates listed are described as 'indicative rates only' obtained from aggregated financial institution quotes.",
+  "key_points": [
+    "Page describes types of exchange rate data available: daily (published by 16:30 ET), monthly (last business day of month), and annual (last business day of year)",
+    "Canadian Effective Exchange Rate (CEER) index is described as a weighted average of bilateral exchange rates against major trading partner currencies",
+    "The prior Canadian-Dollar Effective Exchange Rate index (CERI) was replaced by CEER as of January 2018",
+    "Foreign exchange intervention is stated to be updated 'if and when' the Bank intervenes in markets",
+    "Page provides access to Currency Converter, RSS feeds, and historical noon/closing rates data",
+    "All exchange rates are explicitly labeled as 'indicative rates only' obtained from aggregated price quotes"
+  ],
+  "why_it_matters": "This page has no direct market relevance as it does not provide current exchange rate data or analysis. It serves only as a directory for accessing the Bank of Canada's FX data services and tools.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "exchange-rates",
+    "fx-data",
+    "ceer-index",
+    "canadian-dollar",
+    "listing-page"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is set to 'unknown' when the source is about exchange rate data services - a more specific type like 'data_release_other' or 'treasury/operations' might be more appropriate, though this page itself is a container",
+      "source_type correctly identified as 'listing_page', which triggers automatic rejection per core rules",
+      "The record's assessment is accurate: this is a navigation page with no substantive exchange rate data, analysis, or macro catalyst content",
+      "Published_at is empty, which is noted but acceptable for this page type"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_exchange_rates_6b29d7ca044fdc79.txt",
+  "notes": "Source is a low-quality informational page that describes available FX data services but contains no actual exchange rate values, analysis, or macro catalyst content. Classified as listing_page per source metadata - non-archiveable. The CEER index and CERI replacement information are the only substantive details, but these are factual descriptions without market relevance. Not useful for RAG without actual rate data or policy commentary.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Navigation page with no substantive content",
+      "No actual exchange rate data or values provided",
+      "No publication date to assess recency",
+      "No market impact or macro context available",
+      "Describes data availability but does not provide the data itself"
+    ]
+  }
+}

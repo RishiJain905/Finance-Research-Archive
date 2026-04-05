@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 9,
+  "verdict": "accept",
+  "issues_found": [
+    "event_type set to 'unknown' which is appropriate for an index page; however, if individual linked documents are archived later, those should use 'fomc_statement' or 'fomc_projections' as applicable"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies this as a listing/index page with no substantive policy content. The characterization is well-supported by the source text. Auto-routing is appropriate.",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "This page is an archive index listing FOMC statements, economic projections, and related announcements from 2021. It contains only dates and titles of documents (12/15, 11/3, 9/22, 7/28, 6/16, 4/28, 3/17, 1/27/2021) with no substantive policy content. The actual FOMC statement text and economic projections are not included in this source.",
+    "why_it_matters": "This source is not useful for research purposes. It is merely an archive index page that points to other documents. To access actual FOMC policy decisions, forward guidance, or economic projections, one must retrieve the individual linked documents rather than this index.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

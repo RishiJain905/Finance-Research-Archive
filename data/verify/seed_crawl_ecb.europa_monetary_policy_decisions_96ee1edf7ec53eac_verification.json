@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page as correctly identified in the record - violates Rule 5 (reject if homepage, navigation, listing, or search page)",
+    "Source contains no actual monetary policy content - only describes where to find decisions",
+    "No published_at date because no specific meeting is referenced",
+    "event_type correctly set to 'unknown' but this indicates no valid event to categorize",
+    "No archival value - this is structural metadata describing an index, not a research document"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record self-identifies the core problem correctly: this is a listing/navigation page with no substantive content. No human review needed - the reject verdict is unambiguous.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

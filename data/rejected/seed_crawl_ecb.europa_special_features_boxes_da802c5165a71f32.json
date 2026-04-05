@@ -1,0 +1,93 @@
+{
+  "id": "seed_crawl_ecb.europa_special_features_boxes_da802c5165a71f32",
+  "created_at": "2026-04-01T20:57:58.201892+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "financial_stability_report",
+  "title": "ECB Financial Stability Review - Special Features & Boxes (Issue 2, 2025)",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/financial-stability-publications/fsr/special/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2025-11-26",
+    "source_type": "listing_page"
+  },
+  "summary": "This ECB Financial Stability Review listing page aggregates five analytical boxes from Issue 2, 2025 covering UCITS hedge fund leverage risks, European banks' USD activities, household investor behavior during market stress (including April 2025 turmoil), rolling sectoral recessions, and evolving safe-haven asset properties following April 2025 US tariff announcements. The source is a listing page containing only article abstracts and metadata, not full research content.",
+  "key_points": [
+    "UCITS hedge funds combine hedge fund-style synthetic leverage with frequent UCITS redemption terms, potentially amplifying market stress during simultaneous investor redemptions and margin calls",
+    "Euro area banks' USD assets (€6 trillion held by euro area investors) are concentrated in global systemically important banks and linked to capital market activities, with liquidity risks that may transfer to counterparties rather than bank balance sheets",
+    "Household investors showed greater resilience during April 2025 market turmoil compared to institutional or foreign investors, with smaller outflows and faster reinvestment patterns",
+    "Rolling sectoral recessions (staggered vulnerability waves across sectors) can become systemic when aligned, spiking sectoral growth correlations and clustering NPL dynamics",
+    "April 2025 US tariff turmoil saw USD depreciate while US Treasury yields rose—contrary to typical risk-off behavior—raising questions about safe-haven properties of USD-denominated assets"
+  ],
+  "why_it_matters": "This ECB Financial Stability Review compilation provides macroprudential insights relevant to systemic risk monitoring. The analysis of UCITS hedge fund leverage amplification, European bank USD exposure concentration, and the April 2025 safe-haven dynamics are particularly pertinent for understanding potential transmission channels during market stress. The €6 trillion USD exposure figure underscores material cross-border financial stability implications.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 0
+  },
+  "macro_context": "The source discusses rolling sectoral recessions as an explanation for disconnect between elevated corporate vulnerabilities and benign bank credit metrics in the euro area. It also covers safe-haven property evolution following April 2025 US tariff announcements, with USD behaving contrary to typical risk-off patterns.",
+  "market_structure_context": "The UCITS hedge fund box addresses structural leverage and liquidity mismatch risks in fund architecture. The European banks USD activities box examines asset-liability mismatches across currencies and associated liquidity risk transmission.",
+  "important_numbers": [
+    "€6 trillion (euro area investors' USD-denominated securities)"
+  ],
+  "tags": [
+    "ecb",
+    "financial-stability-review",
+    "hedge-funds",
+    "ucits",
+    "leverage",
+    "european-banks",
+    "usd-exposure",
+    "household-investors",
+    "rolling-recessions",
+    "safe-haven",
+    "tariffs",
+    "april-2025"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a LISTING PAGE per CORE RULES #6 - must reject regardless of content quality",
+      "event_type 'financial_stability_report' is valid but the source is an index page, not the actual report",
+      "Source contains only abstracts/metadata for 5 boxes, not substantive research content",
+      "Content is too thin to have meaningful archival value - requires crawling individual article URLs",
+      "Multiple unrelated topics bundled without coherent narrative",
+      "Published November 2025 (4+ months old) with only listing page content - marginal historical value at best"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_special_features_boxes_da802c5165a71f32.txt",
+  "notes": "This source is a LISTING PAGE (index of special features) rather than standalone archiveable content. Contains metadata and abstracts for 5 ECB Financial Stability Review boxes but not full text. The metadata is published 26 November 2025 (approximately 4 months before TODAY). While topic-relevant to macro catalysts (financial stability, systemic risk), the source quality is limited by being a listing page. Recommend crawling individual box URLs for substantive analysis. SOURCE_TYPE should be listing_page per CORE RULES #6.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 4,
+    "reasoning": [
+      "Listing page with only article abstracts, not full content",
+      "Multiple topics without coherent single focus",
+      "Truncated content prevents detailed analysis",
+      "Historical record (4 months old)",
+      "High domain trust (ecb.europa.eu) partially offsets low content depth"
+    ]
+  }
+}

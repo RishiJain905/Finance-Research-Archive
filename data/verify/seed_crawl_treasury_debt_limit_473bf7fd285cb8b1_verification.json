@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page containing aggregated links to multiple documents from 2017-2025, not a single archiveable research document",
+    "No specific publication date on the page itself (published_at is empty)",
+    "Cannot assign a meaningful single event_type from the taxonomy to an aggregated listing page",
+    "event_type is set to 'unknown' when the correct action would be to reject based on page type",
+    "Page aggregates heterogeneous content (letters, reports, FAQs, daily activity) without coherent focus",
+    "Cannot extract specific market-impactful events or data from this navigation hub"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this as a listing page. Per Rule 5, listing pages must be rejected. The human review fields contain notes that align with this verdict.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

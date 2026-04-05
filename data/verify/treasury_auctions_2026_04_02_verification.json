@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an explicit placeholder with no actual content or data",
+    "Source attribution fields are empty (url: '', domain: '', source_type: '')",
+    "event_type set to 'unknown' - correct given placeholder nature, but source doesn't qualify as any valid event type",
+    "Source explicitly states it will be replaced with real dataset/API fetches - clearly not archival-ready",
+    "No market-relevant content present to support research or RAG use cases"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately self-identifies the source as a placeholder with no archival value. Automated rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

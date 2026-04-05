@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page, which per CORE RULE 5 must be rejected",
+    "Page contains only document titles, release dates, and links—no substantive policy content, data, or analysis",
+    "event_type 'treasury_issuance' is misleading; the page itself contains no issuance data, only links to documents",
+    "No extractable macro catalyst or market structure information present",
+    "Low archival value; the linked documents (TBAC reports, auction schedules) would be the appropriate archival targets instead"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-structured and accurately identifies the source as a listing page with no substantive content. The issues are straightforward and do not require human judgment.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Treasury webpage is an index/listing page of documents related to quarterly government financing operations, including TBAC reports, auction schedules, buyback schedules, and financing estimates. The page contains no substantive content—it merely lists document names, release dates, and links to the actual documents.",
+    "why_it_matters": "This page serves as a directory to Treasury borrowing and debt management documents. The actual TBAC reports, auction schedules, and financing estimates it links to would contain relevant information for macro catalysts and market structure. This specific page provides no actionable data—it only points to other documents.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

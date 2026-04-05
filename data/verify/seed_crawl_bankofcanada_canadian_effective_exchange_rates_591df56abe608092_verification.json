@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is methodology/documentation content, not a macro catalyst or market-moving event",
+    "event_type set to 'unknown' which is correct given no taxonomy value fits a methodology reference page",
+    "No published_at date provided in source metadata, preventing age assessment",
+    "Asset classes array is empty and confidence is 0, which correctly reflects the absence of market-moving content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately represents the source content and correctly identifies it as methodology/documentation rather than a macro catalyst. However, decision needed on whether methodology reference pages from central banks align with the 'macro catalysts' archive scope, even though they are high-quality authoritative sources on exchange rate measurement.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is a methodology and data reference page from the Bank of Canada describing the Canadian Effective Exchange Rate (CEER) index, which replaced the CERI in January 2018. The page explains the index composition (17 currencies), calculation methodology, and weight structure for tracking Canadian dollar competitiveness against major trading partners.",
+    "why_it_matters": "This page is a reference resource explaining how Canada's exchange rate is measured against trading partners. It does not contain market-moving information or current data—it's encyclopedic content about methodology. The index is useful for assessing Canadian dollar competitiveness in international trade and distinguishing between financial pressures (major currencies) and competitiveness issues (OITP).",
+    "macro_context": "The CEER index provides a comprehensive measure of Canadian dollar value weighted by trade patterns. The OITP index captures competitiveness-related dynamics with emerging markets while the major currencies index reflects financial pressure dynamics. Energy exclusion prevents oil price volatility from distorting trade competitiveness measures.",
+    "market_structure_context": ""
+  }
+}

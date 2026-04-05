@@ -1,0 +1,89 @@
+{
+  "id": "seed_crawl_treasury_united_states_department_of_the_6d2b88d7532a5916",
+  "created_at": "2026-04-02T05:46:12.515860+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "United States Department of the Treasury Announces New Appointments",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/news/featured-stories/united-states-department-of-the-treasury-announces-new-appointments",
+    "domain": "home.treasury.gov",
+    "published_at": "2025-02-08",
+    "source_type": "crawl"
+  },
+  "summary": "Treasury Secretary Scott Bessent announced President Trump's intent to nominate Luke Pettit as Assistant Secretary for Financial Institutions and Jason De Sena Trennert as Assistant Secretary for Financial Markets. Pettit previously worked as a senior policy adviser to Senator Bill Hagerty and held positions at Bridgewater Associates and the Federal Reserve. Trennert is the Chairman of Strategas Research Partners, a macroeconomic research firm he co-founded 18 years ago.",
+  "key_points": [
+    "Luke Pettit nominated as Assistant Secretary for Financial Institutions; background includes Bridgewater Associates and Federal Reserve Division of Monetary Affairs",
+    "Jason De Sena Trennert nominated as Assistant Secretary for Financial Markets; 34 years on Wall Street and Chairman of Strategas Research Partners",
+    "Both appointments described as supporting President Trump's agenda for economic revitalization and regulatory reduction",
+    "Secretary Bessent described the nominees as critical to implementing the administration's economic agenda",
+    "Pettit previously worked as economist for Senate Banking Committee",
+    "Trennert was described as 'Wall Street's number one macroeconomic research shop' by Strategas"
+  ],
+  "why_it_matters": "Could be refined to explicitly state this is a nomination announcement only (not confirmed appointments) and that no policy positions or market structure changes are described in the source",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "Personnel announcements may signal policy direction over time, but this source contains no specific policy commitments or macroeconomic data. The nominees' backgrounds suggest pro-regulation reform orientation consistent with the Trump administration's stated agenda.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "18 years (Strategas firm age)",
+    "34 years (Trennert's Wall Street career)"
+  ],
+  "tags": [
+    "treasury",
+    "appointments",
+    "financial-institutions",
+    "financial-markets",
+    "bessent",
+    "trump-administration",
+    "personnel"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' when the correct type is obvious: this is a personnel appointment announcement, which could map to treasury_issuance (as a Treasury communication) or be classified more specifically",
+      "Source is stale at 14 months old, beyond the 90-day threshold, and lacks clear archival value as defined by the rules (no historical policy decision, key research finding, or market-moving content)",
+      "Source quality is low - primarily biographical press release with no specific policy commitments, market structure mechanics, or macro catalyst information",
+      "The source provides no concrete data points, forward guidance, or thresholds relevant to market structure research",
+      "Record correctly identifies the thin nature of the source but the event_type should not remain 'unknown' for a clear personnel announcement"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "While the summary and key_points are factually accurate against the source, the record has two significant issues: (1) event_type remains 'unknown' when it's clearly a Treasury personnel/appointment announcement that could be classified, and (2) the source lacks archival value for a macro catalyst archive - it's a stale biographical press release with no policy specifics, market-moving data, or market structure content. Human review needed to determine if this has any archival value as background context on Treasury personnel."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_united_states_department_of_the_6d2b88d7532a5916.txt",
+  "notes": "This is a personnel announcement, not a macro catalyst or market structure event. The source lacks specificity about policy changes, contains no market-moving data, and is stale (published 14 months ago). May serve as background context for Treasury leadership but has limited archival value for market structure or macro catalyst research.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Thin content - primarily biographical information",
+      "Stale publication date (14 months old)",
+      "No specific policy commitments or market structure mechanics",
+      "No macro data or catalyst information",
+      "Personnel announcement format not suited to market-moving content"
+    ]
+  }
+}

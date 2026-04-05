@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a press release/Note to Editors describing a research paper, not the full research paper itself - the record correctly identifies it as research_paper based on the underlying publication, but the crawled source is thin (one page press release)",
+    "Source is over 21 years old (2004-11-19) - significantly exceeds 90-day threshold; however has clear archival value as historical Treasury market infrastructure documentation",
+    "Source provides summary-level information but full research paper content is not available in crawl - key_points appear consistent with source text but full verification of all claims is not possible",
+    "17 basis points figure is accurately quoted from source",
+    "Author names and roles correctly extracted from source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a legitimate Federal Reserve Bank of New York research publication but is presented as a press release summary rather than the full paper. The record content is accurate and well-aligned with the source, but the thin nature of the source (press release vs. full paper) and the significant age (21+ years) warrant human decision on whether this has sufficient archival value for a finance research archive focused on market structure. The topic is operationally relevant to Treasury market infrastructure but may have limited research value given the age.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This 2004 Federal Reserve Bank of New York Current Issues in Economics and Finance research paper examines three innovations in the Treasury Tax and Loan Program: electronic tax collection via EFTPS, Dynamic Investment, and the Term Investment Option. The authors find these changes improved cost efficiency in processing tax payments, enhanced reserve stabilization in the banking system, and shifted a portion of Treasury deposit interest rate determination to market processes.",
+    "why_it_matters": "This paper documents structural changes to Treasury cash management operations and the federal tax collection process implemented in the early 2000s. Understanding these historical innovations provides context for how Treasury market plumbing evolved pre-financial crisis. This 2004 publication represents historical market infrastructure documentation but has limited current relevance for market participants.",
+    "market_structure_context": "The paper addresses market structure topics including: Treasury cash management operations via the Treasury Tax and Loan Program, Reserve Bank balance management, and the operational mechanics of government cash management. The three innovations examined (EFTPS, Dynamic Investment, Term Investment Option) represent infrastructure changes to how Treasury interacted with the banking system and managed federal tax receipts in the 2004-era framework."
+  }
+}

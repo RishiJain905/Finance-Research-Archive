@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "TOPIC 'macro catalysts' is misaligned with source content; this is a geopolitical/human-rights sanctions announcement, not a macro catalyst (monetary policy, rate decisions, economic data)",
+    "event_type is 'unknown' - should be classified as a geopolitical sanctions action (not covered by standard taxonomy)",
+    "why_it_matters field contains unsupported speculative language: 'market impact is expected to be negligible' - the source text does not discuss or estimate market impact at all",
+    "Record does not meet the archive's stated focus on 'market structure or macro catalysts'; source is a foreign policy/geopolitical announcement",
+    "market_impact field has empty arrays with confidence: 0 but why_it_matters speculates on negligible impact anyway - contradictory and unsupported"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a geopolitical sanctions press release, not a macro catalyst or market structure document. The record correctly identifies this mismatch but still produced a summary with speculative market impact claims. Human review needed to determine whether geopolitical sanctions have any place in this finance research archive or if re-tagging is appropriate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The why_it_matters field should not speculate on market impact. Replace with: 'This sanctions action targets key enablers of Nicaragua's authoritarian governance structure—financial intelligence, labor enforcement, and communications surveillance. Assets of designated individuals in U.S. possession are frozen and most transactions with them by U.S. persons are prohibited. No market impact discussion is provided in the source.'",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

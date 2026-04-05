@@ -1,0 +1,67 @@
+{
+  "id": "new_york_fed_markets_data_hub_treasury_securities_federal_reserve_bank_of_new_york_913f8201",
+  "created_at": "2026-04-01T00:54:43.016966+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Treasury Securities - Federal Reserve Bank of New York",
+  "source": {
+    "name": "New York Fed Markets Data Hub",
+    "url": "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/treasury-securities",
+    "published_at": "",
+    "source_type": "article",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "This is an institutional reference page describing the New York Fed's Open Market Trading Desk role in Treasury securities operations for the SOMA portfolio. The page explains that the Desk buys and sells Treasuries in the secondary market and rolls over maturing holdings at auction, executing transactions with primary dealers. It also notes the NY Fed provides limited transaction services to approximately 200 central banks and official institutions. No discrete event, policy decision, or data release is contained in this source.",
+  "key_points": [
+    "The NY Fed's Open Market Trading Desk is authorized by the FOMC to buy and sell Treasury securities for the System Open Market Account (SOMA)",
+    "The Desk purchases and sells Treasuries in the secondary market and rolls over maturing SOMA holdings at auction",
+    "Transactions are executed with primary dealers",
+    "Since end of 2008, the FOMC has directed the Desk to expand Treasury holdings in SOMA on several occasions to implement monetary policy",
+    "The NY Fed provides limited transaction services (purchases and sales of Treasuries) to about 200 central banks, governments, and official institutions",
+    "Recent announcements referenced include FedTrade Plus for SOMA Treasury operations (Mar 12, 2026) and Treasury Securities Small Value Exercise (Feb 23, 2026)"
+  ],
+  "why_it_matters": "This page provides foundational context for understanding how the Federal Reserve implements monetary policy through Treasury market operations. It is a structural reference document rather than a discrete market-moving event. Users seeking specific operational data should access the linked Treasury Operations data, SOMA Holdings, or Transaction Data resources rather than this overview page.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "event_type should be changed from 'unknown' to 'market_notice' to accurately reflect that this source describes Fed operational framework for Treasury market activities, including SOMA operations and primary dealer counterparty relationships.",
+  "important_numbers": [
+    "200 central banks/governments/official institutions served"
+  ],
+  "tags": [
+    "new-york-fed",
+    "treasury-operations",
+    "soma",
+    "open-market-trading-desk",
+    "primary-dealers",
+    "market-structure",
+    "federal-reserve-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' when a more appropriate taxonomy value (market_notice or balance_sheet_update) is applicable given the source describes Fed Treasury operations framework",
+      "PUBLISHED_AT is blank in source metadata - cannot verify recency or archival eligibility based on date",
+      "Source contains no discrete event, policy decision, or data release - it is a static institutional overview page",
+      "Recent announcements referenced (Mar 12, Feb 23, Dec 10 2025) are separate documents not included in this source; the page merely links to them",
+      "Record is honest about low archival value but does not assign the most appropriate event_type"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate and well-structured, correctly identifying the source as a thin institutional reference page. However, the event_type 'unknown' should be corrected to a valid taxonomy value (market_notice) since the source describes Fed Treasury operations framework. The record itself acknowledges limited archival utility but the event_type should still conform to taxonomy standards. Human decision needed on whether thin operational reference pages warrant archiving in a finance research archive focused on market structure and macro catalysts."
+  },
+  "raw_text_path": "data/raw/new_york_fed_markets_data_hub_treasury_securities_federal_reserve_bank_of_new_york_913f8201.txt",
+  "notes": "Source is a static informational/overview page about NY Fed Treasury securities operations. Contains no discrete event, no specific policy signals, no new data. PUBLISHED_AT is blank in metadata. The three announcements listed (Mar 12, Feb 23, Dec 10, 2025) appear to be separate documents that should be retrieved individually for actual archival content. This page has low archival utility for a finance research archive focused on market structure and macro catalysts.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "53851f0c8c07e7435df587667572c7b6fb589cfb"
+}

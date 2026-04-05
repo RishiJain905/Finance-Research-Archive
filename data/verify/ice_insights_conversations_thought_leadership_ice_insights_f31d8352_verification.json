@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "PAGE_TYPE metadata reports 'article' but source body is clearly a navigation/listing page with only UI filter elements",
+    "Source body contains no research articles, data, or analysis - only Category, Topic, Type filter selectors",
+    "H1 displays 'Your browser is unsupported' indicating the page may not have rendered properly",
+    "PUBLISHED_AT is empty - no temporal context available",
+    "Content word count of 303 consists almost entirely of legal boilerplate and UI text, not substantive content",
+    "No relevant market structure or macro catalyst information present in the source",
+    "Cannot serve archival purpose as it contains no research findings, data releases, or policy content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is accurate in its assessment that the source is non-archivable. The PAGE_TYPE metadata is incorrect (reports 'article' but content is navigation/listing), and the source contains no substantive research content. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is a category navigation/listing page for ICE Insights energy markets content, not an actual research article. The page displays filter options for topics (Analytics, Data Access, Gasoil, Natural Gas, Oil, Power, etc.) and content types (Article, Audio, Case Study, Podcast, etc.), along with legal disclaimers. No actual research content, data, or analysis is present. The H1 'Your browser is unsupported' suggests incomplete page rendering.",
+    "why_it_matters": "This source does not contain any substantive research content relevant to market structure or macro catalysts. It is a web navigation interface (despite PAGE_TYPE metadata reporting 'article'), not an archiveable research document.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

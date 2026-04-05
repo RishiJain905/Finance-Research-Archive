@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "TOPIC MISMATCH: SOURCE METADATA designates 'market structure' as target/topic, but actual content is consumer spending survey data (macro research) - not relevant to market structure topics like trading, market making, settlement, or market plumbing",
+    "Source age: Published January 16, 2024 (over 2 years before TODAY 2026-04-01). May have archival value as historical data point but age is significant",
+    "Topic field in record incorrectly set to 'market structure' when content is macroeconomic consumer behavior data - should be retagged as 'macro catalysts' if accepted"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Critical topic mismatch detected. SOURCE METADATA explicitly states TARGET/TOPIC is 'market structure' but the content is consumer spending expectations and household financial behavior from NY Fed's SCE survey. This is macroeconomic research data, not market structure content. Human must decide: (1) reclassify topic to 'macro catalysts' and accept, or (2) reject due to relevance mismatch with designated archive target.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "This content is not relevant to market structure. The SCE Household Spending Survey provides consumer behavior data that is macroeconomic in nature, not market structure/microstructure content. The record should be retagged to 'macro catalysts' if it is to be archived."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'regulatory_guidance' as this is Treasury program documentation/guidance for a federal subsidy program",
+    "Source describes a concluded historical program (2009-2011) with no current policy implications and no relevance to current macro catalysts",
+    "published_at is empty in source metadata, making age assessment difficult beyond knowing program ended years ago",
+    "Source is informational/archival in nature rather than market-moving content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source content is factually accurate but describes a 2009-era historical clean energy subsidy program that concluded years ago. The record correctly identifies it lacks relevance to current macro catalysts. The main decision point is whether the archive should include historical program documentation for fiscal policy research purposes, or whether to exclude it given the stated TARGET of 'macro catalysts'. The record's quality_tier of 'out_of_scope' and why_it_matters field are appropriate assessments.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This source describes a historical economic stimulus program from the American Recovery and Reinvestment Act of 2009 and has no relevance to current market structure or macro catalysts. It is an informational archive page about a concluded subsidy program with no implications for current fiscal policy, energy markets, or monetary policy.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

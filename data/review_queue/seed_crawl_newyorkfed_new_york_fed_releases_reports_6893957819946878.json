@@ -1,0 +1,83 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_releases_reports_6893957819946878",
+  "created_at": "2026-04-01T02:55:37.354026+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "New York Fed Releases Reports about Negative Interest Rate Swap Spreads, Trends in Credit Basis Spreads, and the Fed's Pre-Crisis Monetary Policy Framework",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2018/rp181001",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2018-10-01",
+    "source_type": "research_paper"
+  },
+  "summary": "The New York Fed released three research articles in the Economic Policy Review examining market structure topics: factors driving negative U.S. interest rate swap spreads attributed to regulatory changes reducing dealer incentives; analysis of credit basis spread dislocations in late 2015/early 2016 finding regulatory leverage requires spreads to be more negative than pre-crisis to achieve target ROE; and an assessment of the pre-crisis monetary policy framework finding it kept rates near target but was opaque and inefficient compared to the current framework.",
+  "key_points": [
+    "U.S. interest rate swap spreads turned negative for many maturities; regulatory changes reduced supervised institutions' willingness to absorb shocks, limiting counteracting trades",
+    "The authors argue negative swap spreads represent a 'new normal' where spreads must reach more negative levels to generate adequate dealer return on equity given balance sheet costs",
+    "Credit basis dislocations in late 2015 and early 2016 were examined; evidence suggests idiosyncratic risk contributed but asset manager positioning changes were limited",
+    "Current regulatory leverage requires CDS-bond basis to be significantly more negative than pre-crisis levels to achieve the same ROE target",
+    "Pre-crisis monetary policy framework relied on scarce aggregate reserves where small changes affected fed funds rates; it was opaque and inefficient despite keeping rates near target",
+    "The Fed's post-crisis approach has controlled rates effectively, suggesting alternate frameworks can be successful"
+  ],
+  "why_it_matters": "This research documents how post-crisis banking regulations altered market structure by changing dealer incentives and market-making behavior. Understanding the shift in swap spreads and credit basis dynamics is essential for evaluating arbitrage conditions, derivative pricing, and the transmission of monetary policy through private sector balance sheets. The 'new normal' for spreads has implications for hedging costs and CDS-bond arbitrage trading.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 3
+  },
+  "macro_context": "",
+  "market_structure_context": "The articles examine swap spread dynamics, CDS-bond arbitrage mechanics, dealer balance sheets, and the Fed's operating framework—all core market structure topics. The research demonstrates how regulatory leverage requirements altered the equilibrium level of credit and rates basis spreads and reshaped the monetary policy implementation framework from a scarce-reserves to an abundant-reserves system.",
+  "important_numbers": [],
+  "tags": [
+    "nyfed",
+    "research",
+    "swap-spreads",
+    "credit-basis",
+    "dealer-balance-sheet",
+    "regulatory-leverage",
+    "monetary-policy-framework",
+    "economic-policy-review"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'research_paper' but the source is a press release announcing three research articles, not the papers themselves. The source_type in source metadata is also incorrectly set to 'research_paper' when it should reflect a press release or announcement format.",
+      "market_impact.asset_classes includes 'volatility' which is not supported by the source. The source addresses interest rate swaps, credit basis spreads, and monetary policy implementation—not volatility markets.",
+      "why_it_matters claims implications for 'cross-currency basis trading' but the source does not mention cross-currency basis; it discusses U.S. interest rate swap spreads and CDS-bond basis spreads, which are different instruments."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The event_type is set to 'research_paper' when the source is actually a press release. This is a fundamental classification error that prevents auto-acceptance despite the source having genuine archival value as institutional research on market structure. Human reviewer should determine correct event_type (likely economic_commentary or research_paper would need clarification that the record summarizes the announced research) and verify whether the asset_classes and cross-currency basis claims are acceptable extrapolations or unsupported overreach."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_releases_reports_6893957819946878.txt",
+  "notes": "This is a press release announcing three research articles, not the articles themselves. The body summarizes findings but does not contain full paper data. Historical record from October 2018—roughly 7.5 years prior to current date. While the market structure insights remain academically relevant, the specific spread levels and conditions described may not reflect current market dynamics. SOURCE METADATA topic field incorrectly populated with 'market structure' value rather than actual topic; corrected to market structure per analysis.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "medium",
+    "score": 5,
+    "reasoning": [
+      "Source is high-authority institutional research from NY Fed with clear methodology",
+      "Content directly addresses market structure topics as required",
+      "However, source is historical (2018) and provides summary-level findings rather than full paper content",
+      "Summary language lacks specific quantitative data points for reproduction"
+    ]
+  }
+}

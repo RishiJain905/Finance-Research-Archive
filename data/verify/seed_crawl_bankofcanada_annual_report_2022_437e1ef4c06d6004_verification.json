@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a landing page/table of contents (listing_page), which violates Rule 5 - homepage, navigation_page, listing_page, and search_page types must be rejected",
+    "event_type is set to 'unknown' when 'monetary_policy_report' would be the correct classification given the Bank of Canada Annual Report covering inflation and monetary policy",
+    "Extracted content is extremely thin - only table of contents structure and minimal descriptive headings",
+    "No substantive policy analysis, data tables, or detailed discussion present in this extraction",
+    "Published date remains 'unknown' despite this being a historical 2022 document",
+    "Record has no actionable research value as-is; full PDF content needed for proper archival"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Rule 5 is clear: listing_page sources must be rejected. This record should not proceed to human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is the Bank of Canada's Annual Report 2022 landing page, containing only a table of contents and minimal descriptive text. The extracted content confirms that Canadian inflation rose from just under 5% to 8% in June 2022 before falling to just over 6% by year-end, and that the Bank undertook its most rapid tightening cycle in Canada's history. The substantive content of the annual report is not present in this extraction.",
+    "why_it_matters": "This source is too thin to provide actionable research value. It is a navigation page for the Bank of Canada Annual Report 2022, not the report itself. The only substantive information is high-level inflation trajectory and the characterization of the 2022 tightening cycle as the most rapid in Canadian history.",
+    "macro_context": "Historical record of Canadian inflation trajectory in 2022 and Bank of Canada monetary policy response. The data confirms inflation peaked at 8% in June 2022 and retreated to just over 6% by year-end, with the Bank responding through aggressive rate hikes."
+  }
+}

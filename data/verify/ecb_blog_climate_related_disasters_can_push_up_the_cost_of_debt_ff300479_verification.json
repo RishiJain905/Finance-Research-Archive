@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Summary states effect is 'more pronounced for developing and highly indebted countries' but source specifically attributes heightened transition risk sensitivity to developing countries only; debt level interaction is discussed in context of acute physical risk (climate disasters), not transition risk",
+    "market_impact.asset_classes includes 'fx' and 'commodities' but source does not discuss these asset classes or their relation to the climate risk-svereign bond findings",
+    "market_impact.confidence is set to 5 but the quality_tier is 'primary' with score 8, suggesting inconsistency in how market impact confidence should be assessed",
+    "market_structure_context is empty despite the source providing relevant details about how climate risk affects sovereign bond pricing dynamics and credit spreads"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is mostly accurate and from a high-quality primary source, but contains minor overstatement in the summary and includes unsupported asset class references in market_impact. The empty market_structure_context is a missed opportunity to capture relevant market microstructure details. These are not critical errors but warrant human review to determine if corrections are needed.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "ECB staff research finds that climate risk is increasingly priced into sovereign bond markets, with transition risk (measured by carbon emissions intensity) showing a significant positive relationship with ten-year sovereign bond yields. The effect is more pronounced for developing economies, and highly indebted countries face more pronounced yield increases following climate disaster shocks. Effective climate policies can help mitigate increases in debt servicing costs.",
+    "why_it_matters": "This research provides empirical evidence linking climate risk to sovereign borrowing costs, with direct implications for fiscal policy and debt sustainability. Investors and policymakers should note that developing countries with high emissions or elevated disaster exposure face structurally higher borrowing costs, and high-debt countries may face a feedback loop where climate-vulnerable countries face higher debt burdens, increasing their fiscal vulnerability to future climate shocks.",
+    "macro_context": "Climate risk acts as a macro catalyst affecting sovereign credit spreads, particularly for developing economies and countries with elevated debt levels. The research demonstrates that markets are pricing transition risk differently across country groups, with developing economies facing a more significant premium. This could affect capital flows, sovereign borrowing costs, and potentially spill over into broader emerging market risk sentiment.",
+    "market_structure_context": "Climate risk affects sovereign bond valuations through multiple channels: transition risk (carbon emissions intensity) creates a risk premium that has strengthened since the Paris Agreement; acute physical risk from climate disasters affects yields in the short to medium term, with effects varying by event type (droughts show steeper immediate impact, storms show more frequent impact). Countries with higher debt levels show more pronounced yield responses to climate shocks, suggesting climate risk and fiscal sustainability interact through a feedback mechanism. Developed economies show more subdued responses, possibly reflecting earlier decarbonisation progress."
+  }
+}

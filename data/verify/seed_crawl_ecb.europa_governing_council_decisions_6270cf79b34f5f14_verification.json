@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation_page per source metadata - explicitly violates CORE RULE 5 which mandates rejection for navigation pages",
+    "No actual monetary policy decision content in source - only procedural descriptions of meeting schedules and publication timing",
+    "event_type set to 'unknown' - correct in this case but also indicates the source has no classifiable event",
+    "Empty published_at date limits verifiability and archival dating",
+    "Source has zero market impact or substantive research value - it is purely meta-information about where to find decisions"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source type is unambiguously a navigation_page. Rule 5 explicitly requires rejection for navigation pages. The generated record correctly identifies this as non-archivable procedural content, but the verdict should be 'reject' not 'review_queue'. No human review needed - this is a clear-cut case per the stated rules.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

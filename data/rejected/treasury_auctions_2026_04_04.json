@@ -1,0 +1,79 @@
+{
+  "id": "treasury_auctions_2026_04_04",
+  "created_at": "2026-04-04T14:00:23.106811+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Treasury Securities Auctions Data Snapshot (Placeholder)",
+  "source": {
+    "name": "Treasury Fiscal Data",
+    "url": "",
+    "domain": "",
+    "published_at": "2026-04-04",
+    "source_type": "data_api"
+  },
+  "summary": "This is a placeholder dataset snapshot for Treasury Securities Auctions Data. No actual auction data, results, or market-relevant information is present. The source explicitly states it is a placeholder awaiting replacement with real dataset or API fetches.",
+  "key_points": [
+    "Source is explicitly marked as a placeholder with no real data",
+    "No auction dates, sizes, bid-to-cover ratios, or yields are provided",
+    "No Treasury auction announcements or results are documented",
+    "Source explicitly states intent to replace with real data in future"
+  ],
+  "why_it_matters": "This source cannot support any research, analysis, or RAG use cases. It contains no market-moving data, no auction mechanics, and no structural information about Treasury market operations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "placeholder",
+    "treasury",
+    "auctions",
+    "no-data",
+    "stale"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a placeholder with no actual content - contains only placeholder text",
+      "No Treasury auction data, dates, results, bid-to-cover ratios, or yields present",
+      "Source explicitly states it will be replaced with real data in the future",
+      "Cannot support any research, analysis, or RAG use cases",
+      "source.url is empty string - missing source attribution",
+      "source.domain is empty string - missing source attribution",
+      "event_type set to 'unknown' which is technically correct given placeholder nature, but the record correctly identifies no event occurred"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_04.txt",
+  "notes": "Source metadata indicates this is Treasury Securities Auctions Data targeting the market structure topic, but the body contains only placeholder text. No auction results, bid-to-cover ratios, yields, or any operational data is present. This record should be regenerated once actual Treasury auction data is available.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Placeholder content only",
+      "No substantive data points",
+      "Cannot support any research use case",
+      "Fails basic archival requirements"
+    ]
+  }
+}

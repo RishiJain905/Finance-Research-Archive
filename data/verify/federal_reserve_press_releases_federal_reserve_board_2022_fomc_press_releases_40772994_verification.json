@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an index/listing page containing only article titles and dates, not actual FOMC policy content",
+    "PAGE_TYPE metadata shows 'press_release' but actual content is a listing page (rule violation)",
+    "No substantive policy text, rate decisions, or vote tallies present in source",
+    "Cannot serve as standalone archival record for macro catalyst analysis",
+    "Published_at (12/14/2022) reflects page last update date, not a specific document date"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Generated record accurately identifies the source as a thin index page with no substantive content. No additional verification needed—the record correctly recommends rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This page is an index listing all FOMC statements and related documents published by the Federal Reserve during 2022, including eight rate decisions, four sets of economic projections, balance sheet reduction plans, and new trading rules. The page itself contains only titles and dates—no substantive policy text or data—functioning as a navigation aid rather than an archival document.",
+    "why_it_matters": "This index page has no standalone research value; it merely links to individual FOMC documents. Any substantive analysis would require retrieving the specific FOMC statements or projection releases directly. This source is not archiveable as a coherent record—it is a navigation page.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

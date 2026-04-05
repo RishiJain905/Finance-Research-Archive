@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source content is entirely about national security/counter-terrorism policy with zero relevance to market structure or macro catalysts",
+    "Metadata topic 'macro catalysts' is incorrect - source discusses counter-terrorism finance tracking, not financial markets",
+    "event_type set to 'unknown' is acceptable in this case as source does not fit any taxonomy category (monetary policy, speeches, data releases, treasury/operations, research)",
+    "No published_at date in source metadata",
+    "Source provides no actionable information for financial market analysis, trading, or investment research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies that source is irrelevant to finance research archive scope. No judgment call needed - the content is unambiguously about counter-terrorism finance policy with no market-moving information.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source describes the Treasury's Terrorist Finance Tracking Program (TFTP), a counter-terrorism initiative that uses SWIFT financial messaging data to trace terrorist financing networks. The content is about national security policy and has no relevance to market structure or macro catalysts for financial market research.",
+    "why_it_matters": "This source is not relevant to financial market research. It describes a national security program and does not contain information about market structure, monetary policy, economic data releases, or other macro catalysts that affect financial markets.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

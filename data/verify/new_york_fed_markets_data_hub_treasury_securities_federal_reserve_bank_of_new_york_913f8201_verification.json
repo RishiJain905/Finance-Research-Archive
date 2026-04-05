@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when a more appropriate taxonomy value (market_notice or balance_sheet_update) is applicable given the source describes Fed Treasury operations framework",
+    "PUBLISHED_AT is blank in source metadata - cannot verify recency or archival eligibility based on date",
+    "Source contains no discrete event, policy decision, or data release - it is a static institutional overview page",
+    "Recent announcements referenced (Mar 12, Feb 23, Dec 10 2025) are separate documents not included in this source; the page merely links to them",
+    "Record is honest about low archival value but does not assign the most appropriate event_type"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, correctly identifying the source as a thin institutional reference page. However, the event_type 'unknown' should be corrected to a valid taxonomy value (market_notice) since the source describes Fed Treasury operations framework. The record itself acknowledges limited archival utility but the event_type should still conform to taxonomy standards. Human decision needed on whether thin operational reference pages warrant archiving in a finance research archive focused on market structure and macro catalysts.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "event_type should be changed from 'unknown' to 'market_notice' to accurately reflect that this source describes Fed operational framework for Treasury market activities, including SOMA operations and primary dealer counterparty relationships."
+  }
+}

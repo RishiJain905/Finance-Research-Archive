@@ -1,0 +1,72 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_q3_report_8a3c13645212eec3",
+  "created_at": "2026-04-01T06:06:40.305113+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "economic_commentary",
+  "title": "New York Fed Q3 Report on Household Debt and Credit Shows Continued Decline in Consumer Debt",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2010/an101108",
+    "published_at": "2010-11-08",
+    "source_type": "seed_crawl",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The New York Fed's Q3 2010 Quarterly Report on Household Debt and Credit shows consumer debt declining for the seventh consecutive quarter, with nearly $1 trillion shaved from outstanding consumer debts since Q3 2008. The report highlights a sharp reversal in household cash flow, as debt paydowns reduced cash flow by approximately $150 billion through year-end 2009, compared to the prior decade when borrowing contributed over $300 billion annually to consumer cash flow.",
+  "key_points": [
+    "Consumer debt declined for the seventh consecutive quarter since its Q3 2008 peak, with nearly $1 trillion in total reduction",
+    "Debt payoff by consumers reduced cash flow by approximately $150 billion through year-end 2009, versus $300+ billion annual borrowing contribution between 2000-2007",
+    "Delinquent household debt stands at approximately $1.3 trillion (11% of consumer debt), down 8.2% year-over-year",
+    "Net mortgage debt paydowns reached nearly $140 billion by year-end 2009",
+    "Mortgage delinquency transition rate rose slightly from 2.6% to 2.7%, potentially indicating a seasonal pattern similar to Q3 2009",
+    "Foreclosure notices reached 457,000 individuals in Q3 2010, down 5.5% from Q2 and 6.4% year-over-year"
+  ],
+  "why_it_matters": "This report documents the household deleveraging process during the post-financial-crisis period. The shift from debt-fueled consumption to active debt reduction has significant implications for consumer spending capacity and broader economic recovery. The data suggests consumers were responding to both tightened credit standards and voluntary changes in saving behavior.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "This Q3 2010 report captures the household sector deleveraging phase following the 2008 financial crisis. The $150 billion reduction in consumer cash flow from debt paydowns (compared to prior borrowing patterns) indicates a structural shift in household financial behavior that would constrain consumer spending. This data was relevant for assessing the pace and sustainability of economic recovery during the post-crisis period.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$1 trillion (total debt reduction since Q3 2008)",
+    "$150 billion (annual cash flow reduction from debt payoff through year-end 2009)",
+    "$300+ billion (annual borrowing contribution to cash flow 2000-2007)",
+    "$1.3 trillion (delinquent consumer debt)",
+    "11% (delinquent debt as percentage of consumer debt)",
+    "8.2% (year-over-year decline in delinquent debt)",
+    "$140 billion (net mortgage paydowns through year-end 2009)",
+    "2.7% (mortgage delinquency transition rate)",
+    "457,000 (foreclosure notices Q3 2010)",
+    "522,000 (new bankruptcies on credit reports)"
+  ],
+  "tags": [
+    "household-debt",
+    "consumer-credit",
+    "deleveraging",
+    "new-york-fed",
+    "quarterly-report",
+    "mortgage-delinquency",
+    "foreclosures",
+    "bankruptcies"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Source published November 8, 2010—extremely stale (over 15 years old, exceeding the 90-day recency threshold by a significant margin)",
+      "TARGET metadata indicates 'market structure' but content is macroeconomic household debt data with no market structure relevance (no discussion of market plumbing, operations, microstructure, or trading mechanisms)",
+      "topic field correctly identifies 'macro catalysts' which matches the content, but this differs from the stated TARGET of 'market structure'",
+      "Per rule 6, missing source attribution and low-signal sources bias toward reject—this source is high-quality but extremely dated"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record summary and key_points are factually accurate and well-supported by the source. However, the source's extreme age (15+ years) and the topic mismatch between TARGET metadata ('market structure') and actual content ('macro catalysts') require human judgment on whether this historical household debt report has sufficient archival value for this specific archive. The 90-day recency exception for 'historical policy decision, key research finding' likely does not apply to a routine quarterly statistical report."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_q3_report_8a3c13645212eec3.txt",
+  "notes": "This source does not address market structure topics as defined for this archive (market plumbing, operations, microstructure, trading mechanisms). The content is a 2010-era macroeconomic report on household debt and credit conditions. While potentially useful as historical context for macro catalysts research, the extreme age (15+ years) and topic mismatch with the stated TARGET of 'market structure' make this a low-priority archive candidate. Consider whether historical household debt data from the post-crisis period has ongoing research value for your archive."
+}

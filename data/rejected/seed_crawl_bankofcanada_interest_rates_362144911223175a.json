@@ -1,0 +1,81 @@
+{
+  "id": "seed_crawl_bankofcanada_interest_rates_362144911223175a",
+  "created_at": "2026-04-01T06:01:07.726527+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Interest rates",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This is a navigation/index page for the Bank of Canada's interest rate data portal. The page lists available data products including Treasury bill yields, bond yields, CORRA (Canadian Overnight Repo Rate Average), yield curves, money market yields, U.S. interest rate lookups, and a policy interest rate comparison tool. No specific rate values, policy decisions, or substantive content are provided in this source.",
+  "key_points": [
+    "This is a data portal page listing available Bank of Canada interest rate data products, not a policy announcement or data release.",
+    "Available data includes Treasury bill yields, Government of Canada bond yields, CORRA, zero-coupon yield curves, and money market yields.",
+    "Data is available for download in XML, JSON, and CSV formats.",
+    "The page notes that monetary policy is conducted by adjusting the target for the overnight rate on eight fixed dates each year.",
+    "A side-by-side lookup tool is available for comparing changes to the Bank Rate and overnight rate target over time.",
+    "U.S. interest rate lookups include the U.S. Prime Rate, Federal Funds Rate, and Commercial Paper rates."
+  ],
+  "why_it_matters": "This page serves as an access point to Bank of Canada interest rate data but provides no substantive policy or market information itself. It has no direct relevance for research or market analysis beyond serving as a navigation hub.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "bank-of-canada",
+    "interest-rates",
+    "data-portal",
+    "treasury-bills",
+    "bonds",
+    "corra",
+    "yield-curves",
+    "overnight-rate"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 8,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page/navigation portal with no substantive content - only lists available data products without providing actual rate values or policy content",
+      "No published date is present in the source metadata",
+      "source_type correctly identified as 'listing_page' which per CORE RULE #5 should be rejected",
+      "event_type set to 'unknown' which is valid for this non-archivable content type"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_interest_rates_362144911223175a.txt",
+  "notes": "Source is a navigation/data portal page, not archiveable content. Contains only metadata about available data products with no specific rate values, policy content, or research findings. Per CORE RULE #6, listing pages should be treated as non-archiveable.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Navigation page with no substantive content",
+      "No specific data values or policy content provided",
+      "No publication date available",
+      "Insufficient for research or market analysis"
+    ]
+  }
+}

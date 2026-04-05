@@ -1,0 +1,77 @@
+{
+  "id": "seed_crawl_bankofcanada_daily_exchange_rates_c230f26d7f263135",
+  "created_at": "2026-04-01T03:01:00.024494+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Daily exchange rates",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates",
+    "published_at": "2026-03-31",
+    "source_type": "homepage",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "Bank of Canada publishes daily average exchange rates for 24 currencies against the Canadian dollar, covering the period 2026-03-25 through 2026-03-31. The page provides raw rate data only without any analysis, commentary, or macro catalyst discussion.",
+  "key_points": [
+    "Daily exchange rates published for 24 currencies including USD, EUR, GBP, JPY, CNY, and others",
+    "Rates expressed as 1 unit of foreign currency converted to Canadian dollars",
+    "Data covers 5 business days: March 25, 26, 27, 30, and 31, 2026",
+    "USD/CAD ranged from 1.3801 (March 25) to 1.3939 (March 31)",
+    "EUR/CAD ranged from 1.5964 to 1.6072 over the same period",
+    "No commentary, analysis, or macro interpretation provided on this page"
+  ],
+  "why_it_matters": "This page is a raw data feed providing daily exchange rate snapshots. It does not constitute a macro catalyst event, market commentary, or analytical content. It has no direct relevance for macro catalyst research without accompanying analysis.",
+  "market_impact": {
+    "asset_classes": [
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "USD/CAD: 1.3801 to 1.3939 (March 25-31, 2026)",
+    "EUR/CAD: 1.5964 to 1.6072 (March 25-31, 2026)",
+    "GBP/CAD: 1.8375 to 1.8467 (March 25-31, 2026)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "exchange-rates",
+    "cad",
+    "fx-data",
+    "raw-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a raw data table (homepage) with no analysis, commentary, or macro catalyst content",
+      "PAGE_TYPE is homepage — explicitly non-archiveable per core rule #5",
+      "event_type is 'unknown' which is correct but the source has no event-type characteristics to classify",
+      "Source provides no policy signals, economic interpretation, or actionable intelligence",
+      "No archival value as standalone raw FX data without analytical framing"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_daily_exchange_rates_c230f26d7f263135.txt",
+  "notes": "This source is a raw exchange rate data table. While exchange rates are relevant to macro analysis generally, this page provides no analysis, no commentary, and no macro catalyst discussion. It is not suitable for a research archive focused on macro catalysts or market structure without additional analytical framing. The page source_type is homepage, indicating non-archiveable status per core rules.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "Raw data feed only",
+      "No analytical content",
+      "Not relevant to macro catalysts without analysis",
+      "Source type is homepage - non-archiveable per core rules"
+    ]
+  }
+}

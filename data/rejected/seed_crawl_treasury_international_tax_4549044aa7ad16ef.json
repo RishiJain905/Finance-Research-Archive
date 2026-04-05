@@ -1,0 +1,80 @@
+{
+  "id": "seed_crawl_treasury_international_tax_4549044aa7ad16ef",
+  "created_at": "2026-04-01T17:07:02.698606+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "International Tax",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/tax-policy/international-tax",
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "This is a Treasury.gov navigation page that indexes types of international tax documents posted on the site, including tax treaties, TIEAs, FATCA materials, and congressional testimony. It contains no substantive policy content, specific data, or market-relevant information.",
+  "key_points": [
+    "Page is a navigation/index page listing document categories, not actual documents",
+    "Describes four document categories: tax treaties, TIEAs, FATCA, and additional international tax documents",
+    "No specific policy decisions, rates, or quantitative information present",
+    "No dates or publication timestamps provided",
+    "Does not contain analysis or commentary on current tax policy"
+  ],
+  "why_it_matters": "This page has no direct market relevance. It is a static index page that does not contain current macro catalyst information. Traders and analysts seeking international tax policy developments should look for specific documents linked from this page rather than this landing page.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "international-tax",
+    "navigation-page",
+    "fatca",
+    "tax-treaties",
+    "tieas"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation/listing page (home.treasury.gov/policy-issues/tax-policy/international-tax) — per rule #5 this must be rejected",
+      "No substantive content: page merely indexes document categories (treaties, TIEAs, FATCA, congressional testimony)",
+      "No published_at date available — source metadata lacks temporal signal",
+      "Not relevant to market structure or macro catalysts — lacks policy content, data, or analysis",
+      "event_type set to 'unknown' which is acceptable since no specific event is present",
+      "Record correctly identifies this as non-archivable and the assessment is well-supported"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_international_tax_4549044aa7ad16ef.txt",
+  "notes": "Source is a navigation/listing page per source_type classification. It provides no substantive content for market structure or macro catalyst analysis. Should be excluded from research archive unless linked documents are separately crawled. No published_at timestamp available to assess recency.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "non-archivable",
+    "score": 1,
+    "reasoning": [
+      "Navigation page with no substantive content",
+      "No policy decisions, data, or market-relevant information",
+      "Does not meet criteria for market structure or macro catalyst research",
+      "Cannot extract useful numbers or forward guidance"
+    ]
+  }
+}

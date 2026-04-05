@@ -1,0 +1,79 @@
+{
+  "id": "seed_crawl_treasury_treasury_quarterly_refunding_40136f46bffa5775",
+  "created_at": "2026-04-01T06:00:43.728174+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Treasury Quarterly Refunding",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding",
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "This page is a navigation hub on Treasury.gov that describes the quarterly refunding process in general terms. It does not contain specific data, decisions, or market-moving information. The page explains that Treasury releases documents and data relating to borrowing and debt management each quarter, and provides links to TBAC consultations, primary dealer meetings, and archived materials.",
+  "key_points": [
+    "Page is a navigation/landing page listing Treasury borrowing and debt management resources",
+    "Describes the quarterly refunding process as occurring near the middle of each calendar quarter",
+    "No specific auction amounts, rates, or debt issuance details provided",
+    "Contains links to TBAC meetings, primary dealer consultations, and quarterly refunding archives",
+    "No specific event date, decision, or data release documented in the source text"
+  ],
+  "why_it_matters": "This source does not contain actionable market information. It is an informational landing page that orients users to Treasury's quarterly refunding resources. No specific debt issuance decisions, auction results, or policy changes are present.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page references Treasury's quarterly refunding process as the mechanism for informing debt management policy and communicating with market participants (TBAC, primary dealers). However, no specific operational details or structural changes are documented.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "debt-management",
+    "quarterly-refunding",
+    "navigation-page",
+    "no-content"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation page (source_type correctly identified as 'navigation_page') - per Rule #5 this requires rejection",
+      "No substantive content in source - merely links to resources without actual documents or data",
+      "No published_at date available in source metadata",
+      "event_type correctly set to 'unknown' but should remain rejected due to source type",
+      "No specific auction amounts, rates, debt issuance details, or policy decisions documented",
+      "Source has no archival value - thin, low-signal navigation page that does not contain extractable market information"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "not_for_archive",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_treasury_quarterly_refunding_40136f46bffa5775.txt",
+  "notes": "Source is a Treasury.gov navigation page describing the quarterly refunding process. Per CORE RULE #6, navigation pages are non-archiveable. The page contains no specific event details, numbers, or actionable market information. It merely links to TBAC, primary dealers, webcasts, and archives without providing the actual content. Recommend excluding from archive or re-crawling specific quarterly refunding document links.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "Navigation page with no substantive content",
+      "No published_at timestamp available",
+      "No specific data or decisions documented",
+      "Does not meet minimum threshold for archival"
+    ]
+  }
+}

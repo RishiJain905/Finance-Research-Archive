@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to target topics 'macro catalysts' or 'market structure' - this is a title insurance and housing affordability policy discussion",
+    "event_type is 'unknown' when it should be 'blog_post' or 'research_paper' - the correct type is obvious from context",
+    "The record itself acknowledges the topical mismatch in why_it_matters, suggesting rejection is appropriate"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the record notes this is out of scope, a few fields could be improved: event_type should be set to 'blog_post' rather than 'unknown' if it were to be reclassified, and verification_confidence needs an actual numeric value instead of 0",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "event_type": "blog_post",
+    "topic": "housing policy",
+    "summary": "This Treasury blog post discusses title insurance reform and housing affordability, not macro catalysts or market structure."
+  }
+}
