@@ -22,6 +22,17 @@ This repo runs a multi-stage research pipeline:
 - lets a human approve or reject them from Telegram
 - finalizes the record in GitHub through a callback-triggered workflow
 
+### V2.7 additions
+
+The V2.7 release layer adds intelligence on top of the base pipeline:
+
+- **Triage & prioritization engine** — scores and routes candidates through priority buckets before processing
+- **Event clustering & story graphs** — groups related records into market events with narrative + quant evidence
+- **Watchlists & thesis tracking** — monitors specific topics and tracks thesis validity over time
+- **Article-quant enrichment** — links narrative articles to quantitative records with deterministic scoring
+- **Source performance analytics** — tracks per-source acceptance rates and generates actionable recommendations
+- **Massive source expansion** — 108 additional curated sources across 7 families (central banks, regulators, exchanges, think tanks, etc.)
+
 The end goal is a clean, growing finance research archive that can later power:
 - RAG
 - dashboards
@@ -90,6 +101,19 @@ flowchart TD
 
     Z -->|approve| J
     Z -->|reject| K
+
+    J --> AA[V2.7 Post-Processing]
+    AA --> AB[source_analytics.py<br/>per-source stats]
+    AA --> AC[source_recommendations.py<br/>actionable recommendations]
+    AA --> AD[link_article_quant.py<br/>article-quant linking]
+    AA --> AE[cluster_records.py<br/>event clustering]
+    AA --> AF[watchlist engine<br/>thesis tracking]
+
+    AB --> AG[data/source_analytics]
+    AC --> AH[data/source_recommendations]
+    AD --> AI[data/article_quant_links]
+    AE --> AJ[data/events]
+    AF --> AK[data/theses]
 ```
 
 
@@ -98,15 +122,15 @@ flowchart TD
 
 # Workflow Architecture Appendix
 
-This section explains the three main GitHub Actions workflows in the repo and visually shows how records move through the system.
+This section explains the main GitHub Actions workflows in the repo and visually shows how records move through the system.
 
-   The repo currently has three main automation workflows:
+The repo currently has three main automation workflows:
 
-    - **Article Research Pipeline**
-    - **Quant Research Pipeline**
-    - **Finalize Review Decision**
+- **Article Research Pipeline**
+- **Quant Research Pipeline**
+- **Finalize Review Decision**
 
-    Each one has a different job in the archive lifecycle.
+Each one has a different job in the archive lifecycle.
 
 ---
 
@@ -128,7 +152,7 @@ At a high level it:
 
 This workflow calls:
 - `scripts/run_ingest_and_process.py`
-- `scripts/send_pending_reviews.py` :contentReference[oaicite:3]{index=3}
+- `scripts/send_pending_reviews.py`
 
 ### What happens inside `run_ingest_and_process.py`
 
@@ -143,7 +167,7 @@ Then `process_record.py` does:
 
 1. `scripts/run_summarizer.py <record_id>`
 2. `scripts/run_verifier.py <record_id>`
-3. `scripts/route_record.py <record_id>` :contentReference[oaicite:4]{index=4}
+3. `scripts/route_record.py <record_id>`
 
 ### Where AI steps in
 
@@ -162,7 +186,7 @@ The AI steps are:
 
 So the article workflow uses MiniMax twice on each kept record:
 - once to generate the research record
-- once to verify the research record against the source :contentReference[oaicite:5]{index=5}
+- once to verify the research record against the source
 
 ### Article pipeline diagram
 
@@ -388,7 +412,6 @@ flowchart TD
     
     J --> K[Domain Memory]
     J --> L[Path Memory]
-    J --> L
     J --> M[Source Memory]
     
     K --> N[data/source_memory<br/>domain_memory.json]
@@ -473,4 +496,301 @@ flowchart TD
     O --> P[Telegram Human Review]
     P -->|approve| M
     P -->|reject| N
+```
+
+---
+
+## 7. V2.7 — Intelligence Layer
+
+V2.7 adds six major subsystems on top of the base pipeline, transforming the archive from a passive collection into an active intelligence engine.
+
+### V2.7 Part 1: Triage and Prioritization Engine
+
+**Scripts:**
+- `scripts/triage_engine.py`
+- `scripts/triage_budget_gate.py`
+- `scripts/triage_metrics.py`
+
+Before records enter the expensive MiniMax processing stage, the triage engine scores them using configurable weights and routes them through priority buckets. This ensures the highest-signal records are processed first while lower-priority candidates are deferred or discarded within budget constraints.
+
+### Triage flow
+
+```mermaid
+flowchart TD
+    A[discovered candidates] --> B[triage_budget_gate.py]
+    B --> C{within budget?}
+    C -->|yes| D[triage_engine.py]
+    C -->|no| E[defer to next run]
+    
+    D --> F[compute_triage_score]
+    F --> G[source_trust]
+    F --> H[topic_relevance]
+    F --> I[content_quality]
+    F --> J[freshness]
+    
+    G & H & I & J --> K[weighted priority score]
+    
+    K --> L{score vs thresholds}
+    L -->|>= process_now| M[process immediately]
+    L -->|>= defer| N[defer queue]
+    L -->|< defer| O[discard]
+    
+    M --> P[process_record.py]
+    N --> Q[next triage run]
+    O --> R[triage_metrics.py]
+    R --> S[data/triage/metrics.json]
+```
+
+### V2.7 Part 2: Event Clustering and Story Graphs
+
+**Scripts:**
+- `scripts/cluster_records.py`
+
+Accepted records are grouped into event clusters based on topic, time proximity, and keyword overlap. Each cluster becomes a coherent market narrative carrying both article evidence and quantitative data links.
+
+### Event clustering flow
+
+```mermaid
+flowchart TD
+    A[data/accepted records] --> B[cluster_records.py]
+    
+    B --> C[extract features<br/>topic, date, keywords, source]
+    C --> D[compute pairwise similarity]
+    D --> E[agglomerative clustering]
+    
+    E --> F[open clusters<br/>actively receiving records]
+    E --> G[stable clusters<br/>verified, continues accepting]
+    E --> H[archived clusters<br/>no longer accepting]
+    
+    F --> I[event_cluster JSON]
+    G --> I
+    H --> I
+    
+    I --> J[data/events/*.json]
+    
+    J --> K[article_links<br/>narrative evidence]
+    J --> L[quant_links<br/>numeric evidence]
+    J --> M[confidence score<br/>0-1]
+    
+    K & L & M --> N[rich event narrative]
+```
+
+### V2.7 Part 3: Watchlists and Thesis Tracking
+
+**Scripts:**
+- `scripts/watchlist_engine.py`
+- `scripts/thesis_tracker.py`
+
+Watchlists monitor specific topics, entities, or keywords across the archive. Theses track hypotheses about market conditions and validate them against incoming evidence.
+
+### Watchlist and thesis flow
+
+```mermaid
+flowchart TD
+    A[config/watchlists_v27.json] --> B[watchlist_engine.py]
+    B --> C[scan accepted records]
+    C --> D{matches watchlist?}
+    D -->|yes| E[create watchlist hit]
+    D -->|no| F[skip]
+    
+    E --> G[data/watchlist_hits/*.json]
+    G --> H[alert / digest]
+    
+    I[theses/*.json] --> J[thesis_tracker.py]
+    J --> K[scan new evidence]
+    K --> L{supports or contradicts?}
+    L -->|supports| M[increase confidence]
+    L -->|contradicts| N[decrease confidence]
+    L -->|neutral| O[no change]
+    
+    M & N & O --> P[update thesis status]
+    P --> Q[active / weakening / invalidated / confirmed]
+```
+
+### V2.7 Part 4: Article and Quant Enrichment
+
+**Scripts:**
+- `scripts/link_article_quant.py`
+
+Deterministic, config-driven linking between narrative article records and quantitative data records. Links are scored across four dimensions (topic compatibility, time window, keyword overlap, event alignment) and persisted as standalone files.
+
+### Linking flow
+
+```mermaid
+flowchart TD
+    A[data/accepted/*.json] --> B[separate articles vs quants]
+    B --> C[articles list]
+    B --> D[quants list]
+    
+    E[data/events/*.json] --> F[event cluster map]
+    G[config/quant_linking_rules.json] --> H[topic_to_series<br/>keyword_to_series<br/>scoring_bands<br/>dimension_weights]
+    
+    C & D & F & H --> I[compute_link_score]
+    
+    I --> J[topic compatibility<br/>30% weight]
+    I --> K[time window<br/>25% weight]
+    I --> L[keyword overlap<br/>25% weight]
+    I --> M[event alignment<br/>20% weight]
+    
+    J & K & L & M --> N[combined score 0-100]
+    
+    N --> O{score band}
+    O -->|>= 80| P[supports]
+    O -->|60-79| Q[context]
+    O -->|40-59| R[weak_context]
+    O -->|< 40| S[no link]
+    
+    P & Q & R --> T[data/article_quant_links/*.json]
+    
+    T --> U[enrich_accepted_record<br/>quant_context / article_context]
+    T --> V[enrich_event_cluster<br/>article_links + quant_links]
+```
+
+### V2.7 Part 5: Source Performance Analytics and Adaptive Control
+
+**Scripts:**
+- `scripts/source_analytics.py`
+- `scripts/source_recommendations.py`
+
+Tracks real performance of every source across the pipeline — accepted, review, rejected, and filtered-out ratios — and generates actionable recommendations for source management.
+
+### Analytics flow
+
+```mermaid
+flowchart TD
+    A[data/accepted/*.json] --> D[source_analytics.py]
+    B[data/review_queue/*.json] --> D
+    C[data/rejected/*.json] --> D
+    E[data/filtered_out/*.txt] --> D
+    
+    D --> F[group by source domain]
+    F --> G[compute per-source stats<br/>counts, ratios, avg scores]
+    
+    G --> H[data/source_analytics/*.json<br/>27 source stats files]
+    
+    H --> I[source_recommendations.py]
+    I --> J{evaluate rules}
+    
+    J -->|accepted < 5%, filtered > 70%| K[disable]
+    J -->|accepted moderate, filtered high| L[lower_max_links]
+    J -->|high review ratio| M[tighten]
+    J -->|zero accepted, mixed results| N[investigate]
+    J -->|strong accepted ratio| O[keep]
+    
+    K & L & M & N & O --> P[data/source_recommendations/*.json<br/>actionable recommendations]
+```
+
+### V2.7 Part 6: Massive Article Source Expansion Program
+
+**Configs:**
+- `config/article_source_families.json` — Master registry of 7 source families
+- `config/article_source_expansion_batch_1.json` — 37 targets (central banks + regional Fed)
+- `config/article_source_expansion_batch_2.json` — 31 targets (regulators + exchanges)
+- `config/article_source_expansion_batch_3.json` — 40 targets (think tanks + treasury + global macro)
+
+Adds **108 curated article sources** organized by family, target class, and priority tier with phased rollout. All sources start disabled and are enabled family-by-family based on Part 5 analytics.
+
+### Source expansion structure
+
+```mermaid
+flowchart LR
+    A[article_source_families.json<br/>7 families, 7 classes, 4 tiers] --> B[batch 1<br/>37 targets]
+    A --> C[batch 2<br/>31 targets]
+    A --> D[batch 3<br/>40 targets]
+    
+    B --> E[central_bank: 22<br/>regional_fed: 15]
+    C --> F[regulator: 16<br/>exchange_infrastructure: 15]
+    D --> G[research_institution: 20<br/>treasury_fiscal: 10<br/>global_macro: 10]
+    
+    E & F & G --> H[108 total sources]
+    
+    H --> I[Phase 1: all disabled]
+    I --> J[Phase 2: enable family-by-family]
+    J --> K[Phase 3: tune via analytics]
+```
+
+### Source families
+
+| Family | Count | Tier | Topic |
+|--------|-------|------|-------|
+| Central Banks | 22 | A | macro catalysts |
+| Regional Federal Reserve | 15 | A | macro catalysts |
+| Regulators | 16 | A | market structure |
+| Exchanges & Infrastructure | 15 | A | market structure |
+| Research Institutions | 20 | B | macro catalysts |
+| Treasury & Fiscal | 10 | A | macro catalysts |
+| Global Macro | 10 | B | macro catalysts |
+
+### V2.7 Complete System Overview
+
+```mermaid
+flowchart TD
+    subgraph Discovery
+        A1[Trusted Sources<br/>ingest_sources.py]
+        A2[Keyword Discovery<br/>run_keyword_discovery.py]
+        A3[Seed Site Crawl<br/>run_seed_crawl.py]
+        A4[108 Expansion Sources<br/>batch 1/2/3 configs]
+    end
+    
+    subgraph Triage
+        B1[triage_budget_gate.py]
+        B2[triage_engine.py<br/>priority scoring]
+        B3[triage_metrics.py]
+    end
+    
+    subgraph Processing
+        C1[process_record.py]
+        C2[run_summarizer.py<br/>MiniMax]
+        C3[run_verifier.py<br/>MiniMax]
+        C4[route_record.py]
+    end
+    
+    subgraph Archive
+        D1[data/accepted]
+        D2[data/review_queue]
+        D3[data/rejected]
+        D4[data/filtered_out]
+    end
+    
+    subgraph V2.7 Intelligence
+        E1[Event Clustering<br/>cluster_records.py]
+        E2[Article-Quant Linking<br/>link_article_quant.py]
+        E3[Source Analytics<br/>source_analytics.py]
+        E4[Source Recommendations<br/>source_recommendations.py]
+        E5[Watchlists & Theses<br/>watchlist_engine.py]
+    end
+    
+    subgraph Data Products
+        F1[data/events/*.json]
+        F2[data/article_quant_links/*.json]
+        F3[data/source_analytics/*.json]
+        F4[data/source_recommendations/*.json]
+        F5[data/theses/*.json]
+    end
+    
+    A1 & A2 & A3 & A4 --> B1
+    B1 --> B2
+    B2 --> B3
+    B2 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> C4
+    C4 --> D1
+    C4 --> D2
+    C4 --> D3
+    
+    D2 --> G[Telegram Human Review]
+    G -->|approve| D1
+    G -->|reject| D3
+    
+    D1 --> E1
+    D1 --> E2
+    D1 --> E3
+    
+    E1 --> F1
+    E2 --> F2
+    E3 --> E4
+    E3 --> F3
+    E4 --> F4
+    E5 --> F5
 ```
