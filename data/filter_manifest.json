@@ -4815,7 +4815,8 @@
     "bank_of_england_publications_r_enhancing_the_resilience_of_the_gilt_repo_market_discussion_638600ab": {
       "reasons": [
         "non_article_page_type",
-        "page_type_not_allowed"
+        "page_type_not_allowed",
+        "missing_required_keywords"
       ],
       "rules_used": {
         "record_type": "article",
@@ -5680,6 +5681,33 @@
       }
     },
     "upcoming_treasury_auctions_2026_04_05": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "repo_operations_2026_04_06": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_auctions_2026_04_06": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "upcoming_treasury_auctions_2026_04_06": {
       "reasons": [
         "missing_quant_values",
         "not_enough_recent_observations"
@@ -10065,6 +10093,67 @@
       "reasons": [],
       "rules_used": {
         "record_type": "article"
+      }
+    },
+    "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "market",
+          "treasury",
+          "inflation",
+          "rates",
+          "liquidity",
+          "repo"
+        ],
+        "blocked_keywords": [
+          "community",
+          "museum",
+          "student"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "New York Fed Liberty Street Economics",
+        "topic": "market structure"
+      }
+    },
+    "treasury_press_releases_treasury_department_designates_bny_as_financial_agent_to_sup_879352d8": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "treasury",
+          "issuance",
+          "funding",
+          "liquidity",
+          "auction",
+          "market"
+        ],
+        "blocked_keywords": [
+          "sanctions",
+          "terrorism",
+          "secretary",
+          "foreign assets control"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Treasury Press Releases",
+        "topic": "market structure"
       }
     }
   }

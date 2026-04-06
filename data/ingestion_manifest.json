@@ -205,7 +205,7 @@
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260310~b738caf5b4.en.html": "03a0256afe9d2f0fb1f26a0e8b24f1e943fbeb36b54c9f40c5c6da635c076828",
     "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "f446c0fea4ebdb37f30bb81a65fcb842f931df7167237d63a68d668ed44e124f",
     "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-11": "9bdaed2d30bd0fb13207c15af4b75d013f47c45e42e392e70c3c228a4ff45c32",
-    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "32c96e102653ba36148f965f3c5446b84f0743675b26b8820a27021971532ace",
+    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "3e757abef4399a6857a357f70f2e382cd72826fd8f9bf60905fa4e27e0c1be92",
     "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": "a71aeb3db8443e6216dac122633ca032f5715c69b9b73c2d5498d288f4e6d215",
     "https://home.treasury.gov/news/press-releases/sb0428": "80ad9d97c145f7beeaa0eb47ef88decb7904d9227fd4ed46ac27bf6f58493776",
     "https://home.treasury.gov/news/press-releases/sb0429": "aedaa833393cfd0fe0e4a9976c1bdf6f7a10f0bb86c73502baff12def84ab17f",
@@ -226,7 +226,9 @@
     "https://www.bis.org/publ/work1341.htm": "93701f15132deb5142095c91766752f0f79bc397e8a4d8d3e482b22ee2b7dfaa",
     "https://www.bis.org/review/r260331e.htm": "59b719cff5260c3b49dc24c2087d03df77dfd0bc35cd91af2d1827e57048605f",
     "https://www.bis.org/review/r260331d.htm": "c9160279c29d25f3fec621b41b7f26c11bf76b909a9dde63ae85b740a07efc62",
-    "https://www.bis.org/review/r260331c.htm": "db0c3c57577f265d73e7d96e3172eaf0ca604cc9166a0f121c8930f68cd03d26"
+    "https://www.bis.org/review/r260331c.htm": "db0c3c57577f265d73e7d96e3172eaf0ca604cc9166a0f121c8930f68cd03d26",
+    "https://home.treasury.gov/news/press-releases/sb0433": "b73714f3f76aed3d54ef9adfd531e62050e775261d0cf1beb9a39c3c038e6e0c",
+    "https://libertystreeteconomics.newyorkfed.org/2026/04/the-fed-has-two-tools-to-influence-money-market-conditions/": "0227eaee9390cfcd4d4b025aa419cac2d501c181efa7dfc697eb9bbedcf4731b"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -455,7 +457,9 @@
     "https://www.bis.org/publ/work1341.htm": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
     "https://www.bis.org/review/r260331e.htm": "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906",
     "https://www.bis.org/review/r260331d.htm": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
-    "https://www.bis.org/review/r260331c.htm": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287"
+    "https://www.bis.org/review/r260331c.htm": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287",
+    "https://home.treasury.gov/news/press-releases/sb0433": "treasury_press_releases_treasury_department_designates_bny_as_financial_agent_to_sup_879352d8",
+    "https://libertystreeteconomics.newyorkfed.org/2026/04/the-fed-has-two-tools-to-influence-money-market-conditions/": "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -4910,6 +4914,59 @@
       ],
       "target_name": "BIS Speeches RSS",
       "topic": "macro catalysts"
+    },
+    "treasury_press_releases_treasury_department_designates_bny_as_financial_agent_to_sup_879352d8": {
+      "required_keywords": [
+        "treasury",
+        "issuance",
+        "funding",
+        "liquidity",
+        "auction",
+        "market"
+      ],
+      "blocked_keywords": [
+        "sanctions",
+        "terrorism",
+        "secretary",
+        "foreign assets control"
+      ],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Treasury Press Releases",
+      "topic": "market structure"
+    },
+    "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33": {
+      "required_keywords": [
+        "market",
+        "treasury",
+        "inflation",
+        "rates",
+        "liquidity",
+        "repo"
+      ],
+      "blocked_keywords": [
+        "community",
+        "museum",
+        "student"
+      ],
+      "min_word_count": 180,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "New York Fed Liberty Street Economics",
+      "topic": "market structure"
     }
   },
   "title_fingerprints": {
@@ -5109,7 +5166,9 @@
     "894d5009899e29e5d9a47cb2490f1907af25758c": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
     "0b0abd618ca2943f9b79934e71f0723d61d7772c": "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906",
     "d8fd9c52fafb58c898d56ffbb47d87c3dcfff262": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
-    "9f43155c83990dff274056da404a99733d959c73": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287"
+    "9f43155c83990dff274056da404a99733d959c73": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287",
+    "1242b4594545c5a9fb09803a7994496de12fa4d4": "treasury_press_releases_treasury_department_designates_bny_as_financial_agent_to_sup_879352d8",
+    "3725ca9190371fdc9488ff0ffd5d83eba435424e": "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5379,7 +5438,9 @@
     "3597ea7a0678970e56db024d7be598e375b95b2f": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
     "e965f6b53c05cded8416db897f4dedc591136369": "bis_speeches_rss_christopher_kent_reassessing_australian_financial_conditions_b4ae6906",
     "0cfb154ec42eb470c9e6f1d218ded6ab16c07cbb": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
-    "c6bb3b87bf1f9ba405fd4c6237663e61ba09e901": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287"
+    "c6bb3b87bf1f9ba405fd4c6237663e61ba09e901": "bis_speeches_rss_stephen_i_miran_prospects_for_shrinking_the_federal_reserve_5b994287",
+    "62d251244dc7235865a6e5c1e6895f5763523bc9": "treasury_press_releases_treasury_department_designates_bny_as_financial_agent_to_sup_879352d8",
+    "d9cdc18b165de8bab812b5489d82cc5f7f037449": "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
@@ -5482,7 +5543,9 @@
     "https://www.bis.org/review/r260331d.htm": true,
     "https://www.bis.org/review/r260331e.htm": true,
     "https://www.bis.org/publ/work1341.htm": true,
-    "https://www.bis.org/publ/bppdf/bispap169.htm": true
+    "https://www.bis.org/publ/bppdf/bispap169.htm": true,
+    "https://libertystreeteconomics.newyorkfed.org/2026/04/the-fed-has-two-tools-to-influence-money-market-conditions/": true,
+    "https://home.treasury.gov/news/press-releases/sb0433": true
   },
   "event_fingerprints": {
     "f1df9a7292a5b92b1163438346b6fae3a7f03a62": "keyword_discovery_federalreserve_federal_reserve_issues_fomc_statement_459ed78faf1dfd41",
@@ -5552,6 +5615,7 @@
     "77195e75d23a09d8183efef48282b7c8ff7527d3": "seed_crawl_treasury_statement_from_secretary_of_the_65712c4770510505",
     "c67596f5ecbdbe3a4e8eeba7bc08d617c09d376f": "keyword_discovery_ecb.europa_geopolitics_and_foreign_holdings_of_296f15eca8e3aedd",
     "ea472c94546e331cf558a4f60cdcb95ece9b2315": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
-    "bd6d055dc705d39497df992859882d3c4dfc1d2a": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc"
+    "bd6d055dc705d39497df992859882d3c4dfc1d2a": "bis_publications_rss_labour_market_flows_unemployment_and_the_phillips_curve_1d6756dc",
+    "d4560bf5d732f338ee7e21585d57392970c95688": "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33"
   }
 }
