@@ -1,0 +1,78 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_06",
+  "created_at": "2026-04-06T14:15:43+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions",
+  "source": {
+    "name": "Upcoming Treasury Auctions",
+    "url": "",
+    "published_at": "",
+    "source_type": "placeholder",
+    "domain": ""
+  },
+  "summary": "This is a placeholder dataset snapshot for Treasury auction data. No actual auction schedules, sizes, or dates are present in the source. The system notes that real data should be fetched via API or dataset replacement in future iterations.",
+  "key_points": [
+    "Source is explicitly a placeholder with no actual auction data content.",
+    "No Treasury auction dates, sizes, or terms are provided.",
+    "System indicates this data should be replaced with real dataset/API fetches.",
+    "Source is not suitable for research archiving in current state."
+  ],
+  "why_it_matters": "Treasury auction data is a core component of market structure monitoring and can signal near-term supply pressures in the gilt market. This placeholder provides no actionable intelligence for traders, researchers, or risk managers.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "placeholder",
+    "market-structure",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 10,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is explicitly a placeholder with no actual Treasury auction data",
+      "Missing source URL - attribution is incomplete",
+      "Missing published_at timestamp",
+      "Source type is 'placeholder' - not publishable",
+      "No auction dates, sizes, terms, or any substantive data present",
+      "event_type 'treasury_issuance' is misleading as the source contains no issuance data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_06.txt",
+  "notes": "Source is a placeholder text indicating that real Treasury auction data has not yet been fetched. This record has no archival value as-is. Recommend updating the data pipeline to pull actual auction schedules before creating a new archive record. The SOURCE METADATA target 'Upcoming Treasury Auctions' suggests the intent was to capture Treasury auction data under market structure, but the implementation did not deliver actual data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "Placeholder data only - no actual auction information present",
+      "Cannot support any market structure or macro catalyst analysis",
+      "Source metadata intent not fulfilled",
+      "Low quality source not suitable for RAG archive"
+    ]
+  }
+}
