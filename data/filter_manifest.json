@@ -4815,7 +4815,8 @@
     "bank_of_england_publications_r_enhancing_the_resilience_of_the_gilt_repo_market_discussion_638600ab": {
       "reasons": [
         "non_article_page_type",
-        "page_type_not_allowed"
+        "page_type_not_allowed",
+        "missing_required_keywords"
       ],
       "rules_used": {
         "record_type": "article",
@@ -5746,6 +5747,46 @@
         ],
         "target_name": "New York Fed Liberty Street Economics",
         "topic": "market structure"
+      }
+    },
+    "san_francisco_fed_economic_let_monetary_policy_through_the_lens_of_market_based_inflation_s_695de44c": {
+      "reasons": [
+        "non_article_page_type",
+        "page_type_not_allowed"
+      ],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "inflation",
+          "monetary policy",
+          "rates",
+          "economy",
+          "labor market"
+        ],
+        "blocked_keywords": [
+          "community",
+          "museum",
+          "career"
+        ],
+        "min_word_count": 180,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "San Francisco Fed Economic Letter",
+        "topic": "macro catalysts"
+      }
+    },
+    "seed_crawl_treasury_treasury_department_designates_bny_as_c3ec0c1c37bc9e3e": {
+      "reasons": [
+        "not_enough_relevant_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article"
       }
     }
   },
