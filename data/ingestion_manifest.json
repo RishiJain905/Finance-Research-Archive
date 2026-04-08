@@ -205,7 +205,7 @@
     "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260310~b738caf5b4.en.html": "03a0256afe9d2f0fb1f26a0e8b24f1e943fbeb36b54c9f40c5c6da635c076828",
     "https://libertystreeteconomics.newyorkfed.org/regional-analysis/": "f446c0fea4ebdb37f30bb81a65fcb842f931df7167237d63a68d668ed44e124f",
     "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-11": "9bdaed2d30bd0fb13207c15af4b75d013f47c45e42e392e70c3c228a4ff45c32",
-    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "32c96e102653ba36148f965f3c5446b84f0743675b26b8820a27021971532ace",
+    "https://www.bankofengland.co.uk/paper/2026/discussion-paper/enhancing-the-resilience-of-the-gilt-repo-market-discussion-paper-feedback-statement": "99a93bf48790488b669c49f0952947c9f83298c749976436f7158c9e27c866f1",
     "https://www.bankofengland.co.uk/systemic-risk-survey/2026/2026-h1": "a71aeb3db8443e6216dac122633ca032f5715c69b9b73c2d5498d288f4e6d215",
     "https://home.treasury.gov/news/press-releases/sb0428": "80ad9d97c145f7beeaa0eb47ef88decb7904d9227fd4ed46ac27bf6f58493776",
     "https://home.treasury.gov/news/press-releases/sb0429": "aedaa833393cfd0fe0e4a9976c1bdf6f7a10f0bb86c73502baff12def84ab17f",
@@ -237,7 +237,8 @@
     "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-12": "7a11210faebe9acfe3ea47001057a7e4cf857e1996db6b9389e6e0bf5e0b57af",
     "https://home.treasury.gov/news/press-releases/sb0434": "dec81878a2d098cf4b504ef9dab81baddfc016c436f01f8b7a02db0fbd837435",
     "https://www.brookings.edu/articles/africas-top-priorities-for-the-2026-world-bank-and-imf-spring-meetings/": "43abad93cf8a2c5eda2c3c1bc28178e8ff89f07fd9d335cc6a9bbe71c2b637dc",
-    "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": "c0a118f7980f43b26799958d68f0e72bb3cda402a49f8c389f022a2fb81433ed"
+    "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": "c0a118f7980f43b26799958d68f0e72bb3cda402a49f8c389f022a2fb81433ed",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260408a.htm": "5e0c9b9f79a396c56cae36701f25ef477a0755fbdecc7d005bcb86e9df71e65e"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -477,7 +478,8 @@
     "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-12": "richmond_fed_economic_brief_bank_failures_solvency_and_liquidity_richmond_fed_cc5873d2",
     "https://home.treasury.gov/news/press-releases/sb0434": "treasury_press_releases_u_s_uk_financial_regulatory_working_group_winter_2026_joint_5f594113",
     "https://www.brookings.edu/articles/africas-top-priorities-for-the-2026-world-bank-and-imf-spring-meetings/": "brookings_economy_africa_s_top_priorities_for_the_2026_world_bank_and_imf_spri_7b373114",
-    "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff"
+    "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260408a.htm": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -5204,6 +5206,33 @@
       ],
       "target_name": "Federal Reserve Press Releases RSS",
       "topic": "macro catalysts"
+    },
+    "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679": {
+      "required_keywords": [
+        "federal reserve",
+        "policy",
+        "rates",
+        "inflation",
+        "fomc",
+        "statement"
+      ],
+      "blocked_keywords": [
+        "community development",
+        "consumer help",
+        "student",
+        "holiday"
+      ],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Federal Reserve Press Releases RSS",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -5414,7 +5443,8 @@
     "8791d5f39b77c87bf6c27184b2f46f9a626a7f1b": "richmond_fed_economic_brief_bank_failures_solvency_and_liquidity_richmond_fed_cc5873d2",
     "aa3574e9d9cefc24b72c6fc55e731ba9ddd99dfb": "treasury_press_releases_u_s_uk_financial_regulatory_working_group_winter_2026_joint_5f594113",
     "4afa25c9297b31318071e51656818032b01f55a3": "brookings_economy_africa_s_top_priorities_for_the_2026_world_bank_and_imf_spri_7b373114",
-    "030ad2b908d4ef3e685b60ae32bbded993be4413": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff"
+    "030ad2b908d4ef3e685b60ae32bbded993be4413": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff",
+    "a62c6b150a7dc4b0347312e6896d9031e852c245": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5702,7 +5732,8 @@
     "a396f1e4a3f93d65994bc014c5bc14efda08b4d0": "bank_of_england_speeches_speeches_bank_of_england_6f7f6f23",
     "7ac88ee76e27f00636f1573658815dcfcc9f1b9e": "bank_of_england_news_publications_bank_of_england_73965e11",
     "4d79fe19b54e07403db7aeabbb61c8255f2b6a8c": "bank_of_england_news_news_and_minutes_bank_of_england_171a7c86",
-    "de3171fc9683dd3aa5acb86bf5ff837640943d06": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff"
+    "de3171fc9683dd3aa5acb86bf5ff837640943d06": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff",
+    "b522512776d5e42b85350f63641186c513945b58": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
