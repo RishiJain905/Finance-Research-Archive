@@ -108,10 +108,12 @@ This is the most important design decision in this entire phase:
 
 There are two valid approaches:
 
-| Approach | CI embeddings | Mac mini embeddings | Verdict |
-|----------|--------------|---------------------|---------|
-| **Cloud API everywhere** | MiniMax API | MiniMax API (called from Mac mini) | Works, but requires internet + API calls on Mac mini at query time |
-| **Local model everywhere (recommended)** | `sentence-transformers` on GitHub Actions runner | Same model via Ollama or `sentence-transformers` on Mac mini | Fully offline on Mac mini, zero API cost, portable |
+
+| Approach                                 | CI embeddings                                    | Mac mini embeddings                                          | Verdict                                                            |
+| ---------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| **Cloud API everywhere**                 | MiniMax API                                      | MiniMax API (called from Mac mini)                           | Works, but requires internet + API calls on Mac mini at query time |
+| **Local model everywhere (recommended)** | `sentence-transformers` on GitHub Actions runner | Same model via Ollama or `sentence-transformers` on Mac mini | Fully offline on Mac mini, zero API cost, portable                 |
+
 
 ### Recommended embedding model: `nomic-embed-text`
 
@@ -173,15 +175,15 @@ If you switch to a different embedding provider, secrets for that provider would
 ## Files Changed in This Phase
 
 
-| File                               | Change                                |
-| ---------------------------------- | ------------------------------------- |
+| File                               | Change                                                 |
+| ---------------------------------- | ------------------------------------------------------ |
 | `requirements.txt`                 | Add `chromadb`, `sentence-transformers`, `torch` (CPU) |
-| `scripts/vector_store.py`          | New — ChromaDB wrapper module         |
-| `scripts/route_record.py`          | Call `upsert_record` after acceptance |
-| `scripts/filter_raw_records.py`    | Add semantic dedup check              |
-| `scripts/backfill_vector_store.py` | New — one-time backfill script        |
-| `scripts/search_archive.py`        | New — CLI search tool                 |
-| `.gitignore`                       | Add ChromaDB temp files               |
+| `scripts/vector_store.py`          | New — ChromaDB wrapper module                          |
+| `scripts/route_record.py`          | Call `upsert_record` after acceptance                  |
+| `scripts/filter_raw_records.py`    | Add semantic dedup check                               |
+| `scripts/backfill_vector_store.py` | New — one-time backfill script                         |
+| `scripts/search_archive.py`        | New — CLI search tool                                  |
+| `.gitignore`                       | Add ChromaDB temp files                                |
 
 
 ---

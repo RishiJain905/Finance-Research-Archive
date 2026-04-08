@@ -10,8 +10,8 @@ This is a continuously updated financial research archive. A GitHub Actions pipe
 
 The archive has two layers relevant to RAG:
 
-1. **`data/accepted/`** — structured JSON records, one file per accepted research item. These are the source documents for RAG context.
-2. **`data/vector_store/`** — a ChromaDB persistent vector store containing embeddings of every accepted record. This is what you query for semantic search.
+1. `**data/accepted/`** — structured JSON records, one file per accepted research item. These are the source documents for RAG context.
+2. `**data/vector_store/**` — a ChromaDB persistent vector store containing embeddings of every accepted record. This is what you query for semantic search.
 
 Your job is to wire these two layers to a local LLM so the user can ask finance questions and get answers grounded in the archive.
 
@@ -71,6 +71,7 @@ URL: {source.url}
 - The repo is already cloned or pulled locally
 
 If Python 3.11+ is not installed:
+
 ```bash
 brew install python@3.11
 ```
@@ -126,7 +127,7 @@ test = model.encode("federal reserve interest rate", normalize_embeddings=True)
 print(f"Embedding shape: {test.shape}")  # Should print: Embedding shape: (768,)
 ```
 
-The model is ~270MB and downloads once to `~/.cache/huggingface/`.
+The model is ~~270MB and downloads once to `~~/.cache/huggingface/`.
 
 ---
 
@@ -148,11 +149,13 @@ python -c "from mlx_lm import load; load('mlx-community/Qwen3-30B-A3B-4bit')"
 
 The first call downloads the model weights to `~/.cache/huggingface/`. This is a one-time download of ~18–20GB. Pick the version that fits your RAM:
 
-| Model | Approx size (4-bit) | Min RAM |
-|-------|---------------------|---------|
-| Qwen2.5-14B-Instruct-4bit | ~9GB | 16GB |
-| Qwen2.5-32B-Instruct-4bit | ~18GB | 32GB |
-| Qwen3-30B-A3B-4bit | ~18GB | 32GB |
+
+| Model                     | Approx size (4-bit) | Min RAM |
+| ------------------------- | ------------------- | ------- |
+| Qwen2.5-14B-Instruct-4bit | ~9GB                | 16GB    |
+| Qwen2.5-32B-Instruct-4bit | ~18GB               | 32GB    |
+| Qwen3-30B-A3B-4bit        | ~18GB               | 32GB    |
+
 
 To find the exact latest model name, browse: `https://huggingface.co/mlx-community?search=Qwen`
 
@@ -167,6 +170,7 @@ ollama pull qwen2.5:32b
 ```
 
 Ollama also supports `nomic-embed-text` for embeddings if you want everything through one tool:
+
 ```bash
 ollama pull nomic-embed-text
 ```
@@ -380,6 +384,7 @@ python scripts/rag_query.py
 ```
 
 Expected output flow:
+
 1. "Loading embedding model..." — downloads/loads `nomic-embed-text-v1` (~5s first time)
 2. "Retrieving relevant records..." — ChromaDB similarity search (~1s)
 3. "Retrieved 5 records." — shows how many context docs were found
@@ -435,6 +440,7 @@ print(f'Vector store contains {col.count()} embedded records')
 ### "Collection 'finance_archive' does not exist"
 
 The vector store has not been built yet. Run:
+
 ```bash
 python scripts/backfill_vector_store.py
 ```
@@ -446,6 +452,7 @@ The vector store was built with a different embedding model than what `rag_query
 ### MLX model runs out of memory
 
 Switch to a smaller quantization or smaller parameter count:
+
 ```python
 MLX_MODEL_ID = "mlx-community/Qwen2.5-14B-Instruct-4bit"   # half the size
 ```
@@ -453,6 +460,7 @@ MLX_MODEL_ID = "mlx-community/Qwen2.5-14B-Instruct-4bit"   # half the size
 ### Ollama connection refused
 
 Make sure Ollama is running:
+
 ```bash
 ollama serve
 ```
@@ -465,14 +473,16 @@ This is normal — the model weights are being paged into unified memory. After 
 
 ## Archive Statistics (for context)
 
-| Location | Contents |
-|----------|----------|
-| `data/accepted/` | Accepted research records (JSON, one file per record) |
-| `data/review_queue/` | Records pending human review |
-| `data/rejected/` | Rejected records (kept for audit) |
-| `data/raw/` | Pre-processed raw fetches |
-| `data/vector_store/` | ChromaDB persistent vector index |
-| `config/` | Pipeline configuration (sources, scoring, keywords) |
-| `scripts/` | All pipeline and utility scripts |
+
+| Location             | Contents                                              |
+| -------------------- | ----------------------------------------------------- |
+| `data/accepted/`     | Accepted research records (JSON, one file per record) |
+| `data/review_queue/` | Records pending human review                          |
+| `data/rejected/`     | Rejected records (kept for audit)                     |
+| `data/raw/`          | Pre-processed raw fetches                             |
+| `data/vector_store/` | ChromaDB persistent vector index                      |
+| `config/`            | Pipeline configuration (sources, scoring, keywords)   |
+| `scripts/`           | All pipeline and utility scripts                      |
+
 
 The archive covers: Federal Reserve, ECB, Bank of England, Bank of Canada, RBA, Bank of Japan, BIS, IMF, World Bank, US Treasury, SEC EDGAR filings, arXiv quantitative finance papers, SSRN working papers, and major financial news sources.
