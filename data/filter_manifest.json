@@ -2036,7 +2036,8 @@
     "bank_of_england_news_publications_bank_of_england_73965e11": {
       "reasons": [
         "non_article_page_type",
-        "page_type_not_allowed"
+        "page_type_not_allowed",
+        "word_count_too_low"
       ],
       "rules_used": {
         "record_type": "article",
@@ -10495,6 +10496,43 @@
       }
     },
     "seed_crawl_treasury_usuk_financial_regulatory_working_group_417e40ed2a043427": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article"
+      }
+    },
+    "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "fomc",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases RSS",
+        "topic": "macro catalysts"
+      }
+    },
+    "keyword_discovery_oecd_pdf_green_social_sustainability_and_6731f8c44aaa9d3c": {
       "reasons": [],
       "rules_used": {
         "record_type": "article"
