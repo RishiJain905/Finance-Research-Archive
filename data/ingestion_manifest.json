@@ -238,7 +238,9 @@
     "https://home.treasury.gov/news/press-releases/sb0434": "dec81878a2d098cf4b504ef9dab81baddfc016c436f01f8b7a02db0fbd837435",
     "https://www.brookings.edu/articles/africas-top-priorities-for-the-2026-world-bank-and-imf-spring-meetings/": "43abad93cf8a2c5eda2c3c1bc28178e8ff89f07fd9d335cc6a9bbe71c2b637dc",
     "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": "c0a118f7980f43b26799958d68f0e72bb3cda402a49f8c389f022a2fb81433ed",
-    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260408a.htm": "5e0c9b9f79a396c56cae36701f25ef477a0755fbdecc7d005bcb86e9df71e65e"
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260408a.htm": "5e0c9b9f79a396c56cae36701f25ef477a0755fbdecc7d005bcb86e9df71e65e",
+    "https://www.bankofengland.co.uk/bank-liabilities-survey/2026/2026-q1": "25b7be38c7ed3bf05a5449ffbac97cbfdb8b9432513b912f28b5abaf3b2e1f91",
+    "https://www.bankofengland.co.uk/credit-conditions-survey/2026/2026-q1": "a81900686a832ed27f11532a1b8d5129e2dea184cd2fef9edec7d012c76b4e62"
   },
   "record_map": {
     "https://www.federalreserve.gov/monetarypolicy/fomc.htm": "federal_reserve_fomc_calendar_the_fed_federal_open_market_committee_79a1334b",
@@ -479,7 +481,9 @@
     "https://home.treasury.gov/news/press-releases/sb0434": "treasury_press_releases_u_s_uk_financial_regulatory_working_group_winter_2026_joint_5f594113",
     "https://www.brookings.edu/articles/africas-top-priorities-for-the-2026-world-bank-and-imf-spring-meetings/": "brookings_economy_africa_s_top_priorities_for_the_2026_world_bank_and_imf_spri_7b373114",
     "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff",
-    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260408a.htm": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679"
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260408a.htm": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679",
+    "https://www.bankofengland.co.uk/bank-liabilities-survey/2026/2026-q1": "bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2",
+    "https://www.bankofengland.co.uk/credit-conditions-survey/2026/2026-q1": "bank_of_england_publications_r_credit_conditions_survey_2026_q1_bank_of_england_ab6c95e2"
   },
   "record_rules": {
     "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9": {
@@ -5233,6 +5237,46 @@
       ],
       "target_name": "Federal Reserve Press Releases RSS",
       "topic": "macro catalysts"
+    },
+    "bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2": {
+      "required_keywords": [
+        "bank of england",
+        "monetary policy",
+        "interest rate",
+        "inflation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Bank of England Publications RSS",
+      "topic": "macro catalysts"
+    },
+    "bank_of_england_publications_r_credit_conditions_survey_2026_q1_bank_of_england_ab6c95e2": {
+      "required_keywords": [
+        "bank of england",
+        "monetary policy",
+        "interest rate",
+        "inflation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "expected_language": "en",
+      "allowed_page_types": [
+        "article",
+        "press_release",
+        "speech",
+        "data_release",
+        "market_notice"
+      ],
+      "target_name": "Bank of England Publications RSS",
+      "topic": "macro catalysts"
     }
   },
   "title_fingerprints": {
@@ -5444,7 +5488,9 @@
     "aa3574e9d9cefc24b72c6fc55e731ba9ddd99dfb": "treasury_press_releases_u_s_uk_financial_regulatory_working_group_winter_2026_joint_5f594113",
     "4afa25c9297b31318071e51656818032b01f55a3": "brookings_economy_africa_s_top_priorities_for_the_2026_world_bank_and_imf_spri_7b373114",
     "030ad2b908d4ef3e685b60ae32bbded993be4413": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff",
-    "a62c6b150a7dc4b0347312e6896d9031e852c245": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679"
+    "a62c6b150a7dc4b0347312e6896d9031e852c245": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679",
+    "4952dd7741e26fb09761ad89396a334630d0aee9": "bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2",
+    "25459951269d292931ba10c6ecfd8d0dc87ab089": "bank_of_england_publications_r_credit_conditions_survey_2026_q1_bank_of_england_ab6c95e2"
   },
   "content_fingerprints": {
     "9e582aee4d49663dae87353cc11caeaf5831346f": "new_york_fed_press_markets_data_dashboard_federal_reserve_bank_of_new_york_b6449fe9",
@@ -5733,7 +5779,9 @@
     "7ac88ee76e27f00636f1573658815dcfcc9f1b9e": "bank_of_england_news_publications_bank_of_england_73965e11",
     "4d79fe19b54e07403db7aeabbb61c8255f2b6a8c": "bank_of_england_news_news_and_minutes_bank_of_england_171a7c86",
     "de3171fc9683dd3aa5acb86bf5ff837640943d06": "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_invites_public_c_51be65ff",
-    "b522512776d5e42b85350f63641186c513945b58": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679"
+    "b522512776d5e42b85350f63641186c513945b58": "federal_reserve_press_releases_federal_reserve_board_minutes_of_the_federal_open_market_com_a9ef5679",
+    "a312263bef5f143567c08b7400a54f6a28793e68": "bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2",
+    "9ec6312c7f3a749eb2d26412af13fe4b18c0d702": "bank_of_england_publications_r_credit_conditions_survey_2026_q1_bank_of_england_ab6c95e2"
   },
   "processed_urls": {
     "https://www.bankofcanada.ca/2026/03/release-2025-bank-canada-fmi-oversight-activities-annual-report/": true,
@@ -5841,7 +5889,9 @@
     "https://home.treasury.gov/news/press-releases/sb0433": true,
     "https://www.bis.org/review/r260330a.htm": true,
     "https://www.bis.org/review/r260330b.htm": true,
-    "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": true
+    "https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm": true,
+    "https://www.bankofengland.co.uk/credit-conditions-survey/2026/2026-q1": true,
+    "https://www.bankofengland.co.uk/bank-liabilities-survey/2026/2026-q1": true
   },
   "event_fingerprints": {
     "f1df9a7292a5b92b1163438346b6fae3a7f03a62": "keyword_discovery_federalreserve_federal_reserve_issues_fomc_statement_459ed78faf1dfd41",
