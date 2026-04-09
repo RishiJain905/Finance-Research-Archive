@@ -70,9 +70,10 @@ class TestBuildDocumentUrl:
         url = ingest_edgar.build_document_url(
             "0000019617", "0000019617-24-000001", "d8k.htm"
         )
+        # EDGAR uses CIK without leading zeros and accession without dashes
         assert url == (
             "https://www.sec.gov/Archives/edgar/data/"
-            "0000019617/0000019617-24-000001/d8k.htm"
+            "19617/000001961724000001/d8k.htm"
         )
 
 

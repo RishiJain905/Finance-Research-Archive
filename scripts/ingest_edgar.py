@@ -122,10 +122,12 @@ def parse_recent_filings(
 def build_document_url(cik: str, accession_no: str, primary_doc: str) -> str:
     """Construct the full EDGAR document URL.
 
-    accession_no is stored with dashes in the submissions, e.g. "0000019617-24-000001".
-    The URL uses the hyphenated form.
+    EDGAR directories use CIK without leading zeros and accession without dashes.
+    accession_no from submissions has dashes, e.g. "0000019617-24-000001".
     """
-    return f"{EDGAR_DOC_BASE}/{cik}/{accession_no}/{primary_doc}"
+    cik_normalized = str(cik).lstrip("0") or "0"
+    accession_normalized = accession_no.replace("-", "")
+    return f"{EDGAR_DOC_BASE}/{cik_normalized}/{accession_normalized}/{primary_doc}"
 
 
 def fetch_document_text(session: requests.Session, doc_url: str) -> str:

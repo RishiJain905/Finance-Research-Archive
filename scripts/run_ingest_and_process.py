@@ -449,6 +449,11 @@ def main() -> None:
             print("\nNo records to process in raw backlog.")
         else:
             print("\nNo newly-created records to process.")
+        # Drain inbox queue even when no crawl records are selected
+        # so Telegram URLs are not left unprocessed
+        queue_created = drain_inbox_queue()
+        if queue_created:
+            print(f"Drained {len(queue_created)} URL(s) from inbox queue")
         return
 
     if not args.include_backlog:

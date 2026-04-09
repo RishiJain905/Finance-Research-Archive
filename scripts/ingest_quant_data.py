@@ -52,6 +52,7 @@ def fetch_fred_observations(series_code: str, api_key: str) -> dict:
 
     params = {
         "series_id": series_code,
+        "api_key": normalized_api_key,
         "file_type": "json",
         "sort_order": "desc",
         "limit": 10,
@@ -60,7 +61,6 @@ def fetch_fred_observations(series_code: str, api_key: str) -> dict:
     response = requests.get(
         FRED_OBSERVATIONS_URL,
         params=params,
-        headers={"Authorization": f"Bearer {normalized_api_key}"},
         timeout=30,
     )
 
