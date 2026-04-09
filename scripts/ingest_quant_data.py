@@ -21,6 +21,7 @@ CONFIG_PATH = BASE_DIR / "config" / "quant_sources.json"
 RAW_DIR = BASE_DIR / "data" / "raw"
 
 FRED_OBSERVATIONS_URL = "https://api.stlouisfed.org/fred/series/observations"
+WORLD_BANK_API_URL = "https://api.worldbank.org/v2/indicator"
 
 
 def normalize_api_key(value: str | None) -> str:
@@ -182,6 +183,112 @@ def build_fred_snapshot(series_item: dict, api_key: str) -> tuple[str, str]:
     return record_id, "\n".join(content_lines)
 
 
+def build_wb_snapshot(wb_item: dict) -> tuple[str, str]:
+    stamp = today_stamp()
+    record_id = f"{wb_item['id']}_{stamp}"
+    indicator = wb_item["indicator"]
+    # country=USA gives US data quickly; per_page=10 is sufficient for recent 5 values
+    url = f"{WORLD_BANK_API_URL}/{indicator}?format=json&country=USA&mrv=5&per_page=10"
+
+    try:
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as exc:
+        content = (
+            f"TARGET: {wb_item['name']}\n"
+            f"TOPIC: {wb_item['topic']}\n"
+            f"SOURCE: worldbank\n"
+            f"INDICATOR: {indicator}\n"
+            f"SNAPSHOT_DATE: {stamp}\n\n"
+            f"Failed to fetch World Bank data: {exc}"
+        )
+        return record_id, content
+
+    observations = []
+    if isinstance(data, list) and len(data) > 1 and isinstance(data[1], list):
+        for obs in data[1]:
+            value = obs.get("value")
+            if value is None:
+                continue
+            try:
+                observations.append({
+                    "date": obs.get("date", ""),
+                    "value": float(value),
+                    "country": obs.get("country", {}).get("value", "Unknown"),
+                })
+            except (ValueError, TypeError):
+                continue
+
+    if not observations:
+        content = (
+            f"TARGET: {wb_item['name']}\n"
+            f"TOPIC: {wb_item['topic']}\n"
+            f"SOURCE: worldbank\n"
+            f"INDICATOR: {indicator}\n"
+            f"SNAPSHOT_DATE: {stamp}\n\n"
+            f"No recent valid observations were returned for indicator {indicator}."
+        )
+        return record_id, content
+
+    latest = observations[0]
+    previous = observations[1] if len(observations) > 1 else None
+
+    content_lines = [
+        f"TARGET: {wb_item['name']}",
+        f"TOPIC: {wb_item['topic']}",
+        f"SOURCE: worldbank",
+        f"INDICATOR: {indicator}",
+        f"SNAPSHOT_DATE: {stamp}",
+        "",
+        f"LATEST_OBSERVATION_DATE: {latest['date']}",
+        f"LATEST_OBSERVATION_VALUE: {format_number(latest['value'])}",
+        f"LATEST_COUNTRY: {latest.get('country', 'World')}",
+    ]
+
+    if previous:
+        absolute_change = latest["value"] - previous["value"]
+        direction = compute_direction(latest["value"], previous["value"])
+        content_lines.extend(
+            [
+                f"PREVIOUS_OBSERVATION_DATE: {previous['date']}",
+                f"PREVIOUS_OBSERVATION_VALUE: {format_number(previous['value'])}",
+                f"ABSOLUTE_CHANGE: {format_number(absolute_change)}",
+                f"DIRECTION: {direction}",
+            ]
+        )
+    else:
+        content_lines.extend(
+            [
+                "PREVIOUS_OBSERVATION_DATE: unknown",
+                "PREVIOUS_OBSERVATION_VALUE: unknown",
+                "ABSOLUTE_CHANGE: unknown",
+                "DIRECTION: unknown",
+            ]
+        )
+
+    content_lines.append("")
+    content_lines.append("RECENT_OBSERVATIONS:")
+    for obs in observations:
+        country_label = f" [{obs.get('country', '')}]" if obs.get('country') else ""
+        content_lines.append(f"- {obs['date']}: {format_number(obs['value'])}{country_label}")
+
+    content_lines.append("")
+    content_lines.append("QUANT_SUMMARY:")
+    if previous:
+        content_lines.append(
+            f"{wb_item['name']} latest value is {format_number(latest['value'])} on {latest['date']}, "
+            f"versus {format_number(previous['value'])} on {previous['date']}, "
+            f"for a change of {format_number(latest['value'] - previous['value'])} ({direction})."
+        )
+    else:
+        content_lines.append(
+            f"{wb_item['name']} latest value is {format_number(latest['value'])} on {latest['date']}."
+        )
+
+    return record_id, "\n".join(content_lines)
+
+
 def build_dataset_snapshot(dataset_item: dict) -> tuple[str, str]:
     stamp = today_stamp()
     record_id = f"{dataset_item['id']}_{stamp}"
@@ -254,6 +361,24 @@ def main() -> None:
             print(f"Created dataset snapshot: {record_id}")
         except Exception as e:
             print(f"Failed dataset {series_id}: {e}")
+
+    for wb_item in config.get("worldbank_series", []):
+        if not wb_item.get("enabled", False):
+            continue
+
+        series_id = wb_item["id"]
+        if is_quant_series_seen(series_id, today):
+            print(f"Already ingested worldbank series {series_id} for {today}, skipping.")
+            continue
+
+        try:
+            record_id, content = build_wb_snapshot(wb_item)
+            write_raw_snapshot(record_id, content)
+            add_quant_series(series_id, today, _content_hash(content))
+            created.append(record_id)
+            print(f"Created World Bank snapshot: {record_id}")
+        except Exception as e:
+            print(f"Failed World Bank series {series_id}: {e}")
 
     print("\nCreated quant record ids:")
     if created:

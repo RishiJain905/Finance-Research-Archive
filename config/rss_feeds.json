@@ -289,6 +289,139 @@
       "max_entries": 8
     },
     {
+      "name": "BIS Working Papers",
+      "topic": "central_bank_research",
+      "url": "https://www.bis.org/doclist/bis_fsi_publs.rss",
+      "allowed_url_prefixes": [
+        "https://www.bis.org/publ/",
+        "https://www.bis.org/fsi/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "financial stability",
+        "banking",
+        "liquidity",
+        "risk",
+        "regulation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 5
+    },
+    {
+      "name": "IMF Working Papers",
+      "topic": "macro_research",
+      "url": "https://www.imf.org/en/Publications/WP/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Publications/WP/"
+      ],
+      "required_keywords": [
+        "imf",
+        "monetary",
+        "fiscal",
+        "growth",
+        "inflation",
+        "exchange rate"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 4
+    },
+    {
+      "name": "IMF World Economic Outlook",
+      "topic": "global_economy",
+      "url": "https://www.imf.org/en/Publications/WEO/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Publications/WEO/"
+      ],
+      "required_keywords": [
+        "imf",
+        "world economic outlook",
+        "gdp",
+        "growth",
+        "inflation",
+        "forecast"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 2
+    },
+    {
+      "name": "IMF Global Financial Stability Report",
+      "topic": "financial_stability",
+      "url": "https://www.imf.org/en/Publications/GFSR/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Publications/GFSR/"
+      ],
+      "required_keywords": [
+        "imf",
+        "financial stability",
+        "risk",
+        "banking",
+        "markets"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 2
+    },
+    {
+      "name": "IMF Blog",
+      "topic": "macro_commentary",
+      "url": "https://www.imf.org/en/Blogs/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Blogs/"
+      ],
+      "required_keywords": [
+        "imf",
+        "economy",
+        "policy",
+        "growth",
+        "inflation",
+        "fiscal",
+        "monetary"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 120,
+      "max_entries": 4
+    },
+    {
+      "name": "World Bank Research",
+      "topic": "development_economics",
+      "url": "https://www.worldbank.org/en/research/rss",
+      "allowed_url_prefixes": [
+        "https://www.worldbank.org/en/research/",
+        "https://openknowledge.worldbank.org/"
+      ],
+      "required_keywords": [
+        "world bank",
+        "development",
+        "growth",
+        "poverty",
+        "economy"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 3
+    },
+    {
+      "name": "World Bank Data Blog",
+      "topic": "development_economics",
+      "url": "https://blogs.worldbank.org/en/rss.xml",
+      "allowed_url_prefixes": [
+        "https://blogs.worldbank.org/en/research/"
+      ],
+      "required_keywords": [
+        "world bank",
+        "data",
+        "development",
+        "economy",
+        "growth"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 120,
+      "max_entries": 2
+    },
+    {
       "name": "SSRN Management",
       "topic": "quantitative_finance",
       "url": "https://papers.ssrn.com/sol3/Jrnls/rss.cfm?link=mngt",
