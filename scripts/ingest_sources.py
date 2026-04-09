@@ -104,6 +104,7 @@ def ensure_manifest_shape(manifest: dict) -> dict:
     manifest.setdefault("title_fingerprints", {})
     manifest.setdefault("content_fingerprints", {})
     manifest.setdefault("processed_urls", {})
+    manifest.setdefault("listing_urls", {})
     # Maps sha1(domain|date|event_type) -> record_id for event-level dedup
     manifest.setdefault("event_fingerprints", {})
 
@@ -603,6 +604,7 @@ def main() -> list[str]:
         default_max_links = DEFAULT_MAX_LINKS_PER_TARGET
 
     processed_urls = manifest.get("processed_urls", {})
+    listing_urls = manifest.get("listing_urls", {})
     current_year = date.today().year
     created = []
 
@@ -653,7 +655,7 @@ def main() -> list[str]:
         for article_url in article_links:
             print(f"  Fetching article: {article_url}")
 
-            if article_url in manifest.get("processed_urls", {}):
+            if article_url in processed_urls and article_url not in listing_urls:
                 print("    Already processed, skipping.")
                 continue
 

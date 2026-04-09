@@ -80,11 +80,26 @@ def mark_record_processed(record_id: str) -> None:
 
     record_map = manifest.get("record_map", {})
     url = next((u for u, rid in record_map.items() if rid == record_id), None)
-    if url:
-        manifest.setdefault("processed_urls", {})[url] = True
-        print(f"\n  Marked URL as processed: {url}")
 
     raw_path = BASE_DIR / "data" / "raw" / f"{record_id}.txt"
+
+    if url:
+        is_listing = False
+        if raw_path.exists():
+            try:
+                raw_content = raw_path.read_text(encoding="utf-8", errors="replace")
+                if "container_page" in raw_content:
+                    is_listing = True
+            except OSError:
+                pass
+
+        if is_listing:
+            manifest.setdefault("listing_urls", {})[url] = True
+            print(f"\n  Marked URL as listing page (will re-fetch): {url}")
+        else:
+            manifest.setdefault("processed_urls", {})[url] = True
+            print(f"\n  Marked URL as processed: {url}")
+
     if raw_path.exists():
         raw_path.unlink()
         print(f"  Removed raw file: {raw_path.name}")
