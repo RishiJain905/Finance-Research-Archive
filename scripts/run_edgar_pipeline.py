@@ -20,8 +20,8 @@ from scripts.manifest_db import (
     get_all_record_map,
     get_url_for_record_id,
     is_url_seen,
-    upsert_seen_url,
     set_record_map,
+    mark_url_processed,
 )
 
 RAW_DIR = BASE_DIR / "data" / "raw"
@@ -76,7 +76,7 @@ def mark_record_processed(record_id: str) -> None:
     raw_path = BASE_DIR / "data" / "raw" / f"{record_id}.txt"
     if url:
         # No lane classification for EDGAR — just mark seen
-        upsert_seen_url(url, "article")
+        mark_url_processed(url, "article")
         print(f"\n  Marked URL as processed: {url}")
     if raw_path.exists():
         raw_path.unlink()

@@ -109,7 +109,8 @@ def parse_atom_feed(xml_text: str, lookback_days: int) -> list[dict]:
         if published_el is None or not published_el.text:
             continue
         try:
-            published = datetime.fromisoformat(published_el.text.strip())
+            published_text = published_el.text.strip().replace("Z", "+00:00")
+            published = datetime.fromisoformat(published_text)
         except ValueError:
             continue
 
@@ -164,11 +165,6 @@ def build_arxiv_record_text(
     published_at = paper["published_date"]
     article_text = paper["summary"]
     detected_language = detect_language(article_text)
-
-    record_id = build_record_id(name, article_title, article_url)
-
-    title_fp = title_fingerprint(article_title)
-    content_fp = title_fingerprint(article_text[:5000])
 
     # Build metadata block (matches ingest_sources raw record format)
     metadata = {

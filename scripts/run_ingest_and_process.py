@@ -288,6 +288,7 @@ def drain_inbox_queue() -> list[str]:
 
     print(f"\n=== Draining inbox queue ({len(queue)} URL(s)) ===\n")
     created: list[str] = []
+    failed_urls: list[str] = []
 
     for item in queue:
         url = item.get("url")
@@ -299,6 +300,7 @@ def drain_inbox_queue() -> list[str]:
             article_html = fetch_html(url)
         except Exception as e:
             print(f"    Failed fetch: {e}")
+            failed_urls.append(url)
             continue
 
         article_text, extraction_warnings = extract_main_text(article_html)
@@ -343,6 +345,7 @@ def drain_inbox_queue() -> list[str]:
             output_path.write_text(output_text, encoding="utf-8")
         except Exception as e:
             print(f"    Failed write: {e}")
+            failed_urls.append(url)
             continue
 
         ensure_schema()
@@ -370,9 +373,14 @@ def drain_inbox_queue() -> list[str]:
         created.append(record_id)
         print(f"    Created: {record_id}")
 
+    # Keep failed URLs in the queue for retry; remove successfully processed ones
+    failed_set = set(failed_urls)
+    failed = [item for item in queue if item.get("url") in failed_set]
     if created:
-        QUEUE_PATH.write_text("[]", encoding="utf-8")
-        print(f"\n  Processed {len(created)} queue item(s)")
+        cleared_urls = {c for c in created}
+        remaining_queue = [item for item in queue if item.get("url") not in cleared_urls]
+        QUEUE_PATH.write_text(json.dumps(remaining_queue), encoding="utf-8")
+        print(f"\n  Processed {len(created)} queue item(s), {len(failed)} failed URLs retained")
 
     return created
 
