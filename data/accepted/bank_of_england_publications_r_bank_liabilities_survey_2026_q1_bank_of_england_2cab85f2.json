@@ -1,7 +1,7 @@
 {
   "id": "bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2",
   "created_at": "2026-04-09T09:03:27.997919+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "research_paper",
   "title": "Bank Liabilities Survey - 2026 Q1",
@@ -53,32 +53,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is well-constructed and accurately reflects the source material. The PUBLISHED_AT discrepancy is notable but the record correctly uses the article body date for content. Minor classification ambiguity on event_type does not warrant human escalation."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-09T14:04:19.144577+00:00"
   },
   "raw_text_path": "data/raw/bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2.txt",
   "notes": "Source is a quarterly survey of UK bank and building society funding conditions. Content is relevant but focused on balance sheet dynamics rather than direct macro catalysts like rate decisions or GDP prints. Survey captures lender sentiment and forward expectations rather than actual outcomes. Classification as 'macro catalysts' is somewhat loose given the indirect nature of the data; primarily useful for understanding credit conditions and bank funding market structure. Publication date discrepancy between metadata (2026-01-15) and article body (09 April 2026) should be verified. Chart data referenced in text not extracted due to formatting limitations.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "C",
-    "score": 5,
+    "tier": "tier_2",
+    "score": 59.0,
     "reasoning": [
-      "Official BoE publication with authoritative source",
-      "Survey methodology clearly described; net percentage balances standard approach",
-      "Contains forward-looking expectations which inherently carry uncertainty",
-      "Content truncated; full data in charts not accessible",
-      "Publication date discrepancy raises questions about metadata accuracy",
-      "Relevant but indirect for macro catalyst identification"
+      "quality score: 59.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "minor issues found (2)",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
