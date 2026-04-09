@@ -301,6 +301,7 @@ def main() -> None:
     start = time.perf_counter()
     run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
     run_command([python_cmd, "scripts/ingest_rss.py"], "RSS ingestion")
+    run_command([python_cmd, "scripts/ingest_arxiv.py"], "arXiv ingestion")
     timings["ingest"] = time.perf_counter() - start
 
     start = time.perf_counter()
