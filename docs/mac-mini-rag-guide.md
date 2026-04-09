@@ -11,7 +11,7 @@ This is a continuously updated financial research archive. A GitHub Actions pipe
 The archive has two layers relevant to RAG:
 
 1. `**data/accepted/`** — structured JSON records, one file per accepted research item. These are the source documents for RAG context.
-2. `**data/vector_store/**` — a ChromaDB persistent vector store containing embeddings of every accepted record. This is what you query for semantic search.
+2. `**data/vector_store/`** — a ChromaDB persistent vector store containing embeddings of every accepted record. This is what you query for semantic search.
 
 Your job is to wire these two layers to a local LLM so the user can ask finance questions and get answers grounded in the archive.
 
