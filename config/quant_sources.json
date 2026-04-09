@@ -63,5 +63,35 @@
             "source": "nyfed",
             "enabled": true
         }
+    ],
+    "worldbank_series": [
+        {
+            "id": "wb_gdp_growth",
+            "name": "World GDP Growth Rate",
+            "topic": "global_economy",
+            "indicator": "NY.GDP.MKTP.KD.ZG",
+            "enabled": true
+        },
+        {
+            "id": "wb_inflation",
+            "name": "World Inflation Rate",
+            "topic": "global_economy",
+            "indicator": "FP.CPI.TOTL.ZG",
+            "enabled": true
+        },
+        {
+            "id": "wb_public_debt",
+            "name": "World Public Debt",
+            "topic": "global_economy",
+            "indicator": "GC.DOD.TOTL.GD.ZS",
+            "enabled": true
+        },
+        {
+            "id": "wb_trade_gdp",
+            "name": "World Trade (% of GDP)",
+            "topic": "global_economy",
+            "indicator": "TG.VAL.TOTL.GD.ZS",
+            "enabled": true
+        }
     ]
 }

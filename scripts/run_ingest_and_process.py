@@ -1,3 +1,4 @@
+import hashlib
 import json
 import subprocess
 import sys
@@ -5,6 +6,7 @@ import argparse
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from bs4 import BeautifulSoup
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
@@ -17,9 +19,25 @@ from scripts.manifest_db import (
     is_url_processed_as_listing,
     mark_url_processed,
     is_url_seen,
+    ensure_schema,
+    upsert_seen_url,
+    set_record_map,
+    set_record_rules,
+)
+from scripts.ingest_sources import (
+    fetch_html,
+    extract_main_text,
+    content_hash,
+    sanitize_title,
+    extract_title,
+    classify_page_type,
+    detect_language,
+    extract_published_at,
+    extract_canonical_url,
 )
 
 RAW_DIR = BASE_DIR / "data" / "raw"
+QUEUE_PATH = BASE_DIR / "data" / "inbox_queue.json"
 
 
 def run_command(command: list[str], step_name: str) -> str:
@@ -149,9 +167,11 @@ def select_records_to_process(
     ranked = sorted(candidates)
     ranked = sorted(
         ranked,
-        key=lambda rid: (RAW_DIR / f"{rid}.txt").stat().st_mtime
-        if (RAW_DIR / f"{rid}.txt").exists()
-        else 0,
+        key=lambda rid: (
+            (RAW_DIR / f"{rid}.txt").stat().st_mtime
+            if (RAW_DIR / f"{rid}.txt").exists()
+            else 0
+        ),
         reverse=True,
     )
 
@@ -249,6 +269,122 @@ def apply_budget_gate_to_triage_results(
     )
 
 
+def drain_inbox_queue() -> list[str]:
+    """Process URLs from the inbox queue and create raw records for each.
+
+    Returns:
+        List of created record IDs
+    """
+    if not QUEUE_PATH.exists():
+        return []
+
+    try:
+        queue = json.loads(QUEUE_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+
+    if not queue:
+        return []
+
+    print(f"\n=== Draining inbox queue ({len(queue)} URL(s)) ===\n")
+    created: list[str] = []
+    failed_urls: list[str] = []
+
+    for item in queue:
+        url = item.get("url")
+        if not url:
+            continue
+
+        print(f"  Fetching: {url}")
+        try:
+            article_html = fetch_html(url)
+        except Exception as e:
+            print(f"    Failed fetch: {e}")
+            failed_urls.append(url)
+            continue
+
+        article_text, extraction_warnings = extract_main_text(article_html)
+        digest = content_hash(article_text)
+
+        soup = BeautifulSoup(article_html, "html.parser")
+        article_title = sanitize_title(extract_title(soup))
+        published_at = extract_published_at(soup)
+        canonical_url = extract_canonical_url(soup, url)
+        detected_language = detect_language(article_text)
+        page_type = classify_page_type(url, article_title, article_text, published_at)
+
+        target_name = "telegram_inbox"
+        topic = "manual_inbox"
+        record_id = (
+            f"telegram_inbox_{hashlib.sha1(url.encode('utf-8')).hexdigest()[:12]}"
+        )
+
+        from scripts.ingest_sources import build_raw_record_text
+
+        output_text = build_raw_record_text(
+            {
+                "TARGET": target_name,
+                "TOPIC": topic,
+                "TITLE": article_title,
+                "URL": canonical_url or url,
+                "PAGE_TITLE": article_title,
+                "PUBLISHED_AT": published_at or "",
+                "PAGE_TYPE": page_type,
+                "EXPECTED_LANGUAGE": "en",
+                "DETECTED_LANGUAGE": detected_language,
+                "CONTENT_WORD_COUNT": str(len(article_text.split())),
+                "EXTRACTION_WARNINGS": ",".join(sorted(set(extraction_warnings))),
+                "INGEST_SOURCE": "telegram_inbox",
+                "SOURCE_TYPE": "web",
+            },
+            article_text,
+        )
+
+        output_path = RAW_DIR / f"{record_id}.txt"
+        try:
+            output_path.write_text(output_text, encoding="utf-8")
+        except Exception as e:
+            print(f"    Failed write: {e}")
+            failed_urls.append(url)
+            continue
+
+        ensure_schema()
+        upsert_seen_url(url, digest)
+        set_record_map(url, record_id)
+        set_record_rules(
+            record_id,
+            {
+                "required_keywords": [],
+                "blocked_keywords": [],
+                "min_word_count": 120,
+                "expected_language": "en",
+                "allowed_page_types": [
+                    "article",
+                    "press_release",
+                    "speech",
+                    "data_release",
+                    "market_notice",
+                ],
+                "target_name": target_name,
+                "topic": topic,
+            },
+        )
+
+        created.append(record_id)
+        print(f"    Created: {record_id}")
+
+    # Keep failed URLs in the queue for retry; remove successfully processed ones
+    failed_set = set(failed_urls)
+    failed = [item for item in queue if item.get("url") in failed_set]
+    if created:
+        cleared_urls = {c for c in created}
+        remaining_queue = [item for item in queue if item.get("url") not in cleared_urls]
+        QUEUE_PATH.write_text(json.dumps(remaining_queue), encoding="utf-8")
+        print(f"\n  Processed {len(created)} queue item(s), {len(failed)} failed URLs retained")
+
+    return created
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Run article ingest/filter/process pipeline with bounded scope."
@@ -301,6 +437,7 @@ def main() -> None:
     start = time.perf_counter()
     run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
     run_command([python_cmd, "scripts/ingest_rss.py"], "RSS ingestion")
+    run_command([python_cmd, "scripts/ingest_arxiv.py"], "arXiv ingestion")
     timings["ingest"] = time.perf_counter() - start
 
     start = time.perf_counter()
@@ -320,6 +457,11 @@ def main() -> None:
             print("\nNo records to process in raw backlog.")
         else:
             print("\nNo newly-created records to process.")
+        # Drain inbox queue even when no crawl records are selected
+        # so Telegram URLs are not left unprocessed
+        queue_created = drain_inbox_queue()
+        if queue_created:
+            print(f"Drained {len(queue_created)} URL(s) from inbox queue")
         return
 
     if not args.include_backlog:
@@ -383,6 +525,12 @@ def main() -> None:
         send_start = time.perf_counter()
         run_command(send_command, "send pending reviews")
         timings["send_reviews"] = time.perf_counter() - send_start
+
+    start = time.perf_counter()
+    queue_created = drain_inbox_queue()
+    if queue_created:
+        timings["queue_drain"] = time.perf_counter() - start
+        print(f"\nDrained {len(queue_created)} URL(s) from inbox queue")
 
     timings["total"] = time.perf_counter() - stage_start
     print("\nTiming summary:")
