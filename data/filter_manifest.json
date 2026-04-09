@@ -5982,6 +5982,66 @@
         "target_name": "Federal Reserve Press Releases RSS",
         "topic": "macro catalysts"
       }
+    },
+    "repo_operations_2026_04_09": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_auctions_2026_04_09": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
+    },
+    "treasury_press_releases_treasury_launches_cybersecurity_information_sharing_initiati_700a3131": {
+      "reasons": [
+        "contains_blocked_keywords"
+      ],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "treasury",
+          "issuance",
+          "funding",
+          "liquidity",
+          "auction",
+          "market"
+        ],
+        "blocked_keywords": [
+          "sanctions",
+          "terrorism",
+          "secretary",
+          "foreign assets control"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Treasury Press Releases",
+        "topic": "market structure"
+      }
+    },
+    "upcoming_treasury_auctions_2026_04_09": {
+      "reasons": [
+        "missing_quant_values",
+        "not_enough_recent_observations"
+      ],
+      "rules_used": {
+        "record_type": "quant"
+      }
     }
   },
   "kept": {
@@ -10734,6 +10794,111 @@
         ],
         "target_name": "New York Fed Liberty Street Economics",
         "topic": "market structure"
+      }
+    },
+    "bank_of_england_publications_r_bank_of_england_weekly_report_8_april_2026_bank_of_england_9526dd4d": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "bank of england",
+          "monetary policy",
+          "interest rate",
+          "inflation"
+        ],
+        "blocked_keywords": [],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Bank of England Publications RSS",
+        "topic": "macro catalysts"
+      }
+    },
+    "bis_speeches_rss_denis_beau_stablecoins_what_strategic_choices_for_europe_54a94de6": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "monetary policy",
+          "inflation",
+          "financial stability",
+          "rates",
+          "central bank"
+        ],
+        "blocked_keywords": [],
+        "min_word_count": 200,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "BIS Speeches RSS",
+        "topic": "macro catalysts"
+      }
+    },
+    "bis_speeches_rss_fran_ois_villeroy_de_galhau_navigating_an_uncertain_world_st_37d95fdc": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "monetary policy",
+          "inflation",
+          "financial stability",
+          "rates",
+          "central bank"
+        ],
+        "blocked_keywords": [],
+        "min_word_count": 200,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "BIS Speeches RSS",
+        "topic": "macro catalysts"
+      }
+    },
+    "federal_reserve_press_releases_federal_reserve_board_federal_reserve_board_announces_termin_5a840a39": {
+      "reasons": [],
+      "rules_used": {
+        "record_type": "article",
+        "required_keywords": [
+          "federal reserve",
+          "policy",
+          "rates",
+          "inflation",
+          "fomc",
+          "statement"
+        ],
+        "blocked_keywords": [
+          "community development",
+          "consumer help",
+          "student",
+          "holiday"
+        ],
+        "min_word_count": 150,
+        "expected_language": "en",
+        "allowed_page_types": [
+          "article",
+          "press_release",
+          "speech",
+          "data_release",
+          "market_notice"
+        ],
+        "target_name": "Federal Reserve Press Releases RSS",
+        "topic": "macro catalysts"
       }
     }
   }
