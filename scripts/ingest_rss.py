@@ -6,6 +6,7 @@ so the rest of the pipeline (filter → summarise → verify → route) is uncha
 """
 
 import json
+import sys
 import time
 from datetime import date
 from pathlib import Path
@@ -14,9 +15,12 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 from ingest_sources import (
     RAW_DIR,
-    MANIFEST_PATH,
     build_raw_record_text,
     build_record_id,
     classify_page_type,
@@ -24,7 +28,6 @@ from ingest_sources import (
     content_fingerprint,
     content_hash,
     detect_language,
-    ensure_manifest_shape,
     extract_canonical_url,
     extract_published_at,
     extract_title,
@@ -32,11 +35,19 @@ from ingest_sources import (
     get_headers,
     load_json,
     sanitize_title,
-    save_json,
     title_fingerprint,
 )
+from scripts.manifest_db import (
+    add_fingerprint,
+    ensure_schema,
+    get_fingerprint_record_id,
+    get_url_content_hash,
+    is_url_processed_as_article,
+    set_record_map,
+    set_record_rules,
+    upsert_seen_url,
+)
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 RSS_CONFIG_PATH = BASE_DIR / "config" / "rss_feeds.json"
 
 DEFAULT_MAX_ENTRIES = 5
@@ -93,20 +104,9 @@ def extract_main_text_from_html(html: str) -> tuple[str, list[str]]:
 
 def main() -> list[str]:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
+    ensure_schema()
 
     config = load_json(RSS_CONFIG_PATH, {"feeds": []})
-    manifest = load_json(
-        MANIFEST_PATH,
-        {
-            "seen_urls": {},
-            "record_map": {},
-            "record_rules": {},
-            "title_fingerprints": {},
-            "content_fingerprints": {},
-            "processed_urls": {},
-        },
-    )
-    manifest = ensure_manifest_shape(manifest)
 
     default_max_entries = config.get("max_entries_per_feed", DEFAULT_MAX_ENTRIES)
     current_year = date.today().year
@@ -172,7 +172,7 @@ def main() -> list[str]:
 
             print(f"  Fetching entry: {article_url}")
 
-            if article_url in manifest.get("processed_urls", {}):
+            if is_url_processed_as_article(article_url):
                 print("    Already processed, skipping.")
                 continue
 
@@ -185,7 +185,7 @@ def main() -> list[str]:
             article_text, extraction_warnings = extract_main_text_from_html(article_html)
             digest = content_hash(article_text)
 
-            previous_hash = manifest["seen_urls"].get(article_url)
+            previous_hash = get_url_content_hash(article_url)
             if previous_hash == digest:
                 print("    No change, skipping.")
                 continue
@@ -206,8 +206,8 @@ def main() -> list[str]:
             title_fp = title_fingerprint(article_title)
             content_fp = content_fingerprint(article_text[:5000])
 
-            existing_title_record = manifest["title_fingerprints"].get(title_fp)
-            existing_content_record = manifest["content_fingerprints"].get(content_fp)
+            existing_title_record = get_fingerprint_record_id("title_fingerprints", title_fp)
+            existing_content_record = get_fingerprint_record_id("content_fingerprints", content_fp)
 
             if existing_title_record and existing_title_record != record_id:
                 print(f"    Duplicate by title fingerprint, skipping. Existing: {existing_title_record}")
@@ -246,9 +246,9 @@ def main() -> list[str]:
                 print(f"    Failed write: {e}")
                 continue
 
-            manifest["seen_urls"][article_url] = digest
-            manifest["record_map"][article_url] = record_id
-            manifest["record_rules"][record_id] = {
+            upsert_seen_url(article_url, digest)
+            set_record_map(article_url, record_id)
+            set_record_rules(record_id, {
                 "required_keywords": required_keywords,
                 "blocked_keywords": blocked_keywords,
                 "min_word_count": min_word_count,
@@ -256,17 +256,15 @@ def main() -> list[str]:
                 "allowed_page_types": allowed_page_types,
                 "target_name": name,
                 "topic": topic,
-            }
-            manifest["title_fingerprints"][title_fp] = record_id
-            manifest["content_fingerprints"][content_fp] = record_id
+            })
+            add_fingerprint("title_fingerprints", title_fp, record_id)
+            add_fingerprint("content_fingerprints", content_fp, record_id)
 
             created.append(record_id)
             print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
 
             # Small pause between article fetches to be polite.
             time.sleep(0.5)
-
-    save_json(MANIFEST_PATH, manifest)
 
     print("\nRSS ingest complete. Created/updated record ids:")
     if created:

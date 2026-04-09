@@ -4,5 +4,8 @@ __pycache__/
 .worktrees/
 data/candidate_manifests/seed_crawl_stats.json
 data/candidates/
+# SQLite WAL mode temporary files — not part of the database state
+data/archive.db-wal
+data/archive.db-shm
 # Windows shell artefact (redirect to NUL device creates this file)
 nul

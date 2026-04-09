@@ -52,6 +52,7 @@ from scripts.discovery_providers import (
     search_preferred_domains,
 )
 from scripts.normalize_search_results import normalize_results
+from scripts.generate_ephemeral_queries import generate_ephemeral_queries
 
 
 # Configuration paths
@@ -163,6 +164,12 @@ def execute_query(query_config: dict[str, Any]) -> list[dict[str, Any]]:
     if not query:
         return []
 
+    # Append current month/year to static queries so Tavily's ranking favours
+    # recent results. Ephemeral queries are already date-aware from generation.
+    if query_config.get("source") != "ephemeral":
+        _month_year = datetime.now(timezone.utc).strftime("%B %Y")
+        query = f"{query} {_month_year}"
+
     query_id = query_config.get("id", "unknown")
 
     try:
@@ -269,6 +276,40 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
         )
     # -------------------------------------------------------------------------
 
+    # --- Ephemeral query injection (Phase 2) ---------------------------------
+    # Generate LLM-derived queries from recent accepted records and prepend
+    # them to the run.  These are never written to query_performance.json.
+    print("\n[Discovery] Generating ephemeral queries from recent accepted records...")
+    try:
+        _ephemeral_strings = generate_ephemeral_queries()
+    except Exception as _e:
+        print(f"[Discovery] Ephemeral query generation failed: {_e}")
+        _ephemeral_strings = []
+
+    _ephemeral_query_configs: list[dict[str, Any]] = [
+        {
+            "id": f"ephemeral_{_i}",
+            "query": _q,
+            "topic": "ephemeral",
+            "source": "ephemeral",
+            "enabled": True,
+            "search_type": "news",
+            "days_back": 2,
+            "max_results": 8,
+            "preferred_domains": [],
+            "blocked_domains": [],
+            "required_terms": [],
+        }
+        for _i, _q in enumerate(_ephemeral_strings)
+    ]
+
+    if _ephemeral_query_configs:
+        print(f"[Discovery] Injecting {len(_ephemeral_query_configs)} ephemeral quer{'y' if len(_ephemeral_query_configs) == 1 else 'ies'}")
+        enabled_queries = _ephemeral_query_configs + enabled_queries
+    else:
+        print("[Discovery] No ephemeral queries generated — running static queries only")
+    # -------------------------------------------------------------------------
+
     # Execute each query and collect candidates
     all_candidates: list[dict[str, Any]] = []
     discovered_ids: list[str] = []
@@ -287,7 +328,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
         if not results:
             print(f"[Discovery] No results for query '{query_id}'")
-            if not dry_run:
+            if not dry_run and query_config.get("source") != "ephemeral":
                 _record_query_run(query_id, 0, 0, 0)
             continue
 
@@ -303,7 +344,7 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
 
         if not candidates:
             print(f"[Discovery] No valid candidates from query '{query_id}'")
-            if not dry_run:
+            if not dry_run and query_config.get("source") != "ephemeral":
                 _record_query_run(query_id, results_raw, 0, 0)
             continue
 
@@ -321,8 +362,9 @@ def run_keyword_discovery(dry_run: bool = False) -> list[str]:
                 f"[Discovery] Fetched content for {fetch_success} candidates from query '{query_id}'"
             )
 
-            # Record query-level stats (#10)
-            _record_query_run(query_id, results_raw, candidates_built, fetch_success)
+            # Record query-level stats (#10) — ephemeral queries are not tracked
+            if query_config.get("source") != "ephemeral":
+                _record_query_run(query_id, results_raw, candidates_built, fetch_success)
 
             if not fetched_candidates:
                 continue

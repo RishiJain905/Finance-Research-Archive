@@ -1,5 +1,4 @@
 import json
-import shutil
 import subprocess
 import sys
 import argparse
@@ -7,9 +6,19 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from scripts.manifest_db import (
+    get_all_record_map,
+    get_all_processed_article_urls,
+    get_url_for_record_id,
+    is_url_processed_as_listing,
+    mark_url_processed,
+    is_url_seen,
+)
+
 RAW_DIR = BASE_DIR / "data" / "raw"
 
 
@@ -56,31 +65,8 @@ def file_still_in_raw(record_id: str) -> bool:
     return raw_path.exists()
 
 
-def load_manifest() -> dict:
-    if not MANIFEST_PATH.exists():
-        return {
-            "seen_urls": {},
-            "record_map": {},
-            "record_rules": {},
-            "title_fingerprints": {},
-            "content_fingerprints": {},
-            "processed_urls": {},
-        }
-    with MANIFEST_PATH.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def save_manifest(manifest: dict) -> None:
-    with MANIFEST_PATH.open("w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=2, ensure_ascii=False)
-
-
 def mark_record_processed(record_id: str) -> None:
-    manifest = load_manifest()
-
-    record_map = manifest.get("record_map", {})
-    url = next((u for u, rid in record_map.items() if rid == record_id), None)
-
+    url = get_url_for_record_id(record_id)
     raw_path = BASE_DIR / "data" / "raw" / f"{record_id}.txt"
 
     if url:
@@ -94,34 +80,29 @@ def mark_record_processed(record_id: str) -> None:
                 pass
 
         if is_listing:
-            manifest.setdefault("listing_urls", {})[url] = True
+            mark_url_processed(url, "listing")
             print(f"\n  Marked URL as listing page (will re-fetch): {url}")
         else:
-            manifest.setdefault("processed_urls", {})[url] = True
+            mark_url_processed(url, "article")
             print(f"\n  Marked URL as processed: {url}")
 
     if raw_path.exists():
         raw_path.unlink()
         print(f"  Removed raw file: {raw_path.name}")
 
-    save_manifest(manifest)
-
 
 def verify_manifest_consistency() -> None:
-    manifest = load_manifest()
+    record_map = get_all_record_map()
+    processed_article_urls = get_all_processed_article_urls()
     issues = []
 
-    record_map = manifest.get("record_map", {})
-    seen_urls = manifest.get("seen_urls", {})
-    processed_urls = manifest.get("processed_urls", {})
-
     for url, record_id in record_map.items():
-        if url not in seen_urls:
+        if not is_url_seen(url):
             issues.append(
                 f"record_map has record '{record_id}' but URL not in seen_urls: {url}"
             )
 
-    for url in processed_urls:
+    for url in processed_article_urls:
         if url not in record_map:
             issues.append(f"processed_urls has URL not in record_map: {url}")
 

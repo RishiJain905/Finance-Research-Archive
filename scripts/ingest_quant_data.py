@@ -1,15 +1,24 @@
+import hashlib
 import json
 import os
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from scripts.manifest_db import (
+    add_quant_series,
+    ensure_schema,
+    is_quant_series_seen,
+)
+
 CONFIG_PATH = BASE_DIR / "config" / "quant_sources.json"
 RAW_DIR = BASE_DIR / "data" / "raw"
-MANIFEST_PATH = BASE_DIR / "data" / "quant_ingestion_manifest.json"
 
 FRED_OBSERVATIONS_URL = "https://api.stlouisfed.org/fred/series/observations"
 
@@ -23,12 +32,6 @@ def load_json(path: Path, default):
         return default
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
-
-
-def save_json(path: Path, data) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def today_stamp() -> str:
@@ -196,12 +199,18 @@ def build_dataset_snapshot(dataset_item: dict) -> tuple[str, str]:
     return record_id, content
 
 
+def _content_hash(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
 def main() -> None:
+    ensure_schema()
+
     fred_api_key = normalize_api_key(os.getenv("FRED_API_KEY"))
     config = load_json(CONFIG_PATH, {"series": [], "datasets": []})
-    manifest = load_json(MANIFEST_PATH, {"created": []})
 
     created = []
+    today = today_stamp()
 
     for series_item in config.get("series", []):
         if not series_item.get("enabled", False):
@@ -214,28 +223,37 @@ def main() -> None:
             print(f"Skipping FRED series {series_item['id']}: missing FRED_API_KEY")
             continue
 
+        series_id = series_item["id"]
+        if is_quant_series_seen(series_id, today):
+            print(f"Already ingested {series_id} for {today}, skipping.")
+            continue
+
         try:
             record_id, content = build_fred_snapshot(series_item, fred_api_key)
             write_raw_snapshot(record_id, content)
+            add_quant_series(series_id, today, _content_hash(content))
             created.append(record_id)
             print(f"Created FRED series snapshot: {record_id}")
         except Exception as e:
-            print(f"Failed FRED series {series_item['id']}: {e}")
+            print(f"Failed FRED series {series_id}: {e}")
 
     for dataset_item in config.get("datasets", []):
         if not dataset_item.get("enabled", False):
             continue
 
+        series_id = dataset_item["id"]
+        if is_quant_series_seen(series_id, today):
+            print(f"Already ingested {series_id} for {today}, skipping.")
+            continue
+
         try:
             record_id, content = build_dataset_snapshot(dataset_item)
             write_raw_snapshot(record_id, content)
+            add_quant_series(series_id, today, _content_hash(content))
             created.append(record_id)
             print(f"Created dataset snapshot: {record_id}")
         except Exception as e:
-            print(f"Failed dataset {dataset_item['id']}: {e}")
-
-    manifest["created"] = created
-    save_json(MANIFEST_PATH, manifest)
+            print(f"Failed dataset {series_id}: {e}")
 
     print("\nCreated quant record ids:")
     if created:
