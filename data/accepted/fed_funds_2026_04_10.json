@@ -1,7 +1,7 @@
 {
   "id": "fed_funds_2026_04_10",
   "created_at": "2026-04-10T14:34:13.431480+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Effective Federal Funds Rate Snapshot",
@@ -53,31 +53,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The source is factual and verifiable (FRED data), but the event_type must be corrected from 'unknown' to 'data_release_other'. The record is also thin for standalone archival purposes - it would benefit from linkage to related FOMC documents or recent rate announcements for fuller context. Human review needed to determine if this data point has sufficient standalone archival value."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-10T15:19:45.932844+00:00"
   },
   "raw_text_path": "data/raw/fed_funds_2026_04_10.txt",
   "notes": "Source is a FRED data snapshot for the DFF series. It contains only the latest observation and recent history, no policy commentary, no forward guidance, and no narrative. Adequate for confirming the current fed funds level but provides no analytical context. Link to primary FOMC statement documents when available to add interpretive depth.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "C",
-    "score": 4,
+    "tier": "tier_3",
+    "score": 54.5,
     "reasoning": [
-      "Raw data snapshot with no analytical narrative",
-      "Only 5 data points provided, limited historical context",
-      "Verifiable factual data (FRED source) but thin content",
-      "No policy signal or market interpretation included",
-      "Suitable for confirming rate level but not for standalone research note"
+      "quality score: 54.5/100 (acceptable)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
