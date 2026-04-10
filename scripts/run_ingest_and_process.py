@@ -377,8 +377,9 @@ def drain_inbox_queue() -> list[str]:
     failed_set = set(failed_urls)
     failed = [item for item in queue if item.get("url") in failed_set]
     if created:
-        cleared_urls = {c for c in created}
-        remaining_queue = [item for item in queue if item.get("url") not in cleared_urls]
+        # created contains record_ids, not URLs — collect the actual URLs we processed
+        processed_urls = {item.get("url") for item in queue if item.get("url") and item.get("url") not in failed_set}
+        remaining_queue = [item for item in queue if item.get("url") not in processed_urls]
         QUEUE_PATH.write_text(json.dumps(remaining_queue), encoding="utf-8")
         print(f"\n  Processed {len(created)} queue item(s), {len(failed)} failed URLs retained")
 
