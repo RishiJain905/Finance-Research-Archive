@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source URL is empty - no valid source attribution provided",
+    "Source is explicitly a placeholder with no actual repo operation data",
+    "Source contains only boilerplate text: 'This is still a placeholder dataset snapshot for NY Fed Repo Operations from nyfed. Next we can replace this with real dataset/API fetches.'",
+    "No transaction amounts, counterparties, dates, or any substantive data present",
+    "Source has zero archival value - it is explicitly marked for replacement with real data",
+    "event_type 'market_notice' is technically valid but misleading given the source contains no actual market notice content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is well-constructed and accurately describes the placeholder nature of the source. However, the source itself is fundamentally non-archivable: it is explicitly a placeholder stub with no actual data, no valid URL, and no market structure or macro catalyst content. This is a clear reject based on source quality, not record quality.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "CORRECT - The generated record accurately identifies the source as a placeholder with no actual data. No correction needed.",
+    "why_it_matters": "CORRECT - The record correctly notes this document cannot be used for research purposes. No correction needed.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

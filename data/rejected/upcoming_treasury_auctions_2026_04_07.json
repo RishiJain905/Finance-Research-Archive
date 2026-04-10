@@ -1,0 +1,79 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_07",
+  "created_at": "2026-04-07T14:49:57.621290+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions",
+  "source": {
+    "name": "treasury_fiscal_data",
+    "url": "",
+    "domain": "",
+    "published_at": "2026-04-07",
+    "source_type": "data_release_other"
+  },
+  "summary": "This record contains only a placeholder snapshot for Treasury auction data. The source explicitly states it is awaiting replacement with real dataset or API fetches. No actual auction details (dates, sizes, maturities, or results) are available in the current text.",
+  "key_points": [
+    "Source is explicitly labeled as a placeholder dataset snapshot",
+    "No auction dates, sizes, or maturity terms are provided",
+    "Source indicates future data will be fetched from treasury_fiscal_data API",
+    "No coupon details, term structure, or historical comparison data present",
+    "This record cannot be used for any market analysis or positioning"
+  ],
+  "why_it_matters": "This placeholder provides no actionable information. Treasury auction records are critical for understanding near-term supply dynamics, financing costs, and market structure. Until real data is populated, this record has zero utility for research or RAG applications.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "placeholder",
+    "no-data",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is explicitly a placeholder with no actual Treasury auction data",
+      "Source contains no dates, sizes, maturities, coupon details, or any quantitative information",
+      "URL field is empty - missing critical source attribution",
+      "Domain field is empty - source cannot be verified or accessed",
+      "Record has zero archival value until real data replaces placeholder",
+      "source_type set to 'data_release_other' but source is not an actual data release"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_07.txt",
+  "notes": "Source explicitly states: 'This is still a placeholder dataset snapshot for Upcoming Treasury Auctions from treasury_fiscal_data. Next we can replace this with real dataset/API fetches.' This record contains no actual market data and should be flagged for immediate replacement. Archive value: none until real data is added.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Placeholder content only with no actual auction data",
+      "No quantitative information to support any market analysis",
+      "Explicitly marked as awaiting replacement with real data",
+      "Cannot contribute to any research or RAG use case"
+    ]
+  }
+}

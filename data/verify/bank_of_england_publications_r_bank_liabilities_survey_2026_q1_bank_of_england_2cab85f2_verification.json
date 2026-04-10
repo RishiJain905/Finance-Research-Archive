@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "PUBLISHED_AT metadata shows '2026-01-15' but article body clearly states 'Published on 09 April 2026'; the April date is internally consistent with the content (survey covers Q1 2026 to end-February, conducted Feb 23 - Mar 13, 2026); likely metadata error from RSS extraction; April 2026 date is correct",
+    "event_type 'research_paper' is valid but borderline appropriate; this is an official statistical survey/report, not an academic research paper; 'economic_commentary' might be more precise, but 'research_paper' is not wrong given the broad taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and accurately reflects the source material. The PUBLISHED_AT discrepancy is notable but the record correctly uses the article body date for content. Minor classification ambiguity on event_type does not warrant human escalation.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

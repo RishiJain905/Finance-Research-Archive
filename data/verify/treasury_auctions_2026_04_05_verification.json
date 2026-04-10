@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an explicit placeholder with no actual Treasury auction data present",
+    "Source attribution is entirely missing: no URL, no published date, no source type specified",
+    "Source has no archival value - placeholder text provides no actionable market structure or macro catalyst information",
+    "Source is not article-like and appears to be a metadata/container page rather than a document with substantive content",
+    "No auction dates, amounts, bid-to-cover ratios, tail, primary dealer participation, or any operational details available",
+    "PAGE_TYPE not specified in metadata, violating the requirement to treat metadata as authoritative for page diagnostics"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While human review was flagged in the record, the source's inadequacy is unambiguous from the source text alone. No human judgment is needed to determine that a placeholder snapshot cannot support market structure or macro catalyst research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Placeholder dataset snapshot for Treasury Securities Auctions Data from treasury_fiscal_data. No actual auction data, results, or operational details are present in this source. This is a development/placeholder file that should be replaced with real API data.",
+    "why_it_matters": "This source cannot support any market structure or macro analysis because it contains only placeholder text. Treasury auction data is essential for understanding government bond market dynamics, primary dealer participation, and yield curve formation. The record should be rejected and re-evaluated once real data is available from the treasury_fiscal_data API.",
+    "macro_context": "",
+    "market_structure_context": "No market structure information available. Treasury securities auctions are a critical component of fixed income market structure (primary market operations, primary dealer system, auction mechanics), but this source provides no actual data on these topics. Reject this record and wait for populated data."
+  }
+}

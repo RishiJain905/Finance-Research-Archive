@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly placeholder text with no actual Treasury auction data",
+    "Source contains no dates, tenors, sizes, or results of any auctions",
+    "Source explicitly states it will be replaced with real data - no archival value",
+    "URL field is empty, breaking source attribution requirement",
+    "Source is too thin to have any market structure or macro analytical value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the record accurately describes the placeholder nature of the source, the fundamental problem is the source itself has zero archival value and cannot be used for any market structure analysis. Human review should confirm this is a data infrastructure issue rather than a source that should be archived.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
