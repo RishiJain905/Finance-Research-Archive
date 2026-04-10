@@ -12,8 +12,6 @@ import sys
 import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from urllib.parse import urljoin
-
 import requests
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,6 +32,7 @@ RAW_DIR = BASE_DIR / "data" / "raw"
 
 EDGAR_API_BASE = "https://data.sec.gov/submissions"
 EDGAR_DOC_BASE = "https://www.sec.gov/Archives/edgar/data"
+EDGAR_TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
 
 # Seconds to wait between requests to avoid rate limiting
 REQUEST_DELAY = 0.2
@@ -58,6 +57,26 @@ def make_session(user_agent: str) -> requests.Session:
     session = requests.Session()
     session.headers.update({"User-Agent": user_agent})
     return session
+
+
+def fetch_all_tickers(session: requests.Session) -> list[dict]:
+    """Fetch every SEC-registered company from the EDGAR company tickers endpoint.
+
+    Returns a list of dicts with keys: name, cik (zero-padded to 10 digits).
+    The endpoint covers all exchange-listed and OTC-registered issuers (~10,000+).
+    """
+    print("Fetching full SEC company ticker list…")
+    response = session.get(EDGAR_TICKERS_URL, timeout=60)
+    response.raise_for_status()
+    data = response.json()
+    companies = []
+    for entry in data.values():
+        cik = str(entry.get("cik_str", "")).zfill(10)
+        name = entry.get("title", "Unknown")
+        if cik and name:
+            companies.append({"name": name, "cik": cik})
+    print(f"  Loaded {len(companies):,} companies.")
+    return companies
 
 
 def fetch_submissions(session: requests.Session, cik_padded: str) -> dict:
@@ -199,21 +218,35 @@ def run_one_company(
     filing_types: list[str],
     lookback_days: int,
     max_filings: int,
+    quiet: bool = False,
 ) -> list[str]:
-    """Ingest filings for one company. Returns list of created record IDs."""
+    """Ingest filings for one company. Returns list of created record IDs.
+
+    When quiet=True only prints output when filings are actually found, which
+    avoids thousands of "No recent filings" lines when scanning all companies.
+    """
     cik = company["cik"]
     name = company["name"]
     cik_padded = pad_cik(cik)
 
-    print(f"\n=== {name} (CIK {cik}) ===")
+    if not quiet:
+        print(f"\n=== {name} (CIK {cik}) ===")
 
-    submissions = fetch_submissions(session, cik_padded)
+    try:
+        submissions = fetch_submissions(session, cik_padded)
+    except Exception as e:
+        if not quiet:
+            print(f"  Failed to fetch submissions: {e}")
+        return []
+
     recent_filings = parse_recent_filings(submissions, filing_types, lookback_days)
 
     if not recent_filings:
-        print(f"  No recent filings found.")
+        if not quiet:
+            print(f"  No recent filings found.")
         return []
 
+    print(f"\n=== {name} (CIK {cik}) ===")
     print(f"  Found {len(recent_filings)} recent filing(s)")
 
     created = []
@@ -264,48 +297,76 @@ def run_one_company(
 
 
 def main() -> None:
-    """Load config and ingest filings for all enabled companies."""
+    """Load config and ingest filings for all (or configured) companies."""
     ensure_schema()
 
     config = load_config()
     user_agent = config.get("user_agent", "FinanceResearchArchive contact@example.com")
     filing_types = config.get("filing_types", ["8-K", "10-K", "10-Q"])
-    lookback_days = config.get("lookback_days", 3)
-    max_filings = config.get("max_filings_per_run", 20)
-    companies = [c for c in config.get("companies", []) if c.get("enabled", True)]
-
-    if not companies:
-        print("No enabled companies found in config.")
-        return
+    lookback_days = config.get("lookback_days", 10)
+    max_per_company = config.get("max_filings_per_company", 3)
+    max_per_run = config.get("max_filings_per_run", 500)
+    fetch_all = config.get("fetch_all_companies", False)
 
     session = make_session(user_agent)
 
-    print(f"EDGAR Ingest — {len(companies)} company(ies), looking back {lookback_days} day(s)")
+    if fetch_all:
+        companies = fetch_all_tickers(session)
+        quiet = True
+    else:
+        companies = [c for c in config.get("companies", []) if c.get("enabled", True)]
+        quiet = False
+
+    if not companies:
+        print("No companies found to process.")
+        return
+
+    print(f"EDGAR Ingest — {len(companies):,} company(ies), looking back {lookback_days} day(s)")
     print(f"Filing types: {', '.join(filing_types)}")
+    if fetch_all:
+        print(f"Mode: full market scan (max {max_per_company} filings/company, {max_per_run} total)")
 
     total_created = 0
-    for company in companies:
+    total_checked = 0
+
+    for i, company in enumerate(companies):
+        if total_created >= max_per_run:
+            print(f"\nReached global cap of {max_per_run} new filings. Stopping early.")
+            break
+
         company_name = company["name"]
-        if company.get("auto_disabled", False) or is_auto_disabled(company_name):
-            print(f"\n=== {company_name}: auto-disabled, skipping. ===")
-            continue
+
+        if not fetch_all:
+            if company.get("auto_disabled", False) or is_auto_disabled(company_name):
+                print(f"\n=== {company_name}: auto-disabled, skipping. ===")
+                continue
 
         created = run_one_company(
             session,
             company,
             filing_types,
             lookback_days,
-            max_filings,
+            max_per_company,
+            quiet=quiet,
         )
         total_created += len(created)
-        track_health(
-            company_name,
-            len(created),
-            config_path=CONFIG_PATH,
-            config_list_key="companies",
-        )
+        total_checked += 1
 
-    print(f"\n=== Done. Created {total_created} new record(s) ===")
+        if not fetch_all and created:
+            track_health(
+                company_name,
+                len(created),
+                config_path=CONFIG_PATH,
+                config_list_key="companies",
+            )
+
+        # Progress heartbeat every 500 companies in full-scan mode
+        if fetch_all and (i + 1) % 500 == 0:
+            print(f"  … checked {i + 1:,}/{len(companies):,} companies, {total_created} new filing(s) so far")
+
+        time.sleep(REQUEST_DELAY)
+
+    print(f"\n=== Done. Checked {total_checked:,} company(ies). Created {total_created} new record(s) ===")
 
 
 if __name__ == "__main__":
