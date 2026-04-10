@@ -1,0 +1,71 @@
+{
+  "id": "wb_trade_gdp_2026-04-10",
+  "created_at": "2026-04-10T14:39:34.291822+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - World Bank API Error",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "The World Bank API request for the indicator 'World Trade (% of GDP)' (TG.VAL.TOTL.GD.ZS) failed with a connection timeout. No actual data was retrieved. This is a data infrastructure issue, not an actual research document. The topic (global_economy) falls outside the defined focus areas of market structure and macro catalysts.",
+  "key_points": [
+    "API request to worldbank.org timed out after 30 seconds for indicator TG.VAL.TOTL.GD.ZS",
+    "No trade/GDP data was retrieved from the World Bank database",
+    "The source is a failed API call rather than an actual research document or data release",
+    "The assigned topic 'global_economy' is not among the permitted focus areas (market structure or macro catalysts)"
+  ],
+  "why_it_matters": "This record cannot be used for research or RAG purposes because no actual data was retrieved. It serves only as documentation of a data retrieval failure.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "api-error",
+    "data-unavailable",
+    "trade-gdp",
+    "timeout"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_10.txt",
+  "notes": "This source is a data retrieval failure, not a research document. The World Bank API call for trade-to-GDP ratio data timed out, yielding no usable content. The assigned topic (global_economy) falls outside the scope of the archive's focus areas (market structure and macro catalysts). Recommend investigating the data pipeline issue and retrying the API call with extended timeout.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No actual content retrieved - only an error message",
+      "Failed API call provides no research value",
+      "Topic mismatch with archive scope",
+      "Cannot contribute to any downstream analysis"
+    ]
+  }
+}

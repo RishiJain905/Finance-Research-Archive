@@ -1,0 +1,88 @@
+{
+  "id": "10y_yield_2026_04_10",
+  "created_at": "2026-04-10T14:36:24.859506+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield (DGS10)",
+  "source": {
+    "name": "FRED",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-08",
+    "source_type": "data_series"
+  },
+  "summary": "The 10-Year Treasury Yield closed at 4.29% on April 8, 2026, down 4 basis points from the prior day's close of 4.33%. The yield has trended slightly lower over the past week, declining from 4.35% on April 3.",
+  "key_points": [
+    "Latest observation: 4.29% (2026-04-08)",
+    "Prior observation: 4.33% (2026-04-07)",
+    "Daily change: -0.04 percentage points (down)",
+    "Weekly trend: 4.35% (Apr 3) → 4.29% (Apr 8)",
+    "Recent range: 4.29%–4.35% over the past week"
+  ],
+  "why_it_matters": "The 10-year Treasury yield is a benchmark rate that influences mortgage costs, corporate borrowing costs, and equity valuations. Current level: 4.29%.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx",
+      "commodities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "Yield at 4.29% as of April 8, 2026, down from 4.35% on April 3. Data reflects market pricing of 10-year Treasury securities.",
+  "market_structure_context": "FRED DGS10 series tracks daily closing yield on 10-Year constant maturity Treasury securities.",
+  "important_numbers": [
+    "4.29%",
+    "4.33%",
+    "4.35%",
+    "4.31%",
+    "4.34%"
+  ],
+  "tags": [
+    "10y-yield",
+    "treasury",
+    "macro-indicator",
+    "bond-market",
+    "interest-rates"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - source attribution incomplete",
+      "why_it_matters and macro_context sections contain analytical content not present in the source data - these are interpretive additions based on general knowledge rather than source-specific text",
+      "Record presents as analytical research but source is raw numerical data with no narrative or policy commentary",
+      "quality_tier correctly identifies this as 'data' tier, but record structure implies richer content than source provides"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_10.txt",
+  "notes": "This source is a FRED data snapshot rather than a research document or policy statement. It provides precise numerical data without interpretation. The value is useful as a macro catalyst indicator but offers no narrative or analytical context. Lower confidence reflects lack of qualitative information.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 5,
+    "reasoning": [
+      "Raw market data point with no analysis",
+      "Precise and verifiable numbers",
+      "No policy context or institutional commentary",
+      "Useful for quantitative analysis but limited for qualitative research"
+    ]
+  }
+}

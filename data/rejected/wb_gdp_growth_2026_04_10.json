@@ -1,54 +1,56 @@
 {
   "id": "wb_gdp_growth_2026_04_10",
-  "created_at": "2026-04-10T03:43:29.578613+00:00",
+  "created_at": "2026-04-10T14:38:19.979750+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "data_release_gdp",
-  "title": "World GDP Growth Rate",
+  "title": "World GDP Growth Rate - World Bank Indicator NY.GDP.MKTP.KD.ZG",
   "source": {
     "name": "World Bank",
-    "url": "",
+    "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
     "published_at": "2026-04-10",
-    "source_type": "data_api",
-    "domain": ""
+    "source_type": "data_release",
+    "domain": "data.worldbank.org"
   },
-  "summary": "The World Bank data query for indicator NY.GDP.MKTP.KD.ZG (World GDP Growth Rate) returned no valid observations as of the 2026-04-10 snapshot date. This is a technical data retrieval failure, not an actual GDP growth release.",
+  "summary": "The World Bank API returned no valid observations for indicator NY.GDP.MKTP.KD.ZG (Real GDP Growth Rate, constant 2015 US$) on 2026-04-10. This is a data retrieval failure with no usable macro content.",
   "key_points": [
-    "No valid observations were returned for World Bank GDP growth indicator (NY.GDP.MKTP.KD.ZG)",
-    "Source is a data query result with no actual GDP growth figures",
-    "SNAPSHOT_DATE: 2026_04_10"
+    "World Bank indicator NY.GDP.MKTP.KD.ZG returned zero valid observations",
+    "SNAPSHOT_DATE of query was 2026-04-10",
+    "No GDP growth rate data is available from this source",
+    "This appears to be an API or data availability issue rather than intentional withholding"
   ],
-  "why_it_matters": "Without actual GDP growth data, no market analysis or macro assessment can be derived from this source. This represents a data retrieval failure rather than a research input.",
+  "why_it_matters": "This source was intended to provide real GDP growth rate data for macro analysis but contains no usable information. Researchers seeking current World Bank GDP growth figures should consult alternative sources such as the IMF WEO database or national statistical offices.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "No macro data available from this source. World Bank GDP growth data would typically inform assessments of global economic momentum and cross-border risk sentiment.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "world-bank",
     "gdp-growth",
+    "macro-data",
     "no-data",
-    "data-retrieval-failure"
+    "data-unavailable",
+    "global-economy"
   ],
   "llm_review": {
     "initial_confidence": 1,
-    "verification_confidence": 4,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a data API error message with no actual GDP growth data - record captures this accurately",
-      "event_type 'data_release_gdp' is misleading since no GDP data was actually released or available",
-      "Source attribution is incomplete: URL is empty string and domain is empty string",
-      "No actionable research content - this is purely a data retrieval status message",
-      "Archival value is questionable for an empty/error response"
+      "Source contains zero usable data - API returned no valid observations for GDP growth indicator",
+      "No macro catalyst or market structure information can be extracted",
+      "Source is too thin to have archival value for research purposes",
+      "event_type 'data_release_gdp' is misleading since no actual data was released"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "",
-    "notes": "missing_source_attribution"
+    "decision": "reject",
+    "notes": "Source contains no usable data. API returned zero observations. Recommend seeking GDP data from alternative sources such as IMF WEO, OECD, or national statistical agencies."
   },
   "human_feedback": {
     "decision": "",
@@ -58,17 +60,18 @@
     "reviewed_at": "",
     "reviewer_id": ""
   },
-  "raw_text_path": "data\\raw\\wb_gdp_growth_2026_04_10.txt",
-  "notes": "Source is a World Bank data API response indicating no valid GDP growth observations were returned. This is not a valid research document but rather a data retrieval status message. Topic classification as 'macro catalysts' is technical only - there is no actual macro data content to support this classification. Human review recommended to determine if data source should be re-queried or archived differently.",
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_10.txt",
+  "notes": "Data retrieval failure. The World Bank indicator query returned empty results with the message: 'No recent valid observations were returned for indicator NY.GDP.MKTP.KD.ZG.' This is not relevant to the archive as it provides no information content. Retained for data lineage purposes only.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "insufficient",
+    "tier": "junk",
     "score": 1,
     "reasoning": [
-      "No actual GDP growth data present in source",
-      "Source is a data query error/status message",
-      "Cannot support market structure or macro catalyst analysis"
+      "No actual data returned from source",
+      "Empty response from World Bank API",
+      "Cannot support any research or trading analysis",
+      "Source metadata suggests intended use but content does not match"
     ]
   }
 }

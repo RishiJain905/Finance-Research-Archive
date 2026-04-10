@@ -1,0 +1,81 @@
+{
+  "id": "treasury_auctions_2026_04_10",
+  "created_at": "2026-04-10T14:36:35.340340+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Treasury Securities Auctions Data - API Error",
+  "source": {
+    "name": "Treasury Securities Auctions Data",
+    "url": "",
+    "domain": "fiscaldata.treasury.gov",
+    "published_at": "2026-04-10",
+    "source_type": "data_feed"
+  },
+  "summary": "The Treasury Securities Auctions API endpoint returned a 404 error on 2026-04-10. No actual auction results, announcements, or pricing data exist in this source.",
+  "key_points": [
+    "API request to Treasury auction data endpoint failed with HTTP 404 Not Found",
+    "Endpoint used: https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "No auction offer amounts, accepted amounts, issue dates, or security terms retrieved",
+    "This represents a data gap, not an actual policy event"
+  ],
+  "why_it_matters": "Treasury auction data would be critical for understanding government funding dynamics and market structure. However, this source contains only an API error with no actual data.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The attempted API query failed with a 404 error. No auction offering amounts, accepted amounts, issue dates, or security terms were retrieved. This represents a complete data retrieval failure, not an actual market event.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api-error",
+    "404",
+    "market-structure",
+    "data-gap"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source content is entirely a 404 error - no actual auction data retrieved",
+      "URL field is empty despite source domain being fiscaldata.treasury.gov",
+      "event_type 'treasury_issuance' is misleading - this is a data retrieval failure, not an actual Treasury auction event",
+      "Record documents a technical failure with no substantive market-relevant content",
+      "Cannot extract any factual claims, numbers, or research from this source",
+      "Archival value is negligible - a 404 error log has no independent research value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_10.txt",
+  "notes": "Source metadata indicates TARGET was 'Treasury Securities Auctions Data' and TOPIC was 'market structure', confirming this was intended to capture auction data. However, the source body contains only a 404 error from the API request—no actual data was returned. This is a data retrieval failure, not a content source. Record kept in review queue for human handling. Attempted fields: issue_date, security_type, security_term, offering_amt, total_accepted.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No actual data content present—only API error message",
+      "Cannot extract any factual claims or numbers",
+      "Technical failure requires human resolution",
+      "Quality tier reflects data deficiency rather than source quality"
+    ]
+  }
+}

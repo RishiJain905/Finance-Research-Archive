@@ -1,0 +1,90 @@
+{
+  "id": "sofr_2026_04_10",
+  "created_at": "2026-04-10T14:34:13.431525+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "SOFR Daily Snapshot - April 9, 2026",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "published_at": "2026-04-10",
+    "source_type": "data_series",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "SOFR closed at 3.57% on April 9, 2026, down 2 basis points from the prior day's 3.59%. The rate has trended downward over the past week, declining from 3.66% on April 2 to the current level, representing an 9 basis point cumulative decline.",
+  "key_points": [
+    "SOFR settled at 3.57% on 2026-04-09, down 2 bps from 3.59% on 2026-04-08",
+    "Weekly trend shows consistent downward movement: 3.66% (Apr 2) → 3.65% (Apr 6) → 3.62% (Apr 7) → 3.59% (Apr 8) → 3.57% (Apr 9)",
+    "Cumulative decline of 9 bps over the five-day observation window",
+    "SOFR is the primary benchmark for overnight secured borrowing in the repo market",
+    "The daily change of -2 bps represents a modest intraday decline",
+    "All observations sourced from FRED with verified dates"
+  ],
+  "why_it_matters": "SOFR serves as the primary reference rate for a significant volume of financial contracts including derivatives, floating-rate loans, and agency MBS pricing. Movements in SOFR directly affect financing costs across the banking system and money markets. The declining trend may signal easing in short-term funding stress or changing supply-demand dynamics in the overnight repo market. Note: Contract volume estimates vary by source and should be verified independently.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 3
+  },
+  "macro_context": "SOFR at 3.57% (April 9, 2026) reflects overnight repo market conditions. The current rate decline of 9 bps over five days represents a modest easing in short-term funding markets. This data should be read alongside the current Fed Funds target range to assess the spread relationship.",
+  "market_structure_context": "SOFR is the Secured Overnight Financing Rate, calculated by the Federal Reserve Bank of New York as the weighted average of overnight repo transaction rates cleared through the Fed's triparty arrangement with JPMorgan and Bank of New York Mellon. It replaced LIBOR as the primary reference rate for the overnight lending market. The current decline suggests normalizing conditions in short-term funding markets.",
+  "important_numbers": [
+    "3.57% (SOFR April 9, 2026)",
+    "3.59% (SOFR April 8, 2026)",
+    "-0.02 bps (daily change)",
+    "3.66% (SOFR April 2, 2026)",
+    "-9 bps (cumulative 5-day change)"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "market-structure",
+    "short-term-rates",
+    "daily-data",
+    "fed",
+    "money-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but should be 'data_release_other' since this is a daily data release for a market rate",
+      "Claim in why_it_matters that SOFR is 'the reference rate for over $200 trillion in financial contracts' is not sourced in the provided FRED data and should either be sourced or removed",
+      "macro_context field is empty - record would benefit from noting the current Fed Funds target range to contextualize where SOFR sits relative to the policy rate",
+      "Source is a data series snapshot, not an analytical or commentary piece - acceptable for market structure tracking but limits archival value as a discrete research event"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Issues are moderate but correctable: event_type should be specified, the $200T figure needs source attribution or removal, and macro_context is missing. The underlying data is accurate and verified."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_10.txt",
+  "notes": "This is a FRED data series snapshot providing daily SOFR observations. Not an analytical document or policy statement. The data is technically precise and verified but lacks explanatory context for the observed decline. The declining trend over 5 trading days may warrant monitoring for signs of funding market stress easing or reserve scarcity changes. Given this is market structure data directly relevant to the target SOFR and topic market structure, it passes the relevance filter. Lower confidence appropriate for raw data without narrative context.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "B",
+    "score": 6,
+    "reasoning": [
+      "Data is accurate and precisely dated with verified observation values",
+      "Provides useful market structure indicator (SOFR daily level and trend)",
+      "Lacks institutional narrative or policy context that would make it higher tier",
+      "Continuous data feed rather than discrete research event limits applicability for targeted retrieval"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "083bffc8b5e9560465f7e76911212ce43e3560e0"
+}

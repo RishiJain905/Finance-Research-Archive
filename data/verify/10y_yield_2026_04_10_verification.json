@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is empty - source attribution incomplete",
+    "why_it_matters and macro_context sections contain analytical content not present in the source data - these are interpretive additions based on general knowledge rather than source-specific text",
+    "Record presents as analytical research but source is raw numerical data with no narrative or policy commentary",
+    "quality_tier correctly identifies this as 'data' tier, but record structure implies richer content than source provides"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The numerical data in the record is accurate and verifiable, but the why_it_matters and macro_context sections contain interpretive content that is not sourced from the FRED data snapshot. These sections describe the 'significance' and 'market implications' of the yield level using general financial knowledge rather than any actual commentary in the source. While this content is not wrong, it overstates what the source actually provides. Human review needed to determine whether to: (a) trim the record to pure data with minimal interpretation, or (b) retain the interpretive framing as acceptable general-context additions.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The 10-year Treasury yield is a benchmark rate that influences mortgage costs, corporate borrowing costs, and equity valuations. Current level: 4.29%.",
+    "macro_context": "Yield at 4.29% as of April 8, 2026, down from 4.35% on April 3. Data reflects market pricing of 10-year Treasury securities.",
+    "market_structure_context": "FRED DGS10 series tracks daily closing yield on 10-Year constant maturity Treasury securities."
+  }
+}

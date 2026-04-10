@@ -1,15 +1,14 @@
 {
-  "verification_confidence": 4,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source contains only a 400 API error message with no actual market structure data",
-    "No extractable facts about NY Fed repo operations (terms, amounts, counterparties, rates)",
-    "Record provides no market-relevant information; only documents a failed data retrieval attempt",
-    "The 'market_notice' event type implies actual operational data was posted, but source has none",
-    "Archival value is zero—no content to preserve for market structure research"
+    "Source contains only an HTTP 400 error message with zero substantive content about NY Fed repo operations",
+    "Record has no archival value - it documents a failed fetch attempt, not actual repo operation data",
+    "No actual market structure, macro catalyst, or policy information present",
+    "Record itself acknowledges low utility for research and RAG use cases"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source is a failed API response with no actual content. While the record accurately describes the error, there is nothing to archive. The record should be rejected and the data fetch should be retried with corrected API parameters before creating a new record.",
+  "human_review_reason": "While the record is factually accurate about the failed API fetch (no fabricated claims), the source itself has no archival value. A 400 error page from a data endpoint is not a meaningful research artifact worth preserving. The record is essentially a placeholder for a failed crawl that cannot support any market research, policy analysis, or RAG use cases.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

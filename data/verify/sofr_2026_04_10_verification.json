@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'data_release_other' since this is a daily data release for a market rate",
+    "Claim in why_it_matters that SOFR is 'the reference rate for over $200 trillion in financial contracts' is not sourced in the provided FRED data and should either be sourced or removed",
+    "macro_context field is empty - record would benefit from noting the current Fed Funds target range to contextualize where SOFR sits relative to the policy rate",
+    "Source is a data series snapshot, not an analytical or commentary piece - acceptable for market structure tracking but limits archival value as a discrete research event"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are moderate but correctable: event_type should be specified, the $200T figure needs source attribution or removal, and macro_context is missing. The underlying data is accurate and verified.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "SOFR serves as the primary reference rate for a significant volume of financial contracts including derivatives, floating-rate loans, and agency MBS pricing. Movements in SOFR directly affect financing costs across the banking system and money markets. The declining trend may signal easing in short-term funding stress or changing supply-demand dynamics in the overnight repo market. Note: Contract volume estimates vary by source and should be verified independently.",
+    "macro_context": "SOFR at 3.57% (April 9, 2026) reflects overnight repo market conditions. The current rate decline of 9 bps over five days represents a modest easing in short-term funding markets. This data should be read alongside the current Fed Funds target range to assess the spread relationship.",
+    "market_structure_context": "SOFR is the Secured Overnight Financing Rate, calculated by the Federal Reserve Bank of New York as the weighted average of overnight repo transaction rates cleared through the Fed's triparty arrangement with JPMorgan and Bank of New York Mellon. It replaced LIBOR as the primary reference rate for the overnight lending market. The current decline suggests normalizing conditions in short-term funding markets."
+  }
+}

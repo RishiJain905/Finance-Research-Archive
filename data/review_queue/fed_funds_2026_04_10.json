@@ -1,0 +1,85 @@
+{
+  "id": "fed_funds_2026_04_10",
+  "created_at": "2026-04-10T14:34:13.431480+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Effective Federal Funds Rate Snapshot",
+  "source": {
+    "name": "Effective Federal Funds Rate (DFF)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-08",
+    "source_type": "data_release_other"
+  },
+  "summary": "The effective federal funds rate held steady at 3.64% as of April 8, 2026, with no change from the prior observation date. The rate has remained flat at 3.64% across the five most recent trading days (April 4-8).",
+  "key_points": [
+    "Effective federal funds rate: 3.64% as of 2026-04-08",
+    "Rate unchanged from April 7, 2026 (0 bps change)",
+    "Rate flat across five consecutive observations: 3.64% (April 4-8, 2026)",
+    "This is a market-observed rate, not a Fed policy target"
+  ],
+  "why_it_matters": "The effective fed funds rate is the actual overnight borrowing cost in the interbank market and serves as the benchmark for short-term funding costs across the financial system. A flat rate suggests no acute stress in short-term funding markets and reflects stable Fed policy implementation.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 3
+  },
+  "macro_context": "The effective fed funds rate at 3.64% reflects current overnight borrowing costs in the interbank market. This data point confirms the current level of the market rate but should be cross-referenced with recent FOMC statements to confirm policy stance.",
+  "market_structure_context": "The effective rate reflects the mechanics of the Fed's floor system where repo operations and reserves management keep the effective rate within the target range.",
+  "important_numbers": [
+    "3.64%",
+    "0 bps change"
+  ],
+  "tags": [
+    "fed-funds",
+    "interest-rates",
+    "monetary-policy",
+    "effective-rate",
+    "market-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but the correct type is 'data_release_other' - the source is a data release for the effective federal funds rate",
+      "Source is raw quantitative data only (5 observations) with no analytical narrative, making it thin as a standalone research note",
+      "macro_context contains an inferred target range (3.25-3.50%) that is not supported by the source data",
+      "Record lacks interpretive context linking this rate to current FOMC policy or recent monetary policy decisions"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The source is factual and verifiable (FRED data), but the event_type must be corrected from 'unknown' to 'data_release_other'. The record is also thin for standalone archival purposes - it would benefit from linkage to related FOMC documents or recent rate announcements for fuller context. Human review needed to determine if this data point has sufficient standalone archival value."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_10.txt",
+  "notes": "Source is a FRED data snapshot for the DFF series. It contains only the latest observation and recent history, no policy commentary, no forward guidance, and no narrative. Adequate for confirming the current fed funds level but provides no analytical context. Link to primary FOMC statement documents when available to add interpretive depth.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 4,
+    "reasoning": [
+      "Raw data snapshot with no analytical narrative",
+      "Only 5 data points provided, limited historical context",
+      "Verifiable factual data (FRED source) but thin content",
+      "No policy signal or market interpretation included",
+      "Suitable for confirming rate level but not for standalone research note"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "d1af0f4ec7891cd4cc4dbbbb2dafb4f75a893989"
+}

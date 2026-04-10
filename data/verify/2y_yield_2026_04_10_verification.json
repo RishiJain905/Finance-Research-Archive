@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is raw market data from FRED with no analytical content, commentary, or policy context",
+    "event_type set to 'unknown' when data_release_other would be appropriate for this data snapshot",
+    "No actionable research content for macro catalyst or market structure analysis",
+    "Source is a data series page (series page on FRED) - thin low-signal source that biases toward reject per core rules",
+    "why_it_matters field correctly identifies the problem: 'Not actionable for research purposes without additional context'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately represents the source data (correct values, dates, changes), but the source itself is a raw data snapshot with no analytical value. Per core rules, thin low-signal sources bias toward reject. This is not suitable for a finance research archive focused on macro catalysts and market structure analysis.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "FRED data snapshot shows the 2-Year Treasury Yield at 3.79% as of 2026-04-08, down 2 basis points from the prior day's 3.81%. The yield has oscillated between 3.79% and 3.84% over the past week.",
+    "why_it_matters": "This is raw market data with no analytical content. The 2-year yield reflects near-term rate expectations but this snapshot provides no context for the move, no policy interpretation, and no forward guidance. Not actionable for research purposes without additional context.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
