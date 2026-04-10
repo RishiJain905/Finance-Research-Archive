@@ -1,7 +1,7 @@
 {
   "id": "sofr_2026_04_10",
   "created_at": "2026-04-10T14:34:13.431525+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "unknown",
   "title": "SOFR Daily Snapshot - April 9, 2026",
@@ -59,30 +59,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Issues are moderate but correctable: event_type should be specified, the $200T figure needs source attribution or removal, and macro_context is missing. The underlying data is accurate and verified."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-10T15:20:05.753768+00:00"
   },
   "raw_text_path": "data/raw/sofr_2026_04_10.txt",
   "notes": "This is a FRED data series snapshot providing daily SOFR observations. Not an analytical document or policy statement. The data is technically precise and verified but lacks explanatory context for the observed decline. The declining trend over 5 trading days may warrant monitoring for signs of funding market stress easing or reserve scarcity changes. Given this is market structure data directly relevant to the target SOFR and topic market structure, it passes the relevance filter. Lower confidence appropriate for raw data without narrative context.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "B",
-    "score": 6,
+    "tier": "tier_2",
+    "score": 61.5,
     "reasoning": [
-      "Data is accurate and precisely dated with verified observation values",
-      "Provides useful market structure indicator (SOFR daily level and trend)",
-      "Lacks institutional narrative or policy context that would make it higher tier",
-      "Continuous data feed rather than discrete research event limits applicability for targeted retrieval"
+      "quality score: 61.5/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
