@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_treasury_and_artificial_intelligence_ea446cf9239fb3e0",
-  "created_at": "2026-04-01T02:59:38.510013+00:00",
+  "created_at": "2026-04-10T05:41:42.071946+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,53 +8,47 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/treasury-and-artificial-intelligence",
-    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "crawl"
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
   },
-  "summary": "This page is a Treasury Department hub aggregating information about the agency's AI initiatives, including FinCEN alerts, AI use case inventories, and AI strategy documents. It is not a standalone research document or policy announcement with direct market-moving content.",
+  "summary": "This is a Treasury hub page serving as a repository for information on Treasury's use of AI and AI policy in the financial sector. It aggregates links to FinCEN alerts, AI use case inventories, AI strategy documents, and related executive orders and OMB memos. The page does not contain substantive research findings or direct market/macro relevance.",
   "key_points": [
-    "The page serves as a repository linking to Treasury AI reports, use cases, and news items rather than containing substantive original content",
-    "References a FinCEN Alert on deepfake fraud schemes dated November 13, 2024",
-    "References Treasury AI Use Case Inventory and Consolidated Use Cases dated January 2026 (future-dated)",
-    "Links to Treasury AI Strategy, AI Compliance Plan, and OMB executive orders on AI",
-    "Does not contain economic data releases, rate decisions, or direct macro catalyst information"
+    "Page is a navigation/repository hub linking to Treasury AI resources, not a standalone research document",
+    "References FinCEN alert on deepfake fraud schemes (November 2024) as a linked resource",
+    "Lists Treasury AI Use Case Inventory (January 2026) and AI Compliance Plan",
+    "References executive orders EO 14179, EO 13960, and OMB memos M-25-22 and M-25-21 on AI governance",
+    "No substantive policy announcements, economic data, or market-moving content on the page itself",
+    "Published_at not stated in source metadata"
   ],
-  "why_it_matters": "This page is informational and administrative in nature. It provides access points to Treasury's AI policy framework but does not itself constitute a policy action or data release that would directly impact financial markets.",
+  "why_it_matters": "This source does not contain directly applicable content for market structure or macro catalysts analysis. It is a static information hub aggregating links to AI policy documents. The FinCEN deepfake alert and AI governance materials may have indirect regulatory implications for financial institutions but the page itself provides no actionable research findings.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "neutral",
     "confidence": 0
   },
   "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
+    "ai",
     "treasury",
-    "artificial-intelligence",
-    "ai-policy",
-    "fincen",
-    "financial-regulation",
-    "index-page"
+    "financial-services",
+    "policy",
+    "deepfake-fraud",
+    "fintech-regulation",
+    "listing-page"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 2,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a navigation/repository page (lists links to other documents without substantive original content)",
-      "Per verification rules: navigation pages, listing pages, and similar container pages should be rejected",
-      "event_type is 'unknown' — this is a repository/hub page with no clear primary content type",
-      "No published_at date provided in source metadata",
-      "Source does not contain direct market-moving information or standalone research",
-      "Topic is 'macro catalysts' but this page is too indirect/informational to qualify",
-      "Record correctly notes 'index-page' tag and 'navigation page' as quality tier issues"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Automated decision is clear-cut: this is a navigation/repository page with no substantive original content, which per rule 5 must be rejected. The generated record correctly identified this as a thin, low-signal source."
+    "notes": "container_page"
   },
   "human_feedback": {
     "decision": "",
@@ -65,17 +59,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_treasury_and_artificial_intelligence_ea446cf9239fb3e0.txt",
-  "notes": "This source is a navigation/hub page that does not contain standalone research content relevant to market structure or macro catalysts. It is an index of Treasury AI resources including links to FinCEN alerts, AI use case inventories, and executive orders. The content is too thin and indirect to serve as a reliable source for financial research. Not recommended for archive inclusion unless the linked documents are individually captured and analyzed.",
+  "notes": "Source is a Treasury AI hub page containing only links to documents, not the documents themselves. Not relevant to market structure or macro catalysts research areas. The FinCEN deepfake fraud alert and AI strategy documents linked here may warrant separate capture if they contain substantive regulatory content. Page type is listing_page per CORE RULE 6.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
+    "tier": "tier3",
     "score": 2,
     "reasoning": [
-      "Navigation page with minimal original content",
-      "No direct market-moving information",
-      "Not relevant to macro catalysts or market structure topics",
-      "Thin source with indirect relevance only"
+      "Navigation/repository page with no substantive content",
+      "Contains only links to external documents, no original research findings",
+      "No economic data, policy decisions, or market-moving content",
+      "Not relevant to market structure or macro catalysts topics"
     ]
   }
 }

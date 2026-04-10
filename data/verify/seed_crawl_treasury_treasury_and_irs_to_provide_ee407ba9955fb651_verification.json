@@ -1,16 +1,17 @@
 {
-  "verification_confidence": 7,
-  "verdict": "review",
+  "verification_confidence": 5,
+  "verdict": "reject",
   "issues_found": [
-    "Source is tagged 'macro catalysts' but content is about Johnson Amendment guidance for religious organizations - not relevant to market structure or macro economic catalysts",
-    "The source correctly identifies this as out of scope in internal notes, but the topic tag is misapplied"
+    "event_type is set to 'unknown' but should be 'regulatory_guidance' - the source announces forthcoming IRS regulatory guidance, which is a valid taxonomy value and obvious from context",
+    "Source is not relevant to macro catalysts or market structure - content concerns tax policy guidance for religious organizations on the Johnson Amendment with zero market or financial implications",
+    "Topic mismatch: metadata specifies macro catalysts TARGET/TOPIC but content is religious tax policy"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately reflects the source content and properly identifies it as out of scope. The event_type 'regulatory_guidance' is valid. However, the topic 'macro catalysts' is incorrect for this source. This should be rejected on topic grounds per the target definition, not quality grounds.",
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "This announcement concerns tax guidance for religious organizations regarding the Johnson Amendment (political campaign intervention by tax-exempt organizations). It has no relevance to market structure or macro economic catalysts. No connection to financial markets, interest rates, monetary policy, fiscal policy, economic indicators, or market operations.",
+    "why_it_matters": "This is a tax policy announcement about religious organizations and political activity restrictions under the Johnson Amendment. It has no relevance to financial markets, monetary policy, interest rates, economic data, or market structure.",
     "macro_context": "",
     "market_structure_context": ""
   }

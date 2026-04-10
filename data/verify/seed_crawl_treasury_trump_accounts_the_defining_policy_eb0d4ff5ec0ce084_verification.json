@@ -2,18 +2,19 @@
   "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source text is truncated mid-sentence ('Treasury has launched to rally the nation's philanthropists around a common cause. Expect to see more...') — cannot verify completeness of program details",
-    "Key point claims employer matching from 'Broadcom, Intel, IBM' appear only in a partial clause 'And today, Steak 'n Shake, Broadcom, Intel, IBM, JP Morgan, Chipotle, Coinbase, and Comcast all announced...' — verification confidence reduced due to truncation",
-    "Projections for account values ($500,000+, $1 million+) are attributed to Council of Economic Advisers estimates, not included in source body — flagged appropriately in why_it_matters",
-    "The policy appears to be executive initiative without Congressional authorization — this limitation is appropriately noted"
+    "why_it_matters contains speculative claims not directly supported by source: 'potentially massive inflows to index funds' and 'structural shift in household savings toward equities' are inferred, not stated",
+    "macro_context omits the source's explicit framing about 'redefining the social contract through the creation of a shareholder society' and 'making socialist notions moot' - this is central to the policy's stated rationale",
+    "market_structure_context is empty but the source contains relevant content about index fund inflows and retail investment participation that should be captured",
+    "source is promotional/political speech rather than neutral market-moving information; all projections are forward-looking aspirational statements",
+    "market_impact directional_bias set to 'unknown' with confidence 0 is defensible given no explicit market discussion in source, but the record simultaneously implies significant market structure implications"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record is well-constructed with appropriate caveats. Key facts (seed amount, timeline, Dell/Dalio pledges, participating employers) are verifiable from source. The truncation is a limitation but not disqualifying given the clear policy framing. Appropriate that event_type is speech_neutral and that macro_context notes speculation vs. confirmed policy.",
+  "human_review_reason": "The record is mostly factually accurate against the source text with minor issues. Key claims about program mechanics (seed amounts, contribution limits, pledge amounts, enrollment numbers) are all supported. Main concerns are: (1) some why_it_matters claims overstate what source supports, (2) important ideological framing from source is omitted from macro_context, (3) source quality is promotional speech rather than traditional market catalyst. These are borderline issues suitable for automated routing to review queue rather than rejection.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": "The Trump Accounts initiative, if implemented at scale, could shift household savings from traditional bank deposits into equity index funds, potentially affecting retail investor flows, money market fund balances, and household cash positions. The immediate market impact is negligible since the program requires Congressional funding, has contribution limits of $5,000/year per account, and the $1,000 seed is limited to newborns born 2025-2028. The effect on equity markets would be gradual and distributed over decades rather than immediate."
+    "why_it_matters": "This policy represents an expansion of retail participation in capital markets through a universal savings vehicle. Long-term implications include potential inflows to index funds and increased direct ownership of equities by young Americans. The initiative is explicitly framed by Treasury as a way to increase asset ownership across demographics and counter redistribution-based policy arguments.",
+    "macro_context": "The policy aims to expand capital market access to all American families by creating a new savings vehicle beginning at birth. Treasury Secretary Bessent explicitly frames this as 'redefining the social contract through the creation of a shareholder society' and making 'socialist notions moot.' The source is a promotional policy speech rather than a market-moving data release, and contains no discussion of implementation risks, funding mechanisms, or near-term market impact.",
+    "market_structure_context": "The seed contributions are invested immediately in index funds, creating a direct channel for Treasury-directed capital to flow into equity markets. Employer matching programs from major financial services firms (Charles Schwab, JPMorgan, State Street, etc.) suggest institutional support for the program. No discussion of market microstructure, liquidity considerations, or implementation risks is present in the source."
   }
 }

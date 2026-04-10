@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 4,
   "verdict": "review",
   "issues_found": [
-    "Source relevance to 'macro catalysts' is borderline - this is about a whistleblower program launch rather than market-moving events like rate decisions or economic data releases",
-    "The 'why_it_matters' section contains mild speculation about 'compliance costs and enforcement risk for financial institutions' that goes beyond what the source explicitly states",
-    "event_type 'regulatory_guidance' is technically valid but somewhat imprecise; the announcement is primarily about program administration rather than formal regulatory guidance"
+    "event_type is 'unknown' but should be 'regulatory_guidance' - the source describes a new regulatory enforcement program and whistleblower initiative from FinCEN/Treasury",
+    "Source has limited direct relevance to macro catalysts as defined - it describes an anti-fraud enforcement program launch rather than central bank policy, economic data releases, or market operations",
+    "Topic mismatch between metadata target 'macro catalysts' and actual content focused on regulatory enforcement programs",
+    "The source is a government press release/blog post rather than a research paper or analytical content",
+    "Source does not represent a direct market-moving catalyst - enhanced whistleblower enforcement may have indirect compliance implications but lacks immediate market impact"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and well-constructed, but its relevance to 'macro catalysts' is questionable. This is a regulatory enforcement announcement about a whistleblower program, not a market-moving event. Human judgment is needed to determine if such administrative/operational regulatory announcements warrant inclusion in a macro catalyst research archive, or if they should be categorized elsewhere.",
+  "human_review_reason": "The record is factually accurate and well-sourced from official Treasury materials, but there is a fundamental mismatch between the topic classification (macro catalysts) and the actual content (regulatory enforcement program announcement). Human review is needed to determine: (1) whether this content should be archived under a different, more appropriate topic, or (2) whether it has sufficient indirect relevance to financial markets through sanctions enforcement risk to justify archival value under macro catalysts. The event_type also needs correction from 'unknown' to 'regulatory_guidance'.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "The 'why_it_matters' section could be toned down to avoid speculation. Suggested revision: 'This announcement establishes a new whistleblower reporting channel for financial crimes including fraud, money laundering, and sanctions violations. While not a market-moving event, it represents Treasury's continued focus on financial crime enforcement through enhanced tip mechanisms.'",
-    "macro_context": "",
+    "summary": "FinCEN launched a dedicated webpage to confidentially accept whistleblower tips on fraud, money laundering, and sanctions violations, with Secretary Bessent announcing potential financial rewards for eligible tips. The initiative targets government benefits fraud schemes in Minnesota, Money Services Businesses, and misuse of funding by 501(c)(3) tax-exempt entities. The program is part of broader Treasury efforts to combat financial crimes and disrupt fraud rings exploiting child nutrition programs.",
+    "why_it_matters": "This announcement expands Treasury's enforcement toolkit for financial crimes. While not a direct market catalyst, enhanced whistleblower enforcement could increase compliance costs for financial institutions and raise enforcement risk for sanctions violations. Market participants should monitor whether increased enforcement leads to reduced activity in any affected sectors.",
+    "macro_context": "The whistleblower program focuses on fraud, sanctions violations, and Bank Secrecy Act compliance. This represents an expansion of Treasury's financial crimes enforcement capabilities but does not directly affect monetary policy, interest rates, or Treasury market operations.",
     "market_structure_context": ""
   }
 }

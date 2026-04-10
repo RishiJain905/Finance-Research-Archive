@@ -1,19 +1,19 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source content is entirely about national security/counter-terrorism policy with zero relevance to market structure or macro catalysts",
-    "Metadata topic 'macro catalysts' is incorrect - source discusses counter-terrorism finance tracking, not financial markets",
-    "event_type set to 'unknown' is acceptable in this case as source does not fit any taxonomy category (monetary policy, speeches, data releases, treasury/operations, research)",
-    "No published_at date in source metadata",
-    "Source provides no actionable information for financial market analysis, trading, or investment research"
+    "Source type is homepage per CORE RULE 5 — homepage sources are non-archiveable and must be rejected",
+    "Source topic (counter-terrorism/national security) is entirely unrelated to archive focus on market structure or macro catalysts",
+    "No publication date provided (published_at is empty)",
+    "event_type set to 'unknown' when correct classification is clearly not applicable to market-related events",
+    "Generated record correctly identifies source has no market relevance, but the source itself should have been filtered out before reaching the archive"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record correctly identifies that source is irrelevant to finance research archive scope. No judgment call needed - the content is unambiguously about counter-terrorism finance policy with no market-moving information.",
+  "human_review_reason": "Automated rejection is appropriate because source type is homepage per CORE RULE 5, which mandates rejection regardless of content quality",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source describes the Treasury's Terrorist Finance Tracking Program (TFTP), a counter-terrorism initiative that uses SWIFT financial messaging data to trace terrorist financing networks. The content is about national security policy and has no relevance to market structure or macro catalysts for financial market research.",
-    "why_it_matters": "This source is not relevant to financial market research. It describes a national security program and does not contain information about market structure, monetary policy, economic data releases, or other macro catalysts that affect financial markets.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

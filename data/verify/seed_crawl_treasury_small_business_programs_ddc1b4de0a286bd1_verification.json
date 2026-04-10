@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page (per generated record), which is an explicit rejection criterion per Rule 5",
+    "No publication date or last-updated timestamp - cannot assess recency or archival status",
+    "Topic mismatch: metadata claims 'macro catalysts' but source contains no market-moving information, only static informational program descriptions",
+    "Source has no archival value as a finance research entry - content is purely institutional program overview with no current data or policy announcements",
+    "event_type set to 'unknown' when source is clearly not any valid event type category - it's an informational landing page, not an event",
+    "Generated record correctly identifies these issues, but the record itself should be rejected rather than sent to review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The issues are clear-cut and unambiguous: source is a listing page (Rule 5 explicit rejection), has no publication date, contains no macro catalysts, and topic is completely mismatched. No human judgment needed when rules clearly apply.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

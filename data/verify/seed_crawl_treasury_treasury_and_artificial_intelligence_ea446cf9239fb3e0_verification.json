@@ -1,21 +1,14 @@
 {
-  "verification_confidence": 2,
-  "verdict": "reject",
-  "issues_found": [
-    "Source is a navigation/repository page (lists links to other documents without substantive original content)",
-    "Per verification rules: navigation pages, listing pages, and similar container pages should be rejected",
-    "event_type is 'unknown' — this is a repository/hub page with no clear primary content type",
-    "No published_at date provided in source metadata",
-    "Source does not contain direct market-moving information or standalone research",
-    "Topic is 'macro catalysts' but this page is too indirect/informational to qualify",
-    "Record correctly notes 'index-page' tag and 'navigation page' as quality tier issues"
-  ],
+  "verification_confidence": 9,
+  "verdict": "accept",
+  "issues_found": [],
   "human_review_required": false,
-  "human_review_reason": "Automated decision is clear-cut: this is a navigation/repository page with no substantive original content, which per rule 5 must be rejected. The generated record correctly identified this as a thin, low-signal source.",
-  "suggested_status": "rejected",
+  "human_review_reason": "",
+  "suggested_status": "accepted",
   "corrected_fields": {
-    "summary": "This page is a Treasury Department hub aggregating information about the agency's AI initiatives, including FinCEN alerts, AI use case inventories, and AI strategy documents. It is not a standalone research document or policy announcement with direct market-moving content.",
-    "why_it_matters": "This page is informational and administrative in nature. It provides access points to Treasury's AI policy framework but does not itself constitute a policy action or data release that would directly impact financial markets.",
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
     "market_structure_context": ""
   }
 }

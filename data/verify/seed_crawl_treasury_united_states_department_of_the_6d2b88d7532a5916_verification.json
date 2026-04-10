@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 4,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "event_type is set to 'unknown' when the correct type is obvious: this is a personnel appointment announcement, which could map to treasury_issuance (as a Treasury communication) or be classified more specifically",
-    "Source is stale at 14 months old, beyond the 90-day threshold, and lacks clear archival value as defined by the rules (no historical policy decision, key research finding, or market-moving content)",
-    "Source quality is low - primarily biographical press release with no specific policy commitments, market structure mechanics, or macro catalyst information",
-    "The source provides no concrete data points, forward guidance, or thresholds relevant to market structure research",
-    "Record correctly identifies the thin nature of the source but the event_type should not remain 'unknown' for a clear personnel announcement"
+    "Source is a homepage/featured_story page type — excluded per verification rules",
+    "Source contains no macro catalysts, economic data, policy decisions, or market-moving content",
+    "event_type is 'unknown' — this should be rejected outright per rules when correct type is obvious or missing",
+    "Record accurately identifies the source as a non-archivable personnel announcement, which is the correct conclusion"
   ],
-  "human_review_required": true,
-  "human_review_reason": "While the summary and key_points are factually accurate against the source, the record has two significant issues: (1) event_type remains 'unknown' when it's clearly a Treasury personnel/appointment announcement that could be classified, and (2) the source lacks archival value for a macro catalyst archive - it's a stale biographical press release with no policy specifics, market-moving data, or market structure content. Human review needed to determine if this has any archival value as background context on Treasury personnel.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "The record has correctly assessed this source as out of scope. Both automated rules and human judgment agree: this is a homepage/featured_story page containing routine personnel announcements with no macro catalyst relevance.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "Could be refined to explicitly state this is a nomination announcement only (not confirmed appointments) and that no policy positions or market structure changes are described in the source",
+    "summary": "Secretary Scott Bessent announced President Trump's intent to nominate Luke Pettit as Assistant Secretary for Financial Institutions and Jason De Sena Trennert as Assistant Secretary for Financial Markets at the U.S. Department of the Treasury. This is a personnel announcement announcing nominations, not a macro catalyst, policy decision, or market-moving release.",
+    "why_it_matters": "This is an administrative personnel announcement, not a macro catalyst. While the nominees' backgrounds suggest potential policy orientations, the source itself contains no current economic analysis, forecasts, or policy statements. It does not constitute actionable macro intelligence.",
     "macro_context": "",
     "market_structure_context": ""
   }

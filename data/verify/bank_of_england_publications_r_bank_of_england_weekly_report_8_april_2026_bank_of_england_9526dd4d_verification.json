@@ -1,14 +1,18 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source content is minimal (261 words) and consists entirely of tabular balance sheet data with no narrative, analysis, or policy signals",
+    "Record accurately captures the thin nature of the source but this thinness limits archival value for research or RAG use cases",
+    "No policy signals, forward guidance, or economic commentary present to capture"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is factually accurate and event_type is correctly identified as balance_sheet_update, but the content is purely mechanical tabular data with zero analytical substance. Human review needed to determine if routine operational disclosures without policy signals meet the archival value threshold for a finance research archive.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "The Bank of England published its weekly balance sheet data for the week ending 8 April 2026, showing reserves balances at £650,510mn, up from £645,085mn the prior week. The report contains routine mechanical data on the Bank's sterling liabilities, sterling assets, foreign currency liabilities, and foreign currency assets with no accompanying commentary or policy signals.",
+    "why_it_matters": "This is the Bank of England's routine weekly balance sheet disclosure providing transparency into BoE operations including reserve levels, repo operations, and asset holdings. The report contains no commentary, analysis, or policy signals—it is mechanical data only. The source is thin on substantive content and would be most useful for tracking operational trends rather than capturing policy thinking.",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The report provides data on the BoE's operational framework including short-term repo operations (£100,301mn), indexed long-term repo (£74,183mn), and the Term Funding Scheme (£41,894mn). These operations inform understanding of BoE liquidity management but carry no policy signal in this purely mechanical release."
   }
 }

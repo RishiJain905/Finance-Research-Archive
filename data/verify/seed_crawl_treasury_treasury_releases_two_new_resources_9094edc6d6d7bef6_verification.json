@@ -2,12 +2,13 @@
   "verification_confidence": 4,
   "verdict": "reject",
   "issues_found": [
-    "Topic mismatch: metadata specifies 'macro catalysts' but source is about AI governance/regulation in financial services, not macro catalysts or market structure",
-    "No market-moving information: source does not discuss interest rates, monetary policy, economic data, or market structure elements",
-    "Source is regulatory guidance on AI risk management frameworks, not relevant to the archive's stated focus areas"
+    "Source is not relevant to market structure or macro catalysts as defined in the verification standards. The content is about AI governance frameworks for financial institutions, not monetary policy, economic data releases, interest rate decisions, Treasury operations, or market structure/operations.",
+    "The SOURCE METADATA incorrectly specifies 'macro catalysts' as TARGET and TOPIC, but the actual content does not qualify under these focus areas.",
+    "market_impact is empty with confidence 0, correctly reflecting that this source has no direct market-moving implications.",
+    "why_it_matters correctly identifies this as 'regulatory/compliance-focused rather than a macro catalyst that would move markets'."
   ],
-  "human_review_required": true,
-  "human_review_reason": "The generated record is factually accurate and properly structured, but the source itself is not relevant to the archive's focus on macro catalysts and market structure. The record correctly identifies this issue in its internal analysis and quality_tier scoring. Despite being a high-quality, authoritative source, the content does not align with the archive's documented scope.",
+  "human_review_required": false,
+  "human_review_reason": "Record accuracy is verifiable from source text; the rejection is based on clear scope mismatch between specified focus areas (macro catalysts, market structure) and actual content (AI governance framework). Human review is not needed to confirm this determination.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
