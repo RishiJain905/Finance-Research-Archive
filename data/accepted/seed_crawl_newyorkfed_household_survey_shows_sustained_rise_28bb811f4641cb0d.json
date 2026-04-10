@@ -1,7 +1,7 @@
 {
   "id": "seed_crawl_newyorkfed_household_survey_shows_sustained_rise_28bb811f4641cb0d",
   "created_at": "2026-04-01T13:46:26.839745+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "economic_commentary",
   "title": "Household Survey Shows Sustained Rise in Reported and Expected Spending Growth",
@@ -79,30 +79,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate and well-sourced, but the topic assignment ('market structure') is misaligned with content type (consumer spending expectations). Human review needed to determine whether this record should be reclassified to 'macro catalysts' or 'economic data', or whether it should be excluded from the archive based on topic mismatch. Age (4+ years) also warrants confirmation of archival intent."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-10T06:41:08.139568+00:00"
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_household_survey_shows_sustained_rise_28bb811f4641cb0d.txt",
   "notes": "Historical record (published 2022-01-24). SOURCE TARGET of 'market structure' appears to be misaligned with content — this is consumer spending and inflation expectations survey data, not market structure content. No market structure or trading operations implications present. Macro catalyst relevance is marginal; this is microeconomic survey data. Consider whether archiving under current topic tags serves the research mission or if reclassification is needed. Lowered confidence slightly due to age (4+ years) and topic mismatch.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 3,
+    "tier": "tier_2",
+    "score": 67.5,
     "reasoning": [
-      "Topic mismatch: SOURCE TARGET 'market structure' but content is consumer spending survey",
-      "Stale data: published 2022-01-24, over 4 years before TODAY (2026-04-01)",
-      "No direct market structure or macro catalyst relevance to financial markets",
-      "Consumer spending expectations data is tangential to core archive focus areas"
+      "quality score: 67.5/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   }
 }
