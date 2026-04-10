@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "source_type incorrectly labeled as 'research_paper' — source is a press release announcing survey results, not a research paper",
+    "event_type 'economic_commentary' is imprecise — survey data releases would be better classified as 'data_release_other'",
+    "SOURCE METADATA topic is 'market structure' but content is macro catalyst data (consumer expectations survey)",
+    "Published 2015-02-09, which is over 11 years before TODAY — substantially exceeds 90-day staleness threshold",
+    "Record correctly acknowledges this as historical baseline but this age limits current market relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record contains accurate factual content from a high-quality Fed source, but there are classification issues (source_type, event_type) and the 11-year age creates uncertainty about archival value. While the data is correctly extracted, the misclassification of source type (press release vs research paper) and event type (commentary vs data release) warrant human review to determine correct taxonomy.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "Note: SOURCE METADATA incorrectly labels topic as 'market structure' when content is consumer expectations survey data (macro catalysts). The source is a press release announcing January 2015 Survey of Consumer Expectations results, not a research paper. Consider correcting source_type to 'press_release' and event_type to 'data_release_other' for more accurate taxonomy."
+  }
+}

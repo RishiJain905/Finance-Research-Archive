@@ -1,21 +1,20 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 4,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation page (source_type correctly identified as 'navigation_page') - per Rule #5 this requires rejection",
-    "No substantive content in source - merely links to resources without actual documents or data",
-    "No published_at date available in source metadata",
-    "event_type correctly set to 'unknown' but should remain rejected due to source type",
-    "No specific auction amounts, rates, debt issuance details, or policy decisions documented",
-    "Source has no archival value - thin, low-signal navigation page that does not contain extractable market information"
+    "Source is a listing_page per metadata classification, violating CORE RULES rule 5",
+    "Source contains only navigation/menu content with no substantive macro catalyst information",
+    "No published_at date provided - cannot assess currency",
+    "Source lacks actual quarterly refunding data, auction results, or policy announcements",
+    "listing_page type should be rejected per verification standards"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record's assessment is accurate and complete. The source is unambiguously a navigation page with no substantive content, meeting multiple rejection criteria under CORE RULES #5 and #6. The LLM correctly identified this as 'not_for_archive'. No human review needed - this is a clear rejection.",
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "This is a navigation/listing page that describes the Treasury Quarterly Refunding process and provides links to related documents, webcasts, and committees. No actual quarterly refunding data, auction results, or policy announcements are present in the source content.",
+    "why_it_matters": "This page is a navigation hub, not an actual source of market-relevant information. It provides access points to quarterly refunding content but contains no specific data, auction results, or policy decisions.",
+    "macro_context": "The quarterly refunding process is a key part of Treasury's debt management operations, involving consultation with TBAC and primary dealers. However, this specific source does not contain actual operational details.",
     "market_structure_context": ""
   }
 }

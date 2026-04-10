@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'research_paper' is misapplied - the source is a press release announcing research, not a research paper itself",
+    "Source body is summary-level content from a press release, not the actual research papers; substantive findings are absent",
+    "Record lacks quantitative data or specific policy recommendations despite claiming to address liquidity regulation, discount window, and MMF reform implications",
+    "No actual numbers, percentages, or statistical findings in source body - important_numbers field correctly empty but summary implies more concrete analysis than available"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "event_type mismatch needs clarification: source is press_release not research_paper. Also need to determine if an announcement-only source with summary-level content has sufficient archival value compared to the actual research papers it references. The record is factually accurate but the source type designation may be incorrect.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve Bank of New York released a three-part Economic Policy Review series in February 2014 examining the stability of funding models used in financial intermediation. The series includes a literature review on bank fragility, case studies of market distress during the crisis, and an analytical framework for evaluating funding models under stress. The research addresses how policy options in liquidity regulation, discount window policies, and money market mutual fund reform may affect financial stability.",
+    "why_it_matters": "This research series provides foundational analysis of how funding models (arrangements for financial intermediation) behave under stress conditions. Understanding these dynamics is relevant to policymakers designing financial stability regulation, particularly regarding liquidity requirements and money market reform. The analytical framework offers a systematic approach to evaluating how different policy choices may affect the resilience of financial intermediaries. Note: This record is based on a press release announcement; the actual research papers contain more detailed findings.",
+    "macro_context": "",
+    "market_structure_context": "Research directly addresses market structure through analysis of funding models, financial intermediary fragility, and crisis-period market disruptions. Examines the role of intermediaries as liquidity providers and factors affecting system stability. Based on a 2014 announcement of a three-part Economic Policy Review series."
+  }
+}

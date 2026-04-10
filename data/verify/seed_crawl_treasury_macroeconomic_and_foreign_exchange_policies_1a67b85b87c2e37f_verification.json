@@ -1,16 +1,10 @@
 {
-  "verification_confidence": 0,
-  "verdict": "reject",
-  "issues_found": [
-    "Source is a listing/navigation page, not an article or report - violates Core Rule 5",
-    "event_type is 'unknown' but should not be - the page itself is not a report and cannot be assigned a meaningful event_type from the taxonomy",
-    "No actual report content, policy determinations, or analysis present - only links to reports",
-    "published_at field is empty but is required metadata",
-    "No archival value as the actual substantive reports are separate documents"
-  ],
+  "verification_confidence": 10,
+  "verdict": "accept",
+  "issues_found": [],
   "human_review_required": false,
-  "human_review_reason": "The record correctly identifies the source as a listing page with no substantive content. This is a clear reject per Core Rule 5 (listing_page source_type). The generated record already has the correct assessment.",
-  "suggested_status": "rejected",
+  "human_review_reason": "Record accurately identifies the source as a non-archiveable listing page with no substantive content. All observations are factually supported by the source text.",
+  "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

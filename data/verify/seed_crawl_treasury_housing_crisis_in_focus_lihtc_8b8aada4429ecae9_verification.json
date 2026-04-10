@@ -1,17 +1,21 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 4,
   "verdict": "review",
   "issues_found": [
-    "event_type is set to 'unknown' when 'blog_post' or 'regulatory_guidance' would be more appropriate given the source is clearly a policy guidance blog post from Treasury",
-    "Topic alignment gap: source target is 'macro catalysts' but the document is administrative guidance on LIHTC program mechanics rather than a market-moving event or data release"
+    "verification_confidence is unset (0) despite llm_review.initial_confidence being 7",
+    "Topic misalignment: SOURCE METADATA specifies 'macro catalysts' but content is administrative housing policy guidance with no financial market impact",
+    "market_impact.confidence is 0 but should reflect the assessment that this has neutral/no market impact",
+    "Record correctly identifies lack of market impact but TARGET/TOPIC metadata creates category confusion",
+    "Source published 2024-12-12 (~16 months old) — historical policy guidance, not a current catalyst",
+    "Source body appears truncated, though sufficient content was available for analysis"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is factually accurate against the source text and the summary correctly captures the content. However, event_type is incorrectly set to 'unknown' when a valid taxonomy value (blog_post) is clearly applicable. Additionally, human should verify whether policy guidance documents on housing program administration meet the archive's relevance threshold for 'macro catalysts' topics.",
+  "human_review_reason": "The record presents a clear conflict between the SOURCE METADATA (which specifies 'macro catalysts' as the target/topic) and the content itself (which is administrative housing policy guidance with no direct financial market implications). While the generated record correctly identifies this mismatch and assesses neutral/no market impact, the fundamental question is whether this source belongs in a finance research archive at all. The quality_tier is correctly set to 'low' with score 3, but the verification_confidence being unset (0) creates an inconsistency. Human review is needed to: (1) confirm whether this document type is appropriate for the archive given the TARGET='macro catalysts' specification, and (2) resolve the internal inconsistencies in the confidence scoring.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "The U.S. Treasury Department published best practices guidance for state allocating agencies on how to discourage owners of Low-Income Housing Tax Credit (LIHTC) properties from using the Qualified Contract provision to exit affordability covenants early. Experts estimate 6,000-10,000 low-income units are lost annually through qualified contracts, with approximately 115,000 total units lost over time. Treasury encourages state agencies to require or incentivize qualified contract waivers as a condition of receiving LIHTC allocations.",
+    "why_it_matters": "This guidance is administrative housing policy for state allocating agencies and has no direct financial market impact. It does not affect interest rates, monetary policy, or financial market operations. The primary audience is state housing finance agencies, not investors or traders. This document should be evaluated for archival value based on its relevance to housing policy research rather than financial market catalysts.",
+    "macro_context": "While housing affordability is a broader macroeconomic concern, this document is administrative guidance on an existing tax credit program. It does not release economic data, announce new policy decisions with market implications, or provide information that would cause markets to reprice risk. Published December 12, 2024, making it a historical policy document (~16 months old at time of assessment).",
     "market_structure_context": ""
   }
 }

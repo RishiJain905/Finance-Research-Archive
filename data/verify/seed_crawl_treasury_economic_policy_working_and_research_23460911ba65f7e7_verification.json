@@ -1,19 +1,21 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Listing page per CORE RULE 5 and RULE 6 - listing pages should be rejected",
-    "Source contains only paper titles and years, no substantive research content",
-    "No publication date provided for the page itself, only for individual papers listed",
-    "Cannot assess macro catalyst relevance without accessing individual papers",
-    "event_type correctly set to 'unknown' but the record is still non-archivable due to source type"
+    "event_type is 'research_paper' but source is a listing page cataloging multiple papers, not a single research paper",
+    "source_type correctly identified as 'listing_page' but event_type classification contradicts this",
+    "No individual paper abstracts, full text, or substantive content to archive",
+    "No publication dates for individual papers provided in source",
+    "Cannot verify any specific claims, findings, or market implications without accessing individual papers",
+    "Source provides only paper titles - too thin to have archival value as a research record",
+    "Historical papers from 2020-2021 may be stale (2026-04-10 TODAY vs. PUBLISHED_AT of 'unknown/empty')"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record is well-constructed and accurately identifies all critical issues. No human judgment needed - the source is a listing page that should be rejected per CORE RULE 5.",
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately identifies this as a listing page with no substantive content, but the event_type is misclassified as 'research_paper' when it should reflect the listing nature. While the record's internal analysis is sound, the fundamental source type (listing_page) and lack of archiveable content mandates rejection per Rule 5 and Rule 6. Individual papers from this series would need to be accessed separately for meaningful archival.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "This is a Treasury Office of Economic Policy listing page cataloging working paper titles from 2020, 2021, and 2024. The page itself provides no abstracts, full text, publication dates, or substantive content. It functions as an index/catalog and is not an archiveable research document. Individual papers must be accessed separately for any meaningful macro catalyst analysis.",
     "macro_context": "",
     "market_structure_context": ""
   }

@@ -1,18 +1,19 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "Source is a press release summarizing a research article rather than the full research paper itself—moderate reduction in archival depth",
-    "Published June 22, 1998—nearly 28 years before TODAY. While the source has historical academic value, it lacks contemporary market relevance and cannot inform current analysis",
-    "SOURCE METADATA lists TARGET/TOPIC as 'market structure' but content is entirely about monetary policy frameworks and inflation targeting theory; generated record correctly retagged as 'macro catalysts'"
+    "Topic mismatch: SOURCE TARGET is 'market structure' but content is about monetary policy theory, inflation targeting trade-offs, and central bank frameworks—NOT market structure or market plumbing",
+    "Age: Published June 22, 1998—over 27 years old. While the paper has historical/educational value, it may not reflect current central bank practice or academic consensus",
+    "market_structure_context field is empty and should remain so—this paper does not address market structure topics",
+    "Quality tier C reflects weak direct market relevance despite high domain trust"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Issues are minor and clearly documented. The record is factually accurate, properly attributed, and appropriately classifies the content. Age and source-type limitations are transparently noted. Auto-route to review_queue is appropriate.",
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-supported, but a topic mismatch exists: the source TARGET is 'market structure' while the actual content addresses monetary policy theory and inflation targeting frameworks. Human review is needed to (1) confirm whether the topic field should be relabeled as 'macro catalysts' and (2) assess whether this 1998 theoretical paper has sufficient archival value given its age and lack of direct market structure relevance.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "Stephen Cecchetti, Director of Research at the New York Fed, published an article in the June 1998 Economic Policy Review arguing that central banks adopting fixed inflation targets risk creating significant variability in output growth. Using data from 1984-95, Cecchetti demonstrates that the output-inflation variability trade-off is extremely steep—a modest decrease in inflation variability causes output to deviate substantially from its optimal path.",
-    "why_it_matters": "This 1998 academic analysis provides theoretical grounding for why flexible inflation targeting frameworks—allowing ranges rather than rigid point targets—became the preferred approach for major central banks. The research quantifies the trade-off costs of prioritizing price stability exclusively, informing subsequent monetary policy framework design. However, as a nearly 28-year-old document predating modern central bank frameworks (such as the Fed's 2012 formal inflation target), it is primarily of historical and academic interest.",
-    "macro_context": "The article provides theoretical framework for understanding monetary policy trade-offs between inflation control and output stability. Cecchetti's analysis was contemporaneous with early adoption of formal inflation targeting by central banks globally, offering critique and guidance for framework design. No specific forward-looking market implications or current policy relevance can be extracted given the source's age.",
+    "summary": "Stephen Cecchetti, Director of Research at the New York Fed, argues in this June 1998 Economic Policy Review article that central banks adopting rigid inflation targets risk creating significant output growth variability. Using 1984-95 data, he demonstrates that the output-inflation variability trade-off is extremely steep, meaning modest decreases in inflation variability cause large deviations in GDP growth from its optimal path. The paper recommends that inflation-targeting central banks adopt range targets rather than point targets to retain flexibility for output stabilization.",
+    "why_it_matters": "This 1998 research provides theoretical foundations for understanding why pure inflation targeting may be suboptimal. It remains relevant to historical debates on monetary policy frameworks, supporting the case for flexible inflation targets or dual mandates over rigid price-level targeting.",
+    "macro_context": "The paper addresses a fundamental tension in monetary policy: the impossibility of simultaneously stabilizing both output and prices at their optimal levels. Central banks must balance the costs of output fluctuations against the costs of price fluctuations, and rigid inflation targeting implicitly shifts weight toward price stability at the expense of output stability.",
     "market_structure_context": ""
   }
 }

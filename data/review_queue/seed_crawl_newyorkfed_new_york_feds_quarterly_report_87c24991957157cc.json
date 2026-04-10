@@ -1,70 +1,91 @@
 {
   "id": "seed_crawl_newyorkfed_new_york_feds_quarterly_report_87c24991957157cc",
-  "created_at": "2026-04-01T06:04:50.212265+00:00",
+  "created_at": "2026-04-10T06:16:19.708835+00:00",
   "status": "review_queue",
-  "topic": "macro catalysts",
+  "topic": "market structure",
   "event_type": "data_release_other",
   "title": "New York Fed's Quarterly Report on Household Debt and Credit Shows Continued Signs of Healing in Consumer Credit Markets",
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/newsevents/news/research/2011/an110815",
+    "domain": "www.newyorkfed.org",
     "published_at": "2011-08-15",
-    "source_type": "press_release",
-    "domain": "www.newyorkfed.org"
+    "source_type": "press_release"
   },
-  "summary": "The New York Fed released its Quarterly Household Debt and Credit Report for Q2 2011, showing continued healing in consumer credit markets. Outstanding consumer debt remained essentially flat, down just $50 billion, suggesting the pace of consumer deleveraging that began in late 2008 has slowed. Delinquent and seriously delinquent balances remained 15 percent below year-ago levels.",
+  "summary": "The New York Fed released its Q2 2011 Household Debt and Credit Report showing continued healing in consumer credit markets, with modest increases in consumer and bank willingness to borrow and lend. Total consumer debt remained essentially flat, down $50 billion, suggesting the pace of deleveraging that began in late 2008 has slowed. Delinquency rates continued to improve, with both delinquent and seriously delinquent balances remaining 15 percent below year-ago levels.",
   "key_points": [
-    "Outstanding consumer debt fell by only $50 billion in Q2 2011, essentially flat from Q1 2011",
-    "Non-real estate consumer indebtedness fell by $10 billion (0.4%) to $2.28 trillion, 9.5% below its Q4 2008 peak",
-    "Credit card limits increased by $60 billion (approximately 2%) for the second consecutive quarter",
-    "Open credit card accounts jumped by 10 million to 389 million total",
-    "Delinquent and seriously delinquent balances remain 15% below year-ago levels",
-    "New foreclosure notations fell 22.8% from Q1 2011; new bankruptcies fell 23.8% from Q2 2010"
+    "Total consumer debt essentially flat, down just $50 billion—effectively a repeat of the previous quarter, suggesting the pace of consumer deleveraging has slowed",
+    "Non-real estate indebtedness fell $10 billion (0.4%) to $2.28 trillion, now 9.5% below its Q4 2008 peak",
+    "Credit card limits increased for the second consecutive quarter by $60 billion (approximately 2%)",
+    "Open credit card accounts jumped by 10 million to 389 million",
+    "New foreclosure notations fell 22.8% from Q1 2011; new bankruptcies fell 23.8% from Q2 2010",
+    "Both delinquent and seriously delinquent balances remain 15 percent below year-ago levels"
   ],
-  "why_it_matters": "This quarterly report provides a macro-level view of U.S. household credit health. The slowing pace of deleveraging suggests consumers may be approaching a floor in debt reduction, which could support future consumer spending. Declining delinquency rates and foreclosures indicate improving credit quality, which matters for bank balance sheets and broader financial stability.",
+  "why_it_matters": "This report provides quarterly insight into U.S. household credit health—a key variable for consumer spending outlook and broader economic recovery. The slowing of deleveraging suggests the consumer deleveraging cycle may be stabilizing, which has implications for economic growth trajectory and credit market conditions. Note: This is a press release summary of the full report, not the detailed data set.",
   "market_impact": {
-    "asset_classes": [
-      "bonds"
-    ],
-    "directional_bias": "neutral",
+    "asset_classes": [],
+    "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The report indicates the consumer deleveraging cycle that began in late 2008 may be reaching an inflection point. With credit card limits expanding and account openings rising, there are early signs of returning credit appetite. However, the report itself does not discuss implications for monetary policy or interest rate path.",
-  "market_structure_context": "",
+  "macro_context": "The report indicates household sector deleveraging has slowed significantly from its peak pace in late 2008, suggesting consumer credit markets are healing. This has implications for consumer spending capacity and broader economic recovery. Andrew Haughwout noted it remains unclear whether this is a permanent or temporary break in the decline of total consumer debt. Source age (2011) limits relevance to current market conditions.",
+  "market_structure_context": "The topic 'market structure' is misaligned with this source. This content covers household debt and credit conditions (macroeconomic consumer credit data) rather than market microstructure, trading venue analysis, market making, or financial market infrastructure.",
   "important_numbers": [
-    "$50 billion (total consumer debt decline in Q2 2011)",
-    "$2.28 trillion (non-real estate consumer indebtedness)",
+    "$50 billion (total consumer debt change)",
+    "$2.28 trillion (non-real estate indebtedness)",
     "9.5% (decline from Q4 2008 peak)",
     "$60 billion (credit card limits increase)",
-    "2% (credit card limits increase rate)",
     "389 million (open credit card accounts)",
     "15% (delinquency decline year-over-year)",
-    "22.8% (new foreclosure notations decline from Q1 2011)",
-    "23.8% (new bankruptcies decline year-over-year)"
+    "22.8% (new foreclosure notation decline quarter-over-quarter)",
+    "23.8% (new bankruptcy decline year-over-year)"
   ],
   "tags": [
     "household-debt",
     "consumer-credit",
     "delinquency",
-    "foreclosures",
-    "credit-cards",
-    "ny-fed",
+    "foreclosure",
+    "deleveraging",
+    "credit-conditions",
+    "new-york-fed",
     "q2-2011"
   ],
   "llm_review": {
-    "initial_confidence": 6,
-    "verification_confidence": 6,
+    "initial_confidence": 3,
+    "verification_confidence": 5,
     "verdict": "review",
     "issues_found": [
-      "Source published August 2011 is over 14 years stale relative to TODAY (2026-04-01); record has historical archival value as post-GFC deleveraging data but limited current relevance",
-      "Metadata TARGET/TOPIC states 'market structure' but source content is macroeconomic household debt data; record correctly reclassifies as 'macro catalysts' which is more accurate"
+      "Source is from August 2011—approximately 14.7 years old—significantly beyond the 90-day threshold with limited archival value for current market analysis",
+      "Topic assignment 'market structure' is misaligned with content; source focuses on household debt and credit conditions (macroeconomic data) rather than market microstructure, trading venues, or financial market infrastructure",
+      "Source is a press release summary rather than the full quarterly report with detailed data; content is thin with no independent analysis beyond a single quote",
+      "market_impact field is empty/unknown with 0 confidence, indicating the source does not discuss market reactions",
+      "The record correctly captures the source content but the topic assignment creates mismatch with the target category"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Record is factually accurate and well-supported, but age (14.5 years) and metadata-topic mismatch warrant review queue placement rather than auto-accept. The record itself shows proper verification discipline by correcting the topic classification."
+    "notes": "Source age (14.7 years) combined with topic misalignment (household credit macro data vs market structure) and thin content (press release summary) creates multiple concerns. While the factual summary is accurate, the record may not serve the intended purpose of market structure research. Human judgment needed to determine if this historical macroeconomic data release has sufficient archival value despite the topic mismatch."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_feds_quarterly_report_87c24991957157cc.txt",
-  "notes": "This source is severely stale (published 2011) and does not discuss market structure in the relevant sense of trading infrastructure, market mechanics, or institutional market operations. The content focuses on household debt levels and consumer credit delinquency trends. The metadata indicates TARGET=micro_structure but the content is macroeconomic credit data. Source type is a press release summarizing the NY Fed's quarterly report. The URL confirms the 2011 publication date. This is useful historical context for understanding post-GFC deleveraging but has limited current applicability for a finance research archive."
+  "notes": "Source is a historical press release (August 2011) summarizing the New York Fed's Quarterly Household Debt and Credit Report for Q2 2011. The content focuses on consumer credit trends, household debt levels, and delinquency metrics. While the topic is tagged as 'market structure,' the content is macroeconomic data about household credit conditions rather than market microstructure or financial market structure. This appears to be misaligned with the stated target. Marked as historical record with reduced confidence per guidance. May have limited utility for current research given the age of the data (15+ years old).",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source is from 2011—significantly aged and not relevant to current market structure or macro catalyst analysis",
+      "Topic assignment ('market structure') misaligned with content which focuses on household credit macro data",
+      "Press release format with limited depth; no analysis or forward-looking commentary beyond brief quote from Andrew Haughwout",
+      "No market impact information provided in source text"
+    ]
+  }
 }

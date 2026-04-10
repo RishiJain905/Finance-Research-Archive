@@ -1,0 +1,92 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_report_shows_466f908bb6e36e6e",
+  "created_at": "2026-04-10T06:13:55.683563+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "economic_commentary",
+  "title": "New York Fed Report Shows Household Debt Rises in Third Quarter",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2013/rp131114",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2013-11-14",
+    "source_type": "press_release"
+  },
+  "summary": "The New York Fed's Household Debt and Credit Report for Q3 2013 showed total household debt rose $127 billion to $11.28 trillion, the largest quarterly increase since Q1 2008. The increase was driven by rises in mortgage balances ($56B), student loans ($33B), auto loans ($31B), and credit card debt ($4B). Senior economist Donghoon Lee noted households appear to have crossed a turning point in the deleveraging cycle. The 90+ day delinquency rate fell to 5.3%, the lowest since Q3 2008.",
+  "key_points": [
+    "Total household indebtedness reached $11.28 trillion in Q3 2013, up $127 billion from Q2 2013",
+    "This was the largest quarterly increase since Q1 2008, suggesting end of deleveraging cycle",
+    "90+ day delinquency rate declined to 5.3%, lowest since Q3 2008",
+    "Student loan delinquency rate increased to 11.8% from 10.9% quarter-over-quarter",
+    "Auto loan balances increased for 10 consecutive quarters, reaching $845 billion",
+    "New foreclosure notations dropped to 168,000, down 70% from Q2 2009 peak of 566,000"
+  ],
+  "why_it_matters": "The report signals a potential turning point in U.S. household deleveraging, with broad-based increases in borrowing across all debt categories. This has implications for consumer spending capacity, financial sector asset quality, and monetary policy normalization timing. Rising student loan delinquency rates indicate structural stress in that sector despite overall improving credit conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 0
+  },
+  "macro_context": "Household debt recovery suggests improving consumer sentiment and spending potential. Total debt remains 11% below the Q3 2008 peak of $12.68 trillion. Rising student loan delinquencies (11.8%) indicate persistent education debt stress. Improving credit quality broadly suggests strengthening household balance sheets.",
+  "market_structure_context": "This source does not address market structure (trading mechanisms, market plumbing, or operational microstructure). It is a household debt and credit trends report from the New York Fed, more appropriately classified under macro catalysts.",
+  "important_numbers": [
+    "$11.28 trillion - total household debt in Q3 2013",
+    "$127 billion - quarterly increase",
+    "5.3% - 90+ day delinquency rate",
+    "$1.03 trillion - student loan balances",
+    "$845 billion - auto loan balances",
+    "$672 billion - credit card balances",
+    "$7.9 trillion - mortgage debt",
+    "11.8% - student loan 90+ day delinquency rate"
+  ],
+  "tags": [
+    "household debt",
+    "consumer credit",
+    "delinquency rates",
+    "mortgage debt",
+    "student loans",
+    "auto loans",
+    "deleveraging",
+    "ny fed"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is from November 2013 (over 12 years old) - significantly outside 90-day recency window, though archival value exception may apply",
+      "Topic mismatch: metadata TARGET is 'market structure' but source is about household debt/consumer credit trends, more appropriately classified as 'macro catalysts' (record correctly noted this)",
+      "market_impact.confidence is set to 0 with directional_bias 'mixed' - no market reaction data exists in source; these fields appear speculative"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is over 12 years old. While it has archival value as historical Federal Reserve research on household deleveraging (a key macro finding), the age and topic mismatch with metadata targeting 'market structure' warrant human confirmation that macro catalysts is the appropriate topic and that archiving a 2013 household debt report has sufficient value for this archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_report_shows_466f908bb6e36e6e.txt",
+  "notes": "Historical source from 2013 - significantly stale. Source discusses household debt and credit trends rather than market structure in the sense of trading mechanisms, market plumbing, or operations. Topic has been corrected to 'macro catalysts' as this is a consumer credit/macro conditions report. Data is now over 12 years old and relevant primarily for historical analysis of U.S. household deleveraging patterns rather than current market considerations.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source is 12+ years old - significantly outside recency threshold",
+      "Topic mismatch between metadata and actual content",
+      "Historical data only - no current market relevance",
+      "Good source integrity and data quality but limited archival value for current research"
+    ]
+  }
+}

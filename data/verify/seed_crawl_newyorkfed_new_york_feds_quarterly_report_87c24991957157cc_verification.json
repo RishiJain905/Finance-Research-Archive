@@ -1,17 +1,20 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "Source published August 2011 is over 14 years stale relative to TODAY (2026-04-01); record has historical archival value as post-GFC deleveraging data but limited current relevance",
-    "Metadata TARGET/TOPIC states 'market structure' but source content is macroeconomic household debt data; record correctly reclassifies as 'macro catalysts' which is more accurate"
+    "Source is from August 2011—approximately 14.7 years old—significantly beyond the 90-day threshold with limited archival value for current market analysis",
+    "Topic assignment 'market structure' is misaligned with content; source focuses on household debt and credit conditions (macroeconomic data) rather than market microstructure, trading venues, or financial market infrastructure",
+    "Source is a press release summary rather than the full quarterly report with detailed data; content is thin with no independent analysis beyond a single quote",
+    "market_impact field is empty/unknown with 0 confidence, indicating the source does not discuss market reactions",
+    "The record correctly captures the source content but the topic assignment creates mismatch with the target category"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Record is factually accurate and well-supported, but age (14.5 years) and metadata-topic mismatch warrant review queue placement rather than auto-accept. The record itself shows proper verification discipline by correcting the topic classification.",
+  "human_review_required": true,
+  "human_review_reason": "Source age (14.7 years) combined with topic misalignment (household credit macro data vs market structure) and thin content (press release summary) creates multiple concerns. While the factual summary is accurate, the record may not serve the intended purpose of market structure research. Human judgment needed to determine if this historical macroeconomic data release has sufficient archival value despite the topic mismatch.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "why_it_matters": "This report provides quarterly insight into U.S. household credit health—a key variable for consumer spending outlook and broader economic recovery. The slowing of deleveraging suggests the consumer deleveraging cycle may be stabilizing, which has implications for economic growth trajectory and credit market conditions. Note: This is a press release summary of the full report, not the detailed data set.",
+    "macro_context": "The report indicates household sector deleveraging has slowed significantly from its peak pace in late 2008, suggesting consumer credit markets are healing. This has implications for consumer spending capacity and broader economic recovery. Andrew Haughwout noted it remains unclear whether this is a permanent or temporary break in the decline of total consumer debt. Source age (2011) limits relevance to current market conditions.",
+    "market_structure_context": "The topic 'market structure' is misaligned with this source. This content covers household debt and credit conditions (macroeconomic consumer credit data) rather than market microstructure, trading venue analysis, market making, or financial market infrastructure."
   }
 }

@@ -1,20 +1,18 @@
 {
-  "verification_confidence": 2,
-  "verdict": "reject",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "Topic mismatch: Source content is about household debt/consumer credit trends, not market structure (trading mechanisms, market making, clearing/settlement) or macro catalysts (policy decisions, economic releases that move markets)",
-    "event_type is empty/missing - this is a data release (Quarterly Report on Household Debt and Credit) which should be classified as 'data_release_other'",
-    "Source is severely outdated: published 2012-05-31, nearly 14 years prior to TODAY (2026-04-01)",
-    "No archival value for specified collection scope: content discusses historical household debt snapshot with no discussion of market structure or macro catalyst implications",
-    "Metadata TARGET 'market structure' appears to be an error; source does not address market structure topics"
+    "Topic metadata claims 'market structure' but source content is about household debt/consumer credit trends, not market structure (trading mechanisms, market plumbing, operations)",
+    "Source is from 2012 (approximately 14 years old), far exceeding the 90-day threshold",
+    "Event type 'data_release_other' is technically valid but borderline given archive focus on market structure and macro catalysts"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record correctly identifies the fundamental issues with this source for the archive's collection mandate. The content is factually accurate but entirely about household debt trends rather than market structure or macro catalysts. The event_type field is empty, which violates the requirement that it be set. Human review confirms the reject decision.",
-  "suggested_status": "rejected",
+  "human_review_reason": "Source content is factually accurate and well-parsed, but has significant relevance concerns: (1) Topic classification mismatch between metadata ('market structure') and actual content (household debt/consumer credit), (2) Age of 14 years makes it a borderline candidate for archival value assessment. Human decision needed on whether consumer credit/household debt data qualifies under the archive's scope and whether historical data from 2012 has sufficient archival value despite age.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The NY Fed's Q1 2012 Quarterly Report on Household Debt and Credit reported student loan debt reached $904 billion, surpassing credit card debt as the second-largest form of consumer debt. The report documented ongoing consumer deleveraging with total household indebtedness declining to $11.44 trillion. Student loan 90+ day delinquency rates stood at 8.69%, higher than mortgages, auto loans, and HELOCs.",
-    "why_it_matters": "This source is a historical household debt data release from 2012. While it documents important trends in consumer credit and deleveraging, it does not address market structure (trading venue operations, market making, order flow, clearing/settlement) or macro catalysts (policy decisions, economic data releases that move markets). The data is 14 years stale and has no actionable relevance for current market structure or macro catalyst research.",
-    "macro_context": "This Q1 2012 report captures the post-financial crisis consumer deleveraging period. Student loan debt was the only debt category growing since the household debt peak in Q3 2008, while mortgages and credit cards were declining. The 90+ day student loan delinquency rate of 8.69% exceeded other debt categories. The data predates major student loan policy changes and the pandemic period.",
+    "summary": "",
+    "why_it_matters": "This quarterly data release documents household deleveraging trends following the 2008 financial crisis. Student loan debt was the sole category growing while other consumer debt categories declined, indicating structural shifts in household balance sheets. Note: The archive scope question here is whether household debt/consumer credit data falls under 'market structure' as defined (trading mechanisms, market operations, plumbing) or represents a separate category.",
+    "macro_context": "Historical household debt data from Q1 2012 showing consumer deleveraging trends during the post-2008 recovery period. Student loan debt was uniquely growing while other debt categories (mortgages, credit cards) were contracting since the Q3 2008 peak. The 90+ day delinquency rate for student loans (8.69%) was higher than mortgages, auto loans, and HELOCs.",
     "market_structure_context": ""
   }
 }

@@ -1,19 +1,20 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "Source is 8 years old (2018-03-30), but per rule 7 it may be accepted if it has clear archival value as historical research",
-    "Topic alignment with TARGET 'market structure' is indirect—article is historical legislative analysis of Fed emergency lending authority rather than direct market structure/market plumbing analysis",
-    "The generated record's summary, key_points, and why_it_matters are factually accurate and well-supported by the source text",
-    "event_type 'research_paper' is valid and appropriate for this content"
+    "Source is a press release announcing a research article, not the research article itself — content is thin",
+    "event_type set to 'research_paper' but source is a press release; 'blog_post' or 'economic_commentary' would be more accurate for this source type",
+    "Published 2018 — significantly older than 90 days, though historical legislative analysis may have archival value",
+    "Summary and key_points are factually consistent with the press release but reflect minimal substantive content",
+    "No current market structure data, balance sheet information, or policy signals present"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source is borderline acceptable. It is factually accurate and from a high-trust domain (ny.frb.org), but its age (8 years) and indirect relevance to 'market structure' warrant human judgment on whether it has sufficient archival value to justify inclusion. The article discusses the Fed's emergency liquidity framework, which does touch on financial system infrastructure, but from a purely historical/legislative perspective with no current market implications.",
+  "human_review_reason": "The source is a thin press release rather than the research paper it announces. While the content is factually accurate and the topic (Section 13(3) legislative history) has archival value for understanding Fed emergency lending authority, the source provides no substantive research findings. The event_type classification is also imprecise. Human review needed to determine if thin historical announcements have sufficient archival value for this archive's mandate.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "Understanding the historical legislative intent behind Section 13(3) provides context for debates about the Fed's emergency lending powers used during the 2008 financial crisis and ongoing discussions about central bank crisis-response frameworks.",
-    "macro_context": "Section 13(3) was originally added in 1932 during the Great Depression and became the legal basis for the Fed's unprecedented emergency lending to nonbank institutions during the 2008 financial crisis. This historical research illuminates the original Congressional intent behind the provision.",
-    "market_structure_context": "The article examines the legislative origins of the Fed's emergency lending authority—a key component of financial system infrastructure. While the analysis is historical rather than operational, it provides foundational context for understanding the Fed's role as an emergency liquidity provider to the broader financial system."
+    "summary": "The New York Fed released a press release announcing a research article by Parinitha Sastry examining the political and legislative history of Section 13(3) of the Federal Reserve Act, which was added in 1932 during the Great Depression. The article explores Congress's intent in granting the Federal Reserve expanded emergency lending authority to include individuals, partnerships, and corporations. The author concludes that the original framers intended to enable the Fed to lend directly to the real economy during emergencies.",
+    "why_it_matters": "Section 13(3) is the statutory authority the Federal Reserve used during the 2008 financial crisis to establish emergency lending facilities (such as TALF and Maiden Lane transactions). Understanding the original legislative intent behind this authority provides context for current debates about the Fed's emergency lending powers and their appropriate scope.",
+    "macro_context": "",
+    "market_structure_context": "While Section 13(3) has significant market structure implications as the authority enabling Fed emergency lending to nonbank institutions during crises, this source is a press release announcing a historical legislative analysis rather than a discussion of current market structure or operations. It does not address the Fed's current balance sheet, operating framework, or emergency lending programs. The source contains no substantive research findings—only an announcement summary."
   }
 }

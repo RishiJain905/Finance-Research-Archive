@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is severely stale at 11+ years old; superseded by subsequent New York Fed household debt reports",
+    "market_impact.confidence is set to 0, which appears to be an incomplete/null error rather than a proper confidence assessment",
+    "asset_classes lists 'bonds' but the source does not discuss bond market implications—relationship to fixed income is indirect",
+    "topic is set to 'macro catalysts' but source metadata TARGET is 'market structure'; while macro catalysts is a valid scope, the classification could be tighter",
+    "Rule 7 exception for archival value applies but is borderline—the finding (end of deleveraging) is historically notable but the data has been updated in later quarterly reports"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-sourced, but requires human judgment on whether a 2014 baseline household debt report has sufficient archival value for a market structure/macro catalyst archive given its age and the availability of subsequent updated reports. Also needs clarification on market_impact confidence field (currently 0, appears incomplete).",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The report indicates consumer credit expansion with declining delinquency rates, suggesting households were managing debt responsibly as the economy recovered in late 2014. Rising auto and student loan balances reflected both demand and potential leverage in those sectors. This data was contemporaneous with ongoing Fed QE and near-zero rate policy.",
+    "market_structure_context": "While not directly addressing market structure, household debt trends inform credit market conditions affecting mortgage-backed securities, consumer ABS, and broader financial stability assessments."
+  }
+}

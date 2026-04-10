@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_financial_stability_oversight_council_300c471fb877bec2",
-  "created_at": "2026-04-01T03:04:18.429655+00:00",
+  "created_at": "2026-04-10T06:01:14.739126+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -10,49 +10,44 @@
     "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/fsoc",
     "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "homepage"
   },
-  "summary": "This is a static institutional overview page for the Financial Stability Oversight Council (FSOC), describing its broad mandate to monitor U.S. financial stability risks. The page provides no specific data, events, or actionable information—it merely summarizes FSOC's general functions, composition (10 voting and 5 nonvoting members), and the types of risks it monitors in annual reports. No publication date is provided for the content itself.",
+  "summary": "This is an institutional overview page for the Financial Stability Oversight Council (FSOC) describing its general mandate under the Dodd-Frank Act. The page outlines FSOC's composition, responsibilities, and areas of monitoring, but contains no specific current analysis, data, or publication date. No specific financial stability risks or vulnerabilities are quantified or dated in this source.",
   "key_points": [
     "FSOC was established in 2010 by the Dodd-Frank Wall Street Reform and Consumer Protection Act",
     "The Council is chaired by the Secretary of the Treasury and consists of 10 voting members and 5 nonvoting members",
-    "FSOC is charged with identifying risks to financial stability, promoting market discipline, and responding to emerging threats",
-    "Under Secretary Bessent's leadership, the Council is incorporating sustainable long-term economic growth and economic security into its policy analysis",
-    "Annual reports outline potential threats including: real estate and credit market risks, institutional risks from large bank holding companies and investment funds, Treasury market structure risks, and cybersecurity risks",
-    "The page is an institutional description with no specific data, publication dates, or new developments"
+    "FSOC's statutory charges include identifying risks to U.S. financial stability, promoting market discipline, and responding to emerging threats",
+    "Annual reports address potential threats in real estate, credit markets, institutional risks from large bank holding companies, Treasury market structure, and cybersecurity",
+    "Under Secretary Bessent's leadership, the Council is incorporating sustainable long-term economic growth into financial stability analysis",
+    "No specific publication date, report date, or current risk assessments are provided on this overview page"
   ],
-  "why_it_matters": "This source provides no actionable market information. It is a static institutional landing page that merely describes FSOC's general mandate and membership composition. It does not contain any specific policy decisions, data releases, meeting outcomes, or risk assessments that would be relevant for market analysis or trading decisions.",
+  "why_it_matters": "This page serves as an entry point to FSOC but provides no actionable intelligence. The actual value would be in specific FSOC annual reports or meeting minutes, not this static institutional description.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The page references that FSOC monitors 'risks related to the structure of Treasury markets and other financial markets' as part of its annual reporting function, but provides no specific details or current assessments.",
-  "important_numbers": [
-    "10 voting members",
-    "5 nonvoting members",
-    "2010 (year established)"
-  ],
+  "market_structure_context": "",
+  "important_numbers": [],
   "tags": [
     "fsoc",
     "financial-stability",
-    "treasury",
     "dodd-frank",
-    "institutional-overview",
-    "risk-monitoring"
+    "treasury",
+    "risk-monitoring",
+    "regulatory-council"
   ],
   "llm_review": {
     "initial_confidence": 2,
     "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a static institutional landing page with no publication date - content age is unverifiable",
-      "event_type is 'unknown' when 'financial_stability_report' would be more appropriate, but the page itself is just a generic description rather than an actual report",
-      "No specific data, policy decisions, or actionable market information in the source",
-      "Source is effectively a container/listing page describing FSOC at a high level - does not contain an actual report or meeting outcome",
-      "published_at field is blank, violating the requirement for source attribution completeness",
-      "Source is too thin to have archival value for market structure or macro catalyst analysis"
+      "Source is explicitly classified as 'homepage' in metadata - violates CORE RULE 5 (reject homepage, navigation_page, listing_page, search_page)",
+      "No publication date (published_at is empty) - cannot assess recency or staleness",
+      "No specific current analysis, data, or actionable research content - just static institutional description",
+      "event_type set to 'unknown' - appropriate but further confirms this is not a policy/event document",
+      "Contains only general mandate description without any specific financial stability risks or vulnerabilities"
     ]
   },
   "human_review": {
@@ -69,17 +64,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_financial_stability_oversight_council_300c471fb877bec2.txt",
-  "notes": "Low-value source. This is a static institutional description page that provides no specific data, events, or actionable market information. The content describes FSOC's general functions at a high level but contains nothing that would inform trading decisions or macro analysis. Published_at is missing, making it impossible to assess recency. Recommend capturing specific FSOC annual reports or meeting announcements instead of this generic landing page.",
+  "notes": "This is a static institutional landing page for FSOC, not an archiveable research document. It describes FSOC's general mandate and membership but contains no specific current analysis, publication dates, or data. Per CORE RULE 6, homepage/navigation pages are non-archiveable. Recommend identifying actual FSOC annual reports or specific meeting announcements for proper archival.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 2,
+    "tier": "non-archivable",
+    "score": 0,
     "reasoning": [
-      "Static institutional landing page with no publication date",
-      "No specific data, events, or policy signals",
-      "Discovery method suggests broad crawl rather than targeted capture",
-      "Contains only generic descriptions of FSOC's mandate"
+      "Source is a static institutional homepage describing FSOC's general mandate",
+      "No publication date provided - cannot assess recency",
+      "Contains no specific data, numbers, or current risk assessments",
+      "Classified as non-archiveable per CORE RULE 6 (homepage/navigation page)"
     ]
   }
 }

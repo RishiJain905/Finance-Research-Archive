@@ -1,18 +1,19 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "Source is a press release summarizing a research paper, not the full paper itself - 'event_type' as 'research_paper' and language calling it 'research paper' in summary is slightly misleading",
-    "Source is 27 years old (1999) - while New York Fed research has archival value, marginal relevance to current 'market structure' focus as defined in archive scope (does not address trading infrastructure, settlement, or market operations)",
-    "Record quality tier rated 'low' with score of 3 - suggests limited current utility"
+    "Source is a press release summary, not the actual research paper - event_type 'research_paper' is technically misleading",
+    "Source is 27 years old with specific historical data (1998 market conditions) that does not reflect current mortgage market structure",
+    "Content is thin - only a press release synopsis without full research methodology or data",
+    "Specific numbers cited (83% concentration, 7% threshold, 2-5 year seasoning) are tied to 1998 market conditions and largely outdated"
   ],
   "human_review_required": true,
-  "human_review_reason": "While the record is factually accurate and properly attributed, the source is a 27-year-old press release with marginal relevance to the archive's market structure focus. Human review needed to assess whether historical mortgage market research has sufficient archival value given the tangential topic fit.",
+  "human_review_reason": "Record is factually accurate against source but has multiple quality concerns: (1) event_type misrepresents the actual source type, (2) source is a press release summary rather than full research, (3) age of 27 years with historically-specific data limits current applicability. However, the market structure mechanism described (coupon concentration creating refinancing waves) may retain conceptual value for understanding MBS prepayment dynamics. Human decision needed on archival utility vs. recency.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "This New York Fed Current Issues in Economics and Finance article (March 1999 press release) examines why mortgage refinancing activity surged in 1998, finding that the concentration of outstanding mortgages in the 7.25-8.75% coupon range created a large refinancing wave when market rates dropped toward 7%. The authors identify two additional factors: low unemployment boosting borrower creditworthiness and mortgage 'seasoning' (2-5 year old loans being most likely to refinance).",
-    "why_it_matters": "Understanding the concentration of mortgage coupons helps explain refinancing sensitivity to rate changes. This research documents how a clustered distribution of outstanding loans can create outsized refinancing waves when rates cross threshold levels, relevant to MBS prepayments and mortgage-backed securities valuation.",
-    "macro_context": "",
-    "market_structure_context": "This research examines mortgage market structure through the lens of coupon distribution and refinancing behavior, which affects MBS prepayment risk and mortgage-backed securities valuation. However, it does not address trading infrastructure, settlement, or market operations."
+    "summary": "",
+    "why_it_matters": "This 1999 New York Fed research note documents how concentration of mortgage coupons in a narrow rate band can create sudden refinancing waves when rates cross a threshold. The mechanism remains conceptually relevant for understanding MBS prepayment risk and mortgage market structure, though specific thresholds and numbers reflect 1998 market conditions and predate modern fintech platforms and post-crisis securitization changes.",
+    "macro_context": "Historical analysis from the pre-crisis era documenting mortgage refinancing dynamics during the 1998 period of falling rates. While the specific 7% threshold and 1998 data are dated, the underlying relationship between coupon concentration and refinancing sensitivity remains relevant to understanding mortgage market structure.",
+    "market_structure_context": "Documents the structural feature of mortgage markets where concentrated coupon rates create refinancing 'waves' when interest rate thresholds are crossed. Affects prepayment speeds and duration of mortgage-backed securities. Key factors identified: unemployment rate (creditworthiness indicator) and loan seasoning. Note that modern mortgage markets have evolved significantly since 1999 with changes in securitization, fintech platforms, and post-crisis regulatory changes."
   }
 }

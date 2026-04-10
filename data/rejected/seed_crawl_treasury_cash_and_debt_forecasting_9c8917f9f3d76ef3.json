@@ -1,80 +1,68 @@
 {
   "id": "seed_crawl_treasury_cash_and_debt_forecasting_9c8917f9f3d76ef3",
-  "created_at": "2026-04-01T03:06:45.830274+00:00",
+  "created_at": "2026-04-10T06:08:46.342911+00:00",
   "status": "rejected",
-  "topic": "market structure",
+  "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Cash and Debt Forecasting",
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/cash-and-debt-forecasting",
-    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "navigation_page"
+    "source_type": "seed_crawl",
+    "domain": "home.treasury.gov"
   },
-  "summary": "This is a Treasury.gov landing page that describes the existence and release schedules of three Treasury reporting mechanisms: the Daily Treasury Statement (DTS), the Monthly Treasury Statement of Receipts and Outlays (MTS), and the Monthly Statement of the Public Debt (MSPD). No specific data, forecasts, or policy decisions are contained in this page.",
+  "summary": "This page is a navigational/informational overview from Treasury.gov describing the three main Treasury reporting mechanisms: the Daily Treasury Statement (DTS), the Monthly Treasury Statement of Receipts and Outlays (MTS), and the Monthly Statement of the Public Debt (MSPD). It provides no current data, forecasts, or market-moving information. This is a procedural reference page, not an archiveable research document or data release.",
   "key_points": [
     "The Daily Treasury Statement (DTS) summarizes Treasury cash and debt operations and is available by 4:00 p.m. the following business day",
     "Treasury's operating cash is maintained at the Federal Reserve Bank of New York and in Tax and Loan accounts at commercial banks",
-    "The Monthly Treasury Statement (MTS) is normally released on the 8th workday of the month following the reporting month",
-    "The Monthly Statement of the Public Debt (MSPD) is published on the fourth business day of each month",
-    "The MSPD provides data on the status of government borrowing including outstanding Treasury securities and statutory debt limit information"
+    "The Monthly Treasury Statement (MTS) is released on the 8th workday of the month following the reporting month",
+    "The Monthly Statement of the Public Debt (MSPD) is published on the fourth business day of each month and includes five tables on outstanding Treasury securities and debt limit status"
   ],
-  "why_it_matters": "This page describes Treasury reporting infrastructure but contains no actionable data. It is a navigation/description page for understanding what Treasury reports exist and when they are released, rather than the reports themselves. It has no direct market-moving information.",
+  "why_it_matters": "This page serves as a reference guide for locating Treasury fiscal data but contains no specific forecasts, current cash position data, or debt figures. It does not provide actionable macro catalyst information and has no archival value as standalone content.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The page describes Treasury cash management operations and reporting structure, including where Treasury maintains operating cash (FRBNY account and Tax and Loan accounts at commercial banks). This represents institutional market plumbing information but the page itself does not contain specific operational data.",
+  "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "treasury-operations",
-    "daily-treasury-statement",
-    "monthly-treasury-statement",
-    "debt-reporting",
-    "fiscal-service",
-    "treasury-cash"
+    "treasury",
+    "fiscal-operations",
+    "reporting-schedule",
+    "debt-data"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/landing page (home.treasury.gov/policy-issues/...) - Core Rule 5 requires rejection of navigation pages",
-      "Source contains no specific data, forecasts, or policy decisions",
-      "No published_at date available to assess recency",
-      "event_type set to 'unknown' - correct for this source type, but confirms it lacks the characteristics of any valid event taxonomy",
-      "Source has no direct market-moving information or macro catalyst content",
-      "Does not qualify as a research paper, economic commentary, or data release"
+      "Source is a navigational/informational landing page, not a standalone article or research document",
+      "Contains no actual data, forecasts, forecasts, or market-moving information - only describes the existence and release schedules of Treasury reports",
+      "No published_at date to assess recency",
+      "event_type set to 'unknown' - appropriate given source is not a valid taxonomy type (not a data release, statement, speech, or research paper)",
+      "Record accurately identifies this as low-value for macro catalyst tracking but suggested_status 'review_queue' is inconsistent with clear rejection criteria",
+      "Source is functionally a container page describing reporting mechanisms rather than providing archiveable content"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "container_page"
-  },
-  "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "notes": "The record correctly assesses this as a low-value source and identifies it as a navigation page, but suggested_status 'review_queue' conflicts with the stated rule that 'If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page — reject.' Human should confirm rejection and consider adjusting the auto-routing logic to classify treasury.gov policy landing pages as container pages."
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_cash_and_debt_forecasting_9c8917f9f3d76ef3.txt",
-  "notes": "This source is a Treasury.gov landing/navigation page describing Treasury reporting mechanisms. It does not contain actual data, analysis, or macro catalysts. Per Core Rule 6, navigation pages should be treated as non-archiveable. The page describes release schedules and report purposes but has no specific numbers, forecasts, or actionable content. Low quality source for research purposes.",
+  "notes": "Low-value source for research archive. This is a procedural overview page that describes the existence and release schedule of Treasury statements rather than providing any actual data, forecasts, or analysis. No specific numbers or policy signals present. Source type 'seed_crawl' indicates this was crawled during discovery but represents a navigation page rather than archiveable content.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Navigation page with no substantive content",
-      "No specific data or analysis",
-      "No published date to assess recency",
-      "Does not qualify as macro catalyst or meaningful market structure content"
+      "Navigational page with no data content",
+      "No publication date to assess recency",
+      "Describes reporting mechanisms but contains no actual reports or figures"
     ]
   }
 }

@@ -1,16 +1,13 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Source content is high-quality and factually accurate against the source text",
-    "Summary and key_points correctly represent the source content with appropriate data points",
-    "However, source topic mismatch: metadata tags 'macro catalysts' but content is long-term demographic/social research about intergenerational well-being, not near-term market-moving catalysts or market structure analysis",
-    "Source discusses labor markets, wages, housing costs, and wealth trends from a social policy perspective, not from a financial markets/trading perspective",
-    "No forward-looking market signals, policy surprises, or trading-relevant information present",
-    "The source has clear archival value as authoritative government demographic research, but limited utility for a finance archive focused on market structure/macro catalysts"
+    "Topic mismatch: source covers intergenerational economic well-being (labor force participation, earnings by education/gender, housing costs, wealth trends), which does not align with TARGET of 'macro catalysts' or 'market structure'",
+    "Source is not a market-moving catalyst; it discusses long-term secular demographic and labor economics trends relevant to fiscal policy, not near-term market drivers",
+    "The generated record accurately reflects the source content and appropriately notes this is out-of-scope, but does not provide a clear suggested_status recommendation"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and well-constructed, but there is a fundamental topic mismatch. The source metadata tags it as 'macro catalysts' but the content is social/demographic research with no trading-relevant signals. Human judgment needed to decide if this archive should accept long-term demographic research that discusses labor markets and wages, even when it lacks direct market-moving relevance.",
+  "human_review_reason": "The record is factually accurate and well-structured, but involves a judgment call on archival value. The content is substantive Treasury research from a high-trust domain, is factually correct, and has clear informational value for understanding long-term demographic trends. However, it explicitly falls outside the specified scope of 'macro catalysts' and 'market structure.' While the record correctly identifies this mismatch, the final disposition (reject vs. accept as archival but out-of-scope) requires human judgment on whether this archive should include content outside its primary scope.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",

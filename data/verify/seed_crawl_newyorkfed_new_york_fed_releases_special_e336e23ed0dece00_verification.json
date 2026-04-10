@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 9,
   "verdict": "reject",
   "issues_found": [
-    "Source content does not align with archive focus on market structure or macro catalysts - it concerns urban economics, housing policy, and NYC post-pandemic recovery research papers",
-    "event_type 'research_paper' is incorrect - the source is a press release announcing research papers, not a research paper itself",
-    "Source metadata TARGET lists 'market structure' but actual content is about urban planning and regional economic development",
-    "Source age (October 2023) exceeds 90 days with no clear archival value for market structure or macro catalyst research",
-    "The record correctly identifies the topic mismatch and recommends exclusion, but mislabels event_type as 'research_paper'"
+    "TOPIC MISMATCH: Source content is urban economics/city planning research (post-pandemic work trends, housing policy, racial equity planning in NYC) but target topic is 'market structure'. The source contains no information about financial market structure, market microstructure, trading operations, settlement, or market mechanics.",
+    "OUT OF SCOPE: This source has no relevance to macro catalysts or financial market structure as defined in the core rules. It is a regional urban economics publication.",
+    "ARCHIVAL VALUE INSUFFICIENT: While factually accurate and from a high-trust domain (nyfed.org), the content does not align with the archive's stated target topics of market structure or macro catalysts."
   ],
   "human_review_required": false,
-  "human_review_reason": "Record is internally consistent in identifying source as out-of-scope, but event_type is incorrectly labeled. Auto-rejection is appropriate given clear topic mismatch.",
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "The Federal Reserve Bank of New York released a special issue of the Economic Policy Review featuring three research papers on New York City's post-pandemic recovery, covering remote work trends, office-to-housing conversions, and racial equity planning. This source concerns urban economics and housing policy rather than financial market structure or macro catalysts.",
-    "why_it_matters": "This source does not address financial market structure (trading operations, market microstructure) or macro catalysts (monetary policy decisions, rate changes, economic data releases). It discusses urban planning research papers on NYC's economic recovery.",
+    "summary": "The Federal Reserve Bank of New York released a special issue of the Economic Policy Review on October 11, 2023, featuring three academic papers from a March 2022 hybrid event titled 'The Future of New York City: Charting an Equitable Recovery for All.' The papers address urban economics topics including post-pandemic remote work trends and their effects on cities, office space demand, housing flexibility and conversions, and racial equity planning.",
+    "why_it_matters": "This source is a research release focused on urban economics and city planning policy, not financial market structure or macro catalysts. The source does not discuss market plumbing, trading operations, interest rate policy, or economic indicators that would impact financial markets. It is relevant only to those studying urban economics or regional New York City economic development.",
+    "macro_context": "",
     "market_structure_context": ""
   }
 }

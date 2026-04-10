@@ -1,9 +1,9 @@
 {
   "id": "seed_crawl_federalreserve_principles_for_reducing_the_size_6f14b3085d92c156",
-  "created_at": "2026-04-01T09:11:58.327043+00:00",
+  "created_at": "2026-04-10T06:26:55.514900+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
-  "event_type": "balance_sheet_update",
+  "event_type": "fomc_statement",
   "title": "Principles for Reducing the Size of the Federal Reserve's Balance Sheet",
   "source": {
     "name": "Federal Reserve",
@@ -12,52 +12,50 @@
     "published_at": "2022-01-26",
     "source_type": "press_release"
   },
-  "summary": "The Federal Open Market Committee released principles for significantly reducing the Federal Reserve's balance sheet (QT), with all participants agreeing that the target range for the federal funds rate remains the primary policy adjustment tool and that balance sheet reduction would commence only after the process of raising rates has begun. The Committee intends to reduce holdings primarily by adjusting reinvestment of principal payments received from securities in the System Open Market Account (SOMA) and ultimately intends to hold primarily Treasury securities in the SOMA.",
+  "summary": "The Federal Open Market Committee on January 26, 2022 released principles for significantly reducing the Federal Reserve's balance sheet, agreeing unanimously on the planned approach. The Committee stated that the federal funds rate would remain its primary policy tool and that balance sheet reduction would begin after the process of raising interest rates had started.",
   "key_points": [
-    "All FOMC participants agreed on the principles for reducing the balance sheet; vote tally not specified",
-    "Target range for federal funds rate remains the PRIMARY means of adjusting monetary policy stance",
-    "Balance sheet reduction will commence AFTER the process of increasing the target range has begun",
-    "Reduction will occur by adjusting the amounts of principal payments reinvested from SOMA securities holdings",
-    "Committee intends to maintain securities holdings in amounts needed to implement policy in an 'ample reserves regime'",
-    "In the longer run, Committee intends to hold primarily Treasury securities in SOMA to minimize credit allocation effects",
-    "Committee is prepared to adjust approach details in light of economic and financial developments"
+    "All FOMC participants agreed on the principles for reducing the balance sheet size",
+    "The federal funds rate target range is the Committee's primary means of adjusting monetary policy stance",
+    "Balance sheet reduction is expected to commence after the process of raising the target range has begun",
+    "Reduction will occur by adjusting the amounts reinvested of principal payments from securities held in SOMA",
+    "The Committee intends to maintain securities holdings in amounts needed to implement policy efficiently in its ample reserves regime",
+    "In the longer run, the Committee intends to hold primarily Treasury securities to minimize effect on credit allocation across sectors"
   ],
-  "why_it_matters": "This document established the FOMC's formal framework for Quantitative Tightening (QT), providing markets with predictable guidance on how the Fed would reduce its $8-9 trillion balance sheet. It assured markets that rate hikes would precede balance sheet runoff and that the Fed would operate in an 'ample reserves' framework, reducing uncertainty about the pace and mechanics of normalization. This was a key communication for bond market participants, money markets, and any strategy dependent on reserve availability.",
+  "why_it_matters": "This statement provided forward guidance on the Fed's approach to Quantitative Tightening (QT), informing markets how the central bank would reduce its balance sheet after years of asset purchases. It established that rate hikes would precede balance sheet runoff, giving investors a timeline framework for policy normalization.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "volatility"
+      "equities"
     ],
     "directional_bias": "risk_off",
-    "confidence": 0
+    "confidence": 5
   },
-  "macro_context": "This document represents the Fed's pre-communication of QT principles ahead of the actual balance sheet reduction that began in June 2022. The sequencing commitment—rates first, then balance sheet runoff—provided a framework for markets to anticipate the dual tightening path. The emphasis on maintaining an ample reserves regime indicated the Fed would be cautious about allowing reserve scarcity that could disrupt money markets.",
-  "market_structure_context": "The document references the System Open Market Account (SOMA) as the vehicle for holding and reducing securities. The 'ample reserves regime' language indicates the Fed's intention to maintain reserves above the minimum needed for smooth operations. The longer-run intent to hold primarily Treasuries (vs. MBS) addresses how Fed holdings affect credit allocation across sectors of the economy.",
+  "macro_context": "This document established the framework for the Fed's balance sheet reduction that followed the 2022 rate hiking cycle. It signaled the transition from the pandemic-era monetary easing to tighter policy through multiple channels.",
+  "market_structure_context": "The document outlined that the Fed would reduce holdings by not reinvesting principal payments received from securities in SOMA, maintaining primarily Treasury securities in the longer run. This affects Treasury market supply dynamics and the composition of the Fed's portfolio.",
   "important_numbers": [],
   "tags": [
-    "federal-reserve",
-    "balance-sheet",
-    "quantitative-tightening",
+    "federal reserve",
+    "balance sheet",
+    "quantitative tightening",
     "qt",
-    "soma",
     "fomc",
-    "monetary-policy",
-    "ample-reserves"
+    "soma",
+    "monetary policy",
+    "tightening"
   ],
   "llm_review": {
-    "initial_confidence": 7,
-    "verification_confidence": 0,
-    "verdict": "pending",
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
     "issues_found": [
-      "Source dated January 26, 2022 — approximately 4+ years old relative to TODAY (2026-04-01). Marked as historical record; confidence lowered accordingly.",
-      "No specific numbers provided (no pace of reduction, no duration, no dollar amounts for planned runoff). Document contains only qualitative principles.",
-      "Source_type is 'press_release' but SOURCE METADATA shows PAGE_TYPE as 'homepage' for navigation context — actual content is a standalone press release."
+      "The 'why_it_matters' field claims the Fed's balance sheet was '$8-9 trillion' — this specific number is not mentioned in the source text and is an extrapolation. The source describes the approach but does not provide the balance sheet size figure.",
+      "Event type 'fomc_statement' is reasonable but the source is technically a press release announcing FOMC principles rather than a formal rate decision statement. The classification is defensible but not perfectly precise."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Historical document from January 2022 establishing QT framework. While relevant as foundational policy communication, the 4+ year time gap from TODAY (2026-04-01) makes this a historical record. The document contains only qualitative principles with no specific pace, size, or timeline figures. Consider whether this duplicates more detailed post-2022 QT implementation guidance."
+    "notes": "Minor extrapolation of balance sheet figure ($8-9T) not found in source text. The record is otherwise accurate and high-quality, but this one specific claim should be verified or removed to avoid forwarding unsupported information."
   },
   "human_feedback": {
     "decision": "",
@@ -68,12 +66,21 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_principles_for_reducing_the_size_6f14b3085d92c156.txt",
-  "notes": "This is a historical Federal Reserve policy communication from January 2022. It predates the actual QT implementation that began June 2022 by approximately 5 months. While it establishes the conceptual framework, it lacks the quantitative specifics (pace caps, reinvestment caps) that were later specified in the May 2022 FOMC minutes and subsequent statements. Consider cross-referencing with later QT implementation documentation for operational specifics. The SOURCE METADATA correctly identifies this as relevant to 'macro catalysts' through its policy framework implications.",
+  "notes": "Historical document from January 2022 establishing the Fed's QT framework. This was the prequel to the actual balance sheet reduction that began in June 2022. The document provides principles but lacks specific quantitative parameters (e.g., monthly caps, pace limits) that would be detailed in later announcements. Source is high-quality official Fed communication but dated. CONTENT_WARNING: published_at appears to be encoded as 2022 - actual date may vary but statement indicates Jan 26, 2022 per body text. Slight mismatch between metadata TOPIC field value 'macro catalysts' vs intended source.name; corrected to 'Federal Reserve' for accuracy.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "",
-    "score": 0,
-    "reasoning": []
-  }
+    "tier": "Tier 1",
+    "score": 7,
+    "reasoning": [
+      "Official Federal Reserve source",
+      "High domain trust tier",
+      "Unanimous FOMC agreement",
+      "Provides concrete policy framework",
+      "Dated - historical reference document",
+      "Lacks specific quantitative thresholds"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "ac67c5a9065c34756731f8587124f456c258fa2d"
 }

@@ -1,14 +1,17 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "published_at date not provided in source metadata - cannot verify currency against TODAY (2026-04-01)",
-    "Source is an institutional program overview page rather than a specific regulatory guidance document - content appears to be static program description",
-    "Source lacks distinct publication date, making it difficult to assess whether it represents current program status or historical snapshot"
+    "Source type is navigation_page - per Core Rules, navigation pages must be rejected",
+    "Missing published_at date - cannot verify recency or establish archival timestamp",
+    "Source is a program landing page containing links to sub-pages (final rule, FAQs, submission instructions) rather than substantive content",
+    "Page contains no specific market catalyst event - only program overview and navigation links",
+    "Summary and key_points are factually accurate but describe the program generally, not a discrete actionable event",
+    "Source has informational quality tier (4/10) - thin signal for archiving purposes"
   ],
-  "human_review_required": true,
-  "human_review_reason": "While the generated record accurately summarizes the source content and the event_type (regulatory_guidance) is valid, the missing published_at date prevents verification of currency. The source is a Treasury program overview page with indirect market implications. Human judgment is needed to determine if institutional policy overview pages without publication dates meet the archival threshold for macro catalysts, given that the source itself lacks market-moving content or specific financial data.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut reject based on navigation_page source type. Core Rule 5 explicitly states navigation pages must be rejected regardless of content accuracy. The program's historical significance (established August 2023, effective January 2025) does not elevate this specific informational page to archivable status.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

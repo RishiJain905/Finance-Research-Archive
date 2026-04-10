@@ -1,20 +1,21 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 4,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page containing aggregated links to multiple documents from 2017-2025, not a single archiveable research document",
-    "No specific publication date on the page itself (published_at is empty)",
-    "Cannot assign a meaningful single event_type from the taxonomy to an aggregated listing page",
-    "event_type is set to 'unknown' when the correct action would be to reject based on page type",
-    "Page aggregates heterogeneous content (letters, reports, FAQs, daily activity) without coherent focus",
-    "Cannot extract specific market-impactful events or data from this navigation hub"
+    "Source is a Treasury Department hub/listing page that aggregates links to individual documents rather than a standalone article",
+    "No specific current debt limit level, X-date, or Treasury cash position provided in source body",
+    "Published_at field is empty because no single publication date applies to the hub page",
+    "Event_type 'market_notice' is questionable - the actual market notices would be the individual letters to Congress (e.g., Bessent letter 03/14/2025, Yellen letters), not this general hub page",
+    "Historical statistics (78 actions since 1960) are presented without specific dates to assess currency",
+    "Source contains no specific policy decision, data release, or substantive content beyond general background and a list of links",
+    "Core Rule #5 explicitly requires rejection when PAGE_TYPE is navigation_page, listing_page, or homepage"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record correctly identifies this as a listing page. Per Rule 5, listing pages must be rejected. The human review fields contain notes that align with this verdict.",
+  "human_review_reason": "Source is a generic hub page that aggregates Treasury debt limit correspondence without containing standalone substantive content. It fails the source_type requirement (listing_page) per Rule #5. The linked individual letters to Congress (e.g., Bessent 03/14/2025, Yellen various dates) would be appropriate archive candidates, not this index page.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This Treasury Department hub page provides general background on the U.S. debt limit mechanism and aggregates links to historical Treasury correspondence. It explains the debt limit authorizes borrowing for existing legal obligations and warns of catastrophic consequences of default. The page is an index of links to individual documents from 2015-2025, not a standalone policy document.",
+    "why_it_matters": "This hub page itself contains no specific current figures or policy decisions. It serves only as a navigational index to individual Treasury letters and reports. Market participants should reference the specific linked documents (Bessent letter 03/14/2025, various Yellen letters, extraordinary measures descriptions) for actionable debt limit intelligence rather than this general archive page.",
     "macro_context": "",
     "market_structure_context": ""
   }

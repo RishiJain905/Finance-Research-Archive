@@ -1,13 +1,19 @@
 {
-  "verification_confidence": 10,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page with no substantive content (Rule 5 violation)",
+    "No published date visible in source content",
+    "Page contains only category headings—no policy data, figures, or analysis",
+    "event_type correctly set to 'unknown' but this reflects the thin nature of the source rather than an identifiable event",
+    "Cannot serve as standalone research source for market structure or macro catalyst analysis"
+  ],
   "human_review_required": false,
-  "human_review_reason": "The generated record is a model example of accurate self-documentation. It correctly identifies the source as a listing/navigation page, accurately characterizes the lack of substantive content, properly sets event_type to 'unknown', and appropriately notes this should be rejected per verification rules. No corrections needed.",
+  "human_review_reason": "The record accurately identifies this as a non-archivable listing page. No substantive content exists to verify. Human review would not add value—linked documents within the archive should be accessed directly if needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "This page provides no actionable information. It is a directory to historical quarterly refunding materials and cannot serve as a standalone source for market structure or macro catalyst research. Analysts seeking Treasury financing data should navigate to specific dated documents rather than this index.",
     "macro_context": "",
     "market_structure_context": ""
   }

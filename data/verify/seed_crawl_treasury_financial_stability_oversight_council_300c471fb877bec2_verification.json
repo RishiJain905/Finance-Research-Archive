@@ -2,20 +2,19 @@
   "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a static institutional landing page with no publication date - content age is unverifiable",
-    "event_type is 'unknown' when 'financial_stability_report' would be more appropriate, but the page itself is just a generic description rather than an actual report",
-    "No specific data, policy decisions, or actionable market information in the source",
-    "Source is effectively a container/listing page describing FSOC at a high level - does not contain an actual report or meeting outcome",
-    "published_at field is blank, violating the requirement for source attribution completeness",
-    "Source is too thin to have archival value for market structure or macro catalyst analysis"
+    "Source is explicitly classified as 'homepage' in metadata - violates CORE RULE 5 (reject homepage, navigation_page, listing_page, search_page)",
+    "No publication date (published_at is empty) - cannot assess recency or staleness",
+    "No specific current analysis, data, or actionable research content - just static institutional description",
+    "event_type set to 'unknown' - appropriate but further confirms this is not a policy/event document",
+    "Contains only general mandate description without any specific financial stability risks or vulnerabilities"
   ],
-  "human_review_required": true,
-  "human_review_reason": "Source is a low-value institutional landing page that provides only generic descriptions of FSOC's mandate. While the record accurately characterizes the page's limitations, the source itself fails basic relevance and specificity thresholds for a finance research archive. Human review should confirm whether specific FSOC annual reports or meeting announcements should be captured instead of this generic landing page.",
+  "human_review_required": false,
+  "human_review_reason": "Clear reject per explicit rules - homepage is non-archiveable",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a static institutional overview page for the Financial Stability Oversight Council (FSOC), describing its broad mandate to monitor U.S. financial stability risks. The page provides no specific data, events, or actionable information—it merely summarizes FSOC's general functions, composition (10 voting and 5 nonvoting members), and the types of risks it monitors in annual reports. No publication date is provided for the content itself.",
-    "why_it_matters": "This source provides no actionable market information. It is a static institutional landing page that merely describes FSOC's general mandate and membership composition. It does not contain any specific policy decisions, data releases, meeting outcomes, or risk assessments that would be relevant for market analysis or trading decisions.",
+    "summary": "This is an institutional overview page for the Financial Stability Oversight Council (FSOC) describing its general mandate under the Dodd-Frank Act. The page outlines FSOC's composition, responsibilities, and areas of monitoring, but contains no specific current analysis, data, or publication date. No specific financial stability risks or vulnerabilities are quantified or dated in this source.",
+    "why_it_matters": "This page serves as an entry point to FSOC but provides no actionable intelligence. The actual value would be in specific FSOC annual reports or meeting minutes, not this static institutional description.",
     "macro_context": "",
-    "market_structure_context": "The page references that FSOC monitors 'risks related to the structure of Treasury markets and other financial markets' as part of its annual reporting function, but provides no specific details or current assessments."
+    "market_structure_context": ""
   }
 }

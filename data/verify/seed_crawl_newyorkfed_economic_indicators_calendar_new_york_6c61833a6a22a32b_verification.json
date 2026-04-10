@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per RULE 6 - explicitly excluded from archival",
+    "Source URL is empty/missing in source attribution",
+    "No substantive content: only future release schedule times, no actual data or analysis",
+    "event_type 'unknown' is correct; this meta-page does not fit any event taxonomy category",
+    "Published date not explicitly in source body - record correctly infers from context",
+    "Domain field empty in source metadata"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The New York Fed publishes a calendar listing scheduled economic data releases for April 2026 including CPI, PPI, GDP, employment reports, ISM surveys, and various Fed research publications, all timed to Eastern Time. This is a navigation/listing page containing only future scheduled release dates and times; no actual data or analysis is provided.",
+    "why_it_matters": "This calendar page has no standalone research value for RAG applications. It serves only as a scheduling reference. Market participants and researchers would need to return to this page repeatedly to check for updates or navigate to individual data release pages when data is actually published.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

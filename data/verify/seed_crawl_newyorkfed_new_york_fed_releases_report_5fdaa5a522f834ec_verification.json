@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a press release announcing a research paper, not the full paper itself - contains only executive summary-level content without substantive findings",
+    "event_type set to 'research_paper' but source_type indicates 'blog_post' - source is technically a press release that summarizes 12 studies rather than presenting original research",
+    "The summary rearranges the order of claims from the source text (places 'banks responded actively' before the alignment/contrast findings) but does not contradict the source",
+    "Age: October 2018 source is over 7.5 years old relative to TODAY (2026-04-10), though still within archival value window for historical regulatory analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is mostly accurate with no critical factual errors. The primary concern is source thinness (press release vs. full research paper), but this is acknowledged in the record. Key points are well-supported, event_type classification is reasonable, and the domain quality (ny.frb.org) supports acceptance at borderline confidence.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The New York Fed released an article in the Economic Policy Review surveying 12 studies from a project completed in June 2018 examining effects of post-crisis regulatory reforms on banking institutions. The review found that many findings aligned with theoretical predictions or earlier studies, yet some results contrasted with academic literature. Overall, banks did respond actively to new regulations, suggesting further research on additional outcomes would be valuable.",
+    "why_it_matters": "This research provides empirical grounding for understanding how post-crisis banking regulations have affected bank behavior and market structure. The findings are relevant for policymakers evaluating whether current regulatory frameworks achieve their intended goals of financial stability without unduly constraining credit availability or bank profitability.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

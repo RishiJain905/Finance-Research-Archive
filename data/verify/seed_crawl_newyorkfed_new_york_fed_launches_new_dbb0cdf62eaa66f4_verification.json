@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type 'research_paper' is incorrect — source is a press release, not a research paper. Taxonomy value does not match source type.",
+    "source.url is empty — missing required source attribution (name + url)",
+    "Published November 5, 2021 — approximately 4.5 years before TODAY (2026-04-10), well beyond the 90-day threshold with no clear archival value as a market-moving event",
+    "Source is a press release announcing institutional research infrastructure, not relevant to market structure or macro catalysts as defined",
+    "source_type in metadata is 'press_release' but event_type is set to 'research_paper' — mismatch between source type and event type",
+    "market_impact.confidence = 0 correctly indicates no market relevance, but this reinforces the record should be rejected as non-archivable for finance research"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Multiple clear violations of verification rules: incorrect event_type, missing source URL, source is a press release about institutional research infrastructure rather than a market-moving or policy event. The record's own analysis acknowledges low utility for finance research archive focused on market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

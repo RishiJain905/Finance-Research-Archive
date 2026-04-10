@@ -1,0 +1,44 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Missing source attribution - name, url, domain, published_at, and source_type are all empty",
+      "Generated record is completely blank - all content fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are empty strings",
+      "No event_type specified",
+      "No topic specified",
+      "No market_impact data provided",
+      "No important_numbers extracted from source",
+      "No tags assigned",
+      "Source is a valid FOMC statement with significant archival value (November 2021 taper announcement), but the record fails to capture any of this information"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is completely empty - no content was produced at all. The source itself is a substantive FOMC implementation statement from November 2021 containing important monetary policy details (rate maintained at 0-0.25%, taper details, repo operations), but the record generation failed entirely. Human intervention is required to create the record from the source."
+  },
+  "summary": "The Federal Reserve maintained the federal funds rate target range at 0 to 1/4 percent and announced a tapering of monthly asset purchases, reducing Treasury purchases from $80B to $70B to $60B per month over the November-December period, while maintaining mortgage-backed securities purchases at corresponding reduced levels. The Fed also set overnight reverse repo operations at 0.05% with $160B per-counterparty limits and repo operations at 0.25% minimum bid rate with $500B aggregate limit.",
+  "key_points": [],
+  "why_it_matters": "This FOMC statement announced the beginning of the Fed's taper process, reducing monthly QE purchases while maintaining accommodative monetary policy. The timing preceded the rate hike cycle that began in 2022 and represents a critical policy transition point in post-COVID monetary policy normalization.",
+  "macro_context": "November 2021 marked a pivotal moment in Federal Reserve policy as inflation concerns were rising while the labor market continued recovering. This taper announcement represented the first step toward policy normalization after unprecedented pandemic-era monetary stimulus.",
+  "market_structure_context": "The taper schedule affected Treasury and MBS market dynamics by signaling reduced Fed demand for these securities. Repo operation parameters established floor and ceiling rates for short-term funding markets.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

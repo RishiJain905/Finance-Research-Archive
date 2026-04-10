@@ -1,17 +1,17 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Source is 28 years old (1998 vs TODAY 2026-04-01) - methodology and conclusions may be outdated",
-    "source_type is 'research_paper' but source content is a press release/article summary about the research, not a full research paper",
-    "The record appropriately acknowledges staleness and suggests archival-only use"
+    "Source published June 3, 1998 is 27+ years old, significantly exceeding the 90-day staleness threshold",
+    "Specific numerical data and institutional references are from 1998-era reporting systems and may not reflect current TIC framework reforms",
+    "The quality tier is appropriately marked as 'low' due to staleness, but this conflicts with the record having substantive archival value"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record accurately summarizes the source content with appropriate caveats about age. While the source is stale, it has clear archival value as a historical record of Treasury market data limitations methodology circa 1998. The summary, key_points, and why_it_matters fields all appropriately acknowledge the vintage and suggest caution. No unsupported claims detected.",
+  "human_review_required": true,
+  "human_review_reason": "The source's age (1998) creates tension with its substantial archival value. The analysis of Treasury data collection methodology—confidentiality obligations, location-based nationality assignment, five-year benchmark surveys, and exclusion of inter-dealer cross-border transactions—describes structural features of the TIC reporting system that remain conceptually relevant. However, specific institutional details and any numerical estimates cited are severely outdated. Human review is needed to determine if this historical research should be accepted as an archival record or rejected as too stale for a finance research archive focused on market-relevant information.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "Consider revising to acknowledge that while the conceptual discussion of TIC data limitations retains pedagogical value for understanding market data infrastructure, the record should be clearly marked as historical methodology reference rather than current market intelligence. The specific '28 years outdated' framing in why_it_matters is accurate.",
     "macro_context": "",
     "market_structure_context": ""
   }

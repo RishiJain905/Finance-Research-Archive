@@ -1,13 +1,15 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "SOURCE METADATA specifies TOPIC='market structure' but source content addresses labor market forecasting methodology, not market structure per se",
-    "Source is approximately 27 years old, significantly exceeding the 90-day threshold; archival value requires judgment call",
-    "Source body extracted from press release summary rather than full research paper, limiting depth of available content"
+    "Source is a press release summarizing research, not the full research paper itself — generated record appropriately identifies as research_paper but source content is limited to summary",
+    "Source age (1998) is 27+ years old — while explicitly noted in record, the economic relationships described may not reflect current labor market dynamics post-COVID and structural market changes",
+    "Source type labeled as 'research_paper' in generated record but actual source is a press release/publication summary from Current Issues in Economics and Finance series",
+    "No market-moving content in source — this is methodological research on forecasting methodology, not a market catalyst or data release",
+    "Record correctly notes low relevance to current market conditions and appropriately assigns quality_tier: low"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and well-structured, but two judgment calls require human input: (1) whether a 1998 research paper on unemployment claims forecasting has sufficient archival value for a finance research archive focused on market structure and macro catalysts, and (2) whether the TOPIC mismatch (metadata says 'market structure' but content is macro forecasting) is a metadata error or a record categorization issue. The content itself is relevant to macro catalysts (labor market forecasting) but the original metadata labeling appears inconsistent with actual content.",
+  "human_review_reason": "This record is accurate to the source text with proper attribution and no fabricated claims. However, the source is a 27-year-old press release summarizing research methodology on claims forecasting. While the content is factually correct and the record appropriately flags the age and low current relevance, human judgment is needed to determine whether archiving a 1998 research methodology piece serves the archive's purpose given the low quality tier (3) and limited utility for current market analysis.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
