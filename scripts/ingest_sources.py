@@ -1,8 +1,11 @@
+import argparse
 import hashlib
 import json
 import re
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -211,6 +214,55 @@ def fetch_html(url: str, max_retries: int = 3) -> str:
     raise requests.exceptions.RequestException(
         f"Failed after {max_retries} attempts: {last_exc}"
     )
+
+
+# ---------------------------------------------------------------------------
+# Per-domain rate limiter and parallel fetch helpers
+# ---------------------------------------------------------------------------
+
+_domain_last_request: dict[str, float] = {}
+_domain_lock = threading.Lock()
+MIN_DOMAIN_INTERVAL = 0.5  # seconds between requests to the same domain
+
+
+def _domain_throttle(url: str) -> None:
+    """Sleep if necessary to respect the per-domain request interval."""
+    domain = urlparse(url).netloc
+    with _domain_lock:
+        last = _domain_last_request.get(domain, 0.0)
+        wait = MIN_DOMAIN_INTERVAL - (time.monotonic() - last)
+        if wait > 0:
+            time.sleep(wait)
+        _domain_last_request[domain] = time.monotonic()
+
+
+def _fetch_with_throttle(url: str) -> str:
+    _domain_throttle(url)
+    return fetch_html(url)
+
+
+def fetch_article_batch(
+    article_urls: list[str], max_workers: int = 5
+) -> dict[str, str]:
+    """Fetch multiple article URLs concurrently.
+
+    Returns a dict mapping each successfully fetched URL to its HTML content.
+    URLs that raise exceptions are omitted from the result (errors are printed).
+    Only HTTP GET calls are parallelised; all manifest/DB writes remain serial.
+    """
+    results: dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_url = {
+            executor.submit(_fetch_with_throttle, url): url
+            for url in article_urls
+        }
+        for future in as_completed(future_to_url):
+            url = future_to_url[future]
+            try:
+                results[url] = future.result()
+            except Exception as exc:
+                print(f"  Fetch failed for {url}: {exc}")
+    return results
 
 
 def collapse_text_lines(text: str) -> str:
@@ -601,6 +653,18 @@ def build_record_id(target_name: str, article_title: str, article_url: str) -> s
 
 
 def main() -> list[str]:
+    parser = argparse.ArgumentParser(
+        description="Ingest articles from configured targets."
+    )
+    parser.add_argument(
+        "--fetch-workers",
+        type=int,
+        default=5,
+        help="Number of parallel HTTP fetch workers for article URLs (default: 5)",
+    )
+    args = parser.parse_args()
+    fetch_workers = max(1, args.fetch_workers)
+
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     ensure_schema()
 
@@ -667,18 +731,30 @@ def main() -> list[str]:
         print(f"  Found {len(article_links)} candidate links")
         target_created: list[str] = []
 
+        # Filter already-processed URLs before issuing any HTTP requests.
+        urls_to_fetch = []
         for article_url in article_links:
-            print(f"  Fetching article: {article_url}")
-
             if is_url_processed_as_article(article_url):
-                print("    Already processed, skipping.")
+                print(f"  {article_url}: already processed, skipping.")
+            else:
+                urls_to_fetch.append(article_url)
+
+        if not urls_to_fetch:
+            track_health(name, 0, config_path=CONFIG_PATH, config_list_key="targets")
+            continue
+
+        # Fetch all candidate articles in parallel; only HTTP GETs are concurrent.
+        print(f"  Fetching {len(urls_to_fetch)} articles ({fetch_workers} workers)...")
+        fetched_htmls = fetch_article_batch(urls_to_fetch, max_workers=fetch_workers)
+
+        # Process results serially so all manifest/DB writes are single-threaded.
+        for article_url in article_links:
+            article_html = fetched_htmls.get(article_url)
+            if article_html is None:
+                # Either already processed (filtered above) or fetch failed.
                 continue
 
-            try:
-                article_html = fetch_html(article_url)
-            except Exception as e:
-                print(f"    Failed fetch: {e}")
-                continue
+            print(f"  Processing: {article_url}")
 
             article_text, extraction_warnings = extract_main_text(article_html)
             digest = content_hash(article_text)

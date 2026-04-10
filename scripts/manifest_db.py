@@ -61,10 +61,11 @@ CREATE TABLE IF NOT EXISTS event_fingerprints (
 );
 
 CREATE TABLE IF NOT EXISTS quant_seen_series (
-    series_id    TEXT NOT NULL,
-    snapshot_date TEXT NOT NULL,
-    content_hash  TEXT NOT NULL,
-    processed_at  TEXT,
+    series_id        TEXT NOT NULL,
+    snapshot_date    TEXT NOT NULL,
+    content_hash     TEXT NOT NULL,
+    processed_at     TEXT,
+    latest_data_date TEXT,
     PRIMARY KEY (series_id, snapshot_date)
 );
 
@@ -113,6 +114,17 @@ def ensure_schema(db_path: Path = DB_PATH) -> None:
     conn = get_conn(db_path)
     with conn:
         conn.executescript(_SCHEMA_SQL)
+        # Migrations: add columns that may be missing in older databases.
+        existing_cols = {
+            row[1]
+            for row in conn.execute(
+                "PRAGMA table_info(quant_seen_series)"
+            ).fetchall()
+        }
+        if "latest_data_date" not in existing_cols:
+            conn.execute(
+                "ALTER TABLE quant_seen_series ADD COLUMN latest_data_date TEXT"
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -333,14 +345,16 @@ def add_quant_series(
     snapshot_date: str,
     content_hash: str,
     processed_at: Optional[str] = None,
+    latest_data_date: Optional[str] = None,
     db_path: Path = DB_PATH,
 ) -> None:
     conn = get_conn(db_path)
     with conn:
         conn.execute(
             "INSERT OR IGNORE INTO quant_seen_series "
-            "(series_id, snapshot_date, content_hash, processed_at) VALUES (?, ?, ?, ?)",
-            (series_id, snapshot_date, content_hash, processed_at or _now()),
+            "(series_id, snapshot_date, content_hash, processed_at, latest_data_date) "
+            "VALUES (?, ?, ?, ?, ?)",
+            (series_id, snapshot_date, content_hash, processed_at or _now(), latest_data_date),
         )
 
 
@@ -354,6 +368,23 @@ def get_quant_series_ids_for_run(
         (snapshot_date,),
     ).fetchall()
     return [row["series_id"] for row in rows]
+
+
+def get_quant_series_latest_data_date(
+    series_id: str, db_path: Path = DB_PATH
+) -> Optional[str]:
+    """Return the latest_data_date stored for the most recent run of *series_id*.
+
+    Returns None if the series has never been ingested or if no data date was
+    recorded (e.g. rows written before this column was added).
+    """
+    conn = get_conn(db_path)
+    row = conn.execute(
+        "SELECT latest_data_date FROM quant_seen_series "
+        "WHERE series_id = ? ORDER BY snapshot_date DESC LIMIT 1",
+        (series_id,),
+    ).fetchone()
+    return row["latest_data_date"] if row else None
 
 
 # ---------------------------------------------------------------------------

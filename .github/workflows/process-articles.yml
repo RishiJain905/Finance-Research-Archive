@@ -36,7 +36,7 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       - name: Run article ingestion and processing pipeline
-        run: python scripts/run_ingest_and_process.py --max-records 30 --process-workers 2
+        run: python scripts/run_ingest_and_process.py --max-records 30 --process-workers 2 --fetch-workers 5
 
       - name: Configure git author
         run: |

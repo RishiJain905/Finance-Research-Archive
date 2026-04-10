@@ -407,6 +407,12 @@ def main() -> None:
         help="Parallel process_record workers (1 for sequential)",
     )
     parser.add_argument(
+        "--fetch-workers",
+        type=lambda x: int(float(x)),
+        default=5,
+        help="Parallel HTTP fetch workers for ingest_sources (1 for sequential)",
+    )
+    parser.add_argument(
         "--skip-send-reviews",
         action="store_true",
         help="Process records but skip Telegram send step",
@@ -435,7 +441,10 @@ def main() -> None:
     raw_ids_before_run = {f.stem for f in RAW_DIR.glob("*.txt")}
 
     start = time.perf_counter()
-    run_command([python_cmd, "scripts/ingest_sources.py"], "ingestion")
+    run_command(
+        [python_cmd, "scripts/ingest_sources.py", "--fetch-workers", str(args.fetch_workers)],
+        "ingestion",
+    )
     run_command([python_cmd, "scripts/ingest_rss.py"], "RSS ingestion")
     run_command([python_cmd, "scripts/ingest_arxiv.py"], "arXiv ingestion")
     timings["ingest"] = time.perf_counter() - start
