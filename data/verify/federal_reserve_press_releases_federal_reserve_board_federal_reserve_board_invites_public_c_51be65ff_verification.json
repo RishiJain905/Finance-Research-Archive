@@ -1,0 +1,14 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Market structure context includes 'launched in 2023' which is not present in the source text. This is external knowledge being introduced as fact.",
+    "The 2023 launch date for FedNow is factually incorrect — FedNow Service launched in July 2023, but this date is not in the source material and should be removed or qualified."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and factually accurate except for one verifiable factual error (the 2023 launch date). The error is minor but concrete and should be corrected. No human review needed — auto-route to review queue is appropriate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "market_structure_context": "FedNow Service is the Federal Reserve's instant payment rail. This proposal would expand the network topology beyond direct bank-to-bank transfers to include intermediary institutions, which could affect payment flow dynamics and correspondent banking relationships."
+  }
+}

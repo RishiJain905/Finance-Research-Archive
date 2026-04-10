@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an introductory statement excerpt (309 words), not the full 9-page speech. Full PDF content (181kb) exists but was not included, limiting analysis scope.",
+    "event_type 'congressional_testimony' is borderline - the source is testimony before the European Parliament (not US Congress). While technically a legislative testimony, the taxonomy term typically implies US Congressional context. 'speech_neutral' may be more appropriate, though the record is not factually wrong.",
+    "Market impact asset_classes array is empty - no specific asset implications discussed in the thin source, making this field incomplete rather than incorrect."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is extremely thin (309 words introductory excerpt vs. 9-page full speech). The record accurately represents the excerpted material, but the full PDF contains substantially more content that could affect the summary, key_points, why_it_matters, and macro_context. Full content retrieval recommended before final archival decision.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

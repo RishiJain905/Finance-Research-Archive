@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly a placeholder with no actual Treasury auction data",
+    "Source text provides zero substantive content: no auction results, bid-to-cover ratios, issuance amounts, or dates",
+    "Source URL is empty, preventing verification",
+    "No publication date provided in source metadata",
+    "event_type is 'unknown' but given this is Treasury operations data, 'treasury_issuance' or 'market_notice' would be more appropriate if real data existed",
+    "Cannot support research, RAG, or market analysis use cases",
+    "Archival value is zero - source explicitly states 'This is still a placeholder dataset snapshot' and plans for replacement"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source's placeholder status is unambiguous and self-declared. No human judgment needed - the source cannot support archiving.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This record is a placeholder snapshot from treasury_fiscal_data dated 2026-04-06. The source text contains no actual auction data, issuance amounts, bid-to-cover ratios, or any substantive Treasury market information. The content explicitly states it is placeholder data awaiting replacement with real dataset or API fetches.",
+    "why_it_matters": "This source cannot support any market structure or macro catalyst analysis. Treasury auction data is a core component of market structure research, affecting bond market liquidity, yield formation, and primary dealer dynamics. This placeholder provides no actionable information.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

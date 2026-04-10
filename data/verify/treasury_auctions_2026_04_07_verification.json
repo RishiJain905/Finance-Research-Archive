@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a placeholder document with no actual auction data, numbers, or substantive content",
+    "Source explicitly states it can be replaced with real data - not suitable for archival",
+    "URL field is empty, violating source attribution requirement",
+    "event_type is set to 'unknown' - cannot be properly categorized without real data",
+    "No archival value: placeholder document provides no actionable information for market structure or macro analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately identifies the source as a placeholder with no content. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a placeholder dataset snapshot for Treasury Securities Auctions Data from treasury_fiscal_data, not actual auction results. The document explicitly states it can be replaced with real dataset or API fetches. No actual auction data, numbers, or market information is present.",
+    "why_it_matters": "This placeholder document provides no actionable information for research or market analysis. Treasury auction data is relevant to market structure as it informs Treasury market liquidity, yields, and broader fixed income dynamics, but this source contains no such data.",
+    "macro_context": "",
+    "market_structure_context": "While Treasury auction data is relevant to market structure (auction mechanics, primary dealer behavior, demand distribution), this placeholder contains no actual auction information."
+  }
+}

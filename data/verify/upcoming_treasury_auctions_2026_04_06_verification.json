@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly a placeholder with no actual Treasury auction data",
+    "Missing source URL - attribution is incomplete",
+    "Missing published_at timestamp",
+    "Source type is 'placeholder' - not publishable",
+    "No auction dates, sizes, terms, or any substantive data present",
+    "event_type 'treasury_issuance' is misleading as the source contains no issuance data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately self-identifies all critical deficiencies. The source is a placeholder with zero archival value. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a placeholder dataset snapshot for Treasury auction data. No actual auction schedules, sizes, or dates are present in the source. The system notes that real data should be fetched via API or dataset replacement in future iterations.",
+    "why_it_matters": "Treasury auction data is a core component of market structure monitoring and can signal near-term supply pressures in the gilt market. This placeholder provides no actionable intelligence for traders, researchers, or risk managers.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

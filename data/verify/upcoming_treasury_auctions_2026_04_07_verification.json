@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is explicitly a placeholder with no actual Treasury auction data",
+    "Source contains no dates, sizes, maturities, coupon details, or any quantitative information",
+    "URL field is empty - missing critical source attribution",
+    "Domain field is empty - source cannot be verified or accessed",
+    "Record has zero archival value until real data replaces placeholder",
+    "source_type set to 'data_release_other' but source is not an actual data release"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record documents a placeholder data snapshot with no actual market information. The record itself is accurately written (correctly identifying the placeholder state), but the underlying source has no value for research or market analysis. Even though the LLM correctly assessed this as low-quality content, the system should auto-reject placeholder sources before they reach review queue.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This record contains only a placeholder snapshot for Treasury auction data. The source explicitly states it is awaiting replacement with real dataset or API fetches. No actual auction details (dates, sizes, maturities, or results) are available in the current text.",
+    "why_it_matters": "This placeholder provides no actionable information. Treasury auction records are critical for understanding near-term supply dynamics, financing costs, and market structure. Until real data is populated, this record has zero utility for research or RAG applications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

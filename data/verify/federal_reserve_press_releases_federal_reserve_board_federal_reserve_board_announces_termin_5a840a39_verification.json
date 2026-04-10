@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic mismatch: source is a banking enforcement termination notice, not a macro catalyst (macro catalysts implies market-moving economic events, policy decisions, or data releases)",
+    "event_type is 'unknown' when 'regulatory_guidance' would be more appropriate for a Federal Reserve enforcement action",
+    "No market-moving content: source contains only factual administrative information about terminated Cease and Desist Orders with no new policy signals",
+    "Source relevance to 'market structure or macro catalysts' is questionable - it concerns specific bank compliance history, not market operations or infrastructure",
+    "Thin archival value: enforcement action terminations are routine regulatory housekeeping with no implications for interest rates, economic growth, or systemic risk"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the generated record accurately summarizes the source content, the fundamental issue is topic misclassification at the feed level. The source is correctly identified as a Federal Reserve press release but is incorrectly categorized as 'macro catalysts' in the feed metadata. This is a banking regulation/compliance matter, not a macro catalyst.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

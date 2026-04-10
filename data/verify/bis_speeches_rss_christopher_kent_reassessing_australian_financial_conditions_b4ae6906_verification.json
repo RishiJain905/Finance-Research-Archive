@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Speech content is truncated - only 338 words extracted (introductory remarks), while full PDF is 617kb/16 pages",
+    "Cannot verify complete key_points accuracy as substantive portions of speech not extracted",
+    "Cannot definitively assess hawkish/dovish classification without full speech content",
+    "The extracted text is framework-focused introductory remarks - substantive policy content may exist in unextracted portions"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source extraction is severely incomplete (only opening remarks extracted from a 16-page speech). The extracted content accurately represents the introductory framework discussion visible in the source, but human review is needed to determine if the complete speech contains substantive policy signals, numerical assessments, or clearer hawkish/dovish positioning that would affect the overall assessment.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
