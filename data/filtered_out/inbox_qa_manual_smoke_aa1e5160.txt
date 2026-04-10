@@ -1,0 +1,15 @@
+TARGET: inbox
+TOPIC: manual_upload
+TITLE: qa_manual_smoke
+URL: file://inbox/qa_manual_smoke.txt
+SOURCE_TYPE: document
+INGEST_SOURCE: inbox
+PAGE_TYPE: document
+DETECTED_LANGUAGE: en
+INGESTED_AT: 2026-04-10T03:34:30.158130+00:00
+
+Manual QA smoke file for inbox ingestion. This paragraph exists only to verify
+that ingest_inbox.py can read a text file, write a raw record under data/raw,
+update the SQLite manifest fingerprints, and move the source file to
+data/inbox/processed. It is intentionally boring finance-flavored filler about
+liquidity, repo markets, and policy rates so word-count filters have enough text.

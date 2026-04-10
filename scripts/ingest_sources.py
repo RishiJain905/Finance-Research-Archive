@@ -1,7 +1,11 @@
+import argparse
 import hashlib
 import json
 import re
+import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -9,10 +13,27 @@ from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from scripts.manifest_db import (
+    add_fingerprint,
+    ensure_schema,
+    get_all_processed_article_urls,
+    get_fingerprint_record_id,
+    get_url_content_hash,
+    is_url_processed_as_article,
+    is_url_processed_as_listing,
+    set_record_map,
+    set_record_rules,
+    upsert_seen_url,
+)
+from scripts.source_health_tracker import is_auto_disabled, update as track_health
+
 CONFIG_PATH = BASE_DIR / "config" / "ingestion_targets.json"
 RAW_DIR = BASE_DIR / "data" / "raw"
+# Kept for backwards-compatibility with scripts that import this name.
 MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 
 DEFAULT_MAX_LINKS_PER_TARGET = 5
@@ -104,6 +125,7 @@ def ensure_manifest_shape(manifest: dict) -> dict:
     manifest.setdefault("title_fingerprints", {})
     manifest.setdefault("content_fingerprints", {})
     manifest.setdefault("processed_urls", {})
+    manifest.setdefault("listing_urls", {})
     # Maps sha1(domain|date|event_type) -> record_id for event-level dedup
     manifest.setdefault("event_fingerprints", {})
 
@@ -192,6 +214,55 @@ def fetch_html(url: str, max_retries: int = 3) -> str:
     raise requests.exceptions.RequestException(
         f"Failed after {max_retries} attempts: {last_exc}"
     )
+
+
+# ---------------------------------------------------------------------------
+# Per-domain rate limiter and parallel fetch helpers
+# ---------------------------------------------------------------------------
+
+_domain_last_request: dict[str, float] = {}
+_domain_lock = threading.Lock()
+MIN_DOMAIN_INTERVAL = 0.5  # seconds between requests to the same domain
+
+
+def _domain_throttle(url: str) -> None:
+    """Sleep if necessary to respect the per-domain request interval."""
+    domain = urlparse(url).netloc
+    with _domain_lock:
+        last = _domain_last_request.get(domain, 0.0)
+        wait = MIN_DOMAIN_INTERVAL - (time.monotonic() - last)
+        if wait > 0:
+            time.sleep(wait)
+        _domain_last_request[domain] = time.monotonic()
+
+
+def _fetch_with_throttle(url: str) -> str:
+    _domain_throttle(url)
+    return fetch_html(url)
+
+
+def fetch_article_batch(
+    article_urls: list[str], max_workers: int = 5
+) -> dict[str, str]:
+    """Fetch multiple article URLs concurrently.
+
+    Returns a dict mapping each successfully fetched URL to its HTML content.
+    URLs that raise exceptions are omitted from the result (errors are printed).
+    Only HTTP GET calls are parallelised; all manifest/DB writes remain serial.
+    """
+    results: dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_url = {
+            executor.submit(_fetch_with_throttle, url): url
+            for url in article_urls
+        }
+        for future in as_completed(future_to_url):
+            url = future_to_url[future]
+            try:
+                results[url] = future.result()
+            except Exception as exc:
+                print(f"  Fetch failed for {url}: {exc}")
+    return results
 
 
 def collapse_text_lines(text: str) -> str:
@@ -582,27 +653,29 @@ def build_record_id(target_name: str, article_title: str, article_url: str) -> s
 
 
 def main() -> list[str]:
+    parser = argparse.ArgumentParser(
+        description="Ingest articles from configured targets."
+    )
+    parser.add_argument(
+        "--fetch-workers",
+        type=int,
+        default=5,
+        help="Number of parallel HTTP fetch workers for article URLs (default: 5)",
+    )
+    args = parser.parse_args()
+    fetch_workers = max(1, args.fetch_workers)
+
     RAW_DIR.mkdir(parents=True, exist_ok=True)
+    ensure_schema()
 
     config = load_json(CONFIG_PATH, {"targets": []})
-    manifest = load_json(
-        MANIFEST_PATH,
-        {
-            "seen_urls": {},
-            "record_map": {},
-            "record_rules": {},
-            "title_fingerprints": {},
-            "content_fingerprints": {},
-            "processed_urls": {},
-        },
-    )
-    manifest = ensure_manifest_shape(manifest)
 
     default_max_links = config.get("max_links_per_target", DEFAULT_MAX_LINKS_PER_TARGET)
     if not isinstance(default_max_links, int) or default_max_links < 1:
         default_max_links = DEFAULT_MAX_LINKS_PER_TARGET
 
-    processed_urls = manifest.get("processed_urls", {})
+    # Load the full set of permanently-processed article URLs once for link scoring.
+    processed_article_urls = get_all_processed_article_urls()
     current_year = date.today().year
     created = []
 
@@ -613,6 +686,11 @@ def main() -> list[str]:
             continue
 
         name = target["name"]
+
+        if target.get("auto_disabled", False) or is_auto_disabled(name):
+            print(f"\nTarget: {name}")
+            print("  Auto-disabled, skipping.")
+            continue
         topic = target["topic"]
         url = target["url"]
         allowed_prefixes = target.get("allowed_prefixes", [])
@@ -637,36 +715,51 @@ def main() -> list[str]:
             index_html = fetch_html(url)
         except Exception as e:
             print(f"  Failed to fetch target page: {e}")
+            track_health(name, 0, config_path=CONFIG_PATH, config_list_key="targets")
             continue
 
         article_links = extract_links(
             url, index_html, allowed_prefixes, blocklist_fragments, max_links,
-            processed_urls=processed_urls, current_year=current_year,
+            processed_urls=processed_article_urls, current_year=current_year,
         )
 
         if not article_links:
             print("  No candidate links found.")
+            track_health(name, 0, config_path=CONFIG_PATH, config_list_key="targets")
             continue
 
         print(f"  Found {len(article_links)} candidate links")
+        target_created: list[str] = []
 
+        # Filter already-processed URLs before issuing any HTTP requests.
+        urls_to_fetch = []
         for article_url in article_links:
-            print(f"  Fetching article: {article_url}")
+            if is_url_processed_as_article(article_url):
+                print(f"  {article_url}: already processed, skipping.")
+            else:
+                urls_to_fetch.append(article_url)
 
-            if article_url in manifest.get("processed_urls", {}):
-                print("    Already processed, skipping.")
+        if not urls_to_fetch:
+            track_health(name, 0, config_path=CONFIG_PATH, config_list_key="targets")
+            continue
+
+        # Fetch all candidate articles in parallel; only HTTP GETs are concurrent.
+        print(f"  Fetching {len(urls_to_fetch)} articles ({fetch_workers} workers)...")
+        fetched_htmls = fetch_article_batch(urls_to_fetch, max_workers=fetch_workers)
+
+        # Process results serially so all manifest/DB writes are single-threaded.
+        for article_url in article_links:
+            article_html = fetched_htmls.get(article_url)
+            if article_html is None:
+                # Either already processed (filtered above) or fetch failed.
                 continue
 
-            try:
-                article_html = fetch_html(article_url)
-            except Exception as e:
-                print(f"    Failed fetch: {e}")
-                continue
+            print(f"  Processing: {article_url}")
 
             article_text, extraction_warnings = extract_main_text(article_html)
             digest = content_hash(article_text)
 
-            previous_hash = manifest["seen_urls"].get(article_url)
+            previous_hash = get_url_content_hash(article_url)
             if previous_hash == digest:
                 print("    No change, skipping.")
                 continue
@@ -688,8 +781,8 @@ def main() -> list[str]:
             title_fp = title_fingerprint(article_title)
             content_fp = content_fingerprint(article_text[:5000])
 
-            existing_title_record = manifest["title_fingerprints"].get(title_fp)
-            existing_content_record = manifest["content_fingerprints"].get(content_fp)
+            existing_title_record = get_fingerprint_record_id("title_fingerprints", title_fp)
+            existing_content_record = get_fingerprint_record_id("content_fingerprints", content_fp)
 
             if existing_title_record and existing_title_record != record_id:
                 print(
@@ -731,9 +824,9 @@ def main() -> list[str]:
                 print(f"    Failed write: {e}")
                 continue
 
-            manifest["seen_urls"][article_url] = digest
-            manifest["record_map"][article_url] = record_id
-            manifest["record_rules"][record_id] = {
+            upsert_seen_url(article_url, digest)
+            set_record_map(article_url, record_id)
+            set_record_rules(record_id, {
                 "required_keywords": required_keywords,
                 "blocked_keywords": blocked_keywords,
                 "min_word_count": min_word_count,
@@ -741,14 +834,15 @@ def main() -> list[str]:
                 "allowed_page_types": allowed_page_types,
                 "target_name": name,
                 "topic": topic,
-            }
-            manifest["title_fingerprints"][title_fp] = record_id
-            manifest["content_fingerprints"][content_fp] = record_id
+            })
+            add_fingerprint("title_fingerprints", title_fp, record_id)
+            add_fingerprint("content_fingerprints", content_fp, record_id)
 
             created.append(record_id)
+            target_created.append(record_id)
             print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
 
-    save_json(MANIFEST_PATH, manifest)
+        track_health(name, len(target_created), config_path=CONFIG_PATH, config_list_key="targets")
 
     print("\nCreated/updated record ids:")
     if created:

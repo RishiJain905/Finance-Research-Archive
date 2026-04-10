@@ -4,10 +4,16 @@ Updates theme memory based on extracted terms from accepted/rejected records.
 """
 
 import re
+import sys
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
-from scripts import theme_memory_persistence
+_BASE_DIR = Path(__file__).resolve().parent.parent
+if str(_BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(_BASE_DIR))
+
+import scripts.theme_memory_persistence as theme_memory_persistence
 from scripts.extract_theme_terms import (
     extract_text_from_record,
     tokenize_and_clean,

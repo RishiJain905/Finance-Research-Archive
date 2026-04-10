@@ -8,6 +8,7 @@ RAW_DIR = BASE_DIR / "data" / "raw"
 FILTERED_DIR = BASE_DIR / "data" / "filtered_out"
 MANIFEST_PATH = BASE_DIR / "data" / "filter_manifest.json"
 INGESTION_MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
+DB_PATH = BASE_DIR / "data" / "manifest.db"
 
 MIN_TEXT_LENGTH = 500
 DEFAULT_MIN_WORD_COUNT = 120
@@ -230,7 +231,22 @@ def main() -> None:
     FILTERED_DIR.mkdir(parents=True, exist_ok=True)
 
     manifest = load_json(MANIFEST_PATH, {"filtered_out": {}, "kept": {}})
-    ingestion_manifest = load_json(INGESTION_MANIFEST_PATH, {"record_rules": {}})
+
+    # Prefer SQLite rules (Phase 3 migration); fall back to JSON manifest
+    try:
+        from scripts.manifest_db import get_record_rules as _get_sqlite_rules
+        _sqlite_available = True
+    except Exception:
+        _sqlite_available = False
+
+    ingestion_manifest_fallback = load_json(INGESTION_MANIFEST_PATH, {"record_rules": {}})
+
+    def _load_rules(rec_id: str) -> dict:
+        if _sqlite_available:
+            rules = _get_sqlite_rules(rec_id, DB_PATH)
+            if rules is not None:
+                return rules
+        return ingestion_manifest_fallback.get("record_rules", {}).get(rec_id, {})
 
     kept = []
     filtered = []
@@ -238,7 +254,7 @@ def main() -> None:
     for raw_path in sorted(RAW_DIR.glob("*.txt")):
         record_id = raw_path.stem
         text = read_text(raw_path)
-        rules = ingestion_manifest.get("record_rules", {}).get(record_id, {})
+        rules = _load_rules(record_id)
         parsed = parse_raw_record(text)
         metadata = parsed["metadata"]
         body_text = parsed["body"] or text
@@ -251,6 +267,16 @@ def main() -> None:
         else:
             keep, reasons = evaluate_article_record(body_text, rules, metadata)
             rules_used = {"record_type": "article", **rules}
+
+        if keep:
+            try:
+                from scripts.vector_store import is_semantically_duplicate
+
+                if is_semantically_duplicate(body_text, threshold=0.92):
+                    keep = False
+                    reasons = ["semantic_duplicate"]
+            except Exception as e:
+                print(f"  Warning: Semantic dedup skipped: {e}")
 
         if keep:
             manifest["kept"][record_id] = {"reasons": [], "rules_used": rules_used}

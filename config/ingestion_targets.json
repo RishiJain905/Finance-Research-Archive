@@ -1,5 +1,5 @@
 {
-    "max_links_per_target": 3,
+    "max_links_per_target": 15,
     "targets": [
         {
             "name": "Federal Reserve FOMC Calendar",
@@ -1759,6 +1759,70 @@
                 "staff appointment"
             ],
             "min_word_count": 220
+        },
+        {
+            "name": "BIS Publications Index",
+            "topic": "central_bank_research",
+            "url": "https://www.bis.org/publ/",
+            "allowed_prefixes": [
+                "https://www.bis.org/publ/",
+                "https://www.bis.org/bcbs/publ/"
+            ],
+            "url_blocklist_fragments": [
+                "about",
+                "careers",
+                "press",
+                "events",
+                "search"
+            ],
+            "max_links": 3,
+            "required_keywords": [
+                "banking",
+                "financial stability",
+                "monetary policy",
+                "risk",
+                "regulation"
+            ],
+            "blocked_keywords": [
+                "speech",
+                "press release",
+                "event",
+                "career"
+            ],
+            "min_word_count": 180
+        },
+        {
+            "name": "IMF Publications Index",
+            "topic": "macro_research",
+            "url": "https://www.imf.org/en/Publications/",
+            "allowed_prefixes": [
+                "https://www.imf.org/en/Publications/WP/",
+                "https://www.imf.org/en/Publications/GFSR/",
+                "https://www.imf.org/en/Publications/WEO/",
+                "https://www.imf.org/en/Blogs/"
+            ],
+            "url_blocklist_fragments": [
+                "search",
+                "about",
+                "careers",
+                "contact"
+            ],
+            "max_links": 4,
+            "required_keywords": [
+                "imf",
+                "monetary",
+                "fiscal",
+                "growth",
+                "inflation",
+                "financial stability"
+            ],
+            "blocked_keywords": [
+                "event",
+                "career",
+                "press",
+                "about"
+            ],
+            "min_word_count": 150
         }
     ]
 }

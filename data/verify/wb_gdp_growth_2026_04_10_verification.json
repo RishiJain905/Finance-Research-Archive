@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a data API error message with no actual GDP growth data - record captures this accurately",
+    "event_type 'data_release_gdp' is misleading since no GDP data was actually released or available",
+    "Source attribution is incomplete: URL is empty string and domain is empty string",
+    "No actionable research content - this is purely a data retrieval status message",
+    "Archival value is questionable for an empty/error response"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately describes the empty source, but fundamental questions remain about whether this type of content should be archived at all. The source is not a data release but a data retrieval failure message. Additionally, event_type 'data_release_gdp' mischaracterizes what happened - no GDP data was released, only an API error occurred.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

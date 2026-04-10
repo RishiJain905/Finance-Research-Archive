@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Academic Sources Configuration",
+  "description": "arXiv and SSRN sources for Phase 5 academic papers pipeline",
+  "arxiv": {
+    "enabled": true,
+    "categories": [
+      "q-fin.RM",
+      "q-fin.PM",
+      "q-fin.MF",
+      "q-fin.EC",
+      "q-fin.TR",
+      "econ.GN"
+    ],
+    "lookback_days": 5,
+    "max_results_per_category": 10
+  },
+  "ssrn": {
+    "enabled": true,
+    "feeds": [
+      {
+        "name": "SSRN Finance",
+        "url": "https://papers.ssrn.com/sol3/Jrnls/rss.cfm?link=fin",
+        "enabled": true
+      },
+      {
+        "name": "SSRN Management",
+        "url": "https://papers.ssrn.com/sol3/Jrnls/rss.cfm?link=mngt",
+        "enabled": true
+      }
+    ],
+    "max_entries_per_feed": 10
+  }
+}

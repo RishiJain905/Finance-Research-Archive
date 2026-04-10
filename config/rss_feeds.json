@@ -1,131 +1,438 @@
 {
-    "max_entries_per_feed": 5,
-    "feeds": [
-        {
-            "name": "Federal Reserve Press Releases RSS",
-            "topic": "macro catalysts",
-            "url": "https://www.federalreserve.gov/feeds/press_all.xml",
-            "allowed_url_prefixes": [
-                "https://www.federalreserve.gov/newsevents/pressreleases/",
-                "https://www.federalreserve.gov/monetarypolicy/"
-            ],
-            "required_keywords": ["federal reserve", "policy", "rates", "inflation", "fomc", "statement"],
-            "blocked_keywords": ["community development", "consumer help", "student", "holiday"],
-            "min_word_count": 150,
-            "max_entries": 4
-        },
-        {
-            "name": "ECB Press Releases RSS",
-            "topic": "macro catalysts",
-            "url": "https://www.ecb.europa.eu/rss/press.html",
-            "allowed_url_prefixes": [
-                "https://www.ecb.europa.eu/press/"
-            ],
-            "required_keywords": ["ecb", "monetary policy", "interest rate", "inflation", "euro"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 4
-        },
-        {
-            "name": "Bank of England Publications RSS",
-            "topic": "macro catalysts",
-            "url": "https://www.bankofengland.co.uk/rss/publications",
-            "allowed_url_prefixes": [
-                "https://www.bankofengland.co.uk/"
-            ],
-            "required_keywords": ["bank of england", "monetary policy", "interest rate", "inflation"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 4
-        },
-        {
-            "name": "BIS Publications RSS",
-            "topic": "market structure",
-            "url": "https://www.bis.org/doclist/bis_fsi_publs.rss",
-            "allowed_url_prefixes": [
-                "https://www.bis.org/"
-            ],
-            "required_keywords": ["monetary policy", "financial stability", "banking", "liquidity", "market"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 3
-        },
-        {
-            "name": "BIS Speeches RSS",
-            "topic": "macro catalysts",
-            "url": "https://www.bis.org/doclist/cbspeeches.rss",
-            "allowed_url_prefixes": [
-                "https://www.bis.org/review/",
-                "https://www.bis.org/speeches/"
-            ],
-            "required_keywords": ["monetary policy", "inflation", "financial stability", "rates", "central bank"],
-            "blocked_keywords": [],
-            "min_word_count": 200,
-            "max_entries": 3
-        },
-        {
-            "name": "IMF News RSS",
-            "topic": "macro catalysts",
-            "enabled": false,
-            "url": "https://www.imf.org/en/News/rss",
-            "allowed_url_prefixes": [
-                "https://www.imf.org/en/News/",
-                "https://www.imf.org/en/Publications/"
-            ],
-            "required_keywords": ["monetary policy", "inflation", "gdp", "fiscal", "growth", "imf"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 3
-        },
-        {
-            "name": "NY Fed Liberty Street Economics RSS",
-            "topic": "market structure",
-            "url": "https://libertystreeteconomics.newyorkfed.org/feed/",
-            "allowed_url_prefixes": [
-                "https://libertystreeteconomics.newyorkfed.org/"
-            ],
-            "required_keywords": ["federal reserve", "market", "monetary", "inflation", "rates", "treasury", "liquidity"],
-            "blocked_keywords": [],
-            "min_word_count": 200,
-            "max_entries": 3
-        },
-        {
-            "name": "Treasury Press Releases RSS",
-            "topic": "macro catalysts",
-            "enabled": false,
-            "url": "https://home.treasury.gov/news/press-releases/rss.xml",
-            "allowed_url_prefixes": [
-                "https://home.treasury.gov/news/press-releases/"
-            ],
-            "required_keywords": ["treasury", "fiscal", "debt", "issuance", "refunding", "sanctions", "market"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 4
-        },
-        {
-            "name": "Richmond Fed Research RSS",
-            "topic": "macro catalysts",
-            "enabled": false,
-            "url": "https://www.richmondfed.org/feeds/research",
-            "allowed_url_prefixes": [
-                "https://www.richmondfed.org/publications/research/"
-            ],
-            "required_keywords": ["monetary policy", "inflation", "rates", "labor market", "economy"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 3
-        },
-        {
-            "name": "San Francisco Fed Economic Letter RSS",
-            "topic": "macro catalysts",
-            "url": "https://www.frbsf.org/research-and-insights/publications/economic-letter/feed/",
-            "allowed_url_prefixes": [
-                "https://www.frbsf.org/research-and-insights/publications/economic-letter/"
-            ],
-            "required_keywords": ["monetary policy", "inflation", "rates", "economy", "federal reserve"],
-            "blocked_keywords": [],
-            "min_word_count": 150,
-            "max_entries": 3
-        }
-    ]
+  "max_entries_per_feed": 20,
+  "feeds": [
+    {
+      "name": "Federal Reserve Press Releases RSS",
+      "topic": "macro catalysts",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "allowed_url_prefixes": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/",
+        "https://www.federalreserve.gov/monetarypolicy/"
+      ],
+      "required_keywords": [
+        "federal reserve",
+        "policy",
+        "rates",
+        "inflation",
+        "fomc",
+        "statement"
+      ],
+      "blocked_keywords": [
+        "community development",
+        "consumer help",
+        "student",
+        "holiday"
+      ],
+      "min_word_count": 150,
+      "max_entries": 4
+    },
+    {
+      "name": "ECB Press Releases RSS",
+      "topic": "macro catalysts",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "allowed_url_prefixes": [
+        "https://www.ecb.europa.eu/press/"
+      ],
+      "required_keywords": [
+        "ecb",
+        "monetary policy",
+        "interest rate",
+        "inflation",
+        "euro"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 4
+    },
+    {
+      "name": "Bank of England Publications RSS",
+      "topic": "macro catalysts",
+      "url": "https://www.bankofengland.co.uk/rss/publications",
+      "allowed_url_prefixes": [
+        "https://www.bankofengland.co.uk/"
+      ],
+      "required_keywords": [
+        "bank of england",
+        "monetary policy",
+        "interest rate",
+        "inflation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 4
+    },
+    {
+      "name": "BIS Publications RSS",
+      "topic": "market structure",
+      "url": "https://www.bis.org/doclist/bis_fsi_publs.rss",
+      "allowed_url_prefixes": [
+        "https://www.bis.org/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "financial stability",
+        "banking",
+        "liquidity",
+        "market"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 3
+    },
+    {
+      "name": "BIS Speeches RSS",
+      "topic": "macro catalysts",
+      "url": "https://www.bis.org/doclist/cbspeeches.rss",
+      "allowed_url_prefixes": [
+        "https://www.bis.org/review/",
+        "https://www.bis.org/speeches/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "financial stability",
+        "rates",
+        "central bank"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 200,
+      "max_entries": 3
+    },
+    {
+      "name": "IMF News RSS",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "url": "https://www.imf.org/en/News/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/News/",
+        "https://www.imf.org/en/Publications/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "gdp",
+        "fiscal",
+        "growth",
+        "imf"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 3
+    },
+    {
+      "name": "NY Fed Liberty Street Economics RSS",
+      "topic": "market structure",
+      "url": "https://libertystreeteconomics.newyorkfed.org/feed/",
+      "allowed_url_prefixes": [
+        "https://libertystreeteconomics.newyorkfed.org/"
+      ],
+      "required_keywords": [
+        "federal reserve",
+        "market",
+        "monetary",
+        "inflation",
+        "rates",
+        "treasury",
+        "liquidity"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 200,
+      "max_entries": 3
+    },
+    {
+      "name": "Treasury Press Releases RSS",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "url": "https://home.treasury.gov/news/press-releases/rss.xml",
+      "allowed_url_prefixes": [
+        "https://home.treasury.gov/news/press-releases/"
+      ],
+      "required_keywords": [
+        "treasury",
+        "fiscal",
+        "debt",
+        "issuance",
+        "refunding",
+        "sanctions",
+        "market"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 4
+    },
+    {
+      "name": "Richmond Fed Research RSS",
+      "topic": "macro catalysts",
+      "enabled": true,
+      "url": "https://www.richmondfed.org/feeds/research",
+      "allowed_url_prefixes": [
+        "https://www.richmondfed.org/publications/research/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "rates",
+        "labor market",
+        "economy"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 3
+    },
+    {
+      "name": "San Francisco Fed Economic Letter RSS",
+      "topic": "macro catalysts",
+      "url": "https://www.frbsf.org/research-and-insights/publications/economic-letter/feed/",
+      "allowed_url_prefixes": [
+        "https://www.frbsf.org/research-and-insights/publications/economic-letter/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "inflation",
+        "rates",
+        "economy",
+        "federal reserve"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 3
+    },
+    {
+      "name": "arXiv q-fin Risk Management",
+      "topic": "quantitative_finance",
+      "url": "http://export.arxiv.org/rss/q-fin.RM",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://arxiv.org/abs/"
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 100,
+      "max_entries": 8
+    },
+    {
+      "name": "arXiv q-fin Portfolio Management",
+      "topic": "quantitative_finance",
+      "url": "http://export.arxiv.org/rss/q-fin.PM",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://arxiv.org/abs/"
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 100,
+      "max_entries": 8
+    },
+    {
+      "name": "arXiv q-fin Mathematical Finance",
+      "topic": "quantitative_finance",
+      "url": "http://export.arxiv.org/rss/q-fin.MF",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://arxiv.org/abs/"
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 100,
+      "max_entries": 8
+    },
+    {
+      "name": "arXiv q-fin Economics",
+      "topic": "quantitative_finance",
+      "url": "http://export.arxiv.org/rss/q-fin.EC",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://arxiv.org/abs/"
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 100,
+      "max_entries": 8
+    },
+    {
+      "name": "arXiv q-fin Trading",
+      "topic": "quantitative_finance",
+      "url": "http://export.arxiv.org/rss/q-fin.TR",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://arxiv.org/abs/"
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 100,
+      "max_entries": 8
+    },
+    {
+      "name": "arXiv econ General",
+      "topic": "quantitative_finance",
+      "url": "http://export.arxiv.org/rss/econ.GN",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://arxiv.org/abs/"
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 100,
+      "max_entries": 8
+    },
+    {
+      "name": "SSRN Finance",
+      "topic": "quantitative_finance",
+      "url": "https://papers.ssrn.com/sol3/Jrnls/rss.cfm?link=fin",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://papers.ssrn.com/sol3/paper.cfm?abstract_id="
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 50,
+      "max_entries": 8
+    },
+    {
+      "name": "BIS Working Papers",
+      "topic": "central_bank_research",
+      "url": "https://www.bis.org/doclist/bis_fsi_publs.rss",
+      "allowed_url_prefixes": [
+        "https://www.bis.org/publ/",
+        "https://www.bis.org/fsi/"
+      ],
+      "required_keywords": [
+        "monetary policy",
+        "financial stability",
+        "banking",
+        "liquidity",
+        "risk",
+        "regulation"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 5
+    },
+    {
+      "name": "IMF Working Papers",
+      "topic": "macro_research",
+      "url": "https://www.imf.org/en/Publications/WP/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Publications/WP/"
+      ],
+      "required_keywords": [
+        "imf",
+        "monetary",
+        "fiscal",
+        "growth",
+        "inflation",
+        "exchange rate"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 4
+    },
+    {
+      "name": "IMF World Economic Outlook",
+      "topic": "global_economy",
+      "url": "https://www.imf.org/en/Publications/WEO/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Publications/WEO/"
+      ],
+      "required_keywords": [
+        "imf",
+        "world economic outlook",
+        "gdp",
+        "growth",
+        "inflation",
+        "forecast"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 2
+    },
+    {
+      "name": "IMF Global Financial Stability Report",
+      "topic": "financial_stability",
+      "url": "https://www.imf.org/en/Publications/GFSR/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Publications/GFSR/"
+      ],
+      "required_keywords": [
+        "imf",
+        "financial stability",
+        "risk",
+        "banking",
+        "markets"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 2
+    },
+    {
+      "name": "IMF Blog",
+      "topic": "macro_commentary",
+      "url": "https://www.imf.org/en/Blogs/rss",
+      "allowed_url_prefixes": [
+        "https://www.imf.org/en/Blogs/"
+      ],
+      "required_keywords": [
+        "imf",
+        "economy",
+        "policy",
+        "growth",
+        "inflation",
+        "fiscal",
+        "monetary"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 120,
+      "max_entries": 4
+    },
+    {
+      "name": "World Bank Research",
+      "topic": "development_economics",
+      "url": "https://www.worldbank.org/en/research/rss",
+      "allowed_url_prefixes": [
+        "https://www.worldbank.org/en/research/",
+        "https://openknowledge.worldbank.org/"
+      ],
+      "required_keywords": [
+        "world bank",
+        "development",
+        "growth",
+        "poverty",
+        "economy"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 150,
+      "max_entries": 3
+    },
+    {
+      "name": "World Bank Data Blog",
+      "topic": "development_economics",
+      "url": "https://blogs.worldbank.org/en/rss.xml",
+      "allowed_url_prefixes": [
+        "https://blogs.worldbank.org/en/research/"
+      ],
+      "required_keywords": [
+        "world bank",
+        "data",
+        "development",
+        "economy",
+        "growth"
+      ],
+      "blocked_keywords": [],
+      "min_word_count": 120,
+      "max_entries": 2
+    },
+    {
+      "name": "SSRN Management",
+      "topic": "quantitative_finance",
+      "url": "https://papers.ssrn.com/sol3/Jrnls/rss.cfm?link=mngt",
+      "source_type": "academic",
+      "allowed_url_prefixes": [
+        "https://papers.ssrn.com/sol3/paper.cfm?abstract_id="
+      ],
+      "required_keywords": [],
+      "blocked_keywords": [],
+      "min_word_count": 50,
+      "max_entries": 8
+    }
+  ]
 }

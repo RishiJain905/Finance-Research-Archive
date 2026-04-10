@@ -15,6 +15,7 @@ Clusters are promoted to 'stable' when reaching stable_threshold (5) records.
 import json
 import os
 import re
+import sys
 import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -26,6 +27,8 @@ DEFAULT_EVENTS_DIR = "data/events"
 DEFAULT_CONFIG_PATH = "config/clustering_rules.json"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
 
 
 def load_config(config_path: str = DEFAULT_CONFIG_PATH) -> dict:
@@ -480,14 +483,18 @@ def find_recent_clusters(
     """
     similarity_threshold = config.get("similarity_threshold", 60)
 
-    record_date_str = record.get("source", {}).get("published_at", "")
-    if record_date_str:
+    def _parse_utc_date_prefix(date_str: str) -> datetime:
+        if not date_str:
+            return datetime.now(timezone.utc)
         try:
-            record_date = datetime.strptime(record_date_str[:10], "%Y-%m-%d")
+            return datetime.strptime(date_str[:10], "%Y-%m-%d").replace(
+                tzinfo=timezone.utc
+            )
         except ValueError:
-            record_date = datetime.now(timezone.utc)
-    else:
-        record_date = datetime.now(timezone.utc)
+            return datetime.now(timezone.utc)
+
+    record_date_str = record.get("source", {}).get("published_at", "")
+    record_date = _parse_utc_date_prefix(record_date_str)
 
     matching_clusters = []
 
@@ -498,13 +505,7 @@ def find_recent_clusters(
 
         # Compute time proximity first as a quick filter
         cluster_date_str = cluster.get("created_at", "")
-        if cluster_date_str:
-            try:
-                cluster_date = datetime.strptime(cluster_date_str[:10], "%Y-%m-%d")
-            except ValueError:
-                cluster_date = datetime.now(timezone.utc)
-        else:
-            cluster_date = datetime.now(timezone.utc)
+        cluster_date = _parse_utc_date_prefix(cluster_date_str)
 
         days_diff = abs((record_date - cluster_date).days)
 

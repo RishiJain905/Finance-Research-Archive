@@ -24,13 +24,12 @@ if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
 from scripts.verification_store import canonicalize_verification_artifact
-from scripts.ingest_sources import ensure_manifest_shape, load_json, save_json
+from scripts.manifest_db import add_fingerprint, get_fingerprint_record_id
 from scripts.assign_quality_tier import assign_quality_tier
 
 REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
 REJECTED_DIR = BASE_DIR / "data" / "rejected"
-MANIFEST_PATH = BASE_DIR / "data" / "ingestion_manifest.json"
 
 
 def load_json_file(path: Path) -> dict[str, Any]:
@@ -157,8 +156,6 @@ def main() -> None:
     if not source_domain and source_url:
         source_domain = urlparse(source_url).netloc
 
-    manifest = ensure_manifest_shape(load_json(MANIFEST_PATH, {}))
-
     if status == "accepted":
         # Event-level deduplication: demote to review_queue if the same
         # (domain, date, event_type) has already been accepted.
@@ -167,7 +164,7 @@ def main() -> None:
         event_fp = compute_event_fingerprint(source_domain, published_at, event_type)
 
         if event_fp:
-            existing = manifest["event_fingerprints"].get(event_fp)
+            existing = get_fingerprint_record_id("event_fingerprints", event_fp)
             if existing and existing != record_id:
                 print(
                     f"  Event-level duplicate detected (fingerprint matches {existing}). "
@@ -226,10 +223,33 @@ def main() -> None:
                 f"  Quality tier: {tier_block['quality_tier']['tier']} (score: {tier_block['quality_tier']['score']})"
             )
 
+            # Upsert into vector store for semantic search and dedup
+            try:
+                from scripts.vector_store import upsert_record as vs_upsert
+
+                vs_content = (
+                    record.get("title", "") + "\n\n" + record.get("summary", "")
+                ).strip()
+                vs_upsert(
+                    record_id,
+                    vs_content,
+                    {
+                        "title": record.get("title", ""),
+                        "domain": source_domain,
+                        "published_at": record.get("source", {}).get(
+                            "published_at", ""
+                        ),
+                        "event_type": record.get("event_type", ""),
+                        "url": record.get("source", {}).get("url", ""),
+                    },
+                )
+                print("  Vector store updated")
+            except Exception as e:
+                print(f"  Warning: Vector store upsert skipped: {e}")
+
             # Register event fingerprint so future duplicates are caught.
             if event_fp:
-                manifest["event_fingerprints"][event_fp] = record_id
-                save_json(MANIFEST_PATH, manifest)
+                add_fingerprint("event_fingerprints", event_fp, record_id)
 
             if source_domain:
                 # Get memory outcome from human_feedback if present

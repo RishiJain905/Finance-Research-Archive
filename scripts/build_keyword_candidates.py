@@ -12,6 +12,7 @@ Dependencies:
 import io
 import json
 import re
+import sys
 import warnings
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
@@ -21,6 +22,10 @@ from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
+
+_BASE_DIR = Path(__file__).resolve().parent.parent
+if str(_BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(_BASE_DIR))
 
 # BeautifulSoup emits non-critical Unicode replacement warnings on some pages;
 # suppress them so they don't pollute pipeline output.

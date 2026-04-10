@@ -37,6 +37,18 @@ def load_json_file(path: Path) -> dict:
         return json.load(f)
 
 
+def load_record_rules(record_id: str) -> dict:
+    """Rules from legacy JSON manifest or SQLite (Phase 3 migration)."""
+    if INGESTION_MANIFEST_PATH.exists():
+        ingestion_manifest = load_json_file(INGESTION_MANIFEST_PATH)
+        return ingestion_manifest.get("record_rules", {}).get(record_id, {}) or {}
+    from scripts.manifest_db import ensure_schema, get_record_rules
+
+    ensure_schema()
+    rules = get_record_rules(record_id)
+    return dict(rules) if rules else {}
+
+
 def save_json_file(path: Path, data: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
@@ -372,8 +384,7 @@ def main() -> None:
     source_record = parse_raw_record(source_text)
     research_record = load_json_file(record_path)
     verify_prompt = load_text_file(verify_prompt_path)
-    ingestion_manifest = load_json_file(INGESTION_MANIFEST_PATH)
-    rules = ingestion_manifest.get("record_rules", {}).get(record_id, {})
+    rules = load_record_rules(record_id)
 
     prompt_input = build_verify_input(verify_prompt, source_record, research_record)
 
