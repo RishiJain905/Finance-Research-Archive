@@ -253,6 +253,16 @@ def main() -> None:
             rules_used = {"record_type": "article", **rules}
 
         if keep:
+            try:
+                from scripts.vector_store import is_semantically_duplicate
+
+                if is_semantically_duplicate(body_text, threshold=0.92):
+                    keep = False
+                    reasons = ["semantic_duplicate"]
+            except Exception as e:
+                print(f"  Warning: Semantic dedup skipped: {e}")
+
+        if keep:
             manifest["kept"][record_id] = {"reasons": [], "rules_used": rules_used}
             kept.append(record_id)
             print(f"KEEP: {record_id}")

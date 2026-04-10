@@ -223,6 +223,30 @@ def main() -> None:
                 f"  Quality tier: {tier_block['quality_tier']['tier']} (score: {tier_block['quality_tier']['score']})"
             )
 
+            # Upsert into vector store for semantic search and dedup
+            try:
+                from scripts.vector_store import upsert_record as vs_upsert
+
+                vs_content = (
+                    record.get("title", "") + "\n\n" + record.get("summary", "")
+                ).strip()
+                vs_upsert(
+                    record_id,
+                    vs_content,
+                    {
+                        "title": record.get("title", ""),
+                        "domain": source_domain,
+                        "published_at": record.get("source", {}).get(
+                            "published_at", ""
+                        ),
+                        "event_type": record.get("event_type", ""),
+                        "url": record.get("source", {}).get("url", ""),
+                    },
+                )
+                print("  Vector store updated")
+            except Exception as e:
+                print(f"  Warning: Vector store upsert skipped: {e}")
+
             # Register event fingerprint so future duplicates are caught.
             if event_fp:
                 add_fingerprint("event_fingerprints", event_fp, record_id)

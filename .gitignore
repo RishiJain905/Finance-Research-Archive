@@ -7,6 +7,9 @@ data/candidates/
 # SQLite WAL mode temporary files — not part of the database state
 data/archive.db-wal
 data/archive.db-shm
+# ChromaDB WAL mode temporary files
+data/vector_store/chroma.sqlite3-wal
+data/vector_store/chroma.sqlite3-shm
 # Windows shell artefact (redirect to NUL device creates this file)
 nul
 # Processed inbox files (moved after ingestion)
