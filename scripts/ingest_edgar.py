@@ -27,6 +27,7 @@ from scripts.manifest_db import (
     upsert_seen_url,
     set_record_map,
 )
+from scripts.source_health_tracker import is_auto_disabled, update as track_health
 
 CONFIG_PATH = BASE_DIR / "config" / "edgar_sources.json"
 RAW_DIR = BASE_DIR / "data" / "raw"
@@ -284,6 +285,11 @@ def main() -> None:
 
     total_created = 0
     for company in companies:
+        company_name = company["name"]
+        if company.get("auto_disabled", False) or is_auto_disabled(company_name):
+            print(f"\n=== {company_name}: auto-disabled, skipping. ===")
+            continue
+
         created = run_one_company(
             session,
             company,
@@ -292,6 +298,12 @@ def main() -> None:
             max_filings,
         )
         total_created += len(created)
+        track_health(
+            company_name,
+            len(created),
+            config_path=CONFIG_PATH,
+            config_list_key="companies",
+        )
 
     print(f"\n=== Done. Created {total_created} new record(s) ===")
 

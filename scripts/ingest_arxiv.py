@@ -48,6 +48,7 @@ from scripts.manifest_db import (
     set_record_rules,
     upsert_seen_url,
 )
+from scripts.source_health_tracker import is_auto_disabled, update as track_health
 import requests
 
 CONFIG_PATH = BASE_DIR / "config" / "academic_sources.json"
@@ -232,15 +233,22 @@ def _run_arxiv(arxiv_config: dict) -> list[str]:
     current_year = date.today().year
 
     for category in categories:
+        source_name = f"arXiv {category}"
         print(f"\narXiv: fetching category {category}")
+
+        if is_auto_disabled(source_name):
+            print(f"  Auto-disabled, skipping.")
+            continue
 
         try:
             papers = fetch_arxiv_feed(category, lookback_days, max_per_category)
         except Exception as e:
             print(f"  Failed to fetch {category}: {e}")
+            track_health(source_name, 0)
             continue
 
         print(f"  Found {len(papers)} papers from last {lookback_days} days")
+        category_created: list[str] = []
 
         for paper in papers:
             paper_id = paper["id"]
@@ -251,7 +259,7 @@ def _run_arxiv(arxiv_config: dict) -> list[str]:
                 print(f"  Already processed {paper_id}, skipping.")
                 continue
 
-            name = f"arXiv {category}"
+            name = source_name
             topic = "quantitative_finance"
             record_id = build_record_id(name, paper["title"], paper_url)
 
@@ -296,9 +304,12 @@ def _run_arxiv(arxiv_config: dict) -> list[str]:
             add_fingerprint("content_fingerprints", content_fp, record_id)
 
             created.append(record_id)
+            category_created.append(record_id)
             print(f"  Saved: {paper_id} → {output_path.name}")
 
             time.sleep(0.3)  # Polite rate limiting
+
+        track_health(source_name, len(category_created))
 
     return created
 

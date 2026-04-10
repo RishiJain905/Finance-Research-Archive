@@ -26,6 +26,7 @@ from scripts.manifest_db import (
     set_record_rules,
     upsert_seen_url,
 )
+from scripts.source_health_tracker import is_auto_disabled, update as track_health
 
 CONFIG_PATH = BASE_DIR / "config" / "ingestion_targets.json"
 RAW_DIR = BASE_DIR / "data" / "raw"
@@ -621,6 +622,11 @@ def main() -> list[str]:
             continue
 
         name = target["name"]
+
+        if target.get("auto_disabled", False) or is_auto_disabled(name):
+            print(f"\nTarget: {name}")
+            print("  Auto-disabled, skipping.")
+            continue
         topic = target["topic"]
         url = target["url"]
         allowed_prefixes = target.get("allowed_prefixes", [])
@@ -645,6 +651,7 @@ def main() -> list[str]:
             index_html = fetch_html(url)
         except Exception as e:
             print(f"  Failed to fetch target page: {e}")
+            track_health(name, 0, config_path=CONFIG_PATH, config_list_key="targets")
             continue
 
         article_links = extract_links(
@@ -654,9 +661,11 @@ def main() -> list[str]:
 
         if not article_links:
             print("  No candidate links found.")
+            track_health(name, 0, config_path=CONFIG_PATH, config_list_key="targets")
             continue
 
         print(f"  Found {len(article_links)} candidate links")
+        target_created: list[str] = []
 
         for article_url in article_links:
             print(f"  Fetching article: {article_url}")
@@ -754,7 +763,10 @@ def main() -> list[str]:
             add_fingerprint("content_fingerprints", content_fp, record_id)
 
             created.append(record_id)
+            target_created.append(record_id)
             print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
+
+        track_health(name, len(target_created), config_path=CONFIG_PATH, config_list_key="targets")
 
     print("\nCreated/updated record ids:")
     if created:

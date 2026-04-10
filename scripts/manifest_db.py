@@ -67,6 +67,15 @@ CREATE TABLE IF NOT EXISTS quant_seen_series (
     processed_at  TEXT,
     PRIMARY KEY (series_id, snapshot_date)
 );
+
+CREATE TABLE IF NOT EXISTS source_health (
+    source_name            TEXT PRIMARY KEY,
+    consecutive_empty_runs INTEGER NOT NULL DEFAULT 0,
+    total_raw_fetched      INTEGER NOT NULL DEFAULT 0,
+    last_run_at            TEXT,
+    auto_disabled          INTEGER NOT NULL DEFAULT 0,
+    disabled_at            TEXT
+);
 """
 
 _VALID_FINGERPRINT_TABLES = frozenset(
@@ -345,3 +354,96 @@ def get_quant_series_ids_for_run(
         (snapshot_date,),
     ).fetchall()
     return [row["series_id"] for row in rows]
+
+
+# ---------------------------------------------------------------------------
+# source_health
+# ---------------------------------------------------------------------------
+
+
+def upsert_source_run(
+    source_name: str, raw_fetched: int, db_path: Path = DB_PATH
+) -> None:
+    """Record a pipeline run for *source_name*.
+
+    Increments consecutive_empty_runs when raw_fetched == 0; resets it to 0
+    when at least one raw record was fetched.  total_raw_fetched accumulates
+    across all runs.
+    """
+    conn = get_conn(db_path)
+    now = _now()
+    with conn:
+        conn.execute(
+            """
+            INSERT INTO source_health
+                (source_name, consecutive_empty_runs, total_raw_fetched, last_run_at)
+            VALUES (?, ?, ?, ?)
+            ON CONFLICT(source_name) DO UPDATE SET
+                consecutive_empty_runs = CASE
+                    WHEN excluded.total_raw_fetched = 0
+                    THEN source_health.consecutive_empty_runs + 1
+                    ELSE 0
+                END,
+                total_raw_fetched = source_health.total_raw_fetched + excluded.total_raw_fetched,
+                last_run_at = excluded.last_run_at
+            """,
+            (source_name, 0 if raw_fetched > 0 else 1, raw_fetched, now),
+        )
+
+
+def mark_source_auto_disabled(
+    source_name: str, db_path: Path = DB_PATH
+) -> None:
+    """Set auto_disabled=1 for *source_name* and record the timestamp."""
+    conn = get_conn(db_path)
+    now = _now()
+    with conn:
+        conn.execute(
+            """
+            INSERT INTO source_health (source_name, auto_disabled, disabled_at, last_run_at)
+            VALUES (?, 1, ?, ?)
+            ON CONFLICT(source_name) DO UPDATE SET
+                auto_disabled = 1,
+                disabled_at = excluded.disabled_at
+            """,
+            (source_name, now, now),
+        )
+
+
+def reset_source_auto_disabled(
+    source_name: str, db_path: Path = DB_PATH
+) -> None:
+    """Clear auto_disabled and reset consecutive_empty_runs for *source_name*."""
+    conn = get_conn(db_path)
+    with conn:
+        conn.execute(
+            """
+            INSERT INTO source_health (source_name, auto_disabled, consecutive_empty_runs)
+            VALUES (?, 0, 0)
+            ON CONFLICT(source_name) DO UPDATE SET
+                auto_disabled = 0,
+                consecutive_empty_runs = 0,
+                disabled_at = NULL
+            """,
+            (source_name,),
+        )
+
+
+def get_source_health(
+    source_name: str, db_path: Path = DB_PATH
+) -> Optional[dict]:
+    """Return health row for *source_name*, or None if not found."""
+    conn = get_conn(db_path)
+    row = conn.execute(
+        "SELECT * FROM source_health WHERE source_name = ?", (source_name,)
+    ).fetchone()
+    return dict(row) if row else None
+
+
+def get_all_source_health(db_path: Path = DB_PATH) -> list:
+    """Return all rows from source_health ordered by source_name."""
+    conn = get_conn(db_path)
+    rows = conn.execute(
+        "SELECT * FROM source_health ORDER BY source_name"
+    ).fetchall()
+    return [dict(row) for row in rows]

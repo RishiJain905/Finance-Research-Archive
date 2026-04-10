@@ -47,6 +47,7 @@ from scripts.manifest_db import (
     set_record_rules,
     upsert_seen_url,
 )
+from scripts.source_health_tracker import is_auto_disabled, update as track_health
 
 RSS_CONFIG_PATH = BASE_DIR / "config" / "rss_feeds.json"
 
@@ -119,6 +120,12 @@ def main() -> list[str]:
             continue
 
         name = feed_config["name"]
+
+        if feed_config.get("auto_disabled", False) or is_auto_disabled(name):
+            print(f"\nFeed: {name}")
+            print("  Auto-disabled, skipping.")
+            continue
+
         topic = feed_config["topic"]
         feed_url = feed_config["url"]
         allowed_prefixes = feed_config.get("allowed_url_prefixes", [])
@@ -133,16 +140,19 @@ def main() -> list[str]:
         )
 
         print(f"\nFeed: {name}")
+        feed_created: list[str] = []
 
         try:
             feed = fetch_feed(feed_url)
         except Exception as e:
             print(f"  Failed to fetch feed: {e}")
+            track_health(name, 0, config_path=RSS_CONFIG_PATH, config_list_key="feeds")
             continue
 
         entries = feed.entries or []
         if not entries:
             print("  No entries found in feed.")
+            track_health(name, 0, config_path=RSS_CONFIG_PATH, config_list_key="feeds")
             continue
 
         # Prefer entries with a year signal matching current or previous year,
@@ -261,10 +271,13 @@ def main() -> list[str]:
             add_fingerprint("content_fingerprints", content_fp, record_id)
 
             created.append(record_id)
+            feed_created.append(record_id)
             print(f"    Saved: {output_path.relative_to(BASE_DIR)}")
 
             # Small pause between article fetches to be polite.
             time.sleep(0.5)
+
+        track_health(name, len(feed_created), config_path=RSS_CONFIG_PATH, config_list_key="feeds")
 
     print("\nRSS ingest complete. Created/updated record ids:")
     if created:
