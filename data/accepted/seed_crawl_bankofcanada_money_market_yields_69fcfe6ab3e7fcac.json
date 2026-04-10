@@ -1,0 +1,81 @@
+{
+  "id": "seed_crawl_bankofcanada_money_market_yields_69fcfe6ab3e7fcac",
+  "created_at": "2026-04-01T09:15:51.369800+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Money market yields",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/money-market-yields",
+    "published_at": "",
+    "source_type": "data_page",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "Bank of Canada publishes daily money market yield data including the Overnight Money Market Financing Rate, Canadian Overnight Repo Rate Average (CORRA), and Treasury bill rates across maturities from 1 month to 1 year. Data covers the period March 24-30, 2026.",
+  "key_points": [
+    "Overnight Money Market Financing Rate ranged from 2.2494% to 2.2960% during the period",
+    "Canadian Overnight Repo Rate Average (CORRA) ranged from 2.2700% to 2.3300% during the period",
+    "3-month Treasury bill yields ranged from 2.29% to 2.39% during the period",
+    "1-year Treasury bill yields ranged from 2.64% to 2.68% during the period",
+    "Data shows typical yield curve progression with 1-month T-bills at ~2.25-2.29% and 1-year at ~2.64-2.68%"
+  ],
+  "why_it_matters": "These are official Bank of Canada reference rates that serve as benchmarks for Canadian money markets, bank lending, and financial contracts. The yield spread between maturities reflects market expectations for future rate movements.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The yield levels around 2.25-2.68% indicate relatively stable short-term rates in Canada. No policy signals or commentary are provided in this data-only publication.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "CORRA: 2.3000% (2026-03-24), 2.3300% (2026-03-25), 2.3200% (2026-03-26), 2.2900% (2026-03-27), 2.2700% (2026-03-30)",
+    "Overnight Money Market Financing Rate: 2.2738% to 2.2960%",
+    "3-month T-bill: 2.29% to 2.39%",
+    "1-year T-bill: 2.64% to 2.68%"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "money-market",
+    "interest-rates",
+    "treasury-bills",
+    "corra",
+    "canada",
+    "daily-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 0,
+    "verdict": "pending",
+    "issues_found": [
+      "Source is raw data only with no analytical content or macro context",
+      "published_at date not provided in source metadata",
+      "No narrative, commentary, or policy interpretation included",
+      "Content is thin - essentially a data table"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This is a data reference page, not analytical content. Useful as a data point for historical rate levels but provides no macro interpretation or catalyst signal."
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_money_market_yields_69fcfe6ab3e7fcac.txt",
+  "notes": "Source is a data-only publication page from Bank of Canada. The data itself is factual and high-quality but the source contains no analysis, commentary, or policy signals. Best used as a rate reference rather than a macro catalyst source. Discovery dates (2026-03-24 to 2026-03-30) indicate recent data.",
+  "quality_tier": {
+    "tier": "tier_3",
+    "score": 48.0,
+    "reasoning": [
+      "quality score: 48.0/100 (acceptable)",
+      "very low verification confidence",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}
