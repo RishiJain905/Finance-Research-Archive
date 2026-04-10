@@ -1,18 +1,21 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "event_type incorrectly set to 'research_paper' - source is a Treasury press release summarizing a report, not a research paper. More appropriate types would be 'economic_commentary' or 'blog_post'",
-    "Source is a press release with promotional language for the Biden-Harris Administration, which affects source quality assessment",
-    "Source published October 2023 (over 2.5 years old), though it may have archival value as a historical policy document"
+    "event_type is 'research_paper' but source is a press_release from Treasury's news section, not a research paper. Should be 'economic_commentary' or similar.",
+    "Source is not relevant to market structure or macro catalysts — it is retrospective policy advocacy summarizing pandemic-era statistics, not a forward-looking catalyst.",
+    "Source attribution URL (home.treasury.gov/news/press-releases/) points to a press release, not a research paper or working paper.",
+    "No asset class implications, market reactions, or market structure context present in source.",
+    "market_impact.confidence is 0 with no directional bias — correctly indicates no market relevance, but this confirms unsuitability for a finance research archive targeting macro catalysts.",
+    "Source age is 29 months (2023-10-23) — beyond the 90-day threshold and lacks the archival value of a key research finding or historical policy decision that would justify inclusion."
   ],
-  "human_review_required": true,
-  "human_review_reason": "The record is mostly accurate in its factual content and statistics, but has a clear event_type misclassification. Human judgment is needed to determine: (1) whether 'research_paper' should be corrected to 'economic_commentary' given the press release format, and (2) whether this historical policy retrospective has sufficient archival value for a finance research archive focused on macro catalysts.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "Record contains clear, unambiguous rejection criteria: event_type mismatch, source is not a macro catalyst or market-relevant document, and lacks relevance to market structure. No human judgment needed — the source fails the relevance threshold by design.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "This source is a retrospective policy advocacy document from the Treasury Department summarizing pandemic-era recovery statistics and attributing outcomes to the American Rescue Plan. It contains no forward-looking economic signals, policy decisions, or market-moving content. It is not relevant to macro catalysts or market structure.",
     "macro_context": "",
-    "market_structure_context": "event_type should be changed from 'research_paper' to 'economic_commentary' or retained as is pending human review on classification appropriateness"
+    "market_structure_context": ""
   }
 }

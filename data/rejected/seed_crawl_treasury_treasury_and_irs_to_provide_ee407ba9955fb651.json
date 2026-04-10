@@ -1,26 +1,26 @@
 {
   "id": "seed_crawl_treasury_treasury_and_irs_to_provide_ee407ba9955fb651",
-  "created_at": "2026-04-03T16:48:04.153160+00:00",
+  "created_at": "2026-04-10T05:41:43.303753+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "regulatory_guidance",
+  "event_type": "unknown",
   "title": "Treasury and IRS to Provide Guidance to Religious Organizations",
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/news/press-releases/sb0432",
-    "domain": "home.treasury.gov",
     "published_at": "2026-04-03",
-    "source_type": "press_release"
+    "source_type": "press_release",
+    "domain": "home.treasury.gov"
   },
-  "summary": "The U.S. Department of the Treasury and IRS announced plans to issue guidance clarifying the application of the Johnson Amendment to religious organizations, responding to recent litigation in National Religious Broadcasters v. Bessent. The guidance will address whether certain communications made within religious services constitute prohibited political campaign intervention under current tax law.",
+  "summary": "The U.S. Department of the Treasury and IRS announced plans to develop guidance on the Johnson Amendment, clarifying how tax rules apply to communications by houses of worship within religious services. The announcement responds to litigation (National Religious Broadcasters v. Bessent) and aims to provide administrable standards for religious organizations regarding political campaign intervention prohibitions. Treasury Secretary Scott Bessent framed this as protecting religious freedom ahead of the nation's 250th anniversary.",
   "key_points": [
-    "Treasury Secretary Scott Bessent stated the guidance will provide clear, administrable standards for houses of worship",
-    "The guidance will address how the law applies to communications made within the context of religious services",
-    "The announcement references the National Religious Broadcasters v. Bessent case where the IRS proposed that bona fide communications internal to a house of worship do not constitute prohibited political campaign intervention",
-    "The federal district court dismissed the case for lack of jurisdiction before considering the proposed resolution",
-    "The guidance release date will be determined later in 2026"
+    "Treasury and IRS will issue guidance clarifying the Johnson Amendment's application to houses of worship",
+    "The guidance will address bona fide internal communications within religious contexts and communications between houses of worship and their congregations",
+    "The initiative responds to National Religious Broadcasters v. Bessent, where a federal district court dismissed the case before approving a proposed resolution",
+    "Treasury Secretary Scott Bessent framed this as religious liberty protection ahead of the nation's 250th anniversary year",
+    "Stakeholder engagement is planned during development; release timing is undetermined"
   ],
-  "why_it_matters": "This announcement concerns tax guidance for religious organizations regarding the Johnson Amendment (political campaign intervention by tax-exempt organizations). It has no relevance to market structure or macro economic catalysts. No connection to financial markets, interest rates, monetary policy, fiscal policy, economic indicators, or market operations.",
+  "why_it_matters": "This is a tax policy announcement about religious organizations and political activity restrictions under the Johnson Amendment. It has no relevance to financial markets, monetary policy, interest rates, economic data, or market structure.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -33,23 +33,24 @@
     "treasury",
     "irs",
     "johnson-amendment",
-    "religious-organizations",
-    "tax-policy",
-    "regulatory-guidance"
+    "religious-freedom",
+    "tax-guidance",
+    "non-market"
   ],
   "llm_review": {
-    "initial_confidence": 5,
-    "verification_confidence": 7,
-    "verdict": "review",
+    "initial_confidence": 2,
+    "verification_confidence": 5,
+    "verdict": "reject",
     "issues_found": [
-      "Source is tagged 'macro catalysts' but content is about Johnson Amendment guidance for religious organizations - not relevant to market structure or macro economic catalysts",
-      "The source correctly identifies this as out of scope in internal notes, but the topic tag is misapplied"
+      "event_type is set to 'unknown' but should be 'regulatory_guidance' - the source announces forthcoming IRS regulatory guidance, which is a valid taxonomy value and obvious from context",
+      "Source is not relevant to macro catalysts or market structure - content concerns tax policy guidance for religious organizations on the Johnson Amendment with zero market or financial implications",
+      "Topic mismatch: metadata specifies macro catalysts TARGET/TOPIC but content is religious tax policy"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "The record accurately reflects the source content and properly identifies it as out of scope. The event_type 'regulatory_guidance' is valid. However, the topic 'macro catalysts' is incorrect for this source. This should be rejected on topic grounds per the target definition, not quality grounds."
+    "notes": "Source appears to be miscategorized in TARGET/TOPIC fields. Content is about religious tax policy, not macro market catalysts. Human review should consider whether this is a crawl error or misrouted content."
   },
   "human_feedback": {
     "decision": "",
@@ -60,14 +61,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_treasury_and_irs_to_provide_ee407ba9955fb651.txt",
-  "notes": "OUT OF SCOPE: This source concerns tax guidance for religious organizations regarding the Johnson Amendment. It has no relevance to market structure (market operations, plumbing, liquidity, trading mechanics) or macro catalysts (monetary policy, fiscal policy, economic data releases, central bank decisions). Classified as regulatory_guidance but archived only to maintain completeness; not useful for finance research focused on the target topics.",
+  "notes": "OUT OF SCOPE: This Treasury press release concerns IRS guidance on the Johnson Amendment (restrictions on religious organizations engaging in political campaign activity). The source has no relevance to market structure (trading, operations, plumbing) or macro catalysts (monetary policy, rate decisions, economic data releases, fiscal policy events that move markets). No financial market impact. No important numbers or economic statistics cited. Publishing date April 3, 2026 is within 90-day window of TODAY but this temporal relevance does not create market relevance.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "not-applicable",
-    "score": 0,
+    "tier": "low",
+    "score": 3,
     "reasoning": [
-      "Out of scope for target topics (market structure, macro catalysts)"
+      "Source is correctly a press release but content is not finance-relevant",
+      "No market data, policy rates, or economic statistics present",
+      "Topic misaligned with target category (macro catalysts)",
+      "Low utility for any market structure or macro research purpose"
     ]
   }
 }

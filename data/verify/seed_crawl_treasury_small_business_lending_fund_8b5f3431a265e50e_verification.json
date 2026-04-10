@@ -1,20 +1,18 @@
 {
-  "verification_confidence": 2,
-  "verdict": "reject",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "Source classified as TARGET 'macro catalysts' but content is informational page about a legacy government program, not a market catalyst",
-    "event_type set to 'unknown' - correct choice for this source type, but classification mismatch remains",
-    "No publication date available to assess source recency beyond the data points cited (Q3 2025, Dec 2025)",
-    "Source describes a wound-down program (327 of 332 institutions redeemed) with no current market-moving information",
-    "Program established 2010 - historical policy, not current macro catalyst",
-    "The summary and why_it_matters are factually accurate, but the fundamental target classification is wrong"
+    "event_type is 'unknown' but could be more precisely classified as 'economic_commentary' given the source is a program overview/description from Treasury",
+    "Source is informational program description rather than current macro catalyst - it describes a 2010 policy program with retrospective statistics through Q3 2025",
+    "No published_at date in source metadata to verify content currency",
+    "Source lacks forward-looking policy implications or current market-moving content"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately describes the source content, but the source itself is incorrectly targeted. This Treasury informational page about a legacy 2010 program is not relevant to 'macro catalysts'. The record's own analysis correctly identifies this ('NOT RELEVANT TO CURRENT MACRO CATALYSTS'). Auto-rejection is appropriate as the target classification fundamentally misaligns with the source content.",
-  "suggested_status": "rejected",
+  "human_review_reason": "Record is accurate and factually supported, but source is historical program information rather than current macro catalyst. Suitable for archive if system captures policy program history.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "The Small Business Lending Fund (SBLF) was established by the Small Business Jobs Act of 2010 to encourage community bank lending to small businesses, with Treasury investing over $4.0 billion across 332 institutions. As of Q3 2025, the cumulative net impact on qualified small business lending over baseline is $19.1 billion, and 327 of 332 institutions have fully redeemed their Treasury investments as of December 1, 2025.",
+    "why_it_matters": "This is historical program information rather than a current macro catalyst. The SBLF is a completed policy initiative from 2010 where most participating institutions have already exited the program after redeeming their Treasury investments. The data provides retrospective evidence on the program's effectiveness at stimulating small business lending, but does not represent current economic data or policy decisions that would affect markets today.",
     "macro_context": "",
     "market_structure_context": ""
   }

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_terrorist_finance_tracking_program_tftp_db1e5adc805acc43",
-  "created_at": "2026-04-01T20:55:24.579365+00:00",
+  "created_at": "2026-04-10T05:39:25.330782+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,20 +8,20 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/terrorism-and-illicit-finance/terrorist-finance-tracking-program-tftp",
-    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "seed_crawl"
+    "source_type": "homepage",
+    "domain": "home.treasury.gov"
   },
-  "summary": "This source describes the Treasury's Terrorist Finance Tracking Program (TFTP), a counter-terrorism initiative that uses SWIFT financial messaging data to trace terrorist financing networks. The content is about national security policy and has no relevance to market structure or macro catalysts for financial market research.",
+  "summary": "The U.S. Department of the Treasury provides an overview of the Terrorist Finance Tracking Program (TFTP), a counter-terrorism initiative that uses subpoenas to SWIFT to obtain financial messaging data for identifying and disrupting terrorist networks. The program operates under legal authorities including IEEPA and UNPA, with an agreement with the European Union effective August 1, 2010, governing data processing and transfers.",
   "key_points": [
-    "TFTP was initiated after September 11, 2001 to identify and track terrorists including Al-Qaida, Hizballah, and HAMAS networks",
-    "Treasury issues subpoenas to SWIFT (Society for Worldwide Interbank Financial Telecommunication) for financial transaction data on suspected terrorists",
-    "Since 2010, SWIFT data has been stored in the European Union under a U.S.-EU agreement",
-    "The program operates under legal authority including IEEPA and UNPA, plus Executive Orders",
-    "SWIFT is overseen by a committee including the Federal Reserve, Bank of England, ECB, and Bank of Japan",
-    "The program includes privacy safeguards with independent audits and systematic logging of searches"
+    "TFTP was initiated after September 11, 2001 to identify, track, and pursue terrorists including Al-Qaeda, Hizballah, and HAMAS",
+    "Treasury issues subpoenas to SWIFT (Society for Worldwide Interbank Financial Telecommunication) for financial transaction data related to suspected terrorism",
+    "Data storage moved from U.S. servers to the European Union at end of 2009, with U.S.-EU agreement effective August 1, 2010",
+    "Program operates under legal authority including International Emergency Economic Powers Act (IEEPA) and United Nations Participation Act (UNPA)",
+    "TFTP explicitly states it does not involve data mining and maintains privacy safeguards including systematic logging and independent audits",
+    "SWIFT is overseen by a committee of major central banks including Federal Reserve, Bank of England, ECB, Bank of Japan, and National Bank of Belgium"
   ],
-  "why_it_matters": "This source is not relevant to financial market research. It describes a national security program and does not contain information about market structure, monetary policy, economic data releases, or other macro catalysts that affect financial markets.",
+  "why_it_matters": "This source is informational about a national security program and contains no market-relevant or macro-catalyst content. It is not relevant to financial market analysis, rate decisions, economic data releases, or market structure.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,28 +31,29 @@
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "tftp",
-    "counter-terrorism",
     "treasury",
+    "counter-terrorism",
+    "tftp",
     "swift",
-    "national-security"
+    "national-security",
+    "not-market-relevant"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source content is entirely about national security/counter-terrorism policy with zero relevance to market structure or macro catalysts",
-      "Metadata topic 'macro catalysts' is incorrect - source discusses counter-terrorism finance tracking, not financial markets",
-      "event_type set to 'unknown' is acceptable in this case as source does not fit any taxonomy category (monetary policy, speeches, data releases, treasury/operations, research)",
-      "No published_at date in source metadata",
-      "Source provides no actionable information for financial market analysis, trading, or investment research"
+      "Source type is homepage per CORE RULE 5 — homepage sources are non-archiveable and must be rejected",
+      "Source topic (counter-terrorism/national security) is entirely unrelated to archive focus on market structure or macro catalysts",
+      "No publication date provided (published_at is empty)",
+      "event_type set to 'unknown' when correct classification is clearly not applicable to market-related events",
+      "Generated record correctly identifies source has no market relevance, but the source itself should have been filtered out before reaching the archive"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Record correctly identifies that source is irrelevant to finance research archive scope. No judgment call needed - the content is unambiguously about counter-terrorism finance policy with no market-moving information."
+    "notes": "container_page"
   },
   "human_feedback": {
     "decision": "",
@@ -63,16 +64,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_terrorist_finance_tracking_program_tftp_db1e5adc805acc43.txt",
-  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a U.S. Treasury national security program description for counter-terrorism finance tracking. The source contains no information about financial markets, interest rates, economic data, or market-moving events. While SWIFT is mentioned as a financial messaging infrastructure, the discussion is focused entirely on counter-terrorism use cases, not market operations or structure. Archived as low-quality for finance research purposes.",
+  "notes": "SOURCE IS OUT OF SCOPE: This content pertains to counter-terrorism operations and national security policy. It has no relevance to market structure or macro catalysts for financial market analysis. The page is a Treasury.gov homepage/informational page about the TFTP program. No publication date is provided. This record should not be included in a finance research archive focused on market structure or macro catalysts. Recommend reclassifying topic or excluding from archive.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "irrelevant",
-    "score": 1,
+    "tier": "reject",
+    "score": 0,
     "reasoning": [
-      "Content does not address market structure or macro catalysts",
-      "Source is about national security policy, not financial market research",
-      "No actionable information for trading, investment, or market analysis"
+      "Source topic (counter-terrorism/national security) does not match archive focus (market structure, macro catalysts)",
+      "Source type is homepage per DOMAIN_TRUST_TRIER metadata, which per CORE RULE 6 is non-archiveable",
+      "No publication date provided",
+      "Contains no market impact data, rate decisions, economic data, or market structure information"
     ]
   }
 }

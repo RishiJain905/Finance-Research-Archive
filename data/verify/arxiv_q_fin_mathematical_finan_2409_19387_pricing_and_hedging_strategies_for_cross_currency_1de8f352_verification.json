@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'research_paper' per the taxonomy (research_paper is listed as valid)",
+    "Record acknowledges source is not relevant to market structure or macro catalysts but still marks as 'review_queue' instead of 'rejected'",
+    "why_it_matters correctly identifies irrelevance but suggests this could be archived with note 'NOT APPLICABLE'",
+    "market_impact.confidence set to 0 and asset_classes empty is correct but the overall record framing contradicts the archive focus"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies that this source is irrelevant to market structure or macro catalysts (per CORE RULE 1 and rejection criteria), yet still assigns 'review_queue' status instead of 'rejected'. The event_type 'unknown' is also an error since 'research_paper' is a valid taxonomy value. Human confirmation is needed to override the incorrect suggested_status and confirm rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an academic research paper (32 pages) by Marek Rutkowski and Huansang Xu examining pricing and hedging frameworks for cross-currency equity protection swaps (EPS), using Monte Carlo simulations and approximation methods. The paper was originally submitted September 28, 2024 and revised April 9, 2026. It is purely theoretical/quantitative finance research focused on derivative pricing models.",
+    "why_it_matters": "This source does not address market structure or macro catalysts and should be excluded from the archive per CORE RULE 1. It is theoretical academic research with no relevance to market microstructure, trading operations, monetary policy, or economic data releases.",
+    "macro_context": "Not applicable",
+    "market_structure_context": "Not applicable"
+  }
+}

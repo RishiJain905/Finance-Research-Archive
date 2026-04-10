@@ -1,0 +1,86 @@
+{
+  "id": "seed_crawl_treasury_small_business_programs_ddc1b4de0a286bd1",
+  "created_at": "2026-04-10T05:36:29.911165+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Small Business Programs",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/small-business-programs",
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This Treasury webpage provides an informational overview of federal small business support programs including the State Small Business Credit Initiative (SSBCI), Small Business Lending Fund (SBLF), Community Development Financial Institutions (CDFI) Fund, and related initiatives. The page describes program purposes and structures but contains no current market-moving data, policy announcements, or macro catalysts. The content appears to be a static informational landing page with no publication date or last-updated timestamp.",
+  "key_points": [
+    "SSBCI supports state programs that channel funds to creditworthy small businesses unable to access capital through traditional lending",
+    "SBLF invested over $4.0 billion in 332 community banks and community development loan funds to incentivize small business lending",
+    "CDFI Fund promotes economic revitalization in low-income communities through mission-driven lenders and community development organizations",
+    "CDFI Fund operates multiple programs: Community Development Financial Institutions Program, New Markets Tax Credit Program, CDFI Bond Guarantee Program, Bank Enterprise Award Program, and Native American CDFI Assistance Program",
+    "Office of Small and Disadvantaged Business Utilization assists various small business categories (SDB, women-owned, veteran-owned, HUBZone) with Treasury contracting procedures",
+    "Interagency Community Investment Committee (ICIC) publishes resource guides to help small business owners connect with federal resources in their communities"
+  ],
+  "why_it_matters": "This page has no direct market impact. It is a government informational resource describing existing small business support programs. The programs described (SSBCI, SBLF, CDFI) are policy tools that may have long-term macroeconomic implications for small business lending and underserved communities, but this specific page does not announce new funding, policy changes, or market-moving information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "While small business support programs can have macroeconomic implications (employment, GDP, credit availability), this page provides only high-level program descriptions without current data, funding amounts, or policy changes that would constitute a macro catalyst.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$4.0 billion (historical SBLF investment)",
+    "332 institutions (SBLF program participation)"
+  ],
+  "tags": [
+    "small-business",
+    "treasury-programs",
+    "cdfis",
+    "ssbci",
+    "sblf",
+    "federal-lending",
+    "economic-development"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page (per generated record), which is an explicit rejection criterion per Rule 5",
+      "No publication date or last-updated timestamp - cannot assess recency or archival status",
+      "Topic mismatch: metadata claims 'macro catalysts' but source contains no market-moving information, only static informational program descriptions",
+      "Source has no archival value as a finance research entry - content is purely institutional program overview with no current data or policy announcements",
+      "event_type set to 'unknown' when source is clearly not any valid event type category - it's an informational landing page, not an event",
+      "Generated record correctly identifies these issues, but the record itself should be rejected rather than sent to review_queue"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_small_business_programs_ddc1b4de0a286bd1.txt",
+  "notes": "This source does not qualify as a macro catalyst. It is a static informational page about federal small business programs with no publication date, no current policy announcements, and no market-moving data. The $4.0 billion figure cited is historical program data from the SBLF, not a current catalyst. Recommend either reclassifying topic to 'not relevant' or excluding from archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "No publication date - cannot verify recency",
+      "Listing/information page type - non-archiveable per rules",
+      "Topic mismatch with source content",
+      "No specific current data or catalyst information",
+      "Static institutional overview with limited research value"
+    ]
+  }
+}

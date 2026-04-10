@@ -1,18 +1,19 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "event_type is 'unknown' but this joint statement could reasonably be classified as 'regulatory_guidance' given it reflects bilateral regulatory priorities and commitments",
-    "Document is a diplomatic progress statement with limited immediate market impact; primary concrete commitment is UK's T+1 settlement target for October 2027",
-    "TTMF recommendations are pending (summer 2026), making this an interim report rather than actionable policy"
+    "event_type is set to 'unknown' but could reasonably be classified as 'financial_stability_report' given this is a joint statement on regulatory cooperation and financial stability from treasury departments",
+    "macro_context is empty but should include the bilateral context: this Working Group was established in 2018 to deepen US-UK regulatory cooperation",
+    "The record correctly notes the source is a diplomatic meeting summary with low immediate market impact, but this is stated somewhat pejoratively - the UK T+1 commitment (October 2027) and TTMF recommendations (summer 2026) are concrete forward-looking market structure items worth monitoring",
+    "Source is 2 days old (published April 8, TODAY is April 10), well within the 90-day freshness window"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and well-supported by the source, but the event_type is set to 'unknown' when a more specific classification (regulatory_guidance) would be appropriate. Additionally, the document's nature as a diplomatic joint statement with minimal immediate market-moving content creates uncertainty about its archival value for a market structure/macro catalysts archive. Human judgment is needed to determine if this type of bilateral regulatory progress statement meets the relevance threshold.",
+  "human_review_reason": "This is a borderline case. The source accurately represents a legitimate bilateral regulatory body meeting with a concrete market structure commitment (UK T+1 by October 2027). However, it is primarily a diplomatic summary rather than a market-moving announcement. The event_type being 'unknown' when 'financial_stability_report' or similar would be appropriate is a notable gap. Human confirmation needed to determine if this meets the TARGET='macro catalysts' threshold given its low-direct-impact nature.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The U.S.-UK Financial Regulatory Working Group held its 12th meeting on February 25, 2026, covering economic outlook, digital assets, AI in financial services, cybersecurity, non-bank financial intermediation (NBFI), and capital markets reforms including the UK's planned transition to T+1 settlement by October 2027.",
+    "why_it_matters": "The UK T+1 settlement commitment (October 2027) represents a significant market structure change for UK capital markets. The TTMF aims to deliver recommendations on capital market links and digital assets by summer 2026. The bilateral cooperation framework signals ongoing regulatory alignment between two major financial centers, which affects cross-border trading, clearing, and settlement operations.",
+    "macro_context": "The Working Group was established in 2018 to deepen bilateral regulatory cooperation between the UK and US, promoting economic growth, financial stability, investor protection, and capital formation. This 12th meeting continues the biannual dialogue. Key forward items: TTMF recommendations (summer 2026), UK T+1 transition (October 2027), and ongoing stablecoin/payments modernization work.",
+    "market_structure_context": "UK committed to T+1 settlement cycle by October 2027 (previously T+2). TTMF exploring cross-border capital market links and digital assets. Working Group covers NBFI, operational resilience, critical third-party dependencies, and AI in financial services."
   }
 }

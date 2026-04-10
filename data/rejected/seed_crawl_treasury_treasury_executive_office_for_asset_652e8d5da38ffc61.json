@@ -1,59 +1,64 @@
 {
   "id": "seed_crawl_treasury_treasury_executive_office_for_asset_652e8d5da38ffc61",
-  "created_at": "2026-04-01T20:54:18.182366+00:00",
+  "created_at": "2026-04-10T05:42:49.805918+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Treasury Executive Office for Asset Forfeiture (TEOAF)",
   "source": {
-    "name": "U.S. Department of the Treasury",
+    "name": "home.treasury.gov",
     "url": "https://home.treasury.gov/policy-issues/terrorism-and-illicit-finance/treasury-executive-office-for-asset-forfeiture-teoaf",
     "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "standard_page"
+    "source_type": "unknown"
   },
-  "summary": "The Treasury Executive Office for Asset Forfeiture (TEOAF) administers the Treasury Forfeiture Fund (TFF), a special fund established in 1992 to facilitate the strategic use of asset forfeiture against criminal enterprises. The TFF receives non-tax forfeitures from Treasury and Department of Homeland Security law enforcement agencies including IRS-CI, CBP, HSI, USSS, and USCG. The source is a program description page for a law enforcement administration office and contains no content related to financial markets, macroeconomic policy, or market structure.",
+  "summary": "The Treasury Executive Office for Asset Forfeiture (TEOAF) is a Treasury administrative office established in 1992 that manages the Treasury Forfeiture Fund (TFF), a special federal fund for deposit of non-tax forfeitures from Treasury and Department of Homeland Security law enforcement agencies. The TFF operates pursuant to Title 31 U.S.C. § 9705 and does not require annual congressional appropriation to allocate funds.",
   "key_points": [
-    "TEOAF was established in 1992 to use asset forfeiture to disrupt and dismantle criminal enterprises",
-    "The TFF is a special fund under Title 31 U.S.C. § 9705 that can be allocated without annual Congressional appropriation",
-    "Participating agencies include IRS-CI, CBP, HSI, USSS, and USCG, with additional members FinCEN and FLETC",
-    "Program priorities include fiscal responsibility, due process protection, and targeting high-profile criminals",
-    "Source contains no discussion of financial markets, interest rates, monetary policy, or economic data"
+    "TEOAF was established in 1992 to influence consistent and strategic use of asset forfeiture by law enforcement",
+    "The TFF is a special fund (earmarked by law for specific purposes) governed by Title 31 U.S.C. § 9705",
+    "Participating agencies include IRS-CI, CBP, HSI, USSS, USCG, FLETC, FinCEN, and TTB",
+    "Asset forfeiture aims to deprive criminals of proceeds, disrupt criminal enterprises, and compensate victims",
+    "TFF funds can be allocated without annual congressional appropriation",
+    "TEOAF priorities include fiscal responsibility, due process protection, targeting high-profile criminals, and fostering federal-state partnerships"
   ],
-  "why_it_matters": "This source has no relevance to finance research, macro catalysts, or market structure. It is purely an administrative description of a law enforcement asset forfeiture program with no connection to financial markets, monetary policy, or economic indicators.",
+  "why_it_matters": "Source describes the administrative function of the Treasury Executive Office for Asset Forfeiture (TEOAF), which manages law enforcement seizure and forfeiture operations. This is a government law-enforcement administrative page with no relevance to financial markets, monetary policy, interest rates, economic indicators, or market structure elements. The TARGET is macro catalysts but the source contains no market-relevant content.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [
-    "1992",
-    "202-622-9600",
-    "31 U.S.C. § 9705"
+    "1992 (year TEOAF established)"
   ],
   "tags": [
     "treasury",
     "asset-forfeiture",
-    "law-enforcement",
     "teoaf",
+    "law-enforcement",
+    "government-administration",
+    "tff",
     "illicit-finance",
-    "homeland-security"
+    "non-relevant"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 9,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "event_type set to 'unknown' - should be specified even for rejected sources to indicate why they don't fit the taxonomy",
-      "Source is a law enforcement administration page completely unrelated to macro catalysts, financial markets, or market structure"
+      "Source is not relevant to market structure or macro catalysts - describes law enforcement asset forfeiture administration",
+      "Content is purely administrative/organizational with no financial market implications",
+      "event_type set to 'unknown' which is technically valid but no valid type applies since source is outside scope",
+      "No published date provided in source metadata",
+      "Source appears to be an informational/landing page about a government agency rather than article-like content",
+      "Record has no archival value for finance research purposes"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "issues_found, suggested_status_not_accepted"
+    "notes": "Source is not relevant to focus areas (market structure, macro catalysts). Contains only administrative description of law enforcement asset forfeiture program. Recommend discarding or reclassifying as non-financial government content."
   },
   "human_feedback": {
     "decision": "",
@@ -64,16 +69,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_treasury_executive_office_for_asset_652e8d5da38ffc61.txt",
-  "notes": "Source excluded from archive relevance. This is a government program description page for the Treasury Executive Office for Asset Forfeiture (TEOAF) and does not contain any content related to macro catalysts or market structure as defined in the collection mandate. The page describes law enforcement administrative functions, not financial markets or economic policy.",
+  "notes": "NOT RELEVANT to focus areas. This source describes the Treasury Executive Office for Asset Forfeiture (TEOAF), which administers a law enforcement fund for seized assets. The content is administrative and organizational in nature, describing agency functions, priorities, and contact information. There is no discussion of monetary policy, interest rates, economic data releases, Treasury market operations, or any market structure elements. No published date available in metadata. Source should be classified as non-financial government content unrelated to market structure or macro catalysts.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "excluded",
-    "score": 0,
+    "tier": "low",
+    "score": 2,
     "reasoning": [
-      "Source topic mismatch: law enforcement administration page with no market or macro relevance",
-      "No financial data, economic indicators, or policy content present",
-      "Not applicable to finance research archive focus areas"
+      "Content is administrative/organizational, not related to market structure or macro catalysts",
+      "Describes law enforcement asset forfeiture operations with no financial market implications",
+      "No published date in metadata",
+      "No investment-relevant information present",
+      "Source type unclear (possibly navigation or informational page)"
     ]
   }
 }

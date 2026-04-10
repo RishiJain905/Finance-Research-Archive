@@ -1,16 +1,16 @@
 {
-  "verification_confidence": 5,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "Source is an informational/administrative hub page about CFIUS, not a market-moving document",
-    "No published_at date provided in source metadata",
-    "Event_type set to 'unknown' which is technically correct but the page references multiple document types (RFI, final rules)",
-    "The page aggregates multiple sub-documents rather than containing original substantive content",
-    "Source may be out of scope for an archive focused on market structure and macro catalysts, despite being tagged as 'macro catalysts' in metadata"
+    "source_type is 'navigation_page' — per Rule 5, navigation pages must be rejected",
+    "Event type set to 'unknown' when the source is fundamentally a navigation hub, not a specific policy document",
+    "Topic 'macro catalysts' is misaligned with source content — CFIUS overview page is institutional/regulatory background, not a market-moving catalyst",
+    "No published_at date provided, making recency assessment impossible",
+    "Source quality is low — it's a catalog of links to various press releases rather than a standalone document with substantive content"
   ],
-  "human_review_required": true,
-  "human_review_reason": "This record accurately describes the source content and is well-structured, but the fundamental question is whether this type of informational hub page about CFIUS procedures belongs in an archive focused on market structure and macro catalysts. The 'why_it_matters' field correctly identifies this as non-market-moving. Human judgment is needed to determine if historical CFIUS policy information has sufficient archival value for this specific archive's mandate.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "Rule 5 is unambiguous: navigation_page sources must be rejected. No human judgment needed — the source type alone is disqualifying.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
