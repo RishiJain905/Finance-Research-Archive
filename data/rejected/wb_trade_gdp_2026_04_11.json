@@ -1,0 +1,77 @@
+{
+  "id": "wb_trade_gdp_2026_04_11",
+  "created_at": "2026-04-11T14:09:12.389846+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank API query for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations as of 2026-04-11. No usable data was retrieved from this source.",
+  "key_points": [
+    "World Bank indicator TG.VAL.TOTL.GD.ZS returned no valid observations",
+    "Snapshot date 2026-04-11: data query produced empty result set",
+    "No numerical values, historical data, or context provided in this source",
+    "Source is a data API response rather than a substantive publication"
+  ],
+  "why_it_matters": "This source contains no actionable data for market structure or macro catalyst analysis. The World Bank API query failed to return any observations for the world trade indicator, making it impossible to assess global trade trends or their market implications.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "no-data",
+    "api-failure",
+    "trade-gdp",
+    "empty-result"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a failed data API query returning zero observations - no content to archive",
+      "Source is not relevant to market structure or macro catalysts focus areas",
+      "Cannot extract any numbers, dates, policy signals, or analysis",
+      "Empty response does not meet minimum quality threshold for research archive",
+      "event_type set to 'unknown' - while 'data_release_other' is in source_type, the lack of any data makes classification moot"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_11.txt",
+  "notes": "This source is a data API response that returned no observations. The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) could not be retrieved. This source is not relevant to the required focus areas (market structure, macro catalysts) and contains no usable content for a research archive. The topic should be reclassified or the data query should be re-run to obtain actual observations.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "Source contains no data - API returned empty result",
+      "No substantive content to analyze or archive",
+      "Cannot assess market relevance due to data absence",
+      "Below minimum quality threshold for research archive"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "iorb_2026_04_11",
+  "created_at": "2026-04-11T14:03:29.953336+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "Interest on Reserve Balances (IORB) Rate",
+  "source": {
+    "name": "FRED / Federal Reserve Bank of St. Louis",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "published_at": "2026-04-11",
+    "source_type": "data_series",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The Interest on Reserve Balances (IORB) rate stands at 3.65% as of April 13, 2026, unchanged from the prior reading on April 12. The rate has remained flat at 3.65% since April 9, 2026. This is a daily data series snapshot rather than a policy announcement.",
+  "key_points": [
+    "IORB latest value: 3.65% (observation date 2026-04-13)",
+    "Previous value: 3.65% (observation date 2026-04-12), change: 0 (flat)",
+    "Rate has been flat at 3.65% for at least five consecutive observations (April 9-13, 2026)",
+    "IORB is the interest rate the Federal Reserve pays to depository institutions on reserve balances held at Fed District Banks",
+    "IORB serves as a floor for overnight money market rates within the Fed's administered rate corridor"
+  ],
+  "why_it_matters": "IORB is a key component of the Fed's monetary policy framework, directly influencing overnight lending rates in repo markets and money market funds. The flat reading at 3.65% indicates stable policy rate conditions in the current period.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB represents the rate paid on reserves held at the Federal Reserve. It is a key administered rate that anchors the overnight rate corridor and affects repo market dynamics. The current flat reading at 3.65% suggests no change in the Fed's reserve remuneration policy.",
+  "important_numbers": [
+    "3.65% (current IORB rate)",
+    "0 (absolute change period-over-period)"
+  ],
+  "tags": [
+    "interest-on-reserve-balances",
+    "iorb",
+    "fed-policy-rate",
+    "money-market",
+    "reserve-requirements",
+    "federal-reserve",
+    "market-structure",
+    "administered-rates"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a raw data series snapshot with no analytical content, policy interpretation, or substantive commentary",
+      "No new information: IORB rate flat at 3.65% with no change signals or policy implications",
+      "Quality tier self-assessed as Tier 3 - Data Point with limited research archive value beyond establishing current rate level",
+      "Archive value is marginal for a research archive if the intent is substantive research documents rather than data reference points"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is factually accurate and well-documented, but presents a borderline case: (1) it's a raw data snapshot with zero analytical value, (2) no policy changes or new information is present, (3) only establishes current IORB level at 3.65%, and (4) any researcher could retrieve this directly from FRED. However, it is technically relevant to market structure and does provide accurate rate data with context about IORB's role. The record itself is honest about the limited archival value. Human review needed to determine if this archive accepts raw data snapshots or requires more substantive research documents."
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_11.txt",
+  "notes": "This is a FRED data series snapshot rather than a traditional research document. The source provides only the current IORB rate level (3.65%) and recent observations. It does not include policy rationale, forward guidance, or contextual analysis. Archive value is limited to establishing a data point for market structure research. No policy changes or new information present.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Tier 3 - Data Point",
+    "score": 4,
+    "reasoning": [
+      "Low analytical content; this is a raw data observation only",
+      "High data integrity (direct from FRED/Federal Reserve)",
+      "Limited research value beyond establishing current rate level",
+      "Suitable for quantitative tracking but not substantive research archive"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "289ca8b91dde9b65be8802fcbd47e8636755d813"
+}

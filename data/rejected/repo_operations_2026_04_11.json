@@ -1,0 +1,79 @@
+{
+  "id": "repo_operations_2026_04_11",
+  "created_at": "2026-04-11T14:07:17.222720+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "NY Fed Repo Operations - Data Retrieval Failed",
+  "source": {
+    "name": "NY Fed Repo Operations",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "nyfed.org",
+    "published_at": "unknown",
+    "source_type": "api_error"
+  },
+  "summary": "Failed to retrieve NY Fed repo operation data due to a 400 Bad Request error when attempting to fetch from the NY Fed Markets API endpoint.",
+  "key_points": [
+    "API request to NY Fed Markets repo operations endpoint returned 400 Bad Request error",
+    "No repo operation data was retrieved",
+    "Target endpoint was https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "Source metadata indicated intent to capture NY Fed Repo Operations for market structure analysis"
+  ],
+  "why_it_matters": "This record documents a data retrieval failure rather than actual market structure content. No repo operation data could be captured.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The intended content relates to NY Fed repo operations, which are central bank market operations/financial plumbing, but no actual data was retrieved.",
+  "important_numbers": [],
+  "tags": [
+    "nyfed",
+    "repo-operations",
+    "api-error",
+    "market-structure",
+    "data-unavailable",
+    "400-error"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains only an API error message (400 Bad Request) - no actual repo operation data retrieved",
+      "Record documents a technical failure rather than any market structure or macro catalyst content",
+      "event_type set to 'unknown' - while technically correct given the nature of the source, the record has no substantive content to classify",
+      "Source is not article-like (API endpoint returning error), violating source quality requirements",
+      "No important_numbers, key_points with actual market data, or meaningful market_structure_context extracted",
+      "Archival value is negligible - this is a debugging artifact, not a research document"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This is a failed API request, not an actual document. No market structure or macro catalyst content was retrieved. Human should verify if endpoint URL is correct or if authentication is required."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_11.txt",
+  "notes": "Source represents a failed data fetch attempt rather than an actual article or document. The NY Fed Markets API returned a 400 error for the repo operations endpoint. No actual repo operation details (operation type, amounts, counterparties, rates) were retrieved. Recommend verifying API endpoint parameters and authentication requirements before re-attempting. The target topic (market structure via repo operations) is appropriate but data acquisition failed.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed",
+    "score": 1,
+    "reasoning": [
+      "API fetch returned 400 error - no content retrieved",
+      "No actual market structure data points extracted",
+      "No macro catalyst information available",
+      "Record documents technical failure rather than financial content"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'data_release_other' is questionable for continuous market yield data; this is not a periodic data release like CPI or employment reports but rather a daily market observation",
+    "Source is a raw data feed rather than an analytical document or article; contains no commentary, analysis, or catalyst interpretation",
+    "The record's 'why_it_matters' and macro_context sections are general knowledge about 2-year yields, not derived from the source itself",
+    "market_impact directional_bias set to 'unknown' appropriately reflects lack of interpretive content in source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The data points are factually accurate and source attribution is present, but the source is borderline for archival value. FRED data snapshots are not container pages, but they are also not article-like research or analysis. The event_type taxonomy was designed for periodic data releases (CPI, GDP, employment), not continuous market yield observations. Human judgment needed to determine if raw market data points from FRED meet the archival threshold for a macro catalysts research archive, or whether they should be handled as raw data inputs rather than research records.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The 2-year Treasury yield is a key market-based indicator of near-term interest rate expectations and policy outlook. Movements in this yield reflect shifts in market pricing of Fed rate expectations over the next 2 years. A declining 2-year yield may signal dovish repricing or easing financial conditions.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

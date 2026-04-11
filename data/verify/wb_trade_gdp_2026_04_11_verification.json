@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a failed data API query returning zero observations - no content to archive",
+    "Source is not relevant to market structure or macro catalysts focus areas",
+    "Cannot extract any numbers, dates, policy signals, or analysis",
+    "Empty response does not meet minimum quality threshold for research archive",
+    "event_type set to 'unknown' - while 'data_release_other' is in source_type, the lack of any data makes classification moot"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately describes the source (a failed API query with no data), but the source itself has zero archival value and clearly meets rejection criteria under 'too thin to have archival value'.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

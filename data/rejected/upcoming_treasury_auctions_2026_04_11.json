@@ -1,0 +1,78 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_11",
+  "created_at": "2026-04-11T14:06:36.956930+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions",
+  "source": {
+    "name": "U.S. Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "published_at": "2026-04-11",
+    "source_type": "api_error",
+    "domain": "api.fiscaldata.treasury.gov"
+  },
+  "summary": "API request to Treasury Fiscal Data endpoint for upcoming auction data returned a 404 Not Found error. No auction schedule, offering amounts, or security term data could be retrieved.",
+  "key_points": [
+    "API endpoint returned 404 error for upcoming_auctions query",
+    "Requested fields: auction_date, security_type, security_term, offering_amt",
+    "Sorted by auction_date, page size 10, JSON format",
+    "No actual auction data available in source"
+  ],
+  "why_it_matters": "Treasury auction schedules are critical market structure inputs for understanding near-term supply pressures in the cash Treasury market. A failed fetch means the record contains no actionable data.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "No auction data retrieved. Market participants monitoring Treasury supply schedules have no data from this source.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-auctions",
+    "api-failure",
+    "market-structure",
+    "404-error",
+    "treasury-supply"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a 404 API error with no actual content - only an error message",
+      "Record contains zero data points about Treasury auctions",
+      "No archival value: a transient API failure is not a meaningful market structure artifact",
+      "Cannot serve as RAG source without actual auction schedule, amounts, or security types",
+      "Quality tier correctly identified as 'no_content' with score 0, confirming source deficiency"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record already correctly identified as requiring human review but the underlying issue is unambiguous - the source is a technical error with no archival content. Auto-rejection is appropriate."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_11.txt",
+  "notes": "Source is a failed API response - 404 Not Found. No auction data present. Record is not useful for RAG without successful data retrieval. Recommend retrying endpoint or using alternative Treasury auction schedule source.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no_content",
+    "score": 0,
+    "reasoning": [
+      "API returned 404 error - no data retrieved",
+      "Zero data points extracted",
+      "Record serves as placeholder indicating data retrieval failure"
+    ]
+  }
+}

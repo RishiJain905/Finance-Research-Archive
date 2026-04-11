@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type 'data_release_cpi' is misleading — no CPI data was released; the source is a data retrieval failure confirming zero observations exist",
+    "Source attribution has empty URL field — cannot verify or retrieve source",
+    "Source has zero informational content — it is a null API response with no archival value",
+    "Cannot be used for market analysis, macro research, or RAG applications as the record itself acknowledges",
+    "quality_tier 'discard' with score 1 contradicts suggested_status 'review_queue' — if value is zero, record should not enter review queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately describes the source's null state, but both source and record lack any informational content. The record correctly self-identifies as discard-tier with zero quality. No human review needed — auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank data query for indicator FP.CPI.TOTL.ZG (World Inflation Rate) on 2026-04-11 returned no valid observations. This is a data retrieval failure notice, not a substantive economic release. The source contains no information content and should be discarded.",
+    "why_it_matters": "This source is not relevant to market structure or macro catalysts — it contains zero data. It cannot support any analysis, research, or archival use case. An alternative inflation data source should be sought.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

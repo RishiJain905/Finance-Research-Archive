@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is set to 'unknown' but source_type correctly identifies this as 'data_release_other' - inconsistent metadata",
+    "Source URL is empty - FRED series URL should be https://fred.stlouisfed.org/series/DGS10",
+    "published_at shows '2026-04-11' but this is the snapshot date, not an original publication date from FRED",
+    "Pure data snapshot with no analytical content, commentary, or research value - insufficient archival value for a research archive",
+    "Record contains only numerical observations without any explanatory context or catalyst identification",
+    "why_it_matters, macro_context, and market_structure_context are generated text not present in the source and are speculative extrapolations"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is a pure data dump with no research substance. Despite accurate numerical capture, it lacks the analytical content expected in a research archive. The generated contextual fields are speculative additions not supported by the source data.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

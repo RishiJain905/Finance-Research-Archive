@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned 404 error - no actual content retrieved",
+    "API endpoint failure is not archiveable research content",
+    "Source provides zero usable data for market structure analysis",
+    "Record documents an error state rather than actual research material",
+    "event_type correctly set to 'unknown' but this signals the record lacks substance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is an API error page with no actual content. The generated record correctly identifies this as a failed state and recommends discarding. This is a clear reject - there is nothing to archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

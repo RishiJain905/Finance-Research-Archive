@@ -1,0 +1,87 @@
+{
+  "id": "2y_yield_2026_04_11",
+  "created_at": "2026-04-11T14:04:59.329774+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2)",
+  "source": {
+    "name": "FRED",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-11",
+    "source_type": "data_feed"
+  },
+  "summary": "The 2-Year Treasury Yield stood at 3.78% as of April 9, 2026, down 1 basis point from the prior day (3.79%) and down 6 basis points from the start of the week (3.84% on April 6). The yield has exhibited a modest declining trend over the observed period, moving from 3.84% on April 3 to 3.78% on April 9.",
+  "key_points": [
+    "2-Year Treasury Yield: 3.78% (April 9, 2026)",
+    "Prior reading: 3.79% (April 8, 2026), change of -0.01 percentage point",
+    "Weekly range: 3.84% (April 3) to 3.78% (April 9)",
+    "Absolute decline over observation period: -0.06 percentage points",
+    "Direction: Downward trend across all consecutive observations"
+  ],
+  "why_it_matters": "The 2-year Treasury yield is a key market-based indicator of near-term interest rate expectations and policy outlook. Movements in this yield reflect shifts in market pricing of Fed rate expectations over the next 2 years. A declining 2-year yield may signal dovish repricing or easing financial conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year yield at 3.78% implies market expectations for the federal funds rate in the near term. This data point represents a market-derived expectation rather than an explicit forecast or policy decision. Interpretation requires additional context on Fed policy expectations.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.78%",
+    "3.79%",
+    "3.81%",
+    "3.84%"
+  ],
+  "tags": [
+    "treasury",
+    "2-year-yield",
+    "macro-data",
+    "rates",
+    "fred",
+    "yield-curve"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'data_release_other' is questionable for continuous market yield data; this is not a periodic data release like CPI or employment reports but rather a daily market observation",
+      "Source is a raw data feed rather than an analytical document or article; contains no commentary, analysis, or catalyst interpretation",
+      "The record's 'why_it_matters' and macro_context sections are general knowledge about 2-year yields, not derived from the source itself",
+      "market_impact directional_bias set to 'unknown' appropriately reflects lack of interpretive content in source"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The data points are factually accurate and source attribution is present, but the source is borderline for archival value. FRED data snapshots are not container pages, but they are also not article-like research or analysis. The event_type taxonomy was designed for periodic data releases (CPI, GDP, employment), not continuous market yield observations. Human judgment needed to determine if raw market data points from FRED meet the archival threshold for a macro catalysts research archive, or whether they should be handled as raw data inputs rather than research records."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_11.txt",
+  "notes": "This source is a FRED data snapshot providing raw 2-year Treasury yield observations. It is not an analytical document, news article, or policy commentary. The data is relevant to macro catalysts as the 2-year yield reflects near-term rate expectations, but the source itself contains no analysis or catalyst interpretation. Confidence is moderate (5/10) given the factual accuracy of the data points, but the source provides no narrative context for why yields are moving or what they imply for policy.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 3,
+    "reasoning": [
+      "Raw market data feed, not research or commentary",
+      "Limited analytical content",
+      "Factual and accurate but thin",
+      "Useful as input data for macro analysis but not standalone research"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "a4feedf72c083f83607267977794e4c6e844bc4e"
+}
