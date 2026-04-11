@@ -1,7 +1,7 @@
 {
   "id": "2y_yield_2026_04_11",
   "created_at": "2026-04-11T14:04:59.329774+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "2-Year Treasury Yield (DGS2)",
@@ -56,30 +56,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The data points are factually accurate and source attribution is present, but the source is borderline for archival value. FRED data snapshots are not container pages, but they are also not article-like research or analysis. The event_type taxonomy was designed for periodic data releases (CPI, GDP, employment), not continuous market yield observations. Human judgment needed to determine if raw market data points from FRED meet the archival threshold for a macro catalysts research archive, or whether they should be handled as raw data inputs rather than research records."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-11T21:51:05.123748+00:00"
   },
   "raw_text_path": "data/raw/2y_yield_2026_04_11.txt",
   "notes": "This source is a FRED data snapshot providing raw 2-year Treasury yield observations. It is not an analytical document, news article, or policy commentary. The data is relevant to macro catalysts as the 2-year yield reflects near-term rate expectations, but the source itself contains no analysis or catalyst interpretation. Confidence is moderate (5/10) given the factual accuracy of the data points, but the source provides no narrative context for why yields are moving or what they imply for policy.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "data",
-    "score": 3,
+    "tier": "tier_2",
+    "score": 57.0,
     "reasoning": [
-      "Raw market data feed, not research or commentary",
-      "Limited analytical content",
-      "Factual and accurate but thin",
-      "Useful as input data for macro analysis but not standalone research"
+      "quality score: 57.0/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
