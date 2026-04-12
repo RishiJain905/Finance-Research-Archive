@@ -5,8 +5,10 @@ writes raw records to data/raw/<accession_number>.txt, and tracks URLs
 in the manifest database to avoid duplicates.
 """
 
+import argparse
 import hashlib
 import json
+import random
 import re
 import sys
 import time
@@ -296,9 +298,47 @@ def run_one_company(
     return created
 
 
+def clear_edgar_seen_urls() -> int:
+    """Delete all seen_url rows whose URL belongs to EDGAR document archives.
+
+    Returns the number of rows deleted. Safe to run at any time — only affects
+    rows whose URL starts with the EDGAR document base; all other pipeline data
+    (article, quant, keyword rows) is left untouched.
+    """
+    from scripts.manifest_db import DB_PATH, get_conn
+
+    conn = get_conn(DB_PATH)
+    with conn:
+        cursor = conn.execute(
+            "DELETE FROM seen_urls WHERE url LIKE ?",
+            (f"{EDGAR_DOC_BASE}/%",),
+        )
+        deleted = cursor.rowcount
+    conn.close()
+    return deleted
+
+
 def main() -> None:
     """Load config and ingest filings for all (or configured) companies."""
+    parser = argparse.ArgumentParser(
+        description="Ingest SEC EDGAR filings into the Finance Research Archive pipeline."
+    )
+    parser.add_argument(
+        "--clear-edgar-seen",
+        action="store_true",
+        help=(
+            "Delete all EDGAR document URLs from the seen_urls table so they "
+            "can be re-ingested on the next run, then exit. Does not fetch any filings."
+        ),
+    )
+    args = parser.parse_args()
+
     ensure_schema()
+
+    if args.clear_edgar_seen:
+        deleted = clear_edgar_seen_urls()
+        print(f"Cleared {deleted} EDGAR seen-URL row(s) from archive.db.")
+        return
 
     config = load_config()
     user_agent = config.get("user_agent", "FinanceResearchArchive contact@example.com")
@@ -310,8 +350,12 @@ def main() -> None:
 
     session = make_session(user_agent)
 
+    sample_size = config.get("random_sample_size", 50)
+
     if fetch_all:
-        companies = fetch_all_tickers(session)
+        all_companies = fetch_all_tickers(session)
+        random.shuffle(all_companies)
+        companies = all_companies[:sample_size]
         quiet = True
     else:
         companies = [c for c in config.get("companies", []) if c.get("enabled", True)]
@@ -324,7 +368,10 @@ def main() -> None:
     print(f"EDGAR Ingest — {len(companies):,} company(ies), looking back {lookback_days} day(s)")
     print(f"Filing types: {', '.join(filing_types)}")
     if fetch_all:
-        print(f"Mode: full market scan (max {max_per_company} filings/company, {max_per_run} total)")
+        print(
+            f"Mode: random sample of {len(companies)} companies "
+            f"(max {max_per_company} filings/company, {max_per_run} total)"
+        )
 
     total_created = 0
     total_checked = 0
@@ -359,10 +406,6 @@ def main() -> None:
                 config_path=CONFIG_PATH,
                 config_list_key="companies",
             )
-
-        # Progress heartbeat every 500 companies in full-scan mode
-        if fetch_all and (i + 1) % 500 == 0:
-            print(f"  … checked {i + 1:,}/{len(companies):,} companies, {total_created} new filing(s) so far")
 
         time.sleep(REQUEST_DELAY)
 

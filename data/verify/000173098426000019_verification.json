@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is out-of-scope: Corporate governance 8-K filing for a single regional bank (BayCom Corp/BCML) does not qualify as market structure or macro catalyst content",
+    "event_type set to 'unknown' which is technically valid for this taxonomy, but confirms the filing doesn't fit any relevant event category",
+    "No macro_context or market_structure_context present, appropriately — this source has no relevance to these topics"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is correctly characterized as out-of-scope and not for archive. The LLM correctly identified the source as a routine corporate governance filing with no relevance to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

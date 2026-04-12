@@ -1,8 +1,11 @@
 {
   "user_agent": "FinanceResearchArchive contact@example.com",
   "filing_types": ["8-K", "10-K", "10-Q"],
-  "lookback_days": 3,
-  "max_filings_per_run": 20,
+  "lookback_days": 10,
+  "fetch_all_companies": true,
+  "random_sample_size": 100,
+  "max_filings_per_company": 3,
+  "max_filings_per_run": 150,
   "companies": [
     { "name": "JPMorgan Chase", "cik": "0000019617", "enabled": true },
     { "name": "Goldman Sachs",  "cik": "0000886982", "enabled": true },

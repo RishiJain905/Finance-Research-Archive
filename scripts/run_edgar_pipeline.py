@@ -96,8 +96,8 @@ def main() -> None:
     parser.add_argument(
         "--process-workers",
         type=lambda x: int(float(x)),
-        default=2,
-        help="Parallel process_record workers",
+        default=1,
+        help="Parallel process_record workers (default 1 for sequential, safe API usage)",
     )
     args = parser.parse_args()
 
@@ -105,7 +105,30 @@ def main() -> None:
     stage_start = time.perf_counter()
     timings: dict[str, float] = {}
 
+    # Collect any EDGAR raw files left over from a previous failed run so they
+    # are retried along with today's new filings (prevents permanent orphaning).
+    ACCEPTED_DIR = BASE_DIR / "data" / "accepted"
+    REJECTED_DIR = BASE_DIR / "data" / "rejected"
+    REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
+
+    def is_already_routed(record_id: str) -> bool:
+        return (
+            (ACCEPTED_DIR / f"{record_id}.json").exists()
+            or (REJECTED_DIR / f"{record_id}.json").exists()
+            or (REVIEW_QUEUE_DIR / f"{record_id}.json").exists()
+        )
+
     raw_ids_before_run = {f.stem for f in RAW_DIR.glob("*.txt")}
+
+    # EDGAR accession numbers are 18 digits (no letters), e.g. 000119312526151309.
+    orphaned_edgar_ids = sorted(
+        rid for rid in raw_ids_before_run
+        if rid.isdigit() and len(rid) == 18 and not is_already_routed(rid)
+    )
+    if orphaned_edgar_ids:
+        print(f"Found {len(orphaned_edgar_ids)} orphaned EDGAR raw file(s) to retry:")
+        for rid in orphaned_edgar_ids:
+            print(f"  - {rid}")
 
     # ── Step 1: Ingest EDGAR filings ──────────────────────────────────────────
     start = time.perf_counter()
@@ -113,7 +136,9 @@ def main() -> None:
     timings["ingest"] = time.perf_counter() - start
 
     raw_ids_after_ingest = {f.stem for f in RAW_DIR.glob("*.txt")}
-    new_record_ids = sorted(raw_ids_after_ingest - raw_ids_before_run)
+    new_record_ids = sorted(
+        (raw_ids_after_ingest - raw_ids_before_run) | set(orphaned_edgar_ids)
+    )
 
     if not new_record_ids:
         print("\nNo new EDGAR filings found.")

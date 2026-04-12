@@ -10,6 +10,7 @@ if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
 TRIAGE_DIR = BASE_DIR / "data" / "triage"
+REVIEW_QUEUE_DIR = BASE_DIR / "data" / "review_queue"
 
 
 def run_step(command: list[str], step_name: str) -> None:
@@ -25,6 +26,22 @@ def run_step(command: list[str], step_name: str) -> None:
 
     if result.returncode != 0:
         raise RuntimeError(f"{step_name} failed with exit code {result.returncode}")
+
+
+def require_review_queue_json(record_id: str, after_step: str) -> None:
+    """Fail fast if the review-queue JSON is absent after a processing step.
+
+    Guards against the case where the summarizer or verifier exits 0 but
+    silently fails to write (or accidentally deletes) the expected output
+    file — which would cause the router to crash with a misleading
+    FileNotFoundError instead of a clear diagnosis.
+    """
+    path = REVIEW_QUEUE_DIR / f"{record_id}.json"
+    if not path.exists():
+        raise RuntimeError(
+            f"review_queue JSON missing after {after_step} step: {path}\n"
+            "The step exited successfully but did not produce its expected output file."
+        )
 
 
 def persist_triage_metadata(record_id: str, triage_data: dict) -> Path:
@@ -74,8 +91,10 @@ def main() -> None:
     python_cmd = sys.executable
 
     run_step([python_cmd, "-m", "scripts.run_summarizer", record_id], "summarizer")
+    require_review_queue_json(record_id, "summarizer")
 
     run_step([python_cmd, "-m", "scripts.run_verifier", record_id], "verifier")
+    require_review_queue_json(record_id, "verifier")
 
     run_step([python_cmd, "-m", "scripts.route_record", record_id], "router")
 

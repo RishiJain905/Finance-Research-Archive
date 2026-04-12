@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated research record is completely empty - all fields are blank",
+      "No source attribution present (name, url, domain all empty)",
+      "No summary, key_points, why_it_matters, or any content fields populated",
+      "Source metadata is empty - cannot verify anything against source",
+      "Even if populated, SEC 8-K filing about a single company's derivative settlements is thin and not clearly macro-relevant"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely blank with no source attribution or content to verify. This is a clear reject condition per CORE RULE 6 (Missing source attribution biases toward reject) and CORE RULE 1 (No record content exists to judge against source). No human review needed when the record itself is empty."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

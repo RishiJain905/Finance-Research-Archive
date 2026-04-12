@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - all fields are blank",
+      "Source attribution missing - name, url, domain, published_at, and source_type fields are all empty",
+      "Source is an SEC 8-K filing for HyOrc Corporation (small-cap energy company) - not relevant to market structure or macro catalysts",
+      "Source is a regulatory filing, not an article-like source",
+      "The event (joint venture novation for waste-to-methanol project) has no meaningful market structure or macro relevance",
+      "event_type is missing and cannot be determined as applicable to the defined taxonomy",
+      "Record has no archival value for a finance research archive"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely blank with no source attribution, making verification impossible. Additionally, the source itself (a micro-cap 8-K filing about a joint venture novation) is not relevant to market structure or macro catalysts that would warrant archiving in a finance research archive."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}
