@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is from November 2013 (over 12 years old) - significantly outside 90-day recency window, though archival value exception may apply",
+    "Topic mismatch: metadata TARGET is 'market structure' but source is about household debt/consumer credit trends, more appropriately classified as 'macro catalysts' (record correctly noted this)",
+    "market_impact.confidence is set to 0 with directional_bias 'mixed' - no market reaction data exists in source; these fields appear speculative"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is over 12 years old. While it has archival value as historical Federal Reserve research on household deleveraging (a key macro finding), the age and topic mismatch with metadata targeting 'market structure' warrant human confirmation that macro catalysts is the appropriate topic and that archiving a 2013 household debt report has sufficient value for this archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "This source does not address market structure (trading mechanisms, market plumbing, or operational microstructure). It is a household debt and credit trends report from the New York Fed, more appropriately classified under macro catalysts."
+  }
+}

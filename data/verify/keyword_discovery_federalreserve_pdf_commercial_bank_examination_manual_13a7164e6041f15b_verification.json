@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 4,
-  "verdict": "review",
+  "verification_confidence": 2,
+  "verdict": "reject",
   "issues_found": [
-    "event_type is 'unknown' but should be 'regulatory_guidance' - the source is a Federal Reserve examination manual providing supervisory guidance on capital adequacy assessment",
-    "published_at shows '2026-02-00' which is invalid format (day cannot be 00); document effective date is November 2020, indicating historical content",
-    "Source is regulatory/supervisory procedural documentation, not relevant to macro catalysts as specified in TARGET",
-    "Source effective date (November 2020) is over 5 years old at TODAY (2026-04-12) with no indication of updated content despite the 202602 filename"
+    "Source is a bank supervisory examination manual describing internal examiner procedures for capital assessment - fundamentally mismatched with TARGET of 'macro catalysts'",
+    "Source contains no market-moving content: no rate decisions, data releases, speeches, monetary policy statements, or trading-relevant commentary",
+    "Document type is procedural/supervisory guidance rather than a macro catalyst or market structure source",
+    "Published_at shows May 2021 but URL filename (202602) suggests a February 2026 version - date inconsistency should be verified",
+    "The generated record already correctly identifies this as not relevant, yet still has status 'review_queue' - self-contradictory"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The record has correct factual summaries but the event_type is incorrectly set to 'unknown' when 'regulatory_guidance' is clearly applicable. Additionally, the source topic (bank examination manual) does not match the specified TARGET (macro catalysts). While the record correctly identifies this mismatch, the system requires proper event_type classification before acceptance or rejection can be determined.",
+  "human_review_required": false,
+  "human_review_reason": "The record already contains accurate self-assessment indicating the source is not relevant to macro catalysts. No human review needed - auto-reject is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is a section of the Federal Reserve's Commercial Bank Examination Manual (Section 3000) covering capital adequacy assessment procedures for bank examiners. It describes regulatory capital components under Regulation Q (Common Equity Tier 1, Additional Tier 1, and Tier 2 capital) and explains the purpose of bank capital in absorbing losses and protecting depositors. The source is a procedural examination manual from November 2020 (effective date), providing supervisory guidance on how examiners assess bank financial condition.",
-    "why_it_matters": "This document is supervisory guidance for bank examiners assessing capital adequacy under Regulation Q. It is not a macro catalyst, market-moving release, or current economic commentary. It provides background on regulatory capital frameworks but does not contain current economic data, policy decisions, or market signals relevant to macro research.",
-    "market_structure_context": "The document discusses capital requirements under Regulation Q (12 CFR Part 217), which affects how banks manage their balance sheets and risk-weighted assets. This is relevant to banking system resilience and regulatory compliance but is procedural/supervisory in nature rather than describing current market structure dynamics or macro catalysts."
+    "summary": "This is Section 3000 of the Federal Reserve's Commercial Bank Examination Manual covering capital adequacy assessment procedures for bank examiners, effective November 2020. The document describes Regulation Q requirements, components of regulatory capital (CET1, Additional Tier 1, Tier 2), and examination procedures for assessing bank financial condition. This is an internal supervisory manual, not a source that discusses macro catalysts, market-moving events, or trading implications.",
+    "why_it_matters": "This document is a supervisory examination manual for Federal Reserve examiners assessing bank capital adequacy. It is not relevant to macro catalysts or market structure in the trading sense. It has no market-moving content and is intended for bank regulatory supervisors, not market participants. Recommend rejection from macro catalysts archive.",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

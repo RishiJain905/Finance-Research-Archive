@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_statement_regarding_mf_global_inc_75737d6c964794cf",
-  "created_at": "2026-04-01T13:53:14.624023+00:00",
+  "created_at": "2026-04-10T06:07:00.212397+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "market_notice",
@@ -8,40 +8,43 @@
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/newsevents/statements/2011/1031_2011b",
+    "domain": "www.newyorkfed.org",
     "published_at": "2011-10-31",
-    "source_type": "news_release",
-    "domain": "www.newyorkfed.org"
+    "source_type": "statement"
   },
-  "summary": "The Federal Reserve Bank of New York suspended MF Global Inc. from conducting new business with the New York Fed on October 31, 2011. The suspension remains in effect until MF Global establishes it can satisfy the NY Fed's primary dealer policy requirements or until the NY Fed terminates MF Global's primary dealer status.",
+  "summary": "The Federal Reserve Bank of New York suspended MF Global Inc. from conducting new business on October 31, 2011, pending MF Global's ability to demonstrate it can satisfy the NY Fed's primary dealer requirements. The suspension remained in effect until MF Global either proved compliance or the NY Fed decided to terminate its primary dealer status.",
   "key_points": [
     "MF Global Inc. was suspended from conducting new business with the Federal Reserve Bank of New York on October 31, 2011.",
-    "The suspension continues until MF Global demonstrates it can satisfy requirements under the NY Fed's 'Administration of Relationships with Primary Dealers' policy.",
-    "The NY Fed reserves the right to terminate MF Global's status as a primary dealer entirely.",
-    "The NY Fed's primary dealer policies are published online at http://www.newyorkfed.org/markets/primarydealers.html."
+    "The suspension remained in effect until MF Global demonstrated it could satisfy the requirements of the NY Fed's policy 'Administration of Relationships with Primary Dealers.'",
+    "The NY Fed reserved the right to terminate MF Global's primary dealer status entirely.",
+    "This statement predates MF Global's Chapter 11 bankruptcy filing, which occurred later the same day.",
+    "The suspension relates to MF Global's role as a primary dealer in the Treasury market."
   ],
-  "why_it_matters": "This suspension from primary dealer operations affected MF Global's ability to interact with the Federal Reserve in open market operations and Treasury trading. Primary dealers are essential intermediaries in Treasury markets, and suspension or removal from this status is a severe market integrity finding. MF Global subsequently filed for bankruptcy on October 31, 2011.",
+  "why_it_matters": "This statement marks a critical moment in the MF Global crisis. The suspension of a primary dealer from Federal Reserve operations signaled severe operational or financial distress at a major market participant. Primary dealers are essential intermediaries in Treasury market operations, and their suspension affects market liquidity infrastructure.",
   "market_impact": {
     "asset_classes": [
+      "equities",
       "bonds",
       "volatility"
     ],
     "directional_bias": "risk_off",
-    "confidence": 5
+    "confidence": 4
   },
   "macro_context": "",
-  "market_structure_context": "This statement concerns the primary dealer framework administered by the Federal Reserve Bank of New York. Primary dealers serve as counterparties for Federal Reserve open market operations and play a critical role in Treasury market liquidity and price discovery. The suspension of a primary dealer represents a significant disruption to market plumbing and dealer network integrity.",
+  "market_structure_context": "The suspension directly implicates the primary dealer system, a core component of Treasury market structure. Primary dealers serve as counterparties to the Federal Reserve in open market operations and play a key role in Treasury auction functionality. This suspension preceded MF Global's bankruptcy by hours, illustrating how primary dealer status revocation functions as an early warning signal of dealer insolvency.",
   "important_numbers": [],
   "tags": [
     "primary-dealer",
     "mf-global",
     "ny-fed",
-    "market-structure",
     "suspension",
-    "federal-reserve",
-    "2011"
+    "market-structure",
+    "treasury-market",
+    "2011",
+    "financial-crisis"
   ],
   "llm_review": {
-    "initial_confidence": 8,
+    "initial_confidence": 7,
     "verification_confidence": 8,
     "verdict": "accept",
     "issues_found": []
@@ -49,7 +52,7 @@
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Source is a brief official statement. Content is factual and directly supported by the text. Historical record noted for age."
+    "notes": ""
   },
   "human_feedback": {
     "decision": "",
@@ -60,7 +63,7 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_statement_regarding_mf_global_inc_75737d6c964794cf.txt",
-  "notes": "Historical record from October 31, 2011. While relevant to market structure (primary dealer system), the age significantly limits utility for current analysis. MF Global's subsequent bankruptcy makes this statement a historical marker of that crisis. Source is thin in content but factually reliable as an official Fed statement.",
+  "notes": "This is a historical record from October 31, 2011—the same day MF Global filed for Chapter 11 bankruptcy protection. The source is directly relevant to market structure through its implications for the primary dealer system. However, the source text is very thin, providing only the bare-bones statement without additional context about why the suspension was imposed or what specific deficiencies were identified. Lowered confidence slightly due to age and source thinness.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {

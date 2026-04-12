@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "SOURCE METADATA TARGET='market structure' but content is household credit/consumer debt macroprudential research - topic 'macro catalysts' is more appropriate classification",
+    "Published 2013-05-14, approximately 13 years stale relative to TODAY (2026-04-10) - significantly outside 90-day window; archival value assessment required",
+    "Student loan delinquency rate (11.2%) is presented without the source's explicit caveat that this understates actual delinquency because ~half of loans are in deferment/forbearance/grace periods; source states 'among loans in the repayment cycle delinquency rates are roughly twice as high'",
+    "No mention of the $19 billion credit card balance decrease in key_points or summary"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Historical source (2013) requires judgment on archival value per rule 7. The data is accurate and well-sourced from a high-trust domain (NY Fed), but the 13-year age means it lacks current market relevance. The student loan delinquency caveat is material context that should be included or explicitly excluded. Human assessment needed to determine if this historical household credit snapshot warrants archiving.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The New York Fed's Q1 2013 Household Debt and Credit Report showed household debt declined $110 billion to $11.23 trillion, with delinquency rates improving across all debt categories as households continued deleveraging. The 90+ day delinquency rate fell to 6.0 percent from 6.3 percent the prior quarter.",
+    "why_it_matters": "Household sector deleveraging and improving credit quality are leading indicators for consumer spending capacity and broader economic recovery. Declining delinquency and foreclosure rates reduce systemic risk in the financial system. Note: Student loan delinquency rates (11.2%) understate actual rates as approximately half of loans are in deferment, grace periods, or forbearance; among loans in repayment, delinquency rates are roughly twice as high.",
+    "macro_context": "The data indicates continued household sector repair following the 2008 financial crisis, with broad-based improvements in credit quality. Credit card balances decreased $19 billion and mortgage debt fell to $7.93 trillion. However, rising student loan debt ($986B) and persistent credit card delinquencies (10.2%) remain structural concerns for consumer credit markets.",
+    "market_structure_context": ""
+  }
+}

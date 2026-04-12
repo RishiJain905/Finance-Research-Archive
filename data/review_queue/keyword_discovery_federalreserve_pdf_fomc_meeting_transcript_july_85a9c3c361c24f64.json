@@ -1,68 +1,60 @@
 {
   "id": "keyword_discovery_federalreserve_pdf_fomc_meeting_transcript_july_85a9c3c361c24f64",
-  "created_at": "2026-04-12T20:30:51.161914+00:00",
+  "created_at": "2026-04-12T16:34:14.610657+00:00",
   "status": "review_queue",
-  "topic": "macro catalysts",
+  "topic": "market structure",
   "event_type": "fomc_minutes",
   "title": "FOMC Meeting Transcript, July 26-27, 2016",
   "source": {
     "name": "Federal Reserve Board",
     "url": "https://www.federalreserve.gov/monetarypolicy/files/FOMC20160727meeting.pdf",
     "domain": "www.federalreserve.gov",
-    "published_at": "2016-07-27",
-    "source_type": "document"
+    "published_at": "",
+    "source_type": "pdf"
   },
-  "summary": "This is the full verbatim transcript of the July 26-27, 2016 FOMC meeting, a joint session with the Board of Governors held in Washington D.C. The meeting included discussions on a 'Long-Run Framework for Monetary Policy Implementation,' with briefings from staff on foreign central bank experience, crisis lessons, and money markets. The transcript shows the Committee was actively planning for eventual policy normalization and examining alternative operating frameworks for interest rate targets, operating regimes, and the balance sheet. This meeting occurred approximately one month before the September 2016 FOMC meeting at which the Committee ultimately did not raise rates.",
+  "summary": "Verbatim transcript of the July 26-27, 2016 FOMC meeting, released with approximately 5-year lag standard for Fed transcripts. Meeting attended by Chair Janet Yellen, Vice Chair William Dudley, and all rotating FOMC members. Primary agenda item was staff presentation on 'Long-Run Framework for Monetary Policy Implementation,' covering foreign central bank experience, crisis lessons, and money market dynamics. Transcript captures operational framework discussions and policy normalization planning.",
   "key_points": [
-    "Meeting held July 26-27, 2016; attendees included Chair Janet Yellen, Vice Chairman William Dudley, and all voting FOMC members",
-    "Discussion began with 'Long-Run Framework for Monetary Policy Implementation' - described as a System-wide effort involving divisions of the Board and all Reserve Banks",
-    "Staff presentations covered three foundational workgroups: foreign experience (surveying nine advanced-economy central banks), crisis lessons, and money markets",
-    "Simon Potter (Manager, System Open Market Account) and Lorie Logan (Deputy Manager) were present for the discussions",
-    "Brian Doyle presented on foreign central bank experience, co-led with Patricia Zobel of the Federal Reserve Bank of New York",
-    "The Committee planned for framework workgroups to present findings at the November 2016 meeting",
-    "Discussions referenced 'normalization principles and plans' and criteria for the size and composition of the SOMA portfolio",
-    "Source text was truncated; full transcript of 283 pages is not available for analysis"
+    "Meeting occurred July 26-27, 2016; verbatim transcript released by Federal Reserve",
+    "Chair Yellen presided; all voting members present including Bullard, Brainard, Fischer, George, Mester, Powell, Rosengren, Tarullo, and regional bank presidents",
+    "Primary focus: staff presentation on 'Long-Run Framework for Monetary Policy Implementation' with objectives covering foreign experience, crisis lessons, and money market analysis",
+    "Three foundational workgroups: foreign experience (co-led by Patricia Zobel, New York Fed), crisis lessons, and money markets",
+    "Framework workgroups planned to present findings at November 2016 meeting",
+    "Detailed discussions of alternative operating frameworks including criteria for interest rate targets, operating regimes, and balance sheet considerations"
   ],
-  "why_it_matters": "This transcript provides verbatim access to FOMC deliberations, revealing the internal reasoning behind policy discussions at a historically significant moment (mid-2016, ahead of the December 2016 rate hike). The focus on long-run implementation frameworks demonstrates the Committee's systematic approach to eventual policy normalization after years of QE. Understanding these discussions provides context for how the Fed balances multiple objectives including efficient money markets and balance sheet composition. NOTE: This is a verbatim transcript, not summary minutes.",
+  "why_it_matters": "This is a verbatim FOMC TRANSCRIPT (distinct from official minutes), providing full visibility into committee deliberations. Fed transcripts are released with approximately 5-year delay. Historical record for understanding Fed thinking on monetary policy implementation framework design, normalization strategies, and balance sheet considerations. Limited real-time market application given age, but significant archival value for research on Fed decision-making processes.",
   "market_impact": {
-    "asset_classes": [
-      "bonds",
-      "equities",
-      "fx"
-    ],
-    "directional_bias": "unknown",
+    "asset_classes": [],
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "The July 2016 meeting occurred amid ongoing debate about the appropriate timing for monetary policy normalization. The Committee was examining international experience and planning for framework changes that would affect the eventual path of rates and the Federal Reserve's operational capacity. This transcript previews discussions that would culminate in the December 2016 rate increase. As a historical document nearly 10 years old, this represents archival research value rather than current market context.",
-  "market_structure_context": "The meeting explicitly addressed 'efficient, effective, and resilient money markets' as an objective for alternative operating frameworks. Staff briefings on money market conditions and the SOMA portfolio composition indicate the Committee was focused on ensuring market plumbing stability during the normalization process. This represents direct relevance to market structure discussions at the senior FOMC level.",
+  "macro_context": "Historical FOMC transcript from July 2016—a period following the December 2015 rate hike and preceding the December 2016 rate increase. Transcript captures Committee deliberations on long-run monetary policy implementation frameworks during a normalization planning phase. Meeting occurred approximately 5 years prior to transcript release and ~10 years prior to TODAY.",
+  "market_structure_context": "Transcript documents detailed staff briefing on long-run monetary policy implementation framework covering: (1) foreign central bank experience from nine advanced-economy central banks, (2) lessons from financial crisis period, (3) money market dynamics and efficiency criteria. Committee discussed objectives for alternative operating frameworks including promoting efficient, effective, and resilient money markets. Balance sheet normalization principles referenced as evaluation criteria. SOMA portfolio considerations addressed.",
   "important_numbers": [],
   "tags": [
     "fomc",
     "transcript",
     "federal-reserve",
     "monetary-policy",
-    "normalization",
-    "framework",
-    "yellen",
-    "money-markets",
-    "soma",
-    "balance-sheet",
-    "2016"
+    "market-structure",
+    "policy-framework",
+    "balance-sheet-normalization",
+    "money-markets"
   ],
   "llm_review": {
-    "initial_confidence": 7,
+    "initial_confidence": 6,
     "verification_confidence": 7,
     "verdict": "review",
     "issues_found": [
-      "event_type 'fomc_minutes' is incorrect - the source is a full verbatim TRANSCRIPT, not minutes. Minutes are summary documents; transcripts are verbatim records. Should be changed to a more appropriate taxonomy value or the distinction should be noted.",
-      "published_at date (2016-07-27) reflects the meeting date, not necessarily the transcript release date. FOMC transcripts are typically released with a multi-year lag, so this date may be inaccurate for archival purposes.",
-      "Source body is truncated - only a portion of the 283-page transcript was provided, limiting verification of the full key_points list."
+      "event_type 'fomc_minutes' is suboptimal for a verbatim transcript; taxonomy lacks specific transcript type, but minutes and transcripts are distinct documents with different release timing and content scope",
+      "published_at field is empty; transcript release date cannot be verified from source body (Fed transcripts typically released ~5 years after meeting)",
+      "Source body is truncated (only first ~4 pages of 283); full transcript content cannot be fully verified",
+      "topic assigned as 'market structure' but source metadata TARGET is 'macro catalysts'; this is arguably appropriate given the operational framework focus but represents a shift from source intent"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "This is a borderline case. The document has high archival value as an authoritative verbatim FOMC transcript with direct relevance to macro catalysts and market structure. All extracted content is accurately supported by the provided excerpt. However, the event_type classification as 'fomc_minutes' is factually incorrect - this is a transcript, not minutes. Additionally, the source truncation prevents full verification of all key_points. A human reviewer should confirm the event_type correction and assess whether the historical value justifies acceptance given the document age (nearly 10 years old)."
+    "notes": "Source body is truncated, preventing full content verification. Published_at date missing from record and cannot be verified from source. Event type classification is debatable (transcript vs minutes). However, the record's notes accurately acknowledge these limitations and correctly identify the document as a transcript. The high-trust domain and authoritative source provide baseline credibility."
   },
   "human_feedback": {
     "decision": "",
@@ -73,18 +65,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_fomc_meeting_transcript_july_85a9c3c361c24f64.txt",
-  "notes": "Historical record - FOMC meeting transcript from July 2016, approximately 9 years and 8 months prior to TODAY (2026-04-12). Exceeds 90-day recency threshold. Source body was truncated; full 283-page transcript not available. The transcript reveals authentic FOMC deliberations including discussions on long-run monetary policy implementation frameworks, money markets, and normalization planning. This represents a historically significant moment in Fed policy preparation. All extracted information is directly supported by the provided transcript excerpt. Confidence lowered slightly due to source truncation and document age.",
+  "notes": "This is an FOMC meeting TRANSCRIPT (verbatim record), not a statement, official minutes, or projections. Fed transcripts typically released with 5-year delay. The document primarily covers: (1) long-run monetary policy implementation framework discussions, (2) foreign central bank experience survey of nine advanced-economy central banks, (3) money market analysis and objectives. Classified as fomc_minutes due to lack of specific transcript category in taxonomy. Source is historical (2016) - over 9 years old relative to TODAY. Topic assigned as 'market structure' given primary focus on operational framework and money market considerations. Confidence lowered for any real-time market application given age.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "high",
     "score": 8,
     "reasoning": [
-      "Federal Reserve Board as authoritative source domain",
-      "Verbatim transcript of FOMC meeting deliberations",
-      "High domain trust tier per metadata",
-      "Relevant to both market structure and macro catalysts topics",
-      "Source truncation and document age are limiting factors rather than quality concerns"
+      "Source is authoritative Federal Reserve official document",
+      "Transcript provides verbatim committee deliberations",
+      "Domain is high trust tier (federalreserve.gov)",
+      "Contains detailed operational framework discussions relevant to market structure",
+      "Age reduces timeliness but maintains historical research value"
     ]
   }
 }

@@ -1,19 +1,19 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Source published April 11, 2024 (approx. 2 years before TODAY); qualifies as historical but less current than recent records",
-    "Source body was truncated; additional sections on credit conditions and banking topics were not accessible for verification",
-    "event_type 'economic_commentary' is reasonable but CDIAC meeting summaries could arguably be classified differently",
-    "market_impact field is empty with confidence: 0, suggesting incomplete market impact assessment"
+    "Source is approximately 2 years old (published 2024-04-11, TODAY is 2026-04-12) - exceeds 90-day threshold but qualifies for archival value consideration",
+    "Source was truncated in provided text - some discussion sections may be missing",
+    "market_impact field is speculative with low confidence (3) - the record itself acknowledges this is not a market-moving event",
+    "event_type 'economic_commentary' is reasonable but 'blog_post' could also apply given the informal, qualitative nature"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record is mostly accurate and well-supported by the source. Confidence score is borderline (6), but the suggested_status of 'review_queue' is appropriate. Human review not required as automated routing is appropriate for borderline cases.",
+  "human_review_required": true,
+  "human_review_reason": "Source is historically dated (2 years old) but from a high-trust domain (federalreserve.gov). Human review needed to assess whether the qualitative, anecdotal regional intelligence from a Fed advisory council adds meaningful archival value beyond official statistical releases. The source content is accurate and well-represented, but the age and nature of the intelligence (non-FOMC, advisory council notes) warrant human judgment on retention.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Community Depository Institutions Advisory Council met on April 11, 2024, noting that the economy remains resilient but faces persistent inflationary pressures, with inflation hurting low- and moderate-income families most. Council members reported that goods inflation is slowing while services inflation persists due to labor costs. Housing affordability remains a challenge across Districts, and labor markets remain tight, though pay increases have moderated from 6-7% last year to 4-5% in 2024.",
-    "why_it_matters": "This CDIAC meeting summary provides ground-level intelligence on economic conditions from depository institution representatives across Federal Reserve Districts. The discussion highlights persistent inflation driven by labor costs and consumer demand, moderating goods inflation, housing affordability challenges, and labor market tightness—all relevant inputs for Fed policy assessment. The council's skepticism about near-term achievement of the 2% inflation target reflects sentiment in the broader business community. Note: This document represents regional anecdotes and perspectives from an advisory council, not official Fed policy statements.",
-    "macro_context": "The document reflects regional economic conditions as of April 2024, showing persistent inflation, regional housing challenges, and labor market tightness. Council members expressed cautious optimism about the economic outlook, citing stable consumer confidence and slow return of small business capital investment. The bifurcation between upper- and lower-income households and the shift from goods to services inflation were highlighted as key developments. Source is historical (April 2024) and was truncated in provided text.",
-    "market_structure_context": ""
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The CDIAC report provides anecdotal evidence of economic conditions as of April 2024. Key macro implications include: (1) goods-side disinflation is materializing as expected, (2) services inflation remains sticky due to labor-intensive nature, (3) labor market is gradually cooling with wage growth moderating from 6-7% to 4-5%, (4) housing affordability remains a challenge despite price moderation. This qualitative evidence supports the narrative that the Fed was navigating between weakening inflation and resilient economic activity. NOTE: This is consultative advisory council input, not official FOMC deliberations or formal Fed policy output.",
+    "market_structure_context": "CDIAC serves as a consultative body providing regional, ground-level perspective from community depository institutions. This intelligence complements formal data releases by offering qualitative color on how financial institutions perceive economic conditions in their districts—information that may inform but does not constitute official Fed policy positions."
   }
 }

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_treasury_quarterly_refunding_process_694a610ddd9c15d6",
-  "created_at": "2026-04-01T05:59:48.684843+00:00",
+  "created_at": "2026-04-10T06:00:32.635391+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
   "event_type": "treasury_issuance",
@@ -8,27 +8,29 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/treasury-quarterly-refunding-process",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "information_page",
-    "domain": "home.treasury.gov"
+    "source_type": "informational_page"
   },
-  "summary": "This page describes the procedural steps Treasury follows in conducting its quarterly refunding process, including consultation with primary dealers and the Treasury Borrowing Advisory Committee. The source is an informational overview of debt management process rather than an actual refunding announcement or results. No publication date, specific numbers, or market-moving information is provided.",
+  "summary": "This page describes Treasury's quarterly refunding process, which involves soliciting input from primary dealers and the Treasury Borrowing Advisory Committee (TBAC) to inform debt management decisions. The process includes face-to-face meetings with half of primary dealers each quarter, formal TBAC reports to the Secretary, and public release of meeting minutes the day after meetings. Specific policy changes are typically announced through quarterly refunding statements but may also appear in separate press releases or Treasury official speeches.",
   "key_points": [
-    "Treasury solicits views from primary dealers through formal questions posted on Treasury's website",
-    "Treasury holds face-to-face meetings with half of primary dealers each quarter",
-    "The Treasury Borrowing Advisory Committee (TBAC) provides formal advice and reports to the Secretary of the Treasury",
-    "Minutes of TBAC meetings are released to the public the day following the meeting",
-    "Changes in debt management policy are typically announced through quarterly refunding statements but may also come via separate press releases",
-    "The public can submit views on debt management policy to debt.management@treasury.gov"
+    "Treasury solicits advice from primary dealers through questionnaires posted on Treasury.gov and holds face-to-face meetings with half of primary dealers each quarter",
+    "The Treasury Borrowing Advisory Committee (TBAC) provides formal advice in response to Treasury questions and discussion materials, issuing a report to the Secretary of the Treasury",
+    "TBAC meeting minutes are released to the public the day following the meeting",
+    "Debt management policy changes are usually announced through quarterly refunding statements but may also appear in separate press releases or Treasury official speeches",
+    "Treasury accepts public input on debt management policy via debt.management@treasury.gov",
+    "Specific changes to debt management policy are based on Treasury analyses combined with private sector advice"
   ],
-  "why_it_matters": "This page provides transparency into how Treasury formulates debt management decisions, but it contains no specific data, forecasts, auction amounts, or policy changes. It is not a source of macro catalysts or market-moving information. The lack of a publication date also prevents assessment of recency.",
+  "why_it_matters": "This page describes the procedural framework for Treasury's quarterly refunding process, which is a key mechanism for Treasury borrowing and debt issuance decisions. While this page does not contain specific issuance amounts, auction schedules, or policy changes, it provides context on how Treasury incorporates market participant input into debt management decisions—a process that can influence Treasury market dynamics and broader macro conditions.",
   "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "unknown",
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "This source describes the procedural framework for Treasury's quarterly refunding process, which is part of the U.S. government debt issuance infrastructure. However, it does not contain specific operational details, auction schedules, or amounts that would be relevant for market structure analysis. As an informational overview page without publication metadata, it has limited archival value for a finance research archive focused on market catalysts.",
+  "macro_context": "The quarterly refunding process is a regular mechanism through which Treasury makes borrowing decisions that affect the supply of Treasuries in the market. These decisions have macro implications for interest rates, market liquidity, and government financing costs. However, this informational page contains no specific data or policy changes to assess macro impact.",
+  "market_structure_context": "This page describes the institutional process for Treasury debt management consultations. Primary dealers play a key role in Treasury market-making and the quarterly refunding process. TBAC provides formal advice that informs debt management policy. Meeting minutes are released publicly the day after meetings.",
   "important_numbers": [],
   "tags": [
     "treasury",
@@ -36,24 +38,24 @@
     "quarterly-refunding",
     "primary-dealers",
     "tbac",
-    "process"
+    "issuance-process"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 5,
+    "initial_confidence": 5,
+    "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "Source is an information/procedural page with no publication date - cannot verify recency",
-      "Source contains no specific data, numbers, auction amounts, or policy changes",
-      "Source does not contain macro catalyst or market-moving content - it describes the process framework only",
-      "event_type 'treasury_issuance' is questionable since the source does not describe actual issuance operations, only the procedural process",
-      "Low archival value given lack of substantive content or specific historical record"
+      "No published_at date provided in source metadata - cannot assess recency of content",
+      "Source is informational/process page with no specific numbers, policy decisions, or actionable content",
+      "event_type 'treasury_issuance' is technically valid but misleading - this page describes the process, not actual issuance operations",
+      "Source is background institutional information rather than a macro catalyst event",
+      "record correctly identifies source_type as 'informational_page' and quality_tier as 'low', but this raises question of archival value"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Source is informational only with no publication date and no market-moving content. The generated record accurately describes the source's nature, but the fundamental question is whether procedural overview pages with no specific content meet the threshold for archival inclusion. The record appropriately flags low value but the decision on whether to archive informational process pages requires human judgment on archival scope."
+    "notes": "Source is factually accurate and from a high-trust government domain, but presents borderline archival value. It is an institutional description page with no specific data, policy changes, or market-relevant numbers. The record correctly captures the source content and appropriately notes its limited direct research value, but human judgment is needed to determine if purely procedural/background sources meet the archiving threshold for a finance research archive focused on macro catalysts."
   },
   "human_feedback": {
     "decision": "",
@@ -64,17 +66,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_treasury_quarterly_refunding_process_694a610ddd9c15d6.txt",
-  "notes": "This source is a procedural overview page with no publication date and no specific data. It describes the process by which Treasury conducts quarterly refunding but does not contain actual refunding results, auction announcements, or policy changes. Not relevant as a macro catalyst. ARCHIVE CANDIDATE: LOW - Consider marking as non-archivable informational content.",
+  "notes": "This source describes Treasury's quarterly refunding process at a procedural level without providing specific data or decisions. The quarterly refunding process itself is a macro-relevant event when specific decisions (auction sizes, issuance composition, policy changes) are announced, but this particular page is an institutional overview rather than an actionable catalyst. Marked as treasury_issuance event_type since quarterly refunding falls under Treasury issuance operations, though the actual issuance decisions would come from separate quarterly refunding statements. Consider linking to actual TBAC meeting minutes or quarterly refunding statements for substantive content.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 2,
+    "score": 3,
     "reasoning": [
-      "No publication date - cannot verify recency",
-      "No specific data points, numbers, or actionable information",
-      "Purely descriptive of process without outcomes or results",
-      "Low relevance to macro catalysts or market structure"
+      "Informational process description only - no specific data or policy decisions",
+      "No published date - cannot verify recurrency",
+      "No numbers or actionable content for market analysis",
+      "Source serves as background institutional context rather than a macro catalyst source"
     ]
   }
 }

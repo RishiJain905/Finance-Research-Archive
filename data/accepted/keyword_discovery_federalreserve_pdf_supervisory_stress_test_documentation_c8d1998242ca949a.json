@@ -1,60 +1,70 @@
 {
   "id": "keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_c8d1998242ca949a",
-  "created_at": "2026-04-12T20:37:53.162233+00:00",
+  "created_at": "2026-04-12T16:47:03.672037+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
   "title": "Supervisory Stress Test Documentation Final 2026 Global Market Shock Component",
   "source": {
-    "name": "Federal Reserve Board",
+    "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/supervisionreg/files/2026-final-gms-model.pdf",
+    "domain": "www.federalreserve.gov",
     "published_at": "2026-02-01",
-    "source_type": "research_paper",
-    "domain": "www.federalreserve.gov"
+    "source_type": "research_paper"
   },
-  "summary": "The Federal Reserve Board released the final documentation for the 2026 Supervisory Stress Test Global Market Shock (GMS) component, describing the hypothetical shocks to financial risk factors—including equities, currencies, commodities, interest rates, and credit—used in the severely adverse scenario. Firms subject to the GMS are those with $50 billion or more in aggregate trading assets and liabilities, or trading activities equal to 10% or more of total consolidated assets. The 2025 stress test used an as-of date of October 11, 2024.",
+  "summary": "The Federal Reserve Board released the final documentation for the 2026 Global Market Shock (GMS) component of the Supervisory Stress Test, effective February 2026. The GMS applies instantaneous hypothetical shocks to financial risk factors (equity returns, FX, interest rates, volatilities, commodities, credit spreads) to assess capital resilience of trading books under severely adverse market conditions. Firms with trading assets/liabilities of $50 billion or more, or trading activity equal to 10% or more of total consolidated assets, must incorporate these shocks.",
   "key_points": [
-    "Global Market Shock applies to firms with aggregate trading assets and liabilities of $50 billion or more, or 10% or more of total consolidated assets",
-    "Losses from the global market shock are recognized in the first quarter of the scenario horizon with no changes assumed in subsequent quarters",
-    "Risk factors include public equity returns from advanced and emerging economies, exchange rates, government yields, implied volatilities, commodity futures, and credit spreads",
-    "The GMS is applied to positions held on the as-of date (e.g., October 11, 2024 for the 2025 cycle), which may differ from the year-end macroeconomic scenario date",
-    "This document finalizes the October 2025 proposal with only typographical corrections; the Board proposed changes to the as-of date in its Enhanced Transparency proposal",
-    "Stress test scenarios are explicitly not forecasts—they are hypothetical paths for assessing capital resilience"
+    "GMS applies to Q1 of the stress test projection horizon; losses are recognized instantaneously with no subsequent changes",
+    "Firms subject to GMS: those with $50 billion+ in aggregate trading assets/liabilities, or trading ≥10% of total consolidated assets, excluding Category IV firms under tailoring framework",
+    "2025 stress test as-of date was October 11, 2024; as-of date changes annually and does not coincide with year-end",
+    "Risk factors include: public equity returns, exchange rates, government yields (e.g., 10-year Treasuries), implied volatilities, commodity futures, credit spreads/prices",
+    "Losses are measured using mark-to-market accounting under U.S. GAAP, unlike macroeconomic scenarios which use accrual accounting",
+    "GMS is explicitly not a forecast; it is a hypothetical scenario for assessing capital strength under financial distress"
   ],
-  "why_it_matters": "This technical documentation defines how the Federal Reserve models severe but hypothetical market dislocations for bank stress testing purposes. It establishes the methodology that determines trading-related capital losses under adverse conditions for major U.S. financial institutions, directly affecting how banks must prepare for regulatory capital assessments.",
+  "why_it_matters": "This documentation establishes the regulatory methodology for how the Fed stress-tests trading book risks across large banks. The GMS design determines which market moves banks must survive, affecting capital planning, risk limits, and systemic risk assessment. Market participants monitoring bank resilience and regulatory capital requirements need to understand the shock magnitude and factor relationships defined here.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx",
+      "volatility",
+      "commodities"
+    ],
     "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The GMS component provides a standardized framework for applying simultaneous shocks across multiple asset classes (equities, FX, rates, commodities, credit) to assess market-wide stress impacts on trading books. It models relationships between primary risk factors, secondary factors, and remaining risk factors, reflecting interconnected market dynamics during financial distress.",
+  "market_structure_context": "The GMS defines a standardized instantaneous shock applied to trading positions as of a specific as-of date. This affects how banks mark their trading books, measure counterparty credit exposure, and maintain capital ratios. The methodology includes correlation structures between primary, secondary, and remaining risk factors, which determines how shocks propagate across asset classes in the stress scenario.",
   "important_numbers": [
-    "$50 billion threshold for trading assets/liabilities",
-    "10% of total consolidated assets threshold",
-    "October 11, 2024 as-of date for 2025 stress test",
-    "90 FR 51762 (November 18, 2025) proposal reference"
+    "$50 billion minimum trading assets/liabilities threshold",
+    "10% trading assets threshold relative to total consolidated assets",
+    "9-quarter projection horizon for macroeconomic scenario (GMS applies to Q1 only)"
   ],
   "tags": [
-    "federal-reserve",
-    "stress-testing",
+    "stress-test",
     "global-market-shock",
-    "bank-regulation",
+    "bank-capital",
+    "trading-book",
+    "federal-reserve",
     "dodd-frank",
-    "capital-requirements",
-    "trading-risk",
-    "severe-adverse-scenario"
+    "severely-adverse-scenario",
+    "regulatory",
+    "capital-requirements"
   ],
   "llm_review": {
-    "initial_confidence": 6,
+    "initial_confidence": 8,
     "verification_confidence": 8,
     "verdict": "accept",
-    "issues_found": []
+    "issues_found": [
+      "published_at date (2026-02-01) is estimated; source title indicates February 2026 but no specific day is stated in the document body",
+      "source body is truncated; table of contents shows sections D and E exist (scenario narrative generation tool, design process limitations) but content is not provided",
+      "event_type set to 'regulatory_guidance' but source_type set to 'research_paper'; source_type should more accurately be 'regulatory_guidance' or 'regulatory_documentation' given this is Fed Board documentation"
+    ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": ""
+    "notes": "Source is authoritative Federal Reserve Board regulatory documentation with high domain trust tier. All substantive claims in summary and key_points are supported by the source text. The event_type 'regulatory_guidance' is appropriate despite source_type mismatch. Minor issues (estimated date, truncated body) are not material to the record's accuracy."
   },
   "human_feedback": {
     "decision": "",
@@ -65,7 +75,7 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_c8d1998242ca949a.txt",
-  "notes": "Source is a technical methodology PDF document rather than a news article or policy announcement. While it defines market stress parameters for regulatory purposes, it does not represent a live market catalyst. Published February 2026, making it recent. Document is comprehensive but the source body was truncated; additional detail on specific risk factor calibrations may exist beyond the visible text.",
+  "notes": "Technical Fed documentation covering the stress test model's global market shock component. Source is high-quality authoritative regulatory guidance but does not contain market-moving news or trading signals. Relevant for understanding bank capital resilience frameworks and how the Fed models instantaneous market dislocations. Published February 2026, within 90 days of TODAY.",
   "linked_quant_context": [
     {
       "record_id": "iorb_2026_04_11",
@@ -75,7 +85,7 @@
         "market structure",
         "federal-reserve"
       ],
-      "link_score": 68.8
+      "link_score": 68.3
     },
     {
       "record_id": "sofr_2026_04_10",
@@ -90,11 +100,11 @@
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 74.0,
+    "score": 71.0,
     "reasoning": [
-      "quality score: 74.0/100 (useful_context)",
+      "quality score: 71.0/100 (useful_context)",
       "high verification confidence",
-      "no issues found during verification",
+      "multiple issues found (3)",
       "clear why_it_matters explanation",
       "contains useful structured numbers",
       "high-trust source",

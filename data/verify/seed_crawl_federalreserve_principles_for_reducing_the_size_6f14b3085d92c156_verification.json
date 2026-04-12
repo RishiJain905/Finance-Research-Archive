@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "The 'why_it_matters' field claims the Fed's balance sheet was '$8-9 trillion' — this specific number is not mentioned in the source text and is an extrapolation. The source describes the approach but does not provide the balance sheet size figure.",
+    "Event type 'fomc_statement' is reasonable but the source is technically a press release announcing FOMC principles rather than a formal rate decision statement. The classification is defensible but not perfectly precise."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Minor extrapolation of balance sheet figure ($8-9T) not found in source text. The record is otherwise accurate and high-quality, but this one specific claim should be verified or removed to avoid forwarding unsupported information.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This statement provided forward guidance on the Fed's approach to Quantitative Tightening (QT), informing markets how the central bank would reduce its balance sheet after years of asset purchases. It established that rate hikes would precede balance sheet runoff, giving investors a timeline framework for policy normalization.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

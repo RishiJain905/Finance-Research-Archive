@@ -1,0 +1,95 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_report_finds_35b6a637bc151660",
+  "created_at": "2026-04-10T06:13:13.922177+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "New York Fed Report Finds Advances In Auto Loans, Mortgage Originations",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2015/rp151119",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2015-11-19",
+    "source_type": "research_paper"
+  },
+  "summary": "The New York Fed's Quarterly Report on Household Debt and Credit for Q3 2015 showed total household indebtedness increasing $212 billion from Q2, reaching $12.07 trillion, driven primarily by a $144 billion increase in mortgage balances and $39 billion increase in auto loan balances. Auto loan balances reached $1.05 trillion (up $111 billion year-over-year) and mortgage originations increased to $502 billion, continuing an upward trend. Delinquency trends were mixed, with mortgage foreclosures hitting a new 17-year low but 11.6% of aggregate student loan debt remaining 90+ days delinquent or in default.",
+  "key_points": [
+    "Auto loan balances increased $39 billion in Q3 2015, marking the 18th straight quarterly increase, reaching $1.05 trillion total",
+    "$33 billion of Q3 auto loan originations ($151 billion total) came from borrowers with credit scores below 620, near a 10-year high",
+    "Mortgage balances increased $144 billion to $8.26 trillion; mortgage originations rose to $502 billion",
+    "Student loan debt reached $1.20 trillion with 11.6% 90+ days delinquent or in default (actual delinquency likely ~23% among loans in repayment cycle)",
+    "Total household debt stood at $12.07 trillion as of Q3 2015, up $355 billion year-over-year",
+    "Mortgage delinquency rate (90+ days) declined to 2.3% from 2.5% the prior quarter, reaching the lowest level in 17 years"
+  ],
+  "why_it_matters": "This report provides the most detailed available data on U.S. household credit conditions, which is a critical input for assessing financial system stability, consumer spending capacity, and the durability of the economic recovery. The continued growth in auto lending to subprime borrowers near decade-highs signals potential systemic risk if credit quality deteriorates. Student loan delinquency rates suggest structural fragility in that sector despite apparent improvement in mortgage credit.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The report documents continued household deleveraging post-crisis with total debt still below 2008 peaks, but robust auto and mortgage originations suggest strong consumer credit demand. The 11.6% student loan delinquency rate is particularly significant as it affects borrowers' capacity to take on additional credit and may constrain future consumption.",
+  "market_structure_context": "While this is a consumer credit report rather than traditional market structure content (e.g., market plumbing, settlement, or operations), it does provide data on credit market structure including origination volumes, credit score distribution of auto borrowers, and delinquency rates by loan type—all relevant to understanding the structure and health of credit markets.",
+  "important_numbers": [
+    "$12.07 trillion total household debt",
+    "$1.05 trillion auto loan balances",
+    "$8.26 trillion mortgage debt",
+    "$502 billion mortgage originations (Q3)",
+    "$151 billion auto loan originations (Q3)",
+    "2.3% mortgage 90+ day delinquency rate",
+    "11.6% student loan 90+ day delinquency or default rate",
+    "3.4% auto loan 90+ day delinquency rate"
+  ],
+  "tags": [
+    "new york fed",
+    "household debt",
+    "consumer credit",
+    "auto loans",
+    "mortgage originations",
+    "delinquency rates",
+    "q3 2015",
+    "credit panel",
+    "subprime auto lending",
+    "student loan delinquency"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is over 10 years old (published November 2015) - significant temporal gap from TODAY (2026-04-10)",
+      "event_type is 'research_paper' but source is more accurately described as an economic commentary/blog post; source reads like a news-style summary of quarterly data rather than a formal research paper",
+      "Topic classification as 'market structure' is borderline - this is primarily household credit/consumer finance data; market_structure_context field acknowledges this tension",
+      "market_impact.confidence is set to 0 with empty asset_classes - appropriate given the source contains no market impact language, but this signals limited utility for trading/alpha generation"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is authoritative (NY Fed) and record is factually accurate, but the 10-year temporal gap significantly limits relevance for current market analysis. The record correctly notes this in quality_tier (tier C, score 5). Decision needed on whether historical quarterly credit data from 2015 has sufficient archival value to justify inclusion, or if the age makes it too stale despite accuracy."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_report_finds_35b6a637bc151660.txt",
+  "notes": "Source is a historical quarterly household debt report from Q3 2015. The data is over 10 years old and stale relative to TODAY. While the New York Fed Consumer Credit Panel data is authoritative and methodologically sound, the temporal gap significantly limits relevance for current market structure or macro analysis. The report is categorized under 'market structure' in metadata but would more accurately fit consumer finance/macro research. Subprime auto lending volume near 10-year highs is the most notable finding with potential systemic implications.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 5,
+    "reasoning": [
+      "Historical data (2015) - significantly stale",
+      "Authoritative source (NY Fed) but quarterly retrospective report",
+      "No forward guidance or policy implications",
+      "No market impact language present",
+      "Data quality is high but utility for current analysis is low due to age"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "4a724f2df336d25afb10c4f9f1f5b8c3b532120b"
+}

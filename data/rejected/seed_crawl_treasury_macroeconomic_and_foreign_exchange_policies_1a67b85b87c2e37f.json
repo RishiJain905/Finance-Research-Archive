@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_macroeconomic_and_foreign_exchange_policies_1a67b85b87c2e37f",
-  "created_at": "2026-04-01T13:52:04.963469+00:00",
+  "created_at": "2026-04-10T06:04:00.027289+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,24 +8,24 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/international/macroeconomic-and-foreign-exchange-policies-of-major-trading-partners",
-    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
   },
-  "summary": "This page is a Treasury Department archive index listing historical reports on international macroeconomic and exchange rate policies from 1989 through January 2026. No actual report content, analysis, or policy determinations are present; only navigation links to past reports are provided.",
+  "summary": "This page is a navigation index listing historical Treasury semiannual Reports to Congress on international economic and exchange rate policies, spanning from 1989 to 2025. No substantive report content is present in this source; only report titles and dates are listed. The most recent reports referenced are June 2025 and November 2024.",
   "key_points": [
-    "This is a listing/navigation page, not an actual report or analysis document.",
-    "References a January 2026 Report and numerous past reports dating back to 1989.",
-    "The page serves as an index to the semiannual 'Report to Congress on International Economic and Exchange Rate Policies'.",
-    "No currency manipulation determinations, exchange rate assessments, or policy conclusions are present in this source.",
-    "Actual report content (e.g., China FX policy analysis, Treasury's official determinations) would be in separate report documents."
+    "This is a listing/navigation page, not an actual report or policy document.",
+    "Historical reports are listed from 1989 through 2025.",
+    "Reports are authorized under 2015 and 1988 statutes.",
+    "The most recent links are June 2025 Report and November 2024 Report.",
+    "No macro data, exchange rate determinations, or policy conclusions are present in this source.",
+    "An annex on Foreign Exchange Reserve Accumulation is referenced.",
+    "Appendices on reserve currency status, IMF surveillance, sovereign wealth funds, and cross-border capital flows appear in historical reports."
   ],
-  "why_it_matters": "This page does not contain archiveable research content. It is merely a directory to historical Treasury reports. The actual semiannual reports contain policy-relevant analysis on major trading partners' exchange rate practices, which could trigger FX market reactions depending on Treasury's currency manipulation designations. Users seeking macro catalysts information should access the individual report documents (e.g., June 2025 Report, January 2026 Report) rather than this navigation index.",
+  "why_it_matters": "This page serves only as a directory to Treasury's semiannual exchange rate policy reports. Actual macro catalyst information—such as Treasury findings on currency manipulation, exchange rate assessments, or trade partner policies—would be contained in the individual reports themselves, not this index page. This source cannot be used for market research as it contains no substantive policy content.",
   "market_impact": {
-    "asset_classes": [
-      "fx"
-    ],
-    "directional_bias": "unknown",
+    "asset_classes": [],
+    "directional_bias": "",
     "confidence": 0
   },
   "macro_context": "",
@@ -33,23 +33,17 @@
   "important_numbers": [],
   "tags": [
     "treasury",
-    "exchange-rate-policy",
-    "international",
+    "exchange-rates",
+    "trade-policy",
     "listing-page",
-    "archive-index",
-    "macro-catalysts"
+    "non-archiveable",
+    "index"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 1,
+    "verification_confidence": 10,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing/navigation page, not an article or report - violates Core Rule 5",
-      "event_type is 'unknown' but should not be - the page itself is not a report and cannot be assigned a meaningful event_type from the taxonomy",
-      "No actual report content, policy determinations, or analysis present - only links to reports",
-      "published_at field is empty but is required metadata",
-      "No archival value as the actual substantive reports are separate documents"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -65,17 +59,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_macroeconomic_and_foreign_exchange_policies_1a67b85b87c2e37f.txt",
-  "notes": "Non-archiveable: This is a Treasury archive index/listing page, not a report itself. Contains only navigation links to historical reports. The semiannual 'Report to Congress on International Economic and Exchange Rate Policies' is the substantive document series; this page merely indexes past reports from 1989-2026. To obtain actual macro catalyst content (e.g., Treasury's currency manipulation determinations, FX policy assessments), the individual report URLs must be accessed separately.",
+  "notes": "Non-archiveable listing page. This URL hosts an index of historical Treasury reports on exchange rate policy but contains no actual report text, data, or conclusions. Researchers seeking macro catalyst content should access specific report links (e.g., June 2025 Report) rather than this navigation page. The listing page itself provides no actionable information for market structure or macro analysis.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 15,
+    "tier": "non-archivable",
+    "score": 0,
     "reasoning": [
-      "Listing page with no substantive content",
-      "No policy determinations or analysis present",
-      "Only hyperlinks to other documents",
-      "Not suitable for RAG retrieval without additional crawling"
+      "Navigation/listing page with no substantive content",
+      "No published_at timestamp provided",
+      "Cannot classify event_type without actual report content",
+      "Does not meet criteria for research archive inclusion"
     ]
   }
 }
