@@ -1,0 +1,81 @@
+{
+  "id": "treasury_auctions_2026_04_12",
+  "created_at": "2026-04-12T14:06:24.506439+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "404 Error: Treasury Auction Data Unavailable",
+  "source": {
+    "name": "Treasury Securities Auctions Data",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "published_at": "",
+    "source_type": "data_feed",
+    "domain": "api.fiscaldata.treasury.gov"
+  },
+  "summary": "Failed to retrieve Treasury auction data from the Treasury Fiscal Data API. The endpoint returned a 404 Not Found error, indicating the resource is unavailable or the URL structure has changed. No auction data was obtained for analysis.",
+  "key_points": [
+    "API request to Treasury Fiscal Data endpoint failed with 404 status code",
+    "Target endpoint: /accounting/od/auction_data_securities with fields for issue_date, security_type, security_term, offering_amt, total_accepted",
+    "Request attempted to sort by -issue_date with page size 5",
+    "No auction data retrieved; source contains only error message"
+  ],
+  "why_it_matters": "Treasury auction data is a key input for understanding market structure in government securities markets. The 404 error prevents analysis of recent auction terms, accepted amounts, and bidding patterns that would inform market liquidity and demand conditions assessments.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api-error",
+    "404",
+    "data-unavailable",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data—only a 404 error response from Treasury API",
+      "No auction data, pricing, or market information retrieved to support any research claim",
+      "Source metadata indicates 'market structure' topic but content is error-only, making topic verification impossible",
+      "Record serves as documentation of a data gap rather than substantive research",
+      "Cannot assess event_type accuracy since no event data was retrieved",
+      "Low informational value for archive despite accurate error reporting"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_12.txt",
+  "notes": "Failed data retrieval. The source contains only an API error message rather than actual auction data. Despite source metadata indicating relevance to market structure, no archiveable content was obtained. This record serves as a placeholder noting the data gap rather than a substantive research note. Recommend investigating current Treasury Fiscal Data API documentation to resolve endpoint URL.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed_retrieval",
+    "score": 1,
+    "reasoning": [
+      "No content retrieved from source",
+      "Error response cannot be archived as research data",
+      "Cannot assess market structure or macro catalysts without actual data",
+      "Source metadata relevance claims unverified due to failed fetch"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "repo_operations_2026_04_12",
+  "created_at": "2026-04-12T14:07:23.604791+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations - April 12, 2026",
+  "source": {
+    "name": "New York Fed",
+    "url": "",
+    "domain": "newyorkfed.org",
+    "published_at": "",
+    "source_type": ""
+  },
+  "summary": "Failed to retrieve NY Fed repo operation data. API endpoint returned 400 Bad Request error.",
+  "key_points": [
+    "API request to NY Fed markets data endpoint failed with 400 error",
+    "Target URL: https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation data was retrieved"
+  ],
+  "why_it_matters": "Insufficient data to assess current repo market conditions or overnight funding pressures",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Failed attempt to access NY Fed repo market data",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "market-structure",
+    "api-error"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only an API error message with no actual repo operation data",
+      "Source URL is empty/missing in the record",
+      "Published_at field is empty",
+      "No actionable market intelligence or structural information present",
+      "Failed API request has no archival value as research material",
+      "event_type 'market_notice' is questionable for an error page vs. actual market notice"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "low_quality",
+    "notes": "Record accurately describes an API failure, but the source has no archival value. A failed data retrieval is not market structure research."
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_12.txt",
+  "notes": "The source attempted to retrieve NY Fed repo operation data but the API request failed. This represents a market structure data gap rather than actionable market intelligence."
+}

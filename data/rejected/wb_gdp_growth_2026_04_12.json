@@ -1,0 +1,76 @@
+{
+  "id": "wb_gdp_growth_2026_04_12",
+  "created_at": "2026-04-12T14:07:27.309322+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World GDP Growth Rate — No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_notice",
+    "domain": ""
+  },
+  "summary": "The World Bank API returned no valid observations for indicator NY.GDP.MKTP.KD.ZG (Real GDP Growth Rate) as of the 2026-04-12 snapshot date. This is a data retrieval failure, not a substantive research document or data release.",
+  "key_points": [
+    "Indicator requested: NY.GDP.MKTP.KD.ZG (World Bank Real GDP Growth Rate)",
+    "Snapshot date: 2026-04-12",
+    "Response status: No recent valid observations returned",
+    "No actual GDP figures or growth rates provided"
+  ],
+  "why_it_matters": "No actionable research content. This represents a failed data query rather than a source for macro research. Cannot be used for market analysis, rate path assessment, or any financial decision-making.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp-growth",
+    "no-data",
+    "data-retrieval-failure"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual research or data — only a failed API response stating 'No recent valid observations were returned'",
+      "Cannot be archived as research — zero substantive content to summarize or analyze",
+      "Topic (global_economy) is mentioned in metadata but the source provides no actual GDP growth figures or any macro data",
+      "Source attribution URL is empty — no verifiable source location provided",
+      "event_type set to 'unknown' is technically correct but the underlying issue is the source itself is non-archivable"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_12.txt",
+  "notes": "REJECTED: Failed data query. No valid observations returned. The source provides no actual GDP growth figures or any other substantive information. Topic is global_economy, which is not among the mandated focus areas (market structure, macro catalysts). Even if it were relevant, the source is too thin to summarize. Reject from archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No substantive content — only a failed API response indicating no data available",
+      "Topic (global_economy) does not match mandated focus areas (market structure, macro catalysts)",
+      "Cannot support any market analysis or research workflow",
+      "Zero information value for RAG retrieval"
+    ]
+  }
+}
