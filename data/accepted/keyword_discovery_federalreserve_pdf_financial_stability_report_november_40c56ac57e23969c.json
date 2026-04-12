@@ -1,0 +1,109 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_financial_stability_report_november_40c56ac57e23969c",
+  "created_at": "2026-04-12T16:47:57.742712+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "financial_stability_report",
+  "title": "Financial Stability Report; November 2025",
+  "source": {
+    "name": "Federal Reserve Board of Governors",
+    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20251107.pdf",
+    "published_at": "2025-11-07",
+    "source_type": "pdf",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve Board released its November 2025 Financial Stability Report, assessing four broad categories of financial system vulnerabilities: asset valuations, borrowing by businesses and households, leverage in the financial sector, and funding risks. The report focuses on monitoring vulnerabilities that could exacerbate stress, with data reflecting information available as of October 23, 2025.",
+  "key_points": [
+    "The monitoring framework distinguishes between unpredictable shocks and manageable vulnerabilities that can be tracked over time",
+    "Asset valuation vulnerabilities arise when prices are elevated relative to economic fundamentals, increasing the risk of outsized price drops",
+    "Excessive borrowing by households and businesses creates distress risk if incomes decline or asset values fall",
+    "Leverage in the financial sector increases the risk that institutions cannot absorb losses without disruptions to normal operations",
+    "Funding risks stem from liquidity and maturity transformation, where institutions raise short-term funds but invest in illiquid or long-maturity assets",
+    "The report includes dedicated analysis on AI and algorithmic trading impacts (Box 1.1) and targeted short-term funding risk assessment (Box 4.1)",
+    "Near-term risks are assessed by analyzing how potential shocks may spread given current vulnerability conditions"
+  ],
+  "why_it_matters": "This report provides the Fed's official assessment of systemic risks in the U.S. financial system. For market participants, understanding these vulnerability assessments helps gauge potential stress points that could amplify market disruptions. The sections on funding risks and leverage are particularly relevant for repo, money markets, and fixed-income trading dynamics.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "volatility",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 3
+  },
+  "macro_context": "The report frames financial stability as supporting the Fed's dual mandate of maximum employment and stable prices, noting that a stable financial system enables banks and markets to provide financing for economic growth even during adverse events.",
+  "market_structure_context": "The report directly addresses market structure vulnerabilities including: (1) funding risks from liquidity/maturity transformation that can create fire sale dynamics, (2) leverage risks that may force institutions to cut lending or sell assets, and (3) short-term funding risk assessment methodologies. The Box on AI and algorithmic trading discusses how technological changes affect market structure.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "financial-stability",
+    "systemic-risk",
+    "leverage",
+    "funding-risk",
+    "asset-valuations",
+    "vulnerabilities",
+    "ai-trading",
+    "short-term-funding"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Source body was truncated due to character limit, preventing verification of specific numerical thresholds, table data, and figure details from the full report"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This is an official Federal Reserve publication with high domain trust. However, the source body was truncated, so key quantitative findings, specific vulnerability metrics, and detailed market structure assessments may not be fully captured. Human review should verify against the full PDF if possible."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_financial_stability_report_november_40c56ac57e23969c.txt",
+  "notes": "Historical record (published November 7, 2025; more than 90 days prior to TODAY). Source body was truncated; full quantitative analysis from tables and detailed vulnerability assessments not captured. The report is authoritative but this extraction may be incomplete. Recommend reviewing full PDF for complete data. The document is clearly relevant to market structure through its analysis of funding risks, leverage, and systemic vulnerabilities in financial markets.",
+  "linked_quant_context": [
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve"
+      ],
+      "link_score": 68.3
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 63.0,
+    "reasoning": [
+      "quality score: 63.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "keyword_discovery_federalreserve_finance_and_economics_discussion_series_24274f81925393cb",
+  "created_at": "2026-04-12T16:42:12.194864+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Finance and Economics Discussion Series (FEDS) - 2025",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/econres/feds/2025.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-12-01",
+    "source_type": "listing_page"
+  },
+  "summary": "This Federal Reserve listing page indexes multiple 2025 FEDS research papers; the source is truncated mid-list. Most papers cover topics unrelated to market structure or macro catalysts (labor economics, AI, payment systems, private firm returns). One paper (FEDS 2025-106) addresses fund flow dynamics and mechanical portfolio rebalancing during COVID-19, touching on market structure concerns around fund outflow contagion. This listing page should not be archived as a single record.",
+  "key_points": [
+    "FEDS 2025-110: Interest rate ceilings on small-dollar loans and labor supply effects; not market-structure relevant",
+    "FEDS 2025-109: Data center investment forecasting ($370bn annualized by 2026:Q2); not market-structure relevant",
+    "FEDS 2025-108: LLM efficiency methods (knowledge distillation); not market-structure relevant",
+    "FEDS 2025-107: Private vs public firm rates of return; not market-structure relevant",
+    "FEDS 2025-106 (partial): Funds of funds rebalancing during COVID-19; mechanical selling transmitted shocks across markets, government bond fund sales reached 34% of holdings and 100%+ of outflows",
+    "FEDS 2025-105 and beyond: Source truncated; additional papers not visible"
+  ],
+  "why_it_matters": "This is a listing page (not an archiveable source per rule 5). The page contains multiple distinct papers that require individual archival treatment. Each FEDS paper has a separate URL with its full text that should be archived separately. The most market-structure-relevant paper (FEDS 2025-106 on funds-of-funds rebalancing) should be archived using its own DOI URL.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "FEDS 2025-106 (partial data visible): During March 2020 COVID crisis, funds of funds sold 14% of total bond fund holdings, concentrating in government bond funds (34% liquidation). This demonstrates how mechanical rebalancing rules can amplify market stress and transmit shocks across asset classes. However, this observation is from a listing page—the actual paper at its dedicated URL should be archived instead.",
+  "important_numbers": [
+    "14% of total bond fund holdings sold by funds of funds (March 2020)",
+    "34% of government bond fund holdings liquidated",
+    "100%+ of outflows from government bond funds came from these sales",
+    "$370bn projected annualized data center investment by 2026:Q2"
+  ],
+  "tags": [
+    "federal-reserve",
+    "feds",
+    "research-paper",
+    "listing-page",
+    "fund-flows",
+    "portfolio-rebalancing",
+    "covid-19",
+    "bond-funds"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source type is listing_page - per rule 5, listing pages must be rejected",
+      "Multiple distinct research papers bundled into a single record; each paper has its own DOI URL and should be archived individually",
+      "Source is truncated mid-list; full content not available for verification",
+      "Target topic is 'market structure' but most visible papers are unrelated (labor economics, AI/ML methods, payment systems, private firm returns)",
+      "Only FEDS 2025-106 on fund rebalancing dynamics is market-structure relevant, but the source is a listing page, not the paper itself",
+      "Cannot archive an index page - individual paper URLs (e.g., https://www.federalreserve.gov/econres/feds/2025-106.htm) should be used instead"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_finance_and_economics_discussion_series_24274f81925393cb.txt",
+  "notes": "This is a listing/index page, not a single research document. The page should not be archived as one record. Each paper (FEDS-106, FEDS-109, etc.) has a separate DOI URL that should be archived individually. The source is low-quality for archival purposes because: (1) it's an index page, (2) content is truncated, (3) mixes multiple unrelated papers. The only paper partially visible that is relevant to market structure is FEDS 2025-106 on fund rebalancing dynamics. Recommend archiving the individual paper URLs instead.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Listing page type is non-archiveable per metadata rules",
+      "Source is truncated with partial visibility into papers",
+      "Multiple distinct documents mixed into one record",
+      "Most content is not relevant to target topics",
+      "Cannot verify completeness or accuracy of extracted data"
+    ]
+  }
+}

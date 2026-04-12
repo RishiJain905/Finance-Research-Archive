@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 8,
+  "verdict": "accept",
+  "issues_found": [
+    "published_at date (2026-02-01) is estimated; source title indicates February 2026 but no specific day is stated in the document body",
+    "source body is truncated; table of contents shows sections D and E exist (scenario narrative generation tool, design process limitations) but content is not provided",
+    "event_type set to 'regulatory_guidance' but source_type set to 'research_paper'; source_type should more accurately be 'regulatory_guidance' or 'regulatory_documentation' given this is Fed Board documentation"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is authoritative Federal Reserve Board regulatory documentation with high domain trust tier. All substantive claims in summary and key_points are supported by the source text. The event_type 'regulatory_guidance' is appropriate despite source_type mismatch. Minor issues (estimated date, truncated body) are not material to the record's accuracy.",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

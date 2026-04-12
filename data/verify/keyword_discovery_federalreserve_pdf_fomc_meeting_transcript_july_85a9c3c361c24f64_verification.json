@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'fomc_minutes' is suboptimal for a verbatim transcript; taxonomy lacks specific transcript type, but minutes and transcripts are distinct documents with different release timing and content scope",
+    "published_at field is empty; transcript release date cannot be verified from source body (Fed transcripts typically released ~5 years after meeting)",
+    "Source body is truncated (only first ~4 pages of 283); full transcript content cannot be fully verified",
+    "topic assigned as 'market structure' but source metadata TARGET is 'macro catalysts'; this is arguably appropriate given the operational framework focus but represents a shift from source intent"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source body is truncated, preventing full content verification. Published_at date missing from record and cannot be verified from source. Event type classification is debatable (transcript vs minutes). However, the record's notes accurately acknowledge these limitations and correctly identify the document as a transcript. The high-trust domain and authoritative source provide baseline credibility.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Verbatim transcript of the July 26-27, 2016 FOMC meeting, released with approximately 5-year lag standard for Fed transcripts. Meeting attended by Chair Janet Yellen, Vice Chair William Dudley, and all rotating FOMC members. Primary agenda item was staff presentation on 'Long-Run Framework for Monetary Policy Implementation,' covering foreign central bank experience, crisis lessons, and money market dynamics. Transcript captures operational framework discussions and policy normalization planning.",
+    "why_it_matters": "This is a verbatim FOMC TRANSCRIPT (distinct from official minutes), providing full visibility into committee deliberations. Fed transcripts are released with approximately 5-year delay. Historical record for understanding Fed thinking on monetary policy implementation framework design, normalization strategies, and balance sheet considerations. Limited real-time market application given age, but significant archival value for research on Fed decision-making processes.",
+    "macro_context": "Historical FOMC transcript from July 2016—a period following the December 2015 rate hike and preceding the December 2016 rate increase. Transcript captures Committee deliberations on long-run monetary policy implementation frameworks during a normalization planning phase. Meeting occurred approximately 5 years prior to transcript release and ~10 years prior to TODAY.",
+    "market_structure_context": "Transcript documents detailed staff briefing on long-run monetary policy implementation framework covering: (1) foreign central bank experience from nine advanced-economy central banks, (2) lessons from financial crisis period, (3) money market dynamics and efficiency criteria. Committee discussed objectives for alternative operating frameworks including promoting efficient, effective, and resilient money markets. Balance sheet normalization principles referenced as evaluation criteria. SOMA portfolio considerations addressed."
+  }
+}

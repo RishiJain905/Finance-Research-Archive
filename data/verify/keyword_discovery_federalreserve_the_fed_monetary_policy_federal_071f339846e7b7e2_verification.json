@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 8,
+  "verdict": "accept",
+  "issues_found": [
+    "Published_at date (2026-04-08) is estimated in notes, not explicitly stated in source body. Standard FOMC minutes release lag of ~3 weeks supports this estimate based on March 17-18 meeting dates.",
+    "Source text is truncated; the 'Staff Review of the Economic Situation' section ends mid-sentence with PCE inflation data. Full discussion of labor market, consumption, investment, and committee deliberations is not visible.",
+    "Record states 'probability of rate hikes through early 2027' at ~30%, but source says 'through that period' referring to 'early next year' — the specific date range is an extrapolation from context."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is a primary FOMC minutes document from a high-trust domain (federalreserve.gov). All verifiable claims in the record match the source text. The truncated text is a limitation of the ingestion process, not an error in the record. Published date estimation is reasonable given standard Fed release practices. The record accurately captures market developments, rate expectations, economic conditions, and operational details discussed in the minutes.",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "keyword_discovery_federalreserve_the_fed_the_central_bank_27c942522cb7ff43",
+  "created_at": "2026-04-12T16:37:25.660864+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "The Central Bank Balance-Sheet Trilemma",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-central-bank-balance-sheet-trilemma-20260114.html",
+    "published_at": "2026-01-14",
+    "source_type": "research_paper",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "Federal Reserve staff economists Burcu Duygan-Bump and R. Jay Kahn introduce a \"balance sheet trilemma\" framework showing that central banks can achieve only two of three goals simultaneously: a small balance sheet, low volatility of short-term rates, and limited market intervention. The note documents that the Fed's balance sheet expanded from ~$800 billion (6% of GDP) in December 2005 to ~$6.5 trillion (21% of GDP) in December 2025, and analyzes how reserve scarcity affects money-market rate sensitivity and volatility.",
+  "key_points": [
+    "Federal Reserve balance sheet grew from ~$800 billion (6% of GDP) in December 2005 to ~$6.5 trillion (21% of GDP) in December 2025",
+    "Balance sheet reduction (QT) concluded on December 1, 2025; reserve management purchases began December 10, 2025",
+    "The trilemma posits central banks can achieve only two of three goals: small balance sheet, low short-term rate volatility, limited market intervention",
+    "When reserve buffers are thin, even small shocks cause outsized increases in short-term funding rates across markets",
+    "Repo market sensitivity to Treasury General Account (TGA) movements, Treasury issuance, quarter-ends, and foreign repo pool rises as reserves fall relative to outstanding Treasuries",
+    "Key liability drivers affecting reserves include TGA, ON RRP, and foreign repo pool, which mechanically alter reserve levels one-for-one"
+  ],
+  "why_it_matters": "This FEDS Note provides a structural framework for understanding the operational tradeoffs central banks face as they normalize balance sheets post-QT. Market participants monitoring money-market conditions, repo spreads, and Fed policy implementation tools need to understand that reserve scarcity amplifies rate volatility and may require more frequent central bank interventions to maintain rate control.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The trilemma directly addresses market structure by explaining how reserve levels affect money-market plumbing. With fewer reserves, banks have smaller buffers against settlement obligations, causing them to demand higher compensation for parting with liquidity. This makes short-term funding rates (repo, Fed Funds) more sensitive to changes in liquidity supply (TGA swings, ON RRP usage) and demand (quarter-end effects, large payment flows). The Fed's standing facilities (SRP, ON RRP, Discount Window) serve as passive tools to manage reserve fluctuations, but cannot fully offset structural scarcity.",
+  "important_numbers": [
+    "$800 billion (balance sheet December 2005)",
+    "$6.5 trillion (balance sheet December 2025)",
+    "6% of GDP (balance sheet December 2005)",
+    "21% of GDP (balance sheet December 2025)",
+    "December 1, 2025 (QT conclusion)",
+    "December 10, 2025 (reserve management purchases start)"
+  ],
+  "tags": [
+    "federal-reserve",
+    "balance-sheet",
+    "reserve-management",
+    "repo-market",
+    "money-market",
+    "rate-control",
+    "market-structure",
+    "feds-notes",
+    "trilemma"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Source body was truncated due to character limits; analysis covers introduction through figures on repo rate sensitivity and volatility. Remainder of document could not be verified, though the available content represents the core analytical framework and key findings."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_the_central_bank_27c942522cb7ff43.txt",
+  "notes": "Source is a Federal Reserve economic research note (FEDS Notes) authored by staff economists. Publication date January 14, 2026 is recent relative to TODAY (2026-04-12). The document is substantive research on central bank operational framework and market structure implications of balance sheet normalization. Source body was truncated due to character limits; analysis covers the primary argument and key findings as presented.",
+  "linked_quant_context": [
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "money-market",
+        "federal-reserve",
+        "market-structure"
+      ],
+      "link_score": 75.0
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "money-market",
+        "market-structure"
+      ],
+      "link_score": 71.7
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 73.0,
+    "reasoning": [
+      "quality score: 73.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

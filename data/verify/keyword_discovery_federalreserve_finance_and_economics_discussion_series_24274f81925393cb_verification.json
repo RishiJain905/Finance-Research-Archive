@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source type is listing_page - per rule 5, listing pages must be rejected",
+    "Multiple distinct research papers bundled into a single record; each paper has its own DOI URL and should be archived individually",
+    "Source is truncated mid-list; full content not available for verification",
+    "Target topic is 'market structure' but most visible papers are unrelated (labor economics, AI/ML methods, payment systems, private firm returns)",
+    "Only FEDS 2025-106 on fund rebalancing dynamics is market-structure relevant, but the source is a listing page, not the paper itself",
+    "Cannot archive an index page - individual paper URLs (e.g., https://www.federalreserve.gov/econres/feds/2025-106.htm) should be used instead"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record correctly identifies all critical issues and properly recommends rejection. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Federal Reserve listing page indexes multiple 2025 FEDS research papers; the source is truncated mid-list. Most papers cover topics unrelated to market structure or macro catalysts (labor economics, AI, payment systems, private firm returns). One paper (FEDS 2025-106) addresses fund flow dynamics and mechanical portfolio rebalancing during COVID-19, touching on market structure concerns around fund outflow contagion. This listing page should not be archived as a single record.",
+    "why_it_matters": "This is a listing page (not an archiveable source per rule 5). The page contains multiple distinct papers that require individual archival treatment. Each FEDS paper has a separate URL with its full text that should be archived separately. The most market-structure-relevant paper (FEDS 2025-106 on funds-of-funds rebalancing) should be archived using its own DOI URL.",
+    "macro_context": "",
+    "market_structure_context": "FEDS 2025-106 (partial data visible): During March 2020 COVID crisis, funds of funds sold 14% of total bond fund holdings, concentrating in government bond funds (34% liquidation). This demonstrates how mechanical rebalancing rules can amplify market stress and transmit shocks across asset classes. However, this observation is from a listing page—the actual paper at its dedicated URL should be archived instead."
+  }
+}
