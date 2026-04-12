@@ -1,0 +1,74 @@
+{
+  "id": "wb_public_debt_2026_04_12",
+  "created_at": "2026-04-12T14:08:29.796573+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt Indicator (GC.DOD.TOTL.GD.ZS)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-12",
+    "source_type": "unknown"
+  },
+  "summary": "A query for World Bank indicator GC.DOD.TOTL.GD.ZS (total government debt as percentage of GDP) returned no valid observations for the snapshot date of 2026-04-12. No data content is available for analysis.",
+  "key_points": [
+    "Indicator queried: GC.DOD.TOTL.GD.ZS (Total Government Debt as % of GDP)",
+    "Result: No recent valid observations returned",
+    "No numerical values, dates, or substantive content provided",
+    "Source represents a failed data retrieval response, not an archiveable document"
+  ],
+  "why_it_matters": "This source provides no actionable information. A failed data retrieval cannot be used for research, RAG, or market analysis purposes. The World Bank public debt dataset is currently unavailable through this query mechanism.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "indicator",
+    "no-data",
+    "failed-query"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 8,
+    "verdict": "reject",
+    "issues_found": [
+      "URL field is empty - source attribution is incomplete",
+      "published_at date (2026-04-12) reflects the query date, not a publication date from the source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_12.txt",
+  "notes": "This is not a valid source document. The World Bank indicator query returned 'No recent valid observations were returned' - essentially an empty response or API error message. No numerical data, narrative, analysis, or any substantive content is available. The source is irrelevant to both market structure and macro catalysts topics as defined, and should not be included in the research archive. If this indicator is needed, a new data retrieval attempt is required.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "No actual data content present in source",
+      "Source is a failed data retrieval response, not a document",
+      "Cannot contribute to any research or analysis objectives",
+      "Irrelevant to both specified topics: market structure and macro catalysts"
+    ]
+  }
+}

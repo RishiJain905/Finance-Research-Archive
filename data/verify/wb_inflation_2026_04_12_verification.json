@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a failed API response with no actual data content - no inflation figures, dates, or any usable information",
+    "No URL provided in source attribution - source is not accessible for verification",
+    "Source is not an article-like document; it's an API/data retrieval failure that cannot support financial research",
+    "event_type set to 'unknown' when there's clearly no event or data to classify",
+    "Quality tier 'discard' with score 1 is appropriate - source has zero archival value",
+    "Macro context and market structure context fields are empty, as they should be given nothing was retrieved",
+    "The record honestly describes the failure but contains nothing that qualifies as research-worthy content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is transparently honest about containing no data. No human review is needed to determine this is a discard case. The record correctly identified itself as low-value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

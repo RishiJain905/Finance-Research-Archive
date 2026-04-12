@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains no actual data—only a 404 error response from Treasury API",
+    "No auction data, pricing, or market information retrieved to support any research claim",
+    "Source metadata indicates 'market structure' topic but content is error-only, making topic verification impossible",
+    "Record serves as documentation of a data gap rather than substantive research",
+    "Cannot assess event_type accuracy since no event data was retrieved",
+    "Low informational value for archive despite accurate error reporting"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate in describing the API failure, but archiving a 404 error as research has questionable value. Human reviewer should decide whether documenting data gaps warrants archival inclusion, or if this should be rejected and requeued with corrected endpoint information. The source provides no substantive content for market structure analysis.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "wb_inflation_2026_04_12",
+  "created_at": "2026-04-12T14:08:14.052669+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Inflation Rate - No Valid Observations",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-12",
+    "source_type": "data_retrieval"
+  },
+  "summary": "The World Bank indicator FP.CPI.TOTL.ZG (World Inflation Rate) returned no valid observations as of the requested date. No current inflation data was available for extraction.",
+  "key_points": [
+    "No recent valid inflation observations returned for indicator FP.CPI.TOTL.ZG",
+    "Data retrieval attempt on 2026-04-12 failed to produce usable results",
+    "World Bank inflation indicator data unavailable"
+  ],
+  "why_it_matters": "This source is not usable for research purposes. A data query to the World Bank's CPI inflation indicator returned zero observations, providing no information on global inflation trends, regional inflation rates, or any comparative data for analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "api-retrieval"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a failed API response with no actual data content - no inflation figures, dates, or any usable information",
+      "No URL provided in source attribution - source is not accessible for verification",
+      "Source is not an article-like document; it's an API/data retrieval failure that cannot support financial research",
+      "event_type set to 'unknown' when there's clearly no event or data to classify",
+      "Quality tier 'discard' with score 1 is appropriate - source has zero archival value",
+      "Macro context and market structure context fields are empty, as they should be given nothing was retrieved",
+      "The record honestly describes the failure but contains nothing that qualifies as research-worthy content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_12.txt",
+  "notes": "Source is a failed data retrieval attempt with no usable content. No inflation figures, dates, or contextual information available. This is not relevant to market structure or macro catalysts research as it contains no actual data. PAGE_TYPE unclear - appears to be an API/data feed response rather than a publishable document.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "No actual data retrieved - source is an empty API response",
+      "Cannot support any research question as no information is provided",
+      "Outside the scope of required topics (market structure, macro catalysts)",
+      "Low confidence: cannot be verified or used for any financial analysis"
+    ]
+  }
+}

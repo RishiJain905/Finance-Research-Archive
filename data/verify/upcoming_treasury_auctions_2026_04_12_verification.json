@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' but should be 'treasury_issuance' - the intended content category is clear from the API endpoint targeting auction schedules",
+    "Source contains no extractable market data - only an error message documenting failed retrieval",
+    "market_impact.directional_bias set to 'unknown' and confidence 0 is correct given no data obtained",
+    "quality_tier 'no-content' with score 0 is appropriate acknowledgment of empty source"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately describes the API failure and appropriately assigns 'no-content' quality tier. Minor issue: event_type should be corrected to 'treasury_issuance' rather than 'unknown'. No fabricated claims or unsupported assertions found.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  },
+  "corrections_note": "event_type should be changed from 'unknown' to 'treasury_issuance'. The record correctly identifies this as a Treasury auction data issue, making 'treasury_issuance' the appropriate taxonomy value despite the fetch failure. This is a minor field correction; the rest of the record is factually accurate as documented."
+}
