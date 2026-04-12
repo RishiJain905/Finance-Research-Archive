@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Published date inconsistency: source metadata shows '2026-02-00' but source body content is dated November 2020 (effective date) / May 2021 (manual publication date). The PDF filename suggests February 2026 republication, but the core content is from 2020-2021.",
+    "Source topic mismatch: TARGET specified 'macro catalysts' but source is bank supervisory/regulatory guidance with no relevance to market-moving catalysts or market structure analysis.",
+    "Source age ambiguity: The 2020-2021 content predates TODAY (2026-04-12) by over 4 years, though the filename suggests a 2026 republication. Historical regulatory guidance may still have archival value for understanding current frameworks."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes the source content and correctly identifies it as regulatory guidance rather than a market catalyst. However, the malformed published_at date (2026-02-00) and unclear relationship between the 2020-2021 content and the 2026 filename require clarification. Additionally, human judgment is needed to determine if historical bank examination guidance has sufficient archival value to warrant inclusion in a macro catalysts archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The source is internal Federal Reserve examiner guidance on bank capital adequacy assessment under Regulation Q. While it describes the regulatory framework governing bank capital requirements (CET1, Tier 1, Tier 2), it is not itself a market-moving catalyst or macro event. It explains the examination process for assessing bank solvency, not current market conditions or policy decisions.",
+    "market_structure_context": "This examination manual section covers bank capital regulation and risk-weighted asset calculations. It is supervisory guidance for bank examiners, not market structure analysis or market-moving information."
+  }
+}

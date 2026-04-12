@@ -1,0 +1,113 @@
+{
+  "id": "keyword_discovery_federalreserve_the_fed_the_central_bank_27c942522cb7ff43",
+  "created_at": "2026-04-12T05:57:17.725994+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "The Central Bank Balance-Sheet Trilemma",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-central-bank-balance-sheet-trilemma-20260114.html",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2026-01-14",
+    "source_type": "research_paper"
+  },
+  "summary": "This FEDS Note introduces a \"balance sheet trilemma\" framework showing that central banks can achieve only two of three goals simultaneously: a small balance sheet, low volatility of short-term rates, and limited market intervention. The analysis examines how reserve levels affect money-market rate sensitivity, finding that as reserves fall relative to outstanding Treasuries, repo rate sensitivity to liquidity shocks increases significantly. The Federal Reserve's balance sheet grew from roughly $800 billion (6% of GDP) in 2005 to about $6.5 trillion (21% of GDP) in 2025.",
+  "key_points": [
+    "Federal Reserve balance sheet expanded from ~$800 billion (6% of GDP) in December 2005 to ~$6.5 trillion (21% of GDP) in December 2025",
+    "The balance-sheet trilemma states central banks can achieve only two of three goals: small balance sheet, low short-term rate volatility, and limited market intervention",
+    "Balance-sheet reduction concluded on December 1, 2025; reserve management purchases announced December 10, 2025 to maintain ample reserves",
+    "As reserves fall relative to outstanding Treasuries, repo rate sensitivity to liquidity drivers (TGA changes, Treasury issuance, quarter-ends) rises sharply",
+    "The transition from scarce-reserves regime (pre-2008) to ample-reserves regime involved a structural framework shift in 2019",
+    "Large balance sheets help banks absorb liquidity shocks and keep rates stable, while smaller balance sheets require more frequent central bank interventions"
+  ],
+  "why_it_matters": "This research provides a framework for understanding the operational tradeoffs in Fed policy implementation. Market participants need to understand that any move to shrink the balance sheet below certain thresholds will necessarily increase money-market volatility or require more frequent central bank interventions. The trilemma clarifies why the Fed cannot simply minimize its balance sheet without consequences for rate control, which has direct implications for repo market dynamics, Fed funds trading, and broader short-end positioning.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "",
+  "market_structure_context": "The note provides detailed analysis of reserve demand dynamics, showing the mechanical relationship between TGA changes, ON RRP, and foreign repo pool movements on reserves. Key mechanisms include: (1) increases in TGA, ON RRP, and foreign repo pool liabilities reduce reserves one-for-one, tightening conditions unless offset by Fed; (2) when reserve buffers are thin, even small shocks translate into outsized short-term funding rate movements; (3) Tri-Party General Collateral Rate (TGCR) spread to ON RRP becomes more sensitive to liquidity conditions as reserves decline relative to Treasuries. The document cites Gissler et al. (2025), Cordes et al. (2025), Bostrom et al. (2025), and Alquist et al. (2022) on these dynamics.",
+  "important_numbers": [
+    "$800 billion (balance sheet Dec 2005)",
+    "$6.5 trillion (balance sheet Dec 2025)",
+    "6% of GDP (balance sheet Dec 2005)",
+    "21% of GDP (balance sheet Dec 2025)",
+    "December 1, 2025 (balance-sheet reduction concluded)",
+    "December 10, 2025 (reserve management purchases announced)"
+  ],
+  "tags": [
+    "fed-balance-sheet",
+    "reserve-management",
+    "market-structure",
+    "money-market",
+    "repo-market",
+    "rate-volatility",
+    "ample-reserves",
+    "monetary-policy-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_the_central_bank_27c942522cb7ff43.txt",
+  "notes": "Source published January 14, 2026—approximately 88 days before TODAY (2026-04-12), within the 90-day recency window. This is a FEDS Notes research paper by Federal Reserve economists Burcu Duygan-Bump and R. Jay Kahn. The document presents theoretical framework rather than immediate policy signals. While not providing direct trading signals, it offers essential market structure context for understanding Fed operational constraints and their implications for money-market dynamics. Source is high-quality, primary Fed research with clear implications for repo markets and rate volatility analysis.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure",
+        "money-market"
+      ],
+      "link_score": 72.5
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure",
+        "money-market"
+      ],
+      "link_score": 72.5
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 76.5,
+    "reasoning": [
+      "quality score: 76.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

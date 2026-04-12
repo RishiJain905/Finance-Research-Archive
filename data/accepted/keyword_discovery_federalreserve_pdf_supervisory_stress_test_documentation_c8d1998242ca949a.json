@@ -1,0 +1,104 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_c8d1998242ca949a",
+  "created_at": "2026-04-12T06:05:02.828825+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "Supervisory Stress Test Documentation Final 2026 Global Market Shock Component",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2026-final-gms-model.pdf",
+    "published_at": "2026-02-01",
+    "source_type": "research_paper",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve Board released the final documentation for the 2026 Supervisory Stress Test Global Market Shock (GMS) component, which applies hypothetical shocks to financial risk factors including equity, currency, interest rates, and credit to assess bank capital resilience. Firms with trading assets and liabilities of $50 billion or more, or equal to 10 percent or more of total consolidated assets, must incorporate these global market shocks into their severely adverse scenario projections.",
+  "key_points": [
+    "Global market shock losses are recognized in Q1 of the scenario horizon, with no changes assumed in subsequent quarters, based on the assumption that market dislocations can occur rapidly and unpredictably",
+    "Firms subject to the GMS include those with aggregate trading assets and liabilities of $50 billion or more, or trading assets/liabilities equal to 10% or more of total consolidated assets",
+    "The 2025 stress test used an as-of date of October 11, 2024; the Board proposed changes to this date in the Enhanced Transparency proposal published fall 2025",
+    "Risk factors include public equity returns from advanced and emerging economies, exchange rates, government yields, swap rates, implied volatilities, commodity futures, and credit spreads",
+    "Global market shock losses are measured using mark-to-market accounting under U.S. GAAP, differing from the accrual method used for traditional banking activities",
+    "No revisions were made to this document from the October 2025 proposed version other than typographical fixes"
+  ],
+  "why_it_matters": "This documentation provides the technical methodology for how the Federal Reserve stress tests trading and counterparty exposures at large banks. Understanding GMS design helps market participants anticipate which risk factors and asset classes would be most impacted in a severely adverse scenario, and how bank capital adequacy is assessed under stress conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx",
+      "commodities",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "This document defines the risk factor liquidity horizons and the framework for modeling relationships between primary, secondary, and remaining risk factors used in the global market shock scenario. It establishes the methodology for calibrating instantaneous shocks across equity indices, currencies, interest rate volatilities, commodity futures, and credit spreads that would be applied to bank trading books under severely adverse conditions.",
+  "important_numbers": [
+    "$50 billion threshold for GMS applicability",
+    "10% of total consolidated assets threshold",
+    "9-quarter projection horizon for macroeconomic scenario",
+    "Q1 loss recognition for global market shock"
+  ],
+  "tags": [
+    "stress-test",
+    "federal-reserve",
+    "global-market-shock",
+    "capital-adequacy",
+    "dodd-frank",
+    "trading-risk",
+    "regulatory-guidance",
+    "bank-capital",
+    "risk-factors"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_c8d1998242ca949a.txt",
+  "notes": "Source is a technical Federal Reserve documentation PDF. Published February 2026, making it recent (within 90 days of TODAY). The document is methodology-focused rather than market-impact focused, providing detailed modeling approaches for the global market shock component of supervisory stress tests. Highly relevant to market structure as it defines how trading book risk factors are shocked. Content was truncated in source extraction but sufficient information was captured from beginning sections.",
+  "linked_quant_context": [
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve"
+      ],
+      "link_score": 68.3
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 76.5,
+    "reasoning": [
+      "quality score: 76.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}
