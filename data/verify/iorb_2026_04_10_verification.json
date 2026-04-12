@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'balance_sheet_update' is questionable; IORB is a monetary policy implementation rate, not a balance sheet size update — 'data_release_other' or 'rate_decision' context would be more accurate",
+    "Source URL is empty, limiting verifiability and retrieval",
+    "Source is thin raw data with no narrative, context, or analysis — while factually accurate, archival value is limited without accompanying policy context",
+    "The record lacks a publication timestamp beyond the observation date, making it unclear when this data was actually released to the public"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source and has reasonable contextual framing, but the event_type classification is debatable (IORB as 'balance_sheet_update' vs. 'data_release_other'), the source URL is missing, and the thin data-only nature raises questions about whether this warrants archival inclusion without a linked FOMC statement or rate decision. Human judgment needed to determine if thin daily data observations meet the archive's significance threshold.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve is currently paying an Interest on Reserve Balances rate of 3.65% as of April 10, 2026, unchanged from the prior observation on April 9. The IORB rate has remained flat at 3.65% for at least five consecutive business days.",
+    "why_it_matters": "IORB is a key rate in the Fed's monetary policy floor system. It serves as a floor for overnight money market rates, influencing repo market rates, money market fund yields, and short-term funding costs throughout the banking system. The stability of IORB at 3.65% indicates the Fed is maintaining its target rate structure without adjustment. Note: IORB movements typically follow FOMC rate decisions and signal the effective federal funds rate level.",
+    "macro_context": "IORB tracks closely with the top of the federal funds target range. As of the April 2026 observation period, the flat IORB at 3.65% is consistent with the Fed holding its policy rate steady. This data point confirms continued implementation of existing monetary policy without providing new signals.",
+    "market_structure_context": "IORB operates as the anchor rate in the Fed's corridor system for short-term interest rates. Banks with excess reserves receive IORB, which sets a floor for repo rates and other short-term funding rates. Changes in IORB would indicate a shift in the Fed's policy rate target, but current flat readings reflect no policy change."
+  }
+}

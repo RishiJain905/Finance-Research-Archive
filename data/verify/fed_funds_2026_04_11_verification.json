@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single data snapshot with no narrative, policy context, or analytical framing",
+    "Record contains only raw rate observations with no interpretation or market structure implications",
+    "The 'why_it_matters' and 'macro_context' fields contain synthesized narrative not derived from the source itself",
+    "No balance sheet operations, RRP usage, or repo market conditions provided to contextualize the EFFR level",
+    "Cannot determine whether flat EFFR reflects normal operations or funding stress without additional context",
+    "Of limited standalone archival value for research or RAG applications"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate but lacks sufficient substance for archival consideration. The source provides only a raw numerical observation with no narrative or policy context. While the EFFR is relevant to macro catalysts, a single rate snapshot without analysis does not constitute a meaningful research record.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

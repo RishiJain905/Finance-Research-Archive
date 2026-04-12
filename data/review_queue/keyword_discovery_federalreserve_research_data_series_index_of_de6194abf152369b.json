@@ -1,0 +1,81 @@
+{
+  "id": "keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b",
+  "created_at": "2026-04-12T01:28:31.822388+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "Research Data Series: Index of Common Inflation Expectations",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.html",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2021-03-05",
+    "source_type": "research_paper"
+  },
+  "summary": "The Federal Reserve Board staff published a methodology note introducing the Index of Common Inflation Expectations (CIE), a dynamic factor model that synthesizes comovement across multiple inflation expectations measures including the SPF, Michigan Survey, New York Fed Survey of Consumer Expectations, and TIPS breakeven inflation. The series is published quarterly as an experimental research data product, with updates posted on the third Friday of the first month of each quarter. The most recent data file update noted in the source was January 16, 2026.",
+  "key_points": [
+    "The CIE uses a dynamic factor model to extract common signals from diverse inflation expectations measures",
+    "Updated CIE includes 1-year and 3-year measures from the NY Fed Survey of Consumer Expectations (added April 2022)",
+    "Michigan Survey percentiles (25th and 75th) over the next 12 months were added to capture distribution shape",
+    "The 5-year TIPS breakeven measure was removed as redundant with other TIPS data",
+    "Output columns include CIE_spf (projected onto SPF 10-year PCE inflation) and CIE_mich (projected onto Michigan 5-10 year)",
+    "The original CIE was phased out by October 2022; only updated_CIE columns are now provided"
+  ],
+  "why_it_matters": "The CIE provides a unified signal from disparate inflation expectations measures, which policymakers and market participants use to assess whether inflation expectations remain anchored. Anchored expectations are a key input for Fed policy decisions, as unanchored expectations can become self-fulfilling and necessitate more aggressive monetary response. This note documents methodology; actual CIE values are in the linked CSV data file.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Inflation expectations data is a critical macro catalyst as the Fed's dual mandate includes price stability. The CIE aggregates consumer, professional, and market-based expectations into a single indicator, providing a more robust read on expectation dynamics than any single measure alone. This affects expectations for Fed rate path and inflation risk premiums across asset classes. Note: This source is methodological documentation; actual CIE numerical values are available in the linked CSV data file, not in this note.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "inflation-expectations",
+    "federal-reserve",
+    "dynamic-factor-model",
+    "pce-inflation",
+    "survey-of-professional-forecasters",
+    "michigan-survey",
+    "ny-fed-sce",
+    "tips",
+    "research-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is described as a 'methodology note' introducing the CIE series, not a research paper presenting new findings. Event_type 'research_paper' is a reasonable fit but 'research_paper' implies a more substantive empirical contribution than this methodological/data documentation note provides.",
+      "Source age: published March 5, 2021 (over 5 years before TODAY). However, source explicitly notes last data file update was January 16, 2026, confirming the series remains active."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Historical record (2021); verify whether current CIE values are needed for the archive. This note is primarily methodological — the actual inflation expectations data would be in separate CSV files linked from this page."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b.txt",
+  "notes": "This is a methodology/data documentation note, not a current data release. Published March 2021 with quarterly updates. Relevant to macro catalysts as it describes the construction of an inflation expectations indicator. The source discusses methodology changes made in April 2022, confirming the series remained active. Note: actual CIE numeric values would be in the linked CSV data file, not this note. Last data update cited: January 16, 2026 (for data file).",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "High domain trust tier — Federal Reserve Board official publication",
+      "Authors are Board staff economists (Ahn, Fulton)",
+      "Clear methodology documentation with citations",
+      "Formal disclaimer and experimental status acknowledged",
+      "Reduced score due to age (2021 publication date)"
+    ]
+  }
+}

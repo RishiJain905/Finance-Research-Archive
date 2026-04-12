@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a null data query result with zero substantive content",
+    "No macro data, statistics, or analysis present - cannot support any market structure or macro catalyst analysis",
+    "Source attribution is incomplete (URL and domain are empty strings)",
+    "event_type set to 'unknown' when it should more accurately reflect 'data_release_other' for a null indicator query, but ultimately irrelevant since source has no value",
+    "Record has no archival value - a failed API query result is not research",
+    "quality_tier correctly identified as 'reject' but record was still submitted to review_queue, inconsistent handling"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human judgment needed - the source contains literally no data or analysis. This is a null query result that cannot support any research purpose. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "2y_yield_2026_04_10",
+  "created_at": "2026-04-10T14:35:20.851782+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2-Year Treasury Yield Daily Observation",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "published_at": "2026-04-10",
+    "source_type": "unknown",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "FRED data snapshot shows the 2-Year Treasury Yield at 3.79% as of 2026-04-08, down 2 basis points from the prior day's 3.81%. The yield has oscillated between 3.79% and 3.84% over the past week.",
+  "key_points": [
+    "Latest observation: 3.79% on 2026-04-08",
+    "Prior observation: 3.81% on 2026-04-07",
+    "Absolute change: -0.02 (2 bps decline)",
+    "Recent range: 3.79% to 3.84% over observations from 2026-04-02 to 2026-04-08",
+    "No accompanying analyst commentary or policy signals in source",
+    "Data represents raw market yield observation only"
+  ],
+  "why_it_matters": "This is raw market data with no analytical content. The 2-year yield reflects near-term rate expectations but this snapshot provides no context for the move, no policy interpretation, and no forward guidance. Not actionable for research purposes without additional context.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.79%",
+    "3.81%",
+    "-0.02"
+  ],
+  "tags": [
+    "2-year-yield",
+    "treasury",
+    "bond-market",
+    "daily-data",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is raw market data from FRED with no analytical content, commentary, or policy context",
+      "event_type set to 'unknown' when data_release_other would be appropriate for this data snapshot",
+      "No actionable research content for macro catalyst or market structure analysis",
+      "Source is a data series page (series page on FRED) - thin low-signal source that biases toward reject per core rules",
+      "why_it_matters field correctly identifies the problem: 'Not actionable for research purposes without additional context'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately represents the source data (correct values, dates, changes), but the source itself is a raw data snapshot with no analytical value. Per core rules, thin low-signal sources bias toward reject. This is not suitable for a finance research archive focused on macro catalysts and market structure analysis."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_10.txt",
+  "notes": "This source is a FRED data series snapshot containing only raw yield observations with no accompanying analysis, commentary, or context. While the 2-year yield is relevant to rate expectations, this specific source provides no actionable research content. Recommend excluding from archive or linking to actual FOMC/ Fed commentary that provides context for current yield levels.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 2,
+    "reasoning": [
+      "Raw market observation only—no analytical content",
+      "No policy signals or commentary present",
+      "Suitable only as a data point reference, not standalone research",
+      "Fails to meet threshold for macro catalyst or market structure research archive"
+    ]
+  }
+}
