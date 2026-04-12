@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "why_it_matters contains overreach: 'signals where the Fed sees buildups of risk—inventory constraints, leverage exposure, or funding stress—that could amplify market dislocations' implies direct trading signals. Source explicitly states the framework monitors vulnerabilities, not current market conditions, and focuses on 'assessing vulnerabilities rather than predicting shocks.'",
+    "why_it_matters overstates direct market impact: 'particularly relevant for understanding potential liquidity stress scenarios in repo, money markets, and bond markets' is plausible but not explicitly supported as the report's stated purpose in the source text."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is mostly accurate with correct source attribution, valid event_type (financial_stability_report), and faithful summary of the four vulnerability categories. The core issues are minor overstatements in why_it_matters that could be corrected without human intervention.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This semi-annual report provides the Fed's official assessment of systemic vulnerabilities in the U.S. financial system. For market participants, it identifies where the Fed sees potential risk buildups—leverage exposure, funding stress, or asset valuation pressures—that could amplify dislocations if adverse shocks occur. The report's framework for assessing 'runnables' and fire-sale risks is relevant for evaluating potential liquidity stress scenarios in repo, money markets, and bond markets.",
+    "macro_context": "",
+    "market_structure_context": "The report directly addresses market structure vulnerabilities including: (1) Funding risks from liquidity/maturity transformation where institutions invest short-term deposits in illiquid assets; (2) Runnables indicator for aggregate run-related vulnerabilities; (3) Fire-sale dynamics when institutions are forced to liquidate assets quickly; (4) Leverage risk where financial institutions may need to cut lending or sell assets during stress. The report covers payment and settlement system safety as one of the Fed's five key functions."
+  }
+}

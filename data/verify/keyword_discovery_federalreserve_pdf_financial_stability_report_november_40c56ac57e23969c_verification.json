@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source body was truncated; extracted text covers only front matter, table of contents, and introductory framework sections. Substantive content in Sections 1-5 and the risk assessments, numerical indicators, and forward-looking statements are not available for verification.",
+    "Published date (2025-11-07) is inferred from URL pattern rather than confirmed in extracted text; however, source content confirms November 2025 timeframe.",
+    "verification_confidence and llm_review.verdict are incorrectly set to 0 and 'pending' respectively despite the record having been generated.",
+    "macro_context field is empty; while the report focuses on financial system stability rather than broader macroeconomics, this omission should be noted."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source truncation prevents verification of specific risk assessments, numerical data, and detailed vulnerability findings. The record's summary and key_points are consistent with the extracted front matter, but the substantive analysis sections (Sections 1-5) are not available to confirm whether the record captures the most important findings. Human review needed to determine if: (1) the four vulnerability categories listed are comprehensive, (2) any significant risk assessments are missing, (3) the AI/algorithmic trading box content is adequately represented, and (4) whether supplementary access to the full PDF would materially improve the record.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The report focuses on financial system resilience rather than macroeconomic conditions. It does not provide new forecasts or policy rate guidance but rather assesses the build-up or reduction of vulnerabilities in the U.S. financial system.",
+    "market_structure_context": ""
+  }
+}

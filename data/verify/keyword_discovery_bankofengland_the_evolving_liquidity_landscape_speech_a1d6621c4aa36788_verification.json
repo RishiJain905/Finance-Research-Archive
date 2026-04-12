@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "important_numbers contains '~4.75% - implied Bank Rate (not explicitly stated, context from recent UK monetary policy)' - this number is not in the source text and was sourced externally. Per core rules, verification must be judged against source text only.",
+    "summary states Victoria Saporta is 'Executive Director for Markets at the Bank of England' but her title is not stated in the source text. While likely accurate, it cannot be verified from this source."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is well-structured and most claims are accurate, but a specific data point in important_numbers (~4.75% Bank Rate) was sourced from external context rather than the source text itself, violating the core verification principle. The speaker's title also cannot be verified from the source. A human should assess whether these are critical enough to reject or can be corrected.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Victoria Saporta delivered a speech at the ECB Conference on Money Markets outlining how central bank balance sheet normalization, increased global government bond issuance, and the expanding role of non-bank financial institutions (NBFIs) are reshaping the liquidity landscape. The speech focuses on the Bank of England's demand-driven repo-led operating framework and its role in anchoring short-term market rates to Bank Rate. Sterling reserves have declined by approximately £322bn since QT began, with the Bank's STR and ILTR facilities now supplying £152bn of reserves to market participants.",
+    "why_it_matters": "The speech directly addresses the operational mechanics of monetary control in a post-QE environment, explaining how the BoE's elastic supply of reserves through repo facilities anchors short-term rates. For money market participants, repo traders, and fixed income investors, understanding the path to equilibrium reserves and the structural shifts in liquidity supply is critical for positioning in short-end markets. The ~30bp repo spike cited demonstrates that structural frictions can cause transient but significant dislocations even when the framework operates as designed.",
+    "macro_context": "",
+    "market_structure_context": "The speech elaborates on BoE's demand-driven repo-led operating framework, explaining how STR (unlimited reserves against Level A collateral at Bank Rate) and ILTR (weekly reserve supply for six months against broad collateral) facilities provide elastic reserve supply. The framework is characterized as necessary but not sufficient—robust market-based finance is also required for market resilience. The speech highlights the structural shift from scarce reserves pre-GFC to the current period of falling but still ample reserves, with equilibrium somewhere between pre-GFC and peak-QE levels. The recent 30bp gilt repo spike illustrates how structural frictions can cause temporary rate dislocations during transition."
+  }
+}

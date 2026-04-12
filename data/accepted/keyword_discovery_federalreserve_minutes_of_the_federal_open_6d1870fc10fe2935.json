@@ -1,0 +1,112 @@
+{
+  "id": "keyword_discovery_federalreserve_minutes_of_the_federal_open_6d1870fc10fe2935",
+  "created_at": "2026-04-12T08:40:18.194045+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "fomc_minutes",
+  "title": "Minutes of the Federal Open Market Committee March 18-19, 2025",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250319.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-03-19",
+    "source_type": "fomc_minutes"
+  },
+  "summary": "The FOMC minutes from the March 18-19, 2025 meeting reveal participants discussed revising the \"shortfalls language\" regarding maximum employment in the Statement on Longer-Run Goals and Monetary Policy Strategy. Financial markets over the intermeeting period showed Treasury yields declined ~25 basis points, equity prices fell notably (especially technology and cyclical sectors), credit spreads widened, and the dollar depreciated amid increased perceived risks of U.S. economic deterioration. Survey respondents attached higher probabilities to both lower GDP growth and higher inflation outcomes for 2025, consistent with perceived risk of a negative supply shock.",
+  "key_points": [
+    "Participants indicated it would be appropriate to reconsider the 'shortfalls language' in the statement describing maximum employment, judging the strategy should be robust to a wide range of economic circumstances",
+    "Core labor market indicators used to assess maximum employment include unemployment rate, job vacancies, employment-to-population ratio, and labor force participation rate",
+    "Over the intermeeting period, Treasury yields declined ~25 basis points, equity prices fell notably, credit spreads widened, and the dollar depreciated",
+    "Implied average federal funds rate path from futures shifted noticeably lower for horizons beyond mid-year 2025, while the modal path was little changed",
+    "Survey respondents attached higher probabilities to lower GDP growth outcomes and higher inflation outcomes for 2025, consistent with perceived risk of negative supply shock",
+    "ON RRP facility reached a post-2021 low of under $59 billion in mid-February; repo market conditions continued to tighten",
+    "Both market- and survey-based measures suggested inflation expectations remained well anchored"
+  ],
+  "why_it_matters": "The potential revision to 'shortfalls language' signals a meaningful shift in how the Fed communicates its employment mandate, potentially reducing its proactive stance on labor market shortfalls. The market volatility described reflects genuine uncertainty about the U.S. economic outlook, with investors pricing in scenarios of economic deterioration linked to trade policy uncertainty. The distinction between futures-implied path (lower) and modal path (unchanged) reveals a bifurcated market view on policy easing expectations.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "risk_off",
+    "confidence": 6
+  },
+  "macro_context": "The FOMC minutes document elevated concern about U.S. economic deterioration risks linked to trade policy developments. Survey respondents showed elevated uncertainty with higher probability weights on both downside growth and upside inflation scenarios, suggesting a stagflationary risk perception. Dollar depreciation and foreign equity outperformance indicate capital reallocation away from U.S. assets, consistent with reduced confidence in U.S. economic outperformance relative to global peers.",
+  "market_structure_context": "Repo market conditions continued to tighten, with increased sensitivity to transaction volumes and Treasury bill issuance. The manager interpreted this as normalization but noted that in the past, repo market tightening had been a precursor to tighter reserve conditions. ON RRP facility usage dropped to post-2021 lows, suggesting declining excess liquidity in the system.",
+  "important_numbers": [
+    "under $59 billion (ON RRP low in mid-February 2025)",
+    "~25 basis points (Treasury yields declined over intermeeting period)",
+    "~5 basis points (technical adjustment to ON RRP rate from December)"
+  ],
+  "tags": [
+    "fomc",
+    "fomc-minutes",
+    "maximum-employment",
+    "shortfalls-language",
+    "repo-market",
+    "on-rrp",
+    "inflation-expectations",
+    "market-volatility",
+    "trade-policy"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Source is approximately 388 days old (March 19, 2025 vs TODAY April 12, 2026); exceeds 90-day threshold but has clear archival value as a historical monetary policy document",
+      "Source body was truncated mid-sentence, potentially omitting later sections (vote tallies, dissents, policy implementation details); however, key substantive content (labor market framework review, financial market developments, repo market operations) was captured"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_minutes_of_the_federal_open_6d1870fc10fe2935.txt",
+  "notes": "Source is a historical FOMC minutes document from March 2025, which falls outside the 90-day relevance window. This is archived for research completeness. The source body was truncated in processing, potentially omitting sections from the latter half of the meeting including vote tallies, dissents, or policy implementation details. Key sections on labor market assessment and financial market operations were fully captured. The document covers both macro catalyst elements (growth/inflation uncertainty, Fed communication strategy) and market structure elements (repo market operations, ON RRP facility).",
+  "linked_quant_context": [
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 70.0,
+    "reasoning": [
+      "quality score: 70.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (2)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

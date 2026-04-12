@@ -1,0 +1,85 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_financial_stability_report_spring_392ad549c50f65f6",
+  "created_at": "2026-04-12T08:52:04.456869+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "financial_stability_report",
+  "title": "Financial Stability Report, Spring 2025",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20250425.pdf",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-04-25",
+    "source_type": "pdf"
+  },
+  "summary": "The Federal Reserve Board released its Spring 2025 Financial Stability Report assessing vulnerabilities across four categories: asset valuations, borrowing by households and businesses, leverage in the financial sector, and funding risks. The report, reflecting data available as of April 11, 2025, examines how these vulnerabilities could amplify stress during adverse shocks. The monitoring framework distinguishes between unpredictable shocks and observable vulnerabilities that can be tracked over time.",
+  "key_points": [
+    "The report assesses four broad vulnerability categories: (1) elevated asset valuations, (2) excessive borrowing by households and businesses, (3) excessive leverage in the financial sector, and (4) funding risks from rapid withdrawals (runnables)",
+    "The Federal Reserve framework focuses on monitoring vulnerabilities rather than predicting shocks, given that shocks are inherently difficult to forecast",
+    "Funding risks arise from maturity and liquidity transformation when institutions accept short-term deposits but invest in illiquid or long-maturity assets, creating potential for fire-sale dynamics",
+    "The report references Box 4.1 on 'runnables' as an indicator of aggregate run-related vulnerabilities in the economy",
+    "High leverage in the financial sector increases the risk that institutions cannot absorb losses without disruptions to normal business operations",
+    "The Board coordinates through the Financial Stability Oversight Council with other domestic agencies for monitoring purposes",
+    "Survey of salient risks to financial stability is referenced in Box 5.1"
+  ],
+  "why_it_matters": "This semi-annual report provides the Fed's official assessment of systemic vulnerabilities in the U.S. financial system. For market participants, it identifies where the Fed sees potential risk buildups—leverage exposure, funding stress, or asset valuation pressures—that could amplify dislocations if adverse shocks occur. The report's framework for assessing 'runnables' and fire-sale risks is relevant for evaluating potential liquidity stress scenarios in repo, money markets, and bond markets.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "volatility"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The report directly addresses market structure vulnerabilities including: (1) Funding risks from liquidity/maturity transformation where institutions invest short-term deposits in illiquid assets; (2) Runnables indicator for aggregate run-related vulnerabilities; (3) Fire-sale dynamics when institutions are forced to liquidate assets quickly; (4) Leverage risk where financial institutions may need to cut lending or sell assets during stress. The report covers payment and settlement system safety as one of the Fed's five key functions.",
+  "important_numbers": [],
+  "tags": [
+    "financial-stability",
+    "fed",
+    "systemic-risk",
+    "leverage",
+    "funding-risk",
+    "runnables",
+    "fire-sale",
+    "vulnerabilities",
+    "fsoc"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "why_it_matters contains overreach: 'signals where the Fed sees buildups of risk—inventory constraints, leverage exposure, or funding stress—that could amplify market dislocations' implies direct trading signals. Source explicitly states the framework monitors vulnerabilities, not current market conditions, and focuses on 'assessing vulnerabilities rather than predicting shocks.'",
+      "why_it_matters overstates direct market impact: 'particularly relevant for understanding potential liquidity stress scenarios in repo, money markets, and bond markets' is plausible but not explicitly supported as the report's stated purpose in the source text."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is mostly accurate with correct source attribution, valid event_type (financial_stability_report), and faithful summary of the four vulnerability categories. The core issues are minor overstatements in why_it_matters that could be corrected without human intervention."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_financial_stability_report_spring_392ad549c50f65f6.txt",
+  "notes": "Source is a high-authority Federal Reserve publication on financial stability. While not a traditional market structure document, it directly addresses market plumbing risks including funding instability, leverage buildup, and fire-sale dynamics—all relevant to market structure. The source covers all four vulnerability categories with emphasis on how funding risks can cascade through markets. Box 4.1 on 'runnables' appears to be a specific analytical tool for measuring run-related vulnerabilities. Source reflects data available as of April 11, 2025, approximately 11 months old from perspective of TODAY. Content truncated—full sections on near-term risks and survey results not visible in source body.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 7,
+    "reasoning": [
+      "Federal Reserve Board publication—highest authority tier",
+      "Covers market structure-adjacent topics (funding risks, leverage, runnables, fire-sales)",
+      "Provides official framework for monitoring systemic vulnerabilities",
+      "Deducted for truncation and age (11 months old)"
+    ]
+  }
+}

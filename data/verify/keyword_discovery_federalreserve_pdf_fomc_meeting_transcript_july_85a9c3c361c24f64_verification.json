@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "Event type 'fomc_minutes' is incorrect - source is explicitly a verbatim TRANSCRIPT, not minutes. Minutes and transcripts are distinct FOMC documents with different official status and level of detail.",
+    "Source is approximately 9 years and 9 months old (meeting date: July 26-27, 2016), well beyond the 90-day threshold for current relevance.",
+    "Source text is truncated at page 4 of 283 pages; complete content cannot be verified.",
+    "Record correctly identifies the source lacks actionable macro catalysts but classifies it as 'fomc_minutes' which implies policy significance closer to current decisions.",
+    "No published_at date explicitly provided in source metadata; date inferred from meeting date.",
+    "Source discusses long-run operational framework design rather than near-term policy signals."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type misclassification (transcript vs. minutes) is a concrete factual error that warrants correction. Additionally, the source's extreme age (nearly 10 years) combined with truncation means we cannot verify completeness. However, the record correctly identifies archival/historical value for Fed framework evolution research. Human judgment needed to decide if transcripts have sufficient archival value independent of current policy relevance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is the verbatim transcript of the July 26-27, 2016 FOMC meeting, held approximately 9 years and 9 months prior to today (2026-04-12). The meeting featured discussion on the 'Long-Run Framework for Monetary Policy Implementation,' including foreign central bank experience, crisis lessons, and money markets. Note: This is an official FOMC TRANSCRIPT (verbatim record), not minutes. The source is historical and stale, and the visible portion does not include policy decisions or rate guidance.",
+    "why_it_matters": "This transcript is a historical record of internal Fed deliberations from mid-2016, providing archival insight into the Committee's thinking on operational framework design during the normalization planning period. It documents discussions among all FOMC members including Chair Yellen. However, it does not contain actionable macro catalysts or forward guidance relevant to current market participants.",
+    "macro_context": "The source discusses the long-run framework for monetary policy implementation from mid-2016, during the period when the Fed was planning normalization after the financial crisis. No inflation, employment, or GDP data discussions are visible in the truncated text. This is a historical document predating the COVID-era policy shifts.",
+    "market_structure_context": "The visible transcript discusses money markets and operational frameworks as part of the long-run implementation framework discussion. Simon Potter (Manager, System Open Market Account) and Lorie Logan (Deputy Manager, SOMA) participated, indicating focus on balance sheet operations and market plumbing topics."
+  }
+}

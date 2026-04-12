@@ -1,0 +1,79 @@
+{
+  "id": "keyword_discovery_federalreserve_finance_and_economics_discussion_series_24274f81925393cb",
+  "created_at": "2026-04-12T08:50:00.503049+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Finance and Economics Discussion Series (FEDS) - 2025",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/econres/feds/2025.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-12-01",
+    "source_type": "listing_page"
+  },
+  "summary": "This is an archive listing page for the Federal Reserve's 2025 Finance and Economics Discussion Series (FEDS), containing approximately 10+ research papers. Only one paper (FEDS 2025-106) is directly relevant to market structure, covering how 'funds of funds' mechanically rebalanced portfolios during the COVID-19 crisis and transmitted shocks across markets. All other papers cover unrelated topics (labor economics, data center investment, machine learning, AI patents, payment systems).",
+  "key_points": [
+    "FEDS 2025-106 examines how 'funds of funds' (mutual funds investing in other mutual funds) mechanically rebalanced during the COVID-19 crisis, accounting for a third of bond fund outflows in March 2020",
+    "These funds sold 14% of total bond fund holdings but concentrated sales in government bond funds, liquidating 34% of those holdings",
+    "The paper finds that mechanical portfolio rebalancing can transmit shocks across markets and generate destabilizing effects",
+    "The source is a listing/archive page, not a single archiveable document",
+    "No individual paper is sufficiently developed in this listing to serve as a standalone source on market structure or macro catalysts"
+  ],
+  "why_it_matters": "This listing page provides access to Federal Reserve research but is not itself an archiveable research document. The single market-structure-relevant paper (FEDS 2025-106) requires retrieval as a standalone document to be useful for RAG purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "FEDS 2025-106 documents how fund-of-funds rebalancing during March 2020 transmitted shocks across markets by mechanically selling bond funds—particularly government bonds—after equity losses, representing a form of market plumbing vulnerability. However, this finding must be extracted from the individual paper, not this listing page.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "feds",
+    "research-archive",
+    "listing-page",
+    "portfolio-rebalancing",
+    "fund-flows"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per source metadata and source_type field - violates Rule 5 which mandates rejection of listing pages",
+      "event_type is set to 'unknown' - listing/archive pages do not map to any valid event_type in the taxonomy",
+      "No individual research paper is archived; only an index to papers is provided",
+      "Source is a container page with insufficient detail to serve as a standalone research record",
+      "The record correctly identifies all these issues but still suggests 'review_queue' when rejection is the correct outcome per Rule 5"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_finance_and_economics_discussion_series_24274f81925393cb.txt",
+  "notes": "This is a listing page, not a standalone research document. The page itself is non-archiveable. To extract research value, individual FEDS papers must be retrieved separately. The one potentially relevant paper (FEDS 2025-106 on fund rebalancing) requires direct access for proper archival. All other papers in this listing address unrelated topics: labor economics, data center investment, machine learning, wealth measurement, offline payment systems, and AI innovation.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Listing page is non-archiveable per core rules",
+      "Only 1 of ~10 papers relevant to target topic (market structure)",
+      "Abstracts in listing lack sufficient detail for reliable extraction",
+      "Individual papers must be accessed directly for quality archival"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is supervisory/regulatory methodology documentation for bank stress testing, not market operations, trading venues, or market-moving information",
+    "The document describes technical credit risk model specifications (spline implementations, regression specifications, coefficient estimates) for bank supervisors, not market participants",
+    "market_structure_context field correctly identifies this limitation: 'This document pertains to regulatory capital stress testing methodology, not market structure or trading operations'",
+    "Topic mismatch: archive target is 'market structure' but source content is exclusively about regulatory stress test modeling methodology"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear mismatch between source content and archive focus areas; no human judgment needed to determine this is outside scope",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source metadata and source_type field - violates Rule 5 which mandates rejection of listing pages",
+    "event_type is set to 'unknown' - listing/archive pages do not map to any valid event_type in the taxonomy",
+    "No individual research paper is archived; only an index to papers is provided",
+    "Source is a container page with insufficient detail to serve as a standalone research record",
+    "The record correctly identifies all these issues but still suggests 'review_queue' when rejection is the correct outcome per Rule 5"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's self-analysis is accurate and complete. No human judgment needed—the source is a listing page and must be rejected per Rule 5 regardless of content quality.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

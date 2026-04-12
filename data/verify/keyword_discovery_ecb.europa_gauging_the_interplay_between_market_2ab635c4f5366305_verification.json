@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type may be imprecise: 'financial_stability_report' is listed, but the source is specifically a 'special feature' article within the FSR, not the full report. More accurate event_type would be 'economic_commentary' or 'research_paper'.",
+    "Source body was truncated, limiting verification of specific composite indicator values, quantitative data, and chart references (SMOVE/MOVE indices, HQLA holdings specifics).",
+    "Summary omits that the source explicitly discusses data quality challenges and gaps in coverage of non-bank financial intermediaries and PTFs, which is a notable analytical contribution."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are moderate and relate to categorization precision and completeness rather than factual accuracy. The core content is well-supported by the source. Automated routing is appropriate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This ECB Financial Stability Review special feature examines how market liquidity and funding liquidity interact and can reinforce each other to create adverse liquidity spirals. The paper constructs composite indicators to measure both dimensions and identifies structural and cyclical drivers of liquidity conditions in the euro area. The authors highlight data quality challenges including fragmented OTC trading, sparse corporate bond data, lack of consolidated tape providers, and gaps in coverage of non-bank financial intermediaries and principal trading firms. While volatility was low and HQLA holdings were large during much of the last decade, recent conditions of high financial market volatility, recession risk, and monetary policy normalization have increased fragility in liquidity conditions.",
+    "why_it_matters": "Understanding the interplay between market and funding liquidity is critical for financial stability assessment. When these two dimensions reinforce each other negatively, they can trigger liquidity spirals that amplify market stress. The source also highlights significant data gaps in measuring liquidity—particularly for OTC markets, corporate bonds, and non-bank intermediaries—that complicate effective monitoring of systemic vulnerabilities.",
+    "macro_context": "The paper discusses how cyclical determinants including investor risk appetite, macroeconomic conditions, and global monetary policy cycles have shifted toward more fragile liquidity conditions. While this May 2023 publication does not provide forward-looking forecasts, it identifies key forward-looking risks around recession and monetary policy normalization as factors that can shift liquidity regimes.",
+    "market_structure_context": "This publication is directly relevant to market structure as it examines market-making practices, trade transparency, the prevalence of OTC trading versus exchange-based trading, and the impact of algorithmic/high-frequency trading on liquidity resilience. It identifies data gaps around non-bank financial intermediaries and principal trading firms as structural challenges for liquidity monitoring."
+  }
+}
