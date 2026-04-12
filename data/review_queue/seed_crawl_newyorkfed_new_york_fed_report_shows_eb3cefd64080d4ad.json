@@ -1,0 +1,92 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_report_shows_eb3cefd64080d4ad",
+  "created_at": "2026-04-10T06:14:51.304944+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "economic_commentary",
+  "title": "New York Fed Report Shows Households Adding Debt",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2014/rp140218",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2014-02-18",
+    "source_type": "research_paper"
+  },
+  "summary": "The New York Fed's Household Debt and Credit Report for Q4 2013 showed outstanding household debt increased $241 billion from the previous quarter—the largest quarter-over-quarter increase since Q3 2007. Total household indebtedness rose to $11.52 trillion, still 9.1 percent below the Q3 2008 peak of $12.68 trillion. This marked the first time since before the Great Recession that household debt increased over its year-ago level, signaling an end to the deleveraging period.",
+  "key_points": [
+    "Total household debt increased $241 billion in Q4 2013, the largest quarterly increase since Q3 2007",
+    "Total household indebtedness reached $11.52 trillion, still 9.1% below the Q3 2008 peak of $12.68 trillion",
+    "Mortgage debt increased $152 billion (1.9%) to $8.05 trillion, accounting for the bulk of the rise",
+    "Student loan debt rose $53 billion to $1.08 trillion; auto loan debt increased $18 billion to $863 billion",
+    "90+ day delinquency rates: mortgages 3.9%, student loans 11.5%, credit cards 9.5%, all categories 5.0%",
+    "New foreclosure notations reached approximately 157,000, down 70% from the Q2 2009 peak of 566,000"
+  ],
+  "why_it_matters": "This report marks a turning point in household sector behavior—the first year-over-year increase in consumer borrowing since before the Great Recession. For macro analysis, rising household debt may indicate shifting consumer behavior after an extended deleveraging period. The decline in delinquency rates (overall 90+ day delinquency fell from 5.3% to 5.0%) and foreclosures (to ~157,000 from the 566,000 peak in Q2 2009) reflects improving credit conditions alongside new borrowing activity. Van der Klaauw of the NY Fed characterized this as a significant shift, noting households are 'borrowing again' after a long deleveraging period.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Household debt trends are a key input for consumer spending capacity and broader economic growth projections. The Q4 2013 data showing resumption of household borrowing after an extended deleveraging period has implications for Fed policy assessment of household sector health. Student loan debt ($1.08 trillion) and rising mortgage debt ($8.05 trillion) represent structural shifts in household balance sheets. The $241 billion quarterly increase was the largest since Q3 2007, preceding the financial crisis.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$241 billion quarterly increase in household debt",
+    "$11.52 trillion total household debt as of Q4 2013",
+    "$12.68 trillion peak household debt (Q3 2008)",
+    "$8.05 trillion mortgage debt",
+    "$1.08 trillion student loan debt",
+    "$863 billion auto loan debt",
+    "$683 billion credit card debt"
+  ],
+  "tags": [
+    "household debt",
+    "consumer credit",
+    "new york fed",
+    "deleveraging",
+    "mortgage debt",
+    "student loans",
+    "credit conditions",
+    "q4-2013"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Source is 12+ years old (published 2014-02-18, reporting Q4 2013 data) — significantly beyond 90-day recency threshold; qualifies for historical archival value exception but limits real-time market relevance",
+      "Topic mismatch: SOURCE_METADATA targets 'market structure' but content is a household debt and credit macro report, which is macroeconomics/financial stability analysis rather than market structure (market plumbing, trading mechanisms, settlement operations, etc.)",
+      "event_type is 'economic_commentary' which is reasonable but not certain — source could arguably be 'data_release_other' given it releases Q4 2013 quarterly data, or 'financial_stability_report' given the NY Fed's regulatory role",
+      "why_it_matters field is somewhat speculative — claims about 'signaling financial vulnerability' and 'supporting consumer spending' go beyond what the source literally states",
+      "market_structure_context is empty — if topic is truly 'market structure', this field should be populated or the topic assignment should be reconsidered"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record has solid factual accuracy on all numbers, but requires human judgment on (1) whether a 2014 household debt report fits the archive's market structure mandate, (2) whether the topic should be reclassified to 'macro catalysts', and (3) whether the speculative language in why_it_matters should be toned down"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_report_shows_eb3cefd64080d4ad.txt",
+  "notes": "Historical record — published February 18, 2014, reporting Q4 2013 data. SOURCE_METADATA labels topic as 'market structure' but the source content is a household debt and credit report from the NY Fed, which is macroeconomics/financial stability analysis rather than market structure (market plumbing, operations, settlement, etc.). Recommend reclassifying topic to 'macro catalysts' if archiving. Also note the significant age of this data limits current relevance for real-time analysis.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source is 12 years old with no current relevance",
+      "Topic mismatch between metadata targeting and actual content",
+      "Content is macro/household finance data rather than market structure"
+    ]
+  }
+}

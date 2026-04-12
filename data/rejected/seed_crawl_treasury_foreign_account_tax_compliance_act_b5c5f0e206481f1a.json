@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_foreign_account_tax_compliance_act_b5c5f0e206481f1a",
-  "created_at": "2026-04-01T13:48:33.709416+00:00",
+  "created_at": "2026-04-10T06:01:23.187513+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "regulatory_guidance",
@@ -10,21 +10,21 @@
     "url": "https://home.treasury.gov/policy-issues/tax-policy/foreign-account-tax-compliance-act",
     "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "static_page"
+    "source_type": ""
   },
-  "summary": "This page from the U.S. Treasury provides an informational overview of FATCA (Foreign Account Tax Compliance Act), enacted in 2010, and lists the intergovernmental agreements (IGAs) between the U.S. and foreign jurisdictions for FATCA implementation. The content is a static reference page cataloging which countries have IGAs in force, signed, or in substance.",
+  "summary": "FATCA is a 2010 U.S. tax compliance law requiring foreign financial institutions to report information about U.S. taxpayer accounts to the IRS. This Treasury page serves as an index of Model Intergovernmental Agreements (IGAs) and their status by jurisdiction. The content is purely informational and archival in nature, listing which countries have IGAs in force, signed, or in substance for FATCA implementation purposes.",
   "key_points": [
     "FATCA was enacted in 2010 by Congress to target non-compliance by U.S. taxpayers using foreign accounts",
-    "Foreign financial institutions (FFIs) must report to the IRS information about financial accounts held by U.S. taxpayers or foreign entities with U.S. taxpayer ownership",
-    "FFIs comply either by registering directly with the IRS or through Intergovernmental Agreements (IGAs) with their jurisdictions",
-    "The page provides a table of jurisdictions with their IGA status: In Force, Signed, Agreement in Substance, or Superseded",
-    "Most IGAs were treated as in effect starting June 30, 2014 or November 30, 2014",
-    "Two IGA model types exist: Model 1 (reporting to local tax authority) and Model 2 (direct reporting to IRS)"
+    "Foreign financial institutions must either register directly with the IRS or comply via Intergovernmental Agreements (IGAs) with their jurisdictions",
+    "The page provides a status directory of IGAs by jurisdiction (In Force, Signed, Agreement in Substance)",
+    "Two IGA model types exist: Model 1 and Model 2, with varying implementation dates across jurisdictions",
+    "Many jurisdictions reached IGA in-force status by mid-2014 (6-30-2014 or 11-30-2014 common dates)",
+    "Singapore appears notable as it had a Model 1 superseding a previous Model 1, effective 1-1-2021"
   ],
-  "why_it_matters": "This source is not relevant to market structure or macro catalysts. FATCA is a tax compliance mechanism enacted in 2010—regulatory reference material that does not provide market-moving information or trading signals.",
+  "why_it_matters": "This page has no direct market-moving relevance. It is an administrative reference page listing the status of tax information-sharing agreements between the U.S. and foreign jurisdictions. It does not contain policy decisions, economic data, or market signals. The information is historical/archival in nature and cannot serve as a macro catalyst for trading decisions.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "neutral",
+    "directional_bias": "",
     "confidence": 0
   },
   "macro_context": "",
@@ -33,28 +33,29 @@
   "tags": [
     "fatca",
     "tax-compliance",
-    "treasury",
     "intergovernmental-agreements",
+    "treasury",
     "regulatory",
-    "irs-reporting"
+    "irs",
+    "foreign-financial-institutions"
   ],
   "llm_review": {
-    "initial_confidence": 5,
-    "verification_confidence": 3,
+    "initial_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a static informational reference page cataloging FATCA IGA status by jurisdiction, not market-moving content",
-      "Topic/macro catalysts classification is incorrect - FATCA is tax compliance infrastructure, not a macro catalyst or market-moving event",
-      "No published_at date provided in source metadata, source appears to be evergreen reference material",
-      "Content is primarily a jurisdictional listing/table rather than substantive research or analysis",
-      "Source has minimal relevance to trading decisions or market structure as defined",
-      "This is administrative/reference material that does not provide actionable market information"
+      "Source is a directory/listing page containing a table of FATCA IGA statuses by jurisdiction — qualifies as a listing_page type per Rule 5",
+      "Source is purely informational and archival with no market-moving content or actionable financial information",
+      "No published_at date provided to assess recency of the source",
+      "Source_type not provided in metadata",
+      "The content (status of intergovernmental agreements by country) is administrative/factual and cannot serve as a macro catalyst for trading decisions",
+      "Summary and key_points accurately describe the source, but the source itself does not meet relevance criteria for market structure or macro catalysts"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Source topic classification is incorrect (tax compliance law mislabeled as macro catalyst), source is administrative reference material rather than market-relevant content, and quality tier is appropriately assessed as low. The record correctly identifies the source is a static informational page but fails to recognize this means it should be rejected under the verification standards for macro catalyst archives."
+    "notes": "The record is well-constructed and accurately represents the source, but the source itself is a jurisdictional directory/listing page with no market-moving relevance. Per Rule 5, listing pages should be rejected. The low verification confidence reflects the source's nature rather than errors in the record."
   },
   "human_feedback": {
     "decision": "",
@@ -65,17 +66,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_foreign_account_tax_compliance_act_b5c5f0e206481f1a.txt",
-  "notes": "Source is a static informational page about FATCA tax compliance law from 2010. The page catalogs jurisdictions and their IGA status for FATCA implementation. This is regulatory reference material, not market-moving macro catalyst content. Not relevant to trading or market structure analysis. The listed jurisdictions with dates reflect when agreements came into force, but this information is administrative rather than market-significant.",
+  "notes": "Source is not relevant to market structure or macro catalysts. This is an archival informational page providing a directory of FATCA Intergovernmental Agreement statuses by jurisdiction. It contains no economic data releases, policy decisions, speeches, or market-moving information. Cannot serve as basis for financial research or trading signals. The extensive jurisdictional list (alphabetical from Algeria through Thailand) is purely administrative and factual. No date of last update provided.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Static informational page about a 2010 tax law",
-      "No market-moving information or actionable insights",
-      "Not relevant to market structure or macro catalysts as defined",
-      "Content is administrative listing of agreements rather than research or analysis"
+      "Source is informational/archival with no market-moving content",
+      "No temporal marker (published_at) to assess recurrency",
+      "No relevance to market structure or macro catalysts",
+      "Content is a static directory of tax agreements, not actionable financial information"
     ]
   }
 }
