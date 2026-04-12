@@ -1,0 +1,86 @@
+{
+  "id": "fed_funds_2026_04_10",
+  "created_at": "2026-04-12T21:17:17.559605+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Effective Federal Funds Rate",
+  "source": {
+    "name": "FRED (Federal Reserve Bank of St. Louis)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-10",
+    "source_type": "data_page"
+  },
+  "summary": "The Effective Federal Funds Rate stood at 3.64% as of April 8, 2026, unchanged from the prior four days (April 4-8). This daily snapshot reflects the actual rate at which depository institutions lend reserve balances to other depository institutions overnight. No policy change or commentary accompanies this data point.",
+  "key_points": [
+    "Effective Federal Funds Rate: 3.64% as of 2026-04-08",
+    "Rate unchanged from prior day (2026-04-07): 3.64%",
+    "Rate unchanged over five consecutive observations (April 4-8, 2026)",
+    "Absolute change: 0 (flat) day-over-day",
+    "Series code: DFF, sourced from FRED",
+    "Snapshot date: 2026-04-10"
+  ],
+  "why_it_matters": "The effective federal funds rate is the primary policy instrument of the Federal Reserve, directly influencing short-term borrowing costs across the economy. A stable rate at 3.64% suggests no change in monetary policy stance during this period. This data point serves as a reference for market participants assessing the current cost of short-term capital.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The stable 3.64% EFFR reflects an unchanged monetary policy environment. This rate level is used as a benchmark for various short-term instruments and influences funding costs throughout the financial system. Without accompanying policy statements, the macro context is limited to this static reading.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.64%",
+    "0 (absolute change)"
+  ],
+  "tags": [
+    "fed-funds",
+    "effr",
+    "interest-rates",
+    "monetary-policy",
+    "reference-rate",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is set to 'unknown' when a more specific classification (e.g., 'balance_sheet_update' or 'monetary_policy_report') is appropriate for reference rate data",
+      "Source is mechanical reference rate data with no policy signal, no commentary, and no narrative—excessively thin for standalone archival value",
+      "The 3.64% EFFR is the actual overnight transaction rate, not the FOMC target midpoint (3.875%), but the record does not clarify this distinction to readers",
+      "Record provides no temporal context linking this snapshot to any FOMC meeting, policy decision, or market event",
+      "Per CORE RULE 6: thin low-signal sources bias toward reject"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is factually accurate and source is properly attributed, but the source type (raw data snapshot) and lack of narrative content clearly meet rejection criteria under CORE RULE 6. Human review is not needed to render this verdict."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_10.txt",
+  "notes": "This source is a FRED data snapshot—mechanical reference rate output, not a policy announcement or analytical commentary. The 3.64% figure is a factual daily observation with no accompanying narrative. While relevant to macro catalysts as a monetary policy indicator, the source provides no signal about future policy direction, economic conditions, or market structure implications. The source is thin but not incorrect. Consider supplementing with FOMC statement or rate decision if policy context is needed.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Tier 3 - Thin/Mechanical",
+    "score": 3,
+    "reasoning": [
+      "Pure data snapshot with no policy signal or commentary",
+      "No narrative, no forward guidance, no market interpretation",
+      "Stable rate over 5 days indicates no policy change but provides no insight into future intentions",
+      "Limited research value without accompanying FOMC documentation"
+    ]
+  }
+}

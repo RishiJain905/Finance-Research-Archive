@@ -64,5 +64,17 @@
     "notes": "Source is an official BoE policy decision page. Published 12 days before TODAY, well within recency threshold. Contains clear decision, rationale, and forward guidance. Consider cross-referencing with actual MPC minutes for additional detail."
   },
   "raw_text_path": "data/raw/seed_crawl_bankofengland_interest_rates_and_bank_rate_8670676aae5747a2.txt",
-  "notes": "BoE rate hold decision page. This is not a statement/minutes document itself but rather a public-facing summary page. The actual Monetary Policy Summary and Minutes would be a separate document. This page serves as an accessible explanation for general audiences."
+  "notes": "BoE rate hold decision page. This is not a statement/minutes document itself but rather a public-facing summary page. The actual Monetary Policy Summary and Minutes would be a separate document. This page serves as an accessible explanation for general audiences.",
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts",
+        "monetary-policy"
+      ],
+      "link_score": 73.8
+    }
+  ]
 }

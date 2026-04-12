@@ -1,14 +1,27 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing: name, url, domain, published_at, and source_type fields are all empty",
+    "Record is essentially an empty template with no filled content",
+    "Summary field is empty - no summary of the research paper provided",
+    "key_points array is empty - no findings extracted from the source",
+    "why_it_matters field is empty",
+    "macro_context field is empty",
+    "market_structure_context field is empty",
+    "important_numbers array is empty - key statistics from source not captured (e.g., 69% of debt increase absorbed by non-banks, 10% debt increase leads to 6.7% cost increase)",
+    "tags array is empty",
+    "market_impact object is empty with no asset_classes, directional_bias, or confidence",
+    "event_type not specified - should be 'research_paper' for BIS Working Paper",
+    "TODAY (2026-04-12) vs source date (May 2023) shows record is 2+ years old but not flagged for archival value assessment"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Record is a completely empty template with no actual content. Source attribution is missing. This is a clear reject case requiring no human review.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This BIS Working Paper (No 1099) examines who holds sovereign debt and the implications for borrowing costs. The authors construct a dataset of sovereign debt holdings by investor type (banks, non-banks, official creditors) for 95 countries over 1991-2018. Key findings: private non-bank investors absorb disproportionately more sovereign debt supply than other investor groups (69% of increases despite holding 46% on average); non-bank investor demand is most responsive to yield; counterfactual analysis shows emerging market sovereigns face 6.7% cost increase per 10% debt increase, but 9% if non-bank investors were absent.",
+    "why_it_matters": "Understanding sovereign debt investor composition is critical for governments' borrowing capacity and financial stability. The research demonstrates that non-bank private investors play a disproportionately large role in absorbing new debt issuance, and their presence significantly reduces borrowing costs for emerging market sovereigns.",
+    "macro_context": "Research published during period of elevated global debt levels following COVID-19 pandemic. Dataset spans 1991-2018, covering multiple crisis episodes and the post-pandemic debt build-up period.",
+    "market_structure_context": "The paper disaggregates sovereign debt holders into six investor groups: foreign vs domestic, and within each: private banks, non-bank private investors, and official creditors (central banks, international organizations). This granular decomposition reveals how different investor types respond to changes in debt supply."
   }
 }

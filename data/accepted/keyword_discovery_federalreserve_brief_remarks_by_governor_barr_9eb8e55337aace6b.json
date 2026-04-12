@@ -65,7 +65,28 @@
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_brief_remarks_by_governor_barr_9eb8e55337aace6b.txt",
   "notes": "This is a recent speech (published 2026-03-31) from a Federal Reserve Governor on stablecoin regulation. While the speech does not signal monetary policy direction, it is highly relevant to market structure as it discusses payment system stability, reserve requirements, and run dynamics in digital payment instruments. The source is from a high-trust domain (.gov) and provides substantive policy discussion with historical context. No specific numerical data points were cited in the speech.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 85.0
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve",
+        "reserve-requirements"
+      ],
+      "link_score": 91.7
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

@@ -75,7 +75,26 @@
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0.txt",
   "notes": "This is a daily data publication page from the Bank of Canada, not an analytical article or policy commentary. The page provides raw CORRA values and transparency metrics for download. CORRA is a legitimate macro/market structure data point as Canada's risk-free overnight rate benchmark. The data is current (within days of TODAY) and from a high-trust domain. No policy signals or commentary are present—only raw numbers and methodology references.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 90.0
+    },
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 70.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

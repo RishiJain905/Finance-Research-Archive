@@ -73,5 +73,26 @@
     "notes": "Source contains important macro catalyst data for ECB policy outlook. Verify published_at date (appears to be March 2026 based on content discussing Q1 2026 data and Q2 2026 forecasts). Three scenarios provide useful reference for risk analysis."
   },
   "raw_text_path": "data/raw/keyword_discovery_ecb.europa_ecb_staff_macroeconomic_projections_for_1fb202a306b633ca.txt",
-  "notes": "This is an ECB staff research publication containing macroeconomic projections for the euro area. Although SOURCE METADATA TARGET field indicates 'market structure', the content is exclusively macroeconomic analysis focused on GDP growth, inflation trajectories, and energy price scenarios under the Middle East conflict. Classified as macro catalysts. The three hypothetical scenarios (baseline, adverse, severe) provide policymakers and market participants with a framework for understanding the uncertainty around energy price shocks. No market structure or operational details discussed."
+  "notes": "This is an ECB staff research publication containing macroeconomic projections for the euro area. Although SOURCE METADATA TARGET field indicates 'market structure', the content is exclusively macroeconomic analysis focused on GDP growth, inflation trajectories, and energy price scenarios under the Middle East conflict. Classified as macro catalysts. The three hypothetical scenarios (baseline, adverse, severe) provide policymakers and market participants with a framework for understanding the uncertainty around energy price shocks. No market structure or operational details discussed.",
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts",
+        "monetary-policy"
+      ],
+      "link_score": 73.0
+    },
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 70.0
+    }
+  ]
 }

@@ -61,7 +61,18 @@
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_interest_rate_statistics_769f48dc29248970.txt",
   "notes": "Low-value source for research archive. This is a navigation/documentation page that merely describes Treasury interest rate data series and their methodology. It does not provide actual yield data, current rates, or any actionable macro information. The content is institutional documentation, not a data release or research finding. Source is technically related to macro catalysts (yield curves are macro-relevant) but the page itself contains no macro data to archive.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts",
+        "interest-rates"
+      ],
+      "link_score": 54.3
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_3",

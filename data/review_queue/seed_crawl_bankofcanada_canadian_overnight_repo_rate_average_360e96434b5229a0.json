@@ -1,0 +1,95 @@
+{
+  "id": "seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0",
+  "created_at": "2026-04-12T21:02:49.050450+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "Canadian Overnight Repo Rate Average",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/corra",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "data_release"
+  },
+  "summary": "The Bank of Canada publishes daily CORRA transparency data showing overnight repo rates ranging from 2.27% to 2.33% for March 24-30, 2026. The page provides full transparency metrics including trimmed volume, percentile distributions (5th, 25th, 75th, 95th), number of data submitters (14-15), and the CORRA Compounded Index values. CORRA measures the cost of overnight general collateral CAD funding using Government of Canada securities as collateral.",
+  "key_points": [
+    "CORRA values for March 24–30, 2026 ranged from 2.27% to 2.33%, hovering around the 2.30% level",
+    "Total daily dollar trading volume eligible for CORRA ranged from $47.5B to $57.4B during the reporting period",
+    "Trimmed dollar volume (after removing outliers) ranged from $35.6B to $43.1B, with trimming rate consistently at 2.25%",
+    "Number of unique data submitters ranged from 14 to 15 per day",
+    "CORRA Compounded Index stood at approximately 115.97–115.98 as of March 27–31, 2026, with base value of 100 on June 12, 2020",
+    "Data published daily between 9:00 and 11:00 ET; transparency metrics include mean and mode values alongside raw rates"
+  ],
+  "why_it_matters": "CORRA is Canada's designated risk-free rate and reference benchmark for floating rate notes, loans, and financial derivatives. The transparency metrics (trimmed volume, percentile distributions, participant counts) provide insight into the health and liquidity of Canada's overnight repo market. This data supports market structure analysis but does not constitute a macro catalyst or policy signal.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "CORRA operates independently from Bank of Canada policy rate decisions. This page presents historical transparency data only—no current policy signals, rate guidance, or macro commentary. The 2.27-2.33% range during March 24-30, 2026 suggests stable overnight funding conditions but cannot be interpreted as a market-moving event without additional context.",
+  "market_structure_context": "CORRA is Canada's benchmark overnight repo rate measuring the cost of general collateral funding in CAD. The Bank of Canada provides this as a public good with full transparency on calculation methodology, data submitters, and volume distributions. The 2.27-2.33% range indicates stable overnight funding conditions with 14-15 active market participants. The trimmed volume approach and percentile reporting (5th, 25th, 75th, 95th) provide insight into repo market distribution, outlier handling, and liquidity health in Canada's overnight funding markets.",
+  "important_numbers": [
+    "2.27%–2.33% (CORRA range, March 24–30, 2026)",
+    "$47.5B–$57.4B (total eligible trading volume)",
+    "$35.6B–$43.1B (trimmed trading volume)",
+    "14–15 (unique data submitters)",
+    "2.25% (trimming rate)",
+    "115.97 (CORRA Compounded Index, March 30, 2026)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "corra",
+    "repo-rate",
+    "risk-free-rate",
+    "canada",
+    "overnight-rate",
+    "market-structure",
+    "transparency-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'market_notice' is incorrect; this is a data release page, not a market operations notice",
+      "event_type should be 'data_release_other' given the source provides raw rate transparency data",
+      "published_at field is empty in source metadata; cannot verify recency beyond the in-page dates",
+      "Topic mismatch: TARGET specifies 'macro catalysts' but source is pure market structure/reference rate infrastructure data without any macro catalyst content",
+      "No policy signal, commentary, analysis, or research value beyond raw data presentation; source is thin for archival research purposes",
+      "CORRA Compounded Index date range in key_points (March 27-31) doesn't align with the source showing data through March 31 but index values starting March 25"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is a pure data transparency page with accurate numbers but no macro catalyst value. The TARGET 'macro catalysts' classification mismatches the actual content (market structure/reference rate infrastructure). event_type 'market_notice' is wrong—it should be data_release_other. While data is factually correct, the record lacks research value and may not belong in a finance research archive designed for macro catalysts and market-moving content. Human should decide if CORRA reference rate data warrants archiving despite being purely infrastructural."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_canadian_overnight_repo_rate_average_360e96434b5229a0.txt",
+  "notes": "Source is a data transparency page rather than a macro catalyst or analysis. Contains only raw rate values and market structure metrics (volume, percentiles, participant counts) for Canada's overnight repo market. No policy signals, guidance, or commentary. The TARGET topic 'macro catalysts' does not match the actual content which is market structure (reference rate infrastructure). Consider archiving for rate benchmark context but note this is not a catalyst source.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 4,
+    "reasoning": [
+      "Raw data only, no analysis or commentary",
+      "No policy signals or forward guidance",
+      "Data quality is high (Bank of Canada primary source)",
+      "Missing published_at timestamp",
+      "Topic mismatch with TARGET classification",
+      "Limited research value as standalone document"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a pure data download page with no analysis, commentary, or policy interpretation—meets criteria for container/thin page rejection",
+    "event_type set to 'unknown' when 'data_release_other' would be more appropriate; however, raw yield data lacks macro catalyst value regardless",
+    "No publication date provided—cannot assess recency or archival relevance",
+    "Source provides zero macro catalyst content—no policy signals, forward guidance, or interpretive narrative",
+    "market_impact confidence set to 0 and directional_bias neutral—correct but underscores the page's lack of market-moving content",
+    "The page serves only as a data query interface; archiving it offers no value without accompanying analysis or context"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as a low-value data page. No human judgment needed—the decision to reject is clear-cut: this is a raw statistical data table with no analytical content, no publication date, and no macro catalyst value. Per core rules, container pages and thin low-signal sources bias toward reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a raw statistical data page from the Bank of Canada displaying historical treasury bill yield curves at multiple maturities (1-month through 1-year) across five weekly observations from late February through late March 2026. The page contains no analysis, commentary, or policy interpretation—it is purely a data query/download interface with numerical yield snapshots. It offers no macro catalyst content and has no publication date.",
+    "why_it_matters": "This source provides no macro catalyst content itself. The raw yield data could be useful for constructing Canadian short-term rate analysis, term premium estimation, or as input for broader macro research, but the page offers no interpretation, context, or narrative. Researchers seeking Bank of Canada policy signals should look to rate decisions, speeches, or monetary policy reports instead of this mechanical data table.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

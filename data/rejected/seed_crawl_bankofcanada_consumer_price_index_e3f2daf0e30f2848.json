@@ -1,0 +1,86 @@
+{
+  "id": "seed_crawl_bankofcanada_consumer_price_index_e3f2daf0e30f2848",
+  "created_at": "2026-04-12T21:03:08.370912+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_cpi",
+  "title": "Consumer Price Index - Statistics Canada Data Table",
+  "source": {
+    "name": "Statistics Canada",
+    "url": "",
+    "domain": "statcan.gc.ca",
+    "published_at": "",
+    "source_type": "data_table"
+  },
+  "summary": "Raw CPI data table from Statistics Canada showing monthly price levels and YoY percentage changes from 2013 to February 2026, with multiple core inflation measures (CPI-trim, CPI-median, CPI-common) but no narrative or analysis provided.",
+  "key_points": [
+    "Latest data point: February 2026, Total CPI index at 165.9, representing 1.8% YoY change",
+    "January 2026: Total CPI at 165.0, 2.3% YoY change (most recent prior month)",
+    "Core measures for February 2026: CPI-trim 2.3%, CPI-median 2.3%, CPI-common 2.4%",
+    "Data includes seasonally adjusted and non-adjusted series across multiple CANSIM table references",
+    "Data source: Statistics Canada CANSIM tables (v41690973, v41690914, v108785715, etc.)",
+    "No release date or publication metadata provided in source"
+  ],
+  "why_it_matters": "This raw CPI data is relevant for macro catalyst tracking as it contains the most recent Canadian inflation readings. February 2026 headline CPI at 1.8% YoY is below the Bank of Canada's 2% target, while core measures cluster around 2.3-2.4%, suggesting underlying inflation remains slightly above target. However, without a release announcement or policy commentary, the significance for market participants is limited to the data itself.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Canadian CPI data shows inflation moderating from 2022 peak of ~8% to current levels near the Bank of Canada's 2% target. February 2026 headline at 1.8% YoY is below target, while trimmed and median core measures at 2.3% suggest residual underlying inflation pressure. This would be relevant context for Bank of Canada rate decisions if this data were framed as an official release.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "165.9 — February 2026 Total CPI index level",
+    "1.8% — February 2026 YoY CPI change",
+    "165.0 — January 2026 Total CPI index level",
+    "2.3% — January 2026 YoY CPI change",
+    "2.3% — CPI-trim February 2026 (seas. adj.)",
+    "2.3% — CPI-median February 2026 (seas. adj.)",
+    "2.4% — CPI-common February 2026"
+  ],
+  "tags": [
+    "cpi",
+    "inflation",
+    "canada",
+    "core-inflation",
+    "statistics-canada",
+    "data-release",
+    "bank-of-canada"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_consumer_price_index_e3f2daf0e30f2848.txt",
+  "notes": "Source is a raw statistical data table from Statistics Canada, likely scraped from CANSIM database. No publication date, no context, no narrative. While the data itself is relevant for macro catalyst tracking, the source quality is poor for research archiving purposes. The empty SOURCE METADATA block is unusual and suggests the crawler may not have captured source context properly. Recommend verifying against official Statistics Canada CPI release pages for February 2026 data before relying on this record.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "D",
+    "score": 2,
+    "reasoning": [
+      "Raw data only - no analysis or narrative",
+      "Missing source metadata",
+      "Cannot verify publication date or official release status",
+      "Low confidence in source integrity for research archiving"
+    ]
+  }
+}

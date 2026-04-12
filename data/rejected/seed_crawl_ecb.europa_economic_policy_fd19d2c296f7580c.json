@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution entirely missing - name, url, domain, published_at, and source_type are all empty",
+      "Record contains no content to verify - summary, key_points, why_it_matters, macro_context, and market_structure_context are all empty",
+      "Cannot determine source_type from metadata - unable to verify it is not a container page, navigation page, or homepage",
+      "No topic field populated",
+      "No tags or event_type provided",
+      "market_impact and important_numbers fields are empty"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is essentially a blank template with no content. Source attribution is completely missing, making it impossible to verify against the source. This appears to be a failed record generation that was not properly populated. Human intervention required to either obtain the correct record with full attribution and content, or to reject this clearly incomplete submission."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

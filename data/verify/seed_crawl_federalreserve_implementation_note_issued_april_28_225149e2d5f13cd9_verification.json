@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is empty - source attribution should include the actual Federal Reserve URL",
+    "source_type and domain fields are empty - should be populated from authoritative metadata",
+    "verification_confidence is set to 0 in multiple fields (record, llm_review, market_impact) - these should be actual 0-10 integers",
+    "llm_review.verdict is 'pending' - should be one of accept, review, or reject per taxonomy"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record content is accurate and well-supported by the source text - all quantitative parameters (QE amounts, rate levels, RRP limits) match correctly. However, critical source metadata fields (url, source_type, domain) are empty, making it impossible to verify the authoritative source attribution. Human needs to populate these fields and assess whether the record can be auto-accepted once metadata is complete.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve on April 28, 2021 released its implementation note detailing the operational mechanics of monetary policy, including maintaining the federal funds rate target range at 0 to 1/4 percent and continuing asset purchases at $80 billion/month Treasury securities and $40 billion/month agency MBS. The Board unanimously approved maintaining the IORB rate at 0.10 percent and the primary credit rate at 0.25 percent.",
+    "why_it_matters": "This implementation note details the Fed's operational playbook for executing ultra-accommodative monetary policy during the pandemic recovery. The $120 billion monthly pace of QE and the RRP framework at $80 billion/day cap established the boundaries for how much liquidity the Fed would inject into financial markets, directly impacting Treasury market functioning and short-term funding conditions.",
+    "macro_context": "This April 2021 FOMC statement came approximately 13 months into the COVID-19 pandemic response. The Fed maintained its highly accommodative stance with rates near zero and $120 billion in monthly asset purchases, supporting financial conditions during the economic recovery. This predates the Fed's 2022-2023 tightening cycle by over a year.",
+    "market_structure_context": "The document specifies key market plumbing parameters: the $80 billion/day RRP per-counterparty limit (expandable at Chair's discretion), the operational parameters for repo and reverse repo facilities, and the authorization for agency CMBS purchases to support market functioning. These define the technical framework for short-term U.S. dollar funding markets."
+  }
+}

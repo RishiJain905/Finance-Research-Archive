@@ -1,0 +1,92 @@
+{
+  "id": "seed_crawl_bankofcanada_selected_treasury_bill_yields_e1526a8368937094",
+  "created_at": "2026-04-12T21:04:27.037409+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Selected treasury bill yields",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/t-bill-yields",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "data_page"
+  },
+  "summary": "This is a raw statistical data page from the Bank of Canada displaying historical treasury bill yield curves at multiple maturities (1-month through 1-year) across five weekly observations from late February through late March 2026. The page contains no analysis, commentary, or policy interpretation—it is purely a data query/download interface with numerical yield snapshots. It offers no macro catalyst content and has no publication date.",
+  "key_points": [
+    "Page is a data query interface providing CSV, JSON, and XML download options—no editorial content or analysis",
+    "Auction average yields unavailable for 3-month, 6-month, and 1-year tenors on recorded dates; 3-month average yields were 2.22% (Mar 3) and 2.31% (Mar 10); 6-month averages were 2.29% (Mar 3) and 2.45% (Mar 10)",
+    "Secondary market 1-month yields ranged from 2.15% (Feb 25) to 2.27% (Mar 25), trending upward over the period",
+    "Secondary market 3-month yields ranged from 2.18% (Feb 25) to 2.29% (Mar 25), showing steady increases",
+    "Secondary market 6-month yields ranged from 2.23% (Feb 25) to 2.39% (Mar 25), with a notable jump of 11 bps in the final week",
+    "Secondary market 1-year yields ranged from 2.29% (Feb 25) to 2.64% (Mar 25), the largest absolute increase (35 bps) among tenors shown",
+    "Published_at field is empty—no publication timestamp provided"
+  ],
+  "why_it_matters": "This source provides no macro catalyst content itself. The raw yield data could be useful for constructing Canadian short-term rate analysis, term premium estimation, or as input for broader macro research, but the page offers no interpretation, context, or narrative. Researchers seeking Bank of Canada policy signals should look to rate decisions, speeches, or monetary policy reports instead of this mechanical data table.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "1-month: 2.15%, 2.20%, 2.17%, 2.20%, 2.27% (Feb 25–Mar 25)",
+    "3-month: 2.18%, 2.20%, 2.21%, 2.22%, 2.29% (Feb 25–Mar 25)",
+    "6-month: 2.23%, 2.26%, 2.29%, 2.28%, 2.39% (Feb 25–Mar 25)",
+    "1-year: 2.29%, 2.35%, 2.44%, 2.42%, 2.64% (Feb 25–Mar 25)",
+    "Auction 3-month average: 2.22% (Mar 3), 2.31% (Mar 10)",
+    "Auction 6-month average: 2.29% (Mar 3), 2.45% (Mar 10)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "t-bill-yields",
+    "canadian-rates",
+    "short-term-rates",
+    "raw-data",
+    "secondary-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a pure data download page with no analysis, commentary, or policy interpretation—meets criteria for container/thin page rejection",
+      "event_type set to 'unknown' when 'data_release_other' would be more appropriate; however, raw yield data lacks macro catalyst value regardless",
+      "No publication date provided—cannot assess recency or archival relevance",
+      "Source provides zero macro catalyst content—no policy signals, forward guidance, or interpretive narrative",
+      "market_impact confidence set to 0 and directional_bias neutral—correct but underscores the page's lack of market-moving content",
+      "The page serves only as a data query interface; archiving it offers no value without accompanying analysis or context"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record correctly identifies the source as a low-value data page. No human judgment needed—the decision to reject is clear-cut: this is a raw statistical data table with no analytical content, no publication date, and no macro catalyst value. Per core rules, container pages and thin low-signal sources bias toward reject."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_selected_treasury_bill_yields_e1526a8368937094.txt",
+  "notes": "This source is a data download/query page, not a research article or policy document. It contains no macro catalyst analysis, commentary, forward guidance, or policy interpretation—only numerical treasury bill yield values at multiple maturities across several weeks. The page has no publication date, making recency assessment impossible. For macro catalyst research, this page provides no value in isolation and would only be useful as raw data input for broader analysis or as supplementary rate context alongside actual policy publications from the Bank of Canada.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "No publication date—temporal context unknown",
+      "No analytical content—pure data table",
+      "No macro catalyst interpretation or policy signal",
+      "Data page with no narrative value for research archive"
+    ]
+  }
+}

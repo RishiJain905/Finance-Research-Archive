@@ -68,7 +68,25 @@
   },
   "raw_text_path": "data/raw/bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831.txt",
   "notes": "Source is a policy reflection speech rather than a market-moving announcement. Relevant to market structure through its discussion of nonbank intermediary risks but provides no specific actionable data. Published March 31, 2026, well within the 90-day recency window relative to TODAY. The speech continues and may contain additional content beyond the truncated portion visible.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "fed"
+      ],
+      "link_score": 88.3
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, complementary context",
+      "topic_overlap": [],
+      "link_score": 55.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

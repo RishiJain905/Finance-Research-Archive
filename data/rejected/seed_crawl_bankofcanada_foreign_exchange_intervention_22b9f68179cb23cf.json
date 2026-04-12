@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - no name, URL, or domain provided",
+      "Source type field is empty",
+      "Published_at field is empty - cannot verify recency policy",
+      "Event type is missing entirely from the record",
+      "Record is entirely empty - no summary, key_points, or any content generated",
+      "No market_impact, important_numbers, or tags populated",
+      "Source content is policy background/educational material about FX intervention framework, not a market catalyst or recent event"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is blank with no content to verify; missing source attribution is an automatic reject criterion per CORE RULE 6"
+  },
+  "summary": "The Bank of Canada has shifted its FX intervention policy from systematic resistance of currency movements to a discretionary framework, intervening only in exceptional circumstances such as severe market breakdown or threats to sustainable economic growth. The Exchange Fund Account (holding USD, EUR, GBP, JPY) is used for intervention mechanics. Last intervention was September 1998.",
+  "key_points": [],
+  "why_it_matters": "Clarifies the Canadian central bank's willingness and conditions for currency market intervention, relevant for understanding potential BoC response to CAD volatility.",
+  "macro_context": "Historical policy document explaining Canada's current discretionary approach to FX intervention adopted after September 1998, replacing prior automatic intervention regime.",
+  "market_structure_context": "FX intervention mechanism uses the Exchange Fund Account for currency buying/selling to influence CAD value.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

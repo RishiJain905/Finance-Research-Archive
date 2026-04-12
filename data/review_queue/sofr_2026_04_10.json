@@ -1,0 +1,93 @@
+{
+  "id": "sofr_2026_04_10",
+  "created_at": "2026-04-12T20:58:03.326345+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "SOFR Rate Snapshot - April 10, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "published_at": "2026-04-10",
+    "source_type": "data_series",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "SOFR closed at 3.57 on April 9, 2026, down 2 basis points from the prior day's reading of 3.59. The rate has declined steadily over the observation period, falling 9 basis points from the April 2 close of 3.66.",
+  "key_points": [
+    "SOFR latest observation: 3.57 (2026-04-09)",
+    "Previous observation: 3.59 (2026-04-08)",
+    "Absolute change: -0.02 basis points (down)",
+    "Declining trend: 3.66 (Apr 2) → 3.65 (Apr 6) → 3.62 (Apr 7) → 3.59 (Apr 8) → 3.57 (Apr 9)",
+    "Total decline over the period: 9 basis points from April 2 to April 9"
+  ],
+  "why_it_matters": "Remove or qualify the '$23 trillion' claim since it does not appear in the source. Suggested revision: 'SOFR is the primary reference rate for the overnight repo market and serves as the benchmark for derivatives, adjustable-rate mortgages, and business loans. Movements in SOFR directly affect funding costs across the financial system.'",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 3
+  },
+  "macro_context": "",
+  "market_structure_context": "SOFR (Secured Overnight Financing Rate) is calculated by the Federal Reserve Bank of New York from tri-party repo market transactions. The declining trend from 3.66 to 3.57 suggests a modest easing in short-term dollar funding costs over the observation period. SOFR serves as the replacement for LIBOR in most new contracts and is critical to the operational framework of US money markets.",
+  "important_numbers": [
+    "3.57",
+    "3.59",
+    "3.62",
+    "3.65",
+    "3.66",
+    "-0.02"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "money-market",
+    "fed-funds-proxy",
+    "short-term-rates",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a thin quantitative data snapshot with no analytical content or narrative context",
+      "The $23 trillion figure cited in why_it_matters is not present in the source and cannot be verified against it (external knowledge injection)",
+      "key_points states 'Absolute change: -0.02 basis points' which is notationally confusing - the source's ABSOLUTE_CHANGE of -0.02 is in percentage points (i.e., -2 bps), not basis points",
+      "Source is raw FRED data output, not an article-like source with editorial context",
+      "Cannot determine drivers of the SOFR decline from source text alone"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is a thin quantitative data snapshot from FRED with no analytical content. While all numbers are factually accurate against the source, the record adds minimal value beyond what FRED already provides. The $23 trillion figure in why_it_matters was not in the source and should be flagged. Human review needed to determine if this level of source thinness meets archival value thresholds for the finance research archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_10.txt",
+  "notes": "Source is a thin quantitative data snapshot from FRED without commentary. Contains only the latest SOFR readings and daily changes. No qualitative analysis, no discussion of market conditions, and no explanation of what drove the rate movement. The record is factually accurate based on the data provided but lacks interpretive context. The declining trend from 3.66 to 3.57 over 5 business days warrants further investigation but cannot be explained from this source alone.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_3",
+    "score": 5,
+    "reasoning": [
+      "Source is a raw data series snapshot with no analytical content",
+      "Contains only observations and calculated changes",
+      "No narrative context provided",
+      "Relevant to market structure topic as SOFR is a key money market benchmark",
+      "Usefulness is limited without supplementary analysis explaining the rate move"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "fc4a42a3306df1d7830dd84090c958695e04075e"
+}

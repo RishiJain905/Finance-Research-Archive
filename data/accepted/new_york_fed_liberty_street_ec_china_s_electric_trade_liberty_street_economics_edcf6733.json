@@ -88,7 +88,17 @@
   },
   "raw_text_path": "data/raw/new_york_fed_liberty_street_ec_china_s_electric_trade_liberty_street_economics_edcf6733.txt",
   "notes": "Source metadata lists topic as 'market structure' but the actual content is an economic commentary on China's electric technology trade patterns. While not a traditional market structure piece (no discussion of trading mechanisms, market plumbing, or operations), the trade flow data and supply chain concentration information represent macro catalysts relevant to global economic analysis. The source is well-sourced (China General Administration of Customs via Haver), recent (8 days old as of today), and from a reputable Federal Reserve Bank of New York research blog. Author Thomas Klitgaard is an economic policy advisor in the FRBNY Research and Statistics Group. Confidence slightly lowered because this is economic commentary rather than a direct market catalyst (data release, policy decision, or market operations notice).",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 70.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

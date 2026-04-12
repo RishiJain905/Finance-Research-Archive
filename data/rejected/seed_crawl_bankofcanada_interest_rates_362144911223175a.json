@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_interest_rates_362144911223175a",
-  "created_at": "2026-04-01T06:01:07.726527+00:00",
+  "created_at": "2026-04-12T21:03:43.343711+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,23 +8,22 @@
   "source": {
     "name": "Bank of Canada",
     "url": "https://www.bankofcanada.ca/rates/interest-rates",
-    "domain": "www.bankofcanada.ca",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "navigation_page",
+    "domain": "www.bankofcanada.ca"
   },
-  "summary": "This is a navigation/index page for the Bank of Canada's interest rate data portal. The page lists available data products including Treasury bill yields, bond yields, CORRA (Canadian Overnight Repo Rate Average), yield curves, money market yields, U.S. interest rate lookups, and a policy interest rate comparison tool. No specific rate values, policy decisions, or substantive content are provided in this source.",
+  "summary": "This is a data portal page from the Bank of Canada providing links to various interest rate data including current rates, yield curves, money market yields, and historical comparisons. The page describes what data is available but does not contain any specific policy decisions, rate announcements, or substantive research content itself.",
   "key_points": [
-    "This is a data portal page listing available Bank of Canada interest rate data products, not a policy announcement or data release.",
-    "Available data includes Treasury bill yields, Government of Canada bond yields, CORRA, zero-coupon yield curves, and money market yields.",
-    "Data is available for download in XML, JSON, and CSV formats.",
-    "The page notes that monetary policy is conducted by adjusting the target for the overnight rate on eight fixed dates each year.",
-    "A side-by-side lookup tool is available for comparing changes to the Bank Rate and overnight rate target over time.",
-    "U.S. interest rate lookups include the U.S. Prime Rate, Federal Funds Rate, and Commercial Paper rates."
+    "The Bank of Canada publishes current interest rates with supporting data available in XML, JSON, and CSV formats.",
+    "Data offerings include Treasury bill yields, bond yields, Canadian Overnight Repo Rate Average (CORRA), yield curves for zero-coupon bonds, and money market yields.",
+    "A lookup tool allows side-by-side comparisons of changes to the Bank Rate and target for the overnight rate over time.",
+    "The Bank conducts monetary policy by adjusting the target for the overnight rate on eight fixed dates each year.",
+    "No specific rate decision, policy statement, or research finding is contained in this page."
   ],
-  "why_it_matters": "This page serves as an access point to Bank of Canada interest rate data but provides no substantive policy or market information itself. It has no direct relevance for research or market analysis beyond serving as a navigation hub.",
+  "why_it_matters": "This page serves as an access point to Bank of Canada interest rate data rather than a substantive research or policy document. It has no direct market impact as it contains no new information or policy decisions.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "neutral",
     "confidence": 0
   },
   "macro_context": "",
@@ -34,21 +33,22 @@
     "bank-of-canada",
     "interest-rates",
     "data-portal",
-    "treasury-bills",
-    "bonds",
-    "corra",
+    "monetary-policy",
     "yield-curves",
-    "overnight-rate"
+    "overnight-rate",
+    "corra",
+    "money-market"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 8,
+    "initial_confidence": 3,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page/navigation portal with no substantive content - only lists available data products without providing actual rate values or policy content",
-      "No published date is present in the source metadata",
-      "source_type correctly identified as 'listing_page' which per CORE RULE #5 should be rejected",
-      "event_type set to 'unknown' which is valid for this non-archivable content type"
+      "Source is a navigation_page - per Rule 5, this requires rejection",
+      "No published date provided, making it impossible to verify recency",
+      "Contains no substantive research, policy decisions, or market-moving information",
+      "event_type set to 'unknown' with no plausible taxonomy match for this navigation page",
+      "Record correctly identifies the source as a thin data portal but this should result in outright rejection"
     ]
   },
   "human_review": {
@@ -56,26 +56,6 @@
     "decision": "",
     "notes": "container_page"
   },
-  "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
-  },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_interest_rates_362144911223175a.txt",
-  "notes": "Source is a navigation/data portal page, not archiveable content. Contains only metadata about available data products with no specific rate values, policy content, or research findings. Per CORE RULE #6, listing pages should be treated as non-archiveable.",
-  "linked_quant_context": [],
-  "linked_article_context": [],
-  "quality_tier": {
-    "tier": "low",
-    "score": 2,
-    "reasoning": [
-      "Navigation page with no substantive content",
-      "No specific data values or policy content provided",
-      "No publication date available",
-      "Insufficient for research or market analysis"
-    ]
-  }
+  "notes": "This source is a navigation/data portal page, not a substantive research document. It contains no policy decisions, speeches, economic data releases, or research findings. It merely describes what interest rate data is available and how to access it. ARCHIVE AS DATA REFERENCE ONLY if historical record of Bank of Canada website structure is needed. Not suitable for research retrieval as it contains no actual research content, forecasts, or policy signals."
 }

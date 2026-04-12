@@ -70,7 +70,17 @@
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_household_survey_shows_reported_and_78905f4ca7a4f310.txt",
   "notes": "Historical record (published Jan 2024, over 26 months before TODAY). Confidence lowered accordingly. Source is a NY Fed research blog post release of the SCE Household Spending Survey for December 2023. Reclassified topic from 'market structure' (per metadata) to 'macro catalysts' as this source contains consumer spending survey data, not market structure content. No direct market impact described in source; asset class impact marked unknown.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

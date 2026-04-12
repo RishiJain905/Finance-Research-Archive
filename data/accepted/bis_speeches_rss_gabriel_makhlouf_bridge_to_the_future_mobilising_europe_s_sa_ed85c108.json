@@ -67,7 +67,24 @@
   },
   "raw_text_path": "data/raw/bis_speeches_rss_gabriel_makhlouf_bridge_to_the_future_mobilising_europe_s_sa_ed85c108.txt",
   "notes": "Speech is current (published TODAY). Source truncated at approximately 60% of full text (marked [TRUNCATED]). Analysis based on accessible content. No direct monetary policy signals—classified as neutral speech. Key macro catalysts identified are geoeconomic fragmentation and structural underperformance of European capital markets relative to savings pool. Not relevant to immediate market structure or rate path but provides structural macro context.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days",
+      "topic_overlap": [],
+      "link_score": 60.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "nearest_relevant_quant_snapshot",
+      "reason": "near-day, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 130.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

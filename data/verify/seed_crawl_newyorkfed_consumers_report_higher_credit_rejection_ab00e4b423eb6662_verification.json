@@ -1,10 +1,14 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Topic mismatch: TARGET and topic are 'market structure' but source content is consumer credit conditions survey data, not traditional market structure (trading venues, market plumbing, settlement mechanisms)",
+    "Source age is 17 months (published 2024-11-18, TODAY 2026-04-12), exceeds 90-day threshold; archival value justified as historical credit conditions data but noted",
+    "Asset classes (bonds, equities) and directional bias 'risk_off' in market_impact are reasonable inferences from credit tightening but not directly stated in source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Topic classification requires clarification - consumer credit conditions survey data may or may not qualify as 'market structure' for archive purposes. High domain trust and accurate data summary are clear, but the scope of what constitutes 'market structure' needs human judgment.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

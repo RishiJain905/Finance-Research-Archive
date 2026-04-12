@@ -63,7 +63,17 @@
   },
   "raw_text_path": "data/raw/bank_of_england_publications_r_bank_liabilities_survey_2026_q1_bank_of_england_2cab85f2.txt",
   "notes": "Source is a quarterly survey of UK bank and building society funding conditions. Content is relevant but focused on balance sheet dynamics rather than direct macro catalysts like rate decisions or GDP prints. Survey captures lender sentiment and forward expectations rather than actual outcomes. Classification as 'macro catalysts' is somewhat loose given the indirect nature of the data; primarily useful for understanding credit conditions and bank funding market structure. Publication date discrepancy between metadata (2026-01-15) and article body (09 April 2026) should be verified. Chart data referenced in text not extracted due to formatting limitations.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

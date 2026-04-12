@@ -1,0 +1,92 @@
+{
+  "id": "seed_crawl_newyorkfed_consumers_report_higher_credit_rejection_ab00e4b423eb6662",
+  "created_at": "2026-04-12T20:58:03.577945+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "Consumers Report Higher Credit Rejection Rates, Expect Fewer Credit Applications",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2024/20241118",
+    "published_at": "2024-11-18",
+    "source_type": "blog_post",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The Federal Reserve Bank of New York's Survey of Consumer Expectations Credit Access Survey for October 2024 shows that reported rejection rates on credit applications increased to 21.0% in 2024 from 20.1% in 2023, with auto loan and mortgage refinance rejection rates reaching new series highs since the module began in 2013. Lender-initiated account closures rose to a new series high of 7.4%, while voluntary account closures fell to a new series low of 13.9%. Households anticipate being less likely to apply for credit over the next 12 months, with the proportion expecting to apply for at least one type of credit dropping to 23.1% for 2024 overall from 25.9% in 2023.",
+  "key_points": [
+    "Overall credit application rejection rate rose 0.9 percentage points to 21.0% in 2024, remaining well above the 2019 level of 17.6%",
+    "Mortgage application rejection rate increased 8.6 percentage points to 20.7% in 2024, compared to 10.2% in 2019",
+    "Mortgage refinance rejection rate reached a new series high of 25.6% in 2024, up from 15.5% in 2023",
+    "Credit card limit increase rejection rate rose to 38.9% in 2024 from 30.9% in 2023",
+    "Lender-initiated account closures increased to 7.4% in 2024 (new series high), while voluntary closures fell to 13.9% (new series low)",
+    "Proportion of respondents expecting to apply for at least one credit type over next 12 months decreased to 23.1% for 2024 overall",
+    "Average probability of being able to obtain $2,000 for unexpected expense increased slightly to 66.5% from 65.8%"
+  ],
+  "why_it_matters": "Rising credit rejection rates and lender-initiated account closures signal tightening credit conditions, which can reduce consumer spending power and affect demand for credit-dependent sectors like autos and housing. The shift from voluntary to lender-initiated account closures suggests banks are becoming more risk-averse in their credit underwriting. This data provides insight into household financial resilience and credit market functioning.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "risk_off",
+    "confidence": 4
+  },
+  "macro_context": "Consumer credit conditions are tightening, with rejection rates at multi-year highs across credit cards, mortgages, auto loans, and refinances. This could slow consumer spending and weigh on economic growth. However, household financial fragility decreased slightly (66.5% probability of obtaining $2,000 vs 65.8%), suggesting uneven stress across the consumer base.",
+  "market_structure_context": "While labeled as market structure, this source focuses on consumer credit access rather than market plumbing, trading operations, or institutional market structure. It provides data on credit supply conditions but does not address market structure in the traditional sense of trading venues, market participants, or settlement mechanisms.",
+  "important_numbers": [
+    "21.0%",
+    "20.7%",
+    "25.6%",
+    "38.9%",
+    "7.4%",
+    "13.9%",
+    "66.5%"
+  ],
+  "tags": [
+    "consumer-credit",
+    "credit-rejection",
+    "fed-survey",
+    "new-york-fed",
+    "household-credit",
+    "credit-access",
+    "lender-initiated-closures"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Topic mismatch: TARGET and topic are 'market structure' but source content is consumer credit conditions survey data, not traditional market structure (trading venues, market plumbing, settlement mechanisms)",
+      "Source age is 17 months (published 2024-11-18, TODAY 2026-04-12), exceeds 90-day threshold; archival value justified as historical credit conditions data but noted",
+      "Asset classes (bonds, equities) and directional bias 'risk_off' in market_impact are reasonable inferences from credit tightening but not directly stated in source"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Topic classification requires clarification - consumer credit conditions survey data may or may not qualify as 'market structure' for archive purposes. High domain trust and accurate data summary are clear, but the scope of what constitutes 'market structure' needs human judgment."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_consumers_report_higher_credit_rejection_ab00e4b423eb6662.txt",
+  "notes": "Source is a Fed blog post reporting on the Survey of Consumer Expectations Credit Access Survey fielded in October 2024. High-quality institutional source with detailed statistics. Published 2024-11-18, which is historical relative to TODAY 2026-04-12 (approximately 17 months old, exceeds 90-day threshold). Topic 'market structure' in metadata may be a misclassification; this is consumer credit data, not market structure in the traditional sense of trading/settlement/market operations. Market impact confidence reduced to 4 due to inference required for asset class connections and dated publication.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "High domain trust tier (Federal Reserve Bank of New York)",
+      "Detailed quantitative data with specific percentages and historical comparisons",
+      "Clear methodology (SCE Credit Access Survey fielded every 4 months)",
+      "Comprehensive coverage of credit types: credit cards, mortgages, auto loans, refi",
+      "Both current experiences and forward-looking expectations included"
+    ]
+  }
+}

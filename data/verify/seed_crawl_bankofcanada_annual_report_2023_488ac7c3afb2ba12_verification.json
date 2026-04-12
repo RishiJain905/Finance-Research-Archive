@@ -1,20 +1,21 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is a thin landing/navigation page, not the actual Annual Report PDF - extracted content includes only a brief foreword summary and navigation menu",
-    "No specific policy numbers, rate decisions, inflation figures, or quantitative data provided",
-    "Published_at date is unknown - cannot verify recency or archival value",
-    "Content is too thin to have meaningful archival value for macro catalyst research",
-    "The page links to sections (PDF, etc.) but the actual substantive report content is not present",
-    "Key_points mention 'foreign bank failures' but source text only says 'foreign bank failures' without specifics - this is a paraphrase"
+    "source_type is listing_page - per Rule 5, listing pages should be rejected",
+    "Crawled content is a navigation/index page with section headers but no substantive report body",
+    "No actual policy analysis, data, or quantitative information extracted - only TOC structure visible",
+    "published_at is empty/missing - cannot verify recency or staleness",
+    "Record correctly identifies the content is thin in human_review notes, but continues to process it",
+    "Source attribution to bankofcanada.ca exists but links to a landing page, not the substantive report"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The source is a landing page with extremely limited content. While the generated record accurately describes what little text was extracted, the source itself does not contain the substantive policy content that would make this worth archiving. The actual Bank of Canada 2023 Annual Report PDF would be needed for meaningful archival value. The record is honest about the thinness but the underlying source choice appears suboptimal.",
+  "human_review_required": false,
+  "human_review_reason": "The decision is straightforward: the source is explicitly a listing_page type which Rule 5 mandates rejecting. The content is clearly a navigation/index page with no substantive policy content. This is not a borderline case requiring human judgment - the rules clearly state to reject when source_type is listing_page.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "The Bank of Canada's Annual Report 2023 landing page provides only a brief excerpt from the Governor's foreword and section navigation links. The extracted content states that in 2023 the Bank made progress fighting inflation while acknowledging cost-of-living pressures on Canadians, and references global uncertainty from foreign bank failures and geopolitical conflicts.",
-    "why_it_matters": "This landing page does not contain substantive policy content. The actual Annual Report PDF would need to be retrieved for meaningful archival value. The page serves as an index to the full report sections but provides minimal extractable information.",
-    "macro_context": "The limited extracted content references the 2023 macro environment where the Bank of Canada pursued restrictive monetary policy to reduce inflation, but provides no specific data points or policy details."
+    "summary": "The Bank of Canada's Annual Report 2023 landing page lists section headers (Governor's foreword, monetary policy, financial system, etc.) but the crawled text contains only navigation structure, not the actual report content. No substantive policy details, data, or analysis are present in the extracted text.",
+    "why_it_matters": "This is a listing/navigation page for the Bank of Canada Annual Report 2023, not the substantive report itself. The archived text contains only section headers and a brief foreword excerpt. To properly archive this source, the actual PDF or full HTML version of the annual report should be crawled instead.",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

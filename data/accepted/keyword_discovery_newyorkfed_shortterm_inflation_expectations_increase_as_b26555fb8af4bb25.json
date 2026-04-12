@@ -77,7 +77,33 @@
   },
   "raw_text_path": "data/raw/keyword_discovery_newyorkfed_shortterm_inflation_expectations_increase_as_b26555fb8af4bb25.txt",
   "notes": "Source is a recent (April 7, 2026) Federal Reserve Bank of New York research release from a high-trust domain. Primary focus is on consumer expectations for inflation, labor market, and household finances. The spike in gas price expectations to levels not seen since March 2022 is a notable macro catalyst. Labor market sentiment deterioration with rising unemployment expectations provides additional macro context. Market impact confidence set at 5 as survey data reflects household sentiment rather than market price signals directly.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days",
+      "topic_overlap": [],
+      "link_score": 60.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "nearest_relevant_quant_snapshot",
+      "reason": "near-day, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 130.0
+    },
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 90.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

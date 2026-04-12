@@ -1,0 +1,82 @@
+{
+  "id": "seed_crawl_federalreserve_2026_press_releases_4b6cd197c58a4cd2",
+  "created_at": "2026-04-12T20:58:57.732385+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Federal Reserve Board Press Releases - Homepage/Listing Page",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026.htm",
+    "domain": "federalreserve.gov",
+    "published_at": "2026-03-26",
+    "source_type": "homepage"
+  },
+  "summary": "This is a homepage/listing page for Federal Reserve Board press releases covering January–March 2026. The page aggregates dozens of distinct announcements (banking applications, enforcement actions, regulatory proposals, monetary policy documents) as a chronological index. No substantive policy content is included; only titles and dates of linked press releases. The FOMC minutes from January 27–28, 2026 and the regulatory capital framework proposal are referenced as links but are not present in this source.",
+  "key_points": [
+    "FOMC minutes from January 27–28, 2026 were released on 2/18/2026, covering the policy meeting relevant to rate decisions",
+    "Minutes from the Board's discount rate meetings on January 20 and 28, 2026 were released on 2/24/2026",
+    "Agencies requested comment (3/19/2026) on proposals to modernize the regulatory capital framework — potentially relevant to market structure",
+    "Agencies clarified (3/5/2026) the capital treatment of tokenized securities — relevant to digital asset market structure",
+    "Federal Reserve finalized stress test scenarios on 2/4/2026, maintaining current capital requirements pending feedback",
+    "The page contains 30+ distinct announcements spanning banking applications, enforcement actions, regulatory policy, and monetary policy"
+  ],
+  "why_it_matters": "This is a navigational listing page, not a standalone research document. Per CORE RULE 5, homepage and listing pages must be rejected. Individual items from this list (FOMC minutes, regulatory capital proposals, tokenized securities guidance) would be candidates for separate archival if accessed as individual documents, but this page itself has no archival value for market structure or macro catalyst analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "press-releases",
+    "listing-page",
+    "non-archiveable",
+    "fomc-minutes",
+    "regulatory-capital",
+    "tokenized-securities"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a homepage/listing page (source_type confirmed as 'homepage') — per CORE RULE 5, this must be rejected",
+      "event_type set to 'unknown' — while the record correctly identifies this as problematic, the root cause is the source being non-archivable",
+      "The source body only contains a chronological list of press release titles with dates; it does not contain the actual FOMC minutes, regulatory proposals, or any substantive policy content",
+      "The FOMC minutes (2/18/2026) and regulatory capital framework proposal (3/19/2026) referenced in key_points are NOT present in this source — they are merely referenced as links that would need to be accessed separately",
+      "Record correctly identifies that this page is a navigation artifact, not an archiveable research document"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_2026_press_releases_4b6cd197c58a4cd2.txt",
+  "notes": "Non-archiveable homepage. The source body is a chronological list of press releases from the Federal Reserve Board covering Jan–Mar 2026. While the list references items potentially relevant to market structure (tokenized securities capital treatment, regulatory capital framework modernization) and macro catalysts (FOMC minutes, discount rate meeting minutes), these are summaries of links rather than the actual content. This page functions as an index/navigation artifact. To obtain archiveable research notes, the individual linked documents (e.g., the FOMC minutes PDF, the capital framework proposal) would need to be accessed directly. Recommend crawling the specific URLs for the FOMC minutes (2/18/2026) and regulatory capital proposal (3/19/2026) as separate records.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 2,
+    "reasoning": [
+      "Homepage/listing page per source_type — non-archivable per CORE RULE 6",
+      "No specific policy content; merely an index of links",
+      "Multiple unrelated topics bundled into a single record",
+      "Cannot support detailed market structure or macro catalyst analysis from this source alone",
+      "Individual announcements within this listing would be candidates for separate archival"
+    ]
+  }
+}
