@@ -1,62 +1,64 @@
 {
   "id": "seed_crawl_treasury_debt_limit_473bf7fd285cb8b1",
-  "created_at": "2026-04-01T03:05:39.131118+00:00",
+  "created_at": "2026-04-10T06:09:04.115247+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "market_notice",
   "title": "Debt Limit",
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/debt-limit",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "home.treasury.gov"
+    "source_type": "listing_page"
   },
-  "summary": "This Treasury landing page aggregates debt limit documentation including letters to Congress, fund operation reports, and extraordinary measures descriptions spanning 2017-2025. The page serves as a navigation hub rather than a single archival document. Key historical context provided: Congress has acted 78 times to raise, extend, or revise the debt limit since 1960 (49 times under Republican presidents, 29 times under Democratic presidents). The page explicitly warns that failing to increase the debt limit would cause an unprecedented government default with catastrophic economic consequences.",
+  "summary": "This Treasury Department hub page provides general background on the U.S. debt limit mechanism and aggregates links to historical Treasury correspondence. It explains the debt limit authorizes borrowing for existing legal obligations and warns of catastrophic consequences of default. The page is an index of links to individual documents from 2015-2025, not a standalone policy document.",
   "key_points": [
-    "Debt limit authorizes borrowing for existing legal obligations (Social Security, Medicare, military salaries, interest on national debt, tax refunds) but does not authorize new spending",
-    "Since 1960, Congress has raised, extended, or revised the debt limit 78 separate times: 49 times under Republican presidents, 29 times under Democratic presidents",
-    "Page aggregates letters from multiple Treasury Secretaries: Yellen (2021-2023), Lew (2015-2016), Mnuchin (2017-2019), Bessent (2025), Lebryk (2025)",
-    "The page contains links to 'Description of Extraordinary Measures' documents (last dated 8/2/2021, 5/31/2023) which detail accounting workarounds Treasury uses when near the limit",
-    "Daily Debt Subject to Limit Activity reports and G Fund/CSRDF/PSRHBF fund operation reports are listed for various dates through 2025",
-    "Treasury explicitly states failing to raise the debt limit would precipitate another financial crisis and threaten jobs and savings"
+    "The debt limit authorizes borrowing for existing legal obligations including Social Security, Medicare, military salaries, interest on national debt, and tax refunds",
+    "The debt limit does not authorize new spending commitments",
+    "Failing to increase the debt limit would cause the government to default on its legal obligations, an unprecedented event in American history",
+    "The source warns default would precipitate another financial crisis and threaten jobs and savings of everyday Americans",
+    "Congress has acted 78 times since 1960 to raise, extend, or revise the debt limit (49 times under Republican presidents, 29 times under Democratic presidents)",
+    "The page links to various Treasury reports including letters to Congress on fund operations and extraordinary measures through July 2025"
   ],
-  "why_it_matters": "Debt limit brinkmanship represents a macro catalyst risk for Treasury markets. This page documents the institutional framework for debt limit management and the Treasury's position that Congressional action is historically routine and necessary. The page's aggregation of dated documents (some from 2025) indicates the debt limit remains an active fiscal policy issue with potential market impact if unresolved.",
+  "why_it_matters": "This hub page itself contains no specific current figures or policy decisions. It serves only as a navigational index to individual Treasury letters and reports. Market participants should reference the specific linked documents (Bessent letter 03/14/2025, various Yellen letters, extraordinary measures descriptions) for actionable debt limit intelligence rather than this general archive page.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "volatility"
+      "money_markets",
+      "equities"
     ],
     "directional_bias": "risk_off",
     "confidence": 0
   },
-  "macro_context": "Debt limit is a fiscal policy catalyst that, if unresolved, could trigger a government default. Treasury's stated position is that this would cause catastrophic economic consequences and another financial crisis. The page indicates ongoing Congressional correspondence through at least 2025 (Secretary Bessent's March 14, 2025 letter), suggesting the issue remains relevant.",
+  "macro_context": "Debt limit brinksmanship represents a fiscal policy risk that could constrain Treasury's ability to meet obligations, potentially causing a technical default even without a formal cash shortage. Historical precedent shows Congress eventually raises the limit, but uncertainty periods have historically caused T-bill yield spikes and repo market stress.",
   "market_structure_context": "",
   "important_numbers": [
     "78 debt limit actions since 1960",
-    "49 times raised under Republican presidents",
-    "29 times raised under Democratic presidents"
+    "49 times under Republican presidents",
+    "29 times under Democratic presidents"
   ],
   "tags": [
     "debt-limit",
-    "fiscal-policy",
     "treasury",
+    "fiscal-risk",
     "congress",
-    "extraordinary-measures",
     "default-risk",
-    "macro-catalyst"
+    "macro-catalyst",
+    "extraordinary-measures"
   ],
   "llm_review": {
-    "initial_confidence": 4,
-    "verification_confidence": 3,
+    "initial_confidence": 5,
+    "verification_confidence": 4,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page containing aggregated links to multiple documents from 2017-2025, not a single archiveable research document",
-      "No specific publication date on the page itself (published_at is empty)",
-      "Cannot assign a meaningful single event_type from the taxonomy to an aggregated listing page",
-      "event_type is set to 'unknown' when the correct action would be to reject based on page type",
-      "Page aggregates heterogeneous content (letters, reports, FAQs, daily activity) without coherent focus",
-      "Cannot extract specific market-impactful events or data from this navigation hub"
+      "Source is a Treasury Department hub/listing page that aggregates links to individual documents rather than a standalone article",
+      "No specific current debt limit level, X-date, or Treasury cash position provided in source body",
+      "Published_at field is empty because no single publication date applies to the hub page",
+      "Event_type 'market_notice' is questionable - the actual market notices would be the individual letters to Congress (e.g., Bessent letter 03/14/2025, Yellen letters), not this general hub page",
+      "Historical statistics (78 actions since 1960) are presented without specific dates to assess currency",
+      "Source contains no specific policy decision, data release, or substantive content beyond general background and a list of links",
+      "Core Rule #5 explicitly requires rejection when PAGE_TYPE is navigation_page, listing_page, or homepage"
     ]
   },
   "human_review": {
@@ -73,18 +75,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_debt_limit_473bf7fd285cb8b1.txt",
-  "notes": "This is a Treasury landing page (listing_page) that aggregates links to multiple debt limit documents from 2017-2025. It is not archiveable as a single research note. The content provides institutional framing (debt limit is for existing obligations, not new spending) and historical context (78 prior actions since 1960). However, the page's value is as a directory to individual letters and reports that should be crawled and archived separately. Recommend decomposing into component documents for proper archival.",
+  "notes": "Source is a Treasury Department informational hub page rather than a specific policy document or data release. Contains general explanatory text about the debt limit mechanism and a chronological list of Treasury letters and reports from 2015-2025. No specific current debt ceiling level, X-date, or Treasury cash position stated. The historical statistics (78 actions since 1960) are presented as background context. Page functions as an archive index rather than a standalone actionable document. Published_at left blank as no single publication date applies to the hub page itself. Tagged as market_notice due to Treasury's role in market operations and the fiscal operations focus of the linked documents.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 3,
+    "tier": "C",
+    "score": 5,
     "reasoning": [
-      "Listing page not suitable for single-document archival",
-      "No specific publication date",
-      "Contains truncated/outdated links",
-      "Cannot extract specific event with market impact data",
-      "Historical context is useful but not actionable for research retrieval"
+      "Provides general background context on debt limit mechanism",
+      "Historical statistics cited (78 actions since 1960)",
+      "No specific current debt level, X-date, or extraordinary measures balance stated",
+      "Hub page format limits archival utility for real-time market analysis",
+      "Relevant to macro catalysts but lacks precision for actionable trading intelligence"
     ]
   }
 }

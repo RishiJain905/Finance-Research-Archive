@@ -1,0 +1,93 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_report_shows_cbb5ebae46adc47f",
+  "created_at": "2026-04-10T06:14:41.132277+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "economic_commentary",
+  "title": "New York Fed Report Shows Americans Continue to Improve Household Balance Sheets",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2013/an130514",
+    "published_at": "2013-05-14",
+    "source_type": "blog_post",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The New York Fed's Q1 2013 Household Debt and Credit Report showed household debt declined $110 billion to $11.23 trillion, with delinquency rates improving across all debt categories as households continued deleveraging. The 90+ day delinquency rate fell to 6.0 percent from 6.3 percent the prior quarter.",
+  "key_points": [
+    "Outstanding household debt fell to $11.23 trillion in Q1 2013, down $110 billion from Q4 2012, significantly below the $12.68 trillion peak in Q3 2008",
+    "Overall 90+ day delinquency rate declined to 6.0 percent from 6.3 percent, below the 8.7 percent peak from three years prior",
+    "Delinquency rates improved across mortgage (5.4%), HELOC (3.2%), auto loans (3.9%), credit cards (10.2%), and student loans (11.2%)",
+    "Student loan debt increased $20 billion to $986 billion; total mortgage debt decreased to $7.93 trillion",
+    "New foreclosure notations added for 184,000 individuals, down 12.5 percent from previous quarter and fourth consecutive quarterly decline",
+    "Mortgage originations rose for the sixth consecutive quarter to $577 billion"
+  ],
+  "why_it_matters": "Household sector deleveraging and improving credit quality are leading indicators for consumer spending capacity and broader economic recovery. Declining delinquency and foreclosure rates reduce systemic risk in the financial system. Note: Student loan delinquency rates (11.2%) understate actual rates as approximately half of loans are in deferment, grace periods, or forbearance; among loans in repayment, delinquency rates are roughly twice as high.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "risk_on",
+    "confidence": 3
+  },
+  "macro_context": "The data indicates continued household sector repair following the 2008 financial crisis, with broad-based improvements in credit quality. Credit card balances decreased $19 billion and mortgage debt fell to $7.93 trillion. However, rising student loan debt ($986B) and persistent credit card delinquencies (10.2%) remain structural concerns for consumer credit markets.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$11.23 trillion total household debt",
+    "$110 billion quarterly debt reduction",
+    "6.0% overall 90+ day delinquency rate",
+    "$986 billion in student loan debt",
+    "$577 billion in mortgage originations",
+    "184,000 new foreclosure notations"
+  ],
+  "tags": [
+    "household debt",
+    "credit delinquency",
+    "consumer credit",
+    "new york fed",
+    "household deleveraging",
+    "mortgage",
+    "credit cards",
+    "student loans",
+    "foreclosures",
+    "macroprudential"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "SOURCE METADATA TARGET='market structure' but content is household credit/consumer debt macroprudential research - topic 'macro catalysts' is more appropriate classification",
+      "Published 2013-05-14, approximately 13 years stale relative to TODAY (2026-04-10) - significantly outside 90-day window; archival value assessment required",
+      "Student loan delinquency rate (11.2%) is presented without the source's explicit caveat that this understates actual delinquency because ~half of loans are in deferment/forbearance/grace periods; source states 'among loans in the repayment cycle delinquency rates are roughly twice as high'",
+      "No mention of the $19 billion credit card balance decrease in key_points or summary"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Historical source (2013) requires judgment on archival value per rule 7. The data is accurate and well-sourced from a high-trust domain (NY Fed), but the 13-year age means it lacks current market relevance. The student loan delinquency caveat is material context that should be included or explicitly excluded. Human assessment needed to determine if this historical household credit snapshot warrants archiving."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_report_shows_cbb5ebae46adc47f.txt",
+  "notes": "Historical source (May 2013). SOURCE METADATA TARGET lists 'market structure' but the content is a household debt and credit report focused on consumer credit conditions - this is macroprudential/economic research, not market structure (market plumbing, trading mechanisms, market operations). Classified as 'macro catalysts' topic as it relates to household sector health which can drive macro market moves. Stale by approximately 13 years; retained for archive completeness but marked as historical with reduced confidence.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 4,
+    "reasoning": [
+      "Historical 2013 data - stale for real-time market analysis",
+      "Content mismatch: TARGET=market structure, actual content=household credit macro research",
+      "High domain trust tier (New York Fed) but data age limits utility",
+      "Contains specific debt and delinquency figures but no current market relevance"
+    ]
+  }
+}

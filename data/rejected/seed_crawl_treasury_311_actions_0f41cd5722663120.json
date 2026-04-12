@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_311_actions_0f41cd5722663120",
-  "created_at": "2026-04-01T20:52:22.390496+00:00",
+  "created_at": "2026-04-10T06:08:45.149441+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,20 +8,19 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/terrorism-and-illicit-finance/311-actions",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "home.treasury.gov"
+    "source_type": "listing_page"
   },
-  "summary": "This Treasury Department page is a static index/listing of Section 311 actions under the USA PATRIOT Act, compiling announcements, proposed rulemakings, and notices related to anti-money laundering countermeasures against specific foreign banks and jurisdictions. The page does not contain substantive analysis, specific current actions, or market-moving content—it serves purely as a navigation hub to historical regulatory actions.",
+  "summary": "This Treasury.gov page is a static listing of historical Section 311 enforcement actions under the USA PATRIOT Act, aggregating multiple announcements and rulemakings related to anti-money laundering and sanctions designations against specific banks and countries. The page contains no publication date and does not constitute a specific market-moving event or research document.",
   "key_points": [
-    "This is a listing/index page aggregating past Section 311 announcements, not a current actionable document",
-    "Content includes: designations of foreign banks as 'Primary Money Laundering Concern', proposed countermeasures, rescissions of designations, and related rulemakings",
-    "Specific banks mentioned include: Lebanon's Canadian Bank Sal, Latvia's VEF Banka, Commercial Bank of Syria, Burma's banks, and others",
-    "No publication date or timestamp is provided in the source text",
-    "The page covers historical actions spanning multiple years without clear organization or recency indicators",
-    "No quantitative data, economic figures, or rate information is present"
+    "The page aggregates historical Section 311 actions against specific financial institutions including VEF Banka (Latvia), Lebanese Canadian Bank Sal, and various Burmese, Syrian, and Ukrainian entities",
+    "Multiple Notices of Proposed Rulemaking (NPRMs) related to Customer Identification Programs and Due Diligence requirements are listed",
+    "The page includes references to correspondent account due diligence requirements and anti-money laundering program rules",
+    "No specific publication date or event timestamp is provided for this aggregate listing",
+    "This is a navigation/listing page, not an original research document or policy statement"
   ],
-  "why_it_matters": "This source is not actionable for financial research. It is a static navigation page listing historical regulatory actions rather than current market-relevant information. It has no direct relevance to market structure dynamics or macro economic catalysts that would affect trading decisions.",
+  "why_it_matters": "This source is not relevant to the specified focus areas of market structure or macro catalysts. It provides historical context on Treasury AML enforcement but does not constitute a specific research document, data release, or policy announcement that would inform market analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -33,27 +32,22 @@
   "tags": [
     "treasury",
     "section-311",
-    "patriot-act",
     "aml",
-    "illicit-finance",
-    "regulatory",
-    "fincen",
     "sanctions",
-    "listing-page"
+    "patriot-act",
+    "financial-regulation"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 0,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page - explicitly excluded by archiving guidelines (Rule 5)",
-      "No publication date provided - cannot assess recency or archival value timeline",
-      "Topic mismatch: TARGET is 'macro catalysts' but content is regulatory/sanctions policy index",
-      "No substantive content - merely a navigation index of links to historical Section 311 actions",
-      "No analytical content, no current actions, no market-moving information",
-      "event_type set to 'unknown' - correct for this source type but confirms lack of specific event",
-      "Source has no relevance to market structure or macro economic catalysts",
-      "Information density is extremely low - serves only as a link directory"
+      "Source is a listing_page - per Rule 5, listing pages must be rejected",
+      "Source is a static aggregation page with no single publication date",
+      "No specific market-moving event or research document present",
+      "Content spans multiple unrelated historical actions (VEF Banka, Lebanese Canadian Bank, Burma, Syria, Ukraine, Nauru) with no coherent focal point",
+      "Source is not relevant to macro catalysts or market structure as specified in TARGET field",
+      "event_type 'unknown' is appropriate given the listing page nature, but this further confirms the record lacks archival value"
     ]
   },
   "human_review": {
@@ -70,18 +64,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_311_actions_0f41cd5722663120.txt",
-  "notes": "NON-ARCHIVEABLE: This is a listing/index page aggregating historical Section 311 actions. Not relevant to 'market structure' or 'macro catalysts' topics. Topic assignment appears incorrect—content relates to illicit finance/terrorism financing policy, not macroeconomics. No publication date present. Low information density. Recommend excluding from archive or reclassifying topic to 'regulatory/sanctions' if archiving is required.",
+  "notes": "This source is not relevant to the target topics of market structure or macro catalysts. It is a Treasury.gov listing page aggregating historical Section 311 enforcement actions related to anti-money laundering and terrorist financing. No publication date is provided, making it impossible to assess recency. The page type is listing_page, indicating it is non-archiveable per core rules. Contains no specific market-moving data or original research findings.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Listing page with no substantive analytical content",
-      "No publication date - temporal context unknown",
-      "Topic mismatch: macro catalysts vs actual content (regulatory/sanctions)",
-      "No market-moving data or forward-looking guidance present",
-      "Serves only as navigation index to external documents"
+      "No publication date - cannot assess staleness",
+      "Listing page aggregates multiple unrelated historical actions",
+      "Not a single event or research document",
+      "Irrelevant to specified focus areas (market structure, macro catalysts)",
+      "No actionable market intelligence present"
     ]
   }
 }
