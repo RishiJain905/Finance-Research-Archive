@@ -1,12 +1,19 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 2,
+  "verdict": "reject",
   "issues_found": [
-    "event_type 'regulatory_guidance' is somewhat imprecise; the source is an order/approval announcement rather than guidance. 'financial_stability_report' or 'unknown' might be more accurate, though 'regulatory_guidance' is within the valid taxonomy."
+    "Source URL is empty - missing critical source attribution",
+    "Source domain is empty - cannot verify domain",
+    "Source type field is empty",
+    "Event type 'regulatory_guidance' is plausible but elevated for what is essentially an administrative exemption notice",
+    "Source is not relevant to market structure or macro catalysts - this is a routine bank exemption announcement",
+    "Source content is thin - no substantive policy analysis, just a mechanical administrative notice",
+    "No market impact or macroeconomic implications mentioned or implied",
+    "Record accurately identifies this as out-of-scope but still proceeded to generate full record unnecessarily"
   ],
-  "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and properly attributed. However, the source is very thin (basic press release with minimal detail) and describes a narrow administrative action affecting only one bank. Human review is needed to determine if this meets the archival value threshold given its limited market structure relevance.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "Reject is clear-cut. Source is a routine administrative exemption notice with no relevance to market structure or macro catalysts. Multiple attribution fields are empty. The generated record itself acknowledges 'Does not fall within market structure or macro catalysts topics' with quality_tier 'out-of-scope'. No need for human review on a source that was correctly identified as irrelevant.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

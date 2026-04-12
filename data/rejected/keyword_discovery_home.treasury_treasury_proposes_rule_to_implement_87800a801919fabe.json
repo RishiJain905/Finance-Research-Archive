@@ -1,0 +1,50 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "source.name is empty - no source attribution provided",
+      "source.url is empty - no source attribution provided",
+      "source.domain is empty - no source attribution provided",
+      "source.published_at is empty - should be '2026-04-08' based on source header",
+      "source.source_type is empty - should identify as press_release or government_announcement",
+      "event_type is missing - should be 'regulatory_guidance' or 'research' given Treasury-issued rule",
+      "topic is empty - should be 'stablecoin regulation' or similar",
+      "summary is empty - source contains substantive content about GENIUS Act implementation",
+      "key_points array is empty - key details like AML requirements, sanctions compliance, and PPSI designation are missing",
+      "why_it_matters is empty - significant regulatory development for stablecoin ecosystem",
+      "macro_context is empty - relevant to digital asset regulation and financial stability",
+      "market_structure_context is empty - payment stablecoin framework directly affects market structure",
+      "market_impact section is empty - policy change has market implications",
+      "tags array is empty - should include 'stablecoin', 'GENIUS Act', 'FinCEN', 'OFAC', 'AML'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely empty - no source attribution, no content fields populated, no event classification. This appears to be a failed extraction or system error. Human review cannot assess content accuracy when there is no content to verify. The source itself is a legitimate Treasury press release about significant stablecoin regulation that should be archived, but the record fails to capture any of it."
+  },
+  "summary": "FinCEN and OFAC issued a joint proposed rule to implement the GENIUS Act's anti-money laundering and sanctions compliance requirements for payment stablecoin issuers. The proposed rule treats permitted payment stablecoin issuers (PPSIs) as financial institutions under the Bank Secrecy Act, requiring AML obligations and sanctions compliance programs. Secretary Bessent stated the proposal protects the U.S. financial system from national security threats while supporting American innovation in payment stablecoins.",
+  "key_points": [],
+  "why_it_matters": "Establishes federal regulatory framework for payment stablecoins, requiring AML and sanctions compliance. Creates compliance burden for permitted payment stablecoin issuers while providing regulatory clarity for the sector.",
+  "macro_context": "This rule implements the GENIUS Act (Guiding and Establishing National Innovation for U.S. Stablecoins Act), providing the first comprehensive federal regulatory framework for payment stablecoins in the United States.",
+  "market_structure_context": "Directly affects market structure for stablecoin issuers and related service providers. Classification as financial institutions under BSA creates new compliance obligations for the stablecoin ecosystem.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

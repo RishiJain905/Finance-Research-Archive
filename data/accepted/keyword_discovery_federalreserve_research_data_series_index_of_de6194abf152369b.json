@@ -1,0 +1,101 @@
+{
+  "id": "keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b",
+  "created_at": "2026-04-12T21:09:41.360666+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "Research Data Series: Index of Common Inflation Expectations",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.html",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2021-03-05",
+    "source_type": "research_page"
+  },
+  "summary": "The Federal Reserve introduced the Index of Common Inflation Expectations (CIE), a dynamic factor model that summarizes comovement across multiple inflation expectations measures, to be published quarterly as an experimental research data series. An April 2022 update added New York Fed Survey of Consumer Expectations measures and modified the model specification. The source serves as methodology documentation rather than a data release or policy announcement.",
+  "key_points": [
+    "CIE uses a dynamic factor model to extract common movements across a wide variety of inflation expectations measures",
+    "April 2022 update added 1-year-ahead and 3-year-ahead measures from NY Fed's Survey of Consumer Expectations",
+    "Added 25th and 75th percentiles of inflation expectations from University of Michigan Survey",
+    "Removed 5-year TIPS breakeven inflation measure as redundant with other TIPS data",
+    "Updated latent factor dynamics assumed to follow autoregressive process of order 5",
+    "Original CIE phased out by October 2022; only updated versions retained",
+    "Updates published quarterly on third Friday of January, April, July, October at noon ET",
+    "Explicitly labeled as experimental research series for informational purposes only"
+  ],
+  "why_it_matters": "The CIE provides a unified signal of inflation expectations across multiple surveys and market-based measures, which is relevant for understanding wage-price dynamics and Fed reaction function. However, this source is methodology documentation rather than market-moving data—the actual index values would be found in the CSV data file, not this note.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "Inflation expectations are a key macro catalyst as they influence actual inflation via wage bargaining and price-setting behavior. The CIE methodology allows aggregation of expectations across SPF professional forecasts, Michigan consumer surveys, and TIPS-based breakeven rates. This source does not provide actual index values or discuss macro implications—it is methodological documentation for how the index is constructed.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "inflation-expectations",
+    "dynamic-factor-model",
+    "fed-reserve",
+    "cie-index",
+    "research-methodology",
+    "surveys",
+    "tips",
+    "experimental-series"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is methodology documentation rather than market-moving content. Consider whether research_paper is the most appropriate event_type, or if economic_commentary better fits the FEDS Notes format."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b.txt",
+  "notes": "Historical record (published 2021-03-05). Source is methodology documentation for an experimental Fed research series. The data file (CSV) would contain actual index values; this note explains the methodology and April 2022 model changes. No direct market impact as this is not a policy announcement. Topic relevance: inflation expectations are macro catalysts, so methodology documentation for an expectations index is tangentially relevant to macro research but does not itself provide actionable macro catalyst information.",
+  "linked_quant_context": [
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 62.0,
+    "reasoning": [
+      "quality score: 62.0/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

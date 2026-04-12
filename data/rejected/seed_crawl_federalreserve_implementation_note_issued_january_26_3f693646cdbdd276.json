@@ -1,0 +1,93 @@
+{
+  "id": "seed_crawl_federalreserve_implementation_note_issued_january_26_3f693646cdbdd276",
+  "created_at": "2026-04-12T20:59:23.565587+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "fomc_statement",
+  "title": "Federal Reserve issues FOMC statement",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "",
+    "domain": "",
+    "published_at": "2022-01-26",
+    "source_type": "press_release"
+  },
+  "summary": "The Federal Reserve released its January 2022 Implementation Note confirming the maintenance of the federal funds rate target range at 0 to 1/4 percent and detailing operational parameters for asset purchases, repo operations, and reserve management. The Board voted unanimously on all decisions, including the primary credit rate at 0.25 percent.",
+  "key_points": [
+    "Federal funds rate target range maintained at 0 to 1/4 percent, effective January 27, 2022",
+    "Interest rate on reserve balances held at 0.15 percent",
+    "Primary credit rate established at 0.25 percent (approved unanimously)",
+    "Overnight repurchase agreement operations: minimum bid rate 0.25 percent, aggregate limit $500 billion (expandable at Chair's discretion)",
+    "Overnight reverse repurchase agreement operations: offering rate 0.05 percent, per-counterparty limit $160 billion per day (expandable at Chair's discretion)",
+    "All principal payments from Treasury holdings rolled over at auction; agency debt and MBS principal reinvested in agency MBS"
+  ],
+  "why_it_matters": "This Implementation Note details the operational mechanics of Fed policy execution—the specific rates, limits, and purchase parameters that translate FOMC decisions into market reality. The repo and reverse repo operation parameters directly affect short-term funding markets and define the plumbing of money market functioning.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The document specifies operational parameters for Fed open market operations including: repo facility terms ($500bn aggregate limit, 0.25% min bid rate), reverse repo terms ($160bn per-counterparty limit, 0.05% offering rate), SOMA purchase pacing ($40bn Treasuries + $20bn MBS monthly), and reserve balance remuneration (0.15% IORB rate). These parameters define the Fed's balance sheet management framework and money market plumbing in place during the early 2022 tightening cycle.",
+  "important_numbers": [
+    "0-0.25%",
+    "0.15%",
+    "0.25%",
+    "$500 billion",
+    "$160 billion",
+    "$40 billion",
+    "$20 billion"
+  ],
+  "tags": [
+    "fomc",
+    "fed-statement",
+    "january-2022",
+    "federal-funds-rate",
+    "repo-operations",
+    "reverse-repo",
+    "soma",
+    "asset-purchases",
+    "balance-sheet"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 5,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'fomc_statement' but source is an Implementation Note - these are distinct documents; Implementation Notes are technical operational documents, not the policy statements themselves",
+      "source URL is missing (domain and url fields are empty) - document provenance is unverifiable",
+      "Title says 'FOMC statement' but the source is explicitly labeled 'Implementation Note' - this conflates two separate document types",
+      "The actual January 26, 2022 FOMC statement (separate document) contained forward guidance on rate hikes and QE tapering; this record captures operational mechanics without that context"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_implementation_note_issued_january_26_3f693646cdbdd276.txt",
+  "notes": "This is a historical FOMC implementation note from January 2022—not recent. The Fed was in tapering mode at this point, winding down QE while maintaining the zero rate policy. The operational details (repo limits, SOMA purchase pace) reflect the market structure framework in place at that time. Source metadata is incomplete (missing URL and source name), though the document content confirms Federal Reserve origin.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "standard",
+    "score": 5,
+    "reasoning": [
+      "Direct from Federal Reserve; reliable primary source",
+      "Detailed operational parameters present",
+      "Historical document (2022) with reduced timeliness",
+      "Source metadata incomplete"
+    ]
+  }
+}

@@ -1,13 +1,14 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
+  "verification_confidence": 7,
+  "verdict": "review",
   "issues_found": [
-    "Published date is not present in the source body, preventing staleness assessment; however, the 2019-2022 data period suggests reasonable recency",
-    "The disclaimer stating that views are authors' own and not ECB official position is noted in notes but could be more prominently embedded in the record"
+    "PUBLISHED_AT is 'unknown' - source excerpt does not include publication date, but Working Paper No 3168 with 2019-2022 data suggests recent publication (2024 likely). Unable to confirm recency.",
+    "Source text is truncated - final sections with methodology details or limitations are not available for verification.",
+    "The source disclaimer correctly notes 'views expressed are those of the authors and do not necessarily reflect those of the ECB' - this is appropriately reflected in the record noting 'Claims are research findings from academic paper, not official ECB policy positions'."
   ],
   "human_review_required": false,
-  "human_review_reason": "No critical issues identified. The record is well-supported by the source text, with accurate representation of methodology, findings, and limitations.",
-  "suggested_status": "accepted",
+  "human_review_reason": "Minor metadata gap (unknown publication date) is the only substantive concern. All factual claims about the research findings are well-supported by the source text. The record correctly categorizes this as a research paper and distinguishes it from official ECB policy.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

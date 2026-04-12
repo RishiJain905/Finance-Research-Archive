@@ -1,14 +1,19 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "source.name incomplete: lists only 'Federal Reserve Board' but source is a joint release from FDIC, Federal Reserve Board, AND OCC",
+    "source.url is empty: missing source URL violates core attribution requirements",
+    "source.domain is empty: should populate from actual source domain",
+    "\"most significant overhaul... since post-crisis Basel III implementation\" in why_it_matters is not supported by any comparative language in the source text"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Attribution fields need correction and one claim appears overstated, but core content is accurate. Auto-route to review_queue for targeted field corrections.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The FDIC, Federal Reserve Board, and OCC jointly requested public comment on three proposals to modernize bank regulatory capital requirements. The first proposal targets Category I and II banks and implements remaining Basel III components; the second adjusts capital requirements for banks engaged primarily in traditional lending; the third (Federal Reserve only) refines systemic risk measurement for G-SIBs. The agencies project modest capital reductions for large banks and moderate reductions for smaller institutions, while maintaining levels substantially above pre-financial crisis.",
+    "why_it_matters": "These proposals represent a significant modernization of U.S. bank capital rules. Changes could affect lending capacity, mortgage economics, and competitive dynamics between large and community banks. The first proposal streamlines calculation requirements for the largest banks while improving risk capture. The second proposal reduces disincentives for mortgage lending. The third proposal refines systemic risk measurement for the most complex institutions. Though not yet effective, market participants should monitor as final rules could alter bank profitability and risk-taking incentives over a multi-year implementation horizon.",
+    "macro_context": "Capital requirements influence bank lending capacity and credit availability across the economy. Reduced requirements could support loan growth and economic activity over time. However, this is a request for comment rather than a final rule, with no immediate market impact. The agencies anticipate modest capital reductions while maintaining levels substantially above pre-crisis benchmarks.",
+    "market_structure_context": "The proposals address regulatory capital framework architecture—specifically risk-based capital calculations, leverage ratio treatment, and systemic risk surcharges (FR Y-15). These rules determine how banks must hold capital against various asset classes and activities, affecting the competitive landscape between large complex banks and community banks. The first proposal consolidates dual-set calculations into a single set for Category I/II banks."
   }
 }

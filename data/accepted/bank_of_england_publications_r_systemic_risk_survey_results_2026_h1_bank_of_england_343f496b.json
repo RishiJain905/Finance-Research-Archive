@@ -83,7 +83,17 @@
   },
   "raw_text_path": "data/raw/bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b.txt",
   "notes": "This is a Bank of England financial stability report based on a survey of 57 market participants. While highly relevant to macro catalysts as it quantifies market participants' risk perceptions, it does not directly discuss market structure topics such as market plumbing, trading operations, or clearing/settlement mechanisms. The source is recent (survey conducted January-February 2026, published April 2026) and of high quality, though it represents survey respondent views rather than official BoE assessments. Note: metadata published_at (2025-10-08) appears to be incorrect; article clearly states 01 April 2026 publication date.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 90.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

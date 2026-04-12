@@ -1,0 +1,97 @@
+{
+  "id": "seed_crawl_federalreserve_implementation_note_issued_april_28_225149e2d5f13cd9",
+  "created_at": "2026-04-12T20:59:15.441945+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Federal Reserve issues FOMC statement",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "",
+    "published_at": "2021-04-28",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "The Federal Reserve on April 28, 2021 released its implementation note detailing the operational mechanics of monetary policy, including maintaining the federal funds rate target range at 0 to 1/4 percent and continuing asset purchases at $80 billion/month Treasury securities and $40 billion/month agency MBS. The Board unanimously approved maintaining the IORB rate at 0.10 percent and the primary credit rate at 0.25 percent.",
+  "key_points": [
+    "Board of Governors voted unanimously to maintain interest rate on required and excess reserve balances (IORB) at 0.10 percent effective April 29, 2021",
+    "Federal funds rate maintained in target range of 0 to 1/4 percent",
+    "Desk directed to increase Treasury holdings by $80 billion/month and agency MBS by $40 billion/month",
+    "Overnight reverse repurchase agreement operations set at 0.00 percent with per-counterparty limit of $80 billion per day",
+    "Primary credit rate established at 0.25 percent",
+    "All principal payments from Treasury holdings to be rolled at auction; agency debt and MBS payments reinvested in agency MBS"
+  ],
+  "why_it_matters": "This implementation note details the Fed's operational playbook for executing ultra-accommodative monetary policy during the pandemic recovery. The $120 billion monthly pace of QE and the RRP framework at $80 billion/day cap established the boundaries for how much liquidity the Fed would inject into financial markets, directly impacting Treasury market functioning and short-term funding conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "This April 2021 FOMC statement came approximately 13 months into the COVID-19 pandemic response. The Fed maintained its highly accommodative stance with rates near zero and $120 billion in monthly asset purchases, supporting financial conditions during the economic recovery. This predates the Fed's 2022-2023 tightening cycle by over a year.",
+  "market_structure_context": "The document specifies key market plumbing parameters: the $80 billion/day RRP per-counterparty limit (expandable at Chair's discretion), the operational parameters for repo and reverse repo facilities, and the authorization for agency CMBS purchases to support market functioning. These define the technical framework for short-term U.S. dollar funding markets.",
+  "important_numbers": [
+    "0.10% IORB rate",
+    "0.00% RRP offering rate",
+    "$80 billion/day RRP per-counterparty limit",
+    "$80 billion/month Treasury purchases",
+    "$40 billion/month agency MBS purchases",
+    "0.25% primary credit rate",
+    "0 to 1/4% federal funds target range"
+  ],
+  "tags": [
+    "federal-reserve",
+    "fomc",
+    "qe",
+    "asset-purchases",
+    "monetary-policy",
+    "reserve-balances",
+    "rrp",
+    "repo",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 9,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source URL is empty - source attribution should include the actual Federal Reserve URL",
+      "source_type and domain fields are empty - should be populated from authoritative metadata",
+      "verification_confidence is set to 0 in multiple fields (record, llm_review, market_impact) - these should be actual 0-10 integers",
+      "llm_review.verdict is 'pending' - should be one of accept, review, or reject per taxonomy"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record content is accurate and well-supported by the source text - all quantitative parameters (QE amounts, rate levels, RRP limits) match correctly. However, critical source metadata fields (url, source_type, domain) are empty, making it impossible to verify the authoritative source attribution. Human needs to populate these fields and assess whether the record can be auto-accepted once metadata is complete."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_implementation_note_issued_april_28_225149e2d5f13cd9.txt",
+  "notes": "Historical monetary policy implementation document from the Fed's COVID-19 era QE program. The document is authoritative and contains exact operational parameters. Source metadata was not provided, requiring manual entry. This predates the Fed's 2022-2023 tightening cycle by over a year.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "Source is official Federal Reserve document with exact operational parameters",
+      "Key numbers explicitly stated: QE amounts, rate levels, limits",
+      "Contains market structure relevant details on RRP and repo operations",
+      "Historical record - confidence lowered slightly per freshness guidelines",
+      "Missing source metadata requires manual verification"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "426d762b3471d631e2a631fd6e1f311cfcb5b43d"
+}

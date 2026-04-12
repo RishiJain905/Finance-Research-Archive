@@ -1,14 +1,18 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Market structure context includes 'launched in 2023' which is not present in the source text. This is external knowledge being introduced as fact.",
-    "The 2023 launch date for FedNow is factually incorrect — FedNow Service launched in July 2023, but this date is not in the source material and should be removed or qualified."
+    "Topic mismatch: source metadata labels 'macro catalysts' but the content is about payment infrastructure (FedNow Service), which aligns more with 'market structure' or 'market plumbing'.",
+    "llm_review.verification_confidence is set to 0, which appears to be a placeholder or error; the actual verification confidence based on this assessment is 7.",
+    "event_type 'regulatory_guidance' is valid but 'regulatory_proposal' would be more precise for a request-for-comment announcement."
   ],
   "human_review_required": false,
-  "human_review_reason": "The record is well-constructed and factually accurate except for one verifiable factual error (the 2023 launch date). The error is minor but concrete and should be corrected. No human review needed — auto-route to review queue is appropriate.",
+  "human_review_reason": "Minor issues exist but do not affect core accuracy. The record is factually faithful to the source. Topic classification discrepancy is noted in the record's own notes field. Low verification confidence in llm_review appears to be a data field issue rather than a content problem.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "market_structure_context": "FedNow Service is the Federal Reserve's instant payment rail. This proposal would expand the network topology beyond direct bank-to-bank transfers to include intermediary institutions, which could affect payment flow dynamics and correspondent banking relationships."
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

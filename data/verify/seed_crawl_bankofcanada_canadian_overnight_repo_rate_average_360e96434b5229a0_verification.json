@@ -1,14 +1,21 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'market_notice' is incorrect; this is a data release page, not a market operations notice",
+    "event_type should be 'data_release_other' given the source provides raw rate transparency data",
+    "published_at field is empty in source metadata; cannot verify recency beyond the in-page dates",
+    "Topic mismatch: TARGET specifies 'macro catalysts' but source is pure market structure/reference rate infrastructure data without any macro catalyst content",
+    "No policy signal, commentary, analysis, or research value beyond raw data presentation; source is thin for archival research purposes",
+    "CORRA Compounded Index date range in key_points (March 27-31) doesn't align with the source showing data through March 31 but index values starting March 25"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a pure data transparency page with accurate numbers but no macro catalyst value. The TARGET 'macro catalysts' classification mismatches the actual content (market structure/reference rate infrastructure). event_type 'market_notice' is wrong—it should be data_release_other. While data is factually correct, the record lacks research value and may not belong in a finance research archive designed for macro catalysts and market-moving content. Human should decide if CORRA reference rate data warrants archiving despite being purely infrastructural.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Bank of Canada publishes daily CORRA transparency data showing overnight repo rates ranging from 2.27% to 2.33% for March 24-30, 2026. The page provides full transparency metrics including trimmed volume, percentile distributions (5th, 25th, 75th, 95th), number of data submitters (14-15), and the CORRA Compounded Index values. CORRA measures the cost of overnight general collateral CAD funding using Government of Canada securities as collateral.",
+    "why_it_matters": "CORRA is Canada's designated risk-free rate and reference benchmark for floating rate notes, loans, and financial derivatives. The transparency metrics (trimmed volume, percentile distributions, participant counts) provide insight into the health and liquidity of Canada's overnight repo market. This data supports market structure analysis but does not constitute a macro catalyst or policy signal.",
+    "macro_context": "CORRA operates independently from Bank of Canada policy rate decisions. This page presents historical transparency data only—no current policy signals, rate guidance, or macro commentary. The 2.27-2.33% range during March 24-30, 2026 suggests stable overnight funding conditions but cannot be interpreted as a market-moving event without additional context.",
+    "market_structure_context": "CORRA is Canada's benchmark overnight repo rate measuring the cost of general collateral funding in CAD. The Bank of Canada provides this as a public good with full transparency on calculation methodology, data submitters, and volume distributions. The 2.27-2.33% range indicates stable overnight funding conditions with 14-15 active market participants. The trimmed volume approach and percentile reporting (5th, 25th, 75th, 95th) provide insight into repo market distribution, outlier handling, and liquidity health in Canada's overnight funding markets."
   }
 }

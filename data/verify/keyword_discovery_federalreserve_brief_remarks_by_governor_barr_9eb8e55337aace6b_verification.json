@@ -1,10 +1,14 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is missing (url field is empty string), though domain and name are present",
+    "Topic classification 'macro catalysts' is borderline - speech focuses on stablecoin regulation and financial stability rather than traditional macro catalysts like rate decisions or economic data",
+    "Speech is not a traditional macro catalyst source but does discuss financial stability risks with potential market implications"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Topic assignment to 'macro catalysts' is questionable. While this is an authoritative Fed Governor speech on financial stability risks related to stablecoins, it does not discuss monetary policy, interest rate paths, or macroeconomic projections. Human reviewer should confirm whether stablecoin regulatory developments qualify under the archive's taxonomy for macro catalysts, or whether this should be recategorized.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

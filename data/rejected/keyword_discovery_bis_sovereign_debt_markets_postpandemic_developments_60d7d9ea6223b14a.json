@@ -1,0 +1,45 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution entirely missing - name, url, domain, published_at, and source_type fields are all empty",
+      "Summary field is empty - no content extracted from the source speech",
+      "key_points array is empty - no key points extracted from the source",
+      "why_it_matters field is empty - no significance statement provided",
+      "macro_context field is empty - no macroeconomic context given",
+      "market_structure_context field is empty - no market structure analysis provided",
+      "topic field is empty - subject matter not identified",
+      "event_type not provided - cannot verify against taxonomy",
+      "Source body was truncated during processing, limiting available content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is completely empty - all substantive fields (source attribution, summary, key_points, why_it_matters, macro_context, market_structure_context) are blank. The source itself (a speech by Bank of Italy Deputy Governor Paolo Angelini on sovereign debt markets at the June 2025 Venice conference) appears to be a legitimate and substantive central bank communication with archival value. However, no content was extracted. Human review is required to either regenerate the record properly or manually populate it based on the source text."
+  },
+  "summary": "Bank of Italy Deputy Governor Paolo Angelini delivered the welcome address at the 11th International Conference on Sovereign Bond Markets, providing historical context on sovereign debt (citing Venice's 13th-century 'prestiti' as the first sovereign bond market) and outlining four post-pandemic developments shaping sovereign debt markets: (1) rising global public debt approaching 90% of GDP, with projections reaching near 100% by 2030; (2) debt distress in about half of low-income countries with external debt at nearly $1 trillion; (3) normalization of interest rates to higher levels than pre-pandemic, increasing debt servicing costs; and (4) quantitative tightening by central banks since 2022, with government bond supply absorbed mostly by nonbanks.",
+  "key_points": [],
+  "why_it_matters": "The speech highlights concerns about US fiscal sustainability and its potential far-reaching consequences for global finance. Rising sovereign debt combined with higher rates increases debt servicing costs globally. QT programs are reshaping who holds government bonds, with implications for market structure and financial stability.",
+  "macro_context": "Global gross public debt is approximately 90% of GDP (up from 84% in 2019), projected to reach nearly 100% by 2030. About half of low-income countries face debt distress. Interest rates have normalized to higher levels than the pre-pandemic decade. Central banks in advanced economies began QT in 2022. Euro area debt-to-GDP projected to rise modestly due to reformed EU fiscal rules.",
+  "market_structure_context": "Sovereign bonds are the backbone of financial markets, key for monetary policy transmission, financial stability, and serve as benchmarks for pricing other bonds and loans. They are treated favorably in regulatory capital and liquidity frameworks and viewed as 'safe assets' ideal as collateral. QT has shifted government bond holdings toward nonbanks (investment funds, foreign investors, households) with cross-country heterogeneity.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing - no name, url, or domain provided",
+    "event_type is not provided in the generated record",
+    "Topic is not specified",
+    "Summary, key_points, why_it_matters, macro_context, and market_structure_context are all empty - the record has no content",
+    "Published_at date is not set",
+    "Source type is not specified",
+    "The generated record is essentially an empty shell with no research data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record contains no actual content - all key fields are empty. The record fails basic requirements for archival completeness.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

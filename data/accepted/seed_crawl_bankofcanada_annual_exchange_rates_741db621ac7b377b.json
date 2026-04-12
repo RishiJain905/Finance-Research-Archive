@@ -77,7 +77,17 @@
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_annual_exchange_rates_741db621ac7b377b.txt",
   "notes": "Data release page containing historical annual average exchange rates. Rates are indicative and sourced from financial institution quotes. The published_at date is inferred as 2025-12-31 based on the data coverage and stated publication timing (last business day of year).",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

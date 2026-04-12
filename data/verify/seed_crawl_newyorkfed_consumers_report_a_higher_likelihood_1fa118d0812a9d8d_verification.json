@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic mismatch: Source content is a consumer credit access survey, not relevant to 'market structure' (trading infrastructure, market plumbing) or 'macro catalysts' (rate decisions, market-moving data releases)",
+    "Source is over 11 years old (2015-03-27) with no clear archival value for the specified topics",
+    "TARGET/MARKET_STRUCTURE classification is incorrect - this is consumer finance survey data",
+    "Human review correctly identified the mis-targeting; record should be reclassified to 'consumer-finance' or discarded"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are clear-cut: source is factually accurate but categorically irrelevant to specified topics. No need for additional human review - the topic mismatch and staleness are sufficient grounds for rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

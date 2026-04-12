@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'fomc_statement' but source is an Implementation Note - these are distinct documents; Implementation Notes are technical operational documents, not the policy statements themselves",
+    "source URL is missing (domain and url fields are empty) - document provenance is unverifiable",
+    "Title says 'FOMC statement' but the source is explicitly labeled 'Implementation Note' - this conflates two separate document types",
+    "The actual January 26, 2022 FOMC statement (separate document) contained forward guidance on rate hikes and QE tapering; this record captures operational mechanics without that context"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record has accurate factual content regarding the operational parameters, but misclassifies the document type (Implementation Note vs FOMC statement) and lacks source URL. The operational details are correctly extracted, but the framing conflates a technical implementation document with the policy statement itself. Given missing provenance and mislabeling, human review is warranted before archival.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve released its January 2022 Implementation Note confirming the maintenance of the federal funds rate target range at 0 to 1/4 percent and detailing operational parameters for asset purchases, repo operations, and reserve management. The Board voted unanimously on all decisions, including the primary credit rate at 0.25 percent.",
+    "why_it_matters": "This Implementation Note details the operational mechanics of Fed policy execution—the specific rates, limits, and purchase parameters that translate FOMC decisions into market reality. The repo and reverse repo operation parameters directly affect short-term funding markets and define the plumbing of money market functioning.",
+    "market_structure_context": "The document specifies operational parameters for Fed open market operations including: repo facility terms ($500bn aggregate limit, 0.25% min bid rate), reverse repo terms ($160bn per-counterparty limit, 0.05% offering rate), SOMA purchase pacing ($40bn Treasuries + $20bn MBS monthly), and reserve balance remuneration (0.15% IORB rate). These parameters define the Fed's balance sheet management framework and money market plumbing in place during the early 2022 tightening cycle."
+  }
+}

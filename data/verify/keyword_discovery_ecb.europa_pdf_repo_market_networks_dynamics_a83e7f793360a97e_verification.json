@@ -1,13 +1,18 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "published_at is 'unknown' when the source is clearly a recent ECB Working Paper - the analysis period ends mid-February 2025, suggesting publication in early-to-mid 2025 or later",
+    "Source body is truncated, cutting off during the introduction section, limiting verification of methodology details and full regression results",
+    "why_it_matters contains slight interpretive overreach: 'policymakers have a relatively resilient market infrastructure' extends beyond the source's more cautious language that the paper 'offers insights for policymakers'",
+    "Unable to verify whether the full paper contains additional findings, policy recommendations, or caveats not present in the truncated source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is largely accurate and well-structured, but publication date is unknown and source is truncated, making it impossible to verify the complete methodology and all findings. Human should confirm publication date from ECB records and assess whether the truncated source limits archival value.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "Repo markets are essential for circulating liquidity through the financial system, with the euro repo market accounting for 56% of daily transactions in euro money markets. Understanding how this market functions under stress is critical for financial stability monitoring, repo market regulation design, and monetary policy transmission. The paper offers insights for policymakers on how repo markets adjust during periods of elevated financial stress, with findings that have implications for designing repo market regulations and developing comprehensive financial stability frameworks.",
     "macro_context": "",
     "market_structure_context": ""
   }
