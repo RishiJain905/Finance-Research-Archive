@@ -1,7 +1,7 @@
 {
   "id": "upcoming_treasury_auctions_2026_04_12",
   "created_at": "2026-04-12T14:06:24.503462+00:00",
-  "status": "review_queue",
+  "status": "rejected",
   "topic": "market structure",
   "event_type": "unknown",
   "title": "Upcoming Treasury Auctions (API Error)",
@@ -47,17 +47,13 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Record accurately describes the API failure and appropriately assigns 'no-content' quality tier. Minor issue: event_type should be corrected to 'treasury_issuance' rather than 'unknown'. No fabricated claims or unsupported assertions found."
+    "required": false,
+    "decision": "rejected_by_human",
+    "notes": "Rejected from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "reject",
+    "reviewed_at": "2026-04-12T15:35:49.462713+00:00"
   },
   "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_12.txt",
   "notes": "This record documents a failed data retrieval attempt rather than an actual source document. The API endpoint for Treasury auction data is returning 404 errors. Suggested actions: (1) Verify the correct API endpoint in Treasury Fiscal Data documentation, (2) Check if endpoint path changed, (3) Consider alternative sources for auction schedules such as Treasury Direct auction calendar.",
