@@ -1,66 +1,64 @@
 {
   "id": "keyword_discovery_federalreserve_pdf_financial_stability_report_november_40c56ac57e23969c",
-  "created_at": "2026-04-12T06:03:59.828298+00:00",
+  "created_at": "2026-04-12T08:56:06.521278+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "financial_stability_report",
   "title": "Financial Stability Report; November 2025",
   "source": {
-    "name": "Federal Reserve Board of Governors",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20251107.pdf",
     "domain": "www.federalreserve.gov",
     "published_at": "2025-11-07",
-    "source_type": "pdf"
+    "source_type": "research_paper"
   },
-  "summary": "The Federal Reserve Board published its semi-annual Financial Stability Report in November 2025, assessing vulnerabilities in the U.S. financial system as of October 23, 2025. The report evaluates four key vulnerability categories: asset valuations, borrowing by businesses and households, leverage in the financial sector, and funding risks. This is a historical record from approximately 5 months prior to the reference date.",
+  "summary": "The Federal Reserve Board released its November 2025 Financial Stability Report, assessing four key vulnerability categories: asset valuations, borrowing by businesses and households, leverage in the financial sector, and funding risks. The report, based on data available as of October 23, 2025, includes a dedicated box on AI and algorithmic trading and a targeted assessment of short-term funding risk. The framework distinguishes between difficult-to-predict shocks and monitorable vulnerabilities that can amplify stress when the financial system is hit by adverse events.",
   "key_points": [
-    "Report data reflects information available as of October 23, 2025, published November 7, 2025",
-    "Framework distinguishes between unpredictable shocks and measurable vulnerabilities that can be monitored over time",
-    "Four vulnerability categories assessed: (1) asset valuations, (2) borrowing by businesses and households, (3) leverage in the financial sector, and (4) funding risks",
-    "Funding risks section includes analysis of liquidity and maturity transformation that can create incentives for rapid withdrawals",
-    "Box 4.1 provides a more targeted assessment of short-term funding risk",
-    "Near-term risks analysis considers how potential shocks may spread given current vulnerability assessment",
-    "Source body is truncated; detailed findings in sections 1-5 not available in provided text"
+    "Report assesses four vulnerability categories: valuation pressures, excessive borrowing, financial sector leverage, and funding risks",
+    "Data reflects information available as of October 23, 2025 (approximately 5 months prior to TODAY)",
+    "Funding risks section includes a targeted assessment of short-term funding risk (Box 4.1)",
+    "Box 1.1 covers artificial intelligence and algorithmic trading as a specific assessment area",
+    "Report explicitly covers liquidity and maturity transformation risks where institutions invest short-term funds in illiquid or long-maturity assets",
+    "Framework emphasizes how vulnerabilities can interact to amplify systemic stress"
   ],
-  "why_it_matters": "Financial Stability Reports provide the Federal Reserve's official assessment of systemic risks, informing regulatory policy and market expectations about financial sector resilience. Investors, banks, and policymakers use these reports to gauge the Fed's view on potential vulnerabilities that could amplify market stress.",
+  "why_it_matters": "This semi-annual report provides the Federal Reserve's official assessment of U.S. financial system resilience. For market structure analysis, it directly addresses funding liquidity risks, the functioning of short-term funding markets, and the potential for fire sale dynamics. The AI/algorithmic trading box suggests growing regulatory attention to automated market dynamics. Financial stability assessments inform supervisory priorities and potential regulatory responses that affect market structure.",
   "market_impact": {
     "asset_classes": [
       "bonds",
+      "volatility",
       "equities"
     ],
-    "directional_bias": "unknown",
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "The report's monitoring framework supports the Fed's broader objectives of maximum employment, stable prices, and financial stability. While the full vulnerability findings are truncated, the report indicates the Fed was actively monitoring valuation pressures, leverage, and funding risks as of late October 2025.",
-  "market_structure_context": "Report discusses funding risks related to liquidity and maturity transformation, including potential for 'fire sale' dynamics if investors rapidly withdraw short-term funding. This relates to market plumbing and structural vulnerabilities in the financial system.",
-  "important_numbers": [
-    "October 23, 2025 (data cutoff)",
-    "November 7, 2025 (publication date)"
-  ],
+  "macro_context": "The report focuses on financial system resilience rather than macroeconomic conditions. It does not provide new forecasts or policy rate guidance but rather assesses the build-up or reduction of vulnerabilities in the U.S. financial system.",
+  "market_structure_context": "Directly relevant to market structure. The report addresses: (1) liquidity and maturity transformation risks in short-term funding markets, (2) fire sale dynamics when institutions are forced to sell assets quickly, (3) interconnectedness across markets and institutions, and (4) the role of AI and algorithmic trading in market functioning. The funding risks section specifically examines institutions raising funds with short-notice commitments while investing in hard-to-sell or long-maturity assets.",
+  "important_numbers": [],
   "tags": [
-    "federal-reserve",
     "financial-stability",
-    "systemic-risk",
+    "federal-reserve",
     "vulnerabilities",
-    "leverage",
     "funding-risk",
-    "valuation",
-    "monitoring-framework"
+    "liquidity-risk",
+    "algorithmic-trading",
+    "market-structure",
+    "systemic-risk"
   ],
   "llm_review": {
-    "initial_confidence": 6,
-    "verification_confidence": 7,
+    "initial_confidence": 7,
+    "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "Source body is truncated; detailed findings in sections 1-5 containing specific vulnerability assessments are not available",
-      "market_impact has confidence: 0 and directional_bias: 'unknown' - appropriate given truncated source but limits archival value",
-      "Cannot verify specific vulnerability conclusions or risk assessments without full report content"
+      "Source body was truncated; extracted text covers only front matter, table of contents, and introductory framework sections. Substantive content in Sections 1-5 and the risk assessments, numerical indicators, and forward-looking statements are not available for verification.",
+      "Published date (2025-11-07) is inferred from URL pattern rather than confirmed in extracted text; however, source content confirms November 2025 timeframe.",
+      "verification_confidence and llm_review.verdict are incorrectly set to 0 and 'pending' respectively despite the record having been generated.",
+      "macro_context field is empty; while the report focuses on financial system stability rather than broader macroeconomics, this omission should be noted."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Source is high-authority Federal Reserve publication with clear archival value, and key metadata fields are accurate. However, the truncated source body contains only introductory/framework sections without the detailed vulnerability findings in sections 1-5. A human reviewer should assess whether the truncated content is sufficient for archival purposes or if complete PDF re-extraction is warranted. The age (5 months) and partial completeness both warrant human decision."
+    "notes": "Source truncation prevents verification of specific risk assessments, numerical data, and detailed vulnerability findings. The record's summary and key_points are consistent with the extracted front matter, but the substantive analysis sections (Sections 1-5) are not available to confirm whether the record captures the most important findings. Human review needed to determine if: (1) the four vulnerability categories listed are comprehensive, (2) any significant risk assessments are missing, (3) the AI/algorithmic trading box content is adequately represented, and (4) whether supplementary access to the full PDF would materially improve the record."
   },
   "human_feedback": {
     "decision": "",
@@ -71,18 +69,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_financial_stability_report_november_40c56ac57e23969c.txt",
-  "notes": "Source is a high-authority Federal Reserve publication on financial stability. While relevant to market structure (systemic risk assessment), the provided text is truncated and only contains introductory/framework sections. Detailed vulnerability findings in sections 1-5 are not available. This is a historical record from November 2025 reflecting data through October 23, 2025. The report should be re-extracted from the complete PDF for comprehensive archival coverage. Domain trust tier: high (federalreserve.gov).",
+  "notes": "Source is a Federal Reserve official publication with high domain trust (federalreserve.gov). The report is from November 2025, approximately 5 months before TODAY (2026-04-12), placing it outside the strict 90-day recency window but still a recent historical record. The extracted text appears to contain primarily the front matter, table of contents, and introductory framework sections. Detailed sections on asset valuations (Section 1), borrowing (Section 2), leverage (Section 3), funding risks (Section 4), and near-term risks (Section 5) are referenced but their substantive content was not captured in the truncated extraction. Full PDF access would be required to extract specific risk assessments, numerical indicators, or forward-looking statements. Despite truncation, the source is highly relevant to market structure analysis based on its explicit coverage of funding liquidity, market plumbing, and systemic risk transmission.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "high-authority-partial",
+    "tier": "high",
     "score": 7,
     "reasoning": [
-      "High-authority institutional source (Federal Reserve Board)",
-      "Comprehensive financial stability assessment framework",
-      "Relevant to market structure monitoring",
-      "Partial truncation limits completeness",
-      "Historical publication date (5 months old) slightly reduces timeliness"
+      "High-trust institutional source (Federal Reserve Board)",
+      "Official regulatory/assessment document",
+      "Directly addresses market structure topics (funding risks, liquidity transformation)",
+      "Published by authoritative body with direct insight into financial system operations",
+      "Score reduced due to truncated source body preventing extraction of specific data and assessments"
     ]
   }
 }
