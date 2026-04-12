@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when it could be more accurately classified as 'research_paper' or 'regulatory_guidance' since it is a public regulatory comment",
+    "The source topic mismatch (SOURCE METADATA says 'macro catalysts' but content is a specific bank merger comment) is correctly identified in the record but the event_type should reflect what the document actually is"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is largely accurate but event_type is set to 'unknown' when a valid taxonomy value exists. Additionally, the record should be accepted because it correctly identifies archival value for banking/regulatory research even though it doesn't fit macro catalysts focus - this appears to be a source metadata issue, not a record problem.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The document is a public comment letter about a specific bank merger application. While it may not fit the 'macro catalysts' target, it has clear archival value for banking sector research, regulatory analysis, and understanding the Federal Reserve's merger review process. The letter documents concerns about Fifth Third's acquisition of Comerica including Delaware litigation, CEO self-dealing allegations, Senate Finance Committee investigation, and requests for extended review procedures.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
