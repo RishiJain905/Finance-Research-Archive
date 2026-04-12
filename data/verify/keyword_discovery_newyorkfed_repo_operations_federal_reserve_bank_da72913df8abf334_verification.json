@@ -1,16 +1,17 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation_page/hub page per source_type field, which violates Core Rule 5 (reject homepage, navigation_page, listing_page, search_page)",
-    "No published date provided in source metadata - cannot assess recency",
-    "No specific operational data, amounts, dates, or counterparties present",
-    "Source contains only generic institutional descriptions and links to other resources",
-    "event_type 'market_notice' is implausible - this page is not a market notice",
-    "No actionable market information for trading or analysis purposes"
+    "source_type is 'navigation_page' - per Rule 5, navigation pages must be rejected",
+    "No publication date provided (published_at is empty) - cannot assess recency or archival relevance",
+    "Source content is thin - only a brief description of repo operations with links to resources, no specific data or current operational information",
+    "This is a directory/landing page that merely describes what repo operations are and provides links to FAQs, historical data, and policies - not an actionable market intelligence source",
+    "event_type 'market_notice' is questionable - a market_notice should convey specific operational information or decisions, not just describe general framework",
+    "No actionable market intelligence, policy signals, or recent decisions documented",
+    "Source has no archival value as it contains no specific market-relevant information beyond what any Fed website visitor could find"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "This is a clear reject case per Rule 5 - navigation/landing pages do not meet archival standards regardless of domain trust. The source correctly identifies this as a navigation page with thin content, no publication date, and no actionable intelligence. No human review needed; auto-reject is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

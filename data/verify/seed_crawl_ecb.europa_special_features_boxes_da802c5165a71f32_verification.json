@@ -2,15 +2,16 @@
   "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a LISTING PAGE per CORE RULES #6 - must reject regardless of content quality",
-    "event_type 'financial_stability_report' is valid but the source is an index page, not the actual report",
-    "Source contains only abstracts/metadata for 5 boxes, not substantive research content",
-    "Content is too thin to have meaningful archival value - requires crawling individual article URLs",
-    "Multiple unrelated topics bundled without coherent narrative",
-    "Published November 2025 (4+ months old) with only listing page content - marginal historical value at best"
+    "SOURCE_TYPE is listing_page — violates core rule: pages that are homepage, navigation_page, listing_page, or search_page must be rejected",
+    "Source is an index page containing multiple distinct Financial Stability Review boxes/articles — not a single archiveable document",
+    "No single coherent source; content spans 5+ separate articles (UCITS hedge fund leverage, euro area banks' USD activities, household investors, rolling recessions, safe haven tariff analysis)",
+    "Source body is truncated, ending abruptly with only a date",
+    "event_type 'financial_stability_report' is technically valid but misleading — the source is not a Financial Stability Report itself, merely an index of boxes from one",
+    "Record conflates distinct publications under a single ID, which violates archival granularity standards",
+    "Primary macro-catalyst relevance is limited to one item (safe haven article); other items are financial stability/structural topics"
   ],
-  "human_review_required": true,
-  "human_review_reason": "This is explicitly a listing page violation of CORE RULES #6. Even though human_review fields are populated, the record should be auto-rejected. Individual ECB Financial Stability Review boxes should be crawled separately as standalone research records for proper archival value.",
+  "human_review_required": false,
+  "human_review_reason": "Listing page rejection is deterministic per core rules; no human judgment needed",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

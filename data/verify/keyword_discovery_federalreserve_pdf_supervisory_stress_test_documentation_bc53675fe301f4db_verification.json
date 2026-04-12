@@ -1,16 +1,14 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 5,
+  "verdict": "review",
   "issues_found": [
-    "SOURCE METADATA TARGET 'market structure' does not match document content - this is supervisory stress test model documentation, not market structure research",
-    "Document is regulatory methodology for bank stress testing (DFAST/CCAR), not market microstructure or trading analysis",
-    "Record correctly identifies lack of market relevance in why_it_matters but the system still generated and attempted to archive this record",
-    "topic field assigned as 'market structure' in record contradicts the document's actual content",
-    "Source has no bearing on market microstructure, trading operations, or macro catalysts as the record itself acknowledges"
+    "Topic mismatch: TARGET and TOPIC specify 'market structure', but the source is bank supervisory stress test methodology documentation (credit risk models for DFAST). This does not address trading market structure, market microstructure, or macro catalysts.",
+    "why_it_matters correctly identifies the disconnect: 'not directly relevant to trading market structure or macro catalysts'",
+    "The document is high-quality, authoritative Federal Reserve material, but is out of scope for the specified topic taxonomy"
   ],
   "human_review_required": true,
-  "human_review_reason": "The source metadata incorrectly tagged this as 'market structure' TARGET, and the system generated a research record for content that has no relevance to market structure or macro catalysts. The document is internal Federal Reserve supervisory methodology for credit risk models used in stress testing - designed for bank compliance officers, not market analysts. While the document is from a high-trust domain and is technically accurate, it fundamentally does not belong in a market structure research archive. The generated record properly identifies this mismatch but still processes it for archiving.",
-  "suggested_status": "rejected",
+  "human_review_reason": "Source is technically accurate and well-documented, but fundamentally misaligned with the specified TARGET of 'market structure'. The human review notes appropriately flag this as out-of-scope. Decision needed: (1) reclassify topic to 'regulatory' or 'banking' if the archive should include supervisory documentation, or (2) reject as topic mismatch if only market structure/macro content is in scope.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

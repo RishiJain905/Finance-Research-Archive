@@ -70,7 +70,46 @@
   "raw_text_path": "data/raw/sofr_2026_04_10.txt",
   "notes": "This is a FRED data series snapshot providing daily SOFR observations. Not an analytical document or policy statement. The data is technically precise and verified but lacks explanatory context for the observed decline. The declining trend over 5 trading days may warrant monitoring for signs of funding market stress easing or reserve scarcity changes. Given this is market structure data directly relevant to the target SOFR and topic market structure, it passes the relevance filter. Lower confidence appropriate for raw data without narrative context.",
   "linked_quant_context": [],
-  "linked_article_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "bank_of_england_publications_r_bank_of_england_weekly_report_8_april_2026_bank_of_england_9526dd4d",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    },
+    {
+      "record_id": "bis_speeches_rss_denis_beau_stablecoins_what_strategic_choices_for_europe_54a94de6",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    },
+    {
+      "record_id": "new_york_fed_liberty_street_ec_the_fed_has_two_tools_to_influence_money_market_conditions_l_4fc82a33",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "fed",
+        "repo"
+      ],
+      "link_score": 111.7
+    },
+    {
+      "record_id": "ny_fed_liberty_street_economic_a_closer_look_at_emerging_market_resilience_during_recent_sh_bdce92e4",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    }
+  ],
   "quality_tier": {
     "tier": "tier_2",
     "score": 61.5,

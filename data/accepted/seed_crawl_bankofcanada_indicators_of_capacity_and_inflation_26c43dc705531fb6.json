@@ -67,5 +67,17 @@
     "notes": "This is a data reference dashboard rather than a standalone analysis. The source provides underlying indicator data that feeds into monetary policy decisions. Published date of March 19, 2026 is recent (within 2 weeks of TODAY), making it highly relevant. The data supports a narrative of moderating inflation and economic slack consistent with Bank of Canada's mandate."
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_indicators_of_capacity_and_inflation_26c43dc705531fb6.txt",
-  "notes": "This source is a data dashboard rather than a policy statement. It aggregates multiple economic indicators used by the Bank of Canada to assess capacity pressures and inflation trajectory. The most recent data point is February 2026 for monthly indicators and Q1 2026 for quarterly data. This is a supporting reference document rather than a standalone macro catalyst, but contains highly relevant data for understanding the Canadian economic outlook and potential monetary policy direction."
+  "notes": "This source is a data dashboard rather than a policy statement. It aggregates multiple economic indicators used by the Bank of Canada to assess capacity pressures and inflation trajectory. The most recent data point is February 2026 for monthly indicators and Q1 2026 for quarterly data. This is a supporting reference document rather than a standalone macro catalyst, but contains highly relevant data for understanding the Canadian economic outlook and potential monetary policy direction.",
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts",
+        "monetary-policy"
+      ],
+      "link_score": 73.8
+    }
+  ]
 }

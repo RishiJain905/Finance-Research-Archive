@@ -1,0 +1,119 @@
+{
+  "id": "keyword_discovery_libertystreeteconomics.newyorkfed_the_fed_has_two_tools_55692d52e7329650",
+  "created_at": "2026-04-12T21:07:48.589510+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "The Fed Has Two Tools to Influence Money Market Conditions",
+  "source": {
+    "name": "Liberty Street Economics",
+    "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/06/the-fed-has-two-tools-to-influence-money-market-conditions/",
+    "published_at": "2026-04-06",
+    "source_type": "blog_post",
+    "domain": "libertystreeteconomics.newyorkfed.org"
+  },
+  "summary": "NY Fed staff economists Adam Copeland and Owen Engbretson analyze how the Fed's two policy tools—administrative rates (IORB) and balance sheet size (Fed liabilities)—independently affect money market conditions. Using confidential trade-level data from the OFR centrally cleared repo collection, they find both tools significantly affect dealer spreads in Treasury repo markets. The research quantifies how changes in IORB and Fed liabilities shift the liquidity risk premium dealers charge to intermediate funding.",
+  "key_points": [
+    "Both IORB and Fed liabilities significantly influence dealer spreads in Treasury repo markets; a one standard deviation increase in IORB (226 bps) raises the liquidity risk premium by 2.1 to 3.5 basis points",
+    "A one standard deviation increase in Fed liabilities ($750bn) drives down the liquidity risk premium by 1.6 to 2.5 basis points",
+    "The average spread dealers charge clients to intermediate funding in the sample period is 7.5 basis points",
+    "IORB increased from 15 to 540 basis points during the 2022-23 tightening cycle, with three decreases in late 2024",
+    "Fed liabilities (reserves + RRP) peaked at nearly $6 trillion in 2021, fell from ~$5 trillion (early 2023) to $3.5 trillion by December 2024",
+    "Treasury repo market is estimated at over $5 trillion outstanding in first half 2024; dealers are the main intermediaries borrowing from money market mutual funds and lending to hedge funds"
+  ],
+  "why_it_matters": "This research provides empirical evidence that the Fed can decouple economic stimulus from financing conditions in money markets. By lowering rates while simultaneously shrinking the balance sheet, the Fed can support the broader economy without loosening repo market conditions. This has direct implications for traders, hedgers, and financial institutions who rely on repo markets for secured funding and liquidity management. The quantified elasticities allow market participants to better estimate how future Fed balance sheet policy (QT vs. QE) will impact money market spreads.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "The research supports a framework where the Fed can achieve 'soft landing' without tightening repo market conditions as aggressively as the headline policy rate would suggest. This has implications for the terminal rate debate and the pace of quantitative tightening. However, this is a structural analysis of historical data (2020-2024), not a forward-looking forecast.",
+  "market_structure_context": "The analysis provides granular insights into repo market mechanics: dealers act as intermediaries between cash-rich investors (money market mutual funds) and levered clients (hedge funds). The liquidity risk premium varies with the opportunity cost of holding cash, which is affected by both IORB and Fed liabilities. The OFR data captures interdealer trading and dealer-to-client trades through the Sponsored Service program.",
+  "important_numbers": [
+    "226 bps — one standard deviation increase in IORB",
+    "2.1-3.5 bps — estimated increase in liquidity risk premium from 226 bps IORB increase",
+    "$750bn — one standard deviation increase in Fed liabilities",
+    "1.6-2.5 bps — estimated decrease in liquidity risk premium from $750bn Fed liabilities increase",
+    "7.5 bps — average dealer spread to intermediate funding",
+    "$5 trillion+ — estimated Treasury repo market size (first half 2024)",
+    "$6 trillion — peak Fed liabilities (2021)",
+    "$3.5 trillion — Fed liabilities (December 2024)",
+    "15-540 bps — IORB range during 2022-2024 tightening cycle"
+  ],
+  "tags": [
+    "fed",
+    "repo",
+    "money-markets",
+    "balance-sheet",
+    "QT",
+    "IORB",
+    "liquidity-risk-premium",
+    "dealer-spreads",
+    "NY-Fed",
+    "market-structure",
+    "OFR"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_libertystreeteconomics.newyorkfed_the_fed_has_two_tools_55692d52e7329650.txt",
+  "notes": "Source is a Staff Report published on Liberty Street Economics (NY Fed) blog. Very recent publication (April 6, 2026). Content provides quantitative empirical evidence on Fed policy transmission to money markets. Key insight: Fed can independently influence economic conditions (via IORB) and financing conditions (via balance sheet), enabling policy flexibility. Source is highly relevant to market structure and macro catalysts. Charts referenced (distribution of dealer spreads, monetary policy changes over time, estimated cumulative effects) are not reproduced here but are described in the text. Source is authoritative (NY Fed staff economists), data is from OFR confidential data sources, and the analysis has clear policy relevance.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure",
+        "fed",
+        "repo"
+      ],
+      "link_score": 113.2
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 107.7
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days",
+      "topic_overlap": [],
+      "link_score": 60.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 67.5,
+    "reasoning": [
+      "quality score: 67.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "lower-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

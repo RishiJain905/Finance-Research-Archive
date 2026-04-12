@@ -1,0 +1,83 @@
+{
+  "id": "seed_crawl_bankofcanada_staff_economic_projections_8d1d9b57cfb8e1f0",
+  "created_at": "2026-04-12T21:04:27.129601+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "Staff economic projections",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/staff-economic-projections",
+    "published_at": "",
+    "source_type": "web_page",
+    "domain": "www.bankofcanada.ca"
+  },
+  "summary": "This page documents the Bank of Canada's Staff Economic Projections database, describing its structure, variables tracked (GDP, CPI, unemployment, exchange rates, policy rates), data formats (CSV/JSON/XML via Valet API), and release policies. Data is released with a five-year lag; most recent vintage available is 2019Q4.",
+  "key_points": [
+    "Staff economic projections are provided to Governing Council before monetary policy decisions and released publicly with a five-year lag.",
+    "Most recent vintage available is 2019Q4, meaning the data is over six years old as of April 2026.",
+    "Variables tracked include Real GDP, CPI, Core CPI, unemployment rate, U.S./CAD exchange rate, and staff projection policy rate.",
+    "The staff projection policy rate may differ from Governing Council's actual policy rate.",
+    "Data available in CSV, JSON, and XML formats via the Bank of Canada's Valet API.",
+    "Historical data vintages span from approximately 1970s through 2019Q4."
+  ],
+  "why_it_matters": "This documentation page describes how to access Bank of Canada historical staff forecasts for research purposes. The five-year release lag and 2019Q4 vintage limit relevance to current macro analysis but may be useful for historical research on forecast methodology and monetary policy credibility.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "This is database documentation with no current macro relevance. The 2019Q4 vintage predates the COVID-19 pandemic, 2020-2022 inflation surge, and subsequent Bank of Canada rate cycles.",
+  "market_structure_context": "The Valet API provides machine-readable access to historical forecast vintages, which could be useful for backtesting or studying central bank forecast accuracy.",
+  "important_numbers": [
+    "2019Q4 (most recent vintage)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "staff-projections",
+    "historical-data",
+    "database",
+    "valet-api",
+    "canadian-economy",
+    "macro-variables"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'research_paper' is incorrect - source is database/API documentation, not a research paper",
+      "Source is a documentation page describing a database structure, not an article-like research record",
+      "Summary implies this is data content when it is actually metadata about how to access data",
+      "Source contains no actual projection figures or substantive economic content - only variable lists and vintage dates",
+      "The page describes 'how the data is structured' and provides API access information, not research findings"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record misclassifies a database documentation page as a 'research_paper.' The event_type should likely be 'unknown' or the record should be rejected as it's documentation metadata rather than an article-like research record with substantive content. The source has low archival value for macro catalyst purposes given the 5-year data lag and lack of actual projection content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_staff_economic_projections_8d1d9b57cfb8e1f0.txt",
+  "notes": "This is documentation metadata about the Bank of Canada Staff Economic Projections database, not an actual economic release. The data is released with a five-year lag, and the most recent vintage is 2019Q4. This makes the content irrelevant for current macro catalyst analysis but potentially useful for historical research on Bank of Canada forecast methodology and accuracy. The page describes what variables are tracked (GDP, CPI, unemployment, exchange rates, policy rates) and how to access them via API, but contains no current projections or data values.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Historical database documentation only",
+      "Most recent data vintage is 2019Q4 (over 6 years stale as of TODAY)",
+      "No actual projection data or figures included",
+      "Five-year release lag renders content non-actionable for current macro analysis"
+    ]
+  }
+}

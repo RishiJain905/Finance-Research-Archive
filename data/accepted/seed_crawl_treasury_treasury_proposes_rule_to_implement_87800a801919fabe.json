@@ -66,7 +66,24 @@
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_treasury_proposes_rule_to_implement_87800a801919fabe.txt",
   "notes": "Source is tangentially related to macro catalysts or market structure. While regulatory frameworks can indirectly affect market dynamics, this source focuses on compliance and AML requirements for stablecoins rather than core macro catalysts (rate decisions, economic data) or market structure (trading, clearing, settlement operations). Published date is 2026-04-08, which is within 90 days of TODAY (2026-04-10), making it recent. The topic tag was assigned as 'macro catalysts' based on TARGET metadata, but the content is primarily regulatory in nature.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days",
+      "topic_overlap": [],
+      "link_score": 60.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "nearest_relevant_quant_snapshot",
+      "reason": "same-day, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 150.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

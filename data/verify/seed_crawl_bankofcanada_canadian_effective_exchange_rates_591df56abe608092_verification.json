@@ -1,19 +1,19 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "Source is methodology/documentation content, not a macro catalyst or market-moving event",
-    "event_type set to 'unknown' which is correct given no taxonomy value fits a methodology reference page",
-    "No published_at date provided in source metadata, preventing age assessment",
-    "Asset classes array is empty and confidence is 0, which correctly reflects the absence of market-moving content"
+    "event_type is set to 'unknown' but the source is a data release page (exchange rate index methodology and data access). A valid type like 'data_release_other' would be more appropriate.",
+    "No publication date is provided or visible in the source, making it impossible to assess freshness per CORE RULE 7.",
+    "The record appropriately notes no current exchange rate values are provided, but this means the source lacks market catalyst content despite being domain-relevant.",
+    "Source is classified as 'crawl' type which is acceptable, but the source itself is a methodology/data reference page, not an article with analytical content."
   ],
   "human_review_required": true,
-  "human_review_reason": "The record accurately represents the source content and correctly identifies it as methodology/documentation rather than a macro catalyst. However, decision needed on whether methodology reference pages from central banks align with the 'macro catalysts' archive scope, even though they are high-quality authoritative sources on exchange rate measurement.",
+  "human_review_reason": "This source is a methodology reference page for the CEER exchange rate index. While exchange rate data is macro-relevant, the page contains no current market data, no publication date, and no analytical content. The event_type 'unknown' is incorrect—this should be classified as a data-related page. Human judgment is needed to determine if methodology documentation has sufficient archival value for this archive's purpose, and whether data reference pages qualify as 'article-like' per the standards.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "This is a methodology and data reference page from the Bank of Canada describing the Canadian Effective Exchange Rate (CEER) index, which replaced the CERI in January 2018. The page explains the index composition (17 currencies), calculation methodology, and weight structure for tracking Canadian dollar competitiveness against major trading partners.",
-    "why_it_matters": "This page is a reference resource explaining how Canada's exchange rate is measured against trading partners. It does not contain market-moving information or current data—it's encyclopedic content about methodology. The index is useful for assessing Canadian dollar competitiveness in international trade and distinguishing between financial pressures (major currencies) and competitiveness issues (OITP).",
-    "macro_context": "The CEER index provides a comprehensive measure of Canadian dollar value weighted by trade patterns. The OITP index captures competitiveness-related dynamics with emerging markets while the major currencies index reflects financial pressure dynamics. Energy exclusion prevents oil price volatility from distorting trade competitiveness measures.",
+    "summary": "This Bank of Canada page is a methodology reference document explaining the Canadian Effective Exchange Rate (CEER) index, which replaced the CERI in January 2018. It describes how the index is constructed using 17 currencies weighted by trade patterns (imports, exports, and third-market competition), with separate sub-indices for major currencies and other important trading partners. Data is available for download in XML, JSON, and CSV formats. No current exchange rate values or market catalyst content is provided.",
+    "why_it_matters": "This page provides foundational methodology for understanding Canada's exchange rate measurement and serves as a data access point. Relevant as a reference for understanding CEER construction, but contains no actionable market catalyst content. The page has no publication date, making it difficult to assess when the methodology was last updated.",
+    "macro_context": "The CEER index tracks the Canadian dollar against 17 trading partner currencies using multilateral trade weights. The major currencies sub-index (USD, EUR, JPY, GBP, CHF, AUD, SEK) captures financial pressure dynamics, while the OITP sub-index captures competitiveness effects. Energy trade is excluded from weights per international standards.",
     "market_structure_context": ""
   }
 }

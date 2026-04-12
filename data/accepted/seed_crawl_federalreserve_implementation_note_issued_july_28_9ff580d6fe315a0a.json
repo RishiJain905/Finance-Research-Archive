@@ -1,0 +1,115 @@
+{
+  "id": "seed_crawl_federalreserve_implementation_note_issued_july_28_9ff580d6fe315a0a",
+  "created_at": "2026-04-12T20:59:53.067710+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "fomc_statement",
+  "title": "Federal Reserve issues FOMC statement",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "domain": "federalreserve.gov",
+    "published_at": "2021-07-28",
+    "source_type": "fomc_statement"
+  },
+  "summary": "The Federal Reserve released its implementation note for the July 28, 2021 FOMC meeting, maintaining the federal funds rate target range at 0 to 0.25 percent and continuing asset purchases at $80 billion per month for Treasuries and $40 billion per month for agency MBS. The document details the operational framework including repo and reverse repo facilities, with the overnight reverse repurchase agreement per-counterparty limit set at $80 billion per day.",
+  "key_points": [
+    "Federal funds rate maintained in target range of 0 to 0.25 percent effective July 29, 2021",
+    "Interest on Reserve Balances (IORB) rate established at 0.15 percent (replacing separate IORR and IOER rates per Regulation D amendment)",
+    "QE pace continued at $80 billion per month for Treasury securities and $40 billion per month for agency MBS",
+    "Overnight repurchase agreement operations with minimum bid rate of 0.25 percent and aggregate limit of $500 billion",
+    "Overnight reverse repurchase agreement operations at offering rate of 0.05 percent with per-counterparty limit of $80 billion per day",
+    "Board unanimously approved primary credit rate at 0.25 percent"
+  ],
+  "why_it_matters": "This implementation note provides the mechanical details of how the Federal Reserve executes its monetary policy decisions. The specified repo and reverse repo facility parameters ($500bn repo limit, $80bn/day RRP per-counterparty cap) define the Fed's backstop for money market functioning. The transition from separate IORR/IOER rates to a single IORB rate marked a technical simplification of the Fed's rate floor framework.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The document details the Fed's operational framework including RRP and repo facilities that support money market functioning. The $80 billion per-counterparty daily limit for reverse repos and $500 billion aggregate repo limit were key parameters for controlling short-term funding markets. Principal payments on Treasury securities were rolled over at auction while agency MBS payments were reinvested in agency MBS.",
+  "important_numbers": [
+    "0 to 0.25% (federal funds rate target range)",
+    "0.15% (IORB rate)",
+    "0.25% (primary credit rate, minimum repo bid rate)",
+    "0.05% (RRP offering rate)",
+    "$80 billion/month (Treasury purchase pace)",
+    "$40 billion/month (MBS purchase pace)",
+    "$500 billion (repo aggregate limit)",
+    "$80 billion/day (RRP per-counterparty limit)"
+  ],
+  "tags": [
+    "fomc",
+    "federal-reserve",
+    "interest-rates",
+    "qe",
+    "balance-sheet",
+    "repo",
+    "rrp",
+    "iorb",
+    "monetary-policy-implementation"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Historical record from July 2021. Published more than 90 days before TODAY (2026-04-12); approximately 4 years and 8 months old. Confidence slightly lowered accordingly but document quality is high for historical accuracy of that period's policy framework."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_implementation_note_issued_july_28_9ff580d6fe315a0a.txt",
+  "notes": "Historical document from July 28, 2021 FOMC meeting. This represents the Fed's policy stance during a period of zero rates and ongoing QE, approximately 1.5 years before the Fed began its aggressive rate hike cycle in March 2022. The operational parameters (RRP limits, repo facilities) reflect the framework as it existed in mid-2021 and have since been modified. Source is highly authoritative as an official Federal Reserve release with precise operational details.",
+  "linked_quant_context": [
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve",
+        "iorb"
+      ],
+      "link_score": 86.7
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "repo"
+      ],
+      "link_score": 68.3
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 74.0,
+    "reasoning": [
+      "quality score: 74.0/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

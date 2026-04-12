@@ -69,7 +69,24 @@
   },
   "raw_text_path": "data/raw/bank_of_england_publications_r_bank_of_england_weekly_report_8_april_2026_bank_of_england_9526dd4d.txt",
   "notes": "This is a factual balance sheet update containing only mechanical data. No policy signals, commentary, or forward guidance is present. The source is thin (254 words) but the numerical data is authoritative and directly sourced from BoE official reporting. Recent publication (same day as TODAY) supports high confidence in data currency.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "nearest_relevant_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "nearest_relevant_quant_snapshot",
+      "reason": "near-day",
+      "topic_overlap": [],
+      "link_score": 80.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

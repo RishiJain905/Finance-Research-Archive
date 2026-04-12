@@ -72,7 +72,27 @@
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_selected_treasury_bill_yields_e1526a8368937094.txt",
   "notes": "This is a data release page presenting historical yield data. The source provides raw numerical values without any analytical commentary, interpretation of trends, or context on what drove the yield changes. While relevant to macro catalysts as raw rate data, the source has limited value for research archiving without accompanying narrative. The upward yield movement from February to March 2026 could reflect various factors not explained in this data page.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts",
+        "interest-rates"
+      ],
+      "link_score": 54.3
+    },
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_3",

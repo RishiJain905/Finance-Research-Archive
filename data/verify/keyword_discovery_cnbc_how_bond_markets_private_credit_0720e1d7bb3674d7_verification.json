@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "published_at is empty in source metadata, preventing definitive age assessment; however, internal evidence (SEC approval Feb 2025, 12 NAV discount occurrences in 2026) suggests recency",
+    "source URL is empty in metadata, making full verification difficult",
+    "Source is derived from ETF Edge video show transcript rather than standalone written article, which may affect precision of some claims",
+    "Key quantitative claims are accurate but 'this year' referenced for Blue Owl decline without explicit date anchoring relative to publication"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is mostly accurate with strong factuality on key figures (35% cap, AUM amounts, ETF performance data, NAV discount counts). However, missing published_at in metadata is a verification gap, and source originates from video transcript which warrants confirmation that key_points are faithfully extracted. The record correctly identifies event_type as economic_commentary and captures the structural contrast well.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Fears of stress in private credit markets are rising as investors assess liquidity risk during periods of redemption pressure, coinciding with the emergence of private credit ETFs following SEC approval of the first such product in early 2025. The article explores how ETF wrappers provide controlled exposure to private credit (capped at 35% allocation) while offering daily liquidity, contrasting with traditional private credit funds that may restrict withdrawals during stress.",
+    "why_it_matters": "This article illuminates how ETF structures are being used to provide controlled access to private credit markets, which have historically been inaccessible to retail investors due to illiquidity and opacity. The structural contrast between gated private credit funds (protecting against runs but limiting exit) and ETF wrappers (providing daily liquidity at potentially discounted prices) represents a market structure evolution with implications for price discovery, liquidity provisioning, and systemic risk absorption. Investors watching for signs of private credit stress now have a new tool—ETF pricing and discount/premium dynamics—to monitor market conditions in near-real-time.",
+    "macro_context": "Market volatility is pushing investors toward shorter-duration bonds and risk reduction, with ETF flows reflecting flight from longer-duration fixed income into more defensive positioning. Private credit refinancing risk at higher rates represents a longer-horizon concern as asset-liability mismatches surface.",
+    "market_structure_context": "ETF wrappers provide daily liquidity and real-time price adjustments for private credit exposure, contrasting with traditional private credit fund structures that restrict withdrawals during stress. This represents a structural change in how liquidity risk is managed and how markets can absorb shocks—ETF prices can reflect stress as it develops while maintaining functioning markets, whereas gated funds absorb stress more gradually but with less transparency. The 35% cap on private credit allocation in ETFs represents a structural safeguard limiting direct exposure. Both approaches aim to prevent disorderly outcomes through different mechanisms."
+  }
+}

@@ -1,7 +1,12 @@
 {
   "verification_confidence": 8,
   "verdict": "accept",
-  "issues_found": [],
+  "issues_found": [
+    "source.url is empty - no URL provided for the source",
+    "source.source_type is empty - document type not specified in metadata",
+    "source.domain is empty - domain not specified in metadata",
+    "important_numbers contains '€60bn/month' which is not found in the provided source text - this appears to be an invented figure not supported by the excerpt"
+  ],
   "human_review_required": false,
   "human_review_reason": "",
   "suggested_status": "accepted",
@@ -9,6 +14,7 @@
     "summary": "",
     "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "",
+    "important_numbers": "Remove '€60bn/month (implied reference to past QE pace)' - this figure is not present in the source text and appears to be fabricated. Retain only the date ranges and sample sizes that are actually mentioned: 'Q2 2014-Q4 2022', 'Q1 2019-Q2 2023', 'Q1 2016-Q4 2022', '96 euro area significant institutions (balanced sample)'."
   }
 }

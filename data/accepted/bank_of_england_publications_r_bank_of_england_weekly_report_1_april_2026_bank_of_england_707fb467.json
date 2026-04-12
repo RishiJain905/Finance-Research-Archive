@@ -66,7 +66,17 @@
   },
   "raw_text_path": "data/raw/bank_of_england_publications_r_bank_of_england_weekly_report_1_april_2026_bank_of_england_707fb467.txt",
   "notes": "Source is a routine weekly balance sheet disclosure. Contains only tabular data with no accompanying analysis, commentary, or policy signals. Relevant to market structure as it tracks BoE operational positions, but thin content limits archival value. No stale date concerns as this is current data.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 90.0
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_inflation_calculator_a0d5819e0b7ebf4b",
-  "created_at": "2026-04-01T13:47:39.023262+00:00",
+  "created_at": "2026-04-12T21:03:43.030332+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -10,17 +10,18 @@
     "url": "https://www.bankofcanada.ca/rates/related/inflation-calculator",
     "domain": "www.bankofcanada.ca",
     "published_at": "",
-    "source_type": ""
+    "source_type": "seed_crawl"
   },
-  "summary": "This page is a calculator tool provided by the Bank of Canada that uses monthly Consumer Price Index (CPI) data from 1914 to the present to compute changes in the cost of a fixed basket of consumer goods and services over time. The tool allows users to input a dollar amount and two years to calculate inflation-adjusted values, percentage change, and average annual inflation rates.",
+  "summary": "This is a utility tool page from the Bank of Canada that allows users to calculate the effect of inflation on dollar amounts using historical CPI data from 1914 to present. It is not a research document, policy statement, or economic commentary.",
   "key_points": [
-    "The calculator uses monthly CPI data sourced from Statistics Canada (V41690973 series)",
-    "CPI base year is 2002 (CPI = 100.0)",
-    "The tool covers data from 1914 to the current available month, typically about two months prior to the current month",
-    "Basket of goods includes food, shelter, furniture, clothing, transportation, and recreation",
-    "No policy commentary, data release, or analysis is provided—only a computational utility"
+    "Tool uses monthly CPI data from Statistics Canada (V41690973 series) spanning 1914 to present",
+    "Basket of goods includes: food, shelter, furniture, clothing, transportation, recreation",
+    "Provides formula: Cost₂ = Cost₁ × (CPI₂/CPI₁)",
+    "Provides formula: %Change = ((Cost₂ - Cost₁)/Cost₁) × 100",
+    "Data is typically about two months prior to current month",
+    "Links to related investment calculator for savings/investment analysis"
   ],
-  "why_it_matters": "This page provides no archival research value. It is a utility tool for calculating historical inflation effects using CPI data. It contains no macro catalyst content, no policy signals, no market commentary, and no analytical findings. It should not be archived as research content.",
+  "why_it_matters": "This page is a data utility tool, not a substantive research or policy document. It contains no macro catalyst information, no policy signals, and no market-relevant commentary. It cannot be used as a source for macro catalyst analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "",
@@ -28,31 +29,31 @@
   },
   "macro_context": "",
   "market_structure_context": "",
-  "important_numbers": [],
+  "important_numbers": [
+    "2002 CPI = 100.0 (base year index)"
+  ],
   "tags": [
-    "inflation",
-    "cpi",
-    "calculator",
-    "tool",
     "bank-of-canada",
-    "statistics-canada"
+    "utility-tool",
+    "cpi",
+    "inflation",
+    "data-utility"
   ],
   "llm_review": {
-    "initial_confidence": 0,
-    "verification_confidence": 10,
+    "initial_confidence": 2,
+    "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "Source is a calculator utility tool with no analytical, policy, or macro catalyst content",
-      "No research findings, data releases, policy commentary, or market analysis present",
-      "Source provides only computational functionality for CPI-based inflation calculations",
-      "event_type 'unknown' is correct—no valid taxonomy value applies to utility/tool pages",
-      "Record correctly identifies this source has no archival research value"
+      "Source is a utility tool/calculator page, not a research document or substantive content",
+      "Contains no macro catalyst information, policy signals, or market-relevant commentary",
+      "Cannot serve archival purposes for financial research on macro catalysts",
+      "event_type 'unknown' is correct but reflects the fundamental non-applicability of this content to the archive scope"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "issues_found, suggested_status_not_accepted"
+    "notes": "Automated verification is sufficient. The record is highly accurate and faithfully describes the source. The rejection is based on source irrelevance (utility tool with no macro catalyst or market structure content), which is unambiguous and requires no human judgment call."
   },
   "human_feedback": {
     "decision": "",
@@ -63,18 +64,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_inflation_calculator_a0d5819e0b7ebf4b.txt",
-  "notes": "This source is not relevant for the finance research archive. It is a utility tool page from the Bank of Canada website that provides instructions for using an inflation calculator. The page contains no research findings, policy commentary, data releases, or any content related to macro catalysts or market structure. The SOURCE METADATA indicates TARGET: macro catalysts but the actual source content does not support this classification. Recommend excluding from archive.",
+  "notes": "Source is not relevant to macro catalysts or market structure. This is a utility tool page that provides inflation calculation formulas using CPI data. While the domain (Bank of Canada) is high-trust, the content is a data calculator with no policy commentary, economic analysis, or market-relevant information. Excluded from archive as non-archivable.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "",
+    "tier": "excluded",
     "score": 0,
     "reasoning": [
-      "Source is a calculator tool, not research content",
-      "No analytical, commentary, or policy information present",
-      "Completely lacks macro catalyst or market structure content",
-      "No publication date available",
-      "PAGE_TYPE not provided but content indicates a utility/tool page"
+      "Source is a utility tool/calculator page, not a research document",
+      "No macro catalyst content present",
+      "No policy signals or economic commentary",
+      "Cannot be used for macro catalyst analysis"
     ]
   }
 }

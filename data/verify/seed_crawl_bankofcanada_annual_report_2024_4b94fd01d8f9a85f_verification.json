@@ -1,21 +1,19 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "Source is a landing page/table of contents only with no substantive report content",
-    "No publication date available in the source text",
-    "No specific monetary policy decisions, interest rate data, or economic statistics present",
-    "Governor foreword is brief summary text only—no verbatim quotes or specific policy language",
-    "Record correctly identifies these limitations but the source itself lacks archival value for macro catalyst research",
-    "The full annual report PDF or detailed content is not included in the crawled text"
+    "Source content is thin - captures navigation/index structure rather than substantive report body",
+    "No specific monetary policy numbers, rate decisions, or numerical targets captured in the extraction",
+    "Published date inferred as 2024 from title, not explicitly stated in source body",
+    "Source may require re-crawl targeting full PDF for complete analysis"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record accurately describes the source's limitations. No human judgment needed—source is demonstrably a thin landing page with no actionable macro catalyst content.",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "Source is authoritative (Bank of Canada high-trust domain) and event_type (monetary_policy_report) is correctly assigned. The key claims about inflation returning to target and acknowledgment of burden on households are factually supported by the Governor's foreword excerpt in the source. However, the extraction captured only navigation/index structure and brief prose excerpts rather than substantive policy details. Human review should assess whether this thin content has sufficient archival value given the source's legitimate relevance to macro catalysts.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Bank of Canada's Annual Report 2024 landing page contains only a table of contents and brief summary text from the Governor's foreword. No substantive policy analysis, rate decisions, inflation figures, or detailed economic data are included in the crawled content. The actual annual report PDF and full content were not captured.",
-    "why_it_matters": "This landing page has no meaningful archival value for macro catalyst research. It provides no specific monetary policy data, rate decisions, inflation statistics, or policy analysis that would be useful for market research. The Bank of Canada's high domain trust does not compensate for the absence of substantive content.",
-    "macro_context": "Cannot be assessed. The source provides no specific economic data, inflation figures, or monetary policy details. The Governor's foreword briefly mentions inflation returning to target but provides no figures, dates, or policy specifics.",
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
     "market_structure_context": ""
   }
 }

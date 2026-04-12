@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing: name, url, domain, and source_type fields are all empty",
+      "published_at date not provided",
+      "event_type not specified",
+      "All content fields empty: topic, summary, key_points, why_it_matters, macro_context, market_structure_context, and notes are all blank",
+      "No market impact assessment provided",
+      "No important_numbers listed",
+      "No tags provided"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely empty - a template with no actual research content filled in. This is not a verification case but a complete failure to generate a record. Source attribution is completely absent, which violates the core requirement that source attribution must be present."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,13 +1,15 @@
 {
-  "verification_confidence": 8,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source PDF was truncated during text extraction - some detailed data points and Box analyses may not be fully captured",
-    "Published December 2025 (approximately 4 months before TODAY) - while recent, some specific data points mentioned in the source cannot be verified against the truncated text"
+    "Source body was truncated; only table of contents, glossary, and front matter were captured. Full analytical content, specific statistics, tables, and figures are not available for verification.",
+    "Published_at field shows only month/year (December 2025) without exact publication date",
+    "Cannot verify specific numbers, statistics, or quoted figures mentioned in the record without full source text",
+    "Record notes 'April 2025 FX volume surge' as an important number but this specific data point cannot be confirmed against the truncated source"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Source is a high-authority BIS institutional publication with clear relevance to market structure. All captured content is factually supported by the source text. While the PDF was truncated, the accessible portions sufficiently verify the key claims about FX Triennial Survey, Libor transition, basis trading, and geographical shifts. The record is comprehensive and well-structured.",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "Source is a high-authority BIS publication with clear archival value and the record accurately reflects the table of contents. However, the source body truncation means full analytical content is unavailable for verification. Human review should confirm whether full PDF extraction is feasible and whether the record's specific claims (Triennial Survey data, FX volume figures, benchmark reform details) align with the complete source. The record is professionally constructed with no apparent fabrication, but conservative verification standards require seeing the full content before acceptance.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

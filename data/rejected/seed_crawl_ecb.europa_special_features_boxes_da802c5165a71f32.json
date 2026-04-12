@@ -1,10 +1,10 @@
 {
   "id": "seed_crawl_ecb.europa_special_features_boxes_da802c5165a71f32",
-  "created_at": "2026-04-01T20:57:58.201892+00:00",
+  "created_at": "2026-04-12T21:00:19.561484+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "financial_stability_report",
-  "title": "ECB Financial Stability Review - Special Features & Boxes (Issue 2, 2025)",
+  "title": "Financial Stability Review - Special Features & Boxes Index",
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/press/financial-stability-publications/fsr/special/html/index.en.html",
@@ -12,41 +12,40 @@
     "published_at": "2025-11-26",
     "source_type": "listing_page"
   },
-  "summary": "This ECB Financial Stability Review listing page aggregates five analytical boxes from Issue 2, 2025 covering UCITS hedge fund leverage risks, European banks' USD activities, household investor behavior during market stress (including April 2025 turmoil), rolling sectoral recessions, and evolving safe-haven asset properties following April 2025 US tariff announcements. The source is a listing page containing only article abstracts and metadata, not full research content.",
+  "summary": "This is an index page listing multiple ECB Financial Stability Review special features and boxes published in late November 2025. The collection covers topics including UCITS hedge fund leverage risks, euro area banks' US dollar activities, household investor behavior during market stress, rolling sectoral recessions, and safe haven dynamics following April 2025 US tariff announcements. The primary relevance to macro catalysts appears in the safe haven article, which discusses cross-asset behavior changes and implications for euro area financial stability following the April 2025 tariff turmoil.",
   "key_points": [
-    "UCITS hedge funds combine hedge fund-style synthetic leverage with frequent UCITS redemption terms, potentially amplifying market stress during simultaneous investor redemptions and margin calls",
-    "Euro area banks' USD assets (€6 trillion held by euro area investors) are concentrated in global systemically important banks and linked to capital market activities, with liquidity risks that may transfer to counterparties rather than bank balance sheets",
-    "Household investors showed greater resilience during April 2025 market turmoil compared to institutional or foreign investors, with smaller outflows and faster reinvestment patterns",
-    "Rolling sectoral recessions (staggered vulnerability waves across sectors) can become systemic when aligned, spiking sectoral growth correlations and clustering NPL dynamics",
-    "April 2025 US tariff turmoil saw USD depreciate while US Treasury yields rose—contrary to typical risk-off behavior—raising questions about safe-haven properties of USD-denominated assets"
+    "UCITS hedge funds combine elevated synthetic leverage typical of hedge funds with frequent redemption terms, potentially amplifying market stress during simultaneous liquidity pressures and margin calls",
+    "Euro area banks hold approximately €6 trillion in US dollar-denominated securities, exposing them to liquidity mismatches between counterparties providing and receiving funding",
+    "During April 2025 market turmoil, funds held by households experienced smaller outflows than those dominated by institutional or foreign investors, and households reinvested more quickly",
+    "Rolling corporate recessions (staggered sectoral downturns rather than broad contractions) can become systemic when vulnerability waves align across sectors",
+    "US dollar depreciated strongly and US Treasury yields rose during April 2025 tariff turmoil — opposite of typical risk-off behavior — raising questions about dollar safe-haven properties",
+    "Euro area investors hold approximately €6 trillion in US dollar-denominated securities, representing significant portfolio exposure to potential safe-haven status changes"
   ],
-  "why_it_matters": "This ECB Financial Stability Review compilation provides macroprudential insights relevant to systemic risk monitoring. The analysis of UCITS hedge fund leverage amplification, European bank USD exposure concentration, and the April 2025 safe-haven dynamics are particularly pertinent for understanding potential transmission channels during market stress. The €6 trillion USD exposure figure underscores material cross-border financial stability implications.",
+  "why_it_matters": "The safe haven article directly addresses macro catalyst implications of the April 2025 US tariff announcement for euro area financial stability. The observed breakdown of typical risk-off correlations (dollar depreciation + rising yields) suggests market structure dynamics around safe assets may be shifting. The €6 trillion US dollar exposure of euro area investors makes this a material financial stability concern. Other boxes provide structural context on vulnerabilities (hedge fund leverage, bank liquidity mismatches, rolling recessions) that could amplify future macro catalysts.",
   "market_impact": {
     "asset_classes": [
-      "equities",
+      "fx",
       "bonds",
-      "fx"
+      "equities"
     ],
     "directional_bias": "mixed",
-    "confidence": 0
+    "confidence": 3
   },
-  "macro_context": "The source discusses rolling sectoral recessions as an explanation for disconnect between elevated corporate vulnerabilities and benign bank credit metrics in the euro area. It also covers safe-haven property evolution following April 2025 US tariff announcements, with USD behaving contrary to typical risk-off patterns.",
-  "market_structure_context": "The UCITS hedge fund box addresses structural leverage and liquidity mismatch risks in fund architecture. The European banks USD activities box examines asset-liability mismatches across currencies and associated liquidity risk transmission.",
+  "macro_context": "The source describes April 2025 tariff-driven market turmoil where typical cross-asset correlations broke down — US dollar weakened and Treasury yields rose simultaneously, contrary to normal risk-off patterns. This suggests potential re-pricing of safe haven status for US dollar assets. Policy uncertainty remains high and alternative safe assets are scarce. The source advocates for EU savings and investments union and capital markets union to foster alternative safe asset markets.",
+  "market_structure_context": "The UCITS hedge fund box discusses how synthetic leverage combined with frequent redemption terms can amplify market stress. Euro area banks' US dollar liquidity mismatches (between specific counterparties providing and receiving funding) represent structural vulnerabilities that may not appear on banks' own balance sheets if they deleverage, but affect counterparties instead. Household investors provided stabilizing liquidity during April 2025 turmoil, contrasting with institutional outflows.",
   "important_numbers": [
-    "€6 trillion (euro area investors' USD-denominated securities)"
+    "€6 trillion in US dollar-denominated securities held by euro area investors"
   ],
   "tags": [
     "ecb",
     "financial-stability-review",
-    "hedge-funds",
-    "ucits",
-    "leverage",
-    "european-banks",
-    "usd-exposure",
-    "household-investors",
-    "rolling-recessions",
     "safe-haven",
-    "tariffs",
+    "us-tariffs",
+    "us-dollar",
+    "rolling-recession",
+    "ucits-hedge-funds",
+    "leverage-risk",
+    "euro-area-banks",
     "april-2025"
   ],
   "llm_review": {
@@ -54,12 +53,13 @@
     "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a LISTING PAGE per CORE RULES #6 - must reject regardless of content quality",
-      "event_type 'financial_stability_report' is valid but the source is an index page, not the actual report",
-      "Source contains only abstracts/metadata for 5 boxes, not substantive research content",
-      "Content is too thin to have meaningful archival value - requires crawling individual article URLs",
-      "Multiple unrelated topics bundled without coherent narrative",
-      "Published November 2025 (4+ months old) with only listing page content - marginal historical value at best"
+      "SOURCE_TYPE is listing_page — violates core rule: pages that are homepage, navigation_page, listing_page, or search_page must be rejected",
+      "Source is an index page containing multiple distinct Financial Stability Review boxes/articles — not a single archiveable document",
+      "No single coherent source; content spans 5+ separate articles (UCITS hedge fund leverage, euro area banks' USD activities, household investors, rolling recessions, safe haven tariff analysis)",
+      "Source body is truncated, ending abruptly with only a date",
+      "event_type 'financial_stability_report' is technically valid but misleading — the source is not a Financial Stability Report itself, merely an index of boxes from one",
+      "Record conflates distinct publications under a single ID, which violates archival granularity standards",
+      "Primary macro-catalyst relevance is limited to one item (safe haven article); other items are financial stability/structural topics"
     ]
   },
   "human_review": {
@@ -76,18 +76,19 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_special_features_boxes_da802c5165a71f32.txt",
-  "notes": "This source is a LISTING PAGE (index of special features) rather than standalone archiveable content. Contains metadata and abstracts for 5 ECB Financial Stability Review boxes but not full text. The metadata is published 26 November 2025 (approximately 4 months before TODAY). While topic-relevant to macro catalysts (financial stability, systemic risk), the source quality is limited by being a listing page. Recommend crawling individual box URLs for substantive analysis. SOURCE_TYPE should be listing_page per CORE RULES #6.",
+  "notes": "NON-ARCHIVABLE LISTING PAGE. This is an index page containing multiple distinct Financial Stability Review boxes/articles, not a single cohesive document. Source type is listing_page per PAGE_TYPE classification. The most relevant item for macro catalysts is the 'What safe haven after the April US tariff announcement?' article. Other items (UCITS hedge fund leverage, euro area banks' USD activities, household investor behavior, rolling recessions) are primarily market structure and financial stability topics rather than direct macro catalysts. April 2025 tariff turmoil caused USD depreciation + Treasury yield rise simultaneously — atypical risk-off behavior suggesting potential safe-haven re-pricing. Human review recommended to decide on single-record vs. multi-record approach.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
+    "tier": "C",
     "score": 4,
     "reasoning": [
-      "Listing page with only article abstracts, not full content",
-      "Multiple topics without coherent single focus",
-      "Truncated content prevents detailed analysis",
-      "Historical record (4 months old)",
-      "High domain trust (ecb.europa.eu) partially offsets low content depth"
+      "Listing page source type reduces archival quality",
+      "Multiple distinct articles conflated in single record",
+      "One relevant article on safe haven/tariffs for macro catalysts",
+      "Other items provide market structure context but are tangential to macro catalysts target",
+      "Source is ~4.5 months old (historical record)",
+      "High domain trust tier (ecb.europa.eu) partially offsets structural limitations"
     ]
   }
 }

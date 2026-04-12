@@ -1,10 +1,15 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is generic (www.bis.org) rather than specific to the working paper; working paper should have a dedicated URL (e.g., www.bis.org/publ/work1075.htm)",
+    "Source body is truncated (approximately 3 of 36 pages provided); full analysis cannot be verified",
+    "First key point attributes 'Original Sin remains widespread and persistent; only economic size predicts which countries overcome it' as a finding, but the source indicates this is the view of Eichengreen, Hausmann and Panizza (2005, 2007, 2023) that the paper is adjudicating - attribution may be ambiguous",
+    "Published date (Feb 2023) is over 90 days before TODAY; revision date (April 2025) is recent but the nature and extent of revisions is unclear from truncated source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source body truncated to approximately 3 of 36 pages prevents full verification of all key points and findings. URL should link to the specific working paper rather than general BIS website. Attribution of Original Sin characterization needs clarification to distinguish between the paper's synthesis position versus the Eichengreen et al. view being evaluated.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

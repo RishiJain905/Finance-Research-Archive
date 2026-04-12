@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 2,
-  "verdict": "reject",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "Source is a bank supervisory examination manual describing internal examiner procedures for capital assessment - fundamentally mismatched with TARGET of 'macro catalysts'",
-    "Source contains no market-moving content: no rate decisions, data releases, speeches, monetary policy statements, or trading-relevant commentary",
-    "Document type is procedural/supervisory guidance rather than a macro catalyst or market structure source",
-    "Published_at shows May 2021 but URL filename (202602) suggests a February 2026 version - date inconsistency should be verified",
-    "The generated record already correctly identifies this as not relevant, yet still has status 'review_queue' - self-contradictory"
+    "Source content is procedural examination guidance, not market-moving macro catalyst information - while accurate, relevance to archive mandate is questionable",
+    "PDF filename (cbem-3000-202602.pdf) suggests February 2026 file version, but source body states 'Effective date November 2020' - date discrepancy needs clarification",
+    "Source date of November 2020 is over 90 days before TODAY (2026-04-12), approaching 5.5 years old",
+    "Record appropriately flags source is 'not relevant to market-moving financial research' but TARGET metadata claims 'macro catalysts'"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record already contains accurate self-assessment indicating the source is not relevant to macro catalysts. No human review needed - auto-reject is appropriate.",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate regarding the source content (Regulation Q details, capital framework, etc.), but there is a fundamental question about whether procedural bank examination manuals belong in a macro catalyst research archive. The record correctly identifies this relevance issue. Additionally, there is a date discrepancy between the PDF filename (202602) suggesting February 2026 and the content effective date of November 2020 that warrants human verification. The content is correct and well-structured, but the archival value for a macro catalyst archive is unclear.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "This is Section 3000 of the Federal Reserve's Commercial Bank Examination Manual covering capital adequacy assessment procedures for bank examiners, effective November 2020. The document describes Regulation Q requirements, components of regulatory capital (CET1, Additional Tier 1, Tier 2), and examination procedures for assessing bank financial condition. This is an internal supervisory manual, not a source that discusses macro catalysts, market-moving events, or trading implications.",
-    "why_it_matters": "This document is a supervisory examination manual for Federal Reserve examiners assessing bank capital adequacy. It is not relevant to macro catalysts or market structure in the trading sense. It has no market-moving content and is intended for bank regulatory supervisors, not market participants. Recommend rejection from macro catalysts archive.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

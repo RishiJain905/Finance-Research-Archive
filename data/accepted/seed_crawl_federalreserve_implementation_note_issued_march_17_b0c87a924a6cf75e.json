@@ -71,7 +71,19 @@
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_implementation_note_issued_march_17_b0c87a924a6cf75e.txt",
   "notes": "Historical FOMC implementation note from March 2021. Source is a primary Federal Reserve document with high factual accuracy. While the document is well-structured and contains explicit policy details, it is dated and represents a past policy meeting rather than current or recent policy. The content confirms policy maintenance as expected from the accompanying FOMC statement.",
-  "linked_quant_context": [],
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts",
+        "fed-funds",
+        "monetary-policy"
+      ],
+      "link_score": 73.6
+    }
+  ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",

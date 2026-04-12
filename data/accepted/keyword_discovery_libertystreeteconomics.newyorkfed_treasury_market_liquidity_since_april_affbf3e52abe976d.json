@@ -1,0 +1,117 @@
+{
+  "id": "keyword_discovery_libertystreeteconomics.newyorkfed_treasury_market_liquidity_since_april_affbf3e52abe976d",
+  "created_at": "2026-04-12T21:07:55.413087+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "economic_commentary",
+  "title": "Treasury Market Liquidity Since April 2025",
+  "source": {
+    "name": "Liberty Street Economics (New York Fed)",
+    "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/02/treasury-market-liquidity-since-april-2025/",
+    "domain": "libertystreeteconomics.newyorkfed.org",
+    "published_at": "2026-04-02",
+    "source_type": "blog_post"
+  },
+  "summary": "The New York Fed staff blog examines U.S. Treasury market liquidity from April 2025 through February 2026, finding that liquidity worsened markedly following the April 2, 2025 tariff announcement but recovered quickly after the 90-day tariff postponement on April 9, 2025. By early 2026, liquidity metrics (bid-ask spreads, order book depth, price impact) had returned to levels as favorable as any since 2021-2022, despite subsequent policy developments including the Supreme Court's tariff decision and new temporary tariffs.",
+  "key_points": [
+    "Liquidity measures (bid-ask spread, order book depth, price impact) all deteriorated sharply after April 2, 2025 tariff announcement, but less severely than March 2020 COVID shock or March 2023 regional banking turmoil",
+    "10-year Treasury yield initially declined from ~4.2% to ~3.9% post-announcement (flight-to-safety), then rose ~60 bps to 4.5% between April 6-8, before retreating after April 9 postponement",
+    "Bid-ask spreads and price impact returned to normal levels by late April 2025; order book depth fully recovered by late summer 2025",
+    "By early 2026, order book depth was at levels similar to or better than any time since Fed's post-COVID tightening began in March 2022",
+    "Volatility experienced brief spikes around February 2026 employment (Feb 11) and CPI (Feb 13) releases, but remained stable around the Supreme Court tariff decision (Feb 20)",
+    "Analysis uses interdealer market data from BrokerTec covering on-the-run two-, five-, and ten-year Treasury notes"
+  ],
+  "why_it_matters": "Treasury market liquidity is critical for monetary policy implementation, government financing, and the broader financial system. The $30+ trillion market's functioning directly affects funding costs and risk management across asset classes. This analysis quantifies how tariff-related uncertainty temporarily impaired market structure and demonstrates the market's resilience following policy clarification.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 6
+  },
+  "macro_context": "The analysis documents that while tariff announcements caused significant short-term market stress (April 2025), the subsequent partial reversal restored normal functioning within days. The market absorbed subsequent major developments (Supreme Court decision, new tariffs, Iran conflict—not yet in sample) without significant liquidity deterioration, suggesting structural resilience.",
+  "market_structure_context": "Detailed analysis of Treasury market microstructure using three interdealer liquidity metrics: bid-ask spreads (measured in 32nds of a point), order book depth (millions USD par at best bid/offer), and price impact per $100 million in net order flow. All metrics calculated from BrokerTec high-frequency data during NY trading hours (7:30am-5pm ET). Order book depth at inside tier averaged across bid and offer sides. Price impact estimated via slope coefficients from daily regressions of one-minute price changes.",
+  "important_numbers": [
+    "$30+ trillion in marketable Treasury debt outstanding (as of Feb 28, 2026)",
+    "4.2% initial 10-year yield before April 2 announcement",
+    "3.9% 10-year yield low on April 4",
+    "4.5% peak 10-year yield (April 6-8)",
+    "60 bps rise in 10-year yield (April 6-8)",
+    "~20 bps net rise by week after April 9 postponement",
+    "90 days tariff postponement announced April 9",
+    "Sample period: January 2, 2020 to February 27, 2026"
+  ],
+  "tags": [
+    "treasury-market",
+    "liquidity",
+    "market-structure",
+    "bid-ask-spread",
+    "order-book-depth",
+    "price-impact",
+    "volatility",
+    "tariffs",
+    "interdealer-market",
+    "new-york-fed",
+    "on-the-run",
+    "brokertec"
+  ],
+  "llm_review": {
+    "initial_confidence": 9,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_libertystreeteconomics.newyorkfed_treasury_market_liquidity_since_april_affbf3e52abe976d.txt",
+  "notes": "Source is a high-quality New York Fed staff blog post with comprehensive quantitative analysis. Analysis ends February 27, 2026; explicitly excludes effects from conflict with Iran that began March 1, 2026. Source methodology uses BrokerTec interdealer data; excludes potential dealer-to-client market dynamics. Publication date (April 2, 2026) is 10 days before TODAY, indicating this is current analysis. Authors Henry Dyer and Michael J. Fleming are NY Fed staff economists.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 107.5
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 107.5
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 67.5,
+    "reasoning": [
+      "quality score: 67.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "lower-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

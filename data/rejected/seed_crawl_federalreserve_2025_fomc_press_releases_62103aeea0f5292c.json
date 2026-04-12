@@ -1,27 +1,27 @@
 {
   "id": "seed_crawl_federalreserve_2025_fomc_press_releases_62103aeea0f5292c",
-  "created_at": "2026-04-01T02:57:09.956413+00:00",
+  "created_at": "2026-04-12T20:58:51.031835+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2025 FOMC Press Releases",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2025-press-fomc.htm",
-    "domain": "www.federalreserve.gov",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This is a navigation index page on federalreserve.gov listing links to FOMC statements and economic projections releases from 2025 (January through December). The page does not contain the actual content of any FOMC statement; it only provides dates and titles of 13 separate releases that must be accessed individually. The page requires JavaScript for full functionality and was last updated February 26, 2026.",
+  "summary": "This Federal Reserve webpage is a listing/index page that aggregates links to 12 FOMC statements and economic projections released throughout 2025 (January through December). The page does not contain the actual statement content—it only provides dates and titles of individual press releases. Last updated February 26, 2026.",
   "key_points": [
-    "This is a listing/navigation page, not an archiveable source containing FOMC statement content",
-    "The page lists 13 FOMC-related releases from 2025: 7 FOMC statements and 4 economic projections (dot plot/SEP) documents",
-    "FOMC statement dates in 2025: 1/29, 3/19, 5/7, 6/18, 7/30, 9/17, 10/29, 12/10",
-    "Economic projections were released alongside FOMC statements on 3/19, 6/18, 9/17, and 12/10/2025",
-    "The page requires JavaScript to function properly as a navigation hub",
-    "Last update date stated on page: February 26, 2026"
+    "This is a listing page containing links to 12 separate FOMC press releases from 2025, not the statements themselves.",
+    "Dates range from January 29, 2025 through December 10, 2025.",
+    "Each entry is either an 'FOMC statement' (monetary policy decision) or 'economic projections' (SEP/dot plot) release.",
+    "The page contains no substantive policy content—only titles, dates, and links.",
+    "Last updated: February 26, 2026.",
+    "The underlying individual press releases (not included here) would be the archiveable content."
   ],
-  "why_it_matters": "This source serves only as a directory to individual FOMC releases. It cannot be used directly for research on monetary policy decisions because it contains no actual statement text, rate decisions, vote tallies, or forward guidance language. Individual FOMC statements and projections must be retrieved separately.",
+  "why_it_matters": "This page serves as a navigation index to 2025 Federal Reserve policy communications. However, it is not the archiveable artifact itself. Individual FOMC statements and projection releases contain the substantive policy content relevant for macro catalyst analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -32,16 +32,22 @@
   "important_numbers": [],
   "tags": [
     "fomc",
-    "federal-reserve",
     "listing-page",
-    "non-archivable",
-    "navigation"
+    "federal-reserve",
+    "2025",
+    "press-releases"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 10,
+    "verification_confidence": 2,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "Source is a listing/navigation page containing only links to 12 FOMC press releases, not the actual content. Per Core Rule #5, listing pages must be rejected.",
+      "event_type is 'unknown' which is technically correct for a listing page, but this means the record cannot capture any substantive policy content.",
+      "No published_at date is meaningful for a listing page that aggregates content from throughout 2025.",
+      "Source has no standalone archival value—all substantive policy content exists in the linked individual press releases.",
+      "The record's summary correctly identifies this as a listing page but this confirmation alone does not make it archiveable."
+    ]
   },
   "human_review": {
     "required": false,
@@ -57,16 +63,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2025_fomc_press_releases_62103aeea0f5292c.txt",
-  "notes": "NON-ARCHIVABLE: This is a listing page containing only links and dates to 2025 FOMC releases. Per CORE RULE 6, listing pages are treated as non-archiveable. The individual FOMC statements and projections should be crawled as separate sources. No policy content, rate decisions, or substantive macro information can be extracted from this page.",
+  "notes": "NON-ARCHIVABLE LISTING PAGE. Per Core Rule #6, listing pages are non-archiveable. This page contains only navigation links to 12 separate FOMC press releases without the actual statement content. The individual press release URLs referenced include: 12/10/2025 (statement and projections), 10/29/2025 (statement), 9/17/2025 (statement and projections), 7/30/2025 (statement), 6/18/2025 (statement and projections), 5/7/2025 (statement), 3/19/2025 (statement and projections), 1/29/2025 (statement). Each individual statement and projections release would be a separate archiveable record with event_type fomc_statement or fomc_projections respectively.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "excluded",
+    "tier": "non-archivable",
     "score": 0,
     "reasoning": [
-      "listing_page type per source_type",
-      "no substantive content present",
-      "requires individual statement pages for policy content"
+      "Listing page per source_type classification",
+      "No substantive policy content present",
+      "Contains only dates, titles, and category labels for linked pages",
+      "Cannot derive market impact or macro context from this source"
     ]
   }
 }

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a homepage/listing page (source_type confirmed as 'homepage') — per CORE RULE 5, this must be rejected",
+    "event_type set to 'unknown' — while the record correctly identifies this as problematic, the root cause is the source being non-archivable",
+    "The source body only contains a chronological list of press release titles with dates; it does not contain the actual FOMC minutes, regulatory proposals, or any substantive policy content",
+    "The FOMC minutes (2/18/2026) and regulatory capital framework proposal (3/19/2026) referenced in key_points are NOT present in this source — they are merely referenced as links that would need to be accessed separately",
+    "Record correctly identifies that this page is a navigation artifact, not an archiveable research document"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record has correctly self-assessed its source and applied the rules accurately. No human review needed — the record is well-reasoned and appropriately recommends rejection based on the homepage/listing page rule.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a homepage/listing page for Federal Reserve Board press releases covering January–March 2026. The page aggregates dozens of distinct announcements (banking applications, enforcement actions, regulatory proposals, monetary policy documents) as a chronological index. No substantive policy content is included; only titles and dates of linked press releases. The FOMC minutes from January 27–28, 2026 and the regulatory capital framework proposal are referenced as links but are not present in this source.",
+    "why_it_matters": "This is a navigational listing page, not a standalone research document. Per CORE RULE 5, homepage and listing pages must be rejected. Individual items from this list (FOMC minutes, regulatory capital proposals, tokenized securities guidance) would be candidates for separate archival if accessed as individual documents, but this page itself has no archival value for market structure or macro catalyst analysis."
+  }
+}

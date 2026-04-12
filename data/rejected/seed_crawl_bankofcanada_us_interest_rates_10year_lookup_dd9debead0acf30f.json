@@ -1,0 +1,80 @@
+{
+  "id": "seed_crawl_bankofcanada_us_interest_rates_10year_lookup_dd9debead0acf30f",
+  "created_at": "2026-04-12T21:04:27.883052+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "U.S. interest rates: 10-year lookup",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/us-rates-lookup",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "data_utility_page"
+  },
+  "summary": "This Bank of Canada page is a data lookup interface for accessing historical U.S. interest rate series, not a research document or analysis. The page contains no actual rate values, commentary, or substantive content—it only provides a form for selecting date ranges and series types including Prime Rate, Federal Funds Rate, Commercial Paper rates, and U.S. Treasury constant maturity yields.",
+  "key_points": [
+    "The page is a data retrieval interface, not a research or commentary source",
+    "Available series include: Prime Rate, Federal Funds Rate, Commercial Paper (1 and 3 month), U.S. Treasuries (5-year, 10-year constant maturity), and Forward Premium/Discount",
+    "Series have associated CANSIM 'V' identifiers for reference",
+    "Data frequency options: Daily (business days), Weekly (as at Wednesday), Monthly (last Wednesday of month)",
+    "No published_at date provided in source metadata",
+    "No actual rate values or current data are displayed on the page"
+  ],
+  "why_it_matters": "This is a utility page for accessing historical interest rate data rather than a source of research, analysis, or market intelligence. It has no value as a standalone research archive entry.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "data-utility",
+    "bank-of-canada",
+    "interest-rates",
+    "federal-funds",
+    "treasury-yields",
+    "lookup-tool"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a pure data lookup utility interface with no substantive research content, no actual rate values, no commentary, and no publication date",
+      "Source has no archival value as a standalone research record",
+      "event_type correctly set to 'unknown' but the record cannot be classified under any meaningful taxonomy category",
+      "Page is a tool/form for accessing data, not a source of research, analysis, or market intelligence"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "The source is definitively not suitable for archival. The generated record already accurately identifies this as a data-utility page with no substantive content. No human review needed - this is a clear reject based on source-type rules."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_us_interest_rates_10year_lookup_dd9debead0acf30f.txt",
+  "notes": "Source is a Bank of Canada data lookup utility page for historical U.S. interest rate series. Contains no research content, no rate values, no analysis, and no published date. This is a tool for data retrieval, not a source of research or market intelligence. Not suitable for research archive unless actual retrieved data is captured separately.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "No substantive content - only a data lookup interface",
+      "No published date or authorship information",
+      "No actual data values displayed",
+      "Not a research document, commentary, or analysis",
+      "Cannot serve as a source for macro catalyst or market structure research"
+    ]
+  }
+}

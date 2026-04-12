@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing - no name, URL, domain, or published_at provided",
+    "Source is a navigation/listing page - an index of links to credit data series rather than article-like content",
+    "Source contains no substantive research content - only descriptive text about credit monitoring followed by link references",
+    "Generated record is entirely empty - no summary, key_points, why_it_matters, macro_context, or market_structure_context",
+    "Source type not indicated, but page structure indicates it is a reference/navigation page",
+    "No publication or update date visible in source body"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a thin navigation page with no research content and the generated record is empty. Missing source attribution is a critical issue requiring manual verification of the actual source URL.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

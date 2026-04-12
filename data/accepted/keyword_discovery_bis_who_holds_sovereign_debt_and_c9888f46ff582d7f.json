@@ -1,6 +1,6 @@
 {
   "id": "keyword_discovery_bis_who_holds_sovereign_debt_and_c9888f46ff582d7f",
-  "created_at": "2026-04-10T12:44:52.839951+00:00",
+  "created_at": "2026-04-12T21:16:09.146414+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -8,20 +8,20 @@
   "source": {
     "name": "Bank for International Settlements",
     "url": "https://www.bis.org/publ/work1099.htm",
+    "domain": "www.bis.org",
     "published_at": "2023-05-08",
-    "source_type": "research_paper",
-    "domain": "www.bis.org"
+    "source_type": "research_paper"
   },
-  "summary": "This BIS Working Paper (No. 1099) constructs a comprehensive dataset of sovereign debt holdings across 95 countries over 20 years, categorizing investors as foreign/domestic banks, non-bank private investors, or official investors. The paper finds that private non-bank investors (mainly investment funds) absorb disproportionately more sovereign debt supply than other investor types, funding nearly 70% of increases in sovereign debt, and are the most yield-responsive investor class.",
+  "summary": "BIS Working Paper No. 1099 constructs a dataset of sovereign debt holdings by investor type (bank, non-bank private, official) for 95 countries over 20 years, finding that private non-bank investors (mainly investment funds) fund nearly 70% of increases in sovereign debt and are most responsive to yield changes. For emerging markets, a 10% debt increase leads to 6.7% cost increase normally, but 9% if non-bank investors are absent, indicating sovereigns are structurally vulnerable to losing non-bank participation.",
   "key_points": [
-    "Dataset covers sovereign debt holdings for 95 countries over 20 years, broken down by bank, non-bank private, and official investor categories (foreign and domestic)",
-    "Private non-bank investors (mainly investment funds) fund nearly 70% of increases in sovereign debt supply",
-    "Non-bank private investors are the most responsive to changes in sovereign yields compared to banks and official investors",
-    "Counterfactual analysis for emerging market sovereigns: a 10% debt increase leads to a 6.7% cost increase under current conditions",
-    "If non-bank investors are absent from the market, the same 10% debt increase would cause a 9% cost increase—a 34% larger impact",
-    "Emerging market sovereigns are particularly vulnerable to losing non-bank investor participation"
+    "Dataset covers sovereign debt holdings by investor type for 95 countries over 20 years",
+    "Private non-bank investors (mainly investment funds) fund approximately 70% of increases in sovereign debt supply",
+    "Non-bank private investors show the highest responsiveness to changes in sovereign yields compared to banks and official investors",
+    "Emerging market counterfactual: a 10% increase in sovereign debt leads to a 6.7% increase in borrowing costs under normal conditions",
+    "Same 10% debt increase without non-bank investors present results in a 9% cost increase (35% higher cost impact)",
+    "The composition of investor base materially affects sovereign borrowing costs; sovereigns are structurally vulnerable to losing non-bank investors"
   ],
-  "why_it_matters": "Understanding which investors dominate sovereign debt markets is critical for sovereign debt management, especially during periods of elevated issuance. The finding that non-bank investors (funds) are the marginal price-setters and most yield-sensitive means that shifts in fund appetite can significantly alter borrowing costs. For emerging market central banks and finance ministries, the loss of non-bank demand creates a structural vulnerability as yields would rise more sharply when debt expands without this investor base.",
+  "why_it_matters": "Understanding investor composition in sovereign debt markets is critical for assessing sovereign borrowing risk. The finding that non-bank investors absorb most new supply and are most yield-sensitive suggests they act as the marginal price-setters in sovereign markets. When this segment withdraws (as may occur during risk-off episodes or policy tightening), borrowing costs rise disproportionately—particularly for emerging market sovereigns. This structural insight is relevant to sovereign spread valuation, fiscal sustainability analysis, and understanding episodes of sovereign stress.",
   "market_impact": {
     "asset_classes": [
       "bonds"
@@ -29,26 +29,28 @@
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "This research provides empirical grounding for understanding sovereign borrowing dynamics and how investor composition affects cost-of-capital for governments. The findings suggest that non-bank investor participation has a moderating effect on yield expansion as debt levels rise, which is relevant for fiscal sustainability assessments.",
-  "market_structure_context": "The paper directly addresses sovereign debt market structure by characterizing the role of different investor types—banks, non-bank private (funds), and official (central bank/government) investors—in absorbing sovereign issuance. Non-bank investors are identified as the marginal price-setters due to their high yield sensitivity.",
+  "macro_context": "The research provides structural context for sovereign debt market functioning. Non-bank investor dominance (70% of new supply absorption) means that institutional investor flows and risk appetite are primary drivers of sovereign spread dynamics. The 35% cost amplification from non-bank withdrawal in emerging markets highlights the macro-financial feedback loop between investor composition and fiscal sustainability.",
+  "market_structure_context": "This paper is directly about market structure—specifically, how investor composition (banks vs. non-bank private vs. official) affects sovereign debt market pricing and liquidity. Key structural findings: (1) non-bank private investors are the dominant marginal buyers, (2) they are most yield-sensitive, (3) their presence structurally reduces sovereign borrowing costs. This characterizes the primary dealer/market-maker dynamic in sovereign markets.",
   "important_numbers": [
-    "70% of sovereign debt increases funded by non-bank private investors",
-    "6.7% cost increase from a 10% debt rise (baseline with non-bank participation)",
-    "9% cost increase from a 10% debt rise (without non-bank investors)"
+    "95 countries",
+    "20 years (data coverage)",
+    "70% of sovereign debt increases absorbed by non-bank private investors",
+    "10% debt increase yields 6.7% cost increase (baseline)",
+    "10% debt increase yields 9% cost increase (without non-bank investors)"
   ],
   "tags": [
     "sovereign-debt",
     "investor-composition",
-    "emerging-markets",
-    "debt-market-structure",
     "non-bank-investors",
     "bis-working-paper",
-    "yield-sensitivity",
+    "emerging-markets",
+    "market-structure",
+    "borrowing-costs",
     "debt-sustainability"
   ],
   "llm_review": {
     "initial_confidence": 7,
-    "verification_confidence": 9,
+    "verification_confidence": 8,
     "verdict": "accept",
     "issues_found": []
   },
@@ -57,13 +59,44 @@
     "decision": "",
     "notes": ""
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/keyword_discovery_bis_who_holds_sovereign_debt_and_c9888f46ff582d7f.txt",
-  "notes": "Historical research paper (published May 2023, approximately 35 months prior to TODAY). Primary source of information is the abstract and summary on the BIS website; full paper was not ingested. Key findings are well-supported by the abstract text. The 6.7%/9% counterfactual figures specifically reference emerging market sovereigns only. No forward-looking market reactions or price projections stated in source.",
+  "notes": "Historical record (published 2023-05-08, more than 90 days prior to 2026-04-12). Source is a BIS Working Paper from a high-trust institution (BIS), directly relevant to market structure topic. Analysis based on dataset of 95 countries over 20 years; findings are quantitative and specific. No speculative market reaction projections included. Market impact confidence set to 0 because source does not provide forward-looking market projections. Initial confidence 7 due to age and reliance on abstract/highlights versus full paper review.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 68.8
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 68.8
+    }
+  ],
+  "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 76.5,
+    "score": 74.0,
     "reasoning": [
-      "quality score: 76.5/100 (useful_context)",
+      "quality score: 74.0/100 (useful_context)",
       "high verification confidence",
       "no issues found during verification",
       "clear why_it_matters explanation",

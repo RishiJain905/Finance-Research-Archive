@@ -1,0 +1,91 @@
+{
+  "id": "seed_crawl_bankofcanada_money_market_yields_69fcfe6ab3e7fcac",
+  "created_at": "2026-04-12T21:04:01.485060+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Money market yields",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/interest-rates/money-market-yields",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "",
+    "source_type": "data_page"
+  },
+  "summary": "Bank of Canada publishes daily money market yield data including the Overnight Money Market Financing Rate, Canadian Overnight Repo Rate Average (CORRA), and Treasury bill yields for maturities ranging from 1 month to 1 year. Data shows rates around 2.25-2.68% across various tenors as of March 30, 2026. Note: This is raw data only, with no analysis or commentary.",
+  "key_points": [
+    "Overnight Money Market Financing Rate: 2.2494% (March 30, 2026)",
+    "Canadian Overnight Repo Rate Average (CORRA): 2.27% (March 30, 2026)",
+    "Treasury bill 1-month yield: 2.28% (March 30, 2026)",
+    "Treasury bill 3-month yield: 2.31% (March 30, 2026)",
+    "Treasury bill 6-month yield: 2.40% (March 30, 2026)",
+    "Treasury bill 1-year yield: 2.67% (March 30, 2026)",
+    "Data available in CSV, JSON, and XML formats",
+    "Latest data point: March 30, 2026"
+  ],
+  "why_it_matters": "These yield levels represent the current cost of short-term borrowing in Canadian dollars and are inputs for rate expectations and monetary policy assessment. The CORRA serves as a benchmark for overnight repo transactions in Canada's金融市场. However, this record contains only numerical data without analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Canadian money market rates around 2.25-2.68% reflect current monetary conditions in Canada. The data shows a typical upward-sloping yield curve in the short end, with 1-year bills yielding roughly 40 basis points more than 1-month bills. This record provides no interpretation or policy context.",
+  "market_structure_context": "CORRA (Canadian Overnight Repo Rate Average) is the key overnight market rate in Canada, functioning analogously to SOFR in the US market. The Overnight Money Market Financing Rate is the Bank of Canada's operating target for monetary policy.",
+  "important_numbers": [
+    "2.27% CORRA",
+    "2.2494% Overnight Money Market Financing Rate",
+    "2.28% 1-month T-bill",
+    "2.31% 3-month T-bill",
+    "2.67% 1-year T-bill"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "money-market",
+    "corra",
+    "overnight-rate",
+    "treasury-bills",
+    "canada",
+    "interest-rates",
+    "repo"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a data download page (source_type: data_page), not research, commentary, or policy content",
+      "No narrative, analysis, or interpretation provided - only raw numerical values",
+      "event_type set to 'unknown' - while this reflects uncertainty, the source is clearly data-related, not an event",
+      "Limited archival value for a research archive: point-in-time market data snapshot with no analytical context",
+      "No published_at date in source metadata - cannot verify data freshness beyond the data itself"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is factually accurate but substantively thin - a raw data table without analysis, interpretation, or research value. While the Bank of Canada is a high-trust source, the content itself (numerical yield data) provides no research narrative. This type of raw market data page has low archival value for a finance research archive unless specifically documenting historical rate levels. Human review needed to determine if the archive's scope includes data snapshots or only analytical content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_money_market_yields_69fcfe6ab3e7fcac.txt",
+  "notes": "This is a data download page containing only raw numerical values. No analysis, commentary, or policy discussion. The data reflects Canadian money market rates as of March 30, 2026. The Bank of Canada website is a high-trust tier source, but the content itself provides no research value beyond the raw numbers. Not suitable for an RAG-focused research archive as a primary document - better suited as a data reference. The data age is approximately 13 days old, which is recent but the information is point-in-time market data rather than news or analysis.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 2,
+    "reasoning": [
+      "Source is raw market data, not research or commentary",
+      "No narrative or analysis provided",
+      "High domain trust (Bank of Canada official)",
+      "No published_at date in metadata",
+      "Point-in-time data snapshot with no context"
+    ]
+  }
+}
