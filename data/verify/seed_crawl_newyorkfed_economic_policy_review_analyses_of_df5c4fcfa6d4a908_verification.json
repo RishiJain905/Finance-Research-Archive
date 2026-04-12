@@ -1,21 +1,20 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 5,
+  "verdict": "review",
   "issues_found": [
-    "event_type is set to 'research_paper' but the source is a press release announcing the Economic Policy Review, not a research paper itself",
-    "Source is a press release/announcement page, not an article-like source containing original research content",
-    "Source published April 22, 2004 — over 21 years old and 8,000+ days prior to TODAY (2026-04-01), far exceeding staleness thresholds",
-    "The research papers referenced in the press release are not included; only summaries of their findings are provided",
-    "No actionable or current market intelligence; content is purely archival/historical with no direct applicability to current market structure considerations",
-    "source_type in the record incorrectly states 'research_paper' when the source is a press release"
+    "event_type is set to 'research_paper' but source is a press release/news announcement announcing the Economic Policy Review publication, not the research paper itself",
+    "source_type in record metadata is 'research_paper' but source is a press release (LANE: seed_crawl, DISCOVERY_METHOD: crawl indicates this is a news/event page)",
+    "Source is a news announcement page, not an article-like research output - the individual articles within are research papers, but the source document announcing them is a press release",
+    "Source is over 21 years old (April 22, 2004), raising staleness concerns per the 90-day threshold",
+    "No forward-looking or current market signals; purely historical documentation"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record has fundamental flaws that warrant rejection without human review: (1) the source is a press release, not a research paper, which the record incorrectly characterizes, and (2) the source is 21+ years old with no current market relevance. These issues are concrete and unambiguous.",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "The record accurately summarizes the content of the four research articles described in the source, but there are classification issues: the source is a press release/news announcement (not a research paper), and the age (21+ years) raises questions about archival value in a market structure context. The LLM flagged these concerns appropriately. Human judgment is needed to determine if historical documentation of Treasury auction evolution and early TIIS analysis meets the archival threshold for acceptance.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Federal Reserve Bank of New York released a press release announcing an Economic Policy Review containing summaries of four research articles on exchange rate dynamics and Treasury market structure. The articles cover industry-specific exchange rate indexes, speculative positions in currency futures markets, the historical evolution of Treasury auctions (1970-1975), and Treasury Inflation-Indexed Securities (TIIS). This is a historical press release from April 2004—over 21 years old—announcing academic research rather than containing original research findings.",
-    "why_it_matters": "This press release announces research on market structure topics including Treasury auction evolution and futures market positioning. However, the document is a press release summarizing research papers rather than the papers themselves, and it is 21+ years old with no current market relevance. The actual research papers referenced are not included in this source.",
-    "macro_context": "The research summaries examine exchange rate dynamics and Treasury market structure from a historical perspective. This is a 2004 press release summarizing academic research using data through 2003, not current market-relevant information. It has no macro catalyst relevance for 2026.",
-    "market_structure_context": "This press release contains summaries of research with market structure relevance: (1) Garbade's historical analysis of Treasury auction institutionalization (1970-1975), (2) Klitgaard and Weir's analysis of futures market speculator positioning and exchange rates, and (3) Sack and Elsasser's analysis of TIIS. However, this is only a press release summarizing these papers, not the papers themselves, and all research reflects historical market conditions from 1997-2003. The source has no current market structure intelligence value."
+    "summary": "The Federal Reserve Bank of New York published an Economic Policy Review containing four research articles on exchange rate dynamics and Treasury market structure, including historical analysis of the Treasury auction transition (1970-1975) and early examination of Treasury Inflation-Indexed Securities (TIIS) since their 1997 introduction.",
+    "why_it_matters": "Historical reference document on Treasury market evolution and early TIIS performance. The auction institutionalization analysis (1970-1975) documents how Treasury successfully migrated to competitive bidding, a foundational structural change. TIIS analysis provides baseline expectations for inflation-linked securities market development.",
+    "macro_context": "The research examines exchange rate impacts on corporate profits and the relationship between speculator positioning and currency movements. No forward-looking policy implications for current markets.",
+    "market_structure_context": "Documents the structural evolution of Treasury auctions from fixed-price offerings to competitive bidding (1970-1975), establishing the framework still used today. Early TIIS market structure analysis shows liquidity and investor participation building over time."
   }
 }

@@ -2,18 +2,18 @@
   "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "Source published November 8, 2010—extremely stale (over 15 years old, exceeding the 90-day recency threshold by a significant margin)",
-    "TARGET metadata indicates 'market structure' but content is macroeconomic household debt data with no market structure relevance (no discussion of market plumbing, operations, microstructure, or trading mechanisms)",
-    "topic field correctly identifies 'macro catalysts' which matches the content, but this differs from the stated TARGET of 'market structure'",
-    "Per rule 6, missing source attribution and low-signal sources bias toward reject—this source is high-quality but extremely dated"
+    "TOPIC metadata claims 'market structure' but content is household debt/credit analysis, not market plumbing or operations",
+    "Source is 15+ years old (2010-11-08) - significantly past recency threshold with limited current applicability",
+    "event_type 'economic_commentary' is plausible but source is technically a press release, not original research commentary",
+    "record correctly acknowledges staleness and limited relevance in why_it_matters"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record summary and key_points are factually accurate and well-supported by the source. However, the source's extreme age (15+ years) and the topic mismatch between TARGET metadata ('market structure') and actual content ('macro catalysts') require human judgment on whether this historical household debt report has sufficient archival value for this specific archive. The 90-day recency exception for 'historical policy decision, key research finding' likely does not apply to a routine quarterly statistical report.",
+  "human_review_reason": "Source content is factually accurate and well-summarized, but TOPIC metadata ('market structure') does not match actual content (household debt/credit macro report). Additionally, the 15+ year age makes it unsuitable for current macro catalyst analysis. Human needs to decide: (1) correct topic metadata to 'macro' or 'household credit', and (2) whether to archive as historical record with staleness warning or exclude from active corpus.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "why_it_matters": "This report provides historical context on household deleveraging following the 2008 financial crisis. It documents how consumers shifted from net borrowing (adding to cash flow) to net debt repayment (reducing cash flow), which had significant implications for consumer spending capacity and economic recovery dynamics. This data is over 15 years old (Q3 2010) and has no current applicability to market structure or macro catalyst analysis - it should only be archived as a historical reference document.",
+    "macro_context": "This source documents post-GFC household deleveraging trends and the shift from consumer borrowing to saving. It provides historical baseline for understanding household sector behavior during economic recovery. Note: this data predates subsequent policy interventions and market events by over 15 years.",
+    "market_structure_context": "N/A - Content is macroeconomics/household credit analysis, not market structure (market plumbing, trading infrastructure, or operations)."
   }
 }

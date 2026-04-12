@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing: name, url, and domain are all empty strings",
+      "source.published_at is empty - cannot verify timeliness or staleness",
+      "source.source_type is empty - cannot verify correct categorization",
+      "Source content is a general informational overview page describing Treasury debt management processes, not a specific research document or actionable record",
+      "No specific data, figures, or concrete findings present in source - appears to be a process description/hub page",
+      "No event_type provided in record - violates taxonomy requirement",
+      "Source lacks specificity needed for research archive value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Missing source attribution is a fundamental violation of core verification rules. Automated rejection is appropriate."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

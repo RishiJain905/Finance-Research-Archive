@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "SOURCE METADATA TARGET 'market structure' does not match document content - this is supervisory stress test model documentation, not market structure research",
+    "Document is regulatory methodology for bank stress testing (DFAST/CCAR), not market microstructure or trading analysis",
+    "Record correctly identifies lack of market relevance in why_it_matters but the system still generated and attempted to archive this record",
+    "topic field assigned as 'market structure' in record contradicts the document's actual content",
+    "Source has no bearing on market microstructure, trading operations, or macro catalysts as the record itself acknowledges"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source metadata incorrectly tagged this as 'market structure' TARGET, and the system generated a research record for content that has no relevance to market structure or macro catalysts. The document is internal Federal Reserve supervisory methodology for credit risk models used in stress testing - designed for bank compliance officers, not market analysts. While the document is from a high-trust domain and is technically accurate, it fundamentally does not belong in a market structure research archive. The generated record properly identifies this mismatch but still processes it for archiving.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

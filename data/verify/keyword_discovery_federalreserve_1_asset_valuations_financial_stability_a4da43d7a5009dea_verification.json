@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'financial_stability_report' is not in the provided taxonomy. The closest valid value is 'monetary_policy_report' but FSR is a distinct document type. Should be flagged as non-standard event type."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor taxonomy mismatch on event_type; all factual content is well-supported by source. Record is high-quality overall and can proceed to review queue for taxonomy clarification.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

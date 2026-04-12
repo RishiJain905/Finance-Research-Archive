@@ -1,0 +1,82 @@
+{
+  "id": "seed_crawl_newyorkfed_economic_indicators_calendar_new_york_6c61833a6a22a32b",
+  "created_at": "2026-04-10T06:19:25.726134+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Economic Indicators Calendar",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "",
+    "published_at": "2026-04-10",
+    "source_type": "listing_page",
+    "domain": ""
+  },
+  "summary": "The New York Fed publishes a calendar listing scheduled economic data releases for April 2026 including CPI, PPI, GDP, employment reports, ISM surveys, and various Fed research publications, all timed to Eastern Time. This is a navigation/listing page containing only future scheduled release dates and times; no actual data or analysis is provided.",
+  "key_points": [
+    "Page is a listing of scheduled economic data releases for April 2026, not a data release itself",
+    "Key releases listed include: CPI (April 10), PPI (April 14), Advance Retail Sales (April 16), GDP 3rd Release (April 9), GDP 1st Release (April 30)",
+    "Employment data scheduled: ADP (April 1), Employment Situation (April 3), Initial Claims (multiple dates)",
+    "Fed research publications listed include: NY Fed Staff Nowcast (multiple dates), Survey of Consumer Expectations (April 7), Outlook-at-Risk (April 15), Reserve Demand Elasticity (April 16)",
+    "Corporate Bond Market Distress Index (CMDI) scheduled for April 29 release",
+    "Michigan Consumer Survey preliminary (April 10) and final (April 24) releases listed",
+    "Times are Eastern Time; dates and times noted as tentative and subject to immediate change",
+    "No actual data, analysis, or policy commentary contained on this page"
+  ],
+  "why_it_matters": "This calendar page has no standalone research value for RAG applications. It serves only as a scheduling reference. Market participants and researchers would need to return to this page repeatedly to check for updates or navigate to individual data release pages when data is actually published.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "economic-calendar",
+    "listing-page",
+    "no-archival-value",
+    "april-2026"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page per RULE 6 - explicitly excluded from archival",
+      "Source URL is empty/missing in source attribution",
+      "No substantive content: only future release schedule times, no actual data or analysis",
+      "event_type 'unknown' is correct; this meta-page does not fit any event taxonomy category",
+      "Published date not explicitly in source body - record correctly infers from context",
+      "Domain field empty in source metadata"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_economic_indicators_calendar_new_york_6c61833a6a22a32b.txt",
+  "notes": "Non-archivable listing page. Contains only a schedule of future economic data releases, not the data itself. RULE 6 triggered: listing_page source type should be treated as non-archiveable. For archival purposes, individual data releases should be captured when they are published rather than this calendar reference page.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Source is a listing_page type per RULE 6",
+      "No substantive research content present - only future release schedule",
+      "Not useful for RAG retrieval as it contains no analysis or data",
+      "Should be excluded from archive per CORE RULES"
+    ]
+  }
+}

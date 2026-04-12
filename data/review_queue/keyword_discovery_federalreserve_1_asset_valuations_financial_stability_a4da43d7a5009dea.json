@@ -1,0 +1,94 @@
+{
+  "id": "keyword_discovery_federalreserve_1_asset_valuations_financial_stability_a4da43d7a5009dea",
+  "created_at": "2026-04-12T16:38:30.098633+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "financial_stability_report",
+  "title": "1. Asset Valuations",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/publications/April-2025-financial-stability-report-Asset-Valuations.htm",
+    "published_at": "2025-04-01",
+    "source_type": "financial_stability_report",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve's April 2025 Financial Stability Report chapter on Asset Valuations documents elevated asset valuations across markets despite notable price declines in early April driven by U.S. trade policy uncertainty. Treasury market liquidity remained low by historical standards with considerable yield volatility, though trading stayed orderly. Equity markets fell more than 6 percent through April 11 from the prior report, while equity price-to-earnings ratios remained well above historical medians.",
+  "key_points": [
+    "Equity prices declined more than 6 percent through April 11 from the previous Financial Stability Report, with the largest moves after April 2 trade policy announcements",
+    "Treasury market liquidity was low by historical standards heading into April, with yields exhibiting considerable volatility",
+    "Equity valuations as measured by price-to-earnings ratios remained well above historical medians through March 2025",
+    "Corporate bond spreads widened significantly but stayed at or below historical medians; issuance slowed considerably",
+    "Residential real estate prices relative to fundamentals continued well above historical averages",
+    "Commercial real estate showed some signs of stabilizing prices and fundamentals, though refinancing risks remain for borrowers needing to roll debt"
+  ],
+  "why_it_matters": "The Federal Reserve's assessment of asset valuations provides critical input for financial stability monitoring. Elevated valuations across equities and residential real estate relative to fundamentals suggest potential vulnerabilities if market conditions deteriorate. The report documents that Treasury market liquidity remains stressed—a key concern for market functioning—and that corporate credit spreads, while contained, widened amid the April volatility shock.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 7
+  },
+  "macro_context": "The report attributes early April market declines to announcements about changes to U.S. trade policy, which created heightened uncertainty about the breadth and duration of changes to global trade patterns, perceptions of increased risk of economic slowdown, and concerns about higher inflation.",
+  "market_structure_context": "Treasury market liquidity continued to be low by historical standards heading into April. Early April saw considerable yield volatility which contributed to deterioration in market liquidity. Nonetheless, trading remained orderly and markets continued to function without serious disruption. Interest rate volatility implied by interest rate swaps was elevated by historical standards and increased further in early April. The Treasury yield curve has steepened since the November report as yields on shorter-maturity securities fell. A model-based estimate of the nominal Treasury term premium fell modestly but remained near the top of its range since 2010.",
+  "important_numbers": [
+    "$70,332 billion (equities outstanding)",
+    "$59,656 billion (residential real estate outstanding)",
+    "$28,139 billion (Treasury securities outstanding)",
+    "$21,676 billion (commercial real estate outstanding)",
+    "$8,038 billion (investment-grade corporate bonds outstanding)",
+    "22.9% (equity market growth Q4 2023-Q4 2024)",
+    "5.7% (residential real estate growth Q4 2023-Q4 2024)",
+    "7.3% (Treasury securities growth Q4 2023-Q4 2024)",
+    "-6% (equity price decline through April 11 from prior FSR)"
+  ],
+  "tags": [
+    "financial-stability-report",
+    "asset-valuations",
+    "treasury-liquidity",
+    "equity-valuations",
+    "market-volatility",
+    "trade-policy",
+    "federal-reserve",
+    "credit-spreads",
+    "term-premium"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'financial_stability_report' is not in the provided taxonomy. The closest valid value is 'monetary_policy_report' but FSR is a distinct document type. Should be flagged as non-standard event type."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Minor taxonomy mismatch on event_type; all factual content is well-supported by source. Record is high-quality overall and can proceed to review queue for taxonomy clarification."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_1_asset_valuations_financial_stability_a4da43d7a5009dea.txt",
+  "notes": "Historical record: Published April 2025 (approximately 12 months before TODAY 2026-04-12). Lower confidence slightly per rule 8. Source is a chapter from the Federal Reserve's official Financial Stability Report—high authoritativeness. TARGET topic is 'market structure' and this section covers relevant market structure elements including Treasury liquidity conditions, market functioning, and volatility indicators.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "primary",
+    "score": 9,
+    "reasoning": [
+      "Official Federal Reserve publication",
+      "Primary source data with explicit sourcing citations",
+      "Comprehensive asset market size data (Table 1.1)",
+      "Direct relevance to market structure monitoring",
+      "Clear market structure indicators provided (Treasury liquidity, term premium, implied volatility)"
+    ]
+  }
+}
