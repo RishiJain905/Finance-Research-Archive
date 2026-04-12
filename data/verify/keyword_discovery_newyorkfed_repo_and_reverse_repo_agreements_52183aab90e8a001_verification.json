@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'balance_sheet_update' is a suboptimal classification; this is an informational/explanatory page rather than a discrete balance sheet update or operational announcement",
+    "Source is informational in nature (explains operational mechanics) rather than a specific policy event, data release, or announcement",
+    "The three dated announcements (Dec 2025, Feb 2026, Mar 2026) referenced in sidebar are not included in the page body text, limiting the record's immediacy value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and the source is highly authoritative, but the event_type 'balance_sheet_update' does not fit well with an informational reference page. Human reviewer should confirm whether this foundational reference page meets archival value thresholds for the research archive, or if more specific linked announcements (the Dec 2025/Feb 2026/Mar 2026 statements) would be better candidates for individual records.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Consider refining to acknowledge this is a foundational reference page rather than a current policy event: 'This page serves as the authoritative New York Fed reference explaining the Fed's core repo and reverse repo operations framework. Understanding ON RRP and Standing Repo mechanics is essential for analyzing short-term rate dynamics, money market fund flows, and the effective lower bound of interest rates.'",
+    "macro_context": "",
+    "market_structure_context": "Consider noting more explicitly that this is educational/institutional content: 'This page explains the operational mechanics of the Fed's corridor system. It is a foundational reference document, not a specific policy announcement. ON RRP provides the floor (alternative investment when rates fall below IORB); Standing Repo provides the ceiling. Treasury, agency debt, and agency MBS are eligible collateral for Standing Repo. ON RRP uses only U.S. Treasury securities from SOMA. Transaction data published quarterly with approximately two-year lag per Dodd-Frank.'"
+  }
+}
