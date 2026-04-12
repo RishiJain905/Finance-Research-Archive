@@ -1,0 +1,116 @@
+{
+  "id": "keyword_discovery_newyorkfed_pdf_the_primary_and_secondary_afc8613bc3410276",
+  "created_at": "2026-04-12T20:36:48.204892+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "The Primary and Secondary Corporate Credit Facilities",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/medialibrary/media/research/epr/2022/epr_2022_pmccf-smccf_boyarchenko.pdf/1000",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2022-06-01",
+    "source_type": "research_paper"
+  },
+  "summary": "This Federal Reserve Bank of New York Economic Policy Review paper (June 2022) describes the design, operations, and impact of the Primary Market Corporate Credit Facility (PMCCF) and Secondary Market Corporate Credit Facility (SMCCF), the Fed's first-ever intervention in corporate bond markets during the COVID-19 pandemic. The authors show that announcement of the program had a dramatic effect on liquidity and pricing in secondary markets while also reigniting issuance in primary markets. SMCCF made total purchases of $14 billion before ceasing purchases on December 31, 2020.",
+  "key_points": [
+    "PMCCF and SMCCF were announced March 23, 2020 to address severe corporate bond market dislocations caused by COVID-19 - the Fed's first-ever intervention in corporate bond markets",
+    "Yield spreads increased approximately 250 bps for investment-grade bonds and 550 bps for high-yield bonds during the March 2020 dislocation",
+    "Corporate bond mutual funds and ETFs experienced nearly $200 billion in outflows in the last two weeks of March 2020",
+    "SMCCF commenced ETF purchases on May 12, 2020, and bond purchases on June 16, 2020; PMCCF became operational on June 29, 2020 but was never used",
+    "SMCCF made total purchases of $14 billion, ceased purchases December 31, 2020, and wind-down completed by August 31, 2021",
+    "Authors conclude the announcement itself had dramatic effect on liquidity and pricing, demonstrating the power of credible backstops"
+  ],
+  "why_it_matters": "This research provides empirical evidence on the effectiveness of Federal Reserve emergency credit facilities as market stabilization tools. The paper demonstrates that credible government backstops can restore market functioning even before facilities are actively deployed - the PMCCF was never used yet had market impact. For market structure analysis, it documents the mechanics of corporate bond market dislocations (bid-ask spreads, outflows, new issue concessions) and quantifies how intervention affected them. This historical record informs future policy design for corporate credit market crises.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "risk_on",
+    "confidence": 0
+  },
+  "macro_context": "The facilities aimed to support market functioning and credit provision to nonfinancial corporate sector during pandemic-related economic shutdowns. By providing backstop to investment-grade corporate debt issuers, the CCFs enabled companies to continue employing workers and funding working capital. The paper notes the facilities also supported bank lending by reducing liquidity demands at banks where bond issuers had pre-emptively drawn revolving credit lines.",
+  "market_structure_context": "market_impact.confidence should be populated with an actual confidence assessment (e.g., 5-7 for this qualitative research paper rather than 0). market_impact.asset_classes should be limited to ['bonds'] or ['fixed_income'] since equities are not substantively covered in this source.",
+  "important_numbers": [
+    "$14 billion (total SMCCF purchases)",
+    "$200 billion (outflows from corporate bond funds, last two weeks March 2020)",
+    "$9.6 trillion (corporate debt securities outstanding, end 2019)",
+    "250 bps (investment-grade spread increase, March 2020)",
+    "550 bps (high-yield spread increase, March 2020)",
+    "50+ bps (new issue concession during dislocation vs. typical ~25 bps)"
+  ],
+  "tags": [
+    "corporate-credit",
+    "pmccf",
+    "smccf",
+    "covid",
+    "market-structure",
+    "fed-intervention",
+    "bond-market",
+    "liquidity",
+    "new-york-fed",
+    "research-paper"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "market_impact.confidence is set to 0, which appears to be a missing value rather than a real assessment - the record is otherwise well-supported",
+      "market_impact.asset_classes includes 'equities' but the source focuses exclusively on corporate bond markets; this is a minor overreach"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is accurate and well-supported; minor issues in market_impact field are not sufficient to require human review. The paper is a high-quality NY Fed research publication with specific quantitative data that is correctly represented."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_pdf_the_primary_and_secondary_afc8613bc3410276.txt",
+  "notes": "Historical research paper (June 2022) analyzing Federal Reserve's first-ever corporate bond market intervention. While the topic (market structure) is relevant to the target, this source is not a current market structure or macro catalyst document - it is historical analysis of COVID-era emergency facilities. Source quality is high (NY Fed EPR publication) with specific quantitative data on market dislocations and facility operations. Confidence lowered due to age (nearly 4 years old) and historical nature of content. The source does not discuss current market conditions or provide forward-looking macro catalysts.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 68.0
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 68.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 72.0,
+    "reasoning": [
+      "quality score: 72.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (2)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

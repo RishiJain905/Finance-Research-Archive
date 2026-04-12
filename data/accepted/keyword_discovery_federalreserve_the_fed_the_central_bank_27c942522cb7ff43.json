@@ -1,0 +1,109 @@
+{
+  "id": "keyword_discovery_federalreserve_the_fed_the_central_bank_27c942522cb7ff43",
+  "created_at": "2026-04-12T20:31:44.873087+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "The Central Bank Balance-Sheet Trilemma",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-central-bank-balance-sheet-trilemma-20260114.html",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2026-01-14",
+    "source_type": "research_paper"
+  },
+  "summary": "This FEDS Notes introduces a 'balance sheet trilemma' framework, arguing that central banks can achieve only two of three goals simultaneously: a small balance sheet, low volatility of short-term rates, and limited market intervention. The Federal Reserve's balance sheet grew from approximately $800 billion (6% of GDP) in December 2005 to roughly $6.5 trillion (21% of GDP) by December 2025, reflecting both quantitative easing programs and the 2019 shift to an ample-reserves operating framework. The paper demonstrates empirically that as reserves fall relative to Treasury outstanding, money-market rate sensitivity to liquidity shocks increases substantially.",
+  "key_points": [
+    "Fed balance sheet expanded from ~$800 billion (6% of GDP) in Dec 2005 to ~$6.5 trillion (21% of GDP) in Dec 2025, driven by QE programs and the 2019 shift to ample-reserves regime",
+    "The 'balance sheet trilemma' states central banks can achieve only two of: small balance sheet, low short-term rate volatility, or limited market intervention",
+    "As reserves decline relative to Treasury outstanding, the spread between the Tri-Party General Collateral Rate (TGCR) and the ON RRP rate becomes increasingly sensitive to changes in the Treasury General Account (TGA)",
+    "Rate sensitivity rises with lower reserve levels, meaning even modest shocks cause pronounced money-market rate movements absent central bank intervention",
+    "Balance sheet reduction concluded December 1, 2025; reserve management purchases began December 10, 2025",
+    "The appropriate steady-state size of the Fed's balance sheet remains an open question with no consensus among economists or policymakers"
+  ],
+  "why_it_matters": "This research provides a rigorous framework for understanding the fundamental tradeoffs in central bank balance sheet management. Money market participants, dealers, and anyone managing short-term funding risk need to understand that reducing the Fed's balance sheet creates a structural vulnerability: with scarcer reserves, any shock (TGA swings, quarter-end effects, Treasury issuance) will cause outsized rate movements unless the Fed intervenes. The paper quantifies how sensitivity increases as reserves fall, helping market participants gauge where volatility thresholds lie.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 5
+  },
+  "macro_context": "",
+  "market_structure_context": "The paper directly addresses market structure concerns around money-market plumbing and the Fed's operating framework. It demonstrates that reserve scarcity amplifies rate volatility in repo and short-term funding markets, and shows empirical relationships between reserve levels, TGA movements, and TGCR-ON RRP spread sensitivity. The 2019 shift from scarce-reserves to ample-reserves regime fundamentally changed how the Fed implements monetary policy and manages rate control.",
+  "important_numbers": [
+    "$800 billion (Fed balance sheet Dec 2005)",
+    "$6.5 trillion (Fed balance sheet Dec 2025)",
+    "6% of GDP (balance sheet Dec 2005)",
+    "21% of GDP (balance sheet Dec 2025)"
+  ],
+  "tags": [
+    "fed-balance-sheet",
+    "money-market",
+    "repo-market",
+    "reserve-management",
+    "fed-operating-framework",
+    "rate-volatility",
+    "liquidity",
+    "trilemma"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_the_central_bank_27c942522cb7ff43.txt",
+  "notes": "Source is a FEDS Notes research paper from Federal Reserve staff (Duygan-Bump and Kahn). Published January 14, 2026, so approximately 3 months old as of TODAY (2026-04-12). Not stale. The research paper is highly relevant to market structure, specifically central bank balance sheet management and money-market operations. Figures referenced in text (Figures 1-3) are not reproduced in the extracted text but are described. Multiple citations to recent research papers (Gissler et al. 2025, Cordes et al. 2025, Bostrom et al. 2025, Alquist et al. 2022) indicate this is current research building on recent empirical work.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "money-market"
+      ],
+      "link_score": 68.8
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "money-market"
+      ],
+      "link_score": 68.8
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 76.5,
+    "reasoning": [
+      "quality score: 76.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

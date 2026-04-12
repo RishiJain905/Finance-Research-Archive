@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'fomc_minutes' is incorrect - the source is a full verbatim TRANSCRIPT, not minutes. Minutes are summary documents; transcripts are verbatim records. Should be changed to a more appropriate taxonomy value or the distinction should be noted.",
+    "published_at date (2016-07-27) reflects the meeting date, not necessarily the transcript release date. FOMC transcripts are typically released with a multi-year lag, so this date may be inaccurate for archival purposes.",
+    "Source body is truncated - only a portion of the 283-page transcript was provided, limiting verification of the full key_points list."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The document has high archival value as an authoritative verbatim FOMC transcript with direct relevance to macro catalysts and market structure. All extracted content is accurately supported by the provided excerpt. However, the event_type classification as 'fomc_minutes' is factually incorrect - this is a transcript, not minutes. Additionally, the source truncation prevents full verification of all key_points. A human reviewer should confirm the event_type correction and assess whether the historical value justifies acceptance given the document age (nearly 10 years old).",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is the full verbatim transcript of the July 26-27, 2016 FOMC meeting, a joint session with the Board of Governors held in Washington D.C. The meeting included discussions on a 'Long-Run Framework for Monetary Policy Implementation,' with briefings from staff on foreign central bank experience, crisis lessons, and money markets. The transcript shows the Committee was actively planning for eventual policy normalization and examining alternative operating frameworks for interest rate targets, operating regimes, and the balance sheet. This meeting occurred approximately one month before the September 2016 FOMC meeting at which the Committee ultimately did not raise rates.",
+    "why_it_matters": "This transcript provides verbatim access to FOMC deliberations, revealing the internal reasoning behind policy discussions at a historically significant moment (mid-2016, ahead of the December 2016 rate hike). The focus on long-run implementation frameworks demonstrates the Committee's systematic approach to eventual policy normalization after years of QE. Understanding these discussions provides context for how the Fed balances multiple objectives including efficient money markets and balance sheet composition. NOTE: This is a verbatim transcript, not summary minutes.",
+    "macro_context": "The July 2016 meeting occurred amid ongoing debate about the appropriate timing for monetary policy normalization. The Committee was examining international experience and planning for framework changes that would affect the eventual path of rates and the Federal Reserve's operational capacity. This transcript previews discussions that would culminate in the December 2016 rate increase. As a historical document nearly 10 years old, this represents archival research value rather than current market context.",
+    "market_structure_context": "The meeting explicitly addressed 'efficient, effective, and resilient money markets' as an objective for alternative operating frameworks. Staff briefings on money market conditions and the SOMA portfolio composition indicate the Committee was focused on ensuring market plumbing stability during the normalization process. This represents direct relevance to market structure discussions at the senior FOMC level."
+  }
+}

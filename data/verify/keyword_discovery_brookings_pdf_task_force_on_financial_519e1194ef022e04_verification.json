@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "verification_confidence was left at 0 instead of being calculated - should be 7 based on accurate content and valid source",
+    "verdict remained at 'pending' instead of being resolved",
+    "Source age (June 2021, ~5 years) is substantial for financial stability research; while archival value exception applies per rules, human review should confirm whether specific recommendations remain current",
+    "Source body was truncated - cannot verify that later chapters (especially Chapter 9 on reforms testing) don't contradict or significantly qualify the summary"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record content is factually accurate and properly attributed, with valid event_type (research_paper) and appropriate key_points. However, verification_confidence was not calculated (remained at 0), and verdict was left as 'pending' rather than resolved. Additionally, source age of nearly 5 years warrants human assessment of whether specific regulatory recommendations remain applicable to current market conditions, particularly given potential changes in regulatory environment and post-2020 market dynamics.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Brookings Institution Task Force on Financial Stability released a June 2021 report identifying significant fragilities in the nonbank financial sector exposed during the March 2020 COVID-market crisis, recommending regulatory reforms to address gaps left after post-2009 banking reforms.",
+    "why_it_matters": "This report provides institutional research on systemic vulnerabilities that could trigger future market stress events. While not a current macro catalyst itself, it documents the regulatory and structural weaknesses that were exposed in March 2020 and may inform future policy responses to market dislocations.",
+    "macro_context": "The report contextualizes the March 2020 market panic within a broader framework of financial stability, noting that nonbank sector fragility required massive and unprecedented central bank/government interventions to prevent economic contraction from worsening.",
+    "market_structure_context": "Chapter 3 addresses Treasury market liquidity; Chapter 5 addresses open-end funds; Chapter 7 addresses clearinghouses—these sections are most relevant to market structure analysis. The report identifies regulatory gaps and changes in market structure driven by new regulations, technologies, and market entrants."
+  }
+}

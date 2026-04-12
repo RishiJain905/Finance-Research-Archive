@@ -1,0 +1,116 @@
+{
+  "id": "keyword_discovery_federalreserve_the_fed_monetary_policy_federal_071f339846e7b7e2",
+  "created_at": "2026-04-12T20:26:33.150232+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "fomc_minutes",
+  "title": "Minutes of the Federal Open Market Committee March 17-18, 2026",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260318.htm",
+    "published_at": "2026-03-18",
+    "source_type": "fomc_minutes",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "FOMC minutes from the March 17-18, 2026 meeting reveal a significant repricing of monetary policy expectations driven by Middle East conflict-induced energy price spikes and AI disruption concerns. Near-term rate cut expectations shifted materially higher, with markets not fully pricing a cut until December and approximately 30% probability of rate hikes through early 2027. The committee noted elevated inflation pressures while acknowledging solid GDP growth and stable unemployment.",
+  "key_points": [
+    "Front-month crude oil futures increased approximately 50% during the intermeeting period due to Middle East conflict, with longer-dated futures rising significantly less, suggesting markets viewed the price spike as relatively transitory",
+    "Options-implied probability of rate hikes through early 2027 increased to about 30%, with no rate cuts fully priced in until December",
+    "Desk survey median still showed two 25bp rate cuts for 2026, though respondents pushed out timing slightly and some shifted expectations post-survey",
+    "Broad equity prices fell approximately 5% over the period; software sector underperformed sharply due to AI-related concerns affecting leveraged loan prices",
+    "Notable increases in redemption requests at several private credit funds offering limited liquidity through quarterly redemption opportunities",
+    "Standing repo operations reached $30 billion on one day (third-largest volume since inception), suggesting greater willingness to use operations following December changes",
+    "Reserves projected to average approximately $3 trillion through September after trough in late April; monthly pace of RMPs likely to be reduced significantly after April"
+  ],
+  "why_it_matters": "The significant upward repricing of Fed rate expectations in just six weeks highlights how quickly market consensus can shift on macro catalysts. The divergence between futures/options markets (pricing no cuts) and the Desk survey median (two cuts) signals deep uncertainty about the policy path. Private credit fund redemption pressures and software sector weakness suggest potential stress points in market structure worth monitoring.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx",
+      "commodities",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 7
+  },
+  "macro_context": "Middle East conflict drove a 50% spike in front-month crude oil futures, raising near-term inflation expectations (one-year inflation swap rate rose ~50bp). Elevated energy prices are now expected to cause other central banks (ECB, BoC, SNB) to hike modestly rather than ease as previously expected. However, longer-dated inflation compensation was little changed, suggesting markets view the supply shock as temporary.",
+  "market_structure_context": "Treasury market liquidity diminished somewhat in line with yield volatility but continued to function well. Standing repo usage reached $30 billion on a high-settlement day, with interdealer repo rates not much above the standing repo rate, indicating improved operational uptake following December framework changes. Private credit fund redemption requests increased notably, warranting continued staff monitoring.",
+  "important_numbers": [
+    "50% — front-month crude oil futures price increase during intermeeting period",
+    "~$30 billion — standing repo usage on peak settlement day",
+    "~$3 trillion — projected average reserves through September",
+    "~5% — broad equity price decline over period",
+    "~30% — probability of rate hikes through early 2027 per options prices",
+    "~50bp — one-year inflation swap rate increase over period",
+    "2.8% — 12-month PCE inflation in January (from source)"
+  ],
+  "tags": [
+    "fomc",
+    "fomc-minutes",
+    "federal-reserve",
+    "rate-expectations",
+    "energy-prices",
+    "middle-east",
+    "inflation",
+    "private-credit",
+    "treasury-market",
+    "repo-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_monetary_policy_federal_071f339846e7b7e2.txt",
+  "notes": "Source is a high-quality primary document (FOMC minutes) from the Federal Reserve. Well within 90-day freshness window at 25 days old. The truncation note indicates the economic discussion and policy decision portions were cut off, but the market operations and financial developments section (the most relevant for market structure and macro catalysts) is complete. Topic classification as 'macro catalysts' is appropriate given the focus on energy price shocks, rate expectation repricing, and central bank policy implications.",
+  "linked_quant_context": [
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 85.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 85.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 72.0,
+    "reasoning": [
+      "quality score: 72.0/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

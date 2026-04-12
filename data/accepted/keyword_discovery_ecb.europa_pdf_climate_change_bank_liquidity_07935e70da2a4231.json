@@ -1,0 +1,114 @@
+{
+  "id": "keyword_discovery_ecb.europa_pdf_climate_change_bank_liquidity_07935e70da2a4231",
+  "created_at": "2026-04-12T20:35:46.011766+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Climate change, bank liquidity and systemic risk",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp3168~96a956a7fe.pt.pdf",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "unknown",
+    "source_type": "unknown"
+  },
+  "summary": "This ECB working paper examines how climate transition risks affect short-term funding costs in the European repo market using transaction-level data from 2019-2022. The study finds that banks with higher financed emissions (proxy for transition risk exposure) pay 7-12% higher repo rates per one standard deviation increase. This \"carbon premium\" combines a risk premium and an \"inconvenience premium\" reflecting dealer bank sustainability preferences. The premium triples during periods of financial stress, indicating climate risks amplify existing vulnerabilities. Additionally, transition risk causes uneven monetary policy transmission, with high-emission banks' repo rates adjusting more quickly to central bank rate hikes.",
+  "key_points": [
+    "Banks with higher financed emissions (GHG of borrowers) pay 7-12% higher repo borrowing rates per one standard deviation increase in transition risk exposure",
+    "The carbon premium cannot be explained by collateral quality, transaction maturity, or counterparty relationships",
+    "Premium comprises both a risk premium (credit risk compensation) and an \"inconvenience premium\" (dealer sustainability preferences)",
+    "The transition risk premium triples in size during periods of financial stress, amplifying systemic risk",
+    "Repo rates for high-emission banks adjust more quickly to ECB rate hikes, indicating uneven monetary policy pass-through",
+    "Data covers 46 MMSR-reporting banks with daily transaction volumes EUR 500-1500 billion"
+  ],
+  "why_it_matters": "Climate transition risks are already priced into Europe's core bank funding market, creating differentiated borrowing costs based on carbon exposure. This affects bank liquidity availability, financial stability, and the effectiveness of monetary policy transmission. Banks with high financed emissions face structural funding disadvantages that could persist as climate policy tightens. The interaction between climate risks and market stress suggests climate factors could trigger or amplify financial crises.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 6
+  },
+  "macro_context": "",
+  "market_structure_context": "The European repo market serves as the backbone of bank liquidity and the primary channel for ECB policy rate transmission. The paper reveals that climate transition risk creates rate segmentation in this market, with carbon-intensive banks paying a persistent premium. This structural friction could impair monetary policy effectiveness if climate risks continue to price unevenly across the banking sector. The \"inconvenience premium\" component indicates dealer bank sustainability preferences are becoming a market structural factor in short-term funding markets.",
+  "important_numbers": [
+    "7-12% higher repo rates per one standard deviation increase in financed emissions",
+    "Carbon premium triples during financial stress",
+    "EUR 500-1500 billion daily transaction volumes",
+    "46 MMSR-reporting banks",
+    "2019-2022 sample period (3 years)"
+  ],
+  "tags": [
+    "climate-finance",
+    "transition-risk",
+    "repo-markets",
+    "carbon-premium",
+    "systemic-risk",
+    "ecb-research",
+    "bank-liquidity",
+    "monetary-policy-transmission",
+    "european-banks"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Published_at is marked 'unknown' in metadata, but ECB Working Paper Series No. 3168 typically has a published date that should be extractable from PDF metadata or header",
+      "Source body is truncated; full methodology details and quantitative results tables are not visible, though core findings are captured in the non-technical summary",
+      "Source_type is marked 'unknown' when source is clearly an ECB Working Paper (research_paper format)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_ecb.europa_pdf_climate_change_bank_liquidity_07935e70da2a4231.txt",
+  "notes": "High-quality ECB working paper with strong empirical methodology. Source is a PDF that may be truncated; full quantitative results table not included in extracted text. Published date must be verified externally. Despite truncation, the core findings are well-supported and highly relevant to market structure analysis. Domain trust tier is high.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 71.0,
+    "reasoning": [
+      "quality score: 71.0/100 (useful_context)",
+      "high verification confidence",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}
