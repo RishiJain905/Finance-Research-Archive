@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Topic mismatch: archive TARGET is 'market structure' but source is bank supervisory stress test model documentation focused on regulatory capital calculations, not market mechanisms, trading infrastructure, or market liquidity",
+    "Source contains no market-moving information or macro catalyst content; it is technical methodology documentation for bank compliance examiners",
+    "The record correctly identifies this limitation in market_structure_context but the mismatch raises questions about archival value for this collection"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, correctly representing the Federal Reserve's stress test model documentation. However, the source's relevance to the archive's stated focus on market structure and macro catalysts is questionable. The record appropriately flags this mismatch. Human judgment is needed to determine whether legitimate high-quality regulatory guidance on stress test methodology has sufficient archival value for a market structure-focused archive, or whether the topic mismatch warrants rejection.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve Board released documentation summarizing the market risk models it intends to use in the 2026 Supervisory Stress Test (DFAST), covering Securities, Fair Value Option, Yield Curve, Private Equity, Trading P&L, Trading Issuer Default Loss, CVA, and Largest Counterparty Default models. This technical document provides model overviews, specifications, calibration rationale, and alternative approaches for each component.",
+    "why_it_matters": "This documentation is primarily relevant to large financial institutions subject to annual stress testing requirements under Dodd-Frank. It specifies how the Fed models market risk for regulatory capital calculations, which affects how banks must calculate and report risk exposures. However, this is technical regulatory methodology documentation rather than market-moving information.",
+    "macro_context": "",
+    "market_structure_context": "This document covers risk modeling methodology for supervisory stress tests. It does not address market structure topics such as trading mechanisms, market liquidity, market-making frameworks, clearinghouse operations, or settlement infrastructure."
+  }
+}

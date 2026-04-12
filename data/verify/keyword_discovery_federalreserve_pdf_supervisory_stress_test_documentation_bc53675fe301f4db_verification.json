@@ -1,14 +1,15 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is not relevant to market structure or macro catalysts - this is supervisory/regulatory methodology documentation for bank stress testing, not market operations, trading venues, or market-moving information",
-    "The document describes technical credit risk model specifications (spline implementations, regression specifications, coefficient estimates) for bank supervisors, not market participants",
-    "market_structure_context field correctly identifies this limitation: 'This document pertains to regulatory capital stress testing methodology, not market structure or trading operations'",
-    "Topic mismatch: archive target is 'market structure' but source content is exclusively about regulatory stress test modeling methodology"
+    "SOURCE METADATA TARGET 'market structure' does not match document content - this is supervisory stress test model documentation, not market structure research",
+    "Document is regulatory methodology for bank stress testing (DFAST/CCAR), not market microstructure or trading analysis",
+    "Record correctly identifies lack of market relevance in why_it_matters but the system still generated and attempted to archive this record",
+    "topic field assigned as 'market structure' in record contradicts the document's actual content",
+    "Source has no bearing on market microstructure, trading operations, or macro catalysts as the record itself acknowledges"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Clear mismatch between source content and archive focus areas; no human judgment needed to determine this is outside scope",
+  "human_review_required": true,
+  "human_review_reason": "The source metadata incorrectly tagged this as 'market structure' TARGET, and the system generated a research record for content that has no relevance to market structure or macro catalysts. The document is internal Federal Reserve supervisory methodology for credit risk models used in stress testing - designed for bank compliance officers, not market analysts. While the document is from a high-trust domain and is technically accurate, it fundamentally does not belong in a market structure research archive. The generated record properly identifies this mismatch but still processes it for archiving.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

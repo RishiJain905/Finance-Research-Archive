@@ -1,10 +1,18 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source content is about counterterrorism financing policy, not market structure or macro catalysts",
+    "Topic field 'macro catalysts' does not match actual content about terrorist financing and charitable sector protection",
+    "No economic data, rate decisions, market operations, or any market-moving information present",
+    "Source is an informational policy page, not a research paper, data release, or market-relevant content",
+    "event_type set to 'unknown' - correct type would be research/regulatory_guidance but even that is questionable for market relevance",
+    "Source quality is 'out_of_scope' per quality_tier assessment - correct for finance research",
+    "Published date not provided - cannot assess recency, though age is irrelevant given content type"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "The record correctly identifies the fundamental mismatch between assigned topic and source content. The generated record itself acknowledges 'Source is outside scope' and quality_tier is 'out_of_scope'. No human review needed - auto-reject is appropriate.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

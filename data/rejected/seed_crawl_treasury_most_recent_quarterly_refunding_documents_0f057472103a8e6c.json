@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_most_recent_quarterly_refunding_documents_0f057472103a8e6c",
-  "created_at": "2026-04-01T06:01:54.677493+00:00",
+  "created_at": "2026-04-10T06:04:05.296838+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "treasury_issuance",
@@ -8,27 +8,26 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents",
-    "published_at": "2026-02-04",
-    "source_type": "listing_page",
-    "domain": "home.treasury.gov"
+    "domain": "home.treasury.gov",
+    "published_at": "",
+    "source_type": "listing_page"
   },
-  "summary": "This Treasury webpage is an index/listing page of documents related to quarterly government financing operations, including TBAC reports, auction schedules, buyback schedules, and financing estimates. The page contains no substantive content—it merely lists document names, release dates, and links to the actual documents.",
+  "summary": "This is a Treasury Department navigation page listing documents released for the 2026 Q1 quarterly refunding cycle. Documents include financing estimates, TBAC (Treasury Borrowing Advisory Committee) reports, auction schedules, and buyback schedules released between January 16 and February 4, 2026. The page itself is an index and does not contain substantive policy content.",
   "key_points": [
-    "Page is a document index/listing page, not a substantive policy or research document",
-    "Documents listed include TBAC Report to Secretary, TBAC Minutes, Auction Schedule, Buyback Schedule, and Financing Estimates for 2026 Q1",
-    "Release dates shown: February 2, 2026 (Financing Estimates), February 4, 2026 (TBAC reports), January 16, 2026 (Primary Dealer Meeting)",
-    "Next releases scheduled for May 4 and May 6, 2026",
-    "No actual document content, data, or policy statements are present on this listing page"
+    "Documents released at 3:00 PM on February 2, 2026: Financing Estimates and Economic Policy Statements for 2026 Q1",
+    "Documents released at 8:30 AM on February 4, 2026: TBAC Policy Statement, Report to Secretary, Minutes, Recommended Financing Table, and Treasury presentation for 2026 Q1",
+    "Auction Schedule and Buyback Schedule available in XML and PDF formats",
+    "Primary Dealer Meeting Agenda released January 16, 2026",
+    "Next quarterly refunding documents scheduled for release May 4, 2026 (TBAC) and May 6, 2026 (Auction/Buyback schedules)",
+    "Quarterly Release Data next scheduled for April 17, 2026"
   ],
-  "why_it_matters": "This page serves as a directory to Treasury borrowing and debt management documents. The actual TBAC reports, auction schedules, and financing estimates it links to would contain relevant information for macro catalysts and market structure. This specific page provides no actionable data—it only points to other documents.",
+  "why_it_matters": "This page serves as an entry point to Treasury's quarterly refunding documentation. The actual substantive documents (TBAC reports, financing estimates) would contain relevant information for Treasury market participants. However, this specific page is merely a navigation index without substantive policy or market content.",
   "market_impact": {
-    "asset_classes": [
-      "bonds"
-    ],
-    "directional_bias": "unknown",
+    "asset_classes": [],
+    "directional_bias": "",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "Quarterly refunding documents provide Treasury's financing plans and TBAC recommendations, which inform expectations for Treasury issuance and can impact Treasury market dynamics.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
@@ -36,7 +35,8 @@
     "quarterly-refunding",
     "tbac",
     "auction-schedule",
-    "debt-management",
+    "buyback-schedule",
+    "financing-estimates",
     "listing-page"
   ],
   "llm_review": {
@@ -44,11 +44,11 @@
     "verification_confidence": 1,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page, which per CORE RULE 5 must be rejected",
-      "Page contains only document titles, release dates, and links—no substantive policy content, data, or analysis",
-      "event_type 'treasury_issuance' is misleading; the page itself contains no issuance data, only links to documents",
-      "No extractable macro catalyst or market structure information present",
-      "Low archival value; the linked documents (TBAC reports, auction schedules) would be the appropriate archival targets instead"
+      "Source is a listing/navigation page containing only document release dates and links, no substantive content",
+      "Source type is 'listing_page' which violates Rule 5: reject homepage, navigation_page, listing_page, or search_page",
+      "No actual TBAC reports, financing estimates, or policy content present - only metadata about when documents were released",
+      "Source is too thin to have archival value per Rule 6",
+      "Published_at is empty in metadata"
     ]
   },
   "human_review": {
@@ -65,17 +65,16 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_most_recent_quarterly_refunding_documents_0f057472103a8e6c.txt",
-  "notes": "This source is a document listing/index page, not a substantive research document. Per CORE RULE 6, listing pages should be treated as non-archiveable. The page contains only document titles and release dates with no actual policy content, data, or analysis. The TBAC reports and auction schedules it references would be the appropriate archival targets. Initial confidence very low because the page itself provides no extractable information about market structure or macro catalysts.",
+  "notes": "This source is a listing/index page for Treasury quarterly refunding documents. It does not contain substantive policy content. The page lists release dates for TBAC reports, financing estimates, auction schedules, and buyback schedules, but the actual documents are not included here. For meaningful market structure or macro catalyst analysis, the individual linked documents (e.g., TBAC Policy Statement, TBAC Minutes, Financing Estimates) would need to be retrieved and archived separately. Source is within 90 days of TODAY and appears current.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Listing page with no substantive content",
-      "No policy data or analysis present",
-      "Low value for RAG retrieval purposes",
-      "Should be replaced with linked documents if available"
+      "Listing/navigation page with no substantive content",
+      "Contains only document release dates and metadata",
+      "Actual policy documents not included in this source"
     ]
   }
 }

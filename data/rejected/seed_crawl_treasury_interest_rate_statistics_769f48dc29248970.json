@@ -1,0 +1,79 @@
+{
+  "id": "seed_crawl_treasury_interest_rate_statistics_769f48dc29248970",
+  "created_at": "2026-04-10T06:02:36.949044+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Interest Rate Statistics",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics",
+    "published_at": "",
+    "source_type": "homepage",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "This page is a Treasury Department navigation/documentation page describing available yield curve data products including Daily Treasury Par Yield Curve Rates, Par Real Yield Curve Rates, Treasury Bill Rates, and Long-Term Rates. The page does not contain any actual rate data, policy decisions, or analysis—it merely explains where to access the underlying data series.",
+  "key_points": [
+    "Page describes Daily Treasury Par Yield Curve Rates derived from closing market bid prices obtained by the Federal Reserve Bank of New York at approximately 3:30 PM each business day",
+    "Daily Treasury Par Real Yield Curve Rates are based on TIPS (Treasury Inflation Protected Securities) and began publication on January 2, 2004",
+    "Daily Treasury Long-Term Rates include historical data on the 30-year constant maturity series, which Treasury ceased publishing on February 18, 2002 and resumed on February 9, 2006",
+    "Treasury provides Long-Term Real Rate Averages going back to 2000 as a proxy for long-term real rates",
+    "The page is a navigation hub linking to data views, not a source of actual rate data or analysis"
+  ],
+  "why_it_matters": "This page has no direct market relevance. It is a documentation/index page for Treasury data products, not an actionable source of macro or market information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "yield-curve",
+    "data-documentation",
+    "tips",
+    "t-bills"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a homepage/navigation page per DOMAIN_TRUST_TIER and content structure, triggering automatic rejection under Rule 5",
+      "Page contains no actual rate data, policy decisions, speeches, or analysis—only documentation about data products and links to underlying data views",
+      "No published_at date present in source metadata, making age assessment impossible",
+      "event_type correctly identified as 'unknown' but source does not fit any defined taxonomy category (no actionable macro catalyst content)",
+      "Source is thin, low-signal documentation with no archival value for a finance research archive focused on market catalysts"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_interest_rate_statistics_769f48dc29248970.txt",
+  "notes": "Non-archiveable homepage. This page describes Treasury yield curve data products but contains no actual rates, policy announcements, or research findings. It functions as an index/navigation hub. The content provides metadata about data collection methodology (e.g., FRBNY obtains quotes at 3:30 PM) but no substantive macro or market information. For rate data, users should access the linked data views rather than this documentation page.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Source is a navigation/documentation page with no substantive macro or market content",
+      "No actual rate data present in the source text",
+      "No published_at timestamp available",
+      "Does not fit any defined event_type category",
+      "Page type classified as homepage per DOMAIN_TRUST_TIER and content structure"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "seed_crawl_newyorkfed_economic_policy_review_analyses_of_df5c4fcfa6d4a908",
+  "created_at": "2026-04-10T06:19:35.990589+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Economic Policy Review: Analyses of Exchange Rate Dynamics and Treasury Market Trends",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2004/rp040422",
+    "published_at": "2004-04-22",
+    "source_type": "research_paper",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The Federal Reserve Bank of New York published an Economic Policy Review containing four research articles on exchange rate dynamics and Treasury market structure, including historical analysis of the Treasury auction transition (1970-1975) and early examination of Treasury Inflation-Indexed Securities (TIIS) since their 1997 introduction.",
+  "key_points": [
+    "Treasury transitioned from fixed-price offerings to market-driven auctions for notes and bonds between 1970-1975, building on established bill auction processes",
+    "TIIS (Treasury Inflation-Indexed Securities) introduced in 1997 initially showed surprisingly high yields relative to nominal Treasuries, failing to reduce expected financing costs",
+    "Low TIIS valuations were attributed to investor unfamiliarity, divergent supply trends, and lower liquidity of indexed debt",
+    "Research by Klitgaard and Weir found a 75% contemporaneous accuracy between futures speculator net position changes and weekly exchange rate movements (1993-2003)",
+    "Industry-specific exchange rate indexes better capture profit impacts on individual U.S. industries than aggregate trade-weighted indexes",
+    "Garbade identifies three factors enabling successful auction institutionalization: mimicking bill auction process, gradual maturity extension, and willingness to adapt processes"
+  ],
+  "why_it_matters": "Historical reference document on Treasury market evolution and early TIIS performance. The auction institutionalization analysis (1970-1975) documents how Treasury successfully migrated to competitive bidding, a foundational structural change. TIIS analysis provides baseline expectations for inflation-linked securities market development.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The research examines exchange rate impacts on corporate profits and the relationship between speculator positioning and currency movements. No forward-looking policy implications for current markets.",
+  "market_structure_context": "Documents the structural evolution of Treasury auctions from fixed-price offerings to competitive bidding (1970-1975), establishing the framework still used today. Early TIIS market structure analysis shows liquidity and investor participation building over time.",
+  "important_numbers": [
+    "75% contemporaneous accuracy between net position changes and exchange rate direction (1993-2003 sample)",
+    "TIIS introduced in 1997",
+    "Auction transition period 1970-1975"
+  ],
+  "tags": [
+    "ny-fed",
+    "research-paper",
+    "treasury-auctions",
+    "inflation-linked-bonds",
+    "exchange-rates",
+    "market-structure",
+    "tiis",
+    "historical"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'research_paper' but source is a press release/news announcement announcing the Economic Policy Review publication, not the research paper itself",
+      "source_type in record metadata is 'research_paper' but source is a press release (LANE: seed_crawl, DISCOVERY_METHOD: crawl indicates this is a news/event page)",
+      "Source is a news announcement page, not an article-like research output - the individual articles within are research papers, but the source document announcing them is a press release",
+      "Source is over 21 years old (April 22, 2004), raising staleness concerns per the 90-day threshold",
+      "No forward-looking or current market signals; purely historical documentation"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record accurately summarizes the content of the four research articles described in the source, but there are classification issues: the source is a press release/news announcement (not a research paper), and the age (21+ years) raises questions about archival value in a market structure context. The LLM flagged these concerns appropriately. Human judgment is needed to determine if historical documentation of Treasury auction evolution and early TIIS analysis meets the archival threshold for acceptance."
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_economic_policy_review_analyses_of_df5c4fcfa6d4a908.txt",
+  "notes": "Historical research archive from 2004. Contains foundational academic work on Treasury market structure evolution and early TIIS market development. While methodologically sound, the source predates major structural changes in Treasury markets (QE, negative rates, recent inflation surge) and has limited current analytical value. Relevant for historical research on market structure evolution only. Published April 22, 2004 - classified as stale historical record.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source is 21+ years old",
+      "No current market relevance",
+      "Historical documentation only",
+      "No forward-looking signals"
+    ]
+  }
+}
