@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a bank regulatory compliance filing (FR Y-6) completely unrelated to macro catalysts or market structure",
+    "No macro-economic data, monetary policy content, or market analysis present in the document",
+    "Source contains only organizational structure, shareholder records, and director/officer listings for a single regional bank holding company (City Holding Company)",
+    "Target topic is 'macro catalysts' - this source addresses banking compliance only",
+    "event_type 'unknown' is correct given source does not match any taxonomy category"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a regulatory filing (FR Y-6 Annual Report of Holding Companies) for City Holding Company, a bank holding company based in Charleston, West Virginia, with fiscal year ending December 31, 2021. The document contains organizational structure, shareholder information, and director/officer listings for compliance purposes. The source is not relevant to macro catalysts or market structure.",
+    "why_it_matters": "This source is not relevant to macro catalysts or market structure analysis. It is a bank regulatory compliance document that provides no investment, monetary policy, or market intelligence. The Richmond Fed hosts these filings as part of regulatory administration, but the content has no bearing on financial market analysis or policy research.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

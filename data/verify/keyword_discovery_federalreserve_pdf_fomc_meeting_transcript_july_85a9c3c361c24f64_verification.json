@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is incorrectly set to 'fomc_minutes' - this source is a verbatim FOMC MEETING TRANSCRIPT, not minutes. Transcripts and minutes are distinct documents with different purposes and structures.",
+    "source_type is listed as 'research_paper' but this is a meeting transcript, not a research paper.",
+    "The visible source body was truncated, preventing full verification of content depth and completeness.",
+    "The summary states the transcript 'reveals extensive deliberation on alternative operating frameworks' but the visible truncated portion only shows the beginning of the foreign experience discussion - full extent of deliberation cannot be confirmed from the provided excerpt.",
+    "No rate decision was made at this meeting (correctly noted), but the transcript is focused on framework discussion rather than policy deliberation that would typically appear in archived market catalyst records.",
+    "Document age: approximately 9.75 years old (July 2016 vs. TODAY April 2026) - significantly stale for current market analysis purposes."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The primary issue is event_type misclassification: a verbatim FOMC meeting transcript is not the same as FOMC minutes. The record should be corrected to accurately reflect this is a transcript document. Additionally, the truncated source body limits full content verification, and the document's age (~10 years) raises questions about archival value for macro catalyst purposes despite historical relevance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is a verbatim transcript of the July 26-27, 2016 FOMC meeting, a historical record from nearly 10 years ago. The Committee discussed the long-run framework for monetary policy implementation, including foreign central bank experience, crisis lessons, and money market considerations. No rate decision was made at this meeting (rates were held at 0.25-0.50%). The transcript captures the opening session discussions on framework design.",
+    "why_it_matters": "This transcript provides verbatim insight into the Federal Reserve's internal deliberations on monetary policy framework design during mid-2016. Understanding these discussions offers historical context on how the Fed approached policy normalization after the financial crisis. However, the document is stale for current market analysis given its age of nearly 10 years.",
+    "macro_context": "This July 2016 meeting occurred during a period when the Fed was preparing for eventual policy normalization. The transcript captures discussions that would inform subsequent framework decisions. The Brexit vote had occurred in June 2016, adding uncertainty to the policy outlook. This document is historical in nature and predates the current analysis period by nearly a decade.",
+    "market_structure_context": "The transcript discusses money market functioning and alternative operating frameworks for implementing monetary policy, including considerations of the SOMA portfolio size and composition. These discussions reflect ongoing work on payment systems and market plumbing concerns from the crisis period."
+  }
+}

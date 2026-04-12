@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source body is truncated - only table of contents and front matter extracted; full analytical content not accessible for detailed verification",
+    "published_at field set to '2026-03-31' but no explicit publication date stated in source; date inferred from title 'March 2026'",
+    "Cannot verify specific analytical claims in summary and key_points against actual article content since body text is truncated",
+    "BISTRO (macro time series oracle) appears to be a forecasting/methodology tool rather than market structure analysis - event_type classification appropriate but classification should be verified"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a high-authority publication with relevant market structure content (SRT analysis, offshore activity, private credit) based on ToC. However, the source body was truncated and only front matter was extracted, making it impossible to verify the accuracy of key analytical claims. Human reviewer should either: (1) obtain the complete PDF content for full verification, or (2) confirm the ToC-based summary is sufficiently accurate to archive, or (3) locate alternative source URLs with full article text.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The BIS Quarterly Review March 2026 compiles research on international banking and financial market developments, including analysis of synthetic risk transfer (SRT) markets, sovereign bond market dynamics, AI infrastructure financing, private credit, leveraged retail investor behavior, and offshore financial activity. The publication contains dedicated sections directly relevant to market structure, particularly the analysis of SRT risks from a system-wide perspective, offshore activity patterns, and private credit market structure.",
+    "why_it_matters": "The BIS Quarterly Review provides authoritative research on global financial system structure and risks. The SRT analysis is particularly relevant for understanding how credit risk is being transferred and concentrated across the financial system, which has direct implications for market structure, counterparty risk, and systemic vulnerability assessments. The publication also covers offshore financial activity patterns and the role of non-bank financial intermediaries.",
+    "macro_context": "The publication addresses macro-financial linkages including monetary policy communication under uncertainty, monetary policy transmission in emerging markets with different financial vulnerabilities, and how external shocks affect policy responses across economies.",
+    "market_structure_context": "Direct relevance to market structure includes: SRT market analysis (credit risk transfer mechanisms), offshore financial activity patterns, private credit market structure, sovereign bond market dynamics, and the role of non-bank financial intermediaries in system-wide risk allocation."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source body was truncated at the end; unable to verify if additional relevant content was cut that might affect the record's completeness",
+    "Published_at date (2025-03-19) is inferred from meeting dates and URL pattern, not explicitly confirmed in visible source body",
+    "Source is approximately 389 days old as of TODAY (2026-04-12), exceeding 90-day threshold; however, FOMC minutes have clear archival value as historical policy documents and this is noted as acceptable"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source body was truncated during extraction, preventing full verification of the complete document. While the visible content shows accurate extraction of key points (framework review discussion, shortfalls language reconsideration, market developments, repo market conditions), the truncation means we cannot confirm that no additional relevant policy content was omitted. Human review is recommended to assess whether the truncation materially affects the record's completeness for archival purposes.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
