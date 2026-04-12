@@ -1,0 +1,85 @@
+{
+  "id": "iorb_2026_04_10",
+  "created_at": "2026-04-10T14:35:19.431104+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Interest on Reserve Balances (IORB) — Daily Observation",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-10",
+    "source_type": "data_release_other"
+  },
+  "summary": "The Federal Reserve is currently paying an Interest on Reserve Balances rate of 3.65% as of April 10, 2026, unchanged from the prior observation on April 9. The IORB rate has remained flat at 3.65% for at least five consecutive business days.",
+  "key_points": [
+    "IORB stands at 3.65% as of the 2026-04-10 observation date.",
+    "The rate is unchanged from the prior observation on 2026-04-09 (absolute change: 0).",
+    "The IORB rate has been flat at 3.65% from April 6 through April 10, 2026.",
+    "IORB is the interest rate the Federal Reserve pays on reserve balances held by depository institutions."
+  ],
+  "why_it_matters": "IORB is a key rate in the Fed's monetary policy floor system. It serves as a floor for overnight money market rates, influencing repo market rates, money market fund yields, and short-term funding costs throughout the banking system. The stability of IORB at 3.65% indicates the Fed is maintaining its target rate structure without adjustment. Note: IORB movements typically follow FOMC rate decisions and signal the effective federal funds rate level.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "IORB tracks closely with the top of the federal funds target range. As of the April 2026 observation period, the flat IORB at 3.65% is consistent with the Fed holding its policy rate steady. This data point confirms continued implementation of existing monetary policy without providing new signals.",
+  "market_structure_context": "IORB operates as the anchor rate in the Fed's corridor system for short-term interest rates. Banks with excess reserves receive IORB, which sets a floor for repo rates and other short-term funding rates. Changes in IORB would indicate a shift in the Fed's policy rate target, but current flat readings reflect no policy change.",
+  "important_numbers": [
+    "3.65%",
+    "2026-04-10",
+    "2026-04-09"
+  ],
+  "tags": [
+    "interest-on-reserve-balances",
+    "iorb",
+    "fed-operating-framework",
+    "reserve-balances",
+    "monetary-policy-implementation",
+    "floor-system",
+    "federal-reserve"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type 'balance_sheet_update' is questionable; IORB is a monetary policy implementation rate, not a balance sheet size update — 'data_release_other' or 'rate_decision' context would be more accurate",
+      "Source URL is empty, limiting verifiability and retrieval",
+      "Source is thin raw data with no narrative, context, or analysis — while factually accurate, archival value is limited without accompanying policy context",
+      "The record lacks a publication timestamp beyond the observation date, making it unclear when this data was actually released to the public"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_10.txt",
+  "notes": "This is a thin data observation from FRED. The source provides only a single daily rate snapshot with no accompanying narrative, context, or analysis. While the TARGET specifies market structure and the IORB is indeed a market structure-relevant rate, this particular source is merely a raw data point with no event-like significance. The flat reading over five days is notable only insofar as it confirms policy rate stability. Consider pairing with associated FOMC statements or rate decisions for fuller context on the monetary policy framework.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier3",
+    "score": 3,
+    "reasoning": [
+      "Thin single-day data observation with no narrative",
+      "No market-moving information; rate is stable and unchanged",
+      "No URL or detailed metadata provided",
+      "Flat daily readings lack archival significance unless tracked over time"
+    ]
+  }
+}

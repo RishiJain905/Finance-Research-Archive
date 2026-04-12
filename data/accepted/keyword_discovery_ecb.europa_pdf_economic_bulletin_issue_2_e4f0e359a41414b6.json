@@ -1,0 +1,109 @@
+{
+  "id": "keyword_discovery_ecb.europa_pdf_economic_bulletin_issue_2_e4f0e359a41414b6",
+  "created_at": "2026-04-11T05:23:51.980236+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "monetary_policy_report",
+  "title": "Economic Bulletin Issue 2, 2026",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/pub/pdf/ecbu/eb202602.en.pdf",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2026-03-19",
+    "source_type": "research_paper"
+  },
+  "summary": "At its March 19, 2026 meeting, the ECB Governing Council kept its three key ECB interest rates unchanged, maintaining its commitment to ensure inflation stabilises at the 2% target in the medium term. Staff macroeconomic projections show headline inflation revised up to 2.6% in 2026 (from December 2025 projections), while GDP growth was revised down to 0.9% in 2026, reflecting the disruptive impact of the Middle East war on commodity markets, real incomes, and confidence.",
+  "key_points": [
+    "ECB Governing Council held rates unchanged at March 19, 2026 meeting",
+    "Headline inflation projected at 2.6% in 2026, 2.0% in 2027, 2.1% in 2028 – revised up from December 2025 projections due to higher energy prices from the war",
+    "Core inflation (excluding energy and food) projected at 2.3% in 2026, 2.2% in 2027, 2.1% in 2028",
+    "GDP growth revised down to 0.9% in 2026 (down 0.3pp), 1.3% in 2027 (down 0.1pp), and 1.4% in 2028 – unchanged",
+    "War in Middle East creating upside risks for inflation and downside risks for growth",
+    "Alternative scenarios show a prolonged oil/gas supply disruption would result in higher inflation and lower growth than baseline"
+  ],
+  "why_it_matters": "The ECB's unchanged stance with upgraded inflation forecasts and downgraded growth underscores the policy dilemma posed by the Middle East conflict. The Governing Council explicitly stated it is 'not pre-committing to a particular rate path' and will follow a data-dependent, meeting-by-meeting approach. Upcoming economic data releases will be critical for future rate decisions, as the ECB navigates upside inflation risks against downside growth risks.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "equities"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 5
+  },
+  "macro_context": "The ECB faces a stagflationary challenge driven by the Middle East war: energy-driven inflation upside combined with growth downside. Staff baseline projections are conditioned on futures prices for energy commodities as of the March 11 cut-off date. Alternative scenarios suggest a prolonged oil/gas supply disruption would result in higher inflation and lower growth than baseline. The Governing Council highlighted the urgent need to strengthen the euro area economy while maintaining sound public finances.",
+  "market_structure_context": "The Economic Bulletin includes sections on financing conditions, credit developments, and liquidity conditions with monetary policy operations (November 2025 - February 2026). While the full source was truncated, these sections would contain relevant market structure content on euro area credit conditions and ECB operational framework.",
+  "important_numbers": [
+    "2.6% headline inflation 2026",
+    "2.0% headline inflation 2027",
+    "2.1% headline inflation 2028",
+    "2.3% core inflation 2026",
+    "0.9% GDP growth 2026",
+    "1.3% GDP growth 2027",
+    "1.4% GDP growth 2028",
+    "-0.3pp GDP revision for 2026",
+    "-0.1pp GDP revision for 2027"
+  ],
+  "tags": [
+    "ecb",
+    "monetary-policy",
+    "inflation-outlook",
+    "growth-projections",
+    "middle-east-conflict",
+    "energy-prices",
+    "euro-area",
+    "rate-decision-unchanged"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Source body was truncated at character limit; could not verify content of sections 1-8 (external environment, economic activity, prices/costs, financial markets, financing conditions, fiscal developments) or any of the 7 analytical boxes. Verifiable content (overview pages 1-4) is accurate.",
+      "source_type set to 'research_paper' in record, but metadata correctly identifies it as 'monetary_policy_report' for event_type. Minor inconsistency - source_type field could be more accurately labeled as 'report' or 'bulletin'.",
+      "market_structure_context is empty. While the document is macro-catalyst focused rather than market structure, the ECB bulletin does contain relevant information (e.g., financing conditions section, liquidity conditions section on balance sheet operations) that could be extracted if full source were available."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Topic mismatch detected: metadata says 'market structure' but source is a macroeconomic policy report. Verify if this is the correct archiving target."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_ecb.europa_pdf_economic_bulletin_issue_2_e4f0e359a41414b6.txt",
+  "notes": "Source is a comprehensive ECB Economic Bulletin (Issue 2, 2026) covering the period through March 2026. Content is directly relevant to macro catalysts as it details ECB's latest policy stance, revised inflation and growth forecasts, and explicit discussion of Middle East war impacts on euro area economy. Source is recent (published March 19, 2026; today April 11, 2026 = 23 days old). However, topic field in metadata ('market structure') appears incorrect – this is clearly a monetary policy report with macro analysis, not market structure content.",
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts",
+        "monetary-policy"
+      ],
+      "link_score": 88.8
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 69.0,
+    "reasoning": [
+      "quality score: 69.0/100 (useful_context)",
+      "high verification confidence",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

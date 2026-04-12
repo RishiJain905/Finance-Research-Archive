@@ -1,0 +1,95 @@
+{
+  "id": "keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff",
+  "created_at": "2026-04-12T01:32:20.669391+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "Statement Regarding the Publication of Reference Rates on Friday, April 3, 2026",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_260312a",
+    "published_at": "2026-03-12",
+    "source_type": "unknown",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The New York Fed announced that publication of the Tri-Party General Collateral Rate (TGCR), Broad General Collateral Rate (BGCR), Secured Overnight Financing Rate (SOFR), and SOFR Averages and Index will be suspended on Friday, April 3, 2026 due to Good Friday and the March Employment Situation report release. Since cleared Treasury repo settlement will not be available, two of three market segments used to calculate repo reference rates will be unavailable. These rates will resume publication on Monday, April 6, 2026. The Effective Federal Funds Rate (EFFR) and Overnight Bank Funding Rate (OBFR) will publish on their normal schedule on April 3.",
+  "key_points": [
+    "TGCR, BGCR, SOFR, SOFR Averages, and SOFR Index will not be published on Friday, April 3, 2026",
+    "Cleared Treasury repo settlement will not be available on April 3, eliminating two of three market segments used to calculate Treasury repo reference rates",
+    "Repo market participants broadly expect to treat April 3 as a holiday despite SIFMA not recommending a full closure for U.S. government securities trading",
+    "On Monday, April 6, 2026, TGCR, BGCR, and SOFR will be published reflecting same-day settling Treasury repo transactions that settle Thursday, April 2 and mature Monday, April 6",
+    "SOFR Averages and Index published on April 6 will have a value date of April 6",
+    "EFFR and OBFR will be published on Friday, April 3, 2026 as they follow the New York Fed's holiday schedule"
+  ],
+  "why_it_matters": "This notice informs repo market participants how critical overnight reference rates (SOFR, TGCR, BGCR) will be calculated during a non-standard trading day when cleared repo settlement is unavailable. Accurate reference rates are essential for pricing trillions of dollars in floating-rate instruments, derivatives, and loans. Market participants need advance notice to adjust systems and expectations for April 3 operations.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The notice addresses how the New York Fed maintains SOFR and other repo-based reference rates during holiday periods when cleared Treasury repo settlement infrastructure is unavailable. Since SOFR is calculated from triparty repo transactions (currently via BNY Mellon and JPMorgan) and cleared repo transactions (via FICC), the unavailability of cleared settlement on April 3 eliminates a major input segment, requiring a temporary calculation methodology adjustment for Monday's publication.",
+  "important_numbers": [],
+  "tags": [
+    "new-york-fed",
+    "sofr",
+    "tgcr",
+    "bgcr",
+    "repo-market",
+    "reference-rates",
+    "market-structure",
+    "holiday-schedule"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff.txt",
+  "notes": "This is a factual operational notice from the New York Fed describing reference rate publication procedures for a holiday-affected trading day. The source is well-sourced (Federal Reserve Bank of New York) and provides clear, mechanical information about market infrastructure. Published March 12, 2026, approximately one month before the affected date. The content is directly relevant to market structure as it addresses the plumbing and calculation methodology of critical money market reference rates.",
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 64.0,
+    "reasoning": [
+      "quality score: 64.0/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  },
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure",
+        "sofr"
+      ],
+      "link_score": 92.5
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 88.8
+    }
+  ]
+}

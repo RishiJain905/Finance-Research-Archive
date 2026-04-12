@@ -1,0 +1,86 @@
+{
+  "id": "keyword_discovery_newyorkfed_repo_and_reverse_repo_agreements_52183aab90e8a001",
+  "created_at": "2026-04-12T01:35:53.977227+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Repo and Reverse Repo Agreements",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/markets/domestic-market-operations/monetary-policy-implementation/repo-reverse-repo-agreements",
+    "published_at": "unknown",
+    "source_type": "information_page",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The New York Fed's Open Market Trading Desk conducts repo and reverse repo transactions as directed by the FOMC to implement monetary policy and maintain the fed funds rate within the target range. Repos temporarily increase reserve balances while reverse repos temporarily reduce them, with ON RRP providing a floor under overnight rates and Standing Repo providing a ceiling.",
+  "key_points": [
+    "Repos involve the Desk purchasing securities from counterparties with an agreement to resell, temporarily increasing reserve supply; reverse repos involve selling securities with an agreement to repurchase, temporarily reducing reserve supply",
+    "ON RRP operations provide a floor under overnight money market rates by offering eligible institutions (primary dealers, banks, money market mutual funds, GSEs) a risk-free investment when market rates fall below IORB",
+    "Standing Repo operations provide a ceiling on money market rates, with counterparties including primary dealers and eligible depository institutions",
+    "Both ON RRP and SRP operations are conducted each business day at pre-announced offering rates set by the FOMC",
+    "The Desk can conduct unscheduled repo or reverse repo operations as needed to maintain the fed funds rate within target range",
+    "Recent announcements referenced: April 3, 2026 Desk Operations statement (Mar 2026); Small Value Repo Exercise (Feb 2026); Standing Overnight Repo Operations statement (Dec 2025)"
+  ],
+  "why_it_matters": "Consider refining to acknowledge this is a foundational reference page rather than a current policy event: 'This page serves as the authoritative New York Fed reference explaining the Fed's core repo and reverse repo operations framework. Understanding ON RRP and Standing Repo mechanics is essential for analyzing short-term rate dynamics, money market fund flows, and the effective lower bound of interest rates.'",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Consider noting more explicitly that this is educational/institutional content: 'This page explains the operational mechanics of the Fed's corridor system. It is a foundational reference document, not a specific policy announcement. ON RRP provides the floor (alternative investment when rates fall below IORB); Standing Repo provides the ceiling. Treasury, agency debt, and agency MBS are eligible collateral for Standing Repo. ON RRP uses only U.S. Treasury securities from SOMA. Transaction data published quarterly with approximately two-year lag per Dodd-Frank.'",
+  "important_numbers": [],
+  "tags": [
+    "fed-operations",
+    "repo",
+    "reverse-repo",
+    "on-rrp",
+    "standing-repo",
+    "money-market",
+    "fed-funds",
+    "soma",
+    "monetary-policy-implementation",
+    "new-york-fed"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'balance_sheet_update' is a suboptimal classification; this is an informational/explanatory page rather than a discrete balance sheet update or operational announcement",
+      "Source is informational in nature (explains operational mechanics) rather than a specific policy event, data release, or announcement",
+      "The three dated announcements (Dec 2025, Feb 2026, Mar 2026) referenced in sidebar are not included in the page body text, limiting the record's immediacy value"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate and the source is highly authoritative, but the event_type 'balance_sheet_update' does not fit well with an informational reference page. Human reviewer should confirm whether this foundational reference page meets archival value thresholds for the research archive, or if more specific linked announcements (the Dec 2025/Feb 2026/Mar 2026 statements) would be better candidates for individual records."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_repo_and_reverse_repo_agreements_52183aab90e8a001.txt",
+  "notes": "This is a foundational reference page explaining the Fed's repo and reverse repo operations framework. The source is highly authoritative (New York Fed official content) and directly relevant to market structure. No publication date was provided in metadata, preventing assessment of recency. Three dated announcements referenced in sidebar (Dec 2025 - Mar 2026) indicate the page is actively maintained. Contains no specific numerical data or rate decisions; purely descriptive of operational mechanics.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "foundation",
+    "score": 75,
+    "reasoning": [
+      "Authoritative source (New York Fed official)",
+      "Directly addresses market structure topic (money market operations)",
+      "Contains no publication date for temporal assessment",
+      "Educational/institutional content rather than breaking news or data release",
+      "Low direct impact on trading decisions but high utility for understanding market plumbing"
+    ]
+  }
+}
