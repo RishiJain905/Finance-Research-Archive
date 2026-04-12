@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a homepage/navigation page per DOMAIN_TRUST_TIER and content structure, triggering automatic rejection under Rule 5",
+    "Page contains no actual rate data, policy decisions, speeches, or analysis—only documentation about data products and links to underlying data views",
+    "No published_at date present in source metadata, making age assessment impossible",
+    "event_type correctly identified as 'unknown' but source does not fit any defined taxonomy category (no actionable macro catalyst content)",
+    "Source is thin, low-signal documentation with no archival value for a finance research archive focused on market catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is unambiguously a homepage/navigation page with no substantive content. No judgment call needed—the record correctly identifies all issues. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

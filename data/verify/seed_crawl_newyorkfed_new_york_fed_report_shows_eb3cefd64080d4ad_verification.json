@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is 12+ years old (published 2014-02-18, reporting Q4 2013 data) — significantly beyond 90-day recency threshold; qualifies for historical archival value exception but limits real-time market relevance",
+    "Topic mismatch: SOURCE_METADATA targets 'market structure' but content is a household debt and credit macro report, which is macroeconomics/financial stability analysis rather than market structure (market plumbing, trading mechanisms, settlement operations, etc.)",
+    "event_type is 'economic_commentary' which is reasonable but not certain — source could arguably be 'data_release_other' given it releases Q4 2013 quarterly data, or 'financial_stability_report' given the NY Fed's regulatory role",
+    "why_it_matters field is somewhat speculative — claims about 'signaling financial vulnerability' and 'supporting consumer spending' go beyond what the source literally states",
+    "market_structure_context is empty — if topic is truly 'market structure', this field should be populated or the topic assignment should be reconsidered"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record has solid factual accuracy on all numbers, but requires human judgment on (1) whether a 2014 household debt report fits the archive's market structure mandate, (2) whether the topic should be reclassified to 'macro catalysts', and (3) whether the speculative language in why_it_matters should be toned down",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This report marks a turning point in household sector behavior—the first year-over-year increase in consumer borrowing since before the Great Recession. For macro analysis, rising household debt may indicate shifting consumer behavior after an extended deleveraging period. The decline in delinquency rates (overall 90+ day delinquency fell from 5.3% to 5.0%) and foreclosures (to ~157,000 from the 566,000 peak in Q2 2009) reflects improving credit conditions alongside new borrowing activity. Van der Klaauw of the NY Fed characterized this as a significant shift, noting households are 'borrowing again' after a long deleveraging period.",
+    "macro_context": "Household debt trends are a key input for consumer spending capacity and broader economic growth projections. The Q4 2013 data showing resumption of household borrowing after an extended deleveraging period has implications for Fed policy assessment of household sector health. Student loan debt ($1.08 trillion) and rising mortgage debt ($8.05 trillion) represent structural shifts in household balance sheets. The $241 billion quarterly increase was the largest since Q3 2007, preceding the financial crisis.",
+    "market_structure_context": ""
+  }
+}

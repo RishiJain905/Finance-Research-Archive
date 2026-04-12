@@ -1,0 +1,87 @@
+{
+  "id": "fed_funds_2026_04_11",
+  "created_at": "2026-04-11T14:03:29.954727+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Effective Federal Funds Rate (DFF) — Daily Observation",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-09",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The Effective Federal Funds Rate (EFFR) stood at 3.64% as of 2026-04-09, unchanged from the prior observation on 2026-04-08. The rate has remained flat at 3.64% for the five consecutive trading days from April 5 through April 9, 2026.",
+  "key_points": [
+    "Latest EFFR observation: 3.64% (2026-04-09)",
+    "Previous EFFR observation: 3.64% (2026-04-08)",
+    "Absolute change: 0 (flat)",
+    "Rate was constant at 3.64% for all five observations from 2026-04-05 through 2026-04-09",
+    "No directional change or policy shift indicated in this data snapshot"
+  ],
+  "why_it_matters": "The EFFR is the primary policy rate the Federal Reserve uses to influence short-term interest rates and overall monetary conditions. This flat reading indicates the Fed held rates steady during this period, consistent with the current rate range of 3.25%–3.50% target range established in late 2024.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The flat EFFR at 3.64% suggests no acute funding market stress and no change to the Fed's stance. This is consistent with the post-2024 rate cycle where the Fed transitioned from active hiking to a holding pattern.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.64% (EFFR latest value)",
+    "0 (absolute change period-over-period)"
+  ],
+  "tags": [
+    "effective-federal-funds-rate",
+    "fed-policy",
+    "short-term-rates",
+    "monetary-policy",
+    "fred",
+    "rate-observation",
+    "dff"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a single data snapshot with no narrative, policy context, or analytical framing",
+      "Record contains only raw rate observations with no interpretation or market structure implications",
+      "The 'why_it_matters' and 'macro_context' fields contain synthesized narrative not derived from the source itself",
+      "No balance sheet operations, RRP usage, or repo market conditions provided to contextualize the EFFR level",
+      "Cannot determine whether flat EFFR reflects normal operations or funding stress without additional context",
+      "Of limited standalone archival value for research or RAG applications"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is factually accurate but lacks sufficient substance for archival consideration. The source provides only a raw numerical observation with no narrative or policy context. While the EFFR is relevant to macro catalysts, a single rate snapshot without analysis does not constitute a meaningful research record."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_11.txt",
+  "notes": "This is a raw quantitative data snapshot from FRED, not a policy document. The content is minimal — a single rate observation with no narrative, commentary, or contextual framing. The source is relevant to macro catalysts as it tracks the Fed's primary policy rate, but the thinness of the content limits utility for research or RAG retrieval. Recommend supplementing with actual FOMC statements or policy statements for policy context. The flat reading over five days is notable only insofar as it suggests stable funding conditions; no further inference is warranted from this source alone.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier3",
+    "score": 3,
+    "reasoning": [
+      "Source is a raw data observation, not an analytical or policy document",
+      "Contains only a single numerical value with no narrative or policy interpretation",
+      "No forward guidance, no vote tally, no balance sheet details — critical context missing",
+      "Of limited standalone value for research or RAG unless linked to broader FOMC context"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "The $4+ trillion repo market figure in 'why_it_matters' is not present in the source body; repo market size references are absent from this document",
+    "Source body is truncated ('[TRUNCATED: source body exceeded character limit]'); the FAQ response about portfolio margining/netting agreements ends mid-sentence, indicating incomplete source text",
+    "The June 2026 implementation deadline has nearly arrived (TODAY is April 12, 2026); the source does not provide any status on adoption progress, making the record's forward-looking implications uncertain",
+    "The source's published_at (May 22, 2025) is 325 days before TODAY, exceeding the 90-day threshold; the record has archival value as a policy development but the source itself is dated"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are minor and addressable; the record is largely accurate and well-sourced, with the $4+ trillion figure being a reasonable inference for market sizing rather than a fabricated claim. The truncation and date age are documented limitations.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Consider softening the $4+ trillion figure to 'the substantial Treasury repo market' since the specific size is not stated in this source, or remove the number and rely on the document's qualitative discussion of leverage and systemic risk.",
+    "macro_context": "",
+    "market_structure_context": "The guidance addresses repo market plumbing—specifically counterparty risk management, haircuts, leverage visibility, and legal documentation for bilateral repos. Working group included dealers, money funds, hedge funds, asset managers, FMUs, clearing banks, foreign central banks, Treasury, and NY Fed staff. Note: Implementation deadline of June 2026 is imminent as of TODAY, making the current adoption status unknown from this source alone."
+  }
+}

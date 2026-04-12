@@ -1,51 +1,54 @@
 {
   "id": "seed_crawl_treasury_economic_policy_working_and_research_23460911ba65f7e7",
-  "created_at": "2026-04-03T05:48:23.693382+00:00",
+  "created_at": "2026-04-10T06:09:43.374328+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "research_paper",
   "title": "Economic Policy Working and Research Papers",
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/economic-policy/economic-policy-working-and-research-papers",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "home.treasury.gov"
+    "source_type": "listing_page"
   },
-  "summary": "This is a Treasury Department listing page cataloging Office of Economic Policy working papers from 2020, 2021, and 2024. The page contains only paper titles and years, not the full research content. Papers cover topics including the American Rescue Plan, AI exposure, emergency rental assistance, mortgage rate shocks, racial labor inequality, and PPP loans.",
+  "summary": "This is a Treasury Office of Economic Policy listing page cataloging working papers from 2020, 2021, and 2024, covering topics including AI occupational exposure, mortgage rate shocks and house prices, racial labor market inequality, emergency rental assistance, and PPP loan job preservation effects. The page provides only paper titles without abstracts, full text, or publication dates for individual papers, making it insufficient for detailed macro catalyst research.",
   "key_points": [
-    "Page is a listing/catalog of working papers, not the actual research documents",
-    "2024 papers include: American Rescue Plan mapping, AI occupational exposure, emergency rental assistance, mortgage rate shocks, racial labor inequality",
-    "2021 papers include: expectations information extraction, expectations gap",
-    "2020 papers include: PPP loan job preservation effects",
-    "No publication date provided for the page itself",
-    "Papers are labeled as works in progress subject to revision; views are authors' own, not official Treasury positions"
+    "Page lists Treasury Office of Economic Policy working paper series from 2020, 2021, and 2024 with titles only, no abstracts or full text",
+    "2024 series includes papers on American Rescue Plan mapping, AI occupational exposure by geography/education, emergency rental assistance, mortgage rate shocks and house prices, and racial labor market inequality",
+    "2021 series includes papers on expectations extraction and the expectations gap",
+    "2020 series includes papers on PPP loan job preservation effects",
+    "Papers are explicitly noted as works in progress subject to revision, with views not representing official Treasury positions",
+    "No publication dates, authors, or substantive content provided for individual papers"
   ],
-  "why_it_matters": "This page is a navigation index only. It does not provide actionable macro catalyst information. Individual papers would need to be accessed separately for substantive content. The listing itself offers no concrete economic data, forecasts, or policy decisions.",
+  "why_it_matters": "This is a Treasury Office of Economic Policy listing page cataloging working paper titles from 2020, 2021, and 2024. The page itself provides no abstracts, full text, publication dates, or substantive content. It functions as an index/catalog and is not an archiveable research document. Individual papers must be accessed separately for any meaningful macro catalyst analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "The listed paper titles suggest research areas relevant to macro analysis including housing markets and mortgage rate sensitivity, labor market dynamics, AI economic impacts, and fiscal policy (ARP/PPP) effects. However, this listing page provides no substantive content to assess macro implications.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "treasury",
     "working-papers",
-    "listing-page",
-    "research-index"
+    "economic-policy",
+    "research-index",
+    "listing-page"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 2,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "Listing page per CORE RULE 5 and RULE 6 - listing pages should be rejected",
-      "Source contains only paper titles and years, no substantive research content",
-      "No publication date provided for the page itself, only for individual papers listed",
-      "Cannot assess macro catalyst relevance without accessing individual papers",
-      "event_type correctly set to 'unknown' but the record is still non-archivable due to source type"
+      "event_type is 'research_paper' but source is a listing page cataloging multiple papers, not a single research paper",
+      "source_type correctly identified as 'listing_page' but event_type classification contradicts this",
+      "No individual paper abstracts, full text, or substantive content to archive",
+      "No publication dates for individual papers provided in source",
+      "Cannot verify any specific claims, findings, or market implications without accessing individual papers",
+      "Source provides only paper titles - too thin to have archival value as a research record",
+      "Historical papers from 2020-2021 may be stale (2026-04-10 TODAY vs. PUBLISHED_AT of 'unknown/empty')"
     ]
   },
   "human_review": {
@@ -62,17 +65,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_economic_policy_working_and_research_23460911ba65f7e7.txt",
-  "notes": "Non-archiveable listing page. No publication date available. The page provides no actionable macro catalyst or market structure data—it is merely an index of working paper titles. Individual papers would need to be retrieved and evaluated separately for substantive content. Per CORE RULE 6, listing pages should be flagged as non-archiveable. Papers span 2020-2024; most recent are ~2 years old.",
+  "notes": "This source is a Treasury working paper index page. While the listed papers address macro-relevant topics (housing, labor markets, fiscal policy), the page itself provides no actionable content beyond titles. Individual papers would need to be retrieved separately for meaningful analysis. The source is classified as a listing_page per SOURCE-TYPE GUIDANCE and should be noted as non-archiveable in its current form. The 2020-2021 papers are historical records that may be stale.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 0,
+    "score": 2,
     "reasoning": [
-      "Listing page only - no substantive content",
-      "No publication date",
-      "No actionable macro/market data",
-      "Individual papers needed for actual research content"
+      "Listing page with no substantive content beyond paper titles",
+      "No publication dates, authors, or abstracts provided",
+      "Cannot verify claims or extract market-relevant insights",
+      "Historical papers (2020-2021) may be stale for current analysis"
     ]
   }
 }

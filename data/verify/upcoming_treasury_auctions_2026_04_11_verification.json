@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a 404 API error with no actual content - only an error message",
+    "Record contains zero data points about Treasury auctions",
+    "No archival value: a transient API failure is not a meaningful market structure artifact",
+    "Cannot serve as RAG source without actual auction schedule, amounts, or security types",
+    "Quality tier correctly identified as 'no_content' with score 0, confirming source deficiency"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record already correctly identified as requiring human review but the underlying issue is unambiguous - the source is a technical error with no archival content. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

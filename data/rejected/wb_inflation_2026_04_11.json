@@ -1,0 +1,77 @@
+{
+  "id": "wb_inflation_2026_04_11",
+  "created_at": "2026-04-11T14:08:01.962764+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_cpi",
+  "title": "World Inflation Rate - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-11",
+    "source_type": "data_notice"
+  },
+  "summary": "The World Bank data query for indicator FP.CPI.TOTL.ZG (World Inflation Rate) on 2026-04-11 returned no valid observations. This is a data retrieval failure notice, not a substantive economic release. The source contains no information content and should be discarded.",
+  "key_points": [
+    "Indicator FP.CPI.TOTL.ZG query returned no valid recent observations",
+    "Source is a data query response, not an actual inflation report",
+    "No inflation figures, historical data, or country-specific breakdowns available",
+    "Cannot be used for market analysis or macro research as written"
+  ],
+  "why_it_matters": "This source is not relevant to market structure or macro catalysts — it contains zero data. It cannot support any analysis, research, or archival use case. An alternative inflation data source should be sought.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "no-data",
+    "data-unavailable",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type 'data_release_cpi' is misleading — no CPI data was released; the source is a data retrieval failure confirming zero observations exist",
+      "Source attribution has empty URL field — cannot verify or retrieve source",
+      "Source has zero informational content — it is a null API response with no archival value",
+      "Cannot be used for market analysis, macro research, or RAG applications as the record itself acknowledges",
+      "quality_tier 'discard' with score 1 contradicts suggested_status 'review_queue' — if value is zero, record should not enter review queue"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_11.txt",
+  "notes": "This source is a data retrieval failure notice. The World Bank API returned 'No recent valid observations' for the inflation indicator. While the metadata indicates this should relate to global_economy/inflation data, the actual content is empty. This source cannot support any research, analysis, or RAG use case as written. Source should be re-queried or an alternative inflation data source should be used.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "No actual data content - data query returned null",
+      "Cannot support any market structure or macro catalyst analysis",
+      "Zero informational value for finance research archive"
+    ]
+  }
+}

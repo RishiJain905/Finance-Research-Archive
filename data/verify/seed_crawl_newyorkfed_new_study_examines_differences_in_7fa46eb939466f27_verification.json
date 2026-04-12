@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source is a press release from November 2011—noting the press_release source_type in metadata is not explicitly captured, though the underlying study content is accurately represented",
-    "Publication age (14+ years) significantly reduces relevance for current market structure understanding; much has changed in central bank operating frameworks (IORB adoption, post-2022 QT, RRP facility, 2019 repo stress)",
-    "The study's forward-looking conclusion that 'it is too early to tell outcomes' has now been resolved by history, but the source does not provide that resolution",
-    "Record correctly captures study content but does not flag the substantial staleness in why_it_matters—the acknowledgment is present but understated"
+    "Source is a press release summarizing a research paper, not the paper itself - event_type 'research_paper' is imprecise; 'economic_commentary' or 'blog_post' would be more accurate",
+    "Source is approximately 14.5 years old - significantly past the 90-day threshold and many institutional frameworks have changed (e.g., SNB abandoned Libor targeting in 2019, ECB adopted negative rates and tiering)",
+    "The record's quality_tier is 'low' with a score of 2, indicating limited current relevance"
   ],
   "human_review_required": true,
-  "human_review_reason": "While the record is factually accurate against the source and the topic is relevant to market structure, the 14-year age creates ambiguity about archival value. Human review needed to determine if comparative central bank implementation research from 2011 adds sufficient value to a forward-looking finance archive given the substantial evolution in monetary policy operating frameworks since publication.",
+  "human_review_reason": "While the summary is factually accurate and well-supported by the source text, the significant age of the source (14.5 years) and its nature as a press release rather than the full research paper raise questions about its archival value and fitness for a finance research archive focused on market structure. Human review needed to determine if this historical institutional comparison merits archiving despite its staleness.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "This historical study provides foundational comparative context for understanding how central bank policy implementation frameworks differ structurally. While significantly dated (pre-ZIRP normalization, pre-QT, pre-RRP facility era), the analytical framework for comparing operational targets (overnight rate vs. three-month Libor) and balance sheet management instruments (IOER, central bank bills, reverse repos) remains intellectually valuable for understanding monetary policy transmission. However, readers should note that many specific observations about 2011-era frameworks have been superseded by subsequent policy evolution.",
-    "macro_context": "",
-    "market_structure_context": "The study directly addresses market structure by comparing: (1) operational target choices across central banks (overnight rate vs. three-month Libor), (2) trade-offs between targeting ease and economic relevance, and (3) three balance sheet management instruments: interest on excess reserves, central bank bills, and reverse repurchase agreements. It explains how these instruments allow central banks to adjust interest rates without regard to reserve quantities—a key market plumbing consideration. NOTE: These frameworks have evolved significantly since 2011; the Fed subsequently adopted IORB as a policy rate floor, and the post-2022 QT period introduced new dynamics not covered in this source."
+    "summary": "A Federal Reserve Bank of New York study by Marlene Amstad and Antoine Martin compares how the Fed, ECB, Bank of England, and Swiss National Bank implement monetary policy, finding that while they share common goals, they use different operational approaches and balance sheet management tools.",
+    "why_it_matters": "This comparative analysis of central bank operational frameworks informs understanding of monetary policy transmission mechanisms. The trade-offs between targeting overnight vs. longer-term rates and the choice of balance sheet management tools have implications for how policy changes ripple through financial markets and the broader economy. Note: This analysis predates major policy framework changes (SNB's 2019 Libor abandonment, ECB's negative rates and tiering) and should be considered historical institutional reference rather than current market intelligence.",
+    "macro_context": "Published in November 2011, this research examines the early post-crisis period when central banks were managing expanded balance sheets from unconventional monetary policy. Many frameworks described have since evolved significantly.",
+    "market_structure_context": "The study directly addresses monetary policy implementation and operational frameworks—core market structure topics. It examines: (1) interest rate operational target choices (overnight vs. 3-month Libor), (2) trade-offs between targeting ease vs. economic relevance, and (3) balance sheet management tools including interest on excess reserves, central bank bills, and reverse repos. Historical context: This analysis predates subsequent framework changes including SNB's transition away from Libor targeting (2019)."
   }
 }

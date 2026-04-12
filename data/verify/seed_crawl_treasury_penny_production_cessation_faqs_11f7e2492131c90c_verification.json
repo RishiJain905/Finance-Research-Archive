@@ -1,18 +1,22 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 2,
   "verdict": "review",
   "issues_found": [
-    "event_type is 'unknown' but source could reasonably be classified as 'treasury_issuance' or 'financial_stability_report' given Treasury's role in coinage policy",
-    "Source has no relevance to market structure or macro catalysts as defined - it is administrative guidance on coin production and cash rounding procedures, not financial market research",
-    "Source does not discuss financial markets, trading mechanisms, liquidity, clearing/settlement, monetary policy, or market-moving catalysts"
+    "Record contains no extracted content - summary, key_points, why_it_matters, macro_context, and market_structure_context are all empty",
+    "published_at missing from source object (source metadata shows 2025-12-23)",
+    "source_type empty in source object",
+    "verification_confidence defaulted to 0 instead of being assessed",
+    "verdict incorrectly set to 'pending' instead of being evaluated",
+    "tags array is empty despite content available for tagging (e.g., monetary operations, treasury policy, cash infrastructure)",
+    "market_impact fields all empty/default despite source containing information relevant to payment system infrastructure"
   ],
   "human_review_required": true,
-  "human_review_reason": "The source is factually accurate and well-represented in the record. However, it falls outside the archive's defined scope (market structure or macro catalysts). Human judgment is needed to determine whether to accept records that are factually correct but topically irrelevant to the archive's purpose.",
-  "suggested_status": "rejected",
+  "human_review_reason": "The generated record has failed to extract any content from the source. All major content fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are empty, indicating a potential extraction failure or systematic error. Human review is required to determine whether this is a processing failure or deliberate rejection. The source itself is a legitimate government document with clear archival value about Treasury policy on penny production cessation.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "This is administrative guidance on coin production policy. It has no direct relevance to financial markets, interest rate policy, or macroeconomic conditions. The rounding mechanism described applies only to cash transactions and is designed to be revenue-neutral (rounding up as often as rounding down).",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The U.S. Treasury has suspended penny production as of December 23, 2025. The decision stems from rising production costs, which have increased from 1.3 cents to 3.69 cents per penny over 10 years. The U.S. Mint projects annual savings of $56 million from reduced material costs. The Federal Reserve will continue recirculating the approximately 114 billion pennies currently in existence. Once pennies are no longer available for change, cash transactions will be rounded to the nearest five cents. The penny will remain legal tender indefinitely.",
+    "why_it_matters": "This policy represents a significant shift in U.S. cash infrastructure. While pennies remain legal tender, their eventual phase-out will require adjustments to point-of-sale systems, consumer behavior, and potentially state tax laws. The rounding mechanism is designed to be revenue-neutral for consumers. This may also signal broader Treasury efforts to reduce production costs of low-value coinage.",
+    "macro_context": "Treasury's decision to cease penny production reflects both fiscal constraints and the broader trend toward non-cash transactions. With electronic payments becoming dominant, the marginal utility of the penny has diminished. The $56 million in projected annual savings represents a notable reduction in Mint operating costs.",
+    "market_structure_context": "The transition to rounded cash transactions has implications for retail payment infrastructure, point-of-sale system providers, and cash handling logistics. Businesses may need to update registers and adapt refund policies. The guidance recommends rounding only after taxes are calculated, and excludes non-cash payment methods from rounding requirements. Financial institutions will continue accepting penny deposits."
   }
 }

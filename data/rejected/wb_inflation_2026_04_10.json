@@ -1,0 +1,77 @@
+{
+  "id": "wb_inflation_2026_04_10",
+  "created_at": "2026-04-10T14:38:41.528712+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Inflation Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "https://api.worldbank.org/v2/country/all/indicator/FP.CPI.TOTL.ZG",
+    "published_at": "2026-04-10",
+    "source_type": "data_release_cpi",
+    "domain": "api.worldbank.org"
+  },
+  "summary": "Data fetch failed due to connection timeout. No inflation data was retrieved from the World Bank API. The attempted indicator was FP.CPI.TOTL.ZG (Consumer price index) for all countries.",
+  "key_points": [
+    "Attempted to retrieve World Bank global inflation indicator (FP.CPI.TOTL.ZG)",
+    "API request failed with HTTPSConnectionPool timeout after 30 seconds",
+    "No actual inflation data was received",
+    "Snapshot date indicated as 2026_04_10"
+  ],
+  "why_it_matters": "Cannot be determined—no data was retrieved. World Bank CPI data is typically used as a macro catalyst for global inflation expectations and central bank policy signals.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "World Bank inflation data would provide country-level and aggregate CPI figures used for global macro analysis. Since the fetch failed, macro context is unavailable.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "api-failure",
+    "data-unavailable",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only an API error message with no actual data or analysis",
+      "No extractable inflation figures, statistics, or research content",
+      "Record accurately describes the failure but cannot be archived as meaningful research",
+      "event_type 'unknown' is appropriate given no data was retrieved, but source_type 'data_release_cpi' is misleading since no data was released",
+      "Source has zero archival value for a finance research archive"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_10.txt",
+  "notes": "This source is not relevant to market structure. The attempted topic (global inflation) is macro-catalyst adjacent, but the source contains no actual data or analysis—only a connection timeout error. The World Bank indicator FP.CPI.TOTL.ZG (Consumer price index) would normally be archiveable as a macro data release, but the failed fetch means there is nothing to archive. Recommend attempting the API call again or finding an alternative source for this data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 0,
+    "reasoning": [
+      "Source contains only an error message",
+      "No extractable data, figures, or analysis",
+      "API connection timeout prevents any content retrieval"
+    ]
+  }
+}

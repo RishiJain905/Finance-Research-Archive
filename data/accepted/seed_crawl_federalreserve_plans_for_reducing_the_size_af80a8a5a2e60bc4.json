@@ -1,65 +1,68 @@
 {
   "id": "seed_crawl_federalreserve_plans_for_reducing_the_size_af80a8a5a2e60bc4",
-  "created_at": "2026-04-01T13:43:52.419167+00:00",
+  "created_at": "2026-04-10T06:25:58.048909+00:00",
   "status": "accepted",
-  "topic": "market structure",
+  "topic": "macro catalysts",
   "event_type": "balance_sheet_update",
   "title": "Plans for Reducing the Size of the Federal Reserve's Balance Sheet",
   "source": {
-    "name": "Board of Governors of the Federal Reserve System",
+    "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504b.htm",
+    "domain": "www.federalreserve.gov",
     "published_at": "2022-05-04",
-    "source_type": "fomc_statement",
-    "domain": "www.federalreserve.gov"
+    "source_type": "press_release"
   },
-  "summary": "The Federal Reserve announced plans for quantitative tightening beginning June 1, 2022, with monthly caps on securities runoff set at $30 billion for Treasuries and $17.5 billion for agency MBS initially, doubling to $60 billion and $35 billion respectively after three months. All FOMC participants agreed to the plan, which is designed to reduce the balance sheet in a predictable manner while maintaining an ample reserves regime.",
+  "summary": "The Federal Reserve announced plans to reduce its balance sheet starting June 1, 2022, by setting caps on reinvestment of principal payments received from securities held in the System Open Market Account (SOMA). Treasury securities caps will start at $30 billion per month and increase to $60 billion per month after three months, while agency debt and mortgage-backed securities caps will start at $17.5 billion per month and increase to $35 billion per month after three months.",
   "key_points": [
-    "Reinvestment caps begin June 1, 2022: Treasury securities capped at $30bn/month initially, rising to $60bn/month after three months",
-    "Agency debt and mortgage-backed securities capped at $17.5bn/month initially, rising to $35bn/month after three months",
-    "Treasury runoff includes Treasury coupon securities and Treasury bills to the extent coupon maturities fall below the monthly cap",
-    "The Committee intends to slow and stop balance sheet decline when reserve balances are \"somewhat above\" ample reserves level",
-    "The Fed will manage securities holdings as needed to maintain ample reserves over time after runoff ceases",
-    "The Committee retains flexibility to adjust any details of the approach based on economic and financial developments"
+    "QT to begin June 1, 2022 with caps on reinvestment of principal payments",
+    "Treasury securities monthly cap: $30bn initially, rising to $60bn after three months",
+    "Agency debt and agency MBS monthly cap: $17.5bn initially, rising to $35bn after three months",
+    "Treasury coupon securities and bills will decline under the monthly cap",
+    "The Committee intends to maintain securities holdings in amounts needed for an 'ample reserves regime'",
+    "Runoff will slow and stop when reserve balances are 'somewhat above' the level judged ample"
   ],
-  "why_it_matters": "This announcement formalized the Fed's quantitative tightening (QT) program, representing a significant shift in monetary policy after years of asset purchases. The specific caps and timeline gave markets a predictable framework for understanding the pace of balance sheet reduction. The distinction between Treasuries and MBS caps, along with the phase-in schedule, provided forward guidance on the structural composition of the Fed's balance sheet going forward.",
+  "why_it_matters": "This announcement formalized the Fed's Quantitative Tightening (QT) program, marking a significant shift from the pandemic-era QE. The pace of balance sheet reduction—up to $95bn per month combined cap—represented a substantial tightening of financial conditions and affected Treasury and MBS markets directly.",
   "market_impact": {
     "asset_classes": [
-      "bonds"
+      "bonds",
+      " equities",
+      "fx"
     ],
-    "directional_bias": "neutral",
+    "directional_bias": "mixed",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "The announcement formalized the transition from the Fed's post-2008 ample reserves framework, describing how principal payments would be capped and reinvestment would cease once caps are exceeded. The language around maintaining 'ample reserves' and the commitment to adjust QT pace based on financial conditions indicated the Fed was preserving flexibility in its reserve management operations.",
+  "macro_context": "This QT announcement accompanied the May 2022 FOMC meeting where the Fed also raised rates by 50 basis points. The dual tightening via rate hikes and balance sheet reduction signaled aggressive policy normalization to combat inflation. The source does not provide forward-looking market impact predictions.",
+  "market_structure_context": "The announcement details the operational mechanics of balance sheet runoff, specifically the monthly caps on SOMA reinvestment. It describes the transition to an 'ample reserves regime' and notes that once runoff ceases, reserve balances will continue declining until they reach an 'ample level'.",
   "important_numbers": [
-    "$30 billion/month (initial Treasury cap)",
-    "$60 billion/month (Treasury cap after 3 months)",
-    "$17.5 billion/month (initial agency MBS/debt cap)",
-    "$35 billion/month (agency cap after 3 months)"
+    "$30bn/month initial Treasury cap",
+    "$60bn/month maximum Treasury cap",
+    "$17.5bn/month initial agency MBS/debt cap",
+    "$35bn/month maximum agency MBS/debt cap",
+    "June 1, 2022 start date",
+    "3-month ramp-up period"
   ],
   "tags": [
-    "fed",
+    "qt",
     "balance-sheet",
     "quantitative-tightening",
-    "qt",
     "soma",
-    "fomc",
+    "fed",
     "monetary-policy",
-    "reserve-management",
-    "runoff"
+    "treasury",
+    "mbs",
+    "reserve-balances",
+    "fomc"
   ],
   "llm_review": {
-    "initial_confidence": 8,
-    "verification_confidence": 8,
+    "initial_confidence": 9,
+    "verification_confidence": 9,
     "verdict": "accept",
-    "issues_found": [
-      "source_type field incorrectly set to 'fomc_statement' - source is a Federal Reserve press release (monetary20220504b.htm in newsevents/pressreleases/), not an FOMC statement document. Should be 'press_release'. While the press release describes Committee decisions, it is a separate accompanying document, not the FOMC statement itself."
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Historical document from 2022. Still valid as archival record of QT framework announcement but should be flagged as historical for context."
+    "notes": ""
   },
   "human_feedback": {
     "decision": "",
@@ -70,20 +73,20 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_plans_for_reducing_the_size_af80a8a5a2e60bc4.txt",
-  "notes": "This is a historical record of the Fed's May 2022 QT announcement. While the technical details remain accurate as historical reference, the publication date is significantly before TODAY (2026-04-01). The source represents the initial framework announcement and does not reflect subsequent adjustments to QT pace that occurred later in 2022-2023. Archive for historical reference on Fed balance sheet policy evolution, but do not treat as current policy guidance.",
+  "notes": "Historical record. This is an official Federal Reserve press release from May 2022 announcing the start of Quantitative Tightening. The content is factual and well-sourced but predates TODAY by nearly 4 years. MARKET_IMPACT marked as unknown/mixed confidence because the source does not discuss market impact directly; the historical impact is outside knowledge not present in source text.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 73.0,
+    "score": 74.5,
     "reasoning": [
-      "quality score: 73.0/100 (useful_context)",
+      "quality score: 74.5/100 (useful_context)",
       "high verification confidence",
-      "minor issues found (1)",
+      "no issues found during verification",
       "clear why_it_matters explanation",
       "contains useful structured numbers",
       "high-trust source",
-      "moderate topic relevance",
+      "peripheral topic",
       "lower event significance"
     ]
   }

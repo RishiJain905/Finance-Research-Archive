@@ -1,0 +1,89 @@
+{
+  "id": "10y_yield_2026_04_11",
+  "created_at": "2026-04-11T14:05:00.735059+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "10-Year Treasury Yield (DGS10) Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-11",
+    "source_type": "data_release_other"
+  },
+  "summary": "The 10-Year Treasury Yield closed at 4.29% on April 9, 2026, unchanged from the prior day. The yield has declined 6 basis points over the past week, falling from 4.35% on April 3 to the current level.",
+  "key_points": [
+    "10-Year Treasury Yield stood at 4.29% as of 2026-04-09",
+    "The yield was unchanged on a day-over-day basis (4.29% on April 8 to 4.29% on April 9)",
+    "Weekly decline: 4.35% (April 3) to 4.29% (April 9), a 6 basis point decrease",
+    "The yield trended lower across the week: 4.35% → 4.34% → 4.33% → 4.29% → 4.29%"
+  ],
+  "why_it_matters": "The 10-year Treasury yield is a benchmark for mortgage rates, corporate borrowing costs, and risk-free asset valuations. This snapshot indicates the yield has stabilized near 4.29% after declining modestly from 4.35% earlier in the week.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The 10-year yield around 4.29% suggests ongoing normalization from post-election highs, consistent with moderating inflation expectations and steady Fed policy positioning. No specific macro catalyst is identified in this data snapshot.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.29%",
+    "4.35%",
+    "6 bps",
+    "2026-04-09"
+  ],
+  "tags": [
+    "10-year-yield",
+    "treasury",
+    "yield-curve",
+    "macro",
+    "interest-rates",
+    "bond-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is set to 'unknown' but source_type correctly identifies this as 'data_release_other' - inconsistent metadata",
+      "Source URL is empty - FRED series URL should be https://fred.stlouisfed.org/series/DGS10",
+      "published_at shows '2026-04-11' but this is the snapshot date, not an original publication date from FRED",
+      "Pure data snapshot with no analytical content, commentary, or research value - insufficient archival value for a research archive",
+      "Record contains only numerical observations without any explanatory context or catalyst identification",
+      "why_it_matters, macro_context, and market_structure_context are generated text not present in the source and are speculative extrapolations"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_11.txt",
+  "notes": "This is a pure data snapshot from FRED without any analytical content. The SOURCE METADATA indicates TOPIC is 'macro catalysts' and the 10-year yield is indeed a macro indicator, but this specific record contains only the numerical observation with no commentary. For research archive purposes, this raw data point has limited standalone value. Recommend pairing with a news article or research piece that provides context for the yield level.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "level_1",
+    "score": 3,
+    "reasoning": [
+      "Raw price data only - no analysis or commentary",
+      "No context provided for observed values",
+      "Cannot support research questions beyond basic fact retrieval",
+      "Missing URL and full source attribution",
+      "Published_at date reflects snapshot date, not an original publication date"
+    ]
+  }
+}

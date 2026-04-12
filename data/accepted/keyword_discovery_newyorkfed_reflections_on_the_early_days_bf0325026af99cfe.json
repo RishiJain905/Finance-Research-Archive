@@ -1,0 +1,102 @@
+{
+  "id": "keyword_discovery_newyorkfed_reflections_on_the_early_days_bf0325026af99cfe",
+  "created_at": "2026-04-12T01:31:23.904651+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "speech_neutral",
+  "title": "Reflections on the Early Days of Reserve Management Purchases and the Maintenance of Ample Reserves",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/speeches/2026/per260326",
+    "published_at": "2026-03-26",
+    "source_type": "speech",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "SOMA Manager Roberto Perli outlined the Federal Reserve's transition from an abundant to an ample reserves regime, detailing how balance sheet runoff and TGA dynamics tightened money market conditions in 2025. The FOMC concluded SOMA securities runoff effective December 1, 2025, after which reserve management purchases (RMPs) began to maintain reserves within the ample range.",
+  "key_points": [
+    "FOMC determined reserves were approaching the ample range at its October 2025 meeting and decided to conclude SOMA securities runoff effective December 1",
+    "When reserves declined to the ample range in December 2025, the Desk began RMPs to maintain reserves within that range",
+    "ON RRP usage declined to de minimis levels by October 2025, reducing the pool of funds available to shift into private repo",
+    "Repo reference rates rose sustainably above EFFR and showed increased volatility and sensitivity to Treasury issuance",
+    "SRP usage became larger and more frequent as repo market conditions tightened",
+    "Federal debt limit dynamics temporarily boosted system liquidity in H1 2025, then reversed as Treasury rebuilt TGA after the July limit increase"
+  ],
+  "why_it_matters": "This speech provides the New York Fed SOMA Manager's perspective on the transition away from quantitative tightening and into the ample reserves framework. Understanding the Fed's operational framework is essential for money market participants, as the shift affects repo rates, federal funds dynamics, and the distribution of reserves across the banking system. Note: Perli clarifies these are his own views, not necessarily those of the Federal Reserve Bank of New York or the FOMC.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "The speech explains how the TGA rebuild and cumulative balance sheet runoff brought system liquidity to the lowest levels since runoff began. This mechanical tightening in reserves has implications for the effective level of monetary policy restraint beyond the federal funds rate target.",
+  "market_structure_context": "Perli details the hallmarks of an ample reserves regime: EFFR close to IORB with low volatility, repo rates showing moderate volatility around high-pressure days, minimal ON RRP usage, occasional SRP usage, and moderate federal funds borrowing for distribution purposes. The speech explains the role of FHLBs in connecting repo and federal funds markets.",
+  "important_numbers": [
+    "0 bps: EFFR spread to IORB as of late 2025",
+    "7 bps: EFFR spread to IORB in mid-September 2025 (before tightening)",
+    "December 1, 2025: effective date of runoff conclusion",
+    "H1 2025: TGA drawdown period that temporarily boosted liquidity"
+  ],
+  "tags": [
+    "fed-balance-sheet",
+    "reserve-management-purchases",
+    "ample-reserves",
+    "repo-markets",
+    "soma",
+    "standing-repo",
+    "on-rrp",
+    "money-market-structure",
+    "monetary-policy-implementation",
+    "new-york-fed"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Minor: The speech explicitly includes disclaimer that 'views are my own, and not necessarily those of the Federal Reserve Bank of New York, the Federal Reserve System, or any other organization.' The why_it_matters field frames this as 'the authoritative New York Fed perspective,' which slightly overstates the institutional nature of these remarks."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_reflections_on_the_early_days_bf0325026af99cfe.txt",
+  "notes": "Source is a high-quality authoritative speech from the New York Fed SOMA Manager on Fed operational framework and balance sheet management. Publication date of March 26, 2026 is recent (within 90 days of TODAY). The speech is informational/educational rather than providing forward guidance on policy rates. Key contribution is the detailed explanation of how Fed staff monitors multiple reserve ample indicators rather than relying on any single metric. Disclaimer noted: views are Perli's own and not necessarily those of the FRBNY or FOMC.",
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 73.0,
+    "reasoning": [
+      "quality score: 73.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  },
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 85.0
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 85.0
+    }
+  ]
+}

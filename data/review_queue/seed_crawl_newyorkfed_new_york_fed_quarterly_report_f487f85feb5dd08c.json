@@ -1,0 +1,85 @@
+{
+  "id": "seed_crawl_newyorkfed_new_york_fed_quarterly_report_f487f85feb5dd08c",
+  "created_at": "2026-04-10T06:11:09.676421+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "New York Fed Quarterly Report Shows Student Loan Debt Continues to Grow",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/newsevents/news/research/2012/an120531",
+    "published_at": "2012-05-31",
+    "source_type": "research_paper",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "The New York Fed's Q1 2012 Quarterly Report on Household Debt and Credit showed student loan debt reached $904 billion, having grown $663 billion since 2003 and $293 billion since the household debt peak in Q3 2008. Student loans were the only form of consumer debt increasing during this period. The 90+ day delinquency rate for student loans was 8.69%, higher than mortgages, auto loans, and HELOCs.",
+  "key_points": [
+    "Student loan debt reached $904 billion in Q1 2012, up $30 billion from Q4 2011",
+    "Student loans surpassed credit card debt as the second highest form of consumer debt in Q2 2010",
+    "Student loan 90+ day delinquency rate was 8.69% in Q1 2012, up from 6.13% in Q1 2003",
+    "Overall household indebtedness declined to $11.44 trillion, down $100 billion from Q4 2011",
+    "Mortgage balances fell $81 billion (1.0%) during Q1 2012",
+    "Approximately $1.06 trillion of consumer debt was delinquent, with $796 billion seriously delinquent"
+  ],
+  "why_it_matters": "This quarterly data release documents household deleveraging trends following the 2008 financial crisis. Student loan debt was the sole category growing while other consumer debt categories declined, indicating structural shifts in household balance sheets. Note: The archive scope question here is whether household debt/consumer credit data falls under 'market structure' as defined (trading mechanisms, market operations, plumbing) or represents a separate category.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Historical household debt data from Q1 2012 showing consumer deleveraging trends during the post-2008 recovery period. Student loan debt was uniquely growing while other debt categories (mortgages, credit cards) were contracting since the Q3 2008 peak. The 90+ day delinquency rate for student loans (8.69%) was higher than mortgages, auto loans, and HELOCs.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$904 billion",
+    "$30 billion",
+    "$11.44 trillion",
+    "$100 billion",
+    "8.69%",
+    "6.13%"
+  ],
+  "tags": [
+    "new-york-fed",
+    "household-debt",
+    "student-loans",
+    "consumer-credit",
+    "delinquency",
+    "historical-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Topic metadata claims 'market structure' but source content is about household debt/consumer credit trends, not market structure (trading mechanisms, market plumbing, operations)",
+      "Source is from 2012 (approximately 14 years old), far exceeding the 90-day threshold",
+      "Event type 'data_release_other' is technically valid but borderline given archive focus on market structure and macro catalysts"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source content is factually accurate and well-parsed, but has significant relevance concerns: (1) Topic classification mismatch between metadata ('market structure') and actual content (household debt/consumer credit), (2) Age of 14 years makes it a borderline candidate for archival value assessment. Human decision needed on whether consumer credit/household debt data qualifies under the archive's scope and whether historical data from 2012 has sufficient archival value despite age."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_new_york_fed_quarterly_report_f487f85feb5dd08c.txt",
+  "notes": "NOT ARCHIVEABLE FOR CURRENT RESEARCH: Source is from 2012 (14 years old), relates to household debt trends rather than market structure (as defined for this archive), and contains no information relevant to current market structure or macro catalysts. The topic field should be changed from 'market structure' — this is consumer credit/household debt data, not market structure. Event type classified as data_release_other but source is not relevant to the archive's focus areas.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "not_applicable",
+    "score": 1,
+    "reasoning": [
+      "Source is 14 years old — well beyond relevance window",
+      "Does not address market structure or macro catalysts as defined",
+      "Topic classification mismatch between metadata and actual content",
+      "Historical consumer credit data with no current market implications"
+    ]
+  }
+}

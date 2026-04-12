@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data, analysis, or commentary - only an empty API response",
+    "Topic 'global_economy' is adjacent to macro catalysts but the source provides no actionable information",
+    "Cannot extract any market-relevant content from a null data response",
+    "event_type 'unknown' is technically correct but masks that no event or data release occurred",
+    "No archival value - empty response contains no historical or analytical content",
+    "Source attribution is incomplete (url, published_at, source_type, domain all empty)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately characterizes the source as a null response. The rejection is clearly justified. No human judgment needed - the source contains zero relevant content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank API returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) as of the 2026-04-12 snapshot date. No actual data, analysis, or commentary is present in this source.",
+    "why_it_matters": "This source provides no actionable information for finance research. It is a data retrieval failure rather than a substantive source.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
