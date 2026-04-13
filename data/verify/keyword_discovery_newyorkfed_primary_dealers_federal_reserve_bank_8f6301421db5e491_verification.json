@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the source clearly documents market infrastructure changes (primary dealer additions/removals). This should be classified as 'market_notice' or similar—not left as unknown.",
+    "source_type is 'reference_page' but the content is fundamentally a registry/listing of counterparties with historical revisions. This creates ambiguity about whether it meets the 'article-like' requirement.",
+    "No publication date provided in source metadata, making it harder to verify currency. Content shows page is actively maintained (January 2026 update), but a living reference document without timestamp is borderline.",
+    "The record captures accurate factual information but lacks a clear event catalyst. It's institutional documentation, not an event-driven source with policy signals."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is clearly relevant to market structure (documents Fed counterparty infrastructure) and contains accurate information, but presents borderline classification issues: (1) event_type is 'unknown' when the nature of the source (Fed operational infrastructure documentation) suggests it should be 'market_notice' or similar; (2) source is a registry/reference page rather than an article-like document. These ambiguities warrant human review to determine if this meets the archival value threshold.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The New York Fed maintains a list of 24 primary dealers—trading counterparties that implement monetary policy, make markets for official accountholders, and bid on a pro-rata basis in Treasury auctions. Most recent addition: MUFG Securities Americas Inc. (January 15, 2026).",
+    "why_it_matters": "Primary dealers are foundational market infrastructure for the Federal Reserve's monetary policy operations, Treasury market liquidity, and government securities distribution. Understanding who these counterparties are is essential for assessing potential fragilities in market plumbing, particularly during stress events when dealer capacity and behavior become critical.",
+    "macro_context": "The primary dealer community represents the core mechanism through which the Federal Reserve transmits monetary policy into financial markets. Historical changes (Lehman 2008, MF Global 2011, Credit Suisse 2023) illustrate market structure vulnerabilities and institutional evolution.",
+    "market_structure_context": "This page documents the official list of primary dealers—the institutional framework underlying the Fed's open market operations and Treasury market functioning. Each addition or removal signals changes to the counterparty network that executes Fed policy and provides Treasury market liquidity."
+  }
+}

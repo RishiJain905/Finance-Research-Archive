@@ -1,0 +1,79 @@
+{
+  "id": "keyword_discovery_newyorkfed_reverse_repo_operations_federal_reserve_8ee53e13c0f24000",
+  "created_at": "2026-04-13T06:13:51.760877+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Reverse Repo Operations - Federal Reserve Bank of New York",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/markets/desk-operations/reverse-repo",
+    "published_at": "",
+    "source_type": "navigation_page",
+    "domain": "www.newyorkfed.org"
+  },
+  "summary": "This source is a navigation and information hub page from the Federal Reserve Bank of New York describing the desk's reverse repo operations. It confirms that the New York Fed conducts daily repo and reverse repo operations to maintain the federal funds rate within the FOMC target range, but provides no current operational data, counterparty details, or specific transaction results.",
+  "key_points": [
+    "The New York Fed conducts daily repo and reverse repo operations.",
+    "The stated purpose is to keep the federal funds rate within the target range set by the FOMC.",
+    "The page provides links to operation results, counterparty information, historical transaction data, and FAQs.",
+    "No current operational data, rates, or counterparty specifics are included in the source body.",
+    "No publication date is provided for this informational page."
+  ],
+  "why_it_matters": "This page serves as an entry point to Federal Reserve market operations data but contains no substantive information for research purposes. Actual operation results would need to be retrieved from linked resources or the historical transaction data section.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page confirms the Federal Reserve's use of repo/reverse repo operations as a tool in its interest rate targeting framework, though no specific operational details are provided.",
+  "important_numbers": [],
+  "tags": [
+    "fed",
+    "reverse-repo",
+    "market-structure",
+    "new-york-fed",
+    "repo-market",
+    "federal-funds"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation_page - violates explicit rejection rule for navigation_page type",
+      "No publication date provided - cannot assess recency",
+      "Source contains no substantive content - only meta-descriptions and navigation elements",
+      "event_type is 'unknown' but source relates to Federal Reserve operations (market_notice would be more appropriate)",
+      "Record correctly identifies this as a low-value navigation page but incorrectly routes to review_queue instead of reject"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_reverse_repo_operations_federal_reserve_8ee53e13c0f24000.txt",
+  "notes": "Source is a thin informational navigation page from the New York Fed website. The body contains only meta-descriptions of available resources rather than actual market data or operation details. Not suitable for archiving as a standalone research note. For reverse repo operations data, the actual operation results or historical transaction data pages should be retrieved directly.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 15,
+    "reasoning": [
+      "Navigation page with no substantive data",
+      "No publication date",
+      "Thin content - mostly navigation elements",
+      "Insufficient for market structure research"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "keyword_discovery_newyorkfed_primary_dealers_federal_reserve_bank_8f6301421db5e491",
+  "created_at": "2026-04-13T06:14:53.905332+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Primary Dealers - Federal Reserve Bank of New York",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/markets/primarydealers",
+    "domain": "www.newyorkfed.org",
+    "published_at": "",
+    "source_type": "reference_page"
+  },
+  "summary": "The New York Fed maintains a list of 24 primary dealers—trading counterparties that implement monetary policy, make markets for official accountholders, and bid on a pro-rata basis in Treasury auctions. Most recent addition: MUFG Securities Americas Inc. (January 15, 2026).",
+  "key_points": [
+    "Primary dealers are the designated trading counterparties of the New York Fed for monetary policy implementation",
+    "Primary dealers are required to make markets for the New York Fed on behalf of its official accountholders",
+    "Primary dealers must bid on a pro-rata basis in all Treasury auctions at reasonably competitive prices",
+    "Current list contains 24 primary dealers as of early 2026",
+    "MUFG Securities Americas Inc. added January 15, 2026",
+    "SMBC Nikko Securities America, Inc. added January 31, 2025",
+    "Credit Suisse AG, New York Branch removed June 30, 2023 (previously Credit Suisse Securities (USA) LLC was removed and replaced in 2017)"
+  ],
+  "why_it_matters": "Primary dealers are foundational market infrastructure for the Federal Reserve's monetary policy operations, Treasury market liquidity, and government securities distribution. Understanding who these counterparties are is essential for assessing potential fragilities in market plumbing, particularly during stress events when dealer capacity and behavior become critical.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "treasuries"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The primary dealer community represents the core mechanism through which the Federal Reserve transmits monetary policy into financial markets. Historical changes (Lehman 2008, MF Global 2011, Credit Suisse 2023) illustrate market structure vulnerabilities and institutional evolution.",
+  "market_structure_context": "This page documents the official list of primary dealers—the institutional framework underlying the Fed's open market operations and Treasury market functioning. Each addition or removal signals changes to the counterparty network that executes Fed policy and provides Treasury market liquidity.",
+  "important_numbers": [
+    "24 primary dealers (current count)",
+    "MUFG Securities Americas Inc. added January 15, 2026",
+    "SMBC Nikko Securities America, Inc. added January 31, 2025",
+    "Credit Suisse AG removed June 30, 2023"
+  ],
+  "tags": [
+    "primary-dealers",
+    "fed-operations",
+    "new-york-fed",
+    "treasury-market",
+    "monetary-policy-implementation",
+    "market-structure",
+    "counterparties"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but the source clearly documents market infrastructure changes (primary dealer additions/removals). This should be classified as 'market_notice' or similar—not left as unknown.",
+      "source_type is 'reference_page' but the content is fundamentally a registry/listing of counterparties with historical revisions. This creates ambiguity about whether it meets the 'article-like' requirement.",
+      "No publication date provided in source metadata, making it harder to verify currency. Content shows page is actively maintained (January 2026 update), but a living reference document without timestamp is borderline.",
+      "The record captures accurate factual information but lacks a clear event catalyst. It's institutional documentation, not an event-driven source with policy signals."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is clearly relevant to market structure (documents Fed counterparty infrastructure) and contains accurate information, but presents borderline classification issues: (1) event_type is 'unknown' when the nature of the source (Fed operational infrastructure documentation) suggests it should be 'market_notice' or similar; (2) source is a registry/reference page rather than an article-like document. These ambiguities warrant human review to determine if this meets the archival value threshold."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_primary_dealers_federal_reserve_bank_8f6301421db5e491.txt",
+  "notes": "This is a reference page documenting the current list and historical changes to primary dealers. The most recent operational event was the addition of MUFG Securities Americas Inc. on January 15, 2026. This page is relevant to market structure as it captures the institutional framework of the Fed's monetary policy implementation infrastructure. No publication timestamp; treat as current reference data. The historical timeline also documents notable events (Lehman Brothers 2008, MF Global 2011, Credit Suisse 2023) that may be useful for understanding market structure evolution.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "B",
+    "score": 7,
+    "reasoning": [
+      "High-authority source (Federal Reserve Bank of New York)",
+      "Factual and precise information about market infrastructure",
+      "Contains recent update (January 2026) confirming page is maintained",
+      "Comprehensive historical record of dealer changes",
+      "Limited as standalone research note—no policy interpretation or analysis, purely factual registry"
+    ]
+  }
+}

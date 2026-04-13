@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation_page - violates explicit rejection rule for navigation_page type",
+    "No publication date provided - cannot assess recency",
+    "Source contains no substantive content - only meta-descriptions and navigation elements",
+    "event_type is 'unknown' but source relates to Federal Reserve operations (market_notice would be more appropriate)",
+    "Record correctly identifies this as a low-value navigation page but incorrectly routes to review_queue instead of reject"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately assessed the source as a thin navigation page and identified it as low-value, but the suggested_status of 'review_queue' contradicts the explicit rule to reject navigation_page types. The human must confirm rejection is appropriate per rules.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
