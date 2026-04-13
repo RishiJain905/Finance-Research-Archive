@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "important_numbers lists '4 authors (Nicolas, Sicard, Laboure, Sun, Rodriguez-Martinez)' but source metadata shows 5 authors including Marion Laboure - count and names are inconsistent",
+    "why_it_matters contains speculative claims about practical trading utility ('could serve as a leading indicator for crypto positioning') that cannot be verified from abstract-only content",
+    "market_impact directional_bias set to 'mixed' with confidence 3 - no basis in source for directional assessment",
+    "Abstract-only source provides no specific numerical results (Granger causality statistics, p-values, coefficient estimates) to verify the magnitude or significance of reported findings",
+    "No information in source about regime-dependent findings beyond qualitative mention"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record acknowledges abstract-only source but makes extrapolated claims about market impact and practical trading utility. The author count error needs correction. While summary accuracy is high for an abstract, the why_it_matters and market_impact sections contain unverifiable assertions that should be toned down or flagged for human judgment on appropriateness.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This research provides directional evidence that Bitcoin is sensitive to monetary policy narratives, not just realized rate changes. The paper suggests that LLM-derived sentiment measures could potentially serve as indicators for understanding crypto market dynamics. The finding that ex-ante expectations may matter more than ex-post implementation challenges assumptions about Bitcoin as a pure inflation hedge, though specific quantitative thresholds and practical trading applications require full paper review.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

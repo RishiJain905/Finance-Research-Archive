@@ -1,0 +1,63 @@
+{
+  "id": "arxiv_q_fin_rm_reliability_aware_etf_tail_risk_monitoring_3acb70f7",
+  "created_at": "2026-04-13T04:53:59.006632+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Reliability-Aware ETF Tail-Risk Monitoring",
+  "source": {
+    "name": "arXiv q-fin.RM",
+    "url": "http://arxiv.org/abs/2604.08765v1",
+    "published_at": "2026-04-09T21:05:24+00:00",
+    "source_type": "academic_paper",
+    "domain": "arxiv.org"
+  },
+  "summary": "This paper by Tenghan Zhong proposes a reliability-aware framework for daily ETF tail-risk surveillance. The framework combines data quality checks at service time, lower-tail prediction, uncertainty scoring, and conservative risk adjustment. It is evaluated on a daily panel of multiple ETFs augmented with VIX and yield-curve data using a rolling walk-forward design. Results suggest the framework improves tail-risk reliability during stressed periods and maintains robustness under deliberate input corruption.",
+  "key_points": [
+    "The framework targets next-day tail-risk surveillance for ETFs and addresses unreliability caused by data quality degradation, market condition shifts, or unstable predictive performance.",
+    "Four components are combined: service-time quality checks, lower-tail prediction, uncertainty scoring, and conservative risk adjustment.",
+    "Empirical evaluation uses a daily panel of multiple ETFs augmented with VIX and yield-curve information under a rolling walk-forward design.",
+    "The system improves tail-risk reliability during stressed market periods while preserving full evaluable coverage.",
+    "Under deliberate input corruption, the quality layer is reported to enhance service robustness."
+  ],
+  "why_it_matters": "Practitioners running ETF risk management or systematic volatility strategies may find relevance in a framework that explicitly accounts for data quality and model reliability under stressed conditions. However, the source is an abstract-only (98 words) with no empirical results, model specifications, or concrete numbers—limiting actionable takeaways.",
+  "market_impact": {
+    "asset_classes": [
+      "equities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The framework incorporates VIX and yield-curve information as inputs to ETF tail-risk prediction, implying macro variables are treated as conditioning signals for risk monitoring.",
+  "market_structure_context": "The paper addresses operational reliability of ETF risk monitoring services—specifically how data quality degradation and shifting market conditions can undermine daily risk surveillance. This touches on the robustness of risk infrastructure used in ETF market operations.",
+  "important_numbers": [],
+  "tags": [
+    "etf",
+    "tail-risk",
+    "risk-monitoring",
+    "vix",
+    "yield-curve",
+    "quantitative-finance",
+    "market-structure",
+    "academic-paper"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is abstract-only (98 words) with no empirical detail, model specifications, or concrete numbers to verify.",
+      "Topic classification as 'market structure' is marginal; this is primarily methodological quantitative finance research.",
+      "No actionable market or policy signal present in the source."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The summary is factually accurate to the source text, and the record appropriately flags the thinness of the source in 'why_it_matters'. No fabricated claims detected. The core question is whether abstract-only academic preprints meet the archive's relevance threshold—this can be decided on policy grounds without content verification."
+  },
+  "raw_text_path": "data/raw/arxiv_q_fin_rm_reliability_aware_etf_tail_risk_monitoring_3acb70f7.txt",
+  "notes": "Source body is the paper abstract only (98 words). No concrete results, coefficients, or model details are available for extraction. The paper is recent (published 2026-04-09, within 90 days of TODAY 2026-04-13). Primary relevance is methodological; connection to market structure is indirect via ETF risk infrastructure. Confidence is low due to thin source content.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "fd089788dcbd7d97f69b5ccfbbddb5f45284120b"
+}
