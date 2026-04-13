@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source published 2018-07-13 — approximately 7.5 years before TODAY (2026-04-13), well beyond the 90-day threshold. However, this is an official Federal Reserve Monetary Policy Report submitted to Congress under the Federal Reserve Act, which carries clear archival value as a historical policy document.",
+    "Source body is truncated; only Part 1 (Recent Economic and Financial Developments) is verifiable. Parts 2 (Monetary Policy) and 3 (Summary of Economic Projections) are not accessible, so the record's claims are necessarily limited to labor market data. The record appropriately acknowledges this limitation.",
+    "source_type in the source block is listed as 'research_paper' but should more precisely be 'monetary_policy_report' to match the event_type taxonomy. Minor inconsistency.",
+    "market_structure_context is blank. While understandable for a historical labor market document, even a brief note on the rate cycle context (Fed was in a hiking cycle, raised rates four times in 2018) would add value. This is a minor omission rather than a factual error."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Document is 7.5 years old and the source body is truncated, preventing full verification of monetary policy and projections sections. Human reviewer should confirm whether the archival value of this official Fed MPR justifies inclusion despite age, and whether the partial-source limitation is acceptable given the record's scope is correctly bounded to labor market content only.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "As of mid-2018, the Federal Reserve was in an active rate-hiking cycle, having raised the federal funds rate twice already in 2018 (March and June) to a target range of 1.75–2.00%. The labor market tightness documented in this report — unemployment below all FOMC participants' longer-run estimates — was a key input into the Fed's justification for continued gradual rate increases. The Fed raised rates two additional times in 2018 (September and December)."
+  }
+}
