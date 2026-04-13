@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' — while the filing is a regulatory filing, it falls outside the defined taxonomy (regulatory_guidance would not apply here as this is not regulatory agency guidance but a corporate disclosure)",
+    "Source is a routine corporate 8-K filing with no relevance to market structure, macro catalysts, monetary policy, or financial market operations",
+    "Genesco is a small-cap retail company; internal compensation policy has no systemic financial market implications",
+    "Record contains no information about economic indicators, interest rates, market operations, or systemic financial developments",
+    "The record is factually accurate against the source, but the source itself has no archival value for a finance research archive focused on macro catalysts and market structure"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, but the underlying source is irrelevant to the archive's focus areas. Human decision needed on whether to accept and tag as 'irrelevant' or reject outright. Additionally, event_type 'unknown' should be corrected if accepted — no valid taxonomy value applies to routine corporate compensation disclosures.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing discloses Genesco Inc.'s adoption of a new Short-Term Incentive Plan (STIP) for employees. While accurately documented, this routine corporate governance disclosure regarding internal compensation arrangements has no relevance to financial market structure, macro catalysts, monetary policy, or systemic market developments.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

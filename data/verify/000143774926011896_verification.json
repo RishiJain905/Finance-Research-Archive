@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — while not required for this source type, a valid taxonomy value should be assigned if archiving",
+    "Source lacks relevance to market structure or macro catalysts per the archive's stated focus",
+    "Record quality tier correctly identifies source as 'Not relevant' (score 1) — this is inconsistent with archive inclusion criteria"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is factually accurate but lacks relevance to the archive's focus areas (market structure and macro catalysts). The generated record correctly notes this as a quality concern ('quality_tier: Not relevant, score: 1'). Human decision needed to confirm whether routine corporate governance disclosures at small regional banks meet archival inclusion thresholds, especially when they fall outside the stated focus on market structure and macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate governance disclosure about executive succession at a small regional bank. It carries no relevance to market structure, macro catalysts, or broader financial market dynamics. NSTS is a micro-cap regional bank with no systemic importance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
