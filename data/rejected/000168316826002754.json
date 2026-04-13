@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is entirely empty - all fields are default values",
+      "Source attribution completely missing (name, url, domain all blank)",
+      "Source is an individual company's 10-K filing - not relevant to market structure or macro catalysts",
+      "Source has no market-moving significance; a single small-cap tech company's annual filing does not constitute macro-relevant research",
+      "Cannot assess event_type - record has no content",
+      "Source type is regulatory filing, not article-like content suitable for this archive",
+      "No human-readable content visible in source to extract meaningful research signals from"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is completely empty with no extractable information. While the source (SEC 10-K for Mobiquity Technologies) is a valid document, it is not relevant to this archive's focus on market structure and macro catalysts. Individual company annual filings do not constitute macro research unless aggregated or analyzed in context. Additionally, source attribution is entirely missing."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

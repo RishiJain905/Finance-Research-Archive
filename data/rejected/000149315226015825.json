@@ -1,0 +1,46 @@
+{
+  "name": "SEC EDGAR",
+  "url": "https://www.sec.gov/Archives/edgar/data/1829311/000149315226015825/form8-k.htm",
+  "published_at": "2026-04-09",
+  "source_type": "sec_filing",
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Record contains no extracted content - summary, key_points, why_it_matters, macro_context, market_structure_context are all empty",
+      "Topic field is blank",
+      "Source attribution fields (name, url, domain) are empty despite being provided in metadata",
+      "The SEC 8-K filing contains significant material: Board authorized increase of share repurchase program from $1 million to $4 billion (April 9, 2026)",
+      "This is a highly material corporate action that would affect BMNR stock supply/demand dynamics",
+      "No event_type specified"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is essentially empty with all substantive fields blank despite the source containing a significant corporate announcement. A $1M to $4B share repurchase program increase is material market-moving news for the company. This appears to be a complete extraction failure rather than a content quality issue."
+  },
+  "summary": "Bitmine Immersion Technologies, Inc. (BMNR, NYSE) announced via SEC Form 8-K that its Board of Directors authorized an increase in the company's existing share repurchase program from $1 million to $4 billion. The announcement was made on April 9, 2026 under Item 7.01 Regulation FD Disclosure, with a press release attached as Exhibit 99.1.",
+  "key_points": [],
+  "why_it_matters": "A 4,000x expansion of the share repurchase program from $1M to $4B represents an extremely significant capital return decision. This could indicate strong management confidence in the company's valuation, potential stock price support, and substantial impact on BMNR float and supply/demand dynamics.",
+  "macro_context": "",
+  "market_structure_context": "The massive share repurchase authorization could drive BMNR stock demand, affect short-seller calculus, and influence options market activity around the stock. Share repurchases reduce outstanding shares, potentially boosting EPS metrics.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

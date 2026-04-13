@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a 10-K filing for a single cannabis company (Grown Rogue International Inc.)",
+    "Source contains only company-specific XBRL financial data with no macro economic, monetary policy, Treasury operations, or market structure content",
+    "event_type is set to 'unknown' which is correct given the source does not fit any defined taxonomy categories (FOMC statements, rate decisions, speeches, data releases, research papers, etc.)",
+    "Archive focus is on market structure and macro catalysts; individual company financial filings are outside scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as irrelevant to the research archive's focus areas. No fact-checking issues; this is simply an out-of-scope source that should be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is a micro-cap corporate credit amendment with no systemic market implications",
+    "event_type is 'unknown' but should be 'regulatory_guidance' (8-K filings are regulatory disclosures); missing event_type when correct type is obvious constitutes grounds for rejection per standards",
+    "No listed securities — Bright Mountain Media has no exchange-traded shares, making this irrelevant to equity market structure",
+    "Centre Lane Partners is a private credit fund — no public market data or price discovery implications",
+    "The why_it_matters field in the record itself correctly identifies that the source has 'no systemic market or macro relevance'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies the source as irrelevant; rejection criteria are unambiguous and no subjective judgment needed",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing is a micro-cap corporate credit amendment with no relevance to market structure or macro catalysts. Bright Mountain Media is a private Florida-based media company with no exchange-listed securities. Centre Lane Partners is a private credit fund. The credit agreement amendment defers a $1.2M payment and converts ~$201K interest to PIK — this has no systemic market implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is essentially empty - all key fields (source.name, source.url, source.domain, summary, key_points, etc.) are blank",
+      "Source attribution entirely missing in generated record",
+      "event_type is not provided and does not match any valid taxonomy value",
+      "Source is a company-specific SEC 10-K filing (Thunder Power Holdings, Inc.) - not relevant to market structure or macro catalysts",
+      "Source lacks archival value for finance research - this is a compliance/regulatory document for a small OTC-traded company",
+      "No market impact, macro context, or market structure relevance evident in the source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is empty and source is not relevant to macro/market structure research scope"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

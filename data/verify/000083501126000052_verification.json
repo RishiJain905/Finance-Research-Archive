@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - single corporate operational announcement",
+    "Event type set to 'unknown' but no valid taxonomy category applies to this corporate operational disclosure",
+    "Source contains no macro-economic data, policy signals, or market structure information",
+    "Thin content - primarily SEC filing boilerplate with minimal substantive disclosure",
+    "Record is correctly assessed as out of scope but should be rejected rather than review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record assessment is accurate but undercuts its own conclusion. The source is a single company's operational disclosure with no relevance to the archive's mandate (market structure, macro catalysts). The suggested_status 'review_queue' is inconsistent with verification_confidence 0 and the stated out-of-scope reasoning.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
