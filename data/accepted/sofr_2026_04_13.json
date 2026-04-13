@@ -1,0 +1,117 @@
+{
+  "id": "sofr_2026_04_13",
+  "created_at": "2026-04-13T14:58:16.104385+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "SOFR Daily Rate Snapshot – 2026-04-10",
+  "source": {
+    "name": "FRED – SOFR Series",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-10",
+    "source_type": "data_feed"
+  },
+  "summary": "The Secured Overnight Financing Rate (SOFR) printed at 3.61% on 2026-04-10, up 4 basis points from 3.57% on 2026-04-09. Over the most recent five trading sessions (2026-04-06 through 2026-04-10), SOFR has ranged between 3.57% and 3.65%, indicating moderate day-to-day volatility around the 3.60% area. No anomalous spike or structural dislocation is evident from the available data.",
+  "key_points": [
+    "SOFR on 2026-04-10 was 3.61%, a 4 bps increase from the prior day's 3.57%.",
+    "The five-day range (2026-04-06 to 2026-04-10) spans 3.57% to 3.65%, an 8 bps band.",
+    "The most recent high in the window was 3.65% on 2026-04-06; the low was 3.57% on 2026-04-09.",
+    "No extended directional trend is apparent: the rate moved 3.65 → 3.62 → 3.59 → 3.57 → 3.61 across the five sessions.",
+    "Data sourced from FRED SOFR series, snapshot date 2026-04-13; latest observation is 2026-04-10 (standard T+1 publication lag)."
+  ],
+  "why_it_matters": "SOFR is the primary benchmark for USD overnight secured funding and underpins trillions of dollars in floating-rate loans, derivatives, and debt instruments. Day-to-day SOFR movements reflect conditions in the Treasury repo market and the effective stance of Fed policy implementation. Persistent drift away from the Fed's policy corridor or unusual volatility can signal balance sheet stress, collateral scarcity, or quarter-end/year-end funding pressure. Traders, risk managers, and rates desks monitor SOFR prints daily to assess funding costs and basis risk.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 2
+  },
+  "macro_context": "",
+  "market_structure_context": "SOFR is the ARRC-endorsed replacement for USD LIBOR and reflects the cost of overnight borrowing collateralised by U.S. Treasury securities. The current 3.61% print sits within normal operating range relative to the Fed funds target corridor; no repo market stress or rate spike is indicated by this snapshot. The 8 bps five-day range is within typical intra-week variation and does not suggest collateral scarcity or balance sheet dislocation.",
+  "important_numbers": [
+    "3.61% – SOFR on 2026-04-10 (latest)",
+    "3.57% – SOFR on 2026-04-09 (previous)",
+    "+0.04% (4 bps) – day-over-day change",
+    "3.65% – five-day high (2026-04-06)",
+    "3.57% – five-day low (2026-04-09)",
+    "8 bps – five-day range"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "overnight-rate",
+    "money-markets",
+    "market-structure",
+    "rates",
+    "funding"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_13.txt",
+  "notes": "This is a routine quantitative data snapshot from FRED. The record captures daily SOFR levels for the week of 2026-04-06 to 2026-04-10. Published_at set to the latest observation date (2026-04-10); snapshot was taken on 2026-04-13 (TODAY), so the data is current and not stale. No structural anomaly or macro catalyst is present in this snapshot; value as an archive record is primarily for time-series continuity and funding-market monitoring.",
+  "linked_quant_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "arxiv_q_fin_rm_reliability_aware_etf_tail_risk_monitoring_3acb70f7",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "market-structure"
+      ],
+      "link_score": 148.8
+    },
+    {
+      "record_id": "bank_of_england_publications_r_bank_of_england_weekly_report_8_april_2026_bank_of_england_9526dd4d",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    },
+    {
+      "record_id": "ny_fed_liberty_street_economic_a_closer_look_at_emerging_market_resilience_during_recent_sh_bdce92e4",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    }
+  ],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 71.5,
+    "reasoning": [
+      "quality score: 71.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body contains no valid data - only an API response stating 'No recent valid observations were returned'",
+    "Record has no market-relevant content, no data points, no analysis, and no narrative",
+    "source.url is empty - missing source attribution violates core archival standards",
+    "published_at is empty - no temporal anchor for the record",
+    "source_type is unknown - cannot establish provenance",
+    "Empty data pull from a deprecated or temporarily unavailable indicator has no archival value",
+    "Record is functionally equivalent to a failed API query, not a publishable research document"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear-cut reject case. The source is a failed data retrieval response with no content, no attribution URL, no publication date, and no analytical value. The LLM review correctly identified this but suggested review_queue rather than reject. This should be rejected and the underlying data issue flagged for retry rather than archived.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

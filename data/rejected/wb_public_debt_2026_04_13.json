@@ -1,0 +1,72 @@
+{
+  "id": "wb_public_debt_2026_04_13",
+  "created_at": "2026-04-13T15:00:41.394283+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "data.worldbank.org",
+    "published_at": "2026-04-13",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS (total public debt as % of GDP) returned no valid observations for the queried period, yielding an empty dataset.",
+  "key_points": [
+    "World Bank indicator GC.DOD.TOTL.GD.ZS represents total central government public debt as a percentage of GDP",
+    "The query returned no valid observations for the snapshot date 2026-04-13",
+    "No debt levels, country breakdowns, or historical comparisons are available from this source",
+    "The data retrieval failure prevents any analysis of current global debt dynamics"
+  ],
+  "why_it_matters": "Public debt-to-GDP ratios are a key macro indicator for sovereign credit risk, fiscal sustainability assessments, and cross-country comparisons. The absence of this data leaves a gap in monitoring global fiscal conditions.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Public debt metrics are macro-relevant for sovereign bond spreads, currency valuations, and credit ratings. The World Bank indicator covers central government debt across reporting countries, but no data was available to populate this record.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "debt-to-gdp",
+    "global-fiscal",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains no valid data observations — the dataset is entirely empty, making this record content-free",
+      "Source URL is missing from the record (source.url is empty string)",
+      "Source is a failed data query response, not an article-like document — it lacks archival value as a research record",
+      "event_type is set to 'unknown' but the source yields no content to justify any classification; the record cannot serve as a meaningful data_release_other either",
+      "No numbers, findings, or macro signals are present; the record documents a retrieval failure rather than substantive research",
+      "Source is too thin and noisy to have archival value per core rules — empty dataset sources should be rejected",
+      "market_structure_context is empty, consistent with no usable content",
+      "The 'why_it_matters' and 'macro_context' fields are speculative generic text not supported by any actual source content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_13.txt",
+  "notes": "Source is a data query response that returned no observations. The World Bank indicator exists (GC.DOD.TOTL.GD.ZS - Central government debt, total (% of GDP)) but no values were retrieved for this snapshot. This is a data retrieval issue, not a content issue. The record documents the failed query rather than providing usable macro data. Recommend retrying the query or accessing via alternative World Bank data portal. Not relevant to market structure; macro catalyst relevance is theoretical without actual debt figures.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 1,
+    "reasoning": [
+      "No valid data observations returned",
+      "Empty dataset - source provides no substantive information",
+      "Cannot extract any market-relevant numbers",
+      "Data retrieval failure documented instead of actual content"
+    ]
+  }
+}

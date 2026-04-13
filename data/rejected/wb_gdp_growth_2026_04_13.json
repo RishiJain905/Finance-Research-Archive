@@ -1,0 +1,75 @@
+{
+  "id": "wb_gdp_growth_2026_04_13",
+  "created_at": "2026-04-13T14:59:52.496328+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World GDP Growth Rate - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_api_response",
+    "domain": ""
+  },
+  "summary": "The World Bank API returned no valid observations for indicator NY.GDP.MKTP.KD.ZG (GDP growth rate). This is an empty data response with no actual GDP figures, making it impossible to extract any market-relevant information from this source.",
+  "key_points": [
+    "No recent valid observations were returned for indicator NY.GDP.MKTP.KD.ZG",
+    "This is an API error/empty response, not an actual data release",
+    "No GDP growth figures, historical data, or forecasts are available in this source",
+    "The snapshot date is 2026-04-13 but no data point exists for this date"
+  ],
+  "why_it_matters": "This source provides no actionable data for finance research. It is an empty API response that cannot support any analysis of global economic conditions or GDP-based trading strategies.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp",
+    "no-data",
+    "api-response",
+    "empty"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is an empty API response with no actual data - provides no extractable information for research",
+      "Source has no relevance to market structure or macro catalysts",
+      "No archival value - nothing to archive from a null API response",
+      "event_type set to 'unknown' is technically correct but source doesn't constitute an event"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_13.txt",
+  "notes": "This source is not relevant to the finance research archive. The World Bank API returned a null response with the message 'No recent valid observations were returned for indicator NY.GDP.MKTP.KD.ZG.' No GDP growth figures, forecasts, or historical data are present. The source contains no extractable information for market structure or macro catalyst analysis.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "null",
+    "score": 0,
+    "reasoning": [
+      "Source is an empty API response with no actual data",
+      "No extractable content for macro catalyst or market structure analysis",
+      "Lowest quality tier - provides no research value"
+    ]
+  }
+}

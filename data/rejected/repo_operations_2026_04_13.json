@@ -1,0 +1,77 @@
+{
+  "id": "repo_operations_2026_04_13",
+  "created_at": "2026-04-13T14:59:22.706895+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "NY Fed Repo Operations - Data Fetch Failed",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "markets.newyorkfed.org",
+    "published_at": "",
+    "source_type": "unknown"
+  },
+  "summary": "Attempted to retrieve NY Fed repo operation data failed with a 400 Bad Request error. No content was available for archival. The target was the latest repo operation results from the NY Fed API endpoint.",
+  "key_points": [
+    "API request to NY Fed repo operations endpoint returned 400 Bad Request error",
+    "Target URL was https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation data was retrieved or processed",
+    "Attempt date: 2026-04-13"
+  ],
+  "why_it_matters": "Repo operation data is critical for understanding short-term liquidity conditions and the Federal Reserve's market intervention. The failure to fetch this data means no insight into current repo market dynamics is available for this date.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The failure to access NY Fed repo operations data prevents monitoring of Fed lending operations in the overnight/repo market, a key component of the US monetary plumbing framework.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo",
+    "api-error",
+    "market-structure",
+    "data-failed",
+    "federal-reserve"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "No substantive content retrieved - source is a failed API response (HTTP 400) containing only an error message",
+      "Source is not archiveable: an error message has no informational content beyond documenting a technical failure",
+      "event_type set to 'unknown' is technically correct given the source, but this record type has no archival value",
+      "No repo operation data, market dynamics, or policy information available to archive",
+      "The 'why_it_matters' and 'market_structure_context' fields make claims about what the data would show if it existed, but the source provides no such data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The source is not content but rather a diagnostic error from a failed API call. While the record accurately captures the technical failure, archiving an error message provides no research value. This record should be rejected and the fetch issue documented separately (e.g., in engineering logs) rather than as a research archive entry. If repo operation data is needed, alternative retrieval methods or corrected API endpoints should be pursued."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_13.txt",
+  "notes": "Source is a failed API response (HTTP 400) rather than actual content. No repo operation data was retrieved. This record serves as a diagnostic marker for the fetch failure. Retry with corrected URL or alternative source recommended.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "fail",
+    "score": 0,
+    "reasoning": [
+      "No substantive content retrieved",
+      "API fetch failure prevents any analysis",
+      "Low confidence in record utility"
+    ]
+  }
+}

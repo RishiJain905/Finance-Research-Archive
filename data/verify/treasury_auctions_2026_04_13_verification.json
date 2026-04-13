@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body is a 404 HTTP error message with no substantive financial data",
+    "Record cannot be meaningfully archived as there is no auction data to capture",
+    "Source provides zero archival value — it is an error state, not a data source",
+    "Despite accurate error reporting, the underlying source has no content worth preserving"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately documents a fetch failure, but the source itself has no archival value. Rejection is appropriate per rule 6 (thin low-signal sources bias toward reject) and rule 7 (too thin to have archival value).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "An automated fetch of Treasury auction data from the U.S. Treasury FiscalData API failed with a 404 Not Found error on 2026-04-13. No auction records were retrieved. This record cannot be substantively populated and has no archival value as the source is an HTTP error message only.",
+    "why_it_matters": "Treasury auction data is a key market structure input, but this record captures only a failed API request with no substantive content. Requires re-ingestion once the API endpoint is restored or corrected.",
+    "macro_context": "",
+    "market_structure_context": "Intended to capture U.S. Treasury auction results for bond market supply dynamics. No data available due to API failure."
+  }
+}

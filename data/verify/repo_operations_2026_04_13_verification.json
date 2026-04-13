@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "No substantive content retrieved - source is a failed API response (HTTP 400) containing only an error message",
+    "Source is not archiveable: an error message has no informational content beyond documenting a technical failure",
+    "event_type set to 'unknown' is technically correct given the source, but this record type has no archival value",
+    "No repo operation data, market dynamics, or policy information available to archive",
+    "The 'why_it_matters' and 'market_structure_context' fields make claims about what the data would show if it existed, but the source provides no such data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is not content but rather a diagnostic error from a failed API call. While the record accurately captures the technical failure, archiving an error message provides no research value. This record should be rejected and the fetch issue documented separately (e.g., in engineering logs) rather than as a research archive entry. If repo operation data is needed, alternative retrieval methods or corrected API endpoints should be pursued.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

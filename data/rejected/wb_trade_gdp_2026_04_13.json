@@ -1,0 +1,63 @@
+{
+  "id": "wb_trade_gdp_2026_04_13",
+  "created_at": "2026-04-13T15:01:15.690637+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — World Bank Indicator TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "",
+    "source_type": "unknown"
+  },
+  "summary": "A data pull from the World Bank for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations as of 2026-04-13. The source body contains no usable data points. No analysis, summary, or market-relevant content can be derived from this record.",
+  "key_points": [],
+  "why_it_matters": "World trade as a share of GDP is a key macro indicator for gauging globalisation trends, trade openness, and cyclical demand conditions. However, this record contains no data and therefore carries no current informational value.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade",
+    "gdp",
+    "global-economy",
+    "data-gap"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains no valid data - only an API response stating 'No recent valid observations were returned'",
+      "Record has no market-relevant content, no data points, no analysis, and no narrative",
+      "source.url is empty - missing source attribution violates core archival standards",
+      "published_at is empty - no temporal anchor for the record",
+      "source_type is unknown - cannot establish provenance",
+      "Empty data pull from a deprecated or temporarily unavailable indicator has no archival value",
+      "Record is functionally equivalent to a failed API query, not a publishable research document"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_13.txt",
+  "notes": "Non-archiveable in current form. The World Bank API query for World Trade (% of GDP), indicator TG.VAL.TOTL.GD.ZS, returned no valid data as of the snapshot date 2026-04-13. This may indicate a data availability lag, API issue, or indicator discontinuation. No market structure or macro catalyst content is present. Confidence set to 1 (minimum above zero) to flag as a known attempted pull rather than a missing record.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "",
+    "score": 0,
+    "reasoning": [
+      "No data returned from source; record cannot be scored or tiered."
+    ]
+  }
+}
