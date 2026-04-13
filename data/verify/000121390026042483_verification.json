@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate governance filing (board appointment) with no relevance to market structure or macro catalysts",
+    "event_type set to 'unknown' is technically valid per taxonomy but indicates the source doesn't fit the research archive's scope",
+    "topic labeled 'not_relevant' in the record itself confirms this filing lacks archival value for a finance/macro research archive",
+    "SPAC director appointment has no bearing on interest rates, monetary policy, market structure, economic indicators, or financial stability",
+    "Record correctly identifies the source as governance-related but still submitted for archiving despite having no market impact"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is cleanly rejectable — the source has no relevance to macro catalysts or market structure, and even the record's own topic field ('not_relevant') confirms this. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

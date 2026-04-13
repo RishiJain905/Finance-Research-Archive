@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — while technically correct that this filing doesn't fit the macro/market structure taxonomy, the record should acknowledge it as a corporate securities issuance rather than leaving it undefined",
+    "topic is empty — should be populated as 'corporate-equity-issuance' or similar for internal routing",
+    "source_type field is empty — should be 'sec_filing' for proper categorization"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor issues only — the record is factually accurate and appropriately identifies the source as irrelevant to macro/market structure catalysts. The human review decision noting 'not_relevant' is correct. Auto-routing is appropriate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Cantor Fitzgerald Income Trust, Inc. filed an 8-K on April 10, 2026, disclosing the issuance of 920,000 shares of 9.50% Series A Cumulative Redeemable Preferred Stock (ticker CFTR-PRA) listed on NYSE, along with amendments to the company's limited partnership agreement to create corresponding Series A Preferred Units.",
+    "why_it_matters": "This is a routine corporate securities disclosure for a private REIT issuing preferred equity. The filing is not relevant to market structure or macro catalysts. It affects only Cantor Fitzgerald Income Trust shareholders and potential investors in the specific preferred stock offering.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

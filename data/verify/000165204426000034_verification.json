@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - should be 'regulatory_guidance' as this is an SEC regulatory filing",
+    "Source is factually accurate in its details but is out of scope for a finance research archive focused on market structure and macro catalysts"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly describes the source content. However, this 8-K filing concerns individual company executive compensation (Item 5.02) with no relevance to market structure or macro catalysts. Human review is needed to determine whether the archive scope excludes such corporate governance disclosures entirely, or whether they have incidental archival value as regulatory context.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing is a routine SEC disclosure of executive compensation at a single technology company. It has no relevance to market structure (e.g., market plumbing, trading operations, clearing, settlement) or macro catalysts (e.g., central bank policy, rate decisions, economic data releases, Treasury operations). This source should not be included in a finance research archive focused on those topics.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

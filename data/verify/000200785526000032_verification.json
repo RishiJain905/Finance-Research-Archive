@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 8-K filing containing company-specific LNG operational metrics - not relevant to market structure or macro catalysts per archive mandate",
+    "event_type is 'unknown' but no valid taxonomy value applies; this is a regulatory filing, not a recognized event type",
+    "topic field is empty, indicating classification uncertainty",
+    "Record is factually accurate but has no archival value for finance research focused on market structure or macro catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Decision is clear-cut: source is not relevant to designated focus areas and does not fit the event type taxonomy. Human review is not needed to determine that a corporate operational filing with no market-wide implications should be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
