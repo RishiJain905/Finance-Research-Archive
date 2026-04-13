@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but the filing is clearly an M&A closing announcement (acquisition completion). Valid taxonomy values would include 'unknown' but this is a straightforward corporate transaction categorization.",
+    "Source is a routine corporate M&A announcement with no relevance to market structure or macro catalysts.",
+    "Record correctly notes lack of relevance, but the archive focus should result in rejection rather than review."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source content is factually accurate and well-summarized, but the record correctly identifies this as not relevant to the archive's focus (market structure, macro catalysts). The decision to reject vs. accept is clear based on relevance criteria, but human confirmation ensures appropriate routing.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

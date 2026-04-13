@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "Event type 'unknown' is listed in the taxonomy as valid catch-all, but the record itself flags this as problematic — event type should be something more specific if possible",
+    "Record accurately summarizes the 8-K but has correctly identified this as OUT OF SCOPE for a market structure/macro catalyst archive",
+    "The record is internally consistent and honest about lack of relevance, but this creates a tension: it's accurate yet not worth archiving for stated purposes"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is self-consistently correct about the source content and appropriately flags it as out of scope. No factual errors in the summary. The recommendation to reject is sound given the archive's stated focus.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K discloses a SPAC business combination with Key Mining Corp. It is a routine corporate filing with no relevance to monetary policy, economic data releases, market operations, or trading mechanisms. It should not be archived in a finance research archive focused on market structure and macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
