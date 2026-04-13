@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "market_structure_context is blank despite the document being directly relevant to market structure: resolution procedures materially affect bank equity holders, AT1/Tier 2 capital instrument holders, and senior creditors — this field should be populated",
+    "market_impact.confidence is set to 0 and directional_bias to 'unknown', which is defensible for a procedural document but undersells the structural relevance to bank capital instrument pricing and resolution risk premia",
+    "Topic classification concern (macro catalysts vs. financial stability) is legitimate and flagged in llm_review, but regulatory_guidance on bank resolution does carry archival value for market structure purposes and should not itself be a rejection trigger"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-supported, but the topic classification question (macro catalysts vs. financial stability/market structure) requires a human decision on scope. Additionally, market_structure_context should be completed before archiving — this document directly affects how bank equity, AT1, and Tier 2 instrument holders are treated in a UK resolution, which is a substantive market structure signal.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "This guide is directly relevant to the pricing of UK bank capital instruments. It clarifies that in a transfer resolution, shareholders and holders of regulatory capital instruments (AT1, Tier 2, and other non-excluded liabilities) may be subject to losses. The inclusion of historical precedents (Dunfermline 2009, SVBUK 2023) and the description of the Bank Resolution (Recapitalisation) Act 2025 recapitalisation payment mechanism informs how investors should model resolution risk in UK bank securities. Participants holding AT1 or Tier 2 instruments in UK banks near resolution thresholds should treat this as reference material for loss-at-resolution scenarios."
+  }
+}
