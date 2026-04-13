@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source body is truncated - Parts 2 (Monetary Policy) and Part 3 (Economic Projections) not visible for extraction",
+    "Forward guidance and policy rate discussion from Part 2 cannot be verified against source",
+    "Historical document (July 2018) is 7 years 9 months before TODAY; while archival value is present, market expectations derived from this document are stale"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source truncation prevents verification of monetary policy section and economic projections. Labor market analysis is complete and accurate, but Parts 2-3 of the report would contain policy forward guidance and rate projections that are referenced in why_it_matters and macro_context but cannot be confirmed from the visible source. Human reviewer should assess whether the partial source (Part 1 only) has sufficient archival value or if complete version is needed.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The why_it_matters states this report informed 'market expectations for the pace of monetary tightening' and markets used it 'to calibrate Fed policy expectations and positioning ahead of the September 2018 FOMC meeting.' These claims are plausible inferences but cannot be verified against the visible source since Part 2 (Monetary Policy) is truncated. Consider softening to note this was the Fed's official economic assessment as of mid-2018.",
+    "macro_context": "The macro_context claims the FOMC statement noted 'economic risks are roughly balanced' at the July 31-August 1 meeting. This statement cannot be verified from the visible source since Part 2 is not available. Human reviewer should verify this claim or remove the specific language.",
+    "market_structure_context": ""
+  }
+}
