@@ -1,62 +1,84 @@
 {
   "id": "seed_crawl_ecb.europa_eurosystem_balance_sheet_d1e578a8f53d5195",
-  "created_at": "2026-03-30T07:28:12.154334+00:00",
+  "created_at": "2026-04-13T06:22:00.417254+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
-  "title": "Eurosystem balance sheet",
+  "event_type": "balance_sheet_update",
+  "title": "Annual consolidated balance sheet of the Eurosystem",
   "source": {
     "name": "European Central Bank",
-    "url": "",
-    "published_at": "",
-    "source_type": "unknown"
+    "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/annual/balance/html/index.en.html",
+    "published_at": "2026-02-26",
+    "source_type": "seed_crawl",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This source is a container page on the ECB website that provides links to download annual consolidated balance sheet data for the Eurosystem (1999-2025) and weekly financial statements. The page does not contain actual balance sheet figures, analytical commentary, or substantive research content. It references a consolidated balance sheet as of 31 December 2025 published 26 February 2026, and Annual Accounts 2025 also published 26 February 2026. Changes to presentation format were made in line with Guideline (EU) 2024/2941.",
+  "summary": "The ECB publishes the annual consolidated balance sheet of the Eurosystem, comprising assets and liabilities of national central banks (NCBs) and the ECB at year-end. The most recent consolidated balance sheet is as at 31 December 2025, published with the Annual Accounts on 26 February 2026. Intra-Eurosystem claims and liabilities are netted and not shown separately.",
   "key_points": [
-    "Eurosystem annual consolidated balance sheet comprises assets and liabilities of NCBs and ECB at year-end",
-    "Intra-Eurosystem claims and liabilities are netted and not shown",
-    "Data available for download: Annual consolidated balance sheet 1999-2025 (CSV and XLS formats)",
-    "Weekly financial statements published 26 February 2026 for consolidated balance sheet as at 31 December 2025",
-    "Annual Accounts 2025 published 26 February 2026",
-    "Presentation updated per Guideline (EU) 2024/2941 (ECB/2024/31)"
+    "Annual consolidated balance sheet includes assets and liabilities of all Eurosystem NCBs and the ECB",
+    "Balance sheet data is as at year-end (31 December 2025 for the most recent period)",
+    "Intra-Eurosystem claims and liabilities are netted and excluded from the consolidated presentation",
+    "The 2025 balance sheet was published on 26 February 2026 with the Annual Accounts",
+    "Data available for download in CSV and XLS formats covering 1999-2025",
+    "2024 presentation was updated per ECB Guideline (EU) 2024/2941 on accounting and financial reporting"
   ],
-  "why_it_matters": "The Eurosystem balance sheet provides aggregate data on central bank assets and liabilities across the euro area. However, this source page does not contain the actual numerical data—it only provides download links to CSV and XLS files. The raw data files would be needed for any substantive macro analysis.",
+  "why_it_matters": "The Eurosystem consolidated balance sheet provides the aggregate view of ECB and NCB assets/liabilities, serving as a reference for QT/QE program tracking and European monetary policy operations. However, this source page contains only metadata and links to data—no actual balance sheet figures are present.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "Central bank balance sheet data is a key macro indicator for assessing monetary policy stance, liquidity conditions, and potential QE or QT programs. The 2025 year-end balance sheet data (referenced but not present in this source) would be relevant for analyzing ECB policy trajectory.",
+  "macro_context": "The Eurosystem balance sheet size and composition are macro-relevant as they reflect the scale of ECB monetary policy operations including APP/PEPP holdings, lending operations, and reserve composition. Actual figures would be needed to assess current policy stance.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "ecb",
     "eurosystem",
     "balance-sheet",
+    "ncbs",
     "central-bank",
-    "euro-area",
-    "monetary-policy",
-    "ncbs"
+    "annual-accounts",
+    "quantitative-policy"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 0,
+    "initial_confidence": 4,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a container/listing page with no substantive analytical content",
-      "No actual balance sheet figures or numerical data present in source body",
-      "Source only contains links to downloadable CSV/XLS files",
-      "No URL provided in source metadata - cannot verify or revisit source",
-      "No published_at date provided",
-      "Cannot assess market impact or macro relevance without actual data",
-      "Archive value is too low for standalone research record"
+      "Source is a navigation/listing index page (index.en.html) - contains only metadata, language selectors, and links to CSV/XLS downloads, not substantive content",
+      "No actual balance sheet figures present in source body - all data exists only in downloadable files not included in the crawl",
+      "Cannot verify any numerical claims or market impact without actual data in the source",
+      "Source quality is too thin to have archival value as a research record",
+      "This is a container page providing access to data, not the data itself"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "missing_source_attribution"
+    "notes": "Clear reject based on source type being a navigation page and having no substantive content. The record correctly identifies this as a thin landing page, but the source cannot support a meaningful research record."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_eurosystem_balance_sheet_d1e578a8f53d5195.txt",
-  "notes": "Low-quality source: container page without substantive content. The actual Eurosystem balance sheet data exists in downloadable CSV/XLS files but is not present in this source text. Archive value is limited until actual data files are retrieved and processed."
+  "notes": "This source is a thin landing page without actual balance sheet figures. The page describes what the Eurosystem annual consolidated balance sheet contains and provides links to download the data (CSV/XLS for 1999-2025). The most recent balance sheet date referenced is 31 December 2025. No quantitative data is present in the source body to assess current policy operations. Consider this record as a pointer to data rather than a substantive source—actual balance sheet figures would require crawling the linked data files or a separate substantive document. Quality tier lowered due to thin content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source body contains no actual balance sheet figures—just metadata and links",
+      "Landing/index page type, not a substantive document",
+      "Cannot assess market impact without numerical data",
+      "No analysis, commentary, or policy signals present in the text"
+    ]
+  }
 }

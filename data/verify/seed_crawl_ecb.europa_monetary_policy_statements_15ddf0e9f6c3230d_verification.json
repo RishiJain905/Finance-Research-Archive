@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page (per source_type: 'listing_page')",
+    "CORE RULE #5: listing_page sources must be rejected",
+    "No actual ECB policy content, decision, or guidance present in source",
+    "Source provides only generic procedural description (six-week cycle, press conference time)",
+    "No published_at date available for temporal assessment",
+    "Source cannot support any market or macro research use case",
+    "event_type is 'unknown' - correct for this source type, but reinforces non-archival nature"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed. The generated record correctly identifies the source as a non-archiveable navigation page and appropriately recommends rejection. The source clearly violates CORE RULE #5 (listing_page) and RULE #6 (thin/noisy sources). Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

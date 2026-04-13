@@ -1,46 +1,94 @@
 {
-  "name": "ECB",
-  "url": "",
-  "domain": "ecb.europa.eu",
-  "published_at": "2025-04-28",
-  "source_type": "landing_page",
-  "source": {
-    "name": "macro catalysts",
-    "url": "",
-    "domain": "",
-    "published_at": "",
-    "source_type": ""
-  },
+  "id": "seed_crawl_ecb.europa_annual_report_e3def0da4f9ee91e",
+  "created_at": "2026-04-13T06:26:17.048218+00:00",
+  "status": "rejected",
   "topic": "macro catalysts",
+  "event_type": "monetary_policy_report",
+  "title": "Annual Report",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/annual/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2025-04-28",
+    "source_type": "listing_page"
+  },
+  "summary": "The ECB's 2024 Annual Report landing page summarizes key monetary policy actions and economic outcomes for the year. Headline inflation declined to 2.4% in December 2024 from 2.9% in December 2023, moving closer to the 2% target. The ECB cut interest rates four times during 2024, reducing the deposit facility rate to 3.00% with a cumulative decrease of 100 basis points.",
+  "key_points": [
+    "Headline inflation declined to 2.4% in December 2024 from 2.9% in December 2023, moving closer to the 2% target",
+    "ECB cut interest rates four times in 2024",
+    "Deposit facility rate was brought to 3.00%",
+    "Cumulative rate decrease over 2024 was 100 basis points",
+    "Annual Report 2024 published on 28 April 2025",
+    "Luis de Guindos presented the report to the European Parliament's Committee on Economic and Monetary Affairs"
+  ],
+  "why_it_matters": "This annual report provides an official summary of ECB monetary policy actions and economic assessment for 2024. The 100 bps cumulative rate cut and decline in inflation toward target confirm the ECB's easing cycle and validate that inflation was under control. Market participants tracking ECB policy normalization can reference these figures as anchors for the 2024 policy backdrop.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "risk_on",
+    "confidence": 5
+  },
+  "macro_context": "The 2.4% headline inflation print in December 2024 confirms that price pressures had moderated significantly from the 2.9% level a year prior. The four rate cuts totaling 100 bps demonstrate the ECB's commitment to easing monetary conditions as inflation approached target. The deposit facility rate at 3.00% provides the reference point for ECB policy normalization progress.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "2.4% headline inflation December 2024",
+    "2.9% headline inflation December 2023",
+    "3.00% deposit facility rate",
+    "-100 basis points cumulative rate decrease",
+    "4 rate cuts in 2024",
+    "21,325 ECB Visitor Centre visitors in 2024"
+  ],
+  "tags": [
+    "ecb",
+    "annual-report",
+    "monetary-policy",
+    "inflation",
+    "rate-cut",
+    "eurosystem",
+    "deposit-facility-rate",
+    "2024"
+  ],
   "llm_review": {
-    "initial_confidence": 0,
-    "verification_confidence": 1,
+    "initial_confidence": 7,
+    "verification_confidence": 4,
     "verdict": "reject",
     "issues_found": [
-      "Source is a landing page/index page with no substantive article content",
-      "URL is empty, making source completely unverifiable",
-      "Summary and key_points fields are empty - no content to verify",
-      "Source contains only navigation elements and summary statistics linking to deeper content",
-      "source_type correctly identified as 'landing_page' which violates CORE RULE 5"
+      "Source is classified as 'listing_page' in source_type, which violates Rule 5: 'If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page — reject'",
+      "This is the landing page/index for the ECB Annual Report 2024, not the full report itself. The actual full report is linked but not included in this source.",
+      "Content is limited to summary statistics without the detailed policy analysis that would appear in the complete annual report",
+      "The generated record's own quality_tier assessment notes 'Landing page with summary statistics rather than full report content' and 'Limited depth - detailed analysis missing'",
+      "Archival value is diminished because users seeking policy analysis would need to access the linked full report instead"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+    "notes": "container_page"
   },
-  "summary": "",
-  "key_points": [],
-  "why_it_matters": "",
-  "macro_context": "",
-  "market_structure_context": "",
-  "notes": "",
-  "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "",
-    "confidence": 0
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
-  "important_numbers": [],
-  "tags": [],
-  "status": "rejected"
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_annual_report_e3def0da4f9ee91e.txt",
+  "notes": "This source is the index/landing page for the ECB Annual Report 2024, published 28 April 2025. It is not the full report itself but rather a summary page with links to the complete document, speech, and feedback statement. While it contains key metrics (inflation 2.4%, 100 bps rate cuts, deposit rate 3.00%), the depth of analysis is limited compared to the full annual report. The source provides a reliable high-level summary of ECB activities but users seeking detailed policy reasoning should access the complete Annual Report document.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "B",
+    "score": 7,
+    "reasoning": [
+      "Landing page with summary statistics rather than full report content",
+      "Source is authoritative (ECB official website)",
+      "Contains concrete numbers verified against source",
+      "Limited depth - detailed analysis missing",
+      "Recent publication date (within 90 days)",
+      "Well-structured summary for high-level reference"
+    ]
+  }
 }

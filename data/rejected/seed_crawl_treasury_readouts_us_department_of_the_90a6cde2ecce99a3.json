@@ -1,51 +1,52 @@
 {
   "id": "seed_crawl_treasury_readouts_us_department_of_the_90a6cde2ecce99a3",
-  "created_at": "2026-03-30T06:58:51.464005+00:00",
+  "created_at": "2026-04-13T06:30:57.911534+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "listing_page",
+  "event_type": "unknown",
   "title": "Readouts | U.S. Department of the Treasury",
   "source": {
     "name": "U.S. Department of the Treasury",
-    "url": "",
+    "url": "https://home.treasury.gov/news/press-releases/readouts",
+    "domain": "home.treasury.gov",
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This page is a navigation listing of Treasury Department readout summaries with no substantive content. It provides only titles and dates of various meeting readouts, including Financial Stability Oversight Council meetings and bilateral diplomatic meetings with finance ministers from Japan, France, Australia, South Korea, the United Kingdom, Lithuania, and Singapore. The page contains no policy details, market-moving data, or specific financial information.",
+  "summary": "This is a Treasury.gov listing page aggregating readouts from various meetings and events spanning October 2025 to March 2026. The page contains links to readouts including FSOC meetings, bilateral meetings with foreign finance officials (Japan, France, Australia, South Korea, UK, Singapore, Lithuania), and other Treasury events. No substantive policy content is present; only titles and dates are visible. Per archiving guidelines, listing pages are non-archiveable.",
   "key_points": [
-    "Page is a listing/index page, not a substantive archive record",
-    "Contains no actual readout content—only titles and dates of Treasury meetings",
-    "Lists Financial Stability Oversight Council meeting readouts (March 25, 2026; December 11, 2025)",
-    "Lists bilateral finance minister meetings (Japan, France, Australia, South Korea, UK, Lithuania, Singapore)",
-    "No policy substance, numerical data, or market-relevant information present",
-    "Cannot be used as standalone research archive without accessing individual readout pages"
+    "Source is a listing/navigation page, not an archiveable document with substantive content.",
+    "Most recent item dated March 25, 2026 is a Financial Stability Oversight Council (FSOC) meeting readout.",
+    "Bilateral meeting readouts include Treasury Secretary meetings with Japan, France, Australia, South Korea, UK, Singapore, and Lithuania officials.",
+    "Actual readout content is not present on this page—only titles and dates linking to separate documents.",
+    "Per CORE RULE 6, listing pages are classified as non-archiveable."
   ],
-  "why_it_matters": "This page has no standalone research value for macro catalyst analysis. It serves only as an index to find individual readouts. Each listed readout would need to be accessed separately for substantive information.",
+  "why_it_matters": "This listing page provides no actionable market or macro information. Researchers should access individual readouts linked from this page for substantive content. The FSOC meeting dated March 25, 2026 may be relevant for financial stability monitoring if the full readout is retrieved separately.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "",
     "confidence": 0
   },
-  "macro_context": "The listed meetings cover bilateral economic discussions and financial stability oversight, but specific details are not present on this page. No macro catalyst information can be extracted from this listing.",
+  "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "treasury-department",
+    "treasury",
     "listing-page",
+    "non-archivable",
     "readouts",
-    "non-archiveable",
-    "insufficient-content"
+    "fsoc",
+    "bilateral-meetings"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 10,
+    "initial_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing page (listing_page), not a substantive article - per Rule 8, listing pages must not be accepted",
-      "Contains only titles and dates of readout summaries with no actual policy content",
-      "Provides zero substantive macro catalyst information, numerical data, or market-relevant details",
-      "Has no standalone research or archival value as documented",
-      "Source attribution URL is missing, limiting utility"
+      "Source is a listing page with no substantive policy content per CORE RULE 5",
+      "event_type set to 'unknown' - technically valid but indicates no event captured",
+      "Source is non-archivable per CORE RULE 6: listing pages do not qualify for archiving",
+      "No actionable market or macro information can be extracted from this source",
+      "Individual readouts (especially FSOC March 25, 2026) must be accessed separately for substantive content"
     ]
   },
   "human_review": {
@@ -53,6 +54,26 @@
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_treasury_readouts_us_department_of_the_90a6cde2ecce99a3.txt",
-  "notes": "This source is a navigation/listing page containing no substantive macro catalyst content. Per Rule 9, listing pages should be treated as non-archiveable. The page only provides an index of Treasury readout titles with dates but no actual policy details, numerical data, or market-relevant information. To use this topic for research, individual readout documents would need to be accessed and archived separately. Confidence is minimal (1/10) for any macro catalyst or market structure research purpose."
+  "notes": "Non-archivable listing page. The most potentially relevant item is the March 25, 2026 FSOC meeting readout, which may contain financial stability/market structure information. To obtain useful content, the full readout document for that FSOC meeting should be retrieved and analyzed separately.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 0,
+    "reasoning": [
+      "Listing page with no substantive policy content",
+      "Cannot extract market structure or macro catalyst information from navigation index",
+      "Per archiving rules, listing pages are non-archivable",
+      "Individual readouts required for actionable research notes"
+    ]
+  }
 }

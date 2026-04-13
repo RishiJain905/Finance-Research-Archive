@@ -1,51 +1,55 @@
 {
   "id": "seed_crawl_treasury_press_releases_us_department_of_f4b2f2499f1e3ca3",
-  "created_at": "2026-03-31T19:44:10.897990+00:00",
+  "created_at": "2026-04-13T06:31:55.423374+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Press Releases | U.S. Department of the Treasury",
   "source": {
     "name": "U.S. Department of the Treasury",
-    "url": "",
+    "url": "https://home.treasury.gov/news/press-releases",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": ""
+    "source_type": "listing_page"
   },
-  "summary": "This is a Treasury Department press release listing page containing 10 announcements from March 12-26, 2026. The page is not directly relevant to market structure or macro catalysts as it consists primarily of sanctions announcements, foreign policy initiatives, and administrative notices rather than market-moving policy documents.",
+  "summary": "Treasury Department press releases listing page from April 2026 containing administrative announcements, regulatory guidance, and international coordination updates. No single substantive policy document is present; this is a catalog of multiple brief headlines spanning April 1-9, 2026.",
   "key_points": [
-    "FSOC held a meeting on March 25, 2026 and issued proposed guidance on nonbank financial company designations",
-    "Treasury released international capital data for January on March 12, 2026",
-    "Most announcements relate to sanctions (Hizballah, DPRK IT workers, Hamas) which are not macro catalyst events",
-    "Administrative announcements include Trump's signature on currency and student assistance partnership",
-    "No individual press release on this listing page contains sufficient detail for macro catalyst analysis"
+    "April 9, 2026: Treasury moved to prevent abuse of CDFI Fund programs",
+    "April 9, 2026: Treasury launched cybersecurity information sharing initiative for digital asset industry",
+    "April 8, 2026: New guidance issued for economic opportunity in overlooked communities",
+    "April 8, 2026: Treasury proposed rule implementing GENIUS Act requirements to counter illicit finance",
+    "April 6, 2026: BNY designated as financial agent to support new Trump accounts program",
+    "April 1, 2026: Treasury announced convening first series of conversations with domestic and international regulators",
+    "US-UK Financial Regulatory Working Group Winter 2026 Joint Statement released"
   ],
-  "why_it_matters": "This listing page does not provide actionable market or macro analysis. Individual items would need to be accessed separately for evaluation. The FSOC meeting readout and international capital data are the only items with potential macro relevance.",
+  "why_it_matters": "This is a listing page, not an archiveable research document. The content provides catalog-level metadata of Treasury announcements but lacks substantive policy detail. No specific numbers, policy thresholds, or market-moving information is contained in this listing format.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "",
+  "market_structure_context": "The US-UK Financial Regulatory Working Group joint statement (April 8) and the Treasury convening regulatory conversations (April 1) could represent market structure developments if detailed documents are available, but this listing page does not provide that detail.",
   "important_numbers": [],
   "tags": [
     "treasury",
     "press-releases",
     "listing-page",
-    "non-archiveable"
+    "non-archivable",
+    "regulatory",
+    "us-uk"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 2,
+    "initial_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing page (source_type: listing_page), which violates Core Rule 5 - reject container/listing pages",
-      "URL field is blank - no valid source attribution",
-      "event_type is 'unknown' - listing pages do not have a specific event type",
-      "Source has no direct macro catalyst relevance as documented in the record itself",
-      "Individual press releases (FSOC readout, international capital data) would need to be accessed separately as standalone documents",
-      "Record correctly acknowledges the source is non-archiveable as-is"
+      "Source is a listing_page per CORE RULE 5 - must reject",
+      "Contains multiple unrelated press releases, not a single archiveable document",
+      "No substantive policy content, only headlines with dates",
+      "Published_at not provided in metadata - cannot assess recency",
+      "Cannot determine macro relevance without individual document URLs",
+      "Event type 'unknown' is correctly applied but also confirms source is not a single archival candidate"
     ]
   },
   "human_review": {
@@ -53,6 +57,26 @@
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_treasury_press_releases_us_department_of_f4b2f2499f1e3ca3.txt",
-  "notes": "This source is a navigation/listing page for Treasury press releases. It is not a standalone document suitable for the research archive. The most potentially relevant items are the FSOC meeting readout (March 25) and Treasury International Capital Data (January data, released March 12), but these would need to be accessed as individual documents. All other items are sanctions announcements, foreign policy initiatives, or administrative matters with no direct relevance to market structure or macro catalysts."
+  "notes": "This is a listing page, not a single archiveable research document. Each press release would need to be retrieved individually for proper archival. The most potentially relevant entry for market structure or macro catalysts would be the US-UK Financial Regulatory Working Group joint statement. The GENIUS Act implementation could affect digital asset market structure. BNY financial agent designation for 'Trump accounts program' may have market structure implications if the program involves Treasury market operations.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 0,
+    "reasoning": [
+      "Listing page with no substantive content",
+      "Only headlines and dates provided",
+      "Cannot extract policy detail or market-moving information",
+      "Non-archivable page type per processing rules"
+    ]
+  }
 }

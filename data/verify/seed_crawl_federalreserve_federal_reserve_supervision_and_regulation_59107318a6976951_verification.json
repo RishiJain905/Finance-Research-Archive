@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 10,
+  "verification_confidence": 1,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/navigation page with no substantive content - triggers Rule #5 rejection",
-    "URL is empty in source metadata, making proper attribution impossible",
-    "No specific macro data, policy decisions, or market-relevant findings can be extracted",
-    "Record correctly identifies the source as non-archivable, which aligns with verification standards"
+    "Source is a listing/navigation page per PAGE_TYPE rules (source body shows only links to reports, no substantive content)",
+    "event_type set to 'financial_stability_report' but this page is not a report—it is only an index to reports; the actual report PDFs/HTMLs should be crawled separately",
+    "No published_at date in source; page only states last update as December 01, 2025",
+    "Record correctly identifies itself as a 'listing_page' with no substantive content, yet suggested_status is 'review_queue' instead of 'rejected'",
+    "No market structure or macro catalyst data can be extracted from this listing page"
   ],
   "human_review_required": false,
-  "human_review_reason": "The generated record is exemplary in its self-assessment and accurately identifies the source limitations. The record correctly recommends rejection per Rule #5 and Rule #6. No human intervention needed.",
+  "human_review_reason": "Record accurately identifies its own deficiencies. Source is a listing page by definition (per source body showing only navigation links to reports), which per Rule 5 must be rejected. No substantive content exists on this page to archive.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a navigation/listing page that indexes multiple Federal Reserve Supervision and Regulation Reports spanning 2018 to December 2025, along with associated congressional testimony links. No specific report content, data, or policy details are included in this page itself.",
-    "why_it_matters": "This page serves as an index to historical Federal Reserve supervisory reports but contains no actionable information. Researchers seeking banking condition assessments or supervisory findings must navigate to specific report links. The listing page itself is not directly useful for macro catalyst or market structure analysis.",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This page is a navigation index for the Federal Reserve's Supervision and Regulation Report, providing links to HTML and PDF versions of reports and testimonies from 2018 through December 2025. The page itself does not contain substantive content—only metadata describing available documents.",
+    "why_it_matters": "This index page is not directly useful for research—substance is in the linked reports. However, it serves as the gateway to semiannual financial stability assessments that track banking conditions and Fed supervisory activities, which are macro-relevant documents."
   }
 }

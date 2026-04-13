@@ -1,16 +1,17 @@
 {
-  "verification_confidence": 1,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "URL is blank - source attribution is missing, making verification impossible",
-    "Source is a container/listing page containing navigation elements (previous releases, show all releases) rather than primary content",
-    "Limited direct information content - primarily descriptive metadata about Annual Accounts structure",
-    "Backward-looking accounting data has low utility for macro catalyst research",
-    "No URL to locate the actual Annual Accounts document or press release",
-    "Source quality is thin - contains summary figures but no substantive analysis or market-moving content"
+    "Source is a navigation_page per metadata - Rule 5 explicitly requires rejection of navigation pages",
+    "Source is thin, backward-looking accounting document with no policy signals, forward guidance, or market-moving information",
+    "event_type is 'unknown' but the page is a navigation/index page for ECB Annual Accounts - not a substantive financial document or market catalyst",
+    "Source provides only high-level summary figures (balance sheet, loss) without detailed financial analysis or policy implications",
+    "Relevance to macro catalysts is low - this is financial reporting rather than a market catalyst",
+    "The record itself acknowledges the source is a 'landing page linking to the full Annual Accounts' with 'no substantive analysis'",
+    "quality_tier correctly identified as 'low' with score of 3"
   ],
   "human_review_required": false,
-  "human_review_reason": "Issues are clearly identifiable from source metadata and content pattern; container page nature and missing URL are unambiguous grounds for rejection under rules 8 and 9",
+  "human_review_reason": "Automated rejection is appropriate - the source metadata explicitly identifies this as a navigation_page, which triggers Rule 5 rejection. The record's own analysis correctly identifies this as a thin source with low archival value for macro catalysts.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

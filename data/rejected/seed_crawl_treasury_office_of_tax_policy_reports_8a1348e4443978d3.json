@@ -1,26 +1,26 @@
 {
   "id": "seed_crawl_treasury_office_of_tax_policy_reports_8a1348e4443978d3",
-  "created_at": "2026-03-31T19:43:35.970620+00:00",
+  "created_at": "2026-04-13T06:23:47.919364+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Office of Tax Policy Reports",
   "source": {
-    "name": "Treasury Office of Tax Policy",
-    "url": "",
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/policy-issues/tax-policy/office-of-tax-policy-reports",
     "published_at": "",
     "source_type": "listing_page",
-    "domain": ""
+    "domain": "home.treasury.gov"
   },
-  "summary": "This page is a catalog/index listing of historical tax policy reports and reports to Congress from the Treasury Office of Tax Policy, spanning decades from 1944 to 2025. It contains no specific research content, market data, or macro catalyst information. The page is not relevant to market structure or macro catalysts as defined for this archive.",
+  "summary": "This is a Treasury Department navigation page listing historical Office of Tax Policy reports and Reports to Congress spanning 1944 to October 2025. It serves as an index/catalog, not a substantive policy document. No specific report content, current macro analysis, or market-relevant information is present on this page itself.",
   "key_points": [
-    "This is a navigation/listing page containing only report titles and dates, not the reports themselves.",
-    "Most listed reports are historical (1944-2016), with the most recent being October 2025 Report on Replacement of Direct File.",
-    "Content includes tax policy topics such as corporate tax, income inequality, tax credits, depreciation, and tax compliance.",
-    "No market structure, trading data, interest rates, or current macro catalyst information is present.",
-    "The page does not contain original research findings, only a list of historical report titles."
+    "Page is a listing/index page for tax policy reports, not a standalone document",
+    "Reports listed range from December 1944 ('The Postwar Corporation Tax Structure') to October 2025 ('Report on the Replacement of Direct File')",
+    "Includes two sections: 'Official Reports' covering tax code analysis, and 'Reports to Congress' mandated reports",
+    "No substantive content, findings, or data from any individual report is present on this listing page",
+    "Source provides no current market structure or macro catalyst information"
   ],
-  "why_it_matters": "This source is not relevant for a finance research archive focused on market structure or macro catalysts. It contains no trading-relevant information, market data, or current economic analysis.",
+  "why_it_matters": "This source does not directly matter for finance research as it contains no substantive policy content—it is merely a catalog page. Tax policy changes can be macro catalysts, but this page provides no analysis or actionable information.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -32,30 +32,48 @@
   "tags": [
     "treasury",
     "tax-policy",
-    "historical-reports",
     "listing-page",
-    "not-relevant",
-    "office-of-tax-policy"
+    "non-archivable",
+    "historical-reports"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 3,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page - explicitly non-archiveable per core rule 5",
-      "No original research content, only report titles and dates from a catalog/index",
-      "event_type set to 'unknown' - correct since listing pages don't fit event taxonomy",
-      "URL missing from source metadata - cannot trace or verify",
-      "published_at not provided - cannot assess recency",
-      "Not relevant to market structure or macro catalysts as defined for this archive",
-      "The record itself is well-constructed but documents a non-archivable source"
+      "Source type is listing_page — explicitly non-archivable per CORE RULE 6",
+      "No substantive content; only report titles and dates in table format",
+      "Not relevant to market structure or macro catalysts as a standalone source",
+      "No published_at date for the page itself",
+      "Cannot extract market-relevant findings from this index page",
+      "event_type set to 'unknown' — acceptable given the source is an index with no specific event"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "reject",
+    "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_treasury_office_of_tax_policy_reports_8a1348e4443978d3.txt",
-  "notes": "Source is a low-quality catalog/index page with no archive value for market structure or macro catalysts. Page type is listing_page which is explicitly non-archiveable per core rules. Content consists of report titles and dates spanning 80+ years with no original research findings."
+  "notes": "CLASSIFICATION: NON-ARCHIVABLE. This is a listing_page per CORE RULE 6. The page contains only an index of historical Treasury tax policy reports with titles and dates. No substantive content, policy analysis, market data, or macro catalyst information is present. Relevant only as a reference index to find individual reports; the individual reports themselves (not this page) would be candidates for archiving. The oldest report listed is December 1944; the most recent is October 2025 but no content is included.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Listing/navigation page with no substantive content",
+      "Non-archivable per rule 6",
+      "No market-relevant information present",
+      "Cannot extract data or findings from this source type"
+    ]
+  }
 }

@@ -1,53 +1,54 @@
 {
   "id": "seed_crawl_ecb.europa_monetary_policy_operations_69cef711dcd8d9ce",
-  "created_at": "2026-03-30T07:22:15.591173+00:00",
+  "created_at": "2026-04-13T06:22:13.382770+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
-  "title": "Monetary Policy Operations",
+  "title": "Monetary policy operations",
   "source": {
     "name": "European Central Bank",
-    "url": "",
+    "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/annual/balance/mpo/html/index.en.html",
     "published_at": "",
-    "source_type": "navigation_page"
+    "source_type": "navigation_page",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This page is a navigation/index entry point on the ECB website that describes where to access consolidated balance sheet data for the Eurosystem's monetary policy operations. The source contains no specific data, figures, or policy announcements. It merely indicates that monetary policy operations encompass open market operations, standing facilities, and minimum reserve requirements, and provides links to download CSV and XLS files for historical balance sheet data from 1999-2025.",
+  "summary": "The ECB Eurosystem publishes annual consolidated balance sheet data disclosing its monetary policy operations for the years 1999-2025. The page serves as an index providing downloadable CSV and XLS data files. No specific current-period data, policy decisions, or actionable insights are contained in this source; it is a navigation/reference page only.",
   "key_points": [
-    "Source is a navigation/index page, not a substantive research document",
-    "Monetary policy operations are described as including open market operations, standing facilities, and minimum reserve requirements",
-    "Annual consolidated balance sheet data available for download (CSV/XLS format) covering 1999-2025",
-    "Related content links to Annual Report and Weekly financial statements",
-    "No specific data points, figures, or policy details are provided in this source body",
-    "No publication date or specific URL provided in metadata"
+    "The page describes three categories of ECB monetary policy operations: open market operations, standing facilities, and minimum reserve requirements for credit institutions",
+    "The Eurosystem publishes this operational data as dedicated positions on its annual consolidated balance sheet",
+    "Data files covering annual consolidated balance sheet 1999-2025 are available for download in CSV and XLS formats",
+    "The page provides links to related content including the Annual Report and Weekly financial statements",
+    "This is a navigation/index page structure, not a substantive research document or policy statement"
   ],
-  "why_it_matters": "",
+  "why_it_matters": "This source serves as a data repository index rather than providing actionable research content. It offers no current policy signals, decision outcomes, or analytical commentary relevant to market participants. The value lies only in data file accessibility for historical balance sheet analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "",
+  "macro_context": "The page provides access to historical ECB balance sheet data (1999-2025) but contains no current-period information, policy decisions, or analytical content.",
+  "market_structure_context": "This page is a navigation/index structure providing access to ECB annual balance sheet data files. The underlying data (once downloaded) would be relevant to understanding ECB balance sheet composition and monetary policy implementation, but the page itself contains no substantive content for research purposes.",
   "important_numbers": [],
   "tags": [
     "ecb",
+    "monetary-policy-operations",
     "eurosystem",
-    "monetary-policy",
     "balance-sheet",
+    "open-market-operations",
+    "standing-facilities",
     "navigation-page"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
+    "initial_confidence": 2,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/index page (navigation_page) - explicitly excluded per Rule 8",
-      "Source contains no substantive research content: no data, figures, policy announcements, or specific facts",
-      "URL field is blank in metadata - missing source attribution",
-      "No publication date provided",
-      "Only describes where to find data (CSV/XLS downloads), does not contain the actual data",
-      "Archive value is too low for research purposes",
-      "Domain trust tier is high, but page type disqualifies it from acceptance"
+      "Source is a navigation/index page per CORE RULES section 5; navigation pages are non-archiveable and should be rejected",
+      "source_type correctly identified as 'navigation_page' in record",
+      "event_type is 'unknown' but should be something like 'balance_sheet_update' given the source content describes ECB annual balance sheet data publications",
+      "No published_at date provided in source metadata",
+      "Content is extremely thin - only structural description of monetary policy operation categories and download links to CSV/XLS files",
+      "No substantive policy content, research findings, or actionable market intelligence present"
     ]
   },
   "human_review": {
@@ -55,6 +56,25 @@
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_monetary_policy_operations_69cef711dcd8d9ce.txt",
-  "notes": "LOW QUALITY SOURCE: This is a navigation/index page with no substantive content for research purposes. The source body contains only metadata about where to find data and mentions that monetary policy operations include three instrument types, but provides no specific facts, numbers, or actionable information. Not suitable for archive as a research record. Human review recommended to determine if the linked CSV/XLS data files should be crawled separately as they may contain the actual balance sheet data referenced."
+  "notes": "Non-archiveable navigation page. Content consists only of structural description (three categories of monetary policy operations) and download links for balance sheet data files (1999-2025). No policy decisions, forward guidance, or substantive analysis present. Published date not provided in source metadata. The underlying data files when accessible may be valuable for market structure analysis of ECB operations, but this index page itself contains no archive-worthy content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Navigation/index page per CORE RULES section 6",
+      "No substantive content - only describes categories of operations and file download links",
+      "Extremely thin content - not suitable for research archive"
+    ]
+  }
 }

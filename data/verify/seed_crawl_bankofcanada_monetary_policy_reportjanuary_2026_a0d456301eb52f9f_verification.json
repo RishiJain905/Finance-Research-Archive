@@ -1,17 +1,24 @@
 {
-  "verification_confidence": 7,
-  "verdict": "review",
+  "verification_confidence": 4,
+  "verdict": "reject",
   "issues_found": [
-    "URL field is blank - direct source link not provided, preventing external verification",
-    "Published date set to 2026-01-01 is an approximation; source body only indicates 'January 2026' without exact date"
+    "Summary field is empty - no summary has been generated from the source",
+    "key_points field is empty - no key points extracted from the source",
+    "why_it_matters field is empty",
+    "macro_context field is empty",
+    "market_structure_context field is empty",
+    "event_type field is missing - the taxonomy value is required but not provided",
+    "name field shows 'Bank of Canada' but should identify this as the Monetary Policy Report document",
+    "published_at in source metadata shows empty string - publication date '2026-01-28' is available and should be captured",
+    "market_impact fields all empty - directional_bias, asset_classes, and confidence not populated"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is substantively accurate and the content aligns well with the source text. All key figures (2.25% overnight rate, 1.25% growth projection, 2% inflation target) are correctly captured, and the 'unusually high' risk characterization is properly attributed. However, the blank URL prevents full verification of source authenticity and limits reproducibility. While the Bank of Canada is a high-tier institutional source with clear authority, the missing URL is a metadata issue that requires human confirmation before final acceptance.",
-  "suggested_status": "review_queue",
+  "human_review_reason": "The generated record contains multiple critical missing fields (summary, key_points, event_type, why_it_matters, macro_context) that render it unusable for archival purposes. While the source itself is a legitimate Bank of Canada Monetary Policy Report with high archival value (macro catalysts, rate decision, growth/inflation projections, trade policy risks), the record has failed to extract any substantive content. This appears to be an extraction failure rather than a quality issue with the source.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Bank of Canada maintained its overnight rate target at 2.25% (Bank Rate 2.5%, deposit rate 2.20%). The MPR projects Canadian economic growth to average around 1¼% over the projection horizon with inflation remaining near the 2% target, as excess supply offsets upward cost pressures. US tariffs and trade uncertainty continue to weigh on the economy, disrupting growth and requiring structural adjustments. Canadian businesses are adapting by diversifying exports beyond the US and reducing reliance on US imports. Risks to the outlook are described as unusually high due to elevated geopolitical uncertainty and the ongoing review of the Canada–United States–Mexico Agreement.",
+    "why_it_matters": "This MPR provides the Bank of Canada's official assessment of the Canadian economic outlook and policy stance amid significant trade disruption from US tariffs. The maintained 2.25% rate signals a cautious approach, balancing subdued growth against inflation near target. The unusually high-risk characterization underscores uncertainty around trade policy and structural economic adjustments.",
+    "macro_context": "Global growth is expected to remain solid supported by AI investment booms and fiscal stimulus in major economies. Canada's growth has been subdued by US tariffs and slowing population growth. CPI inflation remains near the 2% target. The review of CUSMA adds further uncertainty to Canada's trade outlook.",
+    "market_structure_context": "The policy rate maintained at 2.25% with the bank rate at 2.5% and deposit rate at 2.20% provides the benchmark for Canadian interbank lending and variable-rate mortgage pricing. Trade diversion effects as Canadian businesses shift away from US imports/exports affect currency flows, cross-border capital allocation, and relative bond yields between Canada and the US."
   }
 }

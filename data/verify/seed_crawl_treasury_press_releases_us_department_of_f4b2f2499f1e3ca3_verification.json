@@ -1,16 +1,16 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing page (source_type: listing_page), which violates Core Rule 5 - reject container/listing pages",
-    "URL field is blank - no valid source attribution",
-    "event_type is 'unknown' - listing pages do not have a specific event type",
-    "Source has no direct macro catalyst relevance as documented in the record itself",
-    "Individual press releases (FSOC readout, international capital data) would need to be accessed separately as standalone documents",
-    "Record correctly acknowledges the source is non-archiveable as-is"
+    "Source is a listing_page per CORE RULE 5 - must reject",
+    "Contains multiple unrelated press releases, not a single archiveable document",
+    "No substantive policy content, only headlines with dates",
+    "Published_at not provided in metadata - cannot assess recency",
+    "Cannot determine macro relevance without individual document URLs",
+    "Event type 'unknown' is correctly applied but also confirms source is not a single archival candidate"
   ],
   "human_review_required": false,
-  "human_review_reason": "This is a clear-cut rejection. The source is a listing/collection page, not an individual archiveable document. Core Rule 5 explicitly states to reject listing pages. The record itself accurately identifies this limitation and appropriately suggests individual press releases should be assessed separately.",
+  "human_review_reason": "Record already correctly self-identifies as non-archivable listing page. The self-assessment is accurate and rejection is appropriate without human intervention.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

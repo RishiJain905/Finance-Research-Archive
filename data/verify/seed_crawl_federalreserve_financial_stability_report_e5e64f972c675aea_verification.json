@@ -1,15 +1,14 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/listing page with no substantive content (per Core Rule 6: reject)",
-    "URL field is blank/missing",
-    "event_type 'financial_stability_report' is misleading since the source is not an actual report, just an index to reports",
-    "No archiveable policy content, data, or analysis present",
-    "Record correctly identifies this as a listing_page source_type but suggested_status should be 'rejected' not 'review_queue'"
+    "Core Rule 5 violation: Page is a navigation/listing page (source_type: listing_page) which must be rejected",
+    "No substantive macro catalyst or market structure content present",
+    "Cannot serve as archiveable research record - requires crawling individual report links",
+    "The record correctly identifies this as non-archivable, but per rules it must be rejected rather than routed to review queue"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record accurately identifies the source as a non-archiveable listing page. Auto-reject is appropriate per Core Rule 6 without requiring human review.",
+  "human_review_reason": "The generated record already correctly identifies the fundamental problem (listing page). While human review was flagged, the issue is unambiguous: per Core Rule 5, listing pages must be rejected. No subjective judgment needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

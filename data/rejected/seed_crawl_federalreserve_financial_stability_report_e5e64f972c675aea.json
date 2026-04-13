@@ -1,30 +1,30 @@
 {
   "id": "seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea",
-  "created_at": "2026-03-31T18:45:15.328081+00:00",
+  "created_at": "2026-04-13T06:30:49.889759+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "financial_stability_report",
   "title": "Financial Stability Report",
   "source": {
-    "name": "Federal Reserve Board",
-    "url": "",
-    "domain": "federalreserve.gov",
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/publications/financial-stability-report.htm",
     "published_at": "2025-11-07",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This page is an index/navigation listing of Federal Reserve Financial Stability Reports dating from May 2018 through November 2025. The page does not contain the substantive content of any specific report—it merely provides links to HTML, PDF, and chart data files organized by publication date. The most recent report listed is from November 2025.",
+  "summary": "This Federal Reserve page is a navigation index listing historical Financial Stability Reports from 2018 through November 2025, providing links to HTML, PDF, and chart data for each release. The page does not contain the substantive content of any individual report and serves only as an archive index.",
   "key_points": [
-    "Source is a listing page, not an actual Financial Stability Report document",
-    "Available reports span May 2018 through November 2025 (approximately semi-annual publications)",
-    "Links provided to HTML, PDF, and Chart Data formats for each report",
-    "Some reports include supplementary statements (e.g., Vice Chair or Governor statements)",
+    "Page is a listing/navigation index, not an actual report",
+    "Links to reports from May/November cycles spanning 2018-2025",
+    "Includes both HTML and PDF versions of each report",
+    "Provides links to chart data and descriptions for each report",
     "Last update date shown: November 7, 2025",
-    "No substantive policy content, data, or analysis present in this source"
+    "Contains links to prior Vice Chair/Governor statements for some report dates"
   ],
-  "why_it_matters": "This source does not provide archiveable content. It is a navigation index that merely points to report files hosted elsewhere. A researcher seeking Financial Stability Report content would need to follow the specific report links (e.g., the November 2025 HTML or PDF) rather than rely on this page.",
+  "why_it_matters": "This page does not contain substantive macro or market structure content. It is a navigation index that requires selecting a specific report date to access actual analysis. Researchers seeking Financial Stability Report content must navigate to a specific report link rather than this index page.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "",
     "confidence": 0
   },
   "macro_context": "",
@@ -34,18 +34,18 @@
     "federal-reserve",
     "financial-stability",
     "listing-page",
-    "no-content"
+    "navigation-index",
+    "us-financial-system"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 0,
+    "initial_confidence": 2,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing page with no substantive content (per Core Rule 6: reject)",
-      "URL field is blank/missing",
-      "event_type 'financial_stability_report' is misleading since the source is not an actual report, just an index to reports",
-      "No archiveable policy content, data, or analysis present",
-      "Record correctly identifies this as a listing_page source_type but suggested_status should be 'rejected' not 'review_queue'"
+      "Core Rule 5 violation: Page is a navigation/listing page (source_type: listing_page) which must be rejected",
+      "No substantive macro catalyst or market structure content present",
+      "Cannot serve as archiveable research record - requires crawling individual report links",
+      "The record correctly identifies this as non-archivable, but per rules it must be rejected rather than routed to review queue"
     ]
   },
   "human_review": {
@@ -53,6 +53,27 @@
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea.txt",
-  "notes": "Source is a Federal Reserve Financial Stability Report index page (listing_page type). Per Core Rule 6, listing pages and navigation pages are non-archiveable. This page contains only metadata and links—no substantive report content. The actual reports (e.g., November 2025, April 2025) must be fetched directly as separate documents. Initial confidence is very low (1) because this source provides no policy-relevant information beyond confirming that Financial Stability Reports exist and follow a semi-annual cadence."
+  "notes": "Non-archiveable listing page per Core Rule 6. Contains only hyperlinks to historical Financial Stability Reports (2018-2025) and does not include substantive content. To capture actual report data, individual report URLs should be processed separately. The November 2025 report would be the most recent and most relevant for current macro catalyst assessment.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Listing/navigation page with no substantive content",
+      "Does not contain macro catalysts analysis",
+      "Does not contain market structure analysis",
+      "Core Rule 6 violation: listing_page is non-archiveable",
+      "Requires further crawling of specific report links to obtain archiveable content"
+    ]
+  }
 }

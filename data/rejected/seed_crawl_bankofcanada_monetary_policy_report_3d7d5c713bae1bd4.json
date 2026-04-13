@@ -1,62 +1,87 @@
 {
   "id": "seed_crawl_bankofcanada_monetary_policy_report_3d7d5c713bae1bd4",
-  "created_at": "2026-03-30T07:15:01.213025+00:00",
+  "created_at": "2026-04-13T06:28:37.265668+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "monetary_policy_report",
   "title": "Monetary Policy Report—January 2026",
   "source": {
     "name": "Bank of Canada",
-    "url": "",
+    "url": "https://www.bankofcanada.ca/publications/mpr/",
+    "domain": "www.bankofcanada.ca",
     "published_at": "2026-01-28",
-    "source_type": "monetary_policy_report"
+    "source_type": "blog_post"
   },
-  "summary": "The Bank of Canada's January 2026 Monetary Policy Report indicates the Canadian economy is undergoing adjustment to US tariffs and evolving global trade conditions. Growth projections remain modest as this adjustment process unfolds over time. The central bank projects inflation to stay close to its 2% target.",
+  "summary": "The Bank of Canada published its January 2026 Monetary Policy Report assessing the Canadian economy's adjustment to US tariffs and the new global trade landscape. The Bank projects modest growth as the economy continues to adjust, with inflation expected to remain near the 2% target. The adjustment process is described as taking time. [Note: This record captures only a brief summary excerpt. The full report with detailed projections and policy analysis was not available in the crawled content.]",
   "key_points": [
-    "Canadian economy adjusting to US tariffs and new global trade landscape",
-    "Growth expected to be modest during adjustment period",
-    "Inflation projected to remain near the 2% target",
-    "Adjustment process expected to take time"
+    "Canadian economy is adjusting to US tariffs and new global trade conditions",
+    "Growth is expected to be modest during the adjustment period",
+    "Inflation is projected to remain near the 2% target",
+    "The adjustment process is expected to take time"
   ],
-  "why_it_matters": "This report signals the Bank of Canada's outlook on how trade policy uncertainty may dampen Canadian economic growth while maintaining inflation near target, suggesting a potential holding pattern for monetary policy.",
+  "why_it_matters": "This quarterly monetary policy report from the Bank of Canada provides the central bank's official assessment of economic conditions and outlook. The focus on tariff adjustments and trade uncertainty signals potential risks to Canada's growth trajectory, while the inflation projection near target suggests the Bank sees limited need for immediate policy tightening. Market participants trading CAD, Canadian equities, or bonds will want the full report for specific projections and policy implications.",
   "market_impact": {
     "asset_classes": [
       "fx",
+      "equities",
       "bonds"
     ],
     "directional_bias": "mixed",
-    "confidence": 3
+    "confidence": 0
   },
-  "macro_context": "US tariff implementation creating trade headwinds for Canada; central bank balancing modest growth outlook with stable inflation expectations.",
+  "macro_context": "The report addresses the impact of US tariffs on the Canadian economy, indicating trade policy uncertainty as a key macro risk. The projection for inflation near the 2% target suggests the Bank of Canada expects demand-side pressures to remain subdued, potentially leaving room for accommodative policy if growth weakens. The modest growth outlook reflects uncertainty from trade disruptions. [Note: Detailed economic projections and quantitative forecasts from the full report were not captured in this source.]",
   "market_structure_context": "",
   "important_numbers": [
-    2
+    "2% (inflation target)"
   ],
   "tags": [
-    "bank-of-canada",
-    "monetary-policy",
-    "canada-economy",
-    "us-tariffs",
-    "inflation-target",
-    "growth-outlook"
+    "bank of canada",
+    "monetary policy report",
+    "tariffs",
+    "trade",
+    "canadian economy",
+    "inflation target",
+    "growth outlook",
+    "q1-2026"
   ],
   "llm_review": {
-    "initial_confidence": 3,
+    "initial_confidence": 4,
     "verification_confidence": 5,
     "verdict": "reject",
     "issues_found": [
-      "Source content extremely thin - only a brief teaser/summary paragraph captured, not the full report",
-      "No URL provided in metadata - source cannot be verified or accessed",
-      "Seed_crawl discovery method may have limited content extraction capabilities",
-      "No specific data points, forecasts, or detailed analysis present beyond the 2% inflation target",
-      "Archive value is limited due to minimal content depth"
+      "Source content is extremely thin—only a 3-4 sentence metadata summary was captured, not the actual Monetary Policy Report content",
+      "Source is classified as 'blog_post' but metadata explicitly identifies it as 'Monetary Policy Report' (Publications category)—this is a source_type misclassification",
+      "Cannot verify any specific projections, numerical forecasts, or policy forward guidance because this data was not captured",
+      "market_impact confidence is 0, indicating the automated assessment could not evaluate market implications",
+      "quality_tier of 30 (low) confirms content is insufficient for reliable archiving"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "missing_source_attribution"
+    "notes": "placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_monetary_policy_report_3d7d5c713bae1bd4.txt",
-  "notes": "LOW QUALITY ARCHIVE CANDIDATE. Source content is minimal - only a brief teaser paragraph captured. No URL provided in metadata. This appears to be a crawl that retrieved only the summary/preview portion of the Bank of Canada Monetary Policy Report rather than the full document. High domain trust tier (high) suggests legitimacy of source, but content depth is insufficient for reliable research archive. Recommend attempting to retrieve full report content before archival."
+  "notes": "Source captured only a brief summary excerpt of the Bank of Canada January 2026 Monetary Policy Report. The full report with detailed projections, economic analysis, and policy forward guidance was not captured in this crawl. This record is a placeholder indicating the report exists and was published; full analysis requires the complete document. The captured content does confirm the report's publication date (January 28, 2026) and the general thematic focus on tariff adjustment impacts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 30,
+    "reasoning": [
+      "Extremely thin source content—only summary paragraph captured",
+      "No specific numerical projections or data points available",
+      "Cannot verify claims about inflation or growth without full report",
+      "Likely a metadata or index page rather than actual report content",
+      "High domain trust (Bank of Canada official) partially offsets content weakness"
+    ]
+  }
 }

@@ -1,26 +1,26 @@
 {
   "id": "seed_crawl_federalreserve_monetary_policy_report_731d1e121d3e4d7e",
-  "created_at": "2026-03-31T18:47:17.679514+00:00",
+  "created_at": "2026-04-13T06:20:45.442598+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
-  "title": "Monetary Policy Report Index",
+  "title": "Monetary Policy Report",
   "source": {
     "name": "Federal Reserve Board",
-    "url": "",
-    "published_at": "",
-    "source_type": "navigation_page",
-    "domain": ""
+    "url": "https://www.federalreserve.gov/monetarypolicy/publications/mpr_default.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-06-20",
+    "source_type": "listing_page"
   },
-  "summary": "This source is a Federal Reserve index page listing historical Monetary Policy Report testimonies from 1996 through 2025 (June). The page provides only navigation links without any substantive policy content, actual reports, or data. No specific monetary policy decisions, statements, or analysis can be extracted from this navigation page.",
+  "summary": "This is a navigation/listing page for the Federal Reserve's Monetary Policy Report archive, containing links to semiannual reports and testimonies from 1996 through 2025. The page itself contains no substantive policy content, economic data, or forward guidance—it only indexes historical documents.",
   "key_points": [
-    "This is a navigation/index page for Federal Reserve Monetary Policy Reports, not an actual report",
-    "Links to reports from 1996-2025 are listed chronologically",
-    "Each entry links to Testimony HTML, PDF, and Chart Data pages",
-    "No monetary policy content, decisions, or analysis present in this source",
-    "Source is thin and not suitable for RAG archive without accessing individual report links"
+    "This is a listing page (index) for Monetary Policy Reports, not an actual report itself",
+    "Reports are submitted semiannually to Senate Committee on Banking, Housing, and Urban Affairs and House Committee on Financial Services",
+    "Most recent documented update: June 20, 2025 (2025 June report)",
+    "Archive contains links to testimonies, HTML, PDF, and chart data going back to 1996",
+    "No actual policy content, data, or guidance is contained in this page"
   ],
-  "why_it_matters": "This index page has no standalone research value. It merely provides links to underlying reports which would need to be retrieved individually. For a finance research archive, the actual testimonies and reports—not this directory—should be archived.",
+  "why_it_matters": "This page serves only as an index to historical Monetary Policy Reports. Researchers seeking substantive macro or policy content must navigate to the linked HTML/PDF documents. The page itself is not suitable for archiving as a standalone research resource.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -32,22 +32,20 @@
   "tags": [
     "federal-reserve",
     "monetary-policy-report",
-    "index",
-    "navigation",
-    "historical-links",
-    "no-content"
+    "index-page",
+    "congressional-reports",
+    "semiannual-reports"
   ],
   "llm_review": {
-    "initial_confidence": 2,
+    "initial_confidence": 1,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/index page, not an actual report or article (violates Rule 5)",
-      "URL is blank - missing source attribution (violates Rule 6)",
-      "No substantive monetary policy content, decisions, or analysis present in source",
-      "event_type is 'unknown' but correct classification is clear: this is a navigation page, not a monetary_policy_report",
-      "Source has no standalone archival value - merely lists links to reports that must be retrieved individually",
-      "Source quality is too thin for research archive purposes"
+      "Source is a listing/navigation page (index) containing only links to historical Monetary Policy Reports, not substantive content",
+      "No policy positions, economic data, forward guidance, or market-relevant information can be extracted",
+      "Per CORE RULE 5: listing_page sources must be rejected",
+      "Source attribution and URL are present but the page itself has no archival value as a standalone research resource",
+      "event_type set to 'unknown' is correct here as no specific monetary policy event can be attributed to this page"
     ]
   },
   "human_review": {
@@ -55,6 +53,25 @@
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_monetary_policy_report_731d1e121d3e4d7e.txt",
-  "notes": "Source is a Federal Reserve index page for Monetary Policy Reports. No substantive content to extract. This is a navigation page that lists historical links to testimonies from 1996-2025. Last update noted as June 20, 2025. For research purposes, individual report links (HTML/PDF) would need to be accessed directly to obtain actual policy content."
+  "notes": "Non-archiveable listing page. The crawl captured the index page rather than actual Monetary Policy Report content. To capture substantive macro catalysts information, target the individual HTML/PDF report links (e.g., the 2025 June testimony or report). This page only provides access timestamps and document types (Testimony, HTML, PDF, Chart Data). Source last updated: June 20, 2025.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 0,
+    "reasoning": [
+      "Listing/navigation page with no substantive policy content",
+      "Cannot extract any macro catalysts or market structure information",
+      "Only contains metadata and hyperlinks to actual documents"
+    ]
+  }
 }

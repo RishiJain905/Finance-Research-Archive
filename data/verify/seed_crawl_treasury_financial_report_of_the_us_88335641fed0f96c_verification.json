@@ -1,22 +1,21 @@
 {
-  "verification_confidence": 9,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "No URL provided in source metadata - violates source attribution requirement",
-    "No published date available",
-    "Source body is an extremely thin seed crawl record with only one sentence of generic description",
-    "No specific macro catalyst data, fiscal figures, debt levels, revenue figures, or actionable information present",
-    "PAGE_TYPE is seed_crawl - a container/navigation type that per Rule 8 must not be accepted",
-    "Archive value is effectively zero for macro catalysts research - no catalyst events, no numerical evidence, no dates",
-    "Source is metadata about a document rather than the actual document itself"
+    "Source is a homepage/landing page per URL structure - Core Rule 5 explicitly rejects homepage types",
+    "Crawled content is critically thin - only 2-3 sentences of generic descriptive text with no substantive data",
+    "No publication date provided - cannot assess recency or staleness",
+    "No actual fiscal data, debt statistics, deficit figures, or policy content captured",
+    "Event_type set to 'unknown' when source is the Financial Report - should be 'financial_stability_report' if substantive content existed",
+    "Source cannot support market structure or macro catalyst research in current state"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The record's assessment is accurate and the decision is clear-cut per Core Rules. No ambiguity exists - homepage page type with critically thin content explicitly fails multiple rejection criteria.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a seed crawl metadata record with no URL, no published date, and no actionable content. The source body contains only a generic one-sentence description of the Financial Report of the United States Government as a document that provides 'a comprehensive view of the federal government's finances.' No specific fiscal data, debt figures, deficit numbers, revenue figures, macro catalyst events, or any numerical evidence is present.",
-    "why_it_matters": "This source cannot serve as a macro catalyst research record because it contains zero specific financial data, catalyst events, or actionable information. It is a crawl metadata record rather than an actual document, and lacks both URL attribution and publication date. The record title references the Financial Report but the source body is not the actual report.",
-    "macro_context": "Not applicable - source contains no macro catalyst content, fiscal statistics, or event data that could inform macro research.",
-    "market_structure_context": "Not applicable - source contains no market structure relevant information."
+    "summary": "This source is a Treasury.gov landing page for the Financial Report of the U.S. Government. The crawled content is extremely thin, containing only a generic one-sentence description stating the report provides a comprehensive view of federal government finances, along with references to the Bureau of the Fiscal Service and Federal Accounting Standards Advisory Board. No actual fiscal data, balance figures, debt statistics, or policy content was captured.",
+    "why_it_matters": "This source cannot support market structure or macro catalyst research. The crawled content is insufficient to extract any relevant fiscal data, debt metrics, or policy implications. Analysts seeking U.S. fiscal health indicators would need the full annual Financial Report document, not this thin landing page.",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

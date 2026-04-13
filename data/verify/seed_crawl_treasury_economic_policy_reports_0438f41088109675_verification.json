@@ -1,13 +1,19 @@
 {
   "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per metadata source_type — rule 5 mandates rejection for listing pages",
+    "Source is a navigation/index page with no substantive research content to archive",
+    "No publication date provided for the page itself, only for listed items",
+    "Source contains no market-relevant data, analysis, or macro catalyst content",
+    "Individual reports would need to be crawled separately for actual content"
+  ],
   "human_review_required": false,
-  "human_review_reason": "The generated record is accurate and appropriately flags all issues with this source. It correctly identifies the source as a listing/navigation page (per Rule 5), notes the missing URL and empty published_at, and correctly suggests rejection. No human review needed as the record itself is well-verified.",
+  "human_review_reason": "Auto-reject is appropriate because the source is explicitly a listing_page per metadata, which triggers mandatory rejection per CORE RULE 5. The generated record accurately identifies all deficiencies.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This is a Treasury Department listing page containing links to approximately 30 historical economic policy reports spanning 2009 to 2023. The most recent entry is the 'Equitable Recovery Report' from October 2023. No single document content is present; only a navigation index of available reports.",
+    "why_it_matters": "This page is not directly actionable for market research. It serves as a directory to Treasury historical reports but does not contain analysis or data relevant to current macro catalyst assessment. The listing page itself has no publish date and the content is stale (oldest items from 2009, most recent from 2023).",
     "macro_context": "",
     "market_structure_context": ""
   }

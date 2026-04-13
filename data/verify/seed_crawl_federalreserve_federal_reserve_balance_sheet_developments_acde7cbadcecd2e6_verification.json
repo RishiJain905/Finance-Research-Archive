@@ -2,19 +2,18 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is explicitly a navigation/listing page per CORE RULE 6 - contains only links to reports, not substantive content",
-    "Source attribution URL field is blank/missing",
-    "No actual balance sheet data, numbers, or analysis present - only metadata about available reports",
-    "Record correctly identifies source_type as navigation_page but still includes why_it_matters and macro_context fields suggesting archival value",
-    "Cannot extract meaningful market structure or macro catalyst information from this source type"
+    "Source is a navigation/listing page that should be rejected per rule #5",
+    "No substantive archival content - only provides links to report editions",
+    "event_type 'balance_sheet_update' is technically valid but misleading; the actual report content would qualify, not this listing page",
+    "Source does not contain actual balance sheet data, policy signals, or market information"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately identifies this as a navigation page with no substantive content. The source is correctly classified as a listing page per CORE RULE 6, which mandates rejection. No human review needed - auto-reject is appropriate.",
+  "human_review_reason": "Record correctly identifies the source as a non-archivable listing page. No ambiguity - auto-reject is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a navigation/index page providing links to Federal Reserve balance sheet development reports, not an actual report itself. The page lists quarterly balance sheet reports from May 2022 through November 2025, with the most recent report dated November 2025.",
-    "why_it_matters": "This page serves as a gateway to Federal Reserve transparency reports on balance sheet management. However, the source itself provides no actual balance sheet data, numbers, or analysis — only metadata about available reports. Users must access individual PDF/HTML reports for substantive content.",
-    "macro_context": "The Federal Reserve publishes balance sheet development reports quarterly as part of its commitment to transparency about monetary policy operations and financial stability. These reports cover trends in Fed assets (e.g., Treasury securities, mortgage-backed securities) and liabilities (e.g., reserves, reverse repurchase agreements).",
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
     "market_structure_context": ""
   }
 }

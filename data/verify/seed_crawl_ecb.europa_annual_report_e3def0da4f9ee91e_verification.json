@@ -1,15 +1,15 @@
 {
-  "verification_confidence": 1,
+  "verification_confidence": 4,
   "verdict": "reject",
   "issues_found": [
-    "Source is a landing page/index page with no substantive article content",
-    "URL is empty, making source completely unverifiable",
-    "Summary and key_points fields are empty - no content to verify",
-    "Source contains only navigation elements and summary statistics linking to deeper content",
-    "source_type correctly identified as 'landing_page' which violates CORE RULE 5"
+    "Source is classified as 'listing_page' in source_type, which violates Rule 5: 'If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page — reject'",
+    "This is the landing page/index for the ECB Annual Report 2024, not the full report itself. The actual full report is linked but not included in this source.",
+    "Content is limited to summary statistics without the detailed policy analysis that would appear in the complete annual report",
+    "The generated record's own quality_tier assessment notes 'Landing page with summary statistics rather than full report content' and 'Limited depth - detailed analysis missing'",
+    "Archival value is diminished because users seeking policy analysis would need to access the linked full report instead"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The record correctly identifies this as a listing_page, and Rule 5 explicitly requires rejection of such source types. The core facts (inflation 2.4%, 100 bps rate cuts, deposit rate 3.00%) are accurate, but the source type violation is unambiguous.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

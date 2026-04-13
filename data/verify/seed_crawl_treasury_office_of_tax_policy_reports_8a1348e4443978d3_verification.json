@@ -1,17 +1,16 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page - explicitly non-archiveable per core rule 5",
-    "No original research content, only report titles and dates from a catalog/index",
-    "event_type set to 'unknown' - correct since listing pages don't fit event taxonomy",
-    "URL missing from source metadata - cannot trace or verify",
-    "published_at not provided - cannot assess recency",
-    "Not relevant to market structure or macro catalysts as defined for this archive",
-    "The record itself is well-constructed but documents a non-archivable source"
+    "Source type is listing_page — explicitly non-archivable per CORE RULE 6",
+    "No substantive content; only report titles and dates in table format",
+    "Not relevant to market structure or macro catalysts as a standalone source",
+    "No published_at date for the page itself",
+    "Cannot extract market-relevant findings from this index page",
+    "event_type set to 'unknown' — acceptable given the source is an index with no specific event"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately identifies all problems with the source. The source is unambiguously a listing page with no market-relevant content, and the record's conclusion to reject is correct. No human review needed - auto-reject is appropriate.",
+  "human_review_reason": "The record's own analysis is correct and complete. No ambiguity exists about the source type or archival eligibility. The record properly identifies this as a non-archivable listing page and recommends rejection.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
