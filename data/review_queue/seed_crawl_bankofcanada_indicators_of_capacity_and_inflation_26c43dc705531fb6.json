@@ -1,0 +1,101 @@
+{
+  "id": "seed_crawl_bankofcanada_indicators_of_capacity_and_inflation_26c43dc705531fb6",
+  "created_at": "2026-04-14T09:40:04.762209+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Indicators of capacity and inflation pressures for Canada",
+  "source": {
+    "name": "Bank of Canada",
+    "url": "https://www.bankofcanada.ca/rates/indicators/capacity-and-inflation-pressures",
+    "domain": "www.bankofcanada.ca",
+    "published_at": "2026-03-19",
+    "source_type": "data_release_page"
+  },
+  "summary": "The Bank of Canada publishes a comprehensive dashboard of capacity and inflation indicators, updated after each policy announcement. The latest data shows CPI inflation at 1.8% year-over-year (Feb 2026), while the output gap is estimated between -0.8% and -1.8% depending on methodology, indicating residual economic slack.",
+  "key_points": [
+    "Headline CPI inflation is 1.8% year-over-year as of February 2026, within the Bank of Canada's 1-3% target band",
+    "Core inflation measures (CPI-trim, CPI-median, CPI-common) all running between 2.3% and 2.4% in February 2026",
+    "Output gap estimates range from -0.8% to -1.8% depending on methodology, suggesting modest economic slack remains",
+    "Unemployment rate at 6.7% (Feb 2026) with labour market indicator at 6.3%, slightly above unemployment rate",
+    "Wage growth measures decelerating across most metrics: LFS average hourly earnings at 3.9% (Feb), SEPH at 3.3% (Dec), LFS-Micro at 2.6% (Feb)",
+    "Energy commodity prices down -12.2% year-over-year while non-energy commodities up 19.4%, indicating divergent input cost pressures",
+    "Business Outlook Survey shows 22% of firms experiencing labour shortages in Q4, up from 13% in Q3",
+    "New housing price index declining at -2.3% year-over-year (Jan 2026), suggesting weakness in housing sector"
+  ],
+  "why_it_matters": "This dashboard aggregates the key economic indicators that the Bank of Canada uses to assess capacity pressures and inflation trends for monetary policy decisions. The combination of inflation data, output gap estimates, labour market indicators, and wage measures provides a comprehensive view of Canadian economic conditions. Market participants monitor these indicators to gauge economic health and predict future BoC policy moves.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "Canadian economy shows mixed signals: headline CPI at 1.8% with core measures (CPI-trim, CPI-median, CPI-common) between 2.3-2.4%; the output gap suggests residual slack persisting into 2026; wage growth is decelerating from previous highs. Energy price deflation (-12.2%) contrasts with non-energy commodity strength (+19.4%), complicating the inflation outlook. The housing market remains weak with new home prices declining at -2.3%.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "1.8% - CPI inflation (Feb 2026)",
+    "2.3% - CPI-trim (Feb 2026)",
+    "2.3% - CPI-median (Feb 2026)",
+    "2.4% - CPI-common (Feb 2026)",
+    "-0.8% to -1.8% - output gap estimates",
+    "6.7% - unemployment rate (Feb 2026)",
+    "3.9% - LFS average hourly earnings growth (Feb 2026)",
+    "-12.2% - energy commodity price index (Feb 2026)",
+    "19.4% - non-energy commodity price index (Feb 2026)",
+    "-2.3% - new housing price index (Jan 2026)",
+    "16.2% - office vacancy rate (Q4)"
+  ],
+  "tags": [
+    "bank-of-canada",
+    "capacity-indicators",
+    "inflation-pressure",
+    "cpi",
+    "output-gap",
+    "unemployment",
+    "wage-growth",
+    "commodity-prices",
+    "housing-market",
+    "monetary-policy-indicators"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "source_type is 'data_release_page' but the page is a statistical dashboard containing multiple data series rather than a single data release; the event_type 'data_release_other' is reasonable but the characterization as 'primary data release' in why_it_matters is slightly overstated",
+      "market_impact.confidence is 0 (null) rather than an integer 0-10; should be populated or explicitly noted as unassessed",
+      "The source does not explicitly mention a 1-3% inflation target band; this is a reasonable inference but not stated in the source text"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is mostly accurate with correct data values. The main issues are minor: a slightly overstated characterization of the page as a 'primary data release' and a missing confidence value. These are correctable but don't warrant blocking acceptance."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_bankofcanada_indicators_of_capacity_and_inflation_26c43dc705531fb6.txt",
+  "notes": "This is a data dashboard page rather than a policy announcement. The page contains multiple indicator series across inflation, product markets, labour markets, wages, real estate, and expectations. Updated: March 19, 2026. Next scheduled update: April 29, 2026. The page is updated one day after each fixed announcement date for the target overnight rate. Data includes historical quarterly figures going back to Q3 2024 and monthly figures with varying latest dates (Feb 2026, Jan 2026, Dec 2025). Historical output gap series include both current MPR estimates and real-time historical estimates from previous Monetary Policy Reports.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "Official Bank of Canada source with high domain trust tier",
+      "Contains authoritative data from Statistics Canada and Bank regional representatives",
+      "Well-structured time-series data with clear source attributions",
+      "Published March 19, 2026, within 30 days of today (2026-04-14)",
+      "Footnotes and methodology references provided",
+      "Source explicitly references academic background papers for uncertainty analysis"
+    ]
+  }
+}

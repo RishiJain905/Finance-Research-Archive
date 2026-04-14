@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 8,
+  "verdict": "accept",
   "issues_found": [
-    "Source body contains only meta description/landing page text, not the full 36-page paper content",
-    "Published January 2017—approximately 9.3 years before TODAY (2026-03-31); exceeds 90-day threshold but has clear archival value as historical research",
-    "verification_confidence and market_impact.confidence set to 0 in the record; these should reflect actual assessment"
+    "Title states date range '1953 to 1965' but source body only supports bonds issued 'between 1955 and 1963' - the broader 1953 date appears in the title but is not substantiated in the captured text",
+    "File size '268 kb' included in important_numbers but this is formatting metadata, not meaningful market context"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record accurately captures metadata from the source body; the limitation (thin source content) is appropriately noted. This is a borderline case suitable for auto-routing to review_queue.",
-  "suggested_status": "review_queue",
+  "human_review_reason": "",
+  "suggested_status": "accepted",
   "corrected_fields": {
-    "summary": "This New York Fed Staff Report (Number 806, January 2017) by Kenneth D. Garbade examines historical Treasury bond issuance practices, specifically the seven long-term bonds issued between 1955 and 1963—including one with a forty-year term—before thirty years became the outer boundary of Treasury maturities in the 1970s. The source content is limited to a brief meta description; full paper content (36 pages) requires PDF access.",
-    "why_it_matters": "Understanding historical Treasury issuance practices provides context for the modern 30-year maturity convention and informs debates about potential future extensions of Treasury maturity issuance. This research supports understanding of how current market conventions were established.",
-    "macro_context": "Historical Treasury issuance analysis from the 1950s-1960s period, prior to the establishment of the 30-year maturity standard in the 1970s.",
-    "market_structure_context": "Historical analysis of Treasury issuance conventions; specifically examines how and why Treasury issuance maturities evolved, establishing context for modern 30-year maturity standard. Relevant to understanding Treasury market structure and issuance policy."
+    "title": "Beyond Thirty: Treasury Issuance of Long-Term Bonds from 1955 to 1963",
+    "important_numbers": [
+      "7 bonds with maturities beyond 30 years issued between 1955-1963",
+      "1 bond with 40-year term",
+      "30 years as outer boundary of Treasury maturities since 1970s",
+      "36 pages"
+    ]
   }
 }

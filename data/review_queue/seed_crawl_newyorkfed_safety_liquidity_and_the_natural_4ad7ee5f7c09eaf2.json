@@ -1,64 +1,86 @@
 {
   "id": "seed_crawl_newyorkfed_safety_liquidity_and_the_natural_4ad7ee5f7c09eaf2",
-  "created_at": "2026-03-31T19:23:26.574401+00:00",
+  "created_at": "2026-04-14T09:28:08.826745+00:00",
   "status": "review_queue",
-  "topic": "macro catalysts",
+  "topic": "market structure",
   "event_type": "research_paper",
   "title": "Safety, Liquidity, and the Natural Rate of Interest",
   "source": {
     "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/research/staff_reports/sr812.html",
-    "published_at": "2017-05-01",
-    "source_type": "research_paper",
+    "published_at": "2017-05",
+    "source_type": "seed_crawl",
     "domain": "www.newyorkfed.org"
   },
-  "summary": "This Federal Reserve Bank of New York Staff Report (Number 812) investigates why U.S. interest rates are low. The authors conclude that rates are depressed primarily due to increased safety and liquidity premiums since the late 1990s, with slower economic growth as a secondary factor. The paper uses two complementary methodologies: a time-series model of Treasury/corporate yields and a medium-scale DSGE model.",
+  "summary": "This New York Fed Staff Report (Number 812, May 2017) investigates why interest rates are so low in the United States. The authors find that rates are low primarily because the premium for safety and liquidity has increased since the late 1990s, and to a lesser extent because economic growth has slowed. The paper employs two complementary analytical approaches: a flexible time-series model of Treasury and corporate yields, inflation, and long-term survey expectations, and a medium-scale dynamic stochastic general equilibrium (DSGE) model.",
   "key_points": [
-    "Authors: Marco Del Negro, Domenico Giannone, Marc Giannoni, and Andrea Tambalotti",
-    "The safety and liquidity premium increased since the late 1990s, driving down interest rates",
-    "Slower economic growth contributed to lower rates to a lesser extent",
-    "Research used a flexible time-series model of Treasury and corporate yields, inflation, and long-term survey expectations",
-    "A medium-scale dynamic stochastic general equilibrium (DSGE) model was used as a complementary approach",
-    "Document is available only in PDF format, 80 pages",
-    "JEL classifications: C11, C32, C54, E43, E44"
+    "Low US interest rates are primarily driven by an increased premium for safety and liquidity since the late 1990s, with a secondary contribution from slower economic growth",
+    "The study uses two complementary analytical methods: a time-series model and a medium-scale DSGE model",
+    "The time-series model analyzes Treasury and corporate yields, inflation, and long-term survey expectations",
+    "The paper discusses implications of these findings for the natural rate of interest",
+    "Authors are Marco Del Negro, Domenico Giannone, Marc Giannoni, and Andrea Tambalotti",
+    "Published as Staff Report Number 812 by the Federal Reserve Bank of New York in May 2017"
   ],
-  "why_it_matters": "Understanding the drivers of the natural rate of interest has implications for monetary policy calibration. If low rates are driven by structural increases in safety/liquidity premiums rather than weak growth, this suggests different policy responses. This is a May 2017 Federal Reserve research paper — note that it predates COVID-19, the 2022-2024 inflation surge, and significant shifts in Fed policy. As a historical research record, it provides context on pre-pandemic thinking about interest rate dynamics but may have limited direct relevance to current market conditions.",
+  "why_it_matters": "This research provides foundational understanding of the structural factors driving the low interest rate environment. The finding that safety and liquidity premiums—rather than just weak growth—are the dominant factor has significant implications for investors, policymakers, and anyone trying to understand the long-run neutral rate. It suggests that changes in risk appetite or institutional demand for safe assets could substantially affect rate levels.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "This NY Fed Staff Report (Number 812) provides a framework for understanding the natural rate of interest as driven by safety/liquidity premiums and trend growth. The finding that premium shifts (rather than pure growth) explain low rates has implications for monetary policy interpretation. Published May 2017 — this analysis predates the post-COVID inflation surge, the 2022-2024 tightening cycle, and subsequent rate environment. Historical research record only.",
-  "market_structure_context": "",
+  "macro_context": "The paper provides macro context by explaining that low equilibrium interest rates stem from both demand-side factors (higher safety/liquidity premiums) and supply-side factors (slower growth). This finding is relevant for monetary policy normalization debates and suggests the natural rate may remain suppressed by structural shifts in the demand for safe assets.",
+  "market_structure_context": "The research discusses the market for Treasury and corporate securities, focusing on how safety and liquidity characteristics of these instruments affect their yields and the broader interest rate structure. The analysis of premium components in yield spreads touches on market microstructure elements related to risk pricing and asset valuation.",
   "important_numbers": [],
   "tags": [
-    "natural-rate-interest",
+    "natural-rate-of-interest",
     "safety-premium",
     "liquidity-premium",
     "dsge-model",
+    "time-series",
+    "treasury-yields",
+    "corporate-yields",
     "new-york-fed",
     "research-paper",
-    "interest-rates",
-    "monetary-economics"
+    "low-interest-rates"
   ],
   "llm_review": {
-    "initial_confidence": 3,
-    "verification_confidence": 6,
-    "verdict": "review",
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "pending",
     "issues_found": [
-      "Source body contains only abstract/metadata, not the full 80-page paper - verification limited to abstract content only",
-      "Published May 2017 — approximately 9 years old relative to TODAY (2026-03-31); may have limited relevance to current market conditions",
-      "TARGET metadata says 'market structure' but content is macroeconomics research on natural interest rates — metadata mismatch",
-      "Unable to verify detailed findings or methodology claims beyond abstract description"
+      "Source text is a brief abstract/description only, not the full paper content",
+      "Published May 2017 - approximately 9 years before TODAY, making this a historical record",
+      "Cannot verify specific quantitative findings without full paper access",
+      "The source_type 'seed_crawl' suggests this is crawl metadata, not a standard page type classification"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Source body is extremely thin (abstract only), limiting verification to metadata and paper description. However, the NY Fed is a high-trust domain, and the abstract provides substantive content that matches the record. The LLM correctly flagged these limitations. Human review needed to determine if abstract-only sources should be accepted for archival given the institutional credibility and research relevance."
+    "notes": "Historical research paper (2017) on interest rate dynamics. Source text is thin (abstract/description only). Requires access to full PDF to verify specific findings. Lower confidence due to age and limited extractable content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_safety_liquidity_and_the_natural_4ad7ee5f7c09eaf2.txt",
-  "notes": "SOURCE_TYPE is research_paper. The TARGET field says 'market structure' but the actual content is macroeconomics research on the natural rate of interest. This appears to be a metadata mismatch. The source body only contains the paper's abstract/metadata, not the actual research content. Unable to extract substantive findings beyond what is stated in the abstract. Historical record from 2017 — limited relevance to current market conditions. Recommend checking if full PDF is available for more complete extraction.",
-  "telegram_review_sent": true,
-  "telegram_review_fingerprint": "00ecab715186bf2cb13cb8339a56ad117c027a15"
+  "notes": "Source is a research paper abstract/description from May 2017, approximately 9 years old. The provided text is thin and represents only the paper's abstract, not the full 80-page research content. While the topic (natural rate of interest, safety/liquidity premiums) is highly relevant to both market structure and macro catalysts, the limited extractable content significantly reduces the quality and verification potential of this record. The PDF is available at the source URL for full review. Historical age noted; findings may have been superseded by subsequent research or market developments.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Source text is minimal - only a paper abstract/description, not full research content",
+      "Historical document from May 2017 (9 years old)",
+      "No specific quantitative findings extractable from provided text",
+      "Topic relevance is high but content richness is very low"
+    ]
+  }
 }

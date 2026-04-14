@@ -1,0 +1,115 @@
+{
+  "id": "seed_crawl_newyorkfed_beyond_thirty_treasury_issuance_of_e8daf376b7225dd6",
+  "created_at": "2026-04-14T09:29:18.671033+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "research_paper",
+  "title": "Beyond Thirty: Treasury Issuance of Long-Term Bonds from 1953 to 1965",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://www.newyorkfed.org/research/staff_reports/sr806.html",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2017-01-01",
+    "source_type": "research_paper"
+  },
+  "summary": "This staff report examines seven Treasury bonds with maturities beyond the conventional 30-year outer boundary that were issued between 1955 and 1963, including one 40-year bond. The paper analyzes the historical circumstances that led to the issuance of these longer-term instruments during a period before standardized 30-year issuance became the norm in the 1970s.",
+  "key_points": [
+    "Seven bonds with maturities exceeding 30 years were issued between 1955 and 1963, including one 40-year bond",
+    "Thirty years has been the outer boundary of Treasury bond maturities since the emergence of regular issuance in the 1970s",
+    "The paper is authored by Kenneth D. Garbade and published as Federal Reserve Bank of New York Staff Report Number 806",
+    "The paper is classified under JEL codes H63 (National Budget, Deficit, and Debt) and N22 (Financial Markets and Institutions: US, Canada)",
+    "The full paper is only available in PDF format, 36 pages"
+  ],
+  "why_it_matters": "This historical analysis provides context for understanding how Treasury issuance practices have evolved over time. While the findings are historical and not directly applicable to current market conditions, they illuminate how market structure considerations around duration and maturity selection have changed since the 1950s-60s.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The source documents historical Treasury market structure evolution, specifically how the 30-year maturity boundary became established in the 1970s, providing historical perspective on Treasury market conventions",
+  "important_numbers": [
+    "7 bonds with maturities beyond 30 years issued between 1955-1963",
+    "1 bond with 40-year term",
+    "30 years as outer boundary of Treasury maturities since 1970s",
+    "36 pages",
+    "268 kb"
+  ],
+  "tags": [
+    "treasury",
+    "bond issuance",
+    "maturity",
+    "market structure",
+    "historical",
+    "federal reserve",
+    "debt management"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Title states date range '1953 to 1965' but source body only supports bonds issued 'between 1955 and 1963' - the broader 1953 date appears in the title but is not substantiated in the captured text",
+      "File size '268 kb' included in important_numbers but this is formatting metadata, not meaningful market context"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_newyorkfed_beyond_thirty_treasury_issuance_of_e8daf376b7225dd6.txt",
+  "notes": "Historical research paper with limited extractable content in source body. Only the abstract and metadata were captured; full 36-page PDF not rendered. Published approximately 9+ years ago. While topic (Treasury issuance structure) is relevant to market structure, the historical time period (1953-1965) and publication date (2017) mean this has minimal current market relevance for RAG applications focused on actionable market intelligence.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_13",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 72.0,
+    "reasoning": [
+      "quality score: 72.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (2)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

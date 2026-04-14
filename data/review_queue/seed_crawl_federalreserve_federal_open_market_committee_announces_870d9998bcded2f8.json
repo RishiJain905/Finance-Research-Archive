@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_federalreserve_federal_open_market_committee_announces_870d9998bcded2f8",
-  "created_at": "2026-03-31T18:42:46.636920+00:00",
+  "created_at": "2026-04-14T09:40:26.470311+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
   "event_type": "monetary_policy_report",
@@ -9,25 +9,29 @@
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm",
     "published_at": "2025-08-22",
-    "source_type": "press_release",
+    "source_type": "pressrelease",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "The FOMC unanimously approved updates to its Statement on Longer-Run Goals and Monetary Policy Strategy on August 22, 2025. This framework statement, originally adopted in 2012 and previously reviewed in 2019-20, reflects lessons from the economy over the past five years. The Committee's two percent longer-run inflation goal was explicitly not a focus of the review.",
+  "summary": "The FOMC unanimously approved updates to its Statement on Longer-Run Goals and Monetary Policy Strategy on August 22, 2025. This framework statement, originally adopted in 2012 and previously reviewed in 2019-20, was updated to reflect lessons from the past five years. The 2% longer-run inflation goal was explicitly not a focus of this review. The updates aim to enhance transparency, accountability, and effectiveness of monetary policy.",
   "key_points": [
-    "The FOMC unanimously approved updates to its monetary policy framework statement",
-    "The framework statement was originally adopted in 2012 with a previous review in 2019-20",
-    "The 2025 review was announced in November 2024 and included Fed Listens events at Reserve Banks and a research conference in May 2025",
-    "Updates are intended to enhance transparency, accountability, and effectiveness of monetary policy",
-    "The Committee's two percent longer-run inflation goal was not a focus of the review",
-    "The statement emphasizes promoting maximum employment and stable prices for the benefit of all Americans"
+    "FOMC unanimously approved updates to its monetary policy framework statement on August 22, 2025",
+    "The 2025 review was announced in November 2024 and included Fed Listens events and a May 2025 research conference",
+    "The Committee's 2% longer-run inflation goal was not a focus of the review",
+    "Updates reflect lessons from the economy over the past five years",
+    "The statement emphasizes the Committee's commitment to maximum employment and stable prices",
+    "The full updated statement is available in PDF format but the specific content of updates is not detailed in this press release"
   ],
-  "why_it_matters": "The why_it_matters correctly notes that 'the source does not specify what changes were made'—this is accurate and appropriately caveats the record.",
+  "why_it_matters": "This framework statement serves as the foundation for FOMC policy actions and shapes how the Fed interprets its dual mandate. However, this press release announces the approval without detailing what actually changed. Market participants would need to review the full PDF statement to understand the substantive updates to Fed policy strategy. The fact that the 2% inflation goal was not a focus suggests the changes may relate more to the employment side of the mandate or the framework's implementation.",
   "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "unknown",
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "This is the Fed's periodic review of its monetary policy framework, intended to ensure its approach remains appropriate for achieving its congressional mandates of maximum employment and stable prices.",
+  "macro_context": "The framework update reflects the Fed's ongoing effort to adapt its monetary policy strategy based on post-pandemic economic experience. The review process (Fed Listens events and research conference) suggests a deliberate, consultative approach to policy framework evolution.",
   "market_structure_context": "",
   "important_numbers": [
     "2% longer-run inflation goal (unchanged)"
@@ -35,30 +39,37 @@
   "tags": [
     "fed",
     "fomc",
-    "monetary-policy",
-    "framework-review",
-    "strategy",
+    "monetary-policy-framework",
+    "strategy-update",
+    "2025-review",
     "maximum-employment",
-    "inflation-target"
+    "inflation-target",
+    "transparency"
   ],
   "llm_review": {
-    "initial_confidence": 6,
-    "verification_confidence": 7,
+    "initial_confidence": 5,
+    "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "event_type 'monetary_policy_report' is borderline; this is a press release announcing framework approval, not a full report—the more precise type would be 'fomc_statement' or similar",
-      "Source is inherently thin—announces the update but does not specify what changes were made to the framework statement",
-      "The actual framework changes are in a linked PDF not included in this source, limiting archival value for substantive content",
-      "No specific policy signals or forward guidance language provided in this source"
+      "The press release announces the approval of framework updates but does not detail the substantive changes—those are in the linked PDF, which is not included in the source text",
+      "event_type 'monetary_policy_report' is technically valid but the source is a press release, not a full monetary policy report; 'unknown' would be more accurate unless the PDF content is incorporated"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The record is factually accurate and source attribution is correct, but the event_type may be imprecise and the source is thin with no substantive content on actual framework changes. Human review needed to assess if 'monetary_policy_report' is the correct event_type or if this should be reclassified as something like 'fomc_statement'. Also note the source was published 221 days before TODAY (well past 90-day threshold)—acceptable as historical policy document but worth flagging."
+    "notes": "Source is high-authority and factually accurate, but thin content limits archival value. The record correctly identifies that substantive policy content is in the PDF and not the source text. Human review needed to determine if announcing framework approval without the actual framework text meets the archive's utility threshold."
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_federal_open_market_committee_announces_870d9998bcded2f8.txt",
-  "notes": "Low-detail press release. Provides metadata about the framework review process and confirms unanimous approval and no change to the 2% inflation target, but does not articulate what specific changes were made to the framework statement. For substantive content, refer to linked PDF document.",
-  "telegram_review_sent": true,
-  "telegram_review_fingerprint": "8b617f6d90c84cb895b19aa1496cea36b604fe7d"
+  "notes": "Historical record (published August 22, 2025, more than 90 days before TODAY). Source announces framework approval but does not contain the actual framework text. Low informational density for a research archive—the substantive content would be in the linked PDF statement. Confidence lowered due to lack of actionable detail in the source text itself.",
+  "quality_tier": {
+    "tier": "c",
+    "score": 5,
+    "reasoning": [
+      "High-authority source (Federal Reserve) but thin content",
+      "Announces policy framework update without specifying changes",
+      "Full text available in PDF but not included in this source",
+      "Requires additional document to be useful for research"
+    ]
+  }
 }

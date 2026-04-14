@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_newyorkfed_rateamplifying_demand_and_the_excess_b5ec471e93482c44",
-  "created_at": "2026-03-31T19:18:14.176801+00:00",
+  "created_at": "2026-04-14T09:26:08.905423+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -12,76 +12,99 @@
     "published_at": "2021-04-01",
     "source_type": "research_paper"
   },
-  "summary": "This Federal Reserve Bank of New York Staff Report (No. 810, revised April 2021) by Hanson, Lucca, and Wright documents that long-term nominal interest rates exhibit excess sensitivity to high-frequency movements in short-term rates, and that this sensitivity has strengthened since 2000. The researchers propose a model where declines in short rates trigger rate-amplifying demand shifts in long-term bonds that are met with limited and slow arbitrage, causing long rates to temporarily overreact to short rate changes.",
+  "summary": "This Federal Reserve Bank of New York Staff Report (Number 810, revised April 2021) by Hanson, Lucca, and Wright documents a puzzling post-2000 shift in the relationship between short- and long-term interest rates: high-frequency sensitivity of long rates to short rates has strengthened while low-frequency sensitivity has weakened. The paper explains this pattern through a model where rate declines trigger 'rate-amplifying' demand shifts for long-term bonds, and arbitrage is limited and slow.",
   "key_points": [
-    "Long-term rates show excess sensitivity to high-frequency (daily or monthly) movements in short-term rates, and this sensitivity has grown stronger since 2000",
-    "The association between low-frequency changes (6 or 12 month horizons) in long and short rates has weakened substantially post-2000",
-    "This pattern arises because short rate increases temporarily raise the term premium component of long-term yields",
-    "Rate-amplifying demand is traced to three sources: mortgage refinancing activity, investors who extrapolate recent short rate changes, and investors who reach for yield when short rates fall",
-    "The arbitrage response to demand shifts is both limited and slow, allowing long rates to temporarily overreact",
-    "The paper discusses implications for event-study methodologies and monetary policy transmission"
+    "Long-term nominal interest rates exhibit excess sensitivity to high-frequency (daily or monthly) movements in short-term rates, and this sensitivity has grown stronger since 2000",
+    "Low-frequency association (6- or 12-month horizons) between long- and short-term rates was strong pre-2000 but has weakened substantially since",
+    "The mechanism: increases in short rates temporarily raise the term premium component of long-term yields, causing long rates to overreact to short rate changes",
+    "Rate-amplifying demand is traced to three sources: mortgage refinancing activity, investors who extrapolate recent short-rate changes, and investors who 'reach for yield' when short rates fall",
+    "Arbitrage response to these demand shifts is both limited and slow, allowing the mispricing to persist",
+    "Paper discusses implications for event-study methodologies and monetary policy transmission"
   ],
-  "why_it_matters": "This research matters for understanding bond market microstructure and monetary policy effectiveness. The finding that long-term rates overreact to short-term rate changes due to investor behavior (reach for yield, extrapolation) and mortgage refinancing activity suggests that standard monetary policy transmission models may be incomplete. For traders and researchers, this has implications for how to interpret rate move events and the validity of event-study approaches.",
+  "why_it_matters": "This research challenges simple expectations hypotheses of the term structure and has direct implications for how monetary policy moves through financial markets. If long-term rates overreact to short-rate changes due to investor behavior (refinancing, extrapolation, reach for yield), then policy announcements may have larger-than-expected effects on yields. The findings also suggest that event-study approaches that assume rapid arbitrage may mismeasure policy impacts.",
   "market_impact": {
     "asset_classes": [
-      "bonds",
-      "fixed_income"
+      "bonds"
     ],
-    "directional_bias": "neutral",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The paper directly addresses market structure by examining how investor demand behavior (rate-amplifying demand from mortgage refinancing, yield extrapolation, and reach-for-yield) affects term premium dynamics and creates excess sensitivity in long-term rates. The limited and slow arbitrage response to demand shifts is a market microstructure finding with implications for bond market efficiency.",
+  "market_structure_context": "The paper directly addresses market structure by analyzing term premium dynamics, investor demand functions for long-duration bonds, and the speed/limits of arbitrage in the Treasury market. Key mechanisms include mortgage refinancing pipelines (which create demand when rates fall), extrapolative expectations among bond investors, and reach-for-yield behavior that amplifies rate moves.",
   "important_numbers": [],
   "tags": [
-    "newyorkfed",
-    "staff-report",
+    "fed-research",
     "term-premium",
     "interest-rates",
-    "market-structure",
-    "bond-demand",
-    "reach-for-yield",
-    "arbitrage",
-    "mortgage-refinancing",
+    "bond-market",
+    "rate-sensitivity",
     "monetary-policy-transmission",
-    "event-study"
+    "arbitrage",
+    "yield-curve"
   ],
   "llm_review": {
-    "initial_confidence": 8,
+    "initial_confidence": 7,
     "verification_confidence": 9,
     "verdict": "accept",
-    "issues_found": [
-      "Source PDF not directly accessible; verification based on metadata and abstract only (acknowledged by record)",
-      "Source age is ~5 years (revised April 2021) but qualifies as historical research finding with archival value per policy"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "The record is well-constructed and factually accurate against the source abstract. Minor limitation is that the full PDF was not accessible for complete verification, but the metadata and abstract provide sufficient substance for the summary and key points. The source is a legitimate Fed research paper with clear market structure relevance."
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_newyorkfed_rateamplifying_demand_and_the_excess_b5ec471e93482c44.txt",
-  "notes": "Historical research record from Federal Reserve Bank of New York. The source discusses market structure aspects of interest rate dynamics, specifically how investor behavior creates excess sensitivity in long-term rates. Published revised April 2021, approximately 5 years prior to TODAY. The PDF was not accessible in this crawl; analysis based on metadata and abstract. Source is relevant to market structure as it examines term premium dynamics, bond demand mechanisms, and arbitrage constraints in the Treasury market.",
+  "notes": "Source is a New York Fed staff research paper (Staff Report No. 810) by Hanson, Lucca, and Wright. The provided text is the paper abstract and metadata only; full analysis not available. Published March 2017, revised April 2021. JEL classification: E43, E52, G12. Directly relevant to market structure as it analyzes term structure dynamics and bond market microstructure. The analysis is theoretical/empirical and discusses monetary policy transmission — relevant to macro catalysts as well. Historical record (5 years old); findings may need updating given post-2021 rate environment.",
   "linked_quant_context": [
-    {
-      "record_id": "sofr_2026_04_10",
-      "relationship": "temporally_proximate_quant",
-      "reason": "exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "market-structure"
-      ],
-      "link_score": 67.7
-    },
     {
       "record_id": "sofr_2026_04_13",
       "relationship": "temporally_proximate_quant",
       "reason": "exact topic match, complementary context",
       "topic_overlap": [
-        "market structure",
-        "market-structure"
+        "market structure"
       ],
-      "link_score": 67.7
+      "link_score": 65.0
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
     }
-  ]
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 66.5,
+    "reasoning": [
+      "quality score: 66.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
 }

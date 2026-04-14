@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_monetary_policy_reportapril_2025_eec05dab2d47bba7",
-  "created_at": "2026-03-31T09:55:00.128358+00:00",
+  "created_at": "2026-04-14T09:36:05.843491+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
   "event_type": "monetary_policy_report",
@@ -8,64 +8,86 @@
   "source": {
     "name": "Bank of Canada",
     "url": "https://www.bankofcanada.ca/publications/mpr/mpr-2025-04-16",
+    "domain": "www.bankofcanada.ca",
     "published_at": "2025-04-16",
-    "source_type": "monetary_policy_report",
-    "domain": "www.bankofcanada.ca"
+    "source_type": "webpage"
   },
-  "summary": "The Bank of Canada released its April 2025 Monetary Policy Report, maintaining the overnight rate target at 2.75% (policy rate at 2¾%). The report notes that while the Canadian economy ended 2024 strong with inflation near the 2% target, escalating US tariffs and trade uncertainty have significantly diminished growth prospects and introduced upward price pressures. The Bank presents illustrative scenarios given the unpredictability of US trade policy.",
+  "summary": "The Bank of Canada held its policy rate steady at 2.75% in April 2025, as the economy showed strength at end-2024 but faced growing uncertainty from escalating US tariffs and trade conflict. The Governing Council assessed that while inflation was near the 2% target, trade uncertainty and tariffs were expected to slow growth while adding price pressures. The report outlined two illustrative scenarios for US trade policy outcomes given the unpredictability of tariff shifts.",
   "key_points": [
-    "Bank of Canada held target overnight rate at 2.75%, with Bank Rate at 3% and deposit rate at 2.70%",
-    "Canadian economy ended 2024 strong, but trade conflict is diminishing growth prospects",
-    "Inflation was near the 2% target in Q4 2024 before the intensification of trade conflict",
-    "US has threatened, imposed, and suspended tariffs on Canada, with many tariffs remaining in place",
-    "Removal of consumer carbon tax will temporarily lower inflation with a one-time reduction in consumer prices, mostly gasoline",
-    "Canada's potential output growth is anticipated to slow due to declining population growth and trade conflict",
-    "Range for Canada's neutral interest rate lies between 2.25% and 3.25%"
+    "Bank of Canada maintained the overnight rate target at 2.75%, with the Bank Rate at 3% and deposit rate at 2.70%.",
+    "Canadian economy ended 2024 strong, with inflation near the 2% target in Q4 2024.",
+    "US has imposed large and broad-based tariffs on Canada and most trading partners, with many tariffs remaining in place.",
+    "Trade uncertainty and tariffs are expected to slow economic growth and add to price pressures.",
+    "Removal of the consumer carbon tax will temporarily lower inflation and cause a one-time reduction in consumer price levels, primarily affecting gasoline prices.",
+    "Canada's neutral interest rate range is estimated between 2.25% and 3.25%, with potential output growth anticipated to slow.",
+    "Global economic growth was solid at end-2024, with inflation easing toward central bank targets before tariff escalation."
   ],
-  "why_it_matters": "This quarterly monetary policy report from the Bank of Canada provides the official institutional outlook on Canadian economic conditions and inflation trajectory. The report signals concern about trade conflict impacts on growth while noting offsetting effects from carbon tax removal. Investors in Canadian equities, bonds, and CAD should monitor how these competing forces—tariff-driven price pressures versus weaker growth—affect the Bank's future rate path.",
+  "why_it_matters": "This quarterly report defines the Bank of Canada's official assessment of the Canadian economy and its forward policy stance. For traders and analysts, the policy rate decision (2.75% held) and the Governing Council's characterization of trade conflict risks inform expectations for future rate moves. The report's scenario analysis for US tariff paths is critical for gauging the range of potential outcomes for Canadian GDP growth and inflation.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "fx"
+      "fx",
+      "equities"
     ],
-    "directional_bias": "mixed",
+    "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The report presents a highly uncertain outlook driven by US trade policy unpredictability. Tariffs are expected to slow growth and add price pressures, while carbon tax removal will temporarily lower inflation. The Bank emphasizes that the speed and magnitude of US policy shifts make economic forecasting particularly difficult. Global economic growth was solid at end-2024 with inflation easing toward central bank targets before US tariff imposition.",
+  "macro_context": "The report was written during a period of escalating US-Canada trade tensions. US tariff impositions on Canadian goods were creating uncertainty about both economic growth (through reduced exports) and price pressures (through higher input costs). The Bank characterized the outlook as 'highly uncertain' given the unpredictability of US trade policy direction, speed, and magnitude of shifts.",
   "market_structure_context": "",
   "important_numbers": [
-    "2.75% (overnight rate target)",
-    "2¾% (policy rate)",
-    "3% (Bank Rate)",
-    "2.70% (deposit rate)",
-    "2% (inflation target)",
-    "2.25%-3.25% (neutral interest rate range)"
+    "2.75% — overnight rate target (held)",
+    "3.00% — Bank Rate",
+    "2.70% — deposit rate",
+    "2.00% — inflation target",
+    "2.25%-3.25% — estimated neutral interest rate range"
   ],
   "tags": [
     "bank-of-canada",
     "monetary-policy-report",
-    "trade-conflict",
+    "canada",
+    "trade-war",
     "tariffs",
     "inflation",
-    "overnight-rate",
-    "carbon-tax",
-    "canadian-economy"
+    "interest-rates",
+    "policy-rate",
+    "carbon-tax"
   ],
   "llm_review": {
-    "initial_confidence": 7,
-    "verification_confidence": 9,
-    "verdict": "accept",
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "review",
     "issues_found": [
-      "market_impact.confidence is set to 0 instead of being estimated—this is a data quality issue but not a factual error in the summary itself"
+      "Source is a landing page crawl containing metadata, overview bullets, and navigation elements—not the substantive body of the Monetary Policy Report. Full projection tables, detailed scenario analysis, vote tally, and Governor's complete assessment are not present in the scraped content.",
+      "Record is approximately 12.5 months old (2025-04-16 vs. TODAY 2026-04-14). While quarterly MPRs have archival value as historical policy documents, current market relevance is limited for live trading decisions.",
+      "market_impact.directional_bias is 0 (unfilled), but this is correctly unknown given the source does not provide market impact commentary.",
+      "quality_tier correctly identifies the source as thin (C-tier), but all captured key points are factually supported by the available source content."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Historical record (published 2025-04-16, more than 90 days before TODAY). Source is a quarterly monetary policy report from the Bank of Canada covering economic outlook, inflation assessment, and rate decision. Relevant to macro catalysts as it discusses trade conflicts, tariffs, and their macroeconomic implications. The Bank's rate decision (held at 2.75%) and forward-looking scenarios are key for understanding Canadian monetary policy direction."
+    "notes": "The record correctly captures all verifiable elements from the thin source (rate decision, economic context, tariff characterization, carbon tax impact, neutral rate range). However, the source itself is a landing page rather than the full report PDF. Human reviewer should confirm whether the complete MPR PDF was intended to be crawled separately, and assess whether the metadata-only capture is sufficient for archival purposes given the source's age."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_monetary_policy_reportapril_2025_eec05dab2d47bba7.txt",
-  "notes": "Historical record—published 2025-04-16, approximately 11.5 months before TODAY (2026-03-31). Lowered confidence slightly per staleness rule. Source is the Bank of Canada's April 2025 Monetary Policy Report overview page, which summarizes the quarterly report, rate decision, press conference, and key economic assumptions. The full detailed report may contain additional scenarios and data not captured in this overview.",
-  "telegram_review_sent": true,
-  "telegram_review_fingerprint": "e4b70771b9c52a0ac1df6c2589a597c40d1eab13"
+  "notes": "This record reflects a crawl of the Bank of Canada MPR landing page for April 2025. The scraped content includes overview bullets, the policy rate hold announcement, and navigation elements but does not capture the substantive body of the Monetary Policy Report (e.g., detailed projections, scenario tables, Governor's assessment). The actual full-text PDF may contain more granular data relevant to macro catalysts analysis. Recommend verifying whether the PDF was included in the crawl or should be added.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 5,
+    "reasoning": [
+      "Source is authoritative (Bank of Canada official publication) but source body is thin—metadata and overview only, not full report text.",
+      "Key policy elements captured: rate hold at 2.75%, characterization of trade conflict risks, carbon tax inflation impact.",
+      "Historical record—13 months old—limiting current market relevance.",
+      "Missing: full projection tables, scenario specifics, vote tally, Governor's full assessment."
+    ]
+  }
 }

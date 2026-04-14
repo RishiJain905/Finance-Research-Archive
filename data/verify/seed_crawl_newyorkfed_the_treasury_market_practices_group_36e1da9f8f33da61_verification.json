@@ -1,18 +1,19 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 4,
   "verdict": "review",
   "issues_found": [
-    "Source body is thin - contains only abstract-level text and metadata, not full paper content (PDF not captured in crawl)",
-    "Publication date August 2017 makes this over 8 years old relative to TODAY",
-    "Limited extractable substantive content beyond basic metadata and abstract"
+    "Source body is extremely thin - contains only abstract/intro text, not substantive paper content",
+    "Full PDF requires download access - substantive analysis not captured in crawled text",
+    "Published August 2017 - over 8 years old",
+    "Limited extractable market structure details in available source body"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Source is a legitimate, high-trust-domain research paper (Federal Reserve Bank of New York Staff Report) with accurate metadata. The thin source body is a known limitation of the crawl process, not an error in the record. The content that IS present is factually accurate and the event_type (research_paper) is correct. Age and thin content are worth noting but do not warrant human review given the clear source legitimacy and accurate transcription.",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "This is a legitimate Federal Reserve Bank of New York Staff Report (research_paper type) with accurate metadata, but the crawled source body is critically thin - only containing the abstract/introduction rather than substantive analysis. The generated record correctly captures what IS in the source text but this represents an incomplete picture of the research. Human review is needed to determine if: (1) this thin representation has sufficient archival value given the age (2017), (2) whether the full PDF should be requested for crawling, or (3) if this should be rejected due to insufficient content. The summary and key_points accurately reflect the source body content, but the why_it_matters and market_structure_context fields contain interpretive content that cannot be fully verified against the thin source.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "This historical research paper (August 2017) provides foundational context for understanding informal market practices and behavioral norms in Treasury markets. The TMPG's role in setting voluntary standards for U.S. government securities trading is relevant to market structure discussions, though the thin source limits extraction of detailed insights.",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The source discusses the TMPG's role in establishing behavioral norms for U.S. government securities trading, which relates to market structure for Treasury markets. The paper examines how voluntary market participant associations can influence trading practices without statutory authority. Note: Full paper content not available in source body - only abstract/introductory material was captured."
   }
 }

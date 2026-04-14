@@ -1,14 +1,18 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "source_type is 'data_release_page' but the page is a statistical dashboard containing multiple data series rather than a single data release; the event_type 'data_release_other' is reasonable but the characterization as 'primary data release' in why_it_matters is slightly overstated",
+    "market_impact.confidence is 0 (null) rather than an integer 0-10; should be populated or explicitly noted as unassessed",
+    "The source does not explicitly mention a 1-3% inflation target band; this is a reasonable inference but not stated in the source text"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "The record is mostly accurate with correct data values. The main issues are minor: a slightly overstated characterization of the page as a 'primary data release' and a missing confidence value. These are correctable but don't warrant blocking acceptance.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "The Bank of Canada publishes a comprehensive dashboard of capacity and inflation indicators, updated after each policy announcement. The latest data shows CPI inflation at 1.8% year-over-year (Feb 2026), while the output gap is estimated between -0.8% and -1.8% depending on methodology, indicating residual economic slack.",
+    "why_it_matters": "This dashboard aggregates the key economic indicators that the Bank of Canada uses to assess capacity pressures and inflation trends for monetary policy decisions. The combination of inflation data, output gap estimates, labour market indicators, and wage measures provides a comprehensive view of Canadian economic conditions. Market participants monitor these indicators to gauge economic health and predict future BoC policy moves.",
+    "macro_context": "Canadian economy shows mixed signals: headline CPI at 1.8% with core measures (CPI-trim, CPI-median, CPI-common) between 2.3-2.4%; the output gap suggests residual slack persisting into 2026; wage growth is decelerating from previous highs. Energy price deflation (-12.2%) contrasts with non-energy commodity strength (+19.4%), complicating the inflation outlook. The housing market remains weak with new home prices declining at -2.3%.",
     "market_structure_context": ""
   }
 }

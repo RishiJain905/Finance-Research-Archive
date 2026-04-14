@@ -1,47 +1,77 @@
 {
-  "TARGET": "macro catalysts",
-  "TOPIC": "macro catalysts",
-  "TITLE": "January 27-28, 2026 FOMC Meeting",
-  "URL": "https://www.federalreserve.gov/monetarypolicy/fomcpressconf20260128.htm",
-  "source": {
-    "name": "macro catalysts",
-    "url": "https://www.federalreserve.gov/monetarypolicy/fomcpressconf20260128.htm",
-    "domain": "www.federalreserve.gov",
-    "published_at": "",
-    "source_type": ""
-  },
+  "id": "seed_crawl_federalreserve_january_2728_2026_fomc_meeting_0e2cf5295583edc3",
+  "created_at": "2026-04-14T09:32:58.504567+00:00",
+  "status": "rejected",
   "topic": "macro catalysts",
+  "event_type": "fomc_statement",
+  "title": "January 27-28, 2026 FOMC Meeting",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomcpressconf20260128.htm",
+    "published_at": "2026-01-28",
+    "source_type": "navigation_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This is a navigation page for the January 27-28, 2026 FOMC meeting press conference. It contains only meta-information about document availability and release dates. The actual FOMC statement, implementation note, and minutes are in separate linked documents that must be crawled directly.",
+  "key_points": [
+    "This URL is a navigation page linking to FOMC documents, not the documents themselves",
+    "FOMC Meeting Statement was released January 28, 2026 at 2:00 p.m.",
+    "Implementation Note was released January 28, 2026 at 2:00 p.m.",
+    "Statement on Longer-Run Goals and Monetary Policy Strategy was released January 28, 2026",
+    "Press Conference Transcript released as PDF on January 28, 2026",
+    "FOMC Minutes were released February 18, 2026 at 2:00 p.m."
+  ],
+  "why_it_matters": "This page is not a valid source for archival purposes. The substantive policy content (rate decision, forward guidance, vote tally) is in the linked FOMC statement and minutes documents, which should be crawled separately. This navigation page provides no decision details or market-relevant information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "fomc",
+    "federal-reserve",
+    "monetary-policy",
+    "navigation-page",
+    "january-2026"
+  ],
   "llm_review": {
-    "initial_confidence": 0,
+    "initial_confidence": 2,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/container page providing links to FOMC documents, not the actual content itself",
-      "URL points to press conference page but source body only contains navigation links and accessibility instructions",
-      "Generated record has empty summary, key_points, why_it_matters, macro_context, and all other substantive fields",
-      "source.name is incorrectly set to 'macro catalysts' instead of the actual source 'Board of Governors of the Federal Reserve System'",
-      "published_at is empty despite metadata indicating release date of January 28, 2026",
-      "No actual FOMC statement, rate decision, or substantive content is present in the source",
-      "Container pages are explicitly excluded from acceptance per RULE 5"
+      "Source is a navigation page (source_type: navigation_page). Per CORE RULE 5, pages of type homepage, navigation_page, listing_page, or search_page must be rejected.",
+      "event_type 'fomc_statement' is incorrect - this page does not contain the FOMC statement; it only links to it. The actual policy content exists in separate PDF/HTML documents that were not crawled.",
+      "Cannot verify rate decision, forward guidance, or any substantive policy content from this source.",
+      "No archiveable content; the record itself acknowledges 'Non-archiveable navigation page' and recommends crawling the linked documents instead."
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+    "notes": "container_page"
   },
-  "summary": "",
-  "key_points": [],
-  "why_it_matters": "",
-  "macro_context": "",
-  "market_structure_context": "",
-  "notes": "",
-  "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "",
-    "confidence": 0
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
-  "important_numbers": [],
-  "tags": [],
-  "status": "rejected"
+  "raw_text_path": "data/raw/seed_crawl_federalreserve_january_2728_2026_fomc_meeting_0e2cf5295583edc3.txt",
+  "notes": "Non-archiveable navigation page. Per CORE RULE 6: pages of type homepage, navigation_page, listing_page are treated as non-archiveable. This page provides only meta-information about document availability and release dates, not the policy content itself. The linked documents (FOMC statement, implementation note, minutes) should be crawled separately for substantive analysis. Published within 90 days of TODAY (2026-04-14), so not historical.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Navigation page without substantive policy content",
+      "Cannot extract decision details, forward guidance, or market-relevant information from this source alone",
+      "High domain trust but low content value for archival purposes"
+    ]
+  }
 }
