@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when the source is clearly a corporate earnings announcement/disclosure. This should be categorized more specifically.",
+    "Source is not relevant to market structure or macro catalysts per archive criteria.",
+    "The actual press release with financial details (Exhibit 99.1) is not included in the source text, only referenced."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as irrelevant to market structure or macro catalysts. The rejection is appropriate and straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine SEC disclosure for a publicly traded airline company. It is not relevant to market structure (market plumbing, operations, microstructure) or macro catalysts (Fed policy, central bank decisions, macro data releases).",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

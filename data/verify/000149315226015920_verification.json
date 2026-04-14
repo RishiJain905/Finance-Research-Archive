@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a company-specific SPAC 8-K with no macro or broad market structure relevance - only single-issuer compliance significance",
+    "The record's own 'why_it_matters' field correctly identifies this has 'no broader market structure or macro significance'",
+    "Asset classes field includes 'equities' but the small SPAC has negligible market impact; directional_bias 'unknown' with confidence 0 correctly signals low significance",
+    "Important_numbers includes par value and rights fraction which are filing details, not market-relevant data points"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is factually accurate but has very low archival value for a macro/market structure research focus. The filing is relevant only to a single micro-cap SPAC's compliance status. While technically 'market structure' (listing rules), the narrow scope conflicts with the stated archive purpose. Human should confirm: is company-specific SPAC delisting deficiency worth archiving in a finance research archive focused on macro catalysts?",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

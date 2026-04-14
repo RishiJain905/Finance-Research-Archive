@@ -1,0 +1,72 @@
+{
+  "id": "000002790426000022",
+  "created_at": "2026-04-14T14:21:37.231010+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "DELTA AIR LINES, INC. 10-Q Filing — 2026-04-08",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000022/dal-20260331.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-08",
+    "source_type": "unknown"
+  },
+  "summary": "This is the raw XBRL-tagged machine-readable data from Delta Air Lines' Q1 2026 10-Q filing covering the period ending 2026-03-31. The source body consists almost entirely of structured XBRL taxonomy tags and entity identifiers rather than human-readable financial narrative. No meaningful macro or market structure content can be extracted from the truncated, machine-coded source provided.",
+  "key_points": [
+    "Filing covers the quarter ended 2026-03-31 for Delta Air Lines (CIK 0000027904).",
+    "Revenue categories referenced include passenger air traffic, cargo and freight, loyalty program, and refinery segments.",
+    "Geographic segments referenced include domestic, Atlantic, Latin America, and Pacific destinations.",
+    "Debt instruments referenced include unsecured notes, SkyMiles secured notes, and Payroll Support Program loans.",
+    "Equity investments referenced include Air France-KLM, China Eastern, Grupo Aeromexico, LATAM, Hanjin KAL, WestJet, and Wheels Up."
+  ],
+  "why_it_matters": "Delta Air Lines is a bellwether for consumer travel demand and jet fuel cost sensitivity. However, the source body as provided is raw XBRL structured data and does not contain readable financial results, guidance, or commentary usable for macro or market structure analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "delta-air-lines",
+    "10-q",
+    "sec-edgar",
+    "airlines",
+    "consumer-cyclical",
+    "xbrl"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000002790426000022.txt",
+  "notes": "Source body is almost entirely raw XBRL structured data tags. No extractable macro or market structure content is present. This record should be flagged for re-ingestion using the human-readable 10-Q filing page. Filing is recent (published 2026-04-08, today is 2026-04-14). Topic assigned as 'macro catalysts' only because airline earnings can carry consumer demand signal, but no actual data is extractable here. initial_confidence set to 2 due to source quality failure.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "Raw XBRL data only — no human-readable financial content extractable.",
+      "No market structure or macro catalyst signal can be verified from source.",
+      "Requires re-ingestion of readable filing before archival use."
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but should be 'research' as this is a corporate SEC filing",
+    "verification_confidence is set to 0 in llm_review, which is inconsistent with the record's own assessment that the source is properly sourced and factually accurate (initial_confidence: 10)",
+    "The record is factually accurate and properly sourced from SEC EDGAR, but correctly identifies the source has no relevance to market structure or macro catalysts",
+    "Suggested status 'rejected' appears correct given the source is not relevant to the archive's target topics"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent in identifying this source as irrelevant to target topics. The factual content is accurate. The suggested_status of 'rejected' aligns with the verification result. No human review needed as the evaluation logic is sound.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Greenidge Generation Holdings Inc. filed an 8-K on April 9, 2026, disclosing the issuance of a press release regarding an exchange offer for its outstanding 8.50% Senior Notes due 2026, which was originally commenced on March 11, 2026. The company is a Delaware corporation with Class A common stock and the senior notes trading on Nasdaq Global Select Market under symbols GREE and GREEL respectively.",
+    "why_it_matters": "This is a routine corporate debt exchange offer filing for a single issuer. It has no relevance to broader market structure or macroeconomic catalysts. The filing provides no information about credit market conditions, default rates, or systemic financial market developments.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

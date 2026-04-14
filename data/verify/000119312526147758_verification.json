@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 8,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is outside archive scope: This 8-K filing is a corporate governance document disclosing executive compensation (RSU grant to CEO Dushyant Sharma). It contains no information related to market structure (e.g., Fed operations, Treasury auctions, market plumbing, liquidity mechanisms) or macro catalysts (e.g., monetary policy, economic data releases, central bank communications).",
+    "Archive scope mismatch: The record should have been filtered at ingestion rather than routed to review queue."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately describes the source content (480,000 RSUs granted to CEO, vesting schedule, compensation committee process), but the source itself is clearly outside the archive's defined scope. No human review needed—this is a straightforward scope filter case.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
