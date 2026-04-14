@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a micro-cap medical diagnostics company 10-Q filing with no relevance to market structure or macro catalysts per CORE RULE 1 and archiving mandate",
+    "Source contains only XBRL financial data tags with no narrative analysis, editorial content, or market-relevant commentary",
+    "event_type is set to 'unknown' which is appropriate but highlights that this source doesn't fit any recognized taxonomy category",
+    "Record correctly identifies the source as out-of-scope but should be explicitly rejected rather than routed to review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed - the record accurately identifies the source as irrelevant to finance research scope. Automated rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

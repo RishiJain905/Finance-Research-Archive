@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - routine corporate 8-K from small regional insurance holding company",
+    "event_type set to 'unknown' is technically valid but reflects the fundamental problem: this filing has no discoverable event category in the research archive taxonomy",
+    "No substantive content in the 8-K body - only references a press release (Exhibit 99.1) that is not included in the source text"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is clearly outside the research archive's focus (market structure, macro catalysts). The generated record accurately describes the filing, but a human should confirm rejection since this represents a borderline case: technically well-structured metadata for an objectively irrelevant source.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Donegal Group Inc., a regional insurance holding company (NASDAQ: DGICA, DGICB) headquartered in Marietta, Pennsylvania, filed a Form 8-K on April 6, 2026 under Item 8.01 (Other Events). The filing body contains no substantive disclosure—all material is contained in an attached press release (Exhibit 99.1) not included in the source text. Signed by Jeffrey D. Miller, EVP & CFO.",
+    "why_it_matters": "Irrelevant to finance research archive. This is a routine corporate disclosure from a small-cap insurance company with no material implications for financial markets, monetary policy, or market structure.",
+    "macro_context": "Not applicable — no macro content.",
+    "market_structure_context": "Not applicable — no market structure content."
+  }
+}
