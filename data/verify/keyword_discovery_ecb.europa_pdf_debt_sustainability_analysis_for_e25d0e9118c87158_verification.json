@@ -1,14 +1,15 @@
 {
-  "verification_confidence": 7,
-  "verdict": "review",
+  "verification_confidence": 4,
+  "verdict": "reject",
   "issues_found": [
-    "SOURCE METADATA TARGET field indicates 'market structure' but content is fiscal policy/debt sustainability methodology - topic classification mismatch",
-    "Source is a 2017 methodology paper, approximately 9 years stale; while it may have archival value as methodology, it does not constitute a current market catalyst",
-    "Record correctly identifies this as historical/low relevance, but human decision needed on whether to archive dated methodology"
+    "TOPIC mismatch: metadata TARGET/TOPIC is 'market structure' but source content is about fiscal policy methodology and sovereign debt sustainability analysis - not market structure (no trading, clearing, settlement, or market operations content)",
+    "Source age: published April 2017 (~9 years before TODAY 2026-04-14), exceeds 90-day stale threshold and lacks clear archival value given topic mismatch",
+    "Relevance failure: source is not relevant to market structure or macro catalysts as specified in TARGET field",
+    "Source is a methodological research paper, not a market-relevant publication"
   ],
   "human_review_required": true,
-  "human_review_reason": "SOURCE METADATA TARGET mismatch with content; 9-year-old methodology paper requires human judgment on archival value. While the research record is factually accurate and well-supported, the topic misalignment and age raise questions about whether this should be archived given the stated focus areas.",
-  "suggested_status": "review_queue",
+  "human_review_reason": "The record is factually accurate against the source text, but the source itself is not relevant to the specified TARGET topics (market structure/macro catalysts). The metadata indicates 'market structure' but the paper is purely about fiscal debt sustainability methodology. This is a topic classification error. The source should be rejected for mismatched relevance and age.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

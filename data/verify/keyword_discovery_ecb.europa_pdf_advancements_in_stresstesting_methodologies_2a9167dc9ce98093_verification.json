@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Topic mismatch: TARGET field specifies 'market structure' but source content addresses bank stress-testing methodology, which is regulatory/supervisory in nature rather than market structure (trading venues, liquidity, order flow dynamics, market making)",
+    "market_structure_context field acknowledges source does not address market structure topics, yet record was created with topic='market structure'",
+    "Publication date not determinable from provided source excerpt; only the covered work period (2018-2022) is referenced",
+    "market_impact confidence set to 0 with unknown directional bias - appropriately cautious given non-market-catalyst nature of source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record contains factually accurate content well-supported by source text (16 models developed, 11 new areas addressed, 13 datasets integrated, etc. all match source). However, a fundamental topic mismatch exists: the archive TARGET is 'market structure' but this source addresses regulatory stress-testing methodology for financial stability assessment. While high-quality ECB research, it may not fit the intended archive scope focused on market structure and macro catalysts. Human reviewer should confirm whether stress-testing methodology documentation meets the archive's inclusion criteria or if topic classification needs revision.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "This source focuses on bank-level stress testing and regulatory frameworks rather than market structure topics such as trading venue operations, liquidity provision, order flow dynamics, or market participant behavior."
+  }
+}

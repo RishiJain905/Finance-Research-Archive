@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an internal board memo requesting approval to publish proposals, not the formal regulatory text itself - details may change through the public comment process",
+    "Document is truncated at page 5 of 14 - full details of proposals not available in this excerpt",
+    "The -4.8% total for Category I/II firms is correctly calculated from component numbers (+1.4% Basel III, -3.8% GSIB, +3.1% AOCI, -4.3% stress test = -4.8% net), but impact numbers are staff estimates subject to change",
+    "The source references 'proposed stress testing changes' but this excerpt does not contain the detailed proposal text - it's referenced as a separate October 2025 proposal",
+    "asset_classes listed as 'bonds' and 'equities' are not explicitly mentioned in the source - the source focuses on bank capital requirements without directly specifying affected asset classes"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is an internal deliberative memo rather than final regulatory text. The document is truncated at page 5 of 14, and the proposals described are pending publication in the Federal Register. Impact numbers are staff estimates that may change through public comment. Human review is needed to assess whether this pre-regulatory document has sufficient archival value and whether the market_impact field should be adjusted to remove unsupported asset class claims.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve Board of Governors is being asked to approve three capital regulatory proposals for public comment: a Basel III framework revision for the largest internationally active banks (Category I and II), a GSIB surcharge calculation revision, and a standardized approach modification for smaller banks (Category III/IV and below). The proposals would collectively reduce aggregate common equity Tier 1 capital requirements for Category I and II firms by 4.8 percent, with the largest drivers being a -3.8 percent reduction from the GSIB surcharge revision and -4.3 percent from proposed stress testing changes (per staff estimates subject to revision through public comment process).",
+    "why_it_matters": "This memo outlines significant potential changes to bank capital regulation that would affect how the largest U.S. banks calculate and hold capital. The net reduction in capital requirements (approximately 5-8% across bank categories per staff estimates) could free up capital for lending or other activities. Changes to GSIB surcharge methodology could alter competitive dynamics among the largest banks. Removal of mortgage servicing asset capital deductions could boost mortgage market activity. Note: These are proposed regulatory actions pending public comment and formal publication in the Federal Register.",
+    "macro_context": "The proposals aim to reduce excessive requirements for traditional banking activities that may have accelerated migration of activities from regulated banks to non-banks. The Fed states this would enhance firms' ability to provide financial services while maintaining banking system safety and soundness. The document acknowledges that since the 2007-09 crisis, large banks have more than doubled their capital levels (an increase of more than $1 trillion), contributing to the robustness of the framework.",
+    "market_structure_context": "These regulatory capital changes would affect the competitive landscape between banks and non-bank financial institutions, potentially reducing regulatory arbitrage incentives. The simplification of the Basel III framework for large banks and the standardized approach for smaller banks represents a structural shift in how capital requirements are applied across the banking sector. Note: This is an internal board memo, not the formal regulatory proposal - the actual proposals will be published in the Federal Register pending Board approval."
+  }
+}

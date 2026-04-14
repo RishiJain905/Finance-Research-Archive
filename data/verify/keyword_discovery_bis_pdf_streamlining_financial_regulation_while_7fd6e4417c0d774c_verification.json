@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Internal inconsistency: event_type is 'speech_neutral' but source_type is 'research_paper'. The source is a speech, not a research paper. source_type should likely be 'speech' or could be left as generic content type."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is mostly accurate and well-sourced. The issue identified is a minor inconsistency between event_type and source_type classification. The substantive content (metrics, key points, summary) is faithful to the source. Auto-routing to review queue is appropriate to allow correction of the source_type field.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "The speech directly addresses market structure through discussion of banking sector capital and liquidity requirements (CET1 ratios, equity-to-assets ratios, HQLA holdings, stable funding shares), the Basel Framework's role as a minimum global baseline, and the need to holistically regulate both banks and NBFIs to prevent risk migration and regulatory arbitrage. The speech argues post-GFC reforms focused mainly on banking while NBFI regulation was strengthened much less, potentially leaving insufficient prudential controls for shifted risk exposures."
+  }
+}
