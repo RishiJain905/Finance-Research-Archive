@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Key point fabricates share count: 'approximately 41.2 million shares outstanding' — source does not contain any share count information; XBRL tags present in source do not specify this value",
+    "Event type incorrectly set to 'unknown' when it could be identified as 'regulatory_filing' or similar",
+    "Not relevant to market structure or macro catalysts per source content",
+    "No broader financial market, monetary policy, or market operations significance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear reject case: source is a routine individual corporate filing with no relevance to finance research archive scope. One fabricated claim (share count) reduces confidence further.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is entirely empty - all fields are blank",
+      "Source attribution completely missing (name, url, domain, published_at, source_type all empty)",
+      "Source is a micro-cap biotech (AIM ImmunoTech, NYSE American) SEC Form 8-K about an at-the-market equity offering amendment - not relevant to market structure or macro catalysts",
+      "Source content is routine corporate securities filing with no macro or market structure significance",
+      "No content provided to verify against - record is a skeleton with no actual research data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record contains no content whatsoever and the source itself is a micro-cap biotech's equity distribution agreement filing that is not relevant to finance research archives focused on market structure or macro catalysts. This is a clear reject based on multiple criteria."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}
