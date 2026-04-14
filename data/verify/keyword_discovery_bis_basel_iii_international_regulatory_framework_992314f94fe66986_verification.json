@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page, not a substantive document",
+    "No published_at date provided in source metadata",
+    "Contains only index of links and high-level summaries, no actionable content",
+    "Source attribution present but page has no standalone archival value",
+    "event_type 'regulatory_guidance' is technically valid but misleading for an index page with no actual guidance content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's self-assessment is accurate and complete. The source is definitively a listing page per source_type field, which triggers automatic rejection per rule 6. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a high-level index page on the BIS website listing Basel III regulatory framework documents, including finalization of post-crisis reforms, minimum capital requirements for market risk, Liquidity Coverage Ratio, and Net Stable Funding Ratio. No substantive content, data, or policy signals are present in this page itself.",
+    "why_it_matters": "This source is not actionable for this archive. It is a navigation/listing page containing only a catalog of links to Basel III documents. It contains no specific data, no policy decisions, no market signals, and no substantive analysis that would support trading decisions or macro research.",
+    "macro_context": "",
+    "market_structure_context": "While Basel III technically relates to banking regulatory structure, this listing page provides no specifics on market plumbing, trading operations, or market structure in the sense relevant to this archive (trading venues, market makers, market microstructure, clearing, settlement)."
+  }
+}

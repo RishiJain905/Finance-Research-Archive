@@ -1,0 +1,117 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_2025_supervisory_stress_test_8a235a7f39a63903",
+  "created_at": "2026-04-14T01:36:27.923584+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "2025 Supervisory Stress Test Methodology",
+  "source": {
+    "name": "Federal Reserve Board of Governors",
+    "url": "https://www.federalreserve.gov/publications/files/2025-june-supervisory-stress-test-methodology.pdf",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-06-01",
+    "source_type": "research_paper"
+  },
+  "summary": "The Federal Reserve published its 2025 Supervisory Stress Test Methodology document in June 2025, detailing the models used to assess how large banks ($100B+ in assets) would perform under hypothetical severe economic conditions. The methodology covers models for projecting pre-tax net income, loan losses across corporate, commercial real estate, residential mortgage, and credit card portfolios, and the calculation of regulatory capital ratios. The stress test cycle produces four key publications annually: scenarios, methodology, results, and capital requirements.",
+  "key_points": [
+    "Banks with $100B+ in assets are subject to supervisory stress tests under Dodd-Frank Act requirements (12 C.F.R. pt. 238, subpt. O; pt. 252, subpt. E)",
+    "The stress test cycle publishes four documents: Stress Test Scenarios (mid-February), Methodology, Results (end of Q2), and Large Bank Capital Requirements (Q3)",
+    "Supervisory models project losses, revenues, expenses, and resulting capital levels under hypothetical economic conditions",
+    "Model categories include: Pre-provision Net Revenue, Loan Losses (corporate, CRE, first-lien residential mortgage, credit card), Other Losses, and Regulatory Capital Ratios",
+    "Loan loss models are category-specific: Corporate Loan Model, Commercial Real Estate Loan Model, Domestic First-Lien Residential Mortgage Model, and Domestic Credit Card Model",
+    "Stress test results inform capital requirements for participating banks and assess whether banks are sufficiently capitalized to absorb losses during a severe recession",
+    "The document includes Appendix A (model changes for 2025), Appendix B (result templates), and Appendix C (loan category definitions)"
+  ],
+  "why_it_matters": "This methodology document is the technical foundation for understanding how the Federal Reserve evaluates bank resilience. For market participants, the stress test results (published end of Q2) directly affect capital requirements and can influence bank lending capacity, dividend/share buyback decisions, and risk appetite. The methodology reveals which loan categories and economic variables the Fed considers most sensitive in stress scenarios, providing insight into supervisory priorities.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 2
+  },
+  "macro_context": "The stress test methodology itself does not contain macroeconomic projections; those are published separately in the Stress Test Scenarios document (typically mid-February). This methodology document describes the modeling framework applied to whatever economic scenarios are specified.",
+  "market_structure_context": "While not directly addressing market microstructure (trading venues, order flow, market making), this methodology shapes bank behavior in capital markets through capital requirements. The balance sheet projections and regulatory capital ratio calculations determine how much capital banks must hold against various asset classes, influencing their market participation and risk management practices.",
+  "important_numbers": [
+    "$100 billion (minimum asset threshold for covered firms)"
+  ],
+  "tags": [
+    "stress-test",
+    "federal-reserve",
+    "bank-supervision",
+    "capital-requirements",
+    "regulatory",
+    "dodd-frank",
+    "bank-holdings",
+    "model-methodology"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Minor: event_type is 'regulatory_guidance' but this technical methodology document could more precisely be classified as 'research_paper' given it describes model development frameworks rather than issuing guidance"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_2025_supervisory_stress_test_8a235a7f39a63903.txt",
+  "notes": "Source is a PDF methodology document published by the Federal Reserve Board of Governors in June 2025. The document is comprehensive but technical, covering model development, validation, and specific loan loss estimation approaches. The source body was truncated; key details about specific model parameters or model change disclosures may not be captured. Published_at of June 2025 is within 90 days of TODAY (2026-04-14), making this a current/recent source. Source is authoritative (Federal Reserve) and high trust tier. Classification as 'market structure' is somewhat peripheral—the document is primarily about bank supervision methodology rather than market infrastructure, but it does inform bank behavior in capital markets through capital requirements.",
+  "linked_quant_context": [
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve"
+      ],
+      "link_score": 68.8
+    },
+    {
+      "record_id": "sofr_2026_04_13",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "sofr_2026_04_10",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 73.0,
+    "reasoning": [
+      "quality score: 73.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

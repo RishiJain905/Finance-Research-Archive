@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Topic assigned as 'market structure' but source content is about banking supervisory effectiveness, not market structure (trading venues, liquidity, microstructure, order flow dynamics)",
+    "The source discusses bank supervisory practices, regulatory frameworks, and supervisory culture—not market structure or macro catalysts as defined in verification standards",
+    "Source body is truncated; only executive summary and partial content reviewed for verification"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Topic mismatch between assigned topic ('market structure') and actual source content (supervisory effectiveness literature review). While the record accurately summarizes the source and correctly notes the mismatch in why_it_matters and market_structure_context fields, the TOPIC field itself remains incorrectly assigned. Human should either: (1) reassign topic to 'regulatory/supervisory policy' if the archive scope allows this category, or (2) reject if the archive is strictly limited to market structure and macro catalysts content. The source is legitimate (BIS Working Paper, high-trust domain) but not relevant to the stated focus areas.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
