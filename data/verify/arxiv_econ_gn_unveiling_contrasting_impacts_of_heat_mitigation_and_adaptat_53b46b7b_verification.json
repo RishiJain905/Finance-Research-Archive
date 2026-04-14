@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts as defined in task instructions",
+    "Topic field mismatch: record targets 'quantitative_finance' but source is climate economics/demographics research from econ.GN",
+    "event_type is 'unknown' but should be 'research_paper' given the academic paper format",
+    "why_it_matters correctly identifies this as out of scope but then describes it as potentially useful for ESG research - this archive does not appear to cover ESG/climate topics"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The relevance determination is straightforward - this climate migration paper has no connection to financial market structure or macro catalysts. The human review previously conducted correctly identified this as out of scope. No factual errors in summary that would require correction.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This academic paper studies how heat-related policies affect internal migration across U.S. counties. The researchers analyzed 4,713 heat policies and found that heat adaptation policies (APs) reduce out-migration while heat mitigation policies (MPs) increase it, with heterogeneous effects based on policy type and demographic factors.",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
