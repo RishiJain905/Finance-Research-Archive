@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 9,
+  "verdict": "accept",
+  "issues_found": [
+    "market_impact.asset_classes lists 'equities' but the source does not explicitly mention equity markets; this is a reasonable inference but not directly supported",
+    "market_impact.confidence is set to 0, which is appropriate, but verification_confidence in llm_review was not populated from the initial_confidence of 8"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

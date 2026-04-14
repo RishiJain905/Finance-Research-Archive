@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Characterization issue: Record states 'Federal Reserve Board issued a final rule on November 5, 2025,' but the source document is a staff memo to the Board seeking approval. The executive summary explicitly states the final rule 'would be issued jointly' 'upon completion of the agencies' respective approval processes.' The document describes recommended actions, not an already-issued final rule.",
+    "Asset class mismatch: 'market_impact.asset_classes' includes 'equities,' but the source only discusses Treasury market implications and banking regulation. No equity market relevance is mentioned.",
+    "Adoption certainty overstated: The summary states the rule 'reduces eSLR buffer requirements' as a confirmed outcome, but the source indicates this is still pending final agency approval.",
+    "Source body truncated: Complete rule details and final approval status cannot be fully verified from available text."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record conflates an internal staff recommendation memo with an 'issued final rule.' This is a significant characterization error. The document header shows it's a Staff memo TO the Board requesting approval, not a final rule from the Board. The source explicitly states the rule 'would be issued' upon completion of approval processes. Additionally, 'equities' appears in asset_classes without source support. These issues require human verification before acceptance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "On November 5, 2025, Federal Reserve staff presented a final rule for Board approval that would modify enhanced Supplementary Leverage Ratio (eSLR) standards for U.S. Global Systemically Important Bank Holding Companies (GSIBs) and their subsidiary depository institutions. The rule, to be issued jointly with FDIC and OCC upon completion of approval processes, would reduce eSLR buffer requirements to half of each GSIB's method 1 surcharge, with the stated goal of ensuring leverage ratios serve as backstops rather than binding constraints, thereby reducing disincentives for market intermediation activities that support Treasury market functioning.",
+    "why_it_matters": "This proposed regulatory change, pending final approval, directly affects how GSIBs manage their balance sheets and their capacity to provide market-making and intermediation services in Treasury markets. By reducing the likelihood that leverage requirements are binding, the agencies aim to encourage GSIBs to engage in lower-risk, lower-return activities like Treasury market intermediation. This could support market resilience and liquidity, particularly in stressed conditions. For market participants, this represents a potential structural change in bank behavior incentives that could affect Treasury market depth and bid-ask spreads. Effective date is April 1, 2026.",
+    "market_structure_context": "The rule explicitly addresses market structure concerns related to Treasury market functioning. The agencies note that binding leverage requirements can create incentives for firms to reduce participation in market intermediation activities. By calibrating eSLR standards to serve as backstops rather than binding constraints, the rule aims to support the smooth functioning of the U.S. Treasury market where GSIBs play an important intermediation role. The rule modifies capital requirements that affect broker-dealer market-making capacity in Treasury markets."
+  }
+}
