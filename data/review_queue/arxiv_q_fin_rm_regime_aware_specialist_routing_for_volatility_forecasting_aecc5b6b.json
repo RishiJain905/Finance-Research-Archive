@@ -1,0 +1,83 @@
+{
+  "id": "arxiv_q_fin_rm_regime_aware_specialist_routing_for_volatility_forecasting_aecc5b6b",
+  "created_at": "2026-04-14T01:46:40.989631+00:00",
+  "status": "review_queue",
+  "topic": "quantitative_finance",
+  "event_type": "research_paper",
+  "title": "Regime-Aware Specialist Routing for Volatility Forecasting",
+  "source": {
+    "name": "arXiv q-fin.RM",
+    "url": "http://arxiv.org/abs/2604.10402v1",
+    "domain": "arxiv.org",
+    "published_at": "2026-04-12T01:24:02+00:00",
+    "source_type": "academic_paper"
+  },
+  "summary": "This paper by Tenghan Zhong proposes a regime-aware specialist routing framework for ETF volatility forecasting, combining different forecasting specialists across calm and stressed market states using online risk-sensitive evaluation and state-dependent gating. The framework reduces high-volatility forecast loss by approximately 24% and underprediction loss by approximately 22% relative to rolling-best baseline.",
+  "key_points": [
+    "Framework uses online risk-sensitive evaluation and state-dependent gating to combine forecasting specialists",
+    "Tested on a daily panel of six ETFs under rolling walk-forward design",
+    "The strongest forecaster is regime-dependent rather than global",
+    "Reduces high-volatility forecast loss by approximately 24% relative to rolling-best baseline",
+    "Reduces underprediction loss by approximately 22% relative to rolling-best baseline",
+    "Authors claim specialist routing provides practical adaptive forecasting architecture for changing market conditions"
+  ],
+  "why_it_matters": "This research paper presents a quantitative methodology for regime-dependent volatility forecasting with direct applications to market microstructure and trading strategy. The finding that specialist routing provides practical adaptive forecasting architecture for changing market conditions has implications for risk management, options pricing, and market structure research. While not a macro catalyst, this methodology is relevant to market participants and quantitative finance research.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The research addresses volatility forecasting under different market regimes (calm vs stressed), which is foundational to understanding market microstructure, risk management practices, and the behavior of volatility-dependent instruments like ETFs and options.",
+  "important_numbers": [
+    "24% (high-volatility forecast loss reduction)",
+    "22% (underprediction loss reduction)"
+  ],
+  "tags": [
+    "volatility-forecasting",
+    "regime-detection",
+    "quantitative-finance",
+    "specialist-routing",
+    "etf",
+    "research-paper"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "The why_it_matters assessment incorrectly concludes the paper is irrelevant to market structure; volatility forecasting methodology is foundational to market microstructure and trading strategy research",
+      "The quality_tier classification as 'excluded' is overly restrictive; the paper addresses regime-dependent forecasting which has direct relevance to market structure and trading",
+      "The summary could more explicitly connect the methodology to practical market applications"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The source is a legitimate academic research paper that is factually accurate. However, the generated record applies an overly narrow interpretation of 'market structure or macro catalysts' relevance. Volatility forecasting methodology is directly relevant to market microstructure, trading risk management, and market structure research. The record's exclusion decision appears based on a misapplication of scope criteria rather than genuine irrelevance to finance research. Human review is needed to reassess the relevance determination."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/arxiv_q_fin_rm_regime_aware_specialist_routing_for_volatility_forecasting_aecc5b6b.txt",
+  "notes": "OUT OF SCOPE: This paper focuses on quantitative finance/volatility forecasting methodology, not market structure or macro catalysts. The source appears to contain only an abstract (110 words) rather than the full paper. No macro policy signals, market-moving information, or structural market insights are present. Recommended for exclusion from archive unless broader scope is authorized.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 2,
+    "reasoning": [
+      "Out of scope for mandated topics (market structure, macro catalysts)",
+      "Thin content: appears to be abstract only, not full paper",
+      "No market-moving information or structural insights",
+      "Academic methodology paper with no immediate practical implications for macro or market structure research"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "4179deeba8ffcd08d5d82656ba26cc2f8c87ab4c"
+}

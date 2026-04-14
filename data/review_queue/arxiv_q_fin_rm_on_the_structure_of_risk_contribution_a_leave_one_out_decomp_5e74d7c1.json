@@ -1,0 +1,60 @@
+{
+  "id": "arxiv_q_fin_rm_on_the_structure_of_risk_contribution_a_leave_one_out_decomp_5e74d7c1",
+  "created_at": "2026-04-14T01:46:40.989523+00:00",
+  "status": "review_queue",
+  "topic": "quantitative_finance",
+  "event_type": "unknown",
+  "title": "On the Structure of Risk Contribution: A Leave-One-Out Decomposition into Inherent and Correlation Risk",
+  "source": {
+    "name": "arXiv q-fin.RM",
+    "url": "http://arxiv.org/abs/2604.10375v1",
+    "published_at": "2026-04-11T23:02:26+00:00",
+    "source_type": "academic_paper",
+    "domain": "arxiv.org"
+  },
+  "summary": "This paper proposes a methodological decomposition of portfolio Risk Contribution (RC) into two components: inherent risk (independent of portfolio correlations) and correlation risk (driven by covariance with other holdings). The framework uses a leave-one-out approach that preserves strict additivity and applies to standard RC calculations. Two time-series approaches are presented for tracking how these components evolve across market regimes.",
+  "key_points": [
+    "Decomposes standard Risk Contribution into inherent risk (always positive, reflecting standalone volatility) and correlation risk (may be positive or negative depending on covariance structure)",
+    "Uses a leave-one-out representation where each position's RC separates into a standalone volatility term and a covariance term with the remainder of the portfolio",
+    "The decomposition preserves strict additivity property of standard RC",
+    "Enables distinction between positions that contribute risk due to high standalone volatility versus high correlation with the portfolio",
+    "Provides diagnostic insight for identifying negatively correlated positions serving as effective hedges",
+    "Two time-series approaches proposed for tracking inherent vs. correlation risk across market regimes"
+  ],
+  "why_it_matters": "This methodological paper provides portfolio risk managers with a more granular diagnostic tool for understanding risk contributions. By separating inherent from correlation risk, practitioners can better attribute portfolio risk sources and assess whether risk changes during stress periods stem from volatility shifts, correlation changes, or both. The paper claims the approach is stable, transparent, and implementable for reporting, stress testing, and performance attribution.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "risk-management",
+    "portfolio-risk",
+    "risk-contribution",
+    "correlation-risk",
+    "methodology",
+    "quantitative-finance"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' but should be 'research_paper' per the taxonomy for academic papers",
+      "Source is not relevant to market structure or macro catalysts - this is a mathematical methodology paper on risk decomposition techniques",
+      "The record accurately summarizes the source but the source itself falls outside the verification scope (market structure/macro catalysts)"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source scope determination needed: The paper is a valid academic methodology paper in quantitative finance, but it does not address market structure or macro catalysts. The verification rules specify 'Source is relevant to market structure or macro catalysts' as a required condition for acceptance. However, this archive task description identifies the archive as a 'finance research archive' focused on q-fin.RM (quantitative finance). The human review notes correctly identify this as out of scope for 'market structure, macro catalysts' but the archive topic is 'quantitative_finance'. Need clarification on whether methodology papers on risk management fall within scope for this particular archive configuration."
+  },
+  "raw_text_path": "data/raw/arxiv_q_fin_rm_on_the_structure_of_risk_contribution_a_leave_one_out_decomp_5e74d7c1.txt",
+  "notes": "OUT OF SCOPE for target topics (market structure, macro catalysts). This is an academic methodology paper on portfolio risk decomposition. No relevance to market microstructure, trading mechanisms, exchange operations, policy catalysts, or economic data releases. The CONTENT_WORD_COUNT of 212 suggests only an abstract was captured, limiting analytical depth. Classification as 'unknown' event_type since this is not a macro event but a research paper. Human review recommended to confirm out-of-scope determination.",
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "8cf0f004b71e2b4255255f1a94d9f5bb50f07995"
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but should be 'research_paper' per the taxonomy for academic papers",
+    "Source is not relevant to market structure or macro catalysts - this is a mathematical methodology paper on risk decomposition techniques",
+    "The record accurately summarizes the source but the source itself falls outside the verification scope (market structure/macro catalysts)"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source scope determination needed: The paper is a valid academic methodology paper in quantitative finance, but it does not address market structure or macro catalysts. The verification rules specify 'Source is relevant to market structure or macro catalysts' as a required condition for acceptance. However, this archive task description identifies the archive as a 'finance research archive' focused on q-fin.RM (quantitative finance). The human review notes correctly identify this as out of scope for 'market structure, macro catalysts' but the archive topic is 'quantitative_finance'. Need clarification on whether methodology papers on risk management fall within scope for this particular archive configuration.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
