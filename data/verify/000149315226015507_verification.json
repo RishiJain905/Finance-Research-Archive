@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "market_impact.confidence is 0 but should be a 0-10 integer; source provides specific directional data (neutral tone, equity/crypto classes) warranting a substantive confidence value",
+    "event_type is 'unknown' but given source is an SEC 8-K filing with strategic/business content, 'regulatory_guidance' would be a more accurate classification than leaving as unknown",
+    "quality_tier tier is 'non-relevant' — this is a judgment call about scope relevance, not a factual error; the record is technically high-quality but flagged as non-relevant by project criteria"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate against the source with specific figures properly captured. The issues are minor classification/formatting concerns rather than factual inaccuracies. However, the low verification_confidence (0) and 'rejected' quality tier suggest the auto-reviewer may have over-applied scope restrictions.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "FG Nexus Inc. (Nasdaq: FGNX) filed an 8-K disclosing preliminary Q1 2026 financials and a potential business combination with FG Communities, Inc. The company holds significant crypto assets (20,638 ETH + 7,659 WSTETH valued at ~$63.2M market value), $14M cash, and ~$1.9M debt, with estimated Q1 losses of $40-45M. The proposed transaction would establish a special committee and require a fairness opinion. The company's RWA tokenization strategy targets manufactured housing communities. Source is a corporate SEC filing; relevance depends on project scope for micro-cap/crypto-exposed equities.",
+    "macro_context": "Micro-cap crypto-equity (~$70M market cap) with preliminary financials; no systemic macro relevance.",
+    "market_structure_context": "The company's disclosure of ETH/WSTETH holdings represents one data point on crypto-equity treasury exposure but does not constitute market structure intelligence."
+  }
+}

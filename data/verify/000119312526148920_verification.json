@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is entirely irrelevant to market structure or macro catalysts - it is a micro-cap biotech corporate governance filing",
+    "event_type is set to 'unknown' but the correct classification would be outside the valid taxonomy entirely (this is a corporate_filing, not macro-financial content)",
+    "Record accurately describes the 8-K content but the source has no place in an archive focused on market structure and macro catalysts",
+    "Archive scope mismatch: the record's own analysis confirms 'no information relevant to market structure or macro catalysts'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies that this source is irrelevant to the archive's scope. No ambiguity exists - this is a micro-cap biotech executive appointment disclosure with zero macro-financial relevance.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing is a micro-cap biotech corporate governance disclosure with no relevance to market structure or macro catalysts. The archive scope is explicitly focused on market structure and macro-financial catalysts, making this source unsuitable for inclusion regardless of its accuracy.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing (CHS Inc) with no relevance to market structure or macro catalysts as defined for archive scope",
+    "XBRL raw data lacks narrative content; contains only financial metadata and tags without substantive analysis",
+    "event_type correctly identified as 'unknown' as corporate filings don't fit the event taxonomy",
+    "Archive scope explicitly targets market structure and macro catalysts; corporate financial filings are outside this scope",
+    "No monetary policy, rate decisions, market operations, or macroeconomic content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed. The record accurately identifies this source as outside archive scope. The assessment is well-reasoned and conservative, correctly recommending rejection for a corporate 10-Q filing that lacks market structure or macro catalyst relevance.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a CHS Inc quarterly 10-Q filing containing corporate financial data including segment revenue breakdowns (Energy, Grains, Agronomy, Other), balance sheet items, and equity information. The document is XBRL-tagged financial data for fiscal Q2 2026 (period ending 2026-02-28). This is a company-specific corporate filing with no relevance to market structure or macro catalysts as defined for this archive.",
+    "why_it_matters": "This source is not relevant to the finance research archive's focus areas. CHS Inc 10-Q filings provide company-specific financial information about an agribusiness cooperative but contain no market structure analysis, monetary policy content, or macro catalyst information. The archive should not index this document for market structure or macro catalyst retrieval purposes."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "000082327726000016",
+  "created_at": "2026-04-14T19:52:03.175865+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "CHS INC 10-Q Filing — 2026-04-08",
+  "source": {
+    "name": "sec_edgar",
+    "url": "https://www.sec.gov/Archives/edgar/data/823277/000082327726000016/chscp-20260228.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-08",
+    "source_type": "unknown"
+  },
+  "summary": "This source is a CHS Inc quarterly 10-Q filing containing corporate financial data including segment revenue breakdowns (Energy, Grains, Agronomy, Other), balance sheet items, and equity information. The document is XBRL-tagged financial data for fiscal Q2 2026 (period ending 2026-02-28). This is a company-specific corporate filing with no relevance to market structure or macro catalysts as defined for this archive.",
+  "key_points": [
+    "CHS Inc is a diversified agribusiness company with segments in Energy, Grains, Agronomy, and other operations",
+    "The filing covers fiscal period ending February 28, 2026 (Q2 fiscal year 2026)",
+    "Financial data includes revenue recognition timing risk disclosures and segment-level reporting",
+    "Contains equity-related metadata including preferred stock series and capital equity certificates",
+    "No monetary policy, rate decisions, market operations, or macroeconomic analysis present",
+    "Filed with SEC on 2026-04-08, making it a recent corporate document but not macro-relevant"
+  ],
+  "why_it_matters": "This source is not relevant to the finance research archive's focus areas. CHS Inc 10-Q filings provide company-specific financial information about an agribusiness cooperative but contain no market structure analysis, monetary policy content, or macro catalyst information. The archive should not index this document for market structure or macro catalyst retrieval purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-q",
+    "corporate-finance",
+    "chs-inc",
+    "agribusiness",
+    "not-relevant",
+    "xbrl"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a corporate 10-Q filing (CHS Inc) with no relevance to market structure or macro catalysts as defined for archive scope",
+      "XBRL raw data lacks narrative content; contains only financial metadata and tags without substantive analysis",
+      "event_type correctly identified as 'unknown' as corporate filings don't fit the event taxonomy",
+      "Archive scope explicitly targets market structure and macro catalysts; corporate financial filings are outside this scope",
+      "No monetary policy, rate decisions, market operations, or macroeconomic content present"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "No human review needed. The record accurately identifies this source as outside archive scope. The assessment is well-reasoned and conservative, correctly recommending rejection for a corporate 10-Q filing that lacks market structure or macro catalyst relevance."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000082327726000016.txt",
+  "notes": "This SEC filing is outside the archive's scope. The document contains standard XBRL-tagged corporate financial data for CHS Inc with segment reporting (Energy, Grains, Agronomy), equity information, and notes receivable/payable disclosures. No content related to market structure (market plumbing, operations, microstructure) or macro catalysts (monetary policy, economic data releases, rate decisions) is present. Archive administrators may wish to create a separate corporate filings index if such documents are of interest.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Not relevant to specified topics (market structure, macro catalysts)",
+      "Corporate financial filing with no market or policy content",
+      "Source is low quality for RAG retrieval in target domain"
+    ]
+  }
+}

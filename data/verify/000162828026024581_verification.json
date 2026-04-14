@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is essentially empty - all major fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are blank",
+    "Source attribution completely missing - name, url, domain, published_at, source_type are all empty strings",
+    "No event_type provided in the record",
+    "Source (SEC 8-K filing) references Exhibit 99.1 containing actual earnings content, but the exhibit body is not included in the source - only the filing framework is present",
+    "Source is a corporate earnings disclosure, not traditional market-moving research with macro catalyst significance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is blank/empty and cannot be evaluated. While the source (OXY 8-K filing) is a legitimate SEC document, the record generator failed to extract any content. Additionally, the source is thin - the substantive earnings considerations are in an exhibit (99.1) that is referenced but not included in the provided body. Human review needed to determine if this should be re-processed with the actual exhibit content or if a corporate earnings preview of this nature has sufficient archival value for the archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
