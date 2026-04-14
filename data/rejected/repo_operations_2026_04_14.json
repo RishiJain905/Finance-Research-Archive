@@ -1,0 +1,80 @@
+{
+  "id": "repo_operations_2026_04_14",
+  "created_at": "2026-04-14T15:05:22.982247+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations — Data Fetch Failed",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "newyorkfed.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_endpoint"
+  },
+  "summary": "Attempt to fetch latest NY Fed repo operation data from the Federal Reserve Bank of New York market operations API failed with a 400 Bad Request error. No repo operation data was retrieved for this date.",
+  "key_points": [
+    "API request to NY Fed repo operations endpoint returned HTTP 400 Bad Request",
+    "Target URL was: https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation results, terms, or counterparties data available",
+    "Cannot assess current repo market conditions or ON RRP usage",
+    "SNAPSHOT_DATE: 2026_04_14 — attempted same day"
+  ],
+  "why_it_matters": "NY Fed repo operations are a critical component of US money market plumbing and short-term rate control. When the data fetch fails, researchers cannot assess current repo market stress, ON RRP usage levels, or effective federal funds rate positioning. This gap affects rate path monitoring and money market structure analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Repo market data is essential for understanding money market conditions, ON RRP facility utilization, and the federal funds effective rate relative to the SOFR/FFR target. The 400 error prevents any assessment of current repo market stress or Fed operational posture.",
+  "important_numbers": [],
+  "tags": [
+    "repo",
+    "ny-fed",
+    "market-structure",
+    "data-fetch-failed",
+    "money-market",
+    "on-rrp",
+    "fed-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "No actual source content was retrieved - only an HTTP 400 error response",
+      "Record contains zero extractable market data: no rates, amounts, counterparties, or operation details",
+      "Record documents a failed data collection attempt, not market information worth archiving",
+      "Source is a technical error log, not a research document or article",
+      "Cannot support any market structure or macro analysis without underlying data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This record documents a data fetch failure rather than actual market content. While the record accurately describes the error, there is nothing to archive from a research perspective - only an error message. The source provides no information about repo operations, ON RRP usage, or money market conditions that would be valuable for the research archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_14.txt",
+  "notes": "Data collection failure. The NY Fed market operations API endpoint returned a 400 Bad Request, preventing any repo operation data from being captured. This is not a stale source — the fetch was attempted on TODAY (2026-04-14) but failed at the API level, not due to age of data. Cannot assess current repo market conditions, ON RRP takeup, or money market stress. Recommend retrying the endpoint with corrected parameters or verifying the API URL structure.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No data content retrieved — only an HTTP error",
+      "Cannot extract any market structure or repo operation information",
+      "Source is a technical failure notification, not a research document",
+      "Initial confidence set to 1 due to complete absence of extractable content"
+    ]
+  }
+}

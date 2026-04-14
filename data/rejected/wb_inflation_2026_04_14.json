@@ -1,0 +1,75 @@
+{
+  "id": "wb_inflation_2026_04_14",
+  "created_at": "2026-04-14T15:06:26.019331+00:00",
+  "status": "rejected",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "World Inflation Rate (FP.CPI.TOTL.ZG)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank API returned no valid observations for the World Inflation Rate indicator (FP.CPI.TOTL.ZG) as of the snapshot date. This query produced an empty result set with no usable data.",
+  "key_points": [
+    "No recent valid observations were returned for indicator FP.CPI.TOTL.ZG",
+    "The data query returned an empty result set",
+    "No inflation figures, dates, or country-level data are available from this source"
+  ],
+  "why_it_matters": "This source contains no actionable data. It cannot be used to assess global inflation trends, inform macro views, or support RAG-based research. The query failed to retrieve any usable information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "No macro context available. The source contains no inflation data to interpret.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "empty-result",
+    "api-query"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is an empty API query result with no valid observations - contains no actual data",
+      "Source has no archival value for market structure or macro catalyst research",
+      "event_type is 'unknown' but correctly reflects the absence of any identifiable event",
+      "Record accurately describes the empty result but documents a failed data query rather than actionable research"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_14.txt",
+  "notes": "Source is a World Bank API query that returned no valid observations. TOPIC in metadata is 'global_economy' which falls outside the required focus areas of market structure and macro catalysts. Even if relevant, there is no content to process. Low quality/empty source - do not archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "No actual data returned - empty query result",
+      "Does not address market structure or macro catalysts",
+      "No inflation figures or macro indicators present",
+      "Cannot support any research or RAG use case"
+    ]
+  }
+}

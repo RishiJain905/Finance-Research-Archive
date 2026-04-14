@@ -1,0 +1,85 @@
+{
+  "id": "fed_funds_2026_04_14",
+  "created_at": "2026-04-14T14:59:39.207614+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Effective Federal Funds Rate (DFF) Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_feed"
+  },
+  "summary": "The Effective Federal Funds Rate (DFF) remained flat at 3.64% from April 6 through April 10, 2026, with zero absolute change over the period. This represents the actual overnight lending rate between depository institutions, distinct from the Fed's policy target rate.",
+  "key_points": [
+    "Latest observation: 3.64% as of 2026-04-10",
+    "Previous observation: 3.64% as of 2026-04-09",
+    "Absolute change: 0 (flat)",
+    "Rate has been stable at 3.64% for at least 5 consecutive trading days (April 6-10, 2026)",
+    "Data source: FRED series DFF"
+  ],
+  "why_it_matters": "The effective federal funds rate is a key benchmark for short-term borrowing costs across the financial system. A flat rate over multiple days indicates no overnight funding stress and suggests the Fed's policy stance remains unchanged during this period.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The effective federal funds rate at 3.64% reflects current monetary policy implementation. The stability suggests the Fed's target range (typically 3.50-3.75% based on the effective rate of 3.64%) is being maintained without market stress in overnight funding markets.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.64% (effective federal funds rate)",
+    "0 (absolute change)",
+    "2026-04-10 (latest observation date)"
+  ],
+  "tags": [
+    "fed-funds",
+    "interest-rates",
+    "overnight-rates",
+    "monetary-policy",
+    "market-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a mechanical data feed snapshot (FRED time series data), not a research document, article, or policy statement. Contains no analysis, commentary, or policy signal.",
+      "The target rate range (3.50-3.75%) stated in macro_context is inferred, not sourced from the provided data. Source only shows effective rate of 3.64%.",
+      "Quality tier self-assessment is 'data' with score 2, explicitly noting 'Cannot stand alone as meaningful research for RAG applications'.",
+      "No article-like content, no policy announcement, no commentary—just a data point observation.",
+      "Human review notes confirm: 'This is raw data snapshot from FRED, not a research document or policy announcement. Not suitable as a standalone archive record for research purposes.'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_14.txt",
+  "notes": "This is a raw data snapshot from FRED, not a research document or policy announcement. The source provides only the effective federal funds rate value without the Fed's target range, policy statement, or any analytical context. For meaningful macro catalyst research, this data point should be linked to the corresponding FOMC policy statement or decision that established the prevailing target range. The effective rate of 3.64% implies a target range of approximately 3.50-3.75%, but this must be confirmed against official Fed communications.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 2,
+    "reasoning": [
+      "Raw data point without analysis or context",
+      "No policy signal or forward guidance present",
+      "Cannot stand alone as meaningful research for RAG applications",
+      "Useful only as supplementary quantitative context"
+    ]
+  }
+}

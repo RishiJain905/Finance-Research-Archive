@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw quantitative data with no narrative, analysis, or drivers — provides only numerical values",
+    "Record accurately reflects source data but offers no macro catalyst context",
+    "Limited standalone archival value for a research archive focused on market structure and macro catalysts",
+    "why_it_matters and market_impact fields are appropriately cautious but confirm the thin nature of this source",
+    "Source is correctly categorized as data_release_other but lacks the substance expected of a research-worthy data release"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is factually accurate but represents the edge case of raw price data with zero contextual content. Per calibration guide, verification_confidence of 4 indicates notable issues warranting human review. The record correctly identifies its own limitations, but a human must decide if thin data snapshots have sufficient archival value standing alone or if they should be rejected in favor of entries with accompanying commentary/drivers.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "2-year Treasury yields serve as a market proxy for interest rate expectations over the near term. However, this data snapshot provides no explanation for the yield move, limiting its usefulness for research without accompanying news or policy context. This record is accurate but minimal in research value.",
+    "macro_context": "No macro context provided by source. This raw yield observation would need to be paired with relevant FOMC materials, data releases, or speeches to establish the catalyst for any yield move.",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no valid observations — no content to verify",
+    "Source URL is empty string — missing source attribution",
+    "event_type set to 'unknown' — appropriate for null data query result",
+    "Topic marked as 'not_relevant' — correct, source provides no market or macro context",
+    "Record is honest and accurate about the null result, but null results have no archival value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately documents a null data query result. Human already reviewed and correctly flagged for rejection. No content exists to support research or analysis.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

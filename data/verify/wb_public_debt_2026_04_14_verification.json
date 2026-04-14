@@ -1,0 +1,24 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body contains no valid data — the World Bank API query returned an empty result with no observations",
+    "Source URL is missing from the record",
+    "Source domain is missing from the record",
+    "event_type is set to 'unknown' and no correct type is derivable because there is no substantive content",
+    "Source is too thin and has zero informational content — it is a null API response, not an article, report, or data release",
+    "No facts, numbers, or findings exist to archive; the record has no RAG retrieval utility",
+    "why_it_matters and macro_context sections describe hypothetical value of public debt data generally, not anything from this source — this is unsupported speculation added to pad an empty record",
+    "Source does not qualify as article-like; it is a failed machine query result",
+    "Record itself acknowledges in notes and quality_tier that it should not be archived, yet status is 'review_queue' rather than 'rejected'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

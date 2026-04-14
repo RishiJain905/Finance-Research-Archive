@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an empty API query result with no valid observations - contains no actual data",
+    "Source has no archival value for market structure or macro catalyst research",
+    "event_type is 'unknown' but correctly reflects the absence of any identifiable event",
+    "Record accurately describes the empty result but documents a failed data query rather than actionable research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is factually accurate in describing the empty query result. However, the underlying source lacks any archival value as it contains no data. The record itself is well-constructed and properly flagged. Human review is not needed since the record already correctly identifies this as a low-value source.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The World Bank API returned no valid observations for the World Inflation Rate indicator (FP.CPI.TOTL.ZG) as of the snapshot date. This query produced an empty result set with no usable data.",
+    "why_it_matters": "This source contains no actionable data. It cannot be used to assess global inflation trends, inform macro views, or support RAG-based research. The query failed to retrieve any usable information.",
+    "macro_context": "No macro context available. The source contains no inflation data to interpret.",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is empty - should link to FRED series page (e.g., https://fred.stlouisfed.org/series/SOFR)",
+    "Summary states 'reversal of the prior decline' which is interpretive; source only provides numeric observations without this characterization",
+    "Key_points claims 'intraday volatility of 4-6 bps' but source shows day-over-day changes of 2-4 bps; 'intraday' is imprecise terminology for this data",
+    "Macro_context states 'monetary policy transmission is functioning normally' which is an interpretive inference not stated in the source data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are minor and correctable. The quantitative data (SOFR values, dates, changes) is accurate and well-sourced from FRED. The interpretive statements about market implications are reasonable but slightly overstated. URL should be added. Human review not required for these types of minor fixes.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Secured Overnight Financing Rate (SOFR) stood at 3.63% as of April 13, 2026, up 2 basis points from 3.61% on April 10. SOFR ranged from 3.57% to 3.63% over the past five trading sessions, with the value recovering from a low of 3.57% on April 9.",
+    "why_it_matters": "SOFR is the primary overnight funding rate for U.S. dollar markets and serves as the replacement benchmark for LIBOR. It directly affects the pricing of adjustable-rate mortgages, business loans, and interest rate derivatives. Movements in SOFR reflect underlying money market conditions and the cost of secured overnight lending.",
+    "macro_context": "SOFR closely tracks the federal funds rate target range. The current level of approximately 3.63% is consistent with the Fed's stated policy rate range.",
+    "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York using overnight Treasury general collateral repurchase agreement transactions. As the dominant benchmark for secured overnight dollar funding, SOFR serves critical plumbing functions across the financial system."
+  }
+}

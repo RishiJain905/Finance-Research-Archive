@@ -1,0 +1,76 @@
+{
+  "id": "wb_trade_gdp_2026_04_14",
+  "created_at": "2026-04-14T15:07:11.270620+00:00",
+  "status": "rejected",
+  "topic": "not_relevant",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — No Data Returned",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_query"
+  },
+  "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations on 2026-04-14. This data query produced a null result with no usable information for market structure or macro analysis.",
+  "key_points": [
+    "Indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations.",
+    "Query snapshot date: 2026-04-14.",
+    "Source: World Bank data repository.",
+    "No numerical values, trends, or context provided."
+  ],
+  "why_it_matters": "No actionable content. This data query result cannot be used for research, market analysis, or RAG purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "global-trade",
+    "no-data",
+    "null-result"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned no valid observations — no content to verify",
+      "Source URL is empty string — missing source attribution",
+      "event_type set to 'unknown' — appropriate for null data query result",
+      "Topic marked as 'not_relevant' — correct, source provides no market or macro context",
+      "Record is honest and accurate about the null result, but null results have no archival value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_14.txt",
+  "notes": "Source is a data query response showing no observations available for the requested indicator. Not relevant to market structure or macro catalysts. Reject for archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No actual data in source",
+      "Null result from data API",
+      "Cannot support any market or macro analysis",
+      "Outside scope of allowed topics"
+    ]
+  }
+}

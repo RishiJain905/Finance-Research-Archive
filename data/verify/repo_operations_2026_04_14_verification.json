@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "No actual source content was retrieved - only an HTTP 400 error response",
+    "Record contains zero extractable market data: no rates, amounts, counterparties, or operation details",
+    "Record documents a failed data collection attempt, not market information worth archiving",
+    "Source is a technical error log, not a research document or article",
+    "Cannot support any market structure or macro analysis without underlying data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record documents a data fetch failure rather than actual market content. While the record accurately describes the error, there is nothing to archive from a research perspective - only an error message. The source provides no information about repo operations, ON RRP usage, or money market conditions that would be valuable for the research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

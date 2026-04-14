@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'data_release_other' for a FRED data series observation",
+    "Source is raw quantitative data with no analytical narrative, causal explanation, or policy context — the record is factually accurate but substantively thin",
+    "'why_it_matters' field contains general market knowledge not directly sourced from the FRED snapshot — this is inference rather than evidence from source",
+    "quality_tier correctly identified as 'data-only' with score 3, indicating limited standalone archival value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The numerical data is accurately transcribed from FRED and source attribution is present and correct. However, the record has two concrete issues: (1) event_type should be 'data_release_other' not 'unknown', and (2) the source is raw market data with no analytical content, limiting its standalone archival value. The system correctly flagged this as 'data-only' quality. Human judgment is needed to determine if raw data observations should be archived as standalone records or only when linked to analytical content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 10-Year Treasury Yield (DGS10) closed at 4.31% on 2026-04-10, up 2 basis points from the prior day's close of 4.29%. The yield has oscillated in a narrow 3 bp range (4.29%-4.34%) over the most recent five trading days.",
+    "why_it_matters": "The 10-year Treasury yield is a benchmark for mortgage rates, corporate borrowing costs, and risk asset valuations. Note: this assessment is general market knowledge; the FRED source provides only the numerical observation without analytical context.",
+    "macro_context": "FRED DGS10 data observation only. No accompanying narrative, policy signal, or macroeconomic commentary provided in the source.",
+    "event_type": "data_release_other",
+    "market_structure_context": ""
+  }
+}

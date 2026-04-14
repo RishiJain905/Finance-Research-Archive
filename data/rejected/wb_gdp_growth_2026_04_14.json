@@ -1,0 +1,77 @@
+{
+  "id": "wb_gdp_growth_2026_04_14",
+  "created_at": "2026-04-14T15:05:30.872042+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_gdp",
+  "title": "World GDP Growth Rate (NY.GDP.MKTP.KD.ZG)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-14",
+    "source_type": "data_release",
+    "domain": ""
+  },
+  "summary": "No recent valid observations were returned for the World Bank GDP growth rate indicator (NY.GDP.MKTP.KD.ZG) as of the 2026-04-14 snapshot date. The query returned no data.",
+  "key_points": [
+    "Indicator: NY.GDP.MKTP.KD.ZG (World GDP growth rate, constant prices)",
+    "Snapshot date: 2026-04-14",
+    "Result: No recent valid observations returned",
+    "Source: World Bank data API"
+  ],
+  "why_it_matters": "GDP growth data is a fundamental macro indicator used to assess global economic health. The absence of current observations limits the ability to benchmark global growth against historical trends or current market expectations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "GDP growth rates are primary inputs for macro models, risk asset valuation, and central bank reaction functions. The unavailability of this indicator leaves a gap in global growth surveillance.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp",
+    "economic-growth",
+    "global-economy",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data observations - only a null result message",
+      "Record accurately describes the null result but has no substantive content to archive",
+      "The 'data_release_gdp' event_type is technically valid but misleading since no data was released",
+      "Archival value is minimal - a 'no data available' message provides no research utility",
+      "Quality tier correctly identified as 'no-data' with score 0"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_14.txt",
+  "notes": "Source is a data API response with no observations returned. The source body explicitly states 'No recent valid observations were returned for indicator NY.GDP.MKTP.KD.ZG.' Topic classification 'macro catalysts' is assigned based on the intended indicator type (GDP release), but the source contains no usable content. Not archiveable in its current state.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 0,
+    "reasoning": [
+      "Source body contains only a null result message",
+      "No concrete observations or narrative content",
+      "Cannot support any key points with actual data",
+      "Limited research value due to data absence"
+    ]
+  }
+}

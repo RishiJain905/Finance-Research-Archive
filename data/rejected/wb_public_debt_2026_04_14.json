@@ -1,0 +1,81 @@
+{
+  "id": "wb_public_debt_2026_04_14",
+  "created_at": "2026-04-14T15:06:31.171618+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-14",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank data query for indicator GC.DOD.TOTL.GD.ZS (Total government debt as a percentage of GDP) returned no valid observations. The data snapshot is empty and provides no usable information for macro analysis or market research.",
+  "key_points": [
+    "World Bank API query for public debt indicator returned no valid data observations",
+    "Indicator code GC.DOD.TOTL.GD.ZS represents total central government debt as percentage of GDP",
+    "No time series data, country breakdown, or historical values were returned",
+    "This appears to be a data availability issue rather than a substantive source"
+  ],
+  "why_it_matters": "Public debt metrics are key macro catalysts for sovereign bond spreads, currency valuations, and risk sentiment. The absence of this data creates a gap in macro monitoring and prevents assessment of debt sustainability across economies.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Public debt-to-GDP ratios are critical macro indicators used to assess sovereign fiscal health, potential for monetary policy constraints, and debt sustainability risks. No context can be derived from this failed query.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "data-missing",
+    "macro-catalysts",
+    "fiscal"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains no valid data — the World Bank API query returned an empty result with no observations",
+      "Source URL is missing from the record",
+      "Source domain is missing from the record",
+      "event_type is set to 'unknown' and no correct type is derivable because there is no substantive content",
+      "Source is too thin and has zero informational content — it is a null API response, not an article, report, or data release",
+      "No facts, numbers, or findings exist to archive; the record has no RAG retrieval utility",
+      "why_it_matters and macro_context sections describe hypothetical value of public debt data generally, not anything from this source — this is unsupported speculation added to pad an empty record",
+      "Source does not qualify as article-like; it is a failed machine query result",
+      "Record itself acknowledges in notes and quality_tier that it should not be archived, yet status is 'review_queue' rather than 'rejected'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_14.txt",
+  "notes": "This is NOT an archiveable source. The World Bank API returned a null/empty result for indicator GC.DOD.TOTL.GD.ZS. No country-level data, historical series, or current snapshots were available. The source should be discarded or re-queried with corrected parameters. Does not qualify as research, commentary, or data release under any event_type category.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No actual data returned from source",
+      "Failed API query result has no research value",
+      "Cannot support any market structure or macro catalyst analysis",
+      "Not suitable for RAG retrieval"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a mechanical data feed snapshot (FRED time series data), not a research document, article, or policy statement. Contains no analysis, commentary, or policy signal.",
+    "The target rate range (3.50-3.75%) stated in macro_context is inferred, not sourced from the provided data. Source only shows effective rate of 3.64%.",
+    "Quality tier self-assessment is 'data' with score 2, explicitly noting 'Cannot stand alone as meaningful research for RAG applications'.",
+    "No article-like content, no policy announcement, no commentary—just a data point observation.",
+    "Human review notes confirm: 'This is raw data snapshot from FRED, not a research document or policy announcement. Not suitable as a standalone archive record for research purposes.'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source content and generated record both explicitly characterize this as raw market data without research value. The record's own quality assessment confirms it lacks standalone archival value. No judgment ambiguity exists.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

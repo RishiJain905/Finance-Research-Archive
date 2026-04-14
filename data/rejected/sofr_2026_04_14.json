@@ -1,0 +1,88 @@
+{
+  "id": "sofr_2026_04_14",
+  "created_at": "2026-04-14T14:59:39.207538+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "SOFR Rate Snapshot - April 13, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_release_other"
+  },
+  "summary": "The Secured Overnight Financing Rate (SOFR) stood at 3.63% as of April 13, 2026, up 2 basis points from 3.61% on April 10. SOFR ranged from 3.57% to 3.63% over the past five trading sessions, with the value recovering from a low of 3.57% on April 9.",
+  "key_points": [
+    "SOFR closed at 3.63% on 2026-04-13, marking a 2 bps increase from the prior observation of 3.61% on 2026-04-10",
+    "SOFR value on 2026-04-09 was 3.57%, the lowest in the recent observation window",
+    "SOFR value on 2026-04-08 was 3.59%",
+    "SOFR value on 2026-04-07 was 3.62%",
+    "The absolute change between the latest two observations is +0.02 percentage points (upward direction)",
+    "Recent SOFR observations show modest intraday volatility of 4-6 bps between sessions"
+  ],
+  "why_it_matters": "SOFR is the primary overnight funding rate for U.S. dollar markets and serves as the replacement benchmark for LIBOR. It directly affects the pricing of adjustable-rate mortgages, business loans, and interest rate derivatives. Movements in SOFR reflect underlying money market conditions and the cost of secured overnight lending.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 0
+  },
+  "macro_context": "SOFR closely tracks the federal funds rate target range. The current level of approximately 3.63% is consistent with the Fed's stated policy rate range.",
+  "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York using overnight Treasury general collateral repurchase agreement transactions. As the dominant benchmark for secured overnight dollar funding, SOFR serves critical plumbing functions across the financial system.",
+  "important_numbers": [
+    "3.63%",
+    "3.61%",
+    "0.02 bps"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "fed-funds",
+    "benchmark-rate",
+    "overnight-rate",
+    "dollar-funding",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - should link to FRED series page (e.g., https://fred.stlouisfed.org/series/SOFR)",
+      "Summary states 'reversal of the prior decline' which is interpretive; source only provides numeric observations without this characterization",
+      "Key_points claims 'intraday volatility of 4-6 bps' but source shows day-over-day changes of 2-4 bps; 'intraday' is imprecise terminology for this data",
+      "Macro_context states 'monetary policy transmission is functioning normally' which is an interpretive inference not stated in the source data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_14.txt",
+  "notes": "This is a raw data point from FRED rather than a research document or commentary. The record captures the quantitative observation but provides no narrative context for the rate level or movement. Suitable for time-series analysis but thin on analytical substance. Consider linking to related macro events (e.g., recent Fed communications) for context on why SOFR may be moving.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 4,
+    "reasoning": [
+      "FRED is a high-authority data source",
+      "Quantitative observation is precise and verifiable",
+      "Limited analytical depth; no narrative context provided",
+      "No publication date for the specific observation beyond snapshot date",
+      "Cannot assess whether this represents a meaningful market development without additional context"
+    ]
+  }
+}
