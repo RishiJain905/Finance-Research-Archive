@@ -1,7 +1,7 @@
 {
   "id": "2y_yield_2026_04_14",
   "created_at": "2026-04-14T15:01:00.516089+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "2-Year Treasury Yield (DGS2) - Daily Observation",
@@ -57,30 +57,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Source is factually accurate but represents the edge case of raw price data with zero contextual content. Per calibration guide, verification_confidence of 4 indicates notable issues warranting human review. The record correctly identifies its own limitations, but a human must decide if thin data snapshots have sufficient archival value standing alone or if they should be rejected in favor of entries with accompanying commentary/drivers."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-14T16:52:04.462594+00:00"
   },
   "raw_text_path": "data/raw/2y_yield_2026_04_14.txt",
   "notes": "Thin source: a simple FRED data snapshot providing only the daily closing yield value. No analysis, no drivers, no context. The SOURCE METADATA correctly identifies this as macro catalyst relevant (interest rates), but the source itself offers no catalyst information. For a research archive focused on market structure and macro catalysts, this entry should be paired with relevant policy announcements, data releases, or commentary to provide context for the yield level. As-is, the record is accurate but minimal.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "minimal",
-    "score": 3,
+    "tier": "tier_3",
+    "score": 53.5,
     "reasoning": [
-      "Raw price data with no narrative",
-      "No macro catalyst context provided",
-      "No market drivers identified",
-      "Limited standalone archival value"
+      "quality score: 53.5/100 (acceptable)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
