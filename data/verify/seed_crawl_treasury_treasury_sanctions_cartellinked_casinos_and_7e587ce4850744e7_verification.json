@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is mismatched; source is a sanctions press release, not regulatory guidance",
+    "Source is classified as 'macro catalysts' in metadata but content is national security/law enforcement, not a market catalyst",
+    "No market pricing data or forward-looking market signals present in source",
+    "market_impact.asset_classes lists fx and commodities with confidence: 0, indicating uncertainty not resolved"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a factually accurate Treasury press release, but its relevance to a finance research archive focused on macro catalysts is questionable. The record contains no direct market signals. Human review needed to determine if national security/sanctions announcements should be included in macro catalyst archives.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This sanctions action targets financial infrastructure of one of Mexico's most violent cartels (CDN). While not a direct market catalyst, it affects cross-border trade flows through the Laredo port of entry and reinforces Treasury's enforcement posture against cartel financial networks. The targeting of casino-based money laundering operations could have minor implications for gaming sector compliance and cross-border dynamics.",
+    "macro_context": "The sanctions target CDN's control over the busiest inland point of entry for U.S. trade. This is a law enforcement action rather than a macro catalyst. Any implications for trade flows through Laredo or MXN/USD would be indirect and negligible relative to broader macroeconomic factors.",
+    "market_structure_context": ""
+  }
+}
