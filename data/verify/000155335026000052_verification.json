@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but this is a corporate governance 8-K filing - 'unknown' is appropriate here given the event type taxonomy does not cover routine corporate filings",
+    "The record accurately captures the source content but correctly identifies the source as outside the archive's scope (market structure / macro catalysts)"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source content is accurately captured but the record represents a routine corporate governance event (CEO transition) for a small-cap company with no relevance to market structure or macro catalysts. Human judgment needed to decide whether to include routine SEC filings outside the core focus scope, even when accurately documented.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

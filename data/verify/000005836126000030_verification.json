@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' which violates taxonomy rules. While no perfect category exists in the taxonomy for routine corporate governance filings, 'unknown' should not be used when the filing type is clear. This should be a valid type or explicitly noted.",
+    "The record already contains a completed human_review with decision 'exclude', but verification_confidence is set to 0 and verdict is 'pending' - inconsistent with having completed human review."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source itself is clearly not relevant to market structure or macro catalysts. The summary is accurate and the existing human_review correctly recommends exclusion. The only substantive issue is the event_type 'unknown' violation, which is minor given the record already correctly excludes the document. Auto-routing to rejected is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

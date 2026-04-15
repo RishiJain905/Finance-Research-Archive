@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic is blank - source was not categorized",
+    "event_type is set to 'unknown' - this is a corporate financial filing (8-K) related to tax credit monetization",
+    "Source is not relevant to market structure or macro catalysts per archive mandate - this is a company-specific corporate action affecting only Enphase Energy",
+    "why_it_matters correctly identifies lack of systemic market relevance, but this directly conflicts with acceptance criteria requiring source relevance to market structure or macro catalysts"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the financial facts are accurately captured (tax credit sale at 93% face value, $218.55M purchase price, $16.5M discount, $2.5M fees, 6.7pp GAAP gross margin impact), the source falls outside the archive's stated focus areas. This is a routine SEC Form 8-K for a solar technology manufacturer with no systemic market implications.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Enphase Energy sold $235 million in Section 45X advanced manufacturing production tax credits to a financial institution for $218.55 million (93% of face value), with the transaction reducing Q1 2026 GAAP gross margin by approximately 6.7 percentage points.",
+    "why_it_matters": "This is a company-specific corporate filing about a solar technology manufacturer's tax credit monetization. It does not convey information relevant to broad market structure or macro-level market catalysts. It affects only Enphase Energy (ENPH) shareholders and those with direct exposure to the company's reported metrics.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

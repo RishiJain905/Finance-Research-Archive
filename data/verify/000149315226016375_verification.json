@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is essentially empty - all critical fields (source.name, source.url, summary, key_points, etc.) are blank",
+    "Source attribution completely missing from record",
+    "Source type is a corporate 10-K filing, which is a financial disclosure document, not an article about market structure or macro catalysts",
+    "Single company SEC filing lacks relevance to broader market structure or macro catalysts unless it contains systemic risk information",
+    "The source body appears to be raw XBRL/financial data tables rather than readable narrative content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear rejection warranted: empty record with no content, missing source attribution, and source type (corporate 10-K) not relevant to macro/market structure archive scope",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
