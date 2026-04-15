@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Published date 'unknown' is acceptable given source metadata absence, but age cannot be verified against 90-day threshold",
+    "TARGET stated 'market structure' but source content is prudential regulation/stress-testing methodology rather than market microstructure or trading dynamics",
+    "Record correctly identifies this as a methodological research paper with no market-moving content, but the target mismatch warrants note"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is technically accurate and well-constructed, but there is a fundamental topic mismatch: TARGET indicates 'market structure' but source content is prudential/regulatory methodology (stress-testing frameworks) with no direct relevance to market microstructure, trading venues, or market dynamics. The record acknowledges this in market_structure_context but the topic mismatch affects whether this should be archived under 'market structure' target.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "ECB Occasional Paper Series providing methodological overview of stress-testing practices in Europe (2018-2022). While not market-moving, the paper informs understanding of how the ECB assesses banking sector resilience under adverse scenarios—relevant to macroprudential policy context.",
+    "market_structure_context": "This source addresses prudential stress-testing frameworks for banking supervision rather than market structure or trading mechanism design. It covers credit risk modeling, system-wide contagion analysis, and macroprudential assessment tools, but does not address market microstructure, order book dynamics, trading venue operations, or market plumbing."
+  }
+}

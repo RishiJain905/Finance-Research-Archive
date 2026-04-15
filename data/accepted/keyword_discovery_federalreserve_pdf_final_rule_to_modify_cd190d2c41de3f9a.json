@@ -1,0 +1,120 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_final_rule_to_modify_cd190d2c41de3f9a",
+  "created_at": "2026-04-15T01:21:32.692209+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "[PDF] Final rule to modify the enhanced supplementary leverage ratio standards",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/files/bcreg20251125b2.pdf",
+    "published_at": "2025-11-05",
+    "source_type": "regulatory_guidance",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve, FDIC, and OCC issued a final rule on November 5, 2025, modifying enhanced supplementary leverage ratio (eSLR) standards for U.S. GSIBs and their subsidiary depository institutions. The rule reduces eSLR buffers to half of the method 1 GSIB surcharge (capped at 1% for subsidiaries) to ensure leverage ratios function as a backstop rather than a binding constraint, with the stated goal of supporting Treasury market functioning.",
+  "key_points": [
+    "Final rule modifies eSLR buffer standard for GSIBs to equal 50% of the method 1 surcharge under the Board's GSIB surcharge framework",
+    "Subsidiary depository institutions of GSIBs receive a buffer equal to half of parent GSIB's method 1 surcharge, capped at 1%",
+    "Conforming changes made to total loss-absorbing capacity (TLAC) and long-term debt requirements",
+    "Effective date is April 1, 2026, with early adoption permitted beginning January 1, 2026",
+    "Rule aims to reduce regulatory disincentives for GSIBs to engage in market intermediation, particularly in U.S. Treasury markets",
+    "Currently, supplementary leverage ratio requirements have become binding constraints rather than backstops, creating perverse incentives according to the agencies"
+  ],
+  "why_it_matters": "This regulatory change affects capital requirements for the largest U.S. banks (GSIBs), potentially reducing their leverage capital buffers. By reducing the likelihood that eSLR is binding, the agencies hope to encourage GSIB-affiliated broker-dealers to continue intermediating in Treasury markets, which is critical for market liquidity and price discovery.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The rule directly addresses Treasury market structure by modifying capital requirements that affect GSIB market-making capacity. When eSLR is binding, it creates disincentives for broker-dealers to intermediate in Treasury markets because leverage requirements apply equally to low-risk assets like Treasuries. The agencies explicitly note this can create problems for smooth functioning of the U.S. Treasury market.",
+  "important_numbers": [
+    "50% of method 1 surcharge (eSLR buffer for GSIBs)",
+    "1% cap (maximum eSLR buffer for subsidiary depository institutions)",
+    "April 1, 2026 (effective date)",
+    "January 1, 2026 (earliest adoption date)"
+  ],
+  "tags": [
+    "federal-reserve",
+    "gsib",
+    "supplementary-leverage-ratio",
+    "capital-requirements",
+    "treasury-market",
+    "regulatory-guidance",
+    "bank-capital",
+    "tbac"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": [
+      "URL contains '20251125' which differs from the document header date of November 5, 2025 — the URL may reflect Federal Register filing date rather than document preparation date. This is a minor inconsistency but the document header (November 5, 2025) is authoritative."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is a legitimate Federal Reserve regulatory document but is truncated. Key provisions appear complete but full context of comment letters and final economic analysis may be missing. Published_at should be verified against Federal Register."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_final_rule_to_modify_cd190d2c41de3f9a.txt",
+  "notes": "Source is relevant to market structure through its explicit connection to Treasury market functioning and bank intermediation. The regulatory guidance modifies bank capital frameworks to reduce binding leverage constraints that the agencies state create problematic incentives for market participation. Document date is November 5, 2025; effective date is April 1, 2026. Early adoption permitted from January 1, 2026. Source is truncated but appears to contain all key substantive provisions.",
+  "linked_quant_context": [
+    {
+      "record_id": "iorb_2026_04_14",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve"
+      ],
+      "link_score": 68.8
+    },
+    {
+      "record_id": "iorb_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "federal-reserve"
+      ],
+      "link_score": 68.8
+    },
+    {
+      "record_id": "sofr_2026_04_13",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 75.5,
+    "reasoning": [
+      "quality score: 75.5/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}
