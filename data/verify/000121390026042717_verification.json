@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - while this is technically valid, a more specific type like 'corporate_governance' or 'sec_filing' would be more informative, though this does not fit neatly into the provided taxonomy"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is factually accurate and correctly identifies the source as outside scope for market structure/macro catalysts research. However, human review is needed to confirm the routing decision: should this micro-cap OTC Pink Sheets corporate governance filing be rejected entirely, or archived in a separate 'corporate governance' or 'sec filings' collection that is out-of-scope for the primary research archive? The record quality is good but the topic classification needs confirmation.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

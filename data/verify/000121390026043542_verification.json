@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when the correct type (equity_issuance/debt_financing) is apparent from context",
+    "Registration Rights Agreement is not mentioned in summary or key_points, though it is a substantive item in the source (Exhibit 4.2, Item 1.01)",
+    "market_impact fields are all empty or zeroed, suggesting incomplete impact assessment",
+    "macro_context and market_structure_context fields are empty strings"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source text, but event_type='unknown' should be corrected to reflect this is a corporate equity/debt financing event. Additionally, the Registration Rights Agreement should be included in key_points since it is explicitly described as a material agreement (Exhibit 4.2). The record correctly identifies this as non-relevant to macro catalysts, but the missing event_type correction and incomplete key_points warrant human review before archival.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "New Era Energy & Digital, Inc. (NUAI), an emerging growth company listed on Nasdaq, drew down $20 million in Term Loan A-1 financing and completed equity issuances to Macquarie Equipment Capital Inc. on April 13, 2026. The company issued warrants for 400,208 shares and sold 1,000,520 shares of common stock at approximately $5.00 per share, while underwriters exercised their option for an additional 4,477,611 shares. A Registration Rights Agreement was entered into with the lender.",
+    "why_it_matters": "This is a routine corporate securities filing for a micro-cap emerging growth company (Nasdaq: NUAI). It documents standard debt and equity financing activities between a small technology/data center company and a single lender (Macquarie Equipment Capital Inc.), including warrant issuances and a registration rights agreement. No relevance to macro market catalysts or financial market structure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

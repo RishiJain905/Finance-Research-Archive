@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is a routine administrative filing by a small OTC Markets-listed SPAC with no bearing on broader financial markets",
+    "event_type set to 'unknown' is technically valid per taxonomy but the record itself acknowledges 'This source is NOT relevant to market structure or macro catalysts'",
+    "The generated record's own quality_tier classification ('not-applicable') and human_review notes confirm the source lacks archival value for this research archive",
+    "Filing describes trivial corporate action: $12,203.33 deposit to extend deadline by 30 days — negligible materiality"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent and factually accurate, but explicitly acknowledges the source is not relevant to market structure or macro catalysts. Core rule #6 applies: 'thin low-signal sources bias toward reject.' This is a routine SPAC deadline extension filing with no macro or market structure implications.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

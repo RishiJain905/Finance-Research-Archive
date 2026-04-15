@@ -1,0 +1,66 @@
+{
+  "id": "000121390026043542",
+  "created_at": "2026-04-15T03:59:27.747001+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "New ERA Energy & Digital, Inc. 8-K Filing — 2026-04-14",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/2028336/000121390026043542/ea0286104-8k_newera.htm",
+    "published_at": "2026-04-14",
+    "source_type": "",
+    "domain": "www.sec.gov"
+  },
+  "summary": "New Era Energy & Digital, Inc. (NUAI), an emerging growth company listed on Nasdaq, drew down $20 million in Term Loan A-1 financing and completed equity issuances to Macquarie Equipment Capital Inc. on April 13, 2026. The company issued warrants for 400,208 shares and sold 1,000,520 shares of common stock at approximately $5.00 per share, while underwriters exercised their option for an additional 4,477,611 shares. A Registration Rights Agreement was entered into with the lender.",
+  "key_points": [
+    "Company drew down the entire $20 million Term Loan A-1 under a Term Loan Agreement with Macquarie Equipment Capital Inc.",
+    "Issued 400,208 warrants to purchase common stock with an exercise price of approximately $5.00 per share.",
+    "Sold 1,000,520 shares of common stock to the lender at approximately $5.00 per share.",
+    "Underwriters exercised their option on April 10, 2026 to purchase an additional 4,477,611 shares at the public offering price.",
+    "Company entered into a Registration Rights Agreement with the lender for resale of the securities.",
+    "The securities were issued under Section 4(a)(2) exemption from registration."
+  ],
+  "why_it_matters": "This is a routine corporate securities filing for a micro-cap emerging growth company (Nasdaq: NUAI). It documents standard debt and equity financing activities between a small technology/data center company and a single lender (Macquarie Equipment Capital Inc.), including warrant issuances and a registration rights agreement. No relevance to macro market catalysts or financial market structure.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$20 million (Term Loan A-1)",
+    "400,208 (warrants issued)",
+    "1,000,520 (shares sold)",
+    "4,477,611 (additional shares from underwriters' option)",
+    "~$5.00 per share (exercise and sale price)"
+  ],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "nuai",
+    "nasdaq",
+    "equity-issuance",
+    "debt-financing",
+    "warrants"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' when the correct type (equity_issuance/debt_financing) is apparent from context",
+      "Registration Rights Agreement is not mentioned in summary or key_points, though it is a substantive item in the source (Exhibit 4.2, Item 1.01)",
+      "market_impact fields are all empty or zeroed, suggesting incomplete impact assessment",
+      "macro_context and market_structure_context fields are empty strings"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate against the source text, but event_type='unknown' should be corrected to reflect this is a corporate equity/debt financing event. Additionally, the Registration Rights Agreement should be included in key_points since it is explicitly described as a material agreement (Exhibit 4.2). The record correctly identifies this as non-relevant to macro catalysts, but the missing event_type correction and incomplete key_points warrant human review before archival."
+  },
+  "raw_text_path": "data/raw/000121390026043542.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a routine corporate securities filing for a micro-cap emerging growth company (New Era Energy & Digital, Inc., ticker NUAI). The filing documents standard debt financing ($20M term loan) and equity issuances (warrants and common stock) to a single lender (Macquarie Equipment Capital Inc.). There are no macro implications, no policy relevance, and no market structure content. Filed with SEC EDGAR as a Current Report on Form 8-K."
+}
