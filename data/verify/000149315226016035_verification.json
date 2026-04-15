@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific 8-K filing for a micro-cap company (Beneficient/BENF) with no relevance to market structure or macro catalysts",
+    "The transaction (LP interest acquisition in exchange for preferred stock) is entirely company-specific with no systemic market implications",
+    "Archive's stated focus is market structure and macro catalysts; this filing does not contribute to either",
+    "event_type 'unknown' is technically correct but signals the record is outside archive scope",
+    "why_it_matters correctly identifies this as routine corporate issuance with no broader relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, but the source itself is outside the archive's stated scope. Human review is needed to confirm whether company-specific corporate securities filings should be archived, even when accurately documented.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

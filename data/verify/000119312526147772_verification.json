@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the source is a regulatory filing (8-K) that could potentially be classified as 'regulatory_guidance' or another taxonomy value",
+    "Source is company-specific cybersecurity incident rather than market-wide or systemic event"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This 8-K filing is accurately captured in the record with proper SEC EDGAR attribution and factually correct content. The 'why_it_matters' field and 'quality_tier' appropriately flag it as out of scope for a market structure/macro catalysts archive. However, human review is needed to confirm: (1) whether the archive scope explicitly excludes all corporate disclosures or only irrelevant ones, and (2) whether crypto-related SEC filings have any archival value for this specific archive given Bitcoin Depot's Nasdaq listing (BTM) and status as a crypto financial services company.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

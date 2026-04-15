@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but should be a valid taxonomy value - for corporate restructuring announcements, 'unknown' is appropriate given the taxonomy does not cover individual company corporate events",
+    "topic is 'macro catalysts' but the source is an individual company 8-K filing with no relevance to macro catalysts or market structure - this is a clear category mismatch",
+    "quality_tier correctly identifies the record as 'irrelevant' with score 1, but the record was still generated under 'macro catalysts' topic",
+    "market_impact has confidence: 0 and empty asset_classes, which is appropriate given the lack of market-wide relevance, but confirms this record should not be in the system",
+    "The 'earnings' tag is misleading - this is a restructuring/cost reduction 8-K filing (Item 2.05), not an earnings announcement"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record contains factually accurate information about GoPro's restructuring announcement, but the topic classification ('macro catalysts') is fundamentally incorrect. This is an individual company corporate filing with no relevance to market structure or macro catalysts as specified in the archival mandate. The internal notes and quality_tier already acknowledge this irrelevance, yet the record remains in review_queue. A human should confirm this record should be rejected rather than archived under macro/market structure focus areas.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

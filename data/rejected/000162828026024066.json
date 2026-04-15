@@ -1,0 +1,90 @@
+{
+  "id": "000162828026024066",
+  "created_at": "2026-04-15T14:22:53.734900+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "GoPro, Inc. 8-K Filing — 2026-04-07",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1500435/000162828026024066/gpro-20260407.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-07",
+    "source_type": "sec_filing"
+  },
+  "summary": "GoPro, Inc. announced on April 7, 2026 that its Board approved a restructuring plan involving a global reduction in force of approximately 145 employees (23% of 631 headcount), with estimated aggregate charges of $11.5M to $15M and cash expenditures of $1.5M in Q2, $5.5M-$8M in Q3, and $4.5M-$5.5M in Q4 2026.",
+  "key_points": [
+    "Board approved restructuring plan on April 7, 2026",
+    "Reduction in force of 145 employees representing approximately 23% of the company's ending Q1 2026 headcount of 631",
+    "Estimated aggregate charge range of $11.5 million to $15 million",
+    "Cash expenditures: ~$1.5M in Q2 2026, ~$5.5M-$8M in Q3 2026, ~$4.5M-$5.5M in Q4 2026",
+    "One-time termination benefits include severance payments and healthcare benefits",
+    "Restructuring expected to be substantially completed by end of 2026"
+  ],
+  "why_it_matters": "This is an individual company 8-K filing announcing corporate restructuring. It has no relevance to market structure or macro catalysts. The announcement pertains to GoPro's internal cost reduction efforts and has no bearing on Federal Reserve policy, Treasury market operations, or broader economic indicators.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "145 employees",
+    "23% of headcount",
+    "631 employees (Q1 2026 ending headcount)",
+    "$11.5M-$15M aggregate charge estimate",
+    "$1.5M Q2 2026 cash expenditures",
+    "$5.5M-$8M Q3 2026 cash expenditures",
+    "$4.5M-$5.5M Q4 2026 cash expenditures"
+  ],
+  "tags": [
+    "sec-filing",
+    "gopro",
+    "restructuring",
+    "layoffs",
+    "8-k",
+    "corporate-announcement",
+    "earnings",
+    "consumer-electronics"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' but should be a valid taxonomy value - for corporate restructuring announcements, 'unknown' is appropriate given the taxonomy does not cover individual company corporate events",
+      "topic is 'macro catalysts' but the source is an individual company 8-K filing with no relevance to macro catalysts or market structure - this is a clear category mismatch",
+      "quality_tier correctly identifies the record as 'irrelevant' with score 1, but the record was still generated under 'macro catalysts' topic",
+      "market_impact has confidence: 0 and empty asset_classes, which is appropriate given the lack of market-wide relevance, but confirms this record should not be in the system",
+      "The 'earnings' tag is misleading - this is a restructuring/cost reduction 8-K filing (Item 2.05), not an earnings announcement"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record contains factually accurate information about GoPro's restructuring announcement, but the topic classification ('macro catalysts') is fundamentally incorrect. This is an individual company corporate filing with no relevance to market structure or macro catalysts as specified in the archival mandate. The internal notes and quality_tier already acknowledge this irrelevance, yet the record remains in review_queue. A human should confirm this record should be rejected rather than archived under macro/market structure focus areas."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000162828026024066.txt",
+  "notes": "This source is NOT relevant to the specified focus areas (market structure and macro catalysts). It is an individual company 8-K filing announcing a corporate restructuring and layoffs at GoPro, a small-cap consumer electronics company. The document contains no information about monetary policy, central bank operations, Treasury market mechanics, economic data releases, or any market structure considerations. It should not be archived as a macro or market structure document. The filing is accurate and complete as a corporate disclosure but has zero macro-financial relevance.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "irrelevant",
+    "score": 1,
+    "reasoning": [
+      "Source is an individual company 8-K filing, not relevant to macro catalysts or market structure",
+      "Focus areas are market structure and macro catalysts; this is a corporate restructuring announcement",
+      "Small-cap consumer electronics company has negligible market-wide impact",
+      "No Fed policy, Treasury operations, or economic data release content"
+    ]
+  }
+}
