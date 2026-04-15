@@ -69,7 +69,17 @@
   "raw_text_path": "data/raw/10y_yield_2026_04_14.txt",
   "notes": "This source is a raw FRED data snapshot for the DGS10 series. It contains only the numerical yield observation without any analytical context, causal explanation, or policy commentary. The source is factual and verifiable but thin as an archival research note. It is relevant to macro catalysts in the narrow sense that 10-year yields are a key macro indicator, but the source itself offers no interpretation of what the data means or what drove the change. Lower confidence assigned because the content does not meet the standard of a research note — it is a data feed entry. Consider linking to an associated news article or analyst commentary for the same date to provide context.",
   "linked_quant_context": [],
-  "linked_article_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "seed_crawl_treasury_treasury_international_capital_data_for_6aa749d650d98268",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 130.0
+    }
+  ],
   "quality_tier": {
     "tier": "tier_2",
     "score": 57.0,

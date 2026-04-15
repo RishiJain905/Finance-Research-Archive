@@ -1,0 +1,122 @@
+{
+  "id": "seed_crawl_treasury_treasury_international_capital_data_for_6aa749d650d98268",
+  "created_at": "2026-04-15T20:58:19.997812+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Treasury International Capital Data for February",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/news/press-releases/sb0448",
+    "domain": "home.treasury.gov",
+    "published_at": "2026-04-15",
+    "source_type": "press_release"
+  },
+  "summary": "The U.S. Treasury released February 2026 TIC data showing a net TIC inflow of $184.5 billion, driven primarily by private foreign inflows of $166.5 billion versus official inflows of $18.0 billion. Foreign private investors purchased $147.3 billion in long-term U.S. securities while foreign official institutions sold $46.1 billion, with foreign residents increasing Treasury bill holdings by $91.6 billion.",
+  "key_points": [
+    "Total net TIC inflow was $184.5 billion in February 2026 ($166.5B private, $18.0B official)",
+    "Foreign private investors purchased $147.3 billion in long-term U.S. securities while foreign official institutions sold $46.1 billion",
+    "Foreign residents increased Treasury bill holdings by $91.6 billion in February",
+    "After adjustments, overall net foreign purchases of long-term securities estimated at $58.6 billion",
+    "Banks' own net dollar-denominated liabilities to foreign residents increased by $38.6 billion",
+    "U.S. residents purchased $42.6 billion in long-term foreign securities (net outflow)"
+  ],
+  "why_it_matters": "TIC data provides critical visibility into foreign ownership patterns of U.S. securities and cross-border capital flows. The divergence between private demand (strong buying) and official sector selling (net disposals) suggests different motivations—private investors may be seeking yield or safety while central banks diversify reserves. Strong Treasury bill demand indicates robust foreign appetite for short-term U.S. debt, supporting dollar funding markets.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 4
+  },
+  "macro_context": "Large private capital inflows ($166.5B) into U.S. securities reflect continued foreign appetite for dollar-denominated assets despite higher Treasury yields. The shift from official to private demand has implications for Fed policy normalization and dollar dynamics. Strong short-term security demand suggests stable foreign dollar holdings supporting U.S. external financing.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$184.5 billion net TIC inflow",
+    "$166.5 billion net foreign private inflows",
+    "$18.0 billion net foreign official inflows",
+    "$147.3 billion net purchases by private foreign investors (long-term securities)",
+    "-$46.1 billion net sales by foreign official institutions (long-term securities)",
+    "$91.6 billion increase in foreign Treasury bill holdings",
+    "$87.4 billion increase in foreign holdings of short-term U.S. securities",
+    "$38.6 billion increase in banks' net dollar-denominated liabilities to foreigners",
+    "$58.6 billion overall net foreign purchases of long-term securities (adjusted)"
+  ],
+  "tags": [
+    "tic-data",
+    "capital-flows",
+    "foreign-holdings",
+    "treasury-holdings",
+    "cross-border-flows",
+    "private-capital",
+    "official-inflows",
+    "treasury-bills",
+    "dollar-liabilities"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_treasury_international_capital_data_for_6aa749d650d98268.txt",
+  "notes": "Data is current and timely—February 2026 data released April 15, 2026. This is a factual data release with comprehensive tables. Private inflows significantly outpacing official inflows is a notable structural shift. Source includes disclaimer about custodial data limitations for country-level attribution.",
+  "linked_quant_context": [
+    {
+      "record_id": "10y_yield_2026_04_14",
+      "relationship": "nearest_relevant_quant_snapshot",
+      "reason": "near-day, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 130.0
+    },
+    {
+      "record_id": "2y_yield_2026_04_14",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 110.0
+    },
+    {
+      "record_id": "2y_yield_2026_04_11",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 110.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 74.5,
+    "reasoning": [
+      "quality score: 74.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}

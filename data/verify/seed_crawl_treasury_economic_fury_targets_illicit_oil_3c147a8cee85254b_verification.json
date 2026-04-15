@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect; this is a sanctions enforcement action, not regulatory guidance. treasury_issuance or market_notice would be more appropriate",
+    "macro_context statement 'sanctions on the Shamkhani network's LPG fleet (including vessels carrying 3+ million barrels since January 2025) could tighten regional LPG supply' is speculative. The source does not quantify what share of Iran's LPG exports this represents, nor does it state supply tightening is expected",
+    "why_it_matters contains extrapolated claims about energy market exposure that are not explicitly supported by the source text"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "event_type classification needs correction from regulatory_guidance to treasury_issuance. Source is high-quality and factually accurate, but the record's event categorization and some forward-looking market statements need verification. Human should confirm whether treasury_issuance is appropriate or if another taxonomy fits better.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "These sanctions directly target Iran's shadow fleet and oil export infrastructure under the 'Economic Fury' maximum pressure campaign. Secondary sanctions exposure for financial institutions increases, particularly for parties facilitating Iranian oil transactions through the Shamkhani network or associated front companies. The action explicitly includes LPG tankers alongside crude carriers, expanding enforcement scope beyond prior crude-focused rounds.",
+    "macro_context": "Iran is a significant LPG exporter, and sanctions on the Shamkhani network's LPG fleet could affect regional energy supply dynamics if enforcement is effective. The Treasury action signals continued maximum pressure on Iranian oil revenue. Actual market impact depends on enforcement effectiveness and whether Russian partners continue to facilitate the network.",
+    "market_structure_context": "The Shamkhani network uses multiple UAE-based front companies (Oriel Group, House of Shipping, Taylor Shipping, Corplinx) and vessel management firms to obscure ownership and operations. The network's vessels carry Iranian crude, oil products, and LPG to various destinations including East Asia. Vessel AURA transported over 3 million barrels of Iranian LPG since early 2025. Secondary sanctions risk affects any financial institutions processing transactions for these entities."
+  }
+}
