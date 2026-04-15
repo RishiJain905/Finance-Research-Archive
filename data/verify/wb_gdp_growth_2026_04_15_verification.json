@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains zero extractable content - API returned empty result set",
+    "Source is a data infrastructure failure, not a substantive publication",
+    "Cannot support macro catalyst or market structure research without actual GDP figures",
+    "event_type 'data_release_gdp' is technically valid but misleading; no data was released",
+    "Source attribution lacks URL, making verification impossible",
+    "Quality tier 'no-data' with score 0 confirms source has no archival value",
+    "worldbank.org domain without specific URL suggests a container or infrastructure endpoint rather than a browsable publication"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a straightforward reject. The record is accurate in describing the empty API response, but the source itself has zero archival value for a finance research archive. A failed data retrieval attempt does not constitute a recordable research event, even if faithfully documented. Seeking actual World Bank GDP data from a working endpoint would be appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

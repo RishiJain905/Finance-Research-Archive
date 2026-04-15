@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but should be a valid data release type (e.g., 'data_release_other') since this is EFFR rate data from FRED",
+    "Source attribution URL is empty - FRED URL should be included for traceability (e.g., https://fred.stlouisfed.org/series/DFF)",
+    "The source is raw quantitative data with no policy narrative, limiting standalone interpretive value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and the EFFR data is correctly captured. However, event_type 'unknown' should be corrected to a valid taxonomy value. The URL field is empty which violates the source attribution requirement. Human review needed to: (1) assign correct event_type, (2) verify FRED URL is added, (3) confirm whether raw EFFR data without policy context has sufficient standalone archival value or should be rejected per the 'too thin' rule.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Effective Federal Funds Rate (DFF) remained flat at 3.64% across the observation period from April 9-13, 2026. No change was recorded day-over-day from April 12 to April 13. This is a daily interest rate data point from FRED, not a policy announcement.",
+    "why_it_matters": "The EFFR is the primary overnight lending rate benchmark in the U.S. banking system. A flat reading at 3.64% indicates no interbank lending rate volatility and suggests the Federal Reserve's current policy rate is stable. However, this data snapshot alone does not convey policy intent or forward guidance.",
+    "market_structure_context": "The effective Fed funds rate is a volume-weighted average of overnight repo transactions among depository institutions. Flat readings across multiple days indicate orderly functioning in the fed funds market with no unusual pressure points."
+  }
+}

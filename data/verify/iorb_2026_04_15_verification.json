@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "market_structure_context contains a factual error: states IORB (3.65%) is 'at the upper bound of the Fed's target range (effectively 5.25% - 5.50% range)' - this is internally inconsistent. IORB at 3.65% cannot be at the upper bound of a 5.25-5.50% range. The target range would need to include ~3.65% as its ceiling, not 5.50%.",
+    "The source is a pure quantitative data snapshot with no narrative, commentary, or policy analysis. As a standalone record, it provides only a single number with no broader context or signal.",
+    "event_type 'balance_sheet_update' is questionable. IORB is a administered rate set by the Fed, not a balance sheet update per se. 'monetary_policy_report' or 'rate_decision' might be more accurate, but technically there was no decision here - just a static rate observation.",
+    "The record acknowledges 'Very thin content as a standalone source' which aligns with assessment."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Critical factual error in market_structure_context regarding the relationship between IORB (3.65%) and the Fed's target range. The claim that 3.65% is at the upper bound of a 5.25-5.50% range is arithmetically impossible and would mislead researchers. Additionally, the thin nature of the source (raw data point with no analytical content) raises questions about archival value as a standalone record.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve's Interest on Reserve Balances (IORB) rate remained unchanged at 3.65% on April 15, 2026, holding flat from the prior day. The rate has been stable at 3.65% since April 11, 2026, with zero absolute change over the latest observation period.",
+    "why_it_matters": "IORB serves as a key policy rate in the Federal Reserve's current operating framework, functioning as a floor for money market rates. As the rate paid on excess reserves, IORB influences short-term funding costs and the transmission of monetary policy to broader financial markets. The stability of IORB indicates the Fed is maintaining its current administered rate level.",
+    "macro_context": "",
+    "market_structure_context": "IORB is a core component of the Federal Reserve's interest-on-reserves regime for monetary policy implementation. The rate is set by the Fed and affects the cost of reserves for depository institutions. IORB operates alongside the overnight reverse repo (RRP) facility to form a corridor for money market rates. As a mechanical daily data point with no accompanying policy commentary or analysis, this source provides limited standalone archival value and is most useful as contextual data within a broader monetary policy narrative."
+  }
+}

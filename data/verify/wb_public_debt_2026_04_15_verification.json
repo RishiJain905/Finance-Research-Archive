@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data - query returned empty result with 'No recent valid observations were returned'",
+    "Source is a null/empty data retrieval response with no content to archive",
+    "event_type set to 'unknown' is appropriate given no data, but the taxonomy value 'data_release_other' would be more precise if data existed",
+    "Cannot serve archival purpose when source provides zero usable information",
+    "Source is not relevant to market structure or macro catalysts - it contains no information whatsoever"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a null API response with no data. While the generated record accurately describes this null result, the source itself should be rejected as it has no archival value. However, human confirmation is appropriate given the quality_tier and human_review fields suggest pending human decision.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "A query to the World Bank database for indicator GC.DOD.TOTL.GD.ZS (total government debt as a percentage of GDP) returned no valid observations. No actual debt data, country-level figures, or time-series information is available in this source.",
+    "why_it_matters": "This source contains no usable information. Government debt-to-GDP ratios are relevant to macro catalysts (fiscal sustainability, sovereign risk premiums), but this particular retrieval returned no data and should not be archived.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

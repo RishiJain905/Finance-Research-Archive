@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only a 404 error message with zero actual auction data",
+    "No extractable facts about Treasury auction timing, sizes, or terms",
+    "Source attribution URL is empty - endpoint that failed is not recorded",
+    "event_type is 'unknown' - should be 'market_notice' given attempted Treasury auction data retrieval",
+    "No archival value - error messages are not research content",
+    "Record accurately describes failure but provides no researchable content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies the source as unusable (404 error) and quality_tier is already set to 'reject' with score 0. Human review confirms this is a complete absence of source content. The LLM should have set verification_confidence to 0 and verdict to 'reject' automatically - this should be auto-routed to rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "API request to Treasury Fiscal Data endpoint for upcoming auction data returned a 404 error. No auction schedule data was retrieved. The source provides no usable information about Treasury auction timing, sizes, or terms.",
+    "why_it_matters": "Treasury auction schedules are a core component of market structure analysis, affecting auction tail risk, primary dealer positioning, and cash management timing. Without this data, no analysis of near-term supply dynamics or auction mechanics is possible.",
+    "macro_context": "",
+    "market_structure_context": "No market structure data was available. The attempted data source (Treasury auction schedule API) returned a 404 error and provided no information about auction timing, sizes, or terms."
+  }
+}

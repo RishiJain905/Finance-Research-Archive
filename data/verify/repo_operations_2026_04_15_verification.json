@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body contains only a 400 error message with no actual repo operation data",
+    "Source is an API endpoint (source_type: api_endpoint), not article-like content - fails article-like requirement",
+    "No actual market structure data captured; record documents a failed fetch rather than meaningful content",
+    "HTTP 400 Bad Request error is transient/infrastructure failure, not archival-worthy content",
+    "No extractable financial figures, rates, amounts, or operation results available",
+    "Published_at is empty - no temporal metadata for the attempted fetch",
+    "No clear archival value: a failed API request has no research utility without the underlying data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is already appropriately flagged with human_review.required=true, but verification rules clearly apply. The source provides no archive-worthy content—just a transient error message. Even though the generated record correctly identifies this as a data failure, the source itself does not meet the minimum threshold for archival inclusion.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw market data (FRED series snapshot), not research, analysis, or article — lacks narrative, catalyst, or context",
+    "Interpretive claims in why_it_matters ('pricing in roughly one to two rate cuts') and macro_context are not supported by the source data",
+    "Source URL is empty, violating source attribution requirement",
+    "Record has low archival value as stand-alone research note — record itself acknowledges it 'should be linked to a qualitative source'",
+    "Event type data_release_other is technically valid but 'release' is mischaracterized for a continuous data feed"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is raw quantitative data without analytical content. The record correctly captures the numbers but then adds interpretive claims (Fed rate cut expectations) that go beyond what the data itself supports. This is borderline — the record is factually accurate about the data but overreaches into analysis the source doesn't provide. Human review needed to determine if raw data points qualify for a research archive without accompanying qualitative context.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 2-Year Treasury yield stood at 3.78% as of April 13, 2026, down 3 basis points from 3.81% on April 10. Recent observations show yields oscillating in a narrow range between 3.78% and 3.81% over the past week.",
+    "why_it_matters": "The 2-year yield reflects near-term Fed policy expectations and serves as a benchmark for short-term borrowing costs. This data point should be cross-referenced with qualitative sources (FOMC statements, speeches, news) to determine what drove the yield level or changes.",
+    "macro_context": "As a market-based measure of expected short-term rates, the 2-year Treasury yield provides quantitative context for policy expectations. This raw observation lacks the narrative to determine whether the current level reflects uncertainty, stability, or anticipation of policy shifts.",
+    "market_structure_context": ""
+  }
+}

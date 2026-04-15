@@ -1,0 +1,83 @@
+{
+  "id": "fed_funds_2026_04_15",
+  "created_at": "2026-04-15T14:53:09.988970+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Effective Federal Funds Rate (DFF) — Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-13",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The Effective Federal Funds Rate (DFF) remained flat at 3.64% across the observation period from April 9-13, 2026. No change was recorded day-over-day from April 12 to April 13. This is a daily interest rate data point from FRED, not a policy announcement.",
+  "key_points": [
+    "Latest effective Fed funds rate: 3.64% (observed 2026-04-13)",
+    "Previous value: 3.64% (observed 2026-04-12)",
+    "Absolute change: 0 bps (flat day-over-day)",
+    "Rate held constant at 3.64% for all five trading days from April 9-13, 2026",
+    "Source is raw quantitative data from FRED database, not a policy statement or commentary"
+  ],
+  "why_it_matters": "The EFFR is the primary overnight lending rate benchmark in the U.S. banking system. A flat reading at 3.64% indicates no interbank lending rate volatility and suggests the Federal Reserve's current policy rate is stable. However, this data snapshot alone does not convey policy intent or forward guidance.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 2
+  },
+  "macro_context": "The stable EFFR at 3.64% reflects the Fed's current target rate environment. Without accompanying FOMC communications, this snapshot cannot be placed in a rate path context. The consistency over multiple days suggests market stability in overnight funding markets.",
+  "market_structure_context": "The effective Fed funds rate is a volume-weighted average of overnight repo transactions among depository institutions. Flat readings across multiple days indicate orderly functioning in the fed funds market with no unusual pressure points.",
+  "important_numbers": [
+    "3.64%",
+    "0 bps"
+  ],
+  "tags": [
+    "fed-funds",
+    "effective-rate",
+    "overnight-rate",
+    "monetary-policy",
+    "interest-rates",
+    "fRED"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is set to 'unknown' but should be a valid data release type (e.g., 'data_release_other') since this is EFFR rate data from FRED",
+      "Source attribution URL is empty - FRED URL should be included for traceability (e.g., https://fred.stlouisfed.org/series/DFF)",
+      "The source is raw quantitative data with no policy narrative, limiting standalone interpretive value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_15.txt",
+  "notes": "This is a quantitative data snapshot from FRED, not an editorial or analytical document. The source provides only a number and dates without policy context. Archive value is limited unless linked to a corresponding FOMC decision or statement. Confidence lowered because raw market data without narrative offers minimal analytical value for research retrieval.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 3,
+    "reasoning": [
+      "Mechanically accurate data point",
+      "No narrative, context, or policy signal provided",
+      "Limited standalone research value",
+      "Lacks connection to broader policy decisions without additional sourcing"
+    ]
+  }
+}

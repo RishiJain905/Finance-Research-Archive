@@ -1,0 +1,87 @@
+{
+  "id": "sofr_2026_04_15",
+  "created_at": "2026-04-15T14:53:09.989030+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "SOFR (Secured Overnight Financing Rate) Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Bank of St. Louis)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-15",
+    "source_type": "unknown"
+  },
+  "summary": "SOFR closed at 3.66 on April 14, 2026, up 3 basis points from the prior day's 3.63. Over the prior week, SOFR has risen 7 basis points from 3.59 on April 8 to 3.66 on April 14, indicating a modest upward drift in overnight funding costs. This is raw quantitative data without accompanying commentary on drivers.",
+  "key_points": [
+    "SOFR latest value: 3.66 (observed April 14, 2026)",
+    "SOFR prior value: 3.63 (observed April 13, 2026)",
+    "Day-over-day change: +0.03 (3 basis points, direction: up)",
+    "5-day observation range: 3.57 (April 9) to 3.66 (April 14)",
+    "Week-over-week change from April 8 (3.59): +7 basis points",
+    "Source is a quantitative snapshot with no stated explanation for the rate level or change"
+  ],
+  "why_it_matters": "SOFR is the primary overnight reference rate for U.S. dollar markets, serving as the benchmark for over $200 trillion in derivatives, loans, and securities. Daily SOFR movements reflect short-term funding conditions in the U.S. repo market and serve as a proxy for monetary policy transmission. Even small changes can signal shifts in bank funding costs and money market dynamics.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The SOFR observations from April 8-14, 2026 show a modest upward drift of 7 basis points week-over-week. Without additional context, no inference can be made about specific drivers of this movement.",
+  "market_structure_context": "SOFR is a risk-free rate anchored by the Federal Reserve's interest on reserve balances (IORB) rate and influenced by repo market activity. It serves as the successor benchmark to USD LIBOR. The rate is calculated by the Federal Reserve Bank of New York from triparty repo data. As a daily overnight rate, it is inherently volatile and individual daily prints reflect short-term funding conditions rather than fundamental macro shifts.",
+  "important_numbers": [
+    "3.66 (SOFR on April 14, 2026)",
+    "3.63 (SOFR on April 13, 2026)",
+    "+0.03 (day-over-day change in bps)"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "reference-rate",
+    "repo",
+    "short-term-rates",
+    "fed"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 5,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution missing URL - source.metadata.url is empty, violating requirement for name + url",
+      "published_at uses TODAY date (2026-04-15) rather than the actual observation date range (April 8-14, 2026), which could mislead users about data currency",
+      "Source is extremely thin quantitative data without any analytical content, author, title, or narrative context",
+      "Cannot determine drivers or macro relevance of SOFR level/change from this data alone"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_15.txt",
+  "notes": "This source is a thin quantitative data release containing only SOFR observations with no analytical content, macro context, or causal information. The change of +3 bps is within normal daily variance for SOFR. No inference can be made about policy direction or market events from this data alone. The source has no article title, author, or commentary. Consider whether standalone daily SOFR snapshots add value to the archive or whether this data should be captured in a time-series format instead.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 4,
+    "reasoning": [
+      "Raw quantitative data without analytical content",
+      "No author, title, or narrative context provided",
+      "No URL for source verification",
+      "Only 5 observations provided with no explanation of drivers",
+      "Relevant to market structure as a key reference rate"
+    ]
+  }
+}

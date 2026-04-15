@@ -1,0 +1,88 @@
+{
+  "id": "iorb_2026_04_15",
+  "created_at": "2026-04-15T14:54:16.513918+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Interest on Reserve Balances (IORB) Daily Update",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-15",
+    "source_type": "data_release"
+  },
+  "summary": "The Federal Reserve's Interest on Reserve Balances (IORB) rate remained unchanged at 3.65% on April 15, 2026, holding flat from the prior day. The rate has been stable at 3.65% since April 11, 2026, with zero absolute change over the latest observation period.",
+  "key_points": [
+    "IORB stands at 3.65% as of 2026-04-15, unchanged from 3.65% on 2026-04-14",
+    "The rate has remained flat at 3.65% for five consecutive observations (April 11-15, 2026)",
+    "No change (0 absolute change) recorded between the latest and previous observation",
+    "IORB is the interest rate the Federal Reserve pays to depository institutions on reserve balances held at Federal Reserve Banks",
+    "The series code is IORB and the source is the Federal Reserve Bank of St. Louis FRED database"
+  ],
+  "why_it_matters": "IORB serves as a key policy rate in the Federal Reserve's current operating framework, functioning as a floor for money market rates. As the rate paid on excess reserves, IORB influences short-term funding costs and the transmission of monetary policy to broader financial markets. The stability of IORB indicates the Fed is maintaining its current administered rate level.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB is a core component of the Federal Reserve's interest-on-reserves regime for monetary policy implementation. The rate is set by the Fed and affects the cost of reserves for depository institutions. IORB operates alongside the overnight reverse repo (RRP) facility to form a corridor for money market rates. As a mechanical daily data point with no accompanying policy commentary or analysis, this source provides limited standalone archival value and is most useful as contextual data within a broader monetary policy narrative.",
+  "important_numbers": [
+    "3.65%",
+    "0 (absolute change)"
+  ],
+  "tags": [
+    "iorb",
+    "federal-reserve",
+    "monetary-policy-implementation",
+    "reserve-balances",
+    "fed-funds-floor",
+    "money-market",
+    "interest-on-reserves"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "market_structure_context contains a factual error: states IORB (3.65%) is 'at the upper bound of the Fed's target range (effectively 5.25% - 5.50% range)' - this is internally inconsistent. IORB at 3.65% cannot be at the upper bound of a 5.25-5.50% range. The target range would need to include ~3.65% as its ceiling, not 5.50%.",
+      "The source is a pure quantitative data snapshot with no narrative, commentary, or policy analysis. As a standalone record, it provides only a single number with no broader context or signal.",
+      "event_type 'balance_sheet_update' is questionable. IORB is a administered rate set by the Fed, not a balance sheet update per se. 'monetary_policy_report' or 'rate_decision' might be more accurate, but technically there was no decision here - just a static rate observation.",
+      "The record acknowledges 'Very thin content as a standalone source' which aligns with assessment."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Critical factual error in market_structure_context regarding the relationship between IORB (3.65%) and the Fed's target range. The claim that 3.65% is at the upper bound of a 5.25-5.50% range is arithmetically impossible and would mislead researchers. Additionally, the thin nature of the source (raw data point with no analytical content) raises questions about archival value as a standalone record."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_15.txt",
+  "notes": "Source is a daily quantitative data snapshot from FRED. This is a mechanical data release showing the current IORB rate level rather than a policy announcement or commentary. The stable reading over five days suggests no changes to Fed operations. Very thin content as a standalone source - best used as contextual data point rather than primary research material.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 6,
+    "reasoning": [
+      "Clean, authoritative data source from FRED",
+      "Precise numerical values with dates",
+      "Minimal contextual information provided by source",
+      "Stable reading provides limited analytical value as standalone record",
+      "Most useful when linked to broader monetary policy or rate path analysis"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "83400b7ed1213a60b1e4edf8e5566268df7d2b92"
+}

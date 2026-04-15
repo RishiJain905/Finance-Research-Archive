@@ -1,0 +1,80 @@
+{
+  "id": "repo_operations_2026_04_15",
+  "created_at": "2026-04-15T14:56:00.646136+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations - Data Fetch Failed",
+  "source": {
+    "name": "NY Fed Repo Operations",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "markets.newyorkfed.org",
+    "published_at": "",
+    "source_type": "api_endpoint"
+  },
+  "summary": "Failed to retrieve NY Fed repo operation data on 2026-04-15. The API request to the NY Fed markets portal returned a 400 Bad Request error, indicating the endpoint URL structure or parameters may have changed or the endpoint was unavailable.",
+  "key_points": [
+    "API request to https://markets.newyorkfed.org/api/repo/all/results/latest.json returned HTTP 400 Bad Request error",
+    "No repo operation data was retrieved",
+    "The NY Fed markets API endpoint for repo operation results was inaccessible at the time of fetch",
+    "Source metadata indicates intent to capture NY Fed repo operations data for market structure analysis"
+  ],
+  "why_it_matters": "NY Fed repo operations are critical market structure data points that track the Federal Reserve's open market operations and short-term liquidity provision. Without access to this data, analysts cannot assess current repo market conditions, effective federal funds rates, or the Fed's intra-day liquidity management.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The NY Fed repo operation API provides data on Federal Reserve repurchase agreement operations, which are fundamental to short-term funding markets and the federal funds rate operating framework. This data feed failure represents a gap in market structure monitoring.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "market-structure",
+    "api-error",
+    "data-failure",
+    "fed-open-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains only a 400 error message with no actual repo operation data",
+      "Source is an API endpoint (source_type: api_endpoint), not article-like content - fails article-like requirement",
+      "No actual market structure data captured; record documents a failed fetch rather than meaningful content",
+      "HTTP 400 Bad Request error is transient/infrastructure failure, not archival-worthy content",
+      "No extractable financial figures, rates, amounts, or operation results available",
+      "Published_at is empty - no temporal metadata for the attempted fetch",
+      "No clear archival value: a failed API request has no research utility without the underlying data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is already appropriately flagged with human_review.required=true, but verification rules clearly apply. The source provides no archive-worthy content—just a transient error message. Even though the generated record correctly identifies this as a data failure, the source itself does not meet the minimum threshold for archival inclusion."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_15.txt",
+  "notes": "Source represents a failed API fetch attempt rather than actual content. The error 400 Bad Request indicates the endpoint URL format may no longer be valid or the NY Fed API has changed its structure. Recommended action: navigate directly to NY Fed markets portal to locate current repo operations data endpoint. Historical repo operation data may need to be accessed through alternative NY Fed API paths or the web interface.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed",
+    "score": 1,
+    "reasoning": [
+      "Source contains only error message with no actual data",
+      "HTTP 400 response indicates data unavailability",
+      "Cannot extract any market structure information from failed fetch",
+      "Low quality: no extractable information to support research archive"
+    ]
+  }
+}

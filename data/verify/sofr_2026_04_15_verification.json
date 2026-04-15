@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source attribution missing URL - source.metadata.url is empty, violating requirement for name + url",
+    "published_at uses TODAY date (2026-04-15) rather than the actual observation date range (April 8-14, 2026), which could mislead users about data currency",
+    "Source is extremely thin quantitative data without any analytical content, author, title, or narrative context",
+    "Cannot determine drivers or macro relevance of SOFR level/change from this data alone"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The core question is whether standalone daily SOFR snapshots warrant archival inclusion in a research archive. While the numeric data is factually accurate and the record correctly captures the values, the source is very thin (no analysis, no author, no URL, no causal context). The data is relevant to market structure as a key reference rate, but may be better captured in a time-series format. Human judgment is needed to establish archival inclusion criteria for raw quantitative data.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "SOFR closed at 3.66 on April 14, 2026, up 3 basis points from the prior day's 3.63. Over the prior week, SOFR has risen 7 basis points from 3.59 on April 8 to 3.66 on April 14, indicating a modest upward drift in overnight funding costs. This is raw quantitative data without accompanying commentary on drivers.",
+    "why_it_matters": "SOFR is the primary overnight reference rate for U.S. dollar markets, serving as the benchmark for over $200 trillion in derivatives, loans, and securities. Daily SOFR movements reflect short-term funding conditions in the U.S. repo market and serve as a proxy for monetary policy transmission. Even small changes can signal shifts in bank funding costs and money market dynamics.",
+    "macro_context": "The SOFR observations from April 8-14, 2026 show a modest upward drift of 7 basis points week-over-week. Without additional context, no inference can be made about specific drivers of this movement.",
+    "market_structure_context": "SOFR is a risk-free rate anchored by the Federal Reserve's interest on reserve balances (IORB) rate and influenced by repo market activity. It serves as the successor benchmark to USD LIBOR. The rate is calculated by the Federal Reserve Bank of New York from triparty repo data. As a daily overnight rate, it is inherently volatile and individual daily prints reflect short-term funding conditions rather than fundamental macro shifts."
+  }
+}

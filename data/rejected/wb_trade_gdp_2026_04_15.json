@@ -1,0 +1,73 @@
+{
+  "id": "wb_trade_gdp_2026_04_15",
+  "created_at": "2026-04-15T14:57:59.905017+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — Data Unavailable",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-15",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank data API returned no valid observations for the World Trade as % of GDP indicator (TG.VAL.TOTL.GD.ZS) as of 2026-04-15. The source contains no substantive content — only a data unavailability notice.",
+  "key_points": [
+    "Indicator requested: TG.VAL.TOTL.GD.ZS (World Trade as % of GDP)",
+    "Result: No recent valid observations returned",
+    "Data retrieval failure — no actual values, dates, or context provided"
+  ],
+  "why_it_matters": "This source provides no usable information. It is a data query response indicating that the requested indicator is not currently available. It cannot be used for research, analysis, or any market-related purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains zero substantive content — only a data unavailability notice from the World Bank API",
+      "No actionable information, analysis, or data points to archive",
+      "Cannot serve any research, analysis, or RAG purpose",
+      "Topic 'global_economy' with no data is outside the scope of market structure and macro catalyst research"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_15.txt",
+  "notes": "Source is a data query response with no observations returned. Not relevant to market structure or macro catalysts. Topic from metadata is 'global_economy', which falls outside the required focus. This record is effectively empty and should likely be discarded from the archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No data observations returned — no content",
+      "Topic (global_economy) outside required focus areas",
+      "Cannot be used for research or RAG purposes"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "wb_public_debt_2026_04_15",
+  "created_at": "2026-04-15T14:57:48.619179+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_retrieval_response",
+    "domain": ""
+  },
+  "summary": "A query to the World Bank database for indicator GC.DOD.TOTL.GD.ZS (total government debt as a percentage of GDP) returned no valid observations. No actual debt data, country-level figures, or time-series information is available in this source.",
+  "key_points": [
+    "Indicator queried: GC.DOD.TOTL.GD.ZS (World Bank total government debt to GDP)",
+    "Result: 'No recent valid observations were returned'",
+    "No numerical data available in source",
+    "Source is a data retrieval response with null result"
+  ],
+  "why_it_matters": "This source contains no usable information. Government debt-to-GDP ratios are relevant to macro catalysts (fiscal sustainability, sovereign risk premiums), but this particular retrieval returned no data and should not be archived.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "indicator-query"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - query returned empty result with 'No recent valid observations were returned'",
+      "Source is a null/empty data retrieval response with no content to archive",
+      "event_type set to 'unknown' is appropriate given no data, but the taxonomy value 'data_release_other' would be more precise if data existed",
+      "Cannot serve archival purpose when source provides zero usable information",
+      "Source is not relevant to market structure or macro catalysts - it contains no information whatsoever"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_15.txt",
+  "notes": "This source is not relevant to market structure or macro catalysts. It is a technical no-data response from the World Bank API. The requested indicator (GC.DOD.TOTL.GD.ZS) did not return any valid observations for the snapshot date. Low quality/empty source. Human review required to decide whether to exclude from archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No actual data content - query returned empty result",
+      "Cannot support any research note without numerical data",
+      "Not relevant to specified focus areas (market structure, macro catalysts)"
+    ]
+  }
+}

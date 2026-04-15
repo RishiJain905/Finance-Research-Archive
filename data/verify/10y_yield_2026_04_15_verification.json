@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is raw time-series data with no analysis, commentary, or catalyst context",
+    "No indication of what drove the yield movement or why it matters",
+    "No narrative or forward-looking information present in the source",
+    "Source is a data snapshot/series output, not an article or research document",
+    "For a research archive focused on macro catalysts, this thin data point lacks the contextual depth needed for meaningful RAG usage",
+    "Missing source URL - source attribution incomplete despite domain being listed"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the generated record accurately reflects the source data and uses valid taxonomy, the fundamental question is whether a bare time-series data snapshot has archival value for a macro catalyst research archive. The LLM reviewer flagged thinness; this record should be rejected unless a human determines the data point itself has special archival significance (e.g., historical high/low, key policy date correlation).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

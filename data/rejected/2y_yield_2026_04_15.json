@@ -1,0 +1,84 @@
+{
+  "id": "2y_yield_2026_04_15",
+  "created_at": "2026-04-15T14:54:21.364271+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-15",
+    "source_type": "data_feed"
+  },
+  "summary": "The 2-Year Treasury yield stood at 3.78% as of April 13, 2026, down 3 basis points from 3.81% on April 10. Recent observations show yields oscillating in a narrow range between 3.78% and 3.81% over the past week.",
+  "key_points": [
+    "Latest 2-Year Treasury yield: 3.78% (2026-04-13)",
+    "Previous observation: 3.81% (2026-04-10)",
+    "Absolute change: -0.03 percentage points (down)",
+    "Recent range: 3.78% to 3.81% (April 7–13, 2026)",
+    "Yields have been relatively stable with no directional trend"
+  ],
+  "why_it_matters": "The 2-year yield reflects near-term Fed policy expectations and serves as a benchmark for short-term borrowing costs. This data point should be cross-referenced with qualitative sources (FOMC statements, speeches, news) to determine what drove the yield level or changes.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "As a market-based measure of expected short-term rates, the 2-year Treasury yield provides quantitative context for policy expectations. This raw observation lacks the narrative to determine whether the current level reflects uncertainty, stability, or anticipation of policy shifts.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.78%",
+    "3.81%",
+    "-0.03"
+  ],
+  "tags": [
+    "treasury",
+    "2-year-yield",
+    "yield-curve",
+    "fed-expectations",
+    "macro-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is raw market data (FRED series snapshot), not research, analysis, or article — lacks narrative, catalyst, or context",
+      "Interpretive claims in why_it_matters ('pricing in roughly one to two rate cuts') and macro_context are not supported by the source data",
+      "Source URL is empty, violating source attribution requirement",
+      "Record has low archival value as stand-alone research note — record itself acknowledges it 'should be linked to a qualitative source'",
+      "Event type data_release_other is technically valid but 'release' is mischaracterized for a continuous data feed"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_15.txt",
+  "notes": "Source is a FRED data series snapshot (DGS2) containing only quantitative observations. No analytical content, policy commentary, or narrative context is present. The record captures the latest value but should be linked to a qualitative source (e.g., news article, Fed communication) to provide meaningful macro catalyst context.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 3,
+    "reasoning": [
+      "Pure data point without analysis",
+      "No narrative or context provided",
+      "Cannot stand alone as research note",
+      "Useful as reference data for cross-referencing with qualitative sources"
+    ]
+  }
+}

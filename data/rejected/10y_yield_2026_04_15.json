@@ -1,0 +1,86 @@
+{
+  "id": "10y_yield_2026_04_15",
+  "created_at": "2026-04-15T14:54:51.449450+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield - Daily Observation",
+  "source": {
+    "name": "FRED (Federal Reserve Bank of St. Louis)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-15",
+    "source_type": "data_series"
+  },
+  "summary": "The 10-Year Treasury Yield closed at 4.3% on 2026-04-13, down 1 basis point from 4.31% on 2026-04-10. Recent observations show the yield ranging between 4.29% and 4.33% over the past week.",
+  "key_points": [
+    "10-Year Treasury Yield was 4.3% as of 2026-04-13",
+    "Yield declined 0.01 percentage points from 4.31% on 2026-04-10",
+    "Weekly range: 4.29% (low on 4/8-4/9) to 4.33% (high on 4/7)",
+    "Series code: DGS10, sourced from FRED"
+  ],
+  "why_it_matters": "The 10-year Treasury yield serves as a benchmark for mortgage rates and corporate borrowing costs. Current level of 4.3% reflects market pricing of the economic outlook and Fed policy expectations.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "The 10-year yield embeds market expectations for longer-term economic growth and inflation. Movement in this benchmark affects financing conditions across the economy.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.3%",
+    "4.31%",
+    "-0.01 percentage points"
+  ],
+  "tags": [
+    "10y-yield",
+    "treasury",
+    "rates",
+    "bonds",
+    "macro",
+    "fred",
+    "basis-points"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is raw time-series data with no analysis, commentary, or catalyst context",
+      "No indication of what drove the yield movement or why it matters",
+      "No narrative or forward-looking information present in the source",
+      "Source is a data snapshot/series output, not an article or research document",
+      "For a research archive focused on macro catalysts, this thin data point lacks the contextual depth needed for meaningful RAG usage",
+      "Missing source URL - source attribution incomplete despite domain being listed"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_15.txt",
+  "notes": "This is a minimal daily yield snapshot from FRED with no analytical content. While the 10-year yield is macro-relevant, this particular source provides only a single data point without any context on what drove the change or its significance. Consider linking to richer sources such as Fed statements, research papers, or market commentary that explain yield movements.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 3,
+    "reasoning": [
+      "Raw numerical data point only",
+      "No analytical narrative or context",
+      "No source of the yield movement explained",
+      "Insufficient for meaningful macro catalyst research"
+    ]
+  }
+}
