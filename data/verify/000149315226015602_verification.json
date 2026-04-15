@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is essentially blank - all fields empty (source attribution, summary, key_points, why_it_matters, etc.)",
+    "Source attribution completely missing from record",
+    "Source is an SEC Form 8-K for a small-cap biotech company (Ensysce Biosciences, ENSC) - not relevant to market structure or macro catalysts",
+    "Source describes a routine private placement financing ($2M gross proceeds) with no broader market implications",
+    "event_type field is empty and cannot be determined for this type of filing",
+    "Source is not a high-value research document worth archiving in a finance research context"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is blank - auto-reject is appropriate",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

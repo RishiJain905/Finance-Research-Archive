@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body is truncated - cannot verify completeness of the filing",
+    "Corporate M&A filing for a small-cap Nasdaq-listed company (DevvStream Corp.) has no relevance to market structure or macro catalysts",
+    "Archive focus is on market structure and macro catalysts; this is a company-specific transaction disclosure with no systemic market relevance",
+    "event_type set to 'unknown' - but this is correctly identified as none of the taxonomy types apply, further confirming this is not relevant to the archive scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as irrelevant to the archive's focus on market structure and macro catalysts. No human review needed as the rejection recommendation aligns with the record's own assessment.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

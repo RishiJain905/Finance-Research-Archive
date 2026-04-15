@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated research record is completely empty - all fields contain default/placeholder values",
+    "Source attribution missing entirely (name, url, domain are blank)",
+    "Published_at field is empty",
+    "Source_type field is empty",
+    "Summary field is empty",
+    "Key_points array is empty",
+    "No content extracted from source despite source containing substantive information about Broadcom/Google/Anthropic AI agreements",
+    "Record structure is malformed with llm_review and human_review at same nesting level but empty"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is a complete shell with no extracted content. Source is a legitimate SEC 8-K filing with substantive information about AI infrastructure agreements (Broadcom-Google TPU supply agreement through 2031, Broadcom-Google-Anthropic expanded collaboration for ~3.5 gigawatts of AI compute starting 2027), but the record failed to capture any of this content. Manual reconstruction required.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Broadcom Inc. filed an 8-K on April 6, 2026 disclosing two significant agreements: (1) a Long Term Agreement with Google LLC for Broadcom to develop and supply custom Tensor Processing Units (TPUs) for Google's future TPU generations and a Supply Assurance Agreement for networking components for Google's next-generation AI racks through 2031; (2) an expanded strategic collaboration with Google and Anthropic PBC under which Anthropic will access approximately 3.5 gigawatts of next-generation TPU-based AI compute capacity through Broadcom starting in 2027, contingent on Anthropic's continued commercial success.",
+    "why_it_matters": "This filing reveals major developments in the AI infrastructure supply chain: Broadcom solidifies its role as a key custom silicon supplier for Google while also positioning itself as a broker of AI compute capacity for Anthropic. The 3.5 gigawatt commitment represents substantial AI compute expansion. The agreements span through 2031, indicating long-term strategic commitments in the AI chip and infrastructure ecosystem.",
+    "macro_context": "Broadcom is a major player in custom AI accelerators and networking components. This deal reinforces Broadcom's strategic position in the AI supply chain alongside Nvidia. Google's continued investment in custom TPUs and Anthropic's expanded compute commitments reflect ongoing AI infrastructure buildout.",
+    "market_structure_context": "The agreements affect the AI semiconductor market (Broadcom custom silicon), cloud infrastructure (Google TPUs), and AI compute access (Anthropic capacity commitment). The long-term (2031) timeframe provides revenue visibility for Broadcom and underscores the strategic importance of AI infrastructure partnerships."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when the correct type is determinable from context; source is a SEC Form 8-K regulatory filing, which should map to 'regulatory_filing' or similar valid taxonomy value",
+    "topic field is empty, though this appears intentional given the out-of-scope assessment"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-documented and the out-of-scope assessment is accurate. No human decision is needed; this can be auto-routed as rejected from the macro/market-structure archive scope. The primary fix is assigning the correct event_type value.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
