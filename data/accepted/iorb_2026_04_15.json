@@ -1,7 +1,7 @@
 {
   "id": "iorb_2026_04_15",
   "created_at": "2026-04-15T14:54:16.513918+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "balance_sheet_update",
   "title": "Interest on Reserve Balances (IORB) Daily Update",
@@ -56,31 +56,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Critical factual error in market_structure_context regarding the relationship between IORB (3.65%) and the Fed's target range. The claim that 3.65% is at the upper bound of a 5.25-5.50% range is arithmetically impossible and would mislead researchers. Additionally, the thin nature of the source (raw data point with no analytical content) raises questions about archival value as a standalone record."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-15T20:12:59.715059+00:00"
   },
   "raw_text_path": "data/raw/iorb_2026_04_15.txt",
   "notes": "Source is a daily quantitative data snapshot from FRED. This is a mechanical data release showing the current IORB rate level rather than a policy announcement or commentary. The stable reading over five days suggests no changes to Fed operations. Very thin content as a standalone source - best used as contextual data point rather than primary research material.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "data",
-    "score": 6,
+    "tier": "tier_2",
+    "score": 56.5,
     "reasoning": [
-      "Clean, authoritative data source from FRED",
-      "Precise numerical values with dates",
-      "Minimal contextual information provided by source",
-      "Stable reading provides limited analytical value as standalone record",
-      "Most useful when linked to broader monetary policy or rate path analysis"
+      "quality score: 56.5/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
