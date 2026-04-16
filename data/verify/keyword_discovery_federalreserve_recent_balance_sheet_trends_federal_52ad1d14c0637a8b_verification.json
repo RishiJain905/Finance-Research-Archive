@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body contains only navigation/interface text and footnotes defining facility types—no substantive balance sheet data",
+    "No published_at date available in source metadata or body to assess recency",
+    "Charts are JavaScript-dependent and not rendered in text extraction, making the page non-archivable as a research source",
+    "Cannot verify any balance sheet figures, current holdings, or trend data",
+    "Source type is effectively a dynamic interface page (navigation_page equivalent) rather than an article-like source",
+    "Quality tier correctly assessed as low—no quantitative or qualitative research value present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's analysis is accurate and thorough. This source is a JavaScript-dependent dynamic chart page that renders no substantive data in text extraction. No human review needed—the record correctly identifies the source as non-archivable.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This Federal Reserve page displays interactive charts showing recent balance sheet trends, with charts updated following H.4.1 release (typically 4:30 PM ET Thursdays). The source body contains only navigation text and footnotes defining various liquidity facilities, with no actual balance sheet data or figures present in the extracted text.",
+    "why_it_matters": "The Fed balance sheet is a key market structure indicator affecting Treasury liquidity, repo markets, and monetary policy transmission. However, this page is a dynamic interface page (JavaScript-dependent charts) that renders no substantive data in text extraction, making it non-archivable as a research source. For balance sheet analysis, the H.4.1 release PDF or other static data sources should be used instead.",
+    "macro_context": "",
+    "market_structure_context": "The page is the Federal Reserve's official dashboard for tracking balance sheet trends, relevant to QT (Quantitative Tightening) monitoring, reserve supply, and Treasury market plumbing. However, the actual data visualizations are not accessible in text extraction, and this page should not be used as an archival source for balance sheet data."
+  }
+}

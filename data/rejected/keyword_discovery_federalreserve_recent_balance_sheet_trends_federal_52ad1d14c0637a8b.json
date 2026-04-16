@@ -1,0 +1,82 @@
+{
+  "id": "keyword_discovery_federalreserve_recent_balance_sheet_trends_federal_52ad1d14c0637a8b",
+  "created_at": "2026-04-16T05:57:09.975948+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Recent balance sheet trends - Federal Reserve Board",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/monetarypolicy/bst_recenttrends.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "",
+    "source_type": "unknown"
+  },
+  "summary": "This Federal Reserve page displays interactive charts showing recent balance sheet trends, with charts updated following H.4.1 release (typically 4:30 PM ET Thursdays). The source body contains only navigation text and footnotes defining various liquidity facilities, with no actual balance sheet data or figures present in the extracted text.",
+  "key_points": [
+    "Page provides interactive charts tracking Federal Reserve balance sheet trends",
+    "Charts are updated following H.4.1 publication (typically Thursday 4:30 PM ET)",
+    "Footnotes define 'All Liquidity Facilities' including: Term Auction credit, primary/secondary/seasonal credit, Primary Dealer Credit Facility, TALF, CPFF, PPP Liquidity Facility, Bank Term Funding Program, and central bank liquidity swaps",
+    "Footnotes define 'Support to Specific Institutions' including Maiden Lane facilities and AIG support",
+    "No actual balance sheet figures, current holdings, or trend data present in source body"
+  ],
+  "why_it_matters": "The Fed balance sheet is a key market structure indicator affecting Treasury liquidity, repo markets, and monetary policy transmission. However, this page is a dynamic interface page (JavaScript-dependent charts) that renders no substantive data in text extraction, making it non-archivable as a research source. For balance sheet analysis, the H.4.1 release PDF or other static data sources should be used instead.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The page is the Federal Reserve's official dashboard for tracking balance sheet trends, relevant to QT (Quantitative Tightening) monitoring, reserve supply, and Treasury market plumbing. However, the actual data visualizations are not accessible in text extraction, and this page should not be used as an archival source for balance sheet data.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "balance-sheet",
+    "liquidity-facilities",
+    "market-structure",
+    "h4.1-release"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains only navigation/interface text and footnotes defining facility types—no substantive balance sheet data",
+      "No published_at date available in source metadata or body to assess recency",
+      "Charts are JavaScript-dependent and not rendered in text extraction, making the page non-archivable as a research source",
+      "Cannot verify any balance sheet figures, current holdings, or trend data",
+      "Source type is effectively a dynamic interface page (navigation_page equivalent) rather than an article-like source",
+      "Quality tier correctly assessed as low—no quantitative or qualitative research value present"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record's analysis is accurate and thorough. This source is a JavaScript-dependent dynamic chart page that renders no substantive data in text extraction. No human review needed—the record correctly identifies the source as non-archivable."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_recent_balance_sheet_trends_federal_52ad1d14c0637a8b.txt",
+  "notes": "This source is low-quality for archival purposes. The page is a dynamic interface with JavaScript-dependent charts that render no data in text extraction. Only navigation text, footnotes defining facility types, and technical instructions are present. No balance sheet figures, trend data, or publication date. Cannot assess recency. For balance sheet analysis, prefer the H.4.1 release PDF or other static data sources.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 0,
+    "reasoning": [
+      "Source body contains only navigation and interface text",
+      "No actual balance sheet data present in extraction",
+      "JavaScript-dependent dynamic content not rendered",
+      "No publication date to assess recency",
+      "Cannot be used for any quantitative or qualitative research"
+    ]
+  }
+}
