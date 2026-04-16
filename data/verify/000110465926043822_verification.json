@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific 10-K filing for a small-cap pharmaceutical company, not relevant to market structure or macro catalysts",
+    "Source contains only XBRL taxonomy tag data with no narrative content, too thin to have archival value for stated research focus",
+    "event_type is 'unknown' - correctly so, as this is a company-specific regulatory filing rather than a macro catalyst event",
+    "No substantive financial information present in source body to support any market or macro analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies that the source is irrelevant to market structure or macro catalysts. This is a straightforward rejection case.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

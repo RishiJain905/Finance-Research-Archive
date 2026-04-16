@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a routine SEC Form 8-K for a single company's CFO appointment with no market-wide implications",
+    "event_type is set to 'unknown' when it should reflect corporate governance/executive appointment, but the record correctly identifies the lack of relevance",
+    "topic field is blank, indicating classification failure for content outside the archive's focus scope",
+    "Record summary and data are factually accurate against the source, but accuracy alone does not qualify a record for acceptance when the content falls outside the stated focus areas"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection is appropriate. The source is a legitimate SEC filing and the summary is factually accurate, but the content is a routine corporate governance announcement for a single specialty chemicals company (AdvanSix Inc.) with no relevance to macro market catalysts, monetary policy, market structure, or market operations. The archive's focus criteria explicitly exclude this type of content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is empty - 8-K regulatory filing should be classified as 'unknown' or the record should clarify this is a corporate dividend/book value disclosure",
+    "Source is a thin corporate filing with no macro-relevant content",
+    "Full press release content (Exhibit 99.1) is not included in the filing body, limiting available data",
+    "No market structure or macro catalyst content present",
+    "Source is relevant only to IVR security holders, not broader market research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear reject based on content criteria: this is a routine corporate 8-K filing from a single mortgage REIT with no macro, central bank, or market structure information",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Invesco Mortgage Capital Inc. (IVR), a mortgage REIT, filed an 8-K on April 15, 2026, disclosing preliminary financial data as of March 31, 2026, including an estimated book value per common share in the range of $8.21 to $8.55 (as of April 10, 2026), and announcing a monthly dividend. The filing references a press release (Exhibit 99.1) but the full press release content is not included in the 8-K body.",
+    "why_it_matters": "This is a routine corporate disclosure from a single mortgage REIT company. It provides no macro-relevant information, central bank signals, or market structure data. The filing is relevant only to investors in IVR securities and contains no actionable market or macro intelligence.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a corporate utility credit facility extension filing",
+    "event_type is 'unknown' when no valid taxonomy value applies - source is outside the event type taxonomy scope entirely",
+    "Source does not relate to market structure (market plumbing, operations, clearing, settlement) or macro catalysts (central bank policy, economic data releases, fiscal policy announcements)",
+    "Record correctly identifies out-of-scope nature but suggests 'review_queue' which is inappropriate for clearly irrelevant sources"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately describes the source content but correctly identifies it as out of scope. No verification of facts is needed - the decision to reject is straightforward based on relevance criteria.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

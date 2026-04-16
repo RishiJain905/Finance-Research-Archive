@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 8-K earnings filing, not relevant to macro catalysts or market structure",
+    "event_type incorrectly set to 'unknown' when the correct value is clearly 'regulatory_filing' or similar corporate disclosure category",
+    "No macro context, policy signals, or market structure content present in the source",
+    "Source contains only references to earnings exhibits (99.1, 99.2), not actual earnings data or analysis",
+    "Record summary correctly notes 'No macro catalysts or market structure content is present' but then records this anyway"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is clearly outside scope: corporate earnings 8-K with no relevance to market structure or macro catalysts. Rejection is appropriate without human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Morgan Stanley filed a Form 8-K on April 15, 2026, disclosing Item 2.02 (Results of Operations and Financial Condition), referencing Q1 2026 earnings information released the same day. Exhibits include a press release and Financial Data Supplement for the quarter ended March 31, 2026. No macro catalysts or market structure content is present in this filing.",
+    "why_it_matters": "This is a standard corporate regulatory filing announcing Morgan Stanley's Q1 2026 earnings release. It provides no macro context, no policy signals, and no market structure content. Relevant only to Morgan Stanley shareholders and those tracking the firm's financial performance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
