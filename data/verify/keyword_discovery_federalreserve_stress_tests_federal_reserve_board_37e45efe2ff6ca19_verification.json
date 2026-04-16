@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/informational page (source_type: navigation_page) — per Core Rule #5, this requires rejection",
+    "Topic 'market structure' does not match the source — stress testing is prudential bank regulation, not market structure (market plumbing, trading mechanisms, clearing/settlement, price formation)",
+    "event_type is 'unknown' but the source has no event-type at all since it is not an article or publication — this should be flagged as incorrect",
+    "Source contains no publication date; page last updated June 22, 2022 (nearly 4 years before TODAY)",
+    "Source has no market-moving or event-based content — it is reference/educational material about the stress testing framework",
+    "The record correctly notes the page is non-archiveable but the topic and event_type fields remain misapplied"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as a navigation page with no archival value, but the topic and event_type fields should be corrected to reflect that this is not a market structure or macro catalyst source at all. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an institutional reference page describing the Federal Reserve's bank stress testing framework and its evolution from Dodd-Frank Act Stress Tests and CCAR to the stress capital buffer (SCB) requirement. It is not an archiveable document — it is navigational/educational content.",
+    "why_it_matters": "This page is regulatory reference material explaining how the Fed assesses bank capital adequacy under stress. It is not a market-moving document or event and has no relevance to market structure or macro catalysts.",
+    "macro_context": "Not applicable — source is not a macro catalyst or policy event.",
+    "market_structure_context": "Not applicable — stress testing is prudential regulation of bank capital, not market structure (trading mechanisms, clearing, settlement, price formation, market plumbing)."
+  }
+}
