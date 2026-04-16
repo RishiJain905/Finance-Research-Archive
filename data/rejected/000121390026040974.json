@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - all fields are unfilled",
+      "Source attribution completely missing (name, url, domain, published_at, source_type)",
+      "No summary, key_points, why_it_matters, macro_context, or market_structure_context provided",
+      "Source is a routine SEC 8-K filing for a micro-cap company (SCWorx Corp.) reverse stock split - thin, low-signal material",
+      "Source relevance to macro catalysts or market structure is minimal; this is routine corporate action for a small-cap entity",
+      "No archival value for a finance research archive focused on macro/market structure research"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record has all empty fields - no summary, key_points, or any content was filled in",
+      "Source attribution fields (name, url, domain, published_at, source_type) are all empty",
+      "Source is a corporate 8-K filing for Franklin BSP Capital Corporation - a specific BDC's credit facility amendment",
+      "Source is not relevant to broader market structure or macro catalysts - this is a company-specific financing transaction",
+      "event_type would likely be 'unknown' as 8-K filings don't fit the taxonomy categories",
+      "Filing is too thin and company-specific to have archival value for market research purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is completely empty and cannot be verified. Additionally, the source (a BDC credit facility amendment) falls outside the scope of market-relevant events the archive targets."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

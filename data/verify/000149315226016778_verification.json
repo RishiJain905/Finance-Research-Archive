@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an SEC 10-K filing for SHF Holdings (ticker SHFS), a small-cap company, which is not relevant to market structure or macro catalysts",
+    "Source consists entirely of XBRL data tags with no readable narrative content, making it a data extract rather than an article-like source",
+    "event_type set to 'unknown' which is correct for this source type but source falls outside the archive scope regardless",
+    "Record correctly identifies source as not relevant but was still generated rather than pre-filtered"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the record correctly assesses the source as outside scope, this appears to be a case where the source should have been pre-filtered before record generation. The record itself is factually accurate regarding the filing details.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an SEC 10-K annual report for SHF Holdings, Inc. (ticker SHFS), covering fiscal year 2025 (January 1 – December 31, 2025), filed on April 15, 2026. The source consists entirely of structured XBRL financial data tags rather than narrative text. The document contains company-specific financial statement data including balance sheet items, equity components, warrant details, and concentration risk disclosures. This filing is NOT relevant to market structure or macro catalysts as it is a single-company annual financial report from a non-systemic entity with no macro-economic or market operations content.",
+    "why_it_matters": "This 10-K filing has been excluded from the archive because: (1) it is a single-company financial report for SHF Holdings, a small-cap company with no systemic importance, (2) the source consists entirely of XBRL data tags with no readable narrative content, and (3) it contains no information relevant to market structure (market operations, microstructure, plumbing) or macro catalysts (central bank policy, economic data releases, Treasury operations). Single-company earnings reports from non-systemic entities are outside the archive's defined scope.",
+    "macro_context": "EXCLUDED: This source does not contain macro-economic content. It is an individual company 10-K filing with no relevance to broader economic indicators, monetary policy, or financial market catalysts.",
+    "market_structure_context": "EXCLUDED: This source does not contain market structure content. It is a single-company financial filing with no relevance to market operations, plumbing, microstructure, or systemic market functioning."
+  }
+}

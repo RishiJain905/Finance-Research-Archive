@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - routine corporate earnings filing for a small company (SHFS)",
+    "event_type set to 'unknown' - correct type is corporate_filing which is not in the event taxonomy, but this is clearly not any of the defined types (monetary policy, speeches, data releases, treasury operations, or research)",
+    "Content is thin - primarily standard SEC registration boilerplate",
+    "Financial details only referenced via attached Exhibit 99.1 (press release) not included in filing body",
+    "No macro, monetary policy, or market structure content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

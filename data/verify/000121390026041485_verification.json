@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a routine corporate 8-K filing (secondary equity offering) with no relevance to market structure or macro catalysts as defined by the verification scope",
+    "event_type is correctly set to 'unknown' but this filing type is outside the scope of macro/market research archiving",
+    "Factual content is accurate (9M units, Morgan Stanley, CEO purchase, no company proceeds, April 8 closing) but source lacks archival value for the target domain"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly attributed to the SEC source. However, it falls outside the scope of market structure and macro catalysts research. This is a routine MLP secondary offering with no implications for monetary policy, market operations, trading infrastructure, or macroeconomic indicators. Human review is needed to confirm this filing should be excluded from the archive based on scope, despite being a valid and accurate corporate disclosure.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
