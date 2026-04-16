@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect. This is a sanctions enforcement action, not regulatory guidance. No valid taxonomy value fits well - 'unknown' would be more accurate, or this source may not belong in a macro catalysts archive at all.",
+    "Topic 'macro catalysts' is questionable. This is a narrowly targeted geopolitical sanctions action on a small economy's gold sector. While it could theoretically affect commodity/EM markets, its relevance to macro catalysts (rate decisions, GDP, employment, FOMC communications) is marginal.",
+    "The content is factually accurate and well-sourced (high-trust treasury.gov domain), but the archival value for macro research purposes is questionable given the narrow, targeted nature of the sanctions."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the factual content is accurate (sanctions details, entities named, dollar amounts all match source), the record has classification issues: (1) event_type 'regulatory_guidance' doesn't fit - this is sanctions enforcement; (2) topic 'macro catalysts' is borderline - the record's own analysis notes 'geopolitically focused and unlikely to have broad market impact.' A human reviewer should decide whether narrowly targeted geopolitical sanctions on a small economy's gold sector belong in a macro catalysts archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
