@@ -1,0 +1,93 @@
+{
+  "id": "keyword_discovery_federalreserve_stress_tests_federal_reserve_board_37e45efe2ff6ca19",
+  "created_at": "2026-04-16T13:07:44.708416+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "financial_stability_report",
+  "title": "Stress Tests - Federal Reserve Board",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/supervisionreg/stress-tests-capital-planning.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2022-06-22",
+    "source_type": "unknown"
+  },
+  "summary": "This Federal Reserve webpage describes the agency's stress testing program and capital planning framework for large banks, explaining how the stress capital buffer (SCB) integrates stress test results with regulatory capital requirements. The page outlines the evolution from the separate Dodd-Frank Act Stress Test and CCAR (2013-2019) to the unified SCB framework implemented in 2020. It notes that the largest supervised banking organizations have more than doubled their aggregate common equity capital since 2009.",
+  "key_points": [
+    "The stress test is a forward-looking quantitative evaluation demonstrating how a hypothetical macroeconomic recession scenario would affect firm capital ratios",
+    "The stress capital buffer (SCB) requirement, implemented in 2020, replaced the quantitative CCAR evaluation and integrates stress-test-based capital requirements with non-stress regulatory capital requirements",
+    "Banks with $100 billion or more in assets are subject to the Board's supervisory stress test rule (12 C.F.R. pt. 238, subpart O; 12 C.F.R. pt. 252, subpart E)",
+    "The qualitative CCAR evaluation was incorporated into the standard confidential supervisory process in 2019",
+    "Large supervised banking organizations have more than doubled their aggregate common equity capital since 2009",
+    "The Federal Reserve conducts the stress test annually using at least two different scenarios to test bank capital adequacy"
+  ],
+  "why_it_matters": "This source explains the regulatory framework governing how the Federal Reserve ensures large banks maintain adequate capital buffers. The stress test and SCB framework directly affect bank capital requirements, dividend and buyback capacity, and systemic resilience. Market participants monitor these requirements as they influence bank behavior, lending capacity, and market liquidity during stress periods.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The stress testing framework is a core component of bank supervision that affects market structure by ensuring large banks maintain sufficient capital to absorb losses during recessions. The SCB requirement integrates stress test results with regulatory capital, creating a forward-looking risk-sensitive framework that shapes how banks manage their balance sheets and capital distributions.",
+  "important_numbers": [
+    "$100 billion in assets (threshold for stress test applicability)",
+    "doubled common equity capital since 2009",
+    "2013 (Dodd-Frank Act Stress Test and CCAR initiation)",
+    "2019 (qualitative evaluation moved to supervisory process)",
+    "2020 (SCB implementation)"
+  ],
+  "tags": [
+    "stress-tests",
+    "federal-reserve",
+    "capital-requirements",
+    "scb",
+    "bank-regulation",
+    "ccar",
+    "dodd-frank",
+    "capital-planning",
+    "systemic-risk",
+    "bank-capital"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is incorrect: 'financial_stability_report' does not match the source. This page is an informational/educational page about stress testing procedures and capital planning framework, NOT a Financial Stability Report (which is a specific Fed publication). Suggested correct types: 'regulatory_guidance' or possibly 'unknown' given the thin informational nature",
+      "Published date (2022-06-22) is nearly 4 years stale as of TODAY (2026-04-16). While regulatory framework information may not change frequently, this limits archival relevance for market monitoring",
+      "Source is an informational/static page, not a specific stress test result, capital requirement announcement, or policy event - making it a weak archival candidate per core rules about 'thin low-signal sources'",
+      "Source type marked as 'unknown' but this appears to be a regulatory informational page rather than an article"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Event type is clearly wrong (financial_stability_report vs. informational page). Source is borderline between 'informational background' and 'archival-worthy event'. Human must decide whether informational regulatory pages without specific current-year data have sufficient archival value, and what the correct event_type should be."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_stress_tests_federal_reserve_board_37e45efe2ff6ca19.txt",
+  "notes": "This source describes the Federal Reserve's stress testing program structure and evolution but is not a specific stress test result, capital requirement announcement, or policy event. The content serves as background/reference material. Given the staleness (June 2022) and informational nature, this has limited value as an actionable research archive entry. Source does not contain specific current-year stress test results or forward-looking policy signals.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Static informational page about stress testing framework, not an event",
+      "Stale content (June 2022) - nearly 4 years old",
+      "No specific stress test results or capital requirements announced",
+      "Educational/reference content with limited actionable value",
+      "Historical record of regulatory framework rather than current market-relevant data"
+    ]
+  }
+}

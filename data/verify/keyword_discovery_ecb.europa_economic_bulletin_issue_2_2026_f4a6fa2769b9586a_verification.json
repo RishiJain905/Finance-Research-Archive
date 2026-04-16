@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "All key fields are empty: summary, key_points, why_it_matters, macro_context, market_structure_context are all blank",
+    "published_at is empty - should be '2026-03-19' based on source content stating 'At its meeting on 19 March 2026'",
+    "source_type is empty in source object",
+    "No important_numbers extracted despite source containing multiple specific figures (inflation rates, GDP growth projections, unemployment data)",
+    "No tags provided despite clear relevant topics (ECB, monetary policy, inflation, GDP, Middle East conflict, energy prices)",
+    "market_impact section is entirely empty with no asset_classes or directional_bias",
+    "name field shows 'European Central Bank' but should be more specific like 'ECB Economic Bulletin Issue 2, 2026'"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is essentially a skeleton with no content. All analytical fields are empty, making it impossible to verify accuracy against the source. This appears to be a generation failure rather than a content issue. The source itself is high-quality (ECB Economic Bulletin, high trust domain, recent date) but the record extraction failed completely.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "ECB Economic Bulletin Issue 2, 2026 reports that the Governing Council kept rates unchanged at its March 19, 2026 meeting. The bulletin highlights significant uncertainty from the Middle East war, creating upside inflation risks and downside growth risks. Staff revised inflation projections up to 2.6% for 2026, 2.0% for 2027, and 2.1% for 2028, while revising GDP growth down to 0.9% for 2026, 1.3% for 2027, and 1.4% for 2028. Euro area HICP inflation was 1.9% in February 2026. The Governing Council emphasized a data-dependent approach without pre-committing to a rate path.",
+    "why_it_matters": "The ECB's unchanged stance combined with upward inflation revisions signals a delicate balancing act. The Middle East conflict introduces energy price volatility that threatens the recent progress toward the 2% target. Markets should monitor the data-dependent approach for signs of future pivots as the war's economic impact becomes clearer.",
+    "macro_context": "The euro area economy grew 0.2% in Q4 2025, driven by domestic demand. Unemployment remains near historical lows. However, the war in the Middle East is disrupting commodity markets, weighing on real incomes and confidence. The ECB notes global trade policy volatility and competitiveness challenges. Fiscal responses to energy price shocks should be temporary, targeted, and tailored per the Governing Council.",
+    "market_structure_context": "The ECB emphasizes completing the savings and investments union, advancing the digital euro regulation, and simplifying EU Single Market rules to enhance competitiveness. These structural initiatives aim to support the green and digital transitions while reducing strategic dependencies."
+  }
+}

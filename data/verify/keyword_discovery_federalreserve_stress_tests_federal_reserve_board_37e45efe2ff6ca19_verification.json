@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is incorrect: 'financial_stability_report' does not match the source. This page is an informational/educational page about stress testing procedures and capital planning framework, NOT a Financial Stability Report (which is a specific Fed publication). Suggested correct types: 'regulatory_guidance' or possibly 'unknown' given the thin informational nature",
+    "Published date (2022-06-22) is nearly 4 years stale as of TODAY (2026-04-16). While regulatory framework information may not change frequently, this limits archival relevance for market monitoring",
+    "Source is an informational/static page, not a specific stress test result, capital requirement announcement, or policy event - making it a weak archival candidate per core rules about 'thin low-signal sources'",
+    "Source type marked as 'unknown' but this appears to be a regulatory informational page rather than an article"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Event type is clearly wrong (financial_stability_report vs. informational page). Source is borderline between 'informational background' and 'archival-worthy event'. Human must decide whether informational regulatory pages without specific current-year data have sufficient archival value, and what the correct event_type should be.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "",
+    "event_type": "The event_type 'financial_stability_report' is incorrect. This source is an informational page about the Federal Reserve's stress testing program and capital planning framework. If archiving is desired, event_type should be corrected to 'regulatory_guidance' or a new category for 'informational/educational pages' should be considered. Alternatively, if the thin informational nature is disqualifying, event_type remains but the record should be rejected."
+  }
+}
