@@ -1,0 +1,84 @@
+{
+  "id": "arxiv_econ_gn_deepbullwhip_an_open_source_simulation_and_benchmarking_for_5d49267d",
+  "created_at": "2026-04-16T01:51:12.396734+00:00",
+  "status": "rejected",
+  "topic": "supply_chain_operations_research",
+  "event_type": "unknown",
+  "title": "Deepbullwhip: An Open-Source Simulation and Benchmarking for Multi-Echelon Bullwhip Analyses",
+  "source": {
+    "name": "arXiv econ.GN",
+    "url": "http://arxiv.org/abs/2604.13478v1",
+    "domain": "arxiv.org",
+    "published_at": "2026-04-15T04:59:47+00:00",
+    "source_type": "academic_paper"
+  },
+  "summary": "CORRECT - Factually accurate summary of the paper's content",
+  "key_points": [
+    "Paper addresses two computational deficiencies in bullwhip effect research: lack of modular open-source simulation tools and lack of standardized benchmarking protocols",
+    "deepbullwhip package includes a simulation engine with pluggable demand generators, ordering policies, and cost functions via abstract base classes",
+    "Vectorized Monte Carlo engine achieves 50 to 90 times speedup over baseline",
+    "Semiconductor supply chain experiments show cumulative amplification of 427x (Monte Carlo mean across 1,000 paths)",
+    "Benchmark experiments reveal a 155x disparity in bullwhip severity between synthetic AR(1) and real WSTS demand data under Order-Up-To policy",
+    "Demonstrates super-exponential lead time sensitivity and scalability to 20.8 million simulation cells in under 7 seconds"
+  ],
+  "why_it_matters": "CORRECT - Accurately identifies that this is academic operations research with no direct relevance to financial market structure or macro catalysts",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "427x cumulative amplification (Monte Carlo mean across 1,000 paths)",
+    "155x bullwhip severity disparity between synthetic AR(1) and real WSTS data",
+    "50 to 90 times speedup (Monte Carlo vectorization)",
+    "20.8 million simulation cells processed in under 7 seconds"
+  ],
+  "tags": [
+    "supply-chain",
+    "bullwhip-effect",
+    "inventory-dynamics",
+    "semiconductor",
+    "simulation",
+    "operations-research",
+    "python-package"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is not relevant to market structure or macro catalysts - this is an operations research paper on supply chain simulation",
+      "event_type is set to 'unknown' - while the paper is correctly identified as academic research, the record itself acknowledges it falls outside the archive's scope",
+      "The record correctly identifies the paper as out-of-scope but uses 'review_queue' status instead of 'rejected'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The scope mismatch is explicit and unambiguous. The record's own analysis confirms the source is 'supply_chain_operations_research' with no relevance to market structure or macro catalysts. No human review needed - this is a clear reject."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/arxiv_econ_gn_deepbullwhip_an_open_source_simulation_and_benchmarking_for_5d49267d.txt",
+  "notes": "OUT OF SCOPE: This academic paper focuses on supply chain inventory dynamics and simulation benchmarking methodology. It does not discuss market structure (trading mechanics, exchange operations, clearing/settlement) or macro catalysts (Fed policy, economic data releases, geopolitical events). While the paper's findings on semiconductor supply chain bullwhip effects could have indirect macroeconomic implications, the paper itself does not explore those connections. Topic field marked as 'supply_chain_operations_research' to indicate it falls outside the target scope of market structure and macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low_relevance",
+    "score": 2,
+    "reasoning": [
+      "Source is an academic operations research paper, not finance research",
+      "Does not discuss market structure or macro catalysts",
+      "Semiconductor supply chain focus has no direct financial market applicability",
+      "Despite technical rigor and interesting quantitative findings, falls outside archive scope"
+    ]
+  }
+}
