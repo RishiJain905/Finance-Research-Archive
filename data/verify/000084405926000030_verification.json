@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the filing clearly relates to quarterly earnings results announcement (Item 2.02 Results of Operations). This should be classified as 'data_release_other' at minimum, not 'unknown'.",
+    "The record accurately notes the filing is thin (no financial figures included; press release is referenced but not reproduced), but this is correctly acknowledged in the summary.",
+    "The assessment of 'no macro relevance' is correct for this archive's focus on market structure and macro catalysts."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate regarding the source content and correctly identifies this as out-of-scope for macro/market structure research. However, event_type is set to 'unknown' when the nature of the filing (earnings results announcement) is clear. This should be corrected to 'data_release_other' rather than left as unknown. Additionally, human review should confirm whether this archive's scope allows for any corporate earnings filings or if this should be rejected as entirely out-of-scope.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "",
+    "event_type": "data_release_other"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Event type 'unknown' is technically accurate but the record should attempt to map to taxonomy categories; this is a routine corporate filing with no macro relevance",
+    "quality_tier 'low' is appropriate given the source has no relevance to market structure or macro catalysts",
+    "The record correctly identifies this as not relevant, but verification_confidence = 0 in the LLM review appears to indicate a placeholder rather than actual verification"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a routine Form 8-K filing for a single SPAC company with no broader market structure or macro catalyst relevance. While the record is factually accurate, it falls into a borderline category where the source is technically valid finance content but has insufficient archival value for a market-structure/macro-focused archive. Human guidance is needed on whether routine corporate governance filings that are not policy-significant should be accepted.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

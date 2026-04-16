@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution entirely missing from record (name, url, domain, published_at, source_type all empty)",
+      "Record contains no content - summary, key_points, why_it_matters, macro_context, market_structure_context all empty",
+      "Source is an SEC 8-K filing for an insurance company (Brown & Brown, Inc.) announcing an annual ESG/Impact Report - not relevant to market structure or macro catalysts",
+      "Source is thin, routine corporate disclosure with no market-moving information",
+      "Source contains only a reference to an external report (Exhibit 99.1) not included in the filing",
+      "event_type not specified and source does not fit any valid taxonomy category (monetary policy, speeches, data releases, treasury operations, or research related to market structure)",
+      "No archival value for finance research - this is a standard regulatory filing unrelated to monetary policy, economic data, or market structure"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}
