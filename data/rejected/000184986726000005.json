@@ -1,0 +1,45 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - name, url, domain, published_at, and source_type are all empty",
+      "Summary field is empty - no content extracted from the SEC 8-K filing",
+      "Key points field is empty - merger details not captured",
+      "Why it matters field is empty - no significance assessment provided",
+      "Macro context and market_structure_context fields are empty",
+      "Market impact section is empty - no asset class or directional bias specified",
+      "Topic field is empty - filing type not identified",
+      "Event type not specified - should indicate this is a corporate M&A announcement (catch-all: unknown)",
+      "Important_numbers field empty - merger consideration ($19.58/share, $41.1M aggregate) not recorded"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is completely empty with no extracted content. Research record generation appears to have failed. Auto-reject is appropriate since the record has no archival value whatsoever."
+  },
+  "summary": "Catalyst Bancorp, Inc. (Nasdaq: CLST), a Louisiana-chartered bank holding company, announced on April 7, 2026 the execution of a merger agreement to acquire Lakeside Bancshares, Inc. Under the terms, Catalyst Bancorp will pay $19.58 per share in cash for all outstanding Lakeside Bancshares common stock, representing approximately $41.1 million in aggregate consideration. The transaction consists of a share exchange followed by mergers where Catalyst Bancorp and Catalyst Bank continue as surviving entities. The deal has been unanimously approved by both boards of directors. Completion is subject to Lakeside shareholder approval, regulatory approvals, and customary closing conditions. The transaction is expected to close in Q3 2026.",
+  "key_points": [],
+  "why_it_matters": "Regional bank M&A transaction; reflects ongoing consolidation in the small-cap banking sector. Deal value ($41.1M) is relatively small, consistent with community bank consolidation trend. All-cash consideration with expected Q3 2026 close provides a defined catalyst timeline.",
+  "macro_context": "Regional banking sector consolidation continues as smaller institutions seek scale and operational efficiencies. Louisiana-based bank merger adds to M&A pipeline in Gulf Coast financial services sector.",
+  "market_structure_context": "Small-cap bank merger (sub-$100M deal size) in community banking sector. Catalyst Bancorp trades on Nasdaq Capital Market as an emerging growth company. Deal structured as cash-for-stock exchange with immediate mergers following share exchange.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

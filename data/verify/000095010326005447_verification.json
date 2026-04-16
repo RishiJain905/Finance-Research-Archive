@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but this is an executive transition/appointment filing - a valid category would be 'corporate_governance' or similar",
+    "topic is marked 'not_relevant' with note that it falls outside research focus on market structure/macro catalysts",
+    "Source is a legitimate SEC 8-K with accurate information, but its relevance to a market structure/macro catalyst research archive is questionable",
+    "market_impact confidence is 0 with no asset classes or directional bias listed - reasonable given thin direct market impact but could be more informative"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source contains accurate factual information about the CFO transition and compensation details, but the record correctly identifies that this corporate governance filing falls outside the specified research focus (market structure or macro catalysts). Human decision is needed to determine whether corporate governance/executive transition events have archival value for this particular research archive, or whether the scope is intentionally limited to market-moving macro events.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

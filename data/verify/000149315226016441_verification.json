@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source completely irrelevant to archive focus: corporate 10-Q filing with no content related to market structure, macro catalysts, monetary policy, or market operations",
+    "event_type set to 'unknown' is technically valid given taxonomy, but this type of source (corporate quarterly filing) should be rejected rather than categorized as unknown",
+    "Archive scope explicitly targets market structure and macro catalysts; this source contains only standard SEC quarterly financial reporting (balance sheets, income statements, segment data, equity compensation disclosures)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is factually accurate and well-documented, but fundamentally outside archive scope. No human review needed as the irrelevance is clear from source content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

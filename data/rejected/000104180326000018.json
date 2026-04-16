@@ -1,0 +1,79 @@
+{
+  "id": "000104180326000018",
+  "created_at": "2026-04-16T03:58:36.492395+00:00",
+  "status": "rejected",
+  "topic": "not_relevant",
+  "event_type": "unknown",
+  "title": "PriceSmart Inc 10-Q Filing — Fiscal Q2 2026",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1041803/000104180326000018/psmt-20260228.htm",
+    "published_at": "2026-04-08",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "PriceSmart Inc filed its Q2 FY2026 10-Q (period ended Feb 28, 2026) with the SEC on April 8, 2026. The filing contains standard corporate financial data in XBRL format including net merchandise sales, membership income, and geographic revenue breakdowns across Latin American and Caribbean warehouse club operations. This is a company-specific earnings document with no content relevant to market structure or macro catalysts.",
+  "key_points": [
+    "Source is a corporate 10-Q filing for PriceSmart Inc (PSMT), a warehouse club retailer operating in Latin America and the Caribbean.",
+    "Filing period: Q2 fiscal year 2026, ended February 28, 2026; filed April 8, 2026 (8 days prior to today).",
+    "Source contains only structured XBRL financial data tags (revenue, expenses, membership income, geographic breakdowns).",
+    "XBRL taxonomy references include standard US-GAAP elements: CommonStock, RetainedEarnings, NetMerchandiseSales, MembershipIncome.",
+    "Geographic operations noted: US, Colombia, Costa Rica, Panama, Guatemala, Dominican Republic, Trinidad and Tobago, El Salvador, Honduras, Jamaica, Nicaragua, US Virgin Islands, Aruba, Barbados.",
+    "No market structure, monetary policy, or macro catalyst content present."
+  ],
+  "why_it_matters": "This source is irrelevant to market structure and macro catalyst analysis. It is a company-specific financial filing containing corporate revenue and operational data, not market-moving macroeconomic information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-q",
+    "psmt",
+    "earnings",
+    "retail",
+    "latin-america",
+    "irrelevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 10,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a corporate 10-Q filing for PriceSmart Inc, which is explicitly irrelevant to market structure or macro catalysts per the verification standards.",
+      "verification_confidence is set to 0 (lowest possible), yet suggested_status is 'review_queue' (requires borderline confidence 6-7), creating an internal inconsistency in the record.",
+      "llm_review shows initial_confidence: 10 but verification_confidence: 0, which are contradictory values for the same record.",
+      "The record's own notes, key_points, and quality_tier all conclude the source is irrelevant, yet the record remains in review_queue with a partially completed verification instead of being rejected outright."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record correctly identifies the source as irrelevant but fails to reach the logically consistent verdict. Auto-rejection is appropriate because: (1) source is not relevant to market structure or macro catalysts, (2) the record contains internal inconsistencies between verification_confidence (0) and suggested_status (review_queue), and (3) all quality indicators point to irrelevance. A simple fix—changing suggested_status from 'review_queue' to 'rejected'—resolves the inconsistency without requiring human intervention."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000104180326000018.txt",
+  "notes": "Source is a corporate earnings document with no relevance to market structure or macro catalyst analysis. The filing contains only structured financial data in XBRL format (net merchandise sales, membership income, geographic breakdowns) for PriceSmart's warehouse club operations in Latin America and the Caribbean. No central bank policy, Treasury operations, economic data releases, or market structure content. Not suitable for finance research archive on target topics.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "irrelevant",
+    "score": 0,
+    "reasoning": [
+      "Source type is corporate 10-Q filing, outside scope for market structure and macro catalysts.",
+      "No extractable content relevant to target research topics.",
+      "XBRL data is structural/financial, not market-moving or policy-related."
+    ]
+  }
+}

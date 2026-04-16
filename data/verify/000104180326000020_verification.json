@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but this earnings disclosure could reasonably be classified as 'data_release_other' given it announces quarterly financial results",
+    "Record is factually accurate but appropriately identifies source as irrelevant to macro catalysts or market structure"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is accurate and appropriately filters out non-relevant content. The main minor issue is the 'unknown' event_type which could be improved to 'data_release_other' but this doesn't affect the overall quality or correctness of the record.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

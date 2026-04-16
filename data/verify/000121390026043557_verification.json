@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but could be more specifically categorized - while this filing type doesn't fit neatly into the monetary/speech/data taxonomy, the record could note it as an '8-K corporate filing' rather than leaving it as 'unknown'",
+    "record correctly identifies the source as irrelevant to market structure/macro catalysts, but the event_type should reflect that this is an 8-K filing rather than leaving it as unknown",
+    "The summary accurately notes the filing is irrelevant to the archive's scope, which is consistent with the source content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately captures the source content and correctly identifies it as outside the archive's scope. The 'review' verdict is appropriate given the uncertain event_type categorization. The quality_tier of 'excluded' with tier score 1 is appropriate for this content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Advanced Biomed Inc., a small-cap biotech company headquartered in Taiwan and listed on Nasdaq (ticker: ADVB), entered into a $600,000 loan agreement with Jie Wang bearing 10% annual interest and a 6-month maturity. This is a routine corporate financing disclosure with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This filing is not relevant to the finance research archive's focus areas. It is a routine micro-cap company loan disclosure that provides no insight into market structure, central bank policy, macroeconomic conditions, or systemic financial dynamics. The company is a small Nasdaq-listed biotech with no market-wide significance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
