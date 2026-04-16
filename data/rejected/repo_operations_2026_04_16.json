@@ -1,0 +1,81 @@
+{
+  "id": "repo_operations_2026_04_16",
+  "created_at": "2026-04-16T15:13:13.056580+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations - Failed to Fetch",
+  "source": {
+    "name": "NY Fed",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "published_at": "2026-04-16",
+    "source_type": "api_endpoint",
+    "domain": "markets.newyorkfed.org"
+  },
+  "summary": "The attempt to retrieve the latest NY Fed repo operation results failed with a 400 Bad Request error. No actual operation data was obtained for 2026-04-16.",
+  "key_points": [
+    "API endpoint returned 400 Bad Request error",
+    "URL queried was https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation data was retrieved",
+    "Source is a technical failure rather than actual market operation data"
+  ],
+  "why_it_matters": "NY Fed repo operations are a critical component of the federal funds market and short-term funding markets. The failure to retrieve this data means there is no visibility into the NY Fed's most recent repo facility operations for this date. This could indicate a temporary API issue, an authentication problem, or a change in endpoint availability.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The NY Fed's repo operations (including the Standing Repo Facility and temporary operations) are part of the Fed's interest rate control framework. Failure to retrieve operation data prevents monitoring of short-term funding conditions.",
+  "important_numbers": [],
+  "tags": [
+    "repo",
+    "ny-fed",
+    "market-structure",
+    "api-failure",
+    "federal-reserve",
+    "standing-repo-facility"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only a 400 error message with no actual repo operation data",
+      "No content available for archival - record is a technical failure log, not research",
+      "event_type 'market_notice' is misleading; this is not a Fed-issued market notice, just an API failure record",
+      "why_it_matters and market_structure_context are speculative - they describe what the data would show if available rather than what the source actually contains",
+      "quality_tier correctly identifies tier 'failed' and score 1, contradicting archiving this record",
+      "Record has zero research utility for RAG or market structure analysis purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This record documents a technical API failure with no actual market data or content. While the record accurately describes what happened (failed fetch), archiving a failure log of an API endpoint adds no value to a finance research archive. The workflow should not be creating records for failed data fetches."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_16.txt",
+  "notes": "Source metadata indicated target was NY Fed Repo Operations, but the source body contains only an API error message (400 Bad Request). This is not archiveable content—it is a technical failure log. The record has been created to document the attempted fetch, but should not be treated as having any actual repo operation data. Recommend: (1) verify the API endpoint URL is correct, (2) check if authentication is required for recent data, (3) attempt manual fetch through NY Fed website if API remains unavailable.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed",
+    "score": 1,
+    "reasoning": [
+      "No content retrieved - only API error message",
+      "Cannot extract any market structure information",
+      "Record serves as technical incident log only",
+      "Low utility for research or RAG purposes"
+    ]
+  }
+}

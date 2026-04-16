@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a raw database snapshot from FRED, not an article or analytical document with archival narrative value",
+    "Summary correctly states the numbers but provides no explanatory context - cannot determine causes of SOFR movement from source alone",
+    "Record acknowledges low standalone archival value ('tier_3', 'Limited value for RAG purposes without supporting market commentary')",
+    "market_impact directional_bias set to 'mixed' with confidence 0 - no analytical conclusion provided in record or source",
+    "No consensus data or beat/miss framing present, which is appropriate given source limitations"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is accurate and properly attributed, but represents raw market data without analytical context. The record honestly acknowledges this limitation. Human judgment needed to determine: (1) Does a timestamped SOFR observation have standalone archival value for a finance research archive, or should it only be archived as supporting data alongside analytical commentary? (2) Should the record be rejected as thin/low-signal, or accepted with a 'data observation' qualifier noting it requires supplementary context?",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Secured Overnight Financing Rate (SOFR) closed at 3.72% on April 15, 2026, up 6 basis points from the prior day's reading of 3.66%. The rate has trended higher over the past five business days, rising from 3.57% on April 9 to the current level.",
+    "why_it_matters": "SOFR is the primary benchmark reference rate for overnight Treasury-backed repurchase agreements and serves as the reference rate for an estimated $20+ trillion in loans, derivatives, and financial contracts. Movements in SOFR signal changes in short-term collateralized funding conditions and can indicate stress or tightness in the repo market plumbing.",
+    "macro_context": "SOFR movements reflect short-term funding conditions but this snapshot provides no explanatory context for the rate trend. The rising SOFR over this period could reflect seasonal liquidity dynamics, Treasury settlement flows, or broader money market conditions.",
+    "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median rate on tri-party repo transactions collateralized by Treasury and agency securities. This daily snapshot captures end-of-day overnight funding costs in the Treasury repo market, which is critical market infrastructure for collateral mobility and short-term liquidity management."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "wb_gdp_growth_2026_04_16",
+  "created_at": "2026-04-16T15:13:24.373001+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Bank GDP Growth Rate - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-16",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank indicator query for NY.GDP.MKTP.KD.ZG (GDP real growth rate) returned no valid observations as of 2026-04-16. This is a failed data retrieval with no usable content for analysis.",
+  "key_points": [
+    "Indicator requested: NY.GDP.MKTP.KD.ZG (GDP growth, real, annual %)",
+    "Result: No recent valid observations returned",
+    "Snapshot date: 2026-04-16",
+    "No actual GDP growth figures, forecasts, or historical data are present in this source"
+  ],
+  "why_it_matters": "This source contains no actual data. It is a failed API/database query that returned an error message rather than any GDP growth figures. No market structure or macro catalyst analysis can be derived from it.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp",
+    "no-data",
+    "failed-query",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - only a failed API query error message",
+      "No market structure or macro catalyst content present",
+      "source_type 'data_release_other' is internally inconsistent with event_type 'unknown' - no data was released",
+      "Record has no archival value - it is a technical non-result, not an archiveable event",
+      "url field is empty - source attribution incomplete",
+      "market_impact fields are all empty/null, confirming no usable data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_16.txt",
+  "notes": "Source does not contain any actual GDP data. The World Bank query returned 'No recent valid observations' for the requested indicator. This is a technical non-result, not an archiveable event. Outside scope: not related to market structure or macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "poor",
+    "score": 1,
+    "reasoning": [
+      "No actual data present in source",
+      "Failed data retrieval - contains only an error/status message",
+      "Not usable for any market or macro analysis",
+      "Outside focus areas of market structure and macro catalysts"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "10y_yield_2026_04_16",
+  "created_at": "2026-04-16T15:11:42.703381+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield (DGS10) — April 14, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_feed"
+  },
+  "summary": "10-Year Treasury Yield (DGS10) settled at 4.26% on April 14, 2026, down from 4.30% on April 13 (change: -0.04 percentage points). Recent observations show: 4.31% (April 10), 4.29% (April 9), 4.29% (April 8). The source provides raw price data only with no interpretive context.",
+  "key_points": [
+    "10-Year Treasury Yield settled at 4.26% on April 14, 2026, a decline of 0.04 percentage points from the prior session",
+    "Prior session (April 13) closed at 4.30%, down from 4.31% on April 10",
+    "Weekly range: 4.26% (April 14 low) to 4.31% (April 10 high)",
+    "Yield has been relatively stable in a narrow 5 bps band (4.26–4.31) over the past five trading sessions",
+    "The pullback from 4.31% suggests modest easing in term premium or rate hike expectations"
+  ],
+  "why_it_matters": "The 10-year Treasury yield serves as a benchmark for mortgage rates, corporate borrowing costs, and equity discount rates. Daily observations are tracked by rates strategists, macro traders, and risk managers as part of broader market monitoring. This record captures the raw observation; additional analytical context would require linking to a substantive research document or policy commentary.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "risk_on",
+    "confidence": 2
+  },
+  "macro_context": "Source provides only daily yield observations without commentary on macro drivers, inflation expectations, or Federal Reserve policy signals. Interpretation of the data (e.g., whether the decline signals easing inflation expectations, flight-to-safety flows, or changes in rate expectations) is not derivable from the source alone.",
+  "market_structure_context": "Source is a FRED data series snapshot (DGS10 - 10-Year Treasury Constant Maturity Rate). No market structure or liquidity context is provided in the source.",
+  "important_numbers": [
+    "4.26%",
+    "4.30%",
+    "4.31%",
+    "-0.04%",
+    "4.29%"
+  ],
+  "tags": [
+    "treasury-yields",
+    "10-year",
+    "rates",
+    "macro-data",
+    "fred",
+    "fixed-income",
+    "bond-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution URL is empty string — violates requirement that source name AND url must be present",
+      "Event type 'data_release_other' is inappropriate for a raw FRED data feed snapshot; this is not a government statistical release",
+      "Summary includes interpretive claims ('reflecting persistent uncertainty around the inflation outlook') not present in source",
+      "Key points section adds editorial framing ('modest easing in term premium or rate hike expectations') unsupported by the raw data source",
+      "Market impact directional bias ('risk_on') is speculative and not derivable from a single data point",
+      "Source is a thin data snapshot (data_feed type) containing only price observations with no analytical content, narrative, or policy context",
+      "Record attempts to construct a research document from what is essentially a price reference, overstating archival value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_16.txt",
+  "notes": "This is a FRED data series snapshot for the 10-Year Treasury Constant Maturity Rate (DGS10). The source contains only raw price observations without analysis, commentary, or policy context. It is recent (April 14, 2026) and relevant to macro catalysts as the 10-year yield directly influences borrowing costs and asset valuations. However, as a single daily data point without accompanying narrative, its archival value is limited unless linked to a broader research context or event.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data-reference",
+    "score": 4,
+    "reasoning": [
+      "Single daily observation without analytical framing",
+      "No narrative, policy signal, or interpretive content",
+      "Recent (within 90 days of TODAY) but thin as standalone archive entry",
+      "Suitable as supporting reference data rather than primary research document"
+    ]
+  }
+}

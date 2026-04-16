@@ -1,0 +1,75 @@
+{
+  "id": "wb_trade_gdp_2026_04_16",
+  "created_at": "2026-04-16T15:14:14.476128+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - Indicator TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "",
+    "source_type": "data_release_other"
+  },
+  "summary": "This World Bank data query returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) as of 2026-04-16. No trade-to-GDP ratio data is available for analysis.",
+  "key_points": [
+    "Query for World Bank indicator TG.VAL.TOTL.GD.ZS returned no valid observations",
+    "Snapshot date: 2026-04-16",
+    "No trade (% of GDP) data available for any country or time period",
+    "Source topic is global_economy, not market structure or macro catalysts"
+  ],
+  "why_it_matters": "No data was retrieved for this indicator. The source provides no actionable information and does not fall within the archive's focus areas of market structure or macro catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned no data observations - provides zero information content",
+      "Source is not relevant to market structure or macro catalysts (topic is global_economy with no actual data)",
+      "Source attribution URL is empty - incomplete source metadata",
+      "event_type incorrectly set to 'unknown' when source_type correctly identifies 'data_release_other'",
+      "No archival value - failed data query with no substantive content to preserve"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_16.txt",
+  "notes": "Source returned empty result set. Indicator TG.VAL.TOTL.GD.ZS had no valid observations as of snapshot date. Source is out of scope for market structure and macro catalysts focus areas. Low-quality/irrelevant source.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 1,
+    "reasoning": [
+      "Query returned no data observations",
+      "Not relevant to required topic areas",
+      "Cannot support any market or macro analysis"
+    ]
+  }
+}

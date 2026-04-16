@@ -1,0 +1,85 @@
+{
+  "id": "iorb_2026_04_16",
+  "created_at": "2026-04-16T15:10:29.520504+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "Interest on Reserve Balances (IORB)",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-16",
+    "source_type": "data_release"
+  },
+  "summary": "The Federal Reserve's Interest on Reserve Balances (IORB) rate held steady at 3.65% on April 16, 2026, unchanged from the prior day. The rate has remained at 3.65% since at least April 12, 2026.",
+  "key_points": [
+    "IORB rate: 3.65% as of 2026-04-16",
+    "IORB rate: 3.65% as of 2026-04-15 (prior day comparison)",
+    "Rate change: 0 bps (flat) day-over-day",
+    "Rate has been flat at 3.65% for at least 5 consecutive observations (April 12-16, 2026)",
+    "IORB is the interest rate the Fed pays on reserve balances held by depository institutions"
+  ],
+  "why_it_matters": "IORB is the interest rate the Fed pays on reserve balances held by depository institutions, serving as a key administered rate in the Fed's monetary policy implementation framework. This rate influences money market rates including SOFR, repo rates, and short-term Treasury yields.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "IORB at 3.65% reflects the current policy rate floor. The source is a data snapshot and does not provide explicit commentary on monetary policy stance or the federal funds rate target range.",
+  "market_structure_context": "IORB is a key administered rate in the Fed's monetary policy implementation framework. As the rate paid on excess reserves, it anchors the overnight money market and helps define the lower bound of the federal funds rate corridor.",
+  "important_numbers": [
+    "3.65%"
+  ],
+  "tags": [
+    "fed-policy",
+    "interest-on-reserves",
+    "iorb",
+    "money-market",
+    "fed-funds-corridor",
+    "policy-rate",
+    "monetary-implementation"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a thin data snapshot with only 5 daily observations and no policy commentary or forward guidance",
+      "Macro context claim of 'likely 3.50-3.75% federal funds target range' is inferred, not stated in source",
+      "Summary characterization of 'stable Fed policy rate implementation' is an inference beyond the raw data"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record accurately reflects source data but contains policy inferences not present in the thin FRED snapshot. The data points are all correct and event_type is valid, but the broader contextual claims about monetary policy stance are editorial additions. Human review needed to assess whether the inferred policy framing is appropriate given the source's lack of explicit policy commentary."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_16.txt",
+  "notes": "This is a FRED data release snapshot showing the IORB rate. The source is thin (only 5 observations) with no accompanying policy commentary. The 3.65% rate is consistent with the Fed's stated commitment to maintain restrictive policy, but no additional context is provided. Relevance to market structure is clear but limited to factual rate observation.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 5,
+    "reasoning": [
+      "Source is raw FRED data with minimal context",
+      "No policy commentary or forward guidance",
+      "Short observation window (5 days)",
+      "Clear factual relevance to market structure through rate floor mechanism"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "9446f26cd9df23543174f6b9264d9e8bf694d511"
+}

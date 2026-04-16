@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a thin data snapshot with only 5 daily observations and no policy commentary or forward guidance",
+    "Macro context claim of 'likely 3.50-3.75% federal funds target range' is inferred, not stated in source",
+    "Summary characterization of 'stable Fed policy rate implementation' is an inference beyond the raw data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record accurately reflects source data but contains policy inferences not present in the thin FRED snapshot. The data points are all correct and event_type is valid, but the broader contextual claims about monetary policy stance are editorial additions. Human review needed to assess whether the inferred policy framing is appropriate given the source's lack of explicit policy commentary.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve's Interest on Reserve Balances (IORB) rate held steady at 3.65% on April 16, 2026, unchanged from the prior day. The rate has remained at 3.65% since at least April 12, 2026.",
+    "why_it_matters": "IORB is the interest rate the Fed pays on reserve balances held by depository institutions, serving as a key administered rate in the Fed's monetary policy implementation framework. This rate influences money market rates including SOFR, repo rates, and short-term Treasury yields.",
+    "macro_context": "IORB at 3.65% reflects the current policy rate floor. The source is a data snapshot and does not provide explicit commentary on monetary policy stance or the federal funds rate target range.",
+    "market_structure_context": "IORB is a key administered rate in the Fed's monetary policy implementation framework. As the rate paid on excess reserves, it anchors the overnight money market and helps define the lower bound of the federal funds rate corridor."
+  }
+}

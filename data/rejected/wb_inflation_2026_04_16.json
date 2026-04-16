@@ -1,0 +1,75 @@
+{
+  "id": "wb_inflation_2026_04_16",
+  "created_at": "2026-04-16T15:13:44.688156+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Inflation Rate — No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-16",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator FP.CPI.TOTL.ZG returned no valid observations as of the snapshot date. This is a database query result with no data — it has no archival value and no relevance to market structure or macro catalysts.",
+  "key_points": [
+    "World Bank indicator FP.CPI.TOTL.ZG queried on 2026-04-16.",
+    "Query returned zero valid observations for any recent period.",
+    "No country-level or aggregate inflation data available from this source."
+  ],
+  "why_it_matters": "No data. This record is a failed query with zero usable information for any financial or macro analysis. Reject from archive.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "empty-result"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned zero valid observations — no data to archive",
+      "Source attribution URL is empty, domain is empty — incomplete source metadata",
+      "event_type set to 'unknown' — correctly identified as not fitting taxonomy, but also signals the record has no archival value",
+      "'why_it_matters' field is accurate: 'No usable data' but this confirms the record should be rejected rather than sent to review",
+      "Source is a failed database query result, not an actionable data release or article",
+      "quality_tier correctly identifies tier: 'rejected' but status field shows 'review_queue' — inconsistent"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_16.txt",
+  "notes": "Source is a data query result with no valid observations. Irrelevant to market structure and macro catalysts topics. Low quality — no archiveable content. Confidence set to minimum because the source contains no actionable information.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "rejected",
+    "score": 1,
+    "reasoning": [
+      "No valid data returned",
+      "Not relevant to target topics",
+      "Source has zero informational value for research archive"
+    ]
+  }
+}

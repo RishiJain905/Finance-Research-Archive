@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source provides no actual data content - only a data retrieval failure notification",
+    "Empty source attribution: URL and domain fields are empty strings",
+    "event_type 'data_notice' is not in the valid taxonomy; 'unknown' would be appropriate but this source type should not be archived regardless",
+    "No actionable content for macro catalyst or market structure analysis",
+    "Record correctly identifies failure but still treats as archival candidate despite noting 'Do not archive as research content'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is a failed API query with no content. The record accurately describes the failure but correctly notes it has no archival value. No need for human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

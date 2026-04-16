@@ -1,0 +1,75 @@
+{
+  "id": "wb_public_debt_2026_04_16",
+  "created_at": "2026-04-16T15:14:01.147841+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS) - No Data Returned",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "",
+    "published_at": "2026-04-16",
+    "source_type": "data_notice"
+  },
+  "summary": "A request for World Bank indicator GC.DOD.TOTL.GD.ZS (total public debt as % of GDP) returned no valid observations for the snapshot date 2026-04-16. This is a data retrieval failure, not an actual data release.",
+  "key_points": [
+    "Indicator requested: GC.DOD.TOTL.GD.ZS (World Bank total government debt to GDP)",
+    "Result: No recent valid observations returned",
+    "Snapshot date: 2026_04_16",
+    "No actual debt figures, historical comparisons, or forecasts available"
+  ],
+  "why_it_matters": "Public debt levels are a key macro catalyst for sovereign bond spreads, currency stability, and fiscal policy expectations. However, this source provides no usable data for analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "data-retrieval-failure",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source provides no actual data content - only a data retrieval failure notification",
+      "Empty source attribution: URL and domain fields are empty strings",
+      "event_type 'data_notice' is not in the valid taxonomy; 'unknown' would be appropriate but this source type should not be archived regardless",
+      "No actionable content for macro catalyst or market structure analysis",
+      "Record correctly identifies failure but still treats as archival candidate despite noting 'Do not archive as research content'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_16.txt",
+  "notes": "This source has no relevance to market structure or macro catalysts. It is a World Bank API query that returned empty results for the public debt indicator. Do not archive as research content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No actual data content returned",
+      "Data retrieval failure only",
+      "Cannot support any market or macro analysis"
+    ]
+  }
+}

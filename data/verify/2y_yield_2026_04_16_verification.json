@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw time-series data without narrative or catalyst explanation",
+    "market_impact.directional_bias set to 'unknown' with confidence 0 - the record itself acknowledges it cannot assess directional market impact",
+    "No accompanying news or analysis explaining the yield move (-2 bps) - the record is factually accurate but analytically thin"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The source is factually accurate, properly attributed (FRED with URL), the event_type is valid (data_release_other is appropriate for a yield data point), and there's no fabricated information. However, the record itself acknowledges it lacks catalyst explanation. The record captures market structure relevance (2-year yield as Fed policy expectation gauge) but provides no actionable research value beyond the raw numbers. Human should decide whether thin data snapshots warrant archival inclusion or if linked analysis is preferred.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

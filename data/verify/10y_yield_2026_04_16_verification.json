@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution URL is empty string — violates requirement that source name AND url must be present",
+    "Event type 'data_release_other' is inappropriate for a raw FRED data feed snapshot; this is not a government statistical release",
+    "Summary includes interpretive claims ('reflecting persistent uncertainty around the inflation outlook') not present in source",
+    "Key points section adds editorial framing ('modest easing in term premium or rate hike expectations') unsupported by the raw data source",
+    "Market impact directional bias ('risk_on') is speculative and not derivable from a single data point",
+    "Source is a thin data snapshot (data_feed type) containing only price observations with no analytical content, narrative, or policy context",
+    "Record attempts to construct a research document from what is essentially a price reference, overstating archival value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Critical issues: missing URL violates core attribution requirement; source is raw price data with no analytical content, making the record's interpretive claims unsupported; event_type classification is incorrect for a data feed. While the numerical data (4.26%, 4.30%, -0.04 change) is accurate, the record incorrectly treats this as substantive research material.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "10-Year Treasury Yield (DGS10) settled at 4.26% on April 14, 2026, down from 4.30% on April 13 (change: -0.04 percentage points). Recent observations show: 4.31% (April 10), 4.29% (April 9), 4.29% (April 8). The source provides raw price data only with no interpretive context.",
+    "why_it_matters": "The 10-year Treasury yield serves as a benchmark for mortgage rates, corporate borrowing costs, and equity discount rates. Daily observations are tracked by rates strategists, macro traders, and risk managers as part of broader market monitoring. This record captures the raw observation; additional analytical context would require linking to a substantive research document or policy commentary.",
+    "macro_context": "Source provides only daily yield observations without commentary on macro drivers, inflation expectations, or Federal Reserve policy signals. Interpretation of the data (e.g., whether the decline signals easing inflation expectations, flight-to-safety flows, or changes in rate expectations) is not derivable from the source alone.",
+    "market_structure_context": "Source is a FRED data series snapshot (DGS10 - 10-Year Treasury Constant Maturity Rate). No market structure or liquidity context is provided in the source."
+  }
+}

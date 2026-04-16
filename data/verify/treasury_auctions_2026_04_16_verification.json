@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only an API 404 error response with no actual auction data",
+    "Cannot assess market structure or macro catalysts from error response alone",
+    "Record provides no substantive content for finance research archive - only documents a data retrieval failure",
+    "event_type set to 'unknown' which is technically valid but the record should not be archived at all given the thin source",
+    "quality_tier correctly identified as 'insufficient' with score 1 - record has no actionable intelligence value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection is appropriate. The source is an API error with zero actual data content. The generated record accurately describes the error but contains no archivable market intelligence. The llm_review and human_review fields correctly identify this as insufficient quality.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

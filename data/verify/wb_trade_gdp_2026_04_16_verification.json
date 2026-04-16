@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no data observations - provides zero information content",
+    "Source is not relevant to market structure or macro catalysts (topic is global_economy with no actual data)",
+    "Source attribution URL is empty - incomplete source metadata",
+    "event_type incorrectly set to 'unknown' when source_type correctly identifies 'data_release_other'",
+    "No archival value - failed data query with no substantive content to preserve"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This World Bank data query returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) as of 2026-04-16. No trade-to-GDP ratio data is available for analysis.",
+    "why_it_matters": "No data was retrieved for this indicator. The source provides no actionable information and does not fall within the archive's focus areas of market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

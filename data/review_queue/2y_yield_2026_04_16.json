@@ -1,0 +1,88 @@
+{
+  "id": "2y_yield_2026_04_16",
+  "created_at": "2026-04-16T15:10:47.063339+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2) Daily Snapshot",
+  "source": {
+    "name": "FRED",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-14",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The 2-Year Treasury yield closed at 3.76% on 2026-04-14, down 2 basis points from the prior day's 3.78%. The yield has been declining over the week, falling from 3.81% on April 10.",
+  "key_points": [
+    "Latest 2-Year Treasury yield: 3.76% (2026-04-14)",
+    "Prior day yield: 3.78% (2026-04-13)",
+    "Daily change: -0.02 bps (down)",
+    "Weekly trend: 3.81% (Apr 10) → 3.78% (Apr 13) → 3.76% (Apr 14)",
+    "No narrative or catalyst explanation provided in this data snapshot"
+  ],
+  "why_it_matters": "The 2-year yield is a market-derived gauge of near-term Fed policy expectations. A declining 2-year yield may signal growing expectations for rate cuts or a flight-to-safety dynamic, though this data point alone lacks the accompanying news or catalyst to explain the move.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year Treasury yield is among the most policy-sensitive points on the yield curve, closely tracking Fed funds futures pricing. A yield of 3.76% implies the market is pricing a specific path for the federal funds rate, but the source does not provide the specific rate expectations or what data drove the move.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.76%",
+    "3.78%",
+    "-0.02 bps",
+    "3.81%",
+    "3.79%"
+  ],
+  "tags": [
+    "2-year-yield",
+    "treasury",
+    "yield-curve",
+    "macro-data",
+    "fed-expectations",
+    "fomc-pricing",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw time-series data without narrative or catalyst explanation",
+      "market_impact.directional_bias set to 'unknown' with confidence 0 - the record itself acknowledges it cannot assess directional market impact",
+      "No accompanying news or analysis explaining the yield move (-2 bps) - the record is factually accurate but analytically thin"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This is a borderline case. The source is factually accurate, properly attributed (FRED with URL), the event_type is valid (data_release_other is appropriate for a yield data point), and there's no fabricated information. However, the record itself acknowledges it lacks catalyst explanation. The record captures market structure relevance (2-year yield as Fed policy expectation gauge) but provides no actionable research value beyond the raw numbers. Human should decide whether thin data snapshots warrant archival inclusion or if linked analysis is preferred."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_16.txt",
+  "notes": "This source provides only a single data point from a FRED time series. It is recent (one day old relative to TODAY) and accurate as a factual record, but lacks the qualitative context needed for a research archive. For meaningful macro research, this data point should be linked to accompanying news or analysis explaining the yield movement. Classified as macro catalysts based on TARGET metadata provided.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 40,
+    "reasoning": [
+      "Raw time-series data point without narrative",
+      "No catalyst or context provided",
+      "Low research value as standalone record",
+      "Would require linked analysis for RAG utility"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "87c10023473923f38fe92c09b3d14e0856c45b97"
+}

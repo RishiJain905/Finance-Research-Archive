@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned zero valid observations — no data to archive",
+    "Source attribution URL is empty, domain is empty — incomplete source metadata",
+    "event_type set to 'unknown' — correctly identified as not fitting taxonomy, but also signals the record has no archival value",
+    "'why_it_matters' field is accurate: 'No usable data' but this confirms the record should be rejected rather than sent to review",
+    "Source is a failed database query result, not an actionable data release or article",
+    "quality_tier correctly identifies tier: 'rejected' but status field shows 'review_queue' — inconsistent"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is a failed database query with no data. No human review is needed because there is nothing to review — the source has zero informational value for the archive. Source attribution is incomplete (missing URL). The system already correctly set quality_tier.tier to 'rejected' and verification_confidence to 0. The record should be rejected outright.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator FP.CPI.TOTL.ZG returned no valid observations as of the snapshot date. This is a database query result with no data — it has no archival value and no relevance to market structure or macro catalysts.",
+    "why_it_matters": "No data. This record is a failed query with zero usable information for any financial or macro analysis. Reject from archive.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

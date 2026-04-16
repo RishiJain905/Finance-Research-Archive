@@ -1,0 +1,78 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_16",
+  "created_at": "2026-04-16T15:12:29.731752+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions",
+  "source": {
+    "name": "U.S. Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "domain": "fiscaldata.treasury.gov",
+    "published_at": "2026-04-16",
+    "source_type": "data_not_available"
+  },
+  "summary": "The source attempted to retrieve upcoming Treasury auction data from the U.S. Treasury Fiscal Data API but failed with a 404 error. No auction data was retrieved; the source contains only an error message indicating the requested endpoint could not be found.",
+  "key_points": [
+    "API request to Treasury Fiscal Data endpoint returned 404 Not Found error",
+    "No auction date, security type, offering amount, or term data was retrieved",
+    "Target endpoint: upcoming_auctions with fields for auction_date, security_type, security_term, offering_amt",
+    "SNAPSHOT_DATE: 2026-04-16",
+    "No actionable Treasury auction information available from this source"
+  ],
+  "why_it_matters": "Treasury auction data is essential for understanding near-term supply hitting the bond market. Without this data, market participants cannot assess upcoming issuance schedules, auction sizes, or the mix of bills vs. coupon securities. The failed API call means the archive record contains no usable market structure information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The failed API request suggests a potential issue with the Treasury's Fiscal Data API endpoint for upcoming auctions. This is a data infrastructure problem that affects real-time and archival access to auction scheduling information.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api-error",
+    "404",
+    "market-structure",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - only a 404 error message from an API endpoint",
+      "No Treasury auction information of any kind was retrieved",
+      "Source has zero archival value for market structure or macro research",
+      "Cannot verify any market-relevant claims because none exist in the source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is a failed API call with no actual auction data. Human review needed to determine if alternative source should be located or if this record should be marked as failed."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_16.txt",
+  "notes": "Low-quality source: API call failed with 404 error. No Treasury auction data retrieved. Source name and URL from metadata indicate intended content but actual body contains only error message. Recommend attempting alternative endpoint or checking if API URL has changed. The metadata correctly identified this as a market structure topic targeting Treasury auction information, but the source did not deliver.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed",
+    "score": 0,
+    "reasoning": [
+      "No data content - only error message present",
+      "API 404 indicates endpoint unavailable or incorrect",
+      "Cannot support any market structure or auction analysis",
+      "Archive record has no archival value without source data"
+    ]
+  }
+}
