@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "source_type field shows 'speech_hawkish' but event_type shows 'speech_neutral' - metadata inconsistency between these fields",
+    "Topic in metadata is 'market structure' but speech content focuses primarily on macro catalysts (monetary policy outlook, labor market conditions, inflation dynamics) rather than market structure topics",
+    "Source body truncated mid-sentence around GDP forecast - approximately 40% of content not captured; cannot verify if additional forward-looking statements or policy signals exist in the omitted portion",
+    "Minor inconsistency: record notes Williams as 'voting FOMC member' in why_it_matters but source does not explicitly confirm his voting status for 2026"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source body truncation means ~40% of speech content is missing, including potentially important forward-looking statements. Additionally, topic classification discrepancy (market structure vs macro catalysts) needs human judgment. The source_type/event_type inconsistency should also be resolved.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The statement 'As a voting FOMC member, Williams provides insight into the Fed's current policy stance' should be verified - the source does not explicitly state Williams' voting status for 2026. Consider removing or qualifying this claim.",
+    "macro_context": "",
+    "market_structure_context": "Topic should be reconsidered - the speech content is primarily about macro economic outlook, monetary policy stance, and inflation/employment dynamics rather than market structure topics like trading venues, market participants, or microstructure mechanics."
+  }
+}
