@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a routine corporate governance disclosure with no relevance to market structure or macro catalysts",
+    "event_type set to 'unknown' when source is a standard SEC 8-K filing (corporate governance category)",
+    "llm_review.verification_confidence shows 0 but appears to be a data field error; factual accuracy is high but relevance to archive mandate is zero"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate but clearly outside the archive's scope. Auto-rejection is appropriate given the explicit mandate for market structure or macro catalyst relevance.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate governance disclosure with no relevance to market structure or macro catalysts. The departure of a board member at a small-cap defense contractor (Byrna Technologies, ticker BYRN on Nasdaq Capital Market) affects only company-specific equity analysis and governance matters.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

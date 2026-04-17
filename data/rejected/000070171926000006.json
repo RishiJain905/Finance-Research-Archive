@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record has all empty fields - no summary, key_points, why_it_matters, or any populated data",
+      "Source is a routine SEC 8-K filing for Envela Corporation (micro-cap), not relevant to market structure or macro catalysts",
+      "The filing describes a routine stock repurchase plan extension (from March 2026 to March 2028) - this is corporate governance, not market-moving information",
+      "Envela is listed on NYSE American with ticker ELA - this is not a material market catalyst",
+      "No valid event_type can be assigned to this routine corporate disclosure",
+      "The source has no archival value for finance research purposes - it's a thin, routine regulatory filing"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely empty with no fields populated. Additionally, this SEC 8-K filing for a micro-cap company regarding a routine repurchase plan extension is not relevant to macro market catalysts or market structure research."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

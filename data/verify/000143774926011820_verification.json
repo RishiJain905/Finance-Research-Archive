@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — single-company 10-Q filing for small-cap issuer (Byrna Technologies) with ~$7.45M quarterly revenue",
+    "event_type is 'unknown' which violates taxonomy requirements; correct type should be identified as corporate_filing or equivalent",
+    "Record correctly identifies out-of-scope nature but still entered the pipeline — source should have been filtered at ingestion"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record itself acknowledges the source is out of scope. No macro catalyst or market structure content exists in this SEC 10-Q filing. Automatic rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 10-Q filing is for Byrna Technologies Inc., a micro-cap issuer (~$7.45M quarterly revenue) filing quarterly financial statements. The source does not contain macro catalysts, monetary policy content, economic data releases, or market structure/operations content. It is a company-specific corporate filing with no market-wide research value.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type correctly set to 'unknown' as corporate SEC filings fall outside the provided taxonomy categories (monetary policy, speeches, data releases, treasury operations, research)",
+    "The topic 'not_related' and note about 'no relevance to monetary policy or market structure' are reasonable assessments for a routine corporate merger filing",
+    "Record appropriately avoids inventing macro/market significance where none exists"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Equitable Holdings filed an 8-K on April 15, 2026, disclosing it's exploring share repurchases of its common stock prior to closing its pending merger with Corebridge Financial (announced March 26, 2026). The company would need a waiver from Corebridge to proceed with repurchases during the pendency of the merger. No determination has been made whether repurchases will occur.",
+    "why_it_matters": "Routine corporate SEC filing regarding potential share repurchases during pending merger. Limited market-significant information disclosed; the filing explicitly states 'There can be no assurance that the Company will determine to make such share repurchases.'",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
