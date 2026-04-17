@@ -1,7 +1,7 @@
 {
   "id": "arxiv_econ_gn_antitrust_on_aisle_five_how_well_do_divestiture_remedies_wor_5e0f36ff",
   "created_at": "2026-04-17T04:43:53.483632+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "quantitative_finance",
   "event_type": "research_paper",
   "title": "Antitrust on Aisle Five: How Well Do Divestiture Remedies Work?",
@@ -53,26 +53,32 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate and well-constructed against the source text, with correct event_type (research_paper), proper source attribution, and no fabrications. However, the underlying topic (antitrust divestiture effectiveness in grocery retail) does not align with the stated target focus on 'market structure or macro catalysts.' Human decision needed to determine whether out-of-scope records should be accepted despite accurate metadata capture."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-17T04:46:47.049547+00:00"
   },
   "raw_text_path": "data/raw/arxiv_econ_gn_antitrust_on_aisle_five_how_well_do_divestiture_remedies_wor_5e0f36ff.txt",
   "notes": "OUT OF SCOPE: This paper concerns antitrust economics and merger remedy effectiveness in the grocery sector. It does not address market structure (trading, operations, plumbing) or macro catalysts (monetary policy, economic data releases, rate decisions). Topic labeled 'quantitative_finance' in metadata appears to be a category mismatch. The research is focused on regulatory effectiveness and labor market effects of divestiture conditions, not financial markets. Relevance to target focus areas: none.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "",
-    "score": 0,
-    "reasoning": []
+    "tier": "tier_2",
+    "score": 59.0,
+    "reasoning": [
+      "quality score: 59.0/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "lower-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
   },
   "telegram_review_sent": true,
   "telegram_review_fingerprint": "50c61c29f27a73d276a4d6eae5ad0afbfdf15977"
