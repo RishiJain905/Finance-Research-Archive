@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a raw data series snapshot from FRED, not a research document or analytical content",
+    "No narrative, analysis, or macro context provided in the source",
+    "Cannot determine drivers behind the 3bp yield move from source alone",
+    "Low information density — record accurately captures data but provides no research value beyond the raw numbers",
+    "Source is a data feed output, not an article-like document with interpretive content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately represents the source data (correct yield values, correct dates, correct directional change), but this is a borderline case on archival worth. A raw FRED data snapshot is accurate and attributable but provides no analytical context or macro catalyst explanation. Human judgment is needed to decide whether pure data points without narrative meet the archive's threshold for research content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 10-Year Treasury Yield (DGS10) closed at 4.29% on April 15, 2026, up 3 basis points from the prior day's close of 4.26%. Source: FRED (Federal Reserve Economic Data) daily observation.",
+    "why_it_matters": "The 10-year Treasury yield serves as a benchmark for mortgage rates, corporate borrowing costs, and risk-free asset pricing. A 3bp single-day move is within normal daily volatility and does not by itself signal a directional shift in market expectations. No explanatory context for the move was provided in the source.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

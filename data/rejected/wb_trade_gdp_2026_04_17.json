@@ -1,0 +1,77 @@
+{
+  "id": "wb_trade_gdp_2026_04_17",
+  "created_at": "2026-04-17T14:42:30.294830+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "World Trade (% of GDP) — TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-17",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank API returned no valid observations for the World Trade (% of GDP) indicator (TG.VAL.TOTL.GD.ZS) as of 2026-04-17. No actual data values were available for extraction or analysis.",
+  "key_points": [
+    "Indicator: TG.VAL.TOTL.GD.ZS (World Trade % of GDP)",
+    "Source: World Bank database",
+    "Data status: No recent valid observations returned",
+    "No actual numerical values available in this source"
+  ],
+  "why_it_matters": "No information can be extracted. The source returned a null result indicating either data unavailability, API error, or an inactive indicator code. Cannot be used for macro analysis or market research.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade",
+    "gdp",
+    "no-data",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - API returned null response for indicator TG.VAL.TOTL.GD.ZS",
+      "Source URL is missing - record has 'url': '' with no link to specific data",
+      "event_type 'data_release_other' is misleading - no data was actually released",
+      "No archival value: null API response provides no market structure or macro catalyst information",
+      "Source is irrelevant to archive scope (market structure/macro catalysts) since no data exists to analyze",
+      "Record is too thin to warrant archiving - entire content is a single null result message"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_17.txt",
+  "notes": "SOURCE METADATA TOPIC was 'global_economy' but this archive focuses only on market structure or macro catalysts. Since the source returned no data, it is irrelevant to either focus area. The source is a null response from the World Bank API for indicator TG.VAL.TOTL.GD.ZS. No analytical value.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "null",
+    "score": 0,
+    "reasoning": [
+      "No actual data returned — empty source",
+      "Cannot support any research or analysis",
+      "API/system issue or inactive indicator"
+    ]
+  }
+}

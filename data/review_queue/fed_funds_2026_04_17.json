@@ -1,0 +1,81 @@
+{
+  "id": "fed_funds_2026_04_17",
+  "created_at": "2026-04-17T14:38:11.324812+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Effective Federal Funds Rate (DFF) — Daily Observation",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "published_at": "2026-04-15",
+    "source_type": "data_release",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The Effective Federal Funds Rate stood at 3.64% on April 15, 2026, unchanged from the prior four days. This daily observation reflects the interest rate at which depository institutions lend reserve balances to each other overnight.",
+  "key_points": [
+    "Effective Federal Funds Rate (DFF) recorded at 3.64% on 2026-04-15",
+    "Rate unchanged from prior day (2026-04-14) with absolute change of 0",
+    "Rate held flat at 3.64% for five consecutive observations (April 11–15, 2026)",
+    "This rate represents the weighted average of overnight federal funds transactions",
+    "DFF series sourced from FRED (Federal Reserve Bank of St. Louis)"
+  ],
+  "why_it_matters": "The EFFR serves as the primary monetary policy tool and benchmark for short-term borrowing costs. Sustained flat readings at 3.64% indicate unchanged Fed policy stance between FOMC meetings. This data point is useful for tracking rate stability but lacks context about recent FOMC decisions or forward guidance.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The EFFR at 3.64% suggests the Fed's current restrictive policy stance remains in place. Without accompanying FOMC statement or economic data, the macro implications of this observation are unclear. This is a single daily snapshot, not indicative of a policy change.",
+  "market_structure_context": "The EFFR is calculated as a weighted average of overnight federal funds transactions in the fed funds market, which is a core part of the Fed's monetary policy operating framework.",
+  "important_numbers": [
+    "3.64%",
+    "0 (change)"
+  ],
+  "tags": [
+    "fed-funds-rate",
+    "monetary-policy",
+    "interest-rates",
+    "overnight-rate",
+    "fomc",
+    "macro-data",
+    "fomc-meeting"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Source provides only a single daily observation (3.64%) without FOMC target range context or recent policy decision reference",
+      "Cannot determine whether 3.64% represents the current target midpoint without linked FOMC data",
+      "Record accurately reflects the source but is inherently thin—value is purely historical baseline data",
+      "event_type 'data_release_other' is technically valid but somewhat loose for a raw daily rate observation",
+      "published_at (2026-04-15) reflects the observation date, not a formal data release timestamp"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This record is accurate to the source but tests the boundaries of archival value. A single daily EFFR observation with no policy context is thin but may have historical value for rate trajectory tracking. The archive's scope for raw data points needs human judgment—should a single 3.64% reading without FOMC linkage be archived standalone, or is this monitoring data better linked to the most recent FOMC statement for context?"
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_17.txt",
+  "notes": "This is raw daily EFFR data from FRED. The source is thin—it provides only the rate value without context about recent FOMC decisions, target range, or policy signals. Cannot determine if 3.64% represents the target midpoint without additional Fed sources. Recommend linking to most recent FOMC statement for target range context. The FRED DFF series typically tracks the Fed's target rate closely but may lag slightly during rate transitions. Recent observation showing flat rate for 5 days suggests stable policy conditions.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "basic",
+    "score": 4,
+    "reasoning": [
+      "Single daily data point with no policy context",
+      "No mention of FOMC target range or recent decisions",
+      "Raw observation requires external data for full interpretation",
+      "Source is authoritative (FRED) but content is minimal",
+      "Cannot determine macro catalyst relevance without broader context"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "6c04b2bce5a06f4f80f2196406a21314bd467835"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_17",
+  "created_at": "2026-04-17T14:40:59.741301+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Upcoming Treasury Auctions — API Error (404)",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "domain": "treasury.gov",
+    "published_at": "2026-04-17",
+    "source_type": "error_page"
+  },
+  "summary": "The Treasury Fiscal Data API endpoint for upcoming auction data returned a 404 Not Found error. No auction schedule, offering amounts, or security terms were retrieved. This constitutes a failed data fetch, not an archiveable document.",
+  "key_points": [
+    "API endpoint returned HTTP 404 error: no auction data available",
+    "Requested fields: auction_date, security_type, security_term, offering_amt",
+    "Sort parameter was auction_date ascending; page size was 10",
+    "No auction dates, amounts, or security types retrieved",
+    "Source is a technical error response, not structured market data"
+  ],
+  "why_it_matters": "Cannot be used to assess near-term Treasury supply or auction dynamics. Any analysis of market structure or Treasury supply conditions would be incomplete. The absence of data prevents monitoring of near-term auction calendar.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The Treasury auction calendar is a key component of market structure (primary dealer operations, auction risk, stock/flow dynamics). The failure of this data source means no visibility into near-term supply pipeline.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-auctions",
+    "api-error",
+    "404-not-found",
+    "no-data",
+    "market-structure",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a 404 error response with no actual content",
+      "No auction data, schedule, or market information retrieved",
+      "event_type correctly set to 'unknown' but indicates absence of classifiable event",
+      "Record is an accurate log of a failed data fetch, not a research document",
+      "Source has zero archival value for market structure or macro analysis",
+      "Summary correctly states 'failed data fetch, not an archiveable document'"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "No actionable content. Source should be re-fetched or alternative endpoint queried."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_17.txt",
+  "notes": "This is a failed API call response, not an archiveable source. The underlying metadata indicates target='Upcoming Treasury Auctions' and topic='market structure', but the source body contains only an HTTP error. No auction dates, amounts, or terms were retrieved. Archive value is minimal to none. Recommend re-fetching with corrected endpoint or checking if endpoint path has changed.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "fail",
+    "score": 1,
+    "reasoning": [
+      "HTTP 404 error — no content retrieved",
+      "Source type is error_page, not treasury_issuance",
+      "No market structure or macro catalyst data present",
+      "Archive quality: insufficient for any analytical use"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source attribution missing URL — only domain provided (fred.stlouisfed.org), violating source attribution requirement",
+    "Summary phrase 'has been rising' is technically true for April 10-15 but misleading given the 5 bps decline to 3.67% — could imply continued upward trajectory",
+    "Source is Tier 3 data reference with no interpretive context or causal explanation for the rate movements",
+    "market_impact confidence rated at 1 (lowest) — appropriately conservative but confirms limited analytical value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor issues; record is accurate but thin. Data values are correct, event_type is valid, and source is relevant. The missing URL is a documentation gap but domain is inferable. The summary framing could be improved but isn't factually wrong.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Secured Overnight Financing Rate (SOFR) settled at 3.67% on April 16, 2026, down 5 basis points from the prior day's reading of 3.72%. The rate had been trending upward from 3.61% on April 10 through 3.72% on April 15 before this single-day pullback.",
+    "why_it_matters": "SOFR serves as the primary benchmark for short-term lending and derivatives markets. Movements in this rate signal changes in overnight funding conditions. The recent multi-day climb (3.61% to 3.72%) followed by a 5 bps decline reflects shifting demand for collateralized overnight funding.",
+    "macro_context": "SOFR movements reflect underlying money market conditions. The recent upward drift from April 10-15 suggests increased demand for overnight funding, while the April 16 decline to 3.67% indicates a partial reversal of that pressure.",
+    "market_structure_context": "SOFR is calculated from triparty repo transactions cleared through the Fixed Income Clearing Corporation (FICC). It represents the cost of collateralized overnight borrowing and is used as the benchmark for $200+ trillion in financial contracts."
+  }
+}

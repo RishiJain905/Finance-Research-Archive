@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data - API returned null response for indicator TG.VAL.TOTL.GD.ZS",
+    "Source URL is missing - record has 'url': '' with no link to specific data",
+    "event_type 'data_release_other' is misleading - no data was actually released",
+    "No archival value: null API response provides no market structure or macro catalyst information",
+    "Source is irrelevant to archive scope (market structure/macro catalysts) since no data exists to analyze",
+    "Record is too thin to warrant archiving - entire content is a single null result message"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-reject is appropriate; the source provides zero usable information and the record contains no substantive content worth archiving.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

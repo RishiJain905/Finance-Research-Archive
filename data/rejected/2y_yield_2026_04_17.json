@@ -1,0 +1,88 @@
+{
+  "id": "2y_yield_2026_04_17",
+  "created_at": "2026-04-17T14:39:51.637555+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "published_at": "2026-04-15",
+    "source_type": "data_snapshot",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 2-Year Treasury Yield remained flat at 3.76% on April 15, 2026, unchanged from the prior day. The yield has oscillated between 3.76% and 3.81% over the most recent five trading days, indicating stable short-term rate expectations.",
+  "key_points": [
+    "2-Year Treasury Yield: 3.76% as of 2026-04-15 (flat from prior day)",
+    "Prior day (2026-04-14): 3.76%",
+    "Recent range: 3.76%-3.81% spanning 2026-04-09 to 2026-04-15",
+    "Yield declined 5 bps from 2026-04-10 (3.81%) to 2026-04-15 (3.76%)"
+  ],
+  "why_it_matters": "The 2-Year Treasury Yield is highly sensitive to near-term Fed policy expectations. A flat reading suggests no new catalysts shifted rate expectations on April 15. This benchmark influences borrowing costs, mortgage rate expectations, and risk asset valuations.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The 2-Year yield reflects market expectations for Fed policy over the next approximately two years. No policy signals or macro data interpretations are provided in this raw data snapshot.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.76%",
+    "3.81%",
+    "3.78%"
+  ],
+  "tags": [
+    "2-year-yield",
+    "treasury",
+    "interest-rates",
+    "fed-expectations",
+    "macro-data",
+    "yield-curve"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is raw time series data from FRED with no analytical content, commentary, or context - extremely thin",
+      "event_type 'data_release_other' is questionable - this is not a data release, it's a data snapshot/observation",
+      "The source provides no explanation for why yields moved or what they mean for Fed policy",
+      "No macro catalyst information is present - just raw numerical values",
+      "Archival value is minimal: FRED time series data is freely and permanently available; archiving a single-point snapshot adds no value beyond what FRED already provides",
+      "The record itself acknowledges 'Very thin content - single time series observation' and 'Recommend linking to a richer source'",
+      "quality_tier scored at 2 with 'Minimal archival value as standalone record'",
+      "The source does not meet the relevance threshold for market structure or macro catalysts research archive - it lacks interpretive content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record correctly identifies source as thin and low-value; auto-reject is appropriate"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_17.txt",
+  "notes": "This is a single-point data snapshot from FRED rather than a research document or analysis. The source provides only numerical yield values without any commentary on drivers, Fed policy implications, or market context. While the 2-Year yield is a key macro indicator, this particular source offers no interpretive value beyond the raw numbers. Recommend linking to a richer source that provides analysis of why yields moved or what they mean for the rate path.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data_only",
+    "score": 2,
+    "reasoning": [
+      "Raw numerical data only - no analysis or interpretation",
+      "No context provided for yield levels or movements",
+      "No connection to policy events or data releases",
+      "Minimal archival value as standalone record"
+    ]
+  }
+}

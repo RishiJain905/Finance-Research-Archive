@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned zero data observations - no inflation figures available from this query",
+    "Source URL is missing (empty string) - source attribution is incomplete",
+    "Source domain is missing (empty string)",
+    "event_type set to 'unknown' when this isn't an event at all - it's a null data response",
+    "No actual market-relevant or macro catalyst information can be extracted from a null result",
+    "Record has no archival value for finance research - it contains no substantive content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear rejection case - source is a null data response with no actual content to archive. Missing required source attribution fields (url, domain). Not relevant to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

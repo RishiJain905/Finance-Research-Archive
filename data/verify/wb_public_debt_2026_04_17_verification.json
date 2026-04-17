@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a data query failure message with zero usable content - cannot serve as archiveable research",
+    "Missing source attribution - URL field is empty, domain field is empty",
+    "source_type 'data_release_other' is misleading - there was no actual data release",
+    "Record accurately describes the failure but the underlying source has no archival value per se",
+    "Cannot assess macro catalysts or market structure implications without underlying data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is definitively non-archivable - an empty API response cannot be research content worth preserving regardless of how accurately the record describes the failure. This is a clear auto-reject based on Rule 6 (thin low-signal sources bias toward reject) combined with missing URL attribution.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

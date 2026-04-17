@@ -1,0 +1,85 @@
+{
+  "id": "sofr_2026_04_17",
+  "created_at": "2026-04-17T14:38:11.326800+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "SOFR Rate Observation — April 16, 2026",
+  "source": {
+    "name": "FRED / Federal Reserve Bank of New York",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-17",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The Secured Overnight Financing Rate (SOFR) settled at 3.67% on April 16, 2026, down 5 basis points from the prior day's reading of 3.72%. The rate had been trending upward from 3.61% on April 10 through 3.72% on April 15 before this single-day pullback.",
+  "key_points": [
+    "SOFR closed at 3.67% on April 16, 2026, a 5 bps decline from 3.72% on April 15",
+    "The prior week's trend shows SOFR climbing from 3.61% (April 10) to 3.72% (April 15) before today's slight decline",
+    "Recent observations: April 13 at 3.63%, April 14 at 3.66%, showing a general upward drift",
+    "SOFR is published daily by the Federal Reserve Bank of New York based on overnight repo transactions"
+  ],
+  "why_it_matters": "SOFR serves as the primary benchmark for short-term lending and derivatives markets. Movements in this rate signal changes in overnight funding conditions. The recent multi-day climb (3.61% to 3.72%) followed by a 5 bps decline reflects shifting demand for collateralized overnight funding.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "SOFR movements reflect underlying money market conditions. The recent upward drift from April 10-15 suggests increased demand for overnight funding, while the April 16 decline to 3.67% indicates a partial reversal of that pressure.",
+  "market_structure_context": "SOFR is calculated from triparty repo transactions cleared through the Fixed Income Clearing Corporation (FICC). It represents the cost of collateralized overnight borrowing and is used as the benchmark for $200+ trillion in financial contracts.",
+  "important_numbers": [
+    "3.67% — latest SOFR (April 16, 2026)",
+    "3.72% — previous SOFR (April 15, 2026)",
+    "-5 bps — change",
+    "3.61% — April 10 observation (trough of recent period)"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "overnight-rate",
+    "market-structure",
+    "money-market",
+    "fed-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution missing URL — only domain provided (fred.stlouisfed.org), violating source attribution requirement",
+      "Summary phrase 'has been rising' is technically true for April 10-15 but misleading given the 5 bps decline to 3.67% — could imply continued upward trajectory",
+      "Source is Tier 3 data reference with no interpretive context or causal explanation for the rate movements",
+      "market_impact confidence rated at 1 (lowest) — appropriately conservative but confirms limited analytical value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_17.txt",
+  "notes": "This is a quantitative data snapshot from FRED, not an article or policy document. The record captures the latest SOFR observation with recent context. The upward trend from April 10–15 (3.61% to 3.72%) followed by a slight pullback to 3.67% suggests potential tightening in overnight funding conditions, but no causal explanation is provided in the source. For richer context, consider linking to FRBNY's broader repo market operations data or any contemporaneous balance sheet updates.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Tier 3 - Data Reference",
+    "score": 5,
+    "reasoning": [
+      "Source is raw market data, not an analytical or policy document",
+      "Provides reliable quantitative observations without editorial interpretation",
+      "No context for what drove rate movements",
+      "Cannot be used alone to infer market stress or policy implications"
+    ]
+  }
+}

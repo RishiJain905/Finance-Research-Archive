@@ -1,0 +1,75 @@
+{
+  "id": "wb_public_debt_2026_04_17",
+  "created_at": "2026-04-17T14:42:03.015902+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS) — No Valid Observations Returned",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-17",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS (total government debt as percentage of GDP) returned no valid observations for the snapshot date 2026-04-17, providing no usable data for analysis or archival purposes.",
+  "key_points": [
+    "The World Bank API query for public debt-to-GDP indicator GC.DOD.TOTL.GD.ZS returned no valid observations on 2026-04-17.",
+    "The source contains no numerical data, time series values, or country-specific information.",
+    "This appears to be a failed or empty API/data query response rather than substantive research content."
+  ],
+  "why_it_matters": "Public debt-to-GDP ratios are a key macro catalyst indicator tracked by markets for fiscal sustainability assessment. However, this source contains no actual data, rendering it useless for financial analysis, risk assessment, or RAG retrieval purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "api-failure",
+    "gc-dod-totl-gd-zs"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a data query failure message with zero usable content - cannot serve as archiveable research",
+      "Missing source attribution - URL field is empty, domain field is empty",
+      "source_type 'data_release_other' is misleading - there was no actual data release",
+      "Record accurately describes the failure but the underlying source has no archival value per se",
+      "Cannot assess macro catalysts or market structure implications without underlying data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_17.txt",
+  "notes": "Low-quality source containing only a World Bank API error/empty response message. No relevant data for market structure or macro catalysts analysis. The metadata indicates the target is 'World Public Debt' but the actual response contains zero observations. This could indicate API rate limiting, data access restrictions, or a temporary data availability issue. Not suitable for archival in current form.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "Source contains no actual data content—only an empty API response",
+      "Cannot support any market structure or macro catalyst analysis without underlying statistics",
+      "Fails minimum quality threshold for financial research archive"
+    ]
+  }
+}

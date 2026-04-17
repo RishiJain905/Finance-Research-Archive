@@ -1,0 +1,112 @@
+{
+  "id": "iorb_2026_04_17",
+  "created_at": "2026-04-17T14:39:00.886585+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Interest on Reserve Balances (IORB)",
+  "source": {
+    "name": "FRED - Federal Reserve Economic Data",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-17",
+    "source_type": "data_series"
+  },
+  "summary": "The Interest on Reserve Balances (IORB) rate remained at 3.65% on 2026-04-17, unchanged from the prior observation. The rate has been flat at 3.65% for at least five consecutive business days, reflecting the current Fed Funds target range upper bound and indicating no recent changes to the Fed's reserve remuneration policy.",
+  "key_points": [
+    "IORB current rate: 3.65% as of 2026-04-17",
+    "Prior observation (2026-04-16): 3.65% — change of 0 bps",
+    "Rate has been flat at 3.65% for the five trading days ending 2026-04-17",
+    "The IORB rate sets a floor for overnight repo market rates and represents the opportunity cost for banks holding reserves at the Fed",
+    "IORB at 3.65% corresponds to the current Fed Funds upper target bound; no FOMC rate action since July 2023"
+  ],
+  "why_it_matters": "IORB is a critical market structure parameter: it anchors the overnight repo rate floor (EFFR/EFFA corridor ceiling), influences bank reserve demand, and reflects the Fed's current monetary policy stance. A flat IORB confirms the Fed is on hold and that the plumbing of short-term funding markets remains stable at current rate levels.",
+  "market_impact": {
+    "asset_classes": [
+      "repo",
+      "money_market",
+      "treasury"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 8
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB defines the opportunity cost for reserve holdings and serves as a key benchmark for money market instruments. The flat observation indicates stable Fed operating framework conditions and no recent changes to the interest on reserves regime. In the current floor system, EFFR typically trades below IORB (no penal rate), and the IORB ceiling constrains repo market rates.",
+  "important_numbers": [
+    "3.65% — IORB rate (2026-04-17)",
+    "3.65% — IORB rate (2026-04-16)",
+    "0 bps — absolute change"
+  ],
+  "tags": [
+    "interest-on-reserves",
+    "fed-operating-framework",
+    "money-market-floor",
+    "bank-reserves",
+    "iorb"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Data point is a daily series observation, not an editorial article. Source is authoritative (FRED/Federal Reserve Bank of St. Louis). Flat rate is consistent with no rate actions since July 2023. Low information density but accurate and directly relevant to market structure."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_17.txt",
+  "notes": "This is a raw data series observation from FRED, not a news article or commentary. The IORB series provides daily snapshots of the Fed's reserve remuneration rate. A flat 5-day reading indicates stable policy conditions; no signal or catalyst here, only a baseline market structure data point.",
+  "linked_quant_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "bank_of_england_publications_r_bank_of_england_weekly_report_8_april_2026_bank_of_england_9526dd4d",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 105.0
+    },
+    {
+      "record_id": "ny_fed_liberty_street_economic_a_closer_look_at_emerging_market_resilience_during_recent_sh_bdce92e4",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 105.0
+    },
+    {
+      "record_id": "bis_speeches_rss_denis_beau_stablecoins_what_strategic_choices_for_europe_54a94de6",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 105.0
+    }
+  ],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 69.0,
+    "reasoning": [
+      "quality score: 69.0/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}
