@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - while the filing is a routine SEC disclosure without macro relevance, 'regulatory_filing' as source_type suggests a more appropriate event_type could be identified if this were in scope",
+    "The record is factually accurate and faithful to the source text, but the source itself is a thin, boilerplate disclosure with no substantive content",
+    "Exhibit 99.1 (the actual investor presentation) is referenced but not included in the source body, preventing any meaningful analysis",
+    "No macro data, policy information, market operations, or structural elements are present in this source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately represents the source content, but the scope relevance determination requires human judgment. The filing is a routine corporate SEC disclosure from a small regional bank with no market structure or macro catalyst relevance. Human should confirm exclusion based on scope mismatch rather than source accuracy.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing has no relevance to market structure or macro catalysts. It is a routine SEC disclosure from a small regional bank containing no market-moving information, policy signals, or structural data of broader financial system interest.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

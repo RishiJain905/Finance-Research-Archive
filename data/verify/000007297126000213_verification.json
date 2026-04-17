@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but this is clearly a corporate earnings announcement/results filing. Given the taxonomy provided (which lacks an explicit 'earnings_release' category), 'data_release_other' would be more appropriate than 'unknown'.",
+    "The record correctly notes this filing lacks macro/market structure relevance, but the recommendation leans toward rejection for being out of scope rather than for any factual inaccuracy.",
+    "Source age is 3 days before TODAY (2026-04-17), well within acceptable limits."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The generated record is factually accurate and well-structured, correctly noting that: (1) the 8-K contains no specific financial metrics, (2) actual results are in referenced exhibits not included in the filing body, and (3) the filing lacks macro/market structure relevance. However, the record acknowledges bank earnings can have 'secondary macro implications.' Human review is needed to determine whether corporate earnings filings from major banks should be included in the archive, even when the filing body itself contains no specific data or commentary.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
