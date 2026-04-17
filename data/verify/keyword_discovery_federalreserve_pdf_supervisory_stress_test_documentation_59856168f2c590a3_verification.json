@@ -1,17 +1,16 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
+  "verification_confidence": 7,
+  "verdict": "review",
   "issues_found": [
-    "source_type is set to 'research_paper' but should more accurately reflect 'regulatory_guidance' or 'regulatory_documentation' given the document is Federal Reserve model documentation for DFA stress tests",
-    "Minor classification inconsistency: event_type is correctly 'regulatory_guidance' but source_type uses the less precise 'research_paper'"
+    "Source body was truncated; full model specifications not accessible for detailed verification of calibration details and alternative approaches mentioned in key_points"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Record is technically accurate based on visible source content. Minor concern: source truncation prevents verification of detailed model specifications, but the high-level summary and listed model categories are confirmed in the table of contents. Source is authoritative federal regulatory documentation with clear archival value.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Board of Governors of the Federal Reserve System released technical model documentation for the 2026 Supervisory Stress Test covering eight market risk models. The document details the Securities, Fair Value Option, Yield Curve, Private Equity, Trading Profit and Loss, Trading Issuer Default Loss, CVA, and Largest Counterparty Default (LCPD) Models. Originally published October 2025, it was updated January 2026.",
-    "why_it_matters": "Banks subject to DFA stress testing requirements need this technical documentation to understand how the Fed calculates stress losses across trading operations, securities portfolios, and counterparty exposures. Model transparency enables institutions to better prepare for annual supervisory stress tests and calibrate internal risk estimates.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": "This documentation provides transparency into Federal Reserve supervisory stress test methodologies, revealing how the central bank assesses market risk across trading books, securities portfolios, and counterparty credit exposures under the DFA framework."
+    "market_structure_context": ""
   }
 }

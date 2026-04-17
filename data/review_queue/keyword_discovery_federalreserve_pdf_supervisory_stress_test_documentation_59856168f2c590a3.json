@@ -1,0 +1,83 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_59856168f2c590a3",
+  "created_at": "2026-04-17T16:46:07.409970+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "Supervisory Stress Test Documentation Market Risk Models",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/market-risk-models.pdf",
+    "published_at": "2026-01",
+    "source_type": "pdf",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve published comprehensive technical documentation detailing the market risk models to be used in the 2026 Supervisory Stress Test, covering Securities, Fair Value Option, Yield Curve, Private Equity, Trading P&L, Trading Issuer Default Loss, CVA, and Largest Counterparty Default models. This document provides model specifications, calibration rationale, alternative approaches considered, and data adjustments for each component.",
+  "key_points": [
+    "Covers 8 model categories: Securities Model, Fair Value Option Model, Yield Curve Model, Private Equity Model, Trading P&L Model, Trading Issuer Default Loss Model, CVA Model, and LCPD Model",
+    "Updated January 2026, originally published October 2025, for use in the 2026 Supervisory Stress Test",
+    "Each model section includes statement of purpose, model overview, specification details, calibration rationale, alternative approaches, data adjustments, and assumptions/limitations",
+    "Yield Curve Model covers Treasury, SOFR, and Corporate rate modeling components",
+    "CVA Model includes both Standard and Non-Standard approaches for credit valuation adjustment calculations",
+    "Trading Issuer Default Loss Model includes technical specification by portfolio segment and calibration details"
+  ],
+  "why_it_matters": "This documentation is critical for large banks and trading desks to understand how the Federal Reserve will model market risk under stress scenarios. Banks subject to the supervisory stress test must align their internal models and risk calculations with Fed methodology to pass the test. The document reveals how the Fed will stress credit spreads, yields, counterparty defaults, and trading losses.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Defines the regulatory framework and methodology for how the Fed models market risk in bank stress tests, including yield curves (Treasury, SOFR, corporate), credit risk (CVA, default losses), and counterparty exposure (LCPD).",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "stress-test",
+    "market-risk-models",
+    "regulatory-guidance",
+    "banking-regulation",
+    "dfast",
+    "supervisory-testing",
+    "credit-risk",
+    "yield-curve"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source body was truncated; full model specifications not accessible for detailed verification of calibration details and alternative approaches mentioned in key_points"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is technically accurate based on visible source content. Minor concern: source truncation prevents verification of detailed model specifications, but the high-level summary and listed model categories are confirmed in the table of contents. Source is authoritative federal regulatory documentation with clear archival value."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_59856168f2c590a3.txt",
+  "notes": "Source is a technical PDF document from Federal Reserve covering stress test model methodology. Relevant to market structure as it defines the regulatory framework for bank market risk modeling. Source body was truncated; detailed model specifications not fully accessible. Document is authoritative Federal Reserve guidance but is highly technical and primarily relevant to bank risk managers and compliance teams rather than traders. Recent publication (January 2026) with clear regulatory authority.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "regulatory",
+    "score": 7,
+    "reasoning": [
+      "High-trust domain (federalreserve.gov)",
+      "Authoritative source from Board of Governors",
+      "Recent publication (2026)",
+      "Technical depth appropriate for regulatory guidance",
+      "Source truncated - full model details not visible in provided text"
+    ]
+  }
+}
