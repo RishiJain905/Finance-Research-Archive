@@ -1,7 +1,7 @@
 {
   "id": "fed_funds_2026_04_16",
   "created_at": "2026-04-16T15:08:59.246435+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "Effective Federal Funds Rate - Daily Snapshot",
@@ -54,30 +54,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate and properly attributed. Required corrections are straightforward: event_type should be 'data_release_other' instead of 'unknown'. The thin-source concern is valid but the EFFR level is a legitimate daily data point with archival reference value. Auto-correction is appropriate."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-17T02:56:57.884442+00:00"
   },
   "raw_text_path": "data/raw/fed_funds_2026_04_16.txt",
   "notes": "Source is a quantitative data feed from FRED, not an analytical document. Contains only the EFFR level and recent observations with no interpretation, policy context, or narrative. The 3.64% level should be cross-referenced with FOMC statements to understand its significance in the current policy cycle. This source has minimal archival value on its own for macro catalyst or market structure research.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "Tier 3 - Low Value",
-    "score": 4,
+    "tier": "tier_2",
+    "score": 59.5,
     "reasoning": [
-      "Raw data point only—no analysis, commentary, or policy signal",
-      "No narrative context for the rate level",
-      "Five-day flat observation is mechanically unremarkable",
-      "Useful as reference data point but not substantive research content"
+      "quality score: 59.5/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
