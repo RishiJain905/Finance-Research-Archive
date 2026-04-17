@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - SEC Form 8-K filings should have a valid event type assigned",
+    "Source body truncated before completing Item 7.01/8.01 content on stock repurchase program",
+    "Record accurately notes lack of relevance to market structure or macro catalysts"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the factual content of the record is accurate and well-summarized, the record correctly identifies that this source falls outside the focus on market structure or macro catalysts. The event_type of 'unknown' should be resolved (likely 'regulatory_guidance' or a new category for governance filings). Human decision needed on whether routine micro-cap corporate governance filings should be accepted despite accurate representation.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

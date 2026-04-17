@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - while this is understandable given the narrow taxonomy, a Form 8-K earnings announcement could reasonably be tagged as a data_release or economic_commentary if such flexibility existed"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate and source attribution is correct. The low verification_confidence (0) and quality_tier score (1) in the record are appropriate given the source's limited relevance to macro/market structure topics. The suggested_status of 'review_queue' is slightly conservative given that the record itself correctly identifies this as not relevant.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "GameSquare Holdings, Inc. filed a Form 8-K on April 8, 2026 (signed April 9), disclosing financial results for the three months ended December 31, 2025 (Q4 2025). This is a routine SEC filing by a small-cap gaming company (ticker: GAME) listed on Nasdaq.",
+    "why_it_matters": "This is a routine corporate earnings announcement for a single small-cap company in the gaming sector. It has no relevance to macro market catalysts, monetary policy, or market structure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

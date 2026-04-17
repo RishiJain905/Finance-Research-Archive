@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when source is clearly a regulatory filing (8-K). While 'regulatory_filing' is not in the event_type taxonomy, the record could use a more descriptive classification.",
+    "The record correctly identifies this source as not relevant to macro catalysts or market structure, but the human_review.required field is set to false despite suggested_status being 'rejected' — human review should confirm the exclusion decision."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The generated record is factually accurate and well-structured, correctly assessing that the source has no macro or market structure relevance. However, the archive must decide whether routine SEC 8-K filings for micro-cap OTC companies should be archived at all. The LLM review and quality tier appropriately flag this as 'excluded', but human confirmation is needed to formalize this exclusion policy.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

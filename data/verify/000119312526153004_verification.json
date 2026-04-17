@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is completely empty - all fields are blank",
+    "Source attribution fields (name, url, domain, source_type, published_at) are all empty",
+    "Summary, key_points, why_it_matters, macro_context, and market_structure_context are all empty",
+    "Source is a thin 8-K cover page that references Exhibit 99.1 (press release) which is not included in the source body - actual AUM figures are missing",
+    "The 8-K only announces that a press release exists; the substantive AUM data referenced is not provided in the source",
+    "Source provides no substantive market-relevant information beyond confirming the filing date and company name"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated research record is entirely blank with no content. Additionally, the source itself is a thin 8-K cover page that references an attached press release (Exhibit 99.1) containing the actual AUM data, which is not included in the provided source body. The source cannot be verified as it lacks the substantive information needed to assess relevance to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
