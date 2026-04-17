@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is entirely irrelevant to market structure or macro catalysts — this is a routine biotech CFO appointment with no broader market implications",
+    "event_type is 'unknown' when the filing type (executive appointment via 8-K) is obvious from context — should have a valid taxonomy value or be clearly marked for rejection",
+    "topic field is empty — no thematic anchor provided for what should be a rejected record",
+    "source_type is 'unknown' — should be 'sec_filing' given the SEC EDGAR origin",
+    "Record should not be in the archive given its complete irrelevance to the stated scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Reject is clear-cut — source has no relevance to market structure or macro catalysts, event_type is inappropriately 'unknown' when the type is obvious, and the record should be excluded from the archive entirely",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

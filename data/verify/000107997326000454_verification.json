@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific SEC Form 8-K filing for Zapata Quantum, Inc., a small-cap quantum computing company",
+    "No relevance to market structure or macro catalysts as defined in core rules",
+    "Source contains no monetary policy, interest rate decisions, macroeconomic data, or market operations content",
+    "event_type is set to 'unknown' which is appropriate since this corporate financing disclosure does not fit the defined taxonomy (fomc_statement, rate_decision, speech_hawkish, data_release_*, etc.)",
+    "Routine equity financing disclosure has no archival value for a finance research archive focused on market structure or macro catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is clearly not relevant to the archive's focus areas. This is a routine corporate SEC filing with no broader market implications. The existing human review decision to exclude is correct.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

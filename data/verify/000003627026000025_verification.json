@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is completely empty — all fields (summary, key_points, why_it_matters, etc.) are blank",
+    "Source attribution fields (name, url, domain) are empty",
+    "event_type field is missing",
+    "No content was generated from the source",
+    "Source is a regulatory filing announcing Q1 2026 results, but the actual earnings data (Exhibit 99.1) is not included in the source text — only a reference to it",
+    "The filing itself contains no market-moving information; it's a standard 8-K disclosure of corporate administrative details"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is entirely blank. No content was extracted or generated from the source. Additionally, the source itself is a thin SEC filing that references a separate news release (Exhibit 99.1) containing the actual earnings figures, but this exhibit is not included in the provided source text. Even if content existed, this appears to be a standard quarterly earnings disclosure for a regional bank — not a macro catalyst or market structure event.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

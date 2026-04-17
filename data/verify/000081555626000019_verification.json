@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate earnings 8-K filing from Fastenal, which is outside the scope of market structure and macro catalysts research",
+    "No substantive data in source body — the press release (Exhibit 99.1) with earnings figures is referenced but not included",
+    "event_type set to 'unknown' is acceptable here as no taxonomy value applies to this corporate earnings announcement",
+    "Source is too thin to have archival value for a finance research archive focused on market catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The rejection is clear-cut based on topic scope mismatch. The record correctly identifies that: (1) this is a corporate earnings filing outside the archive's scope, and (2) the substantive content (press release) is not included in the source body. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

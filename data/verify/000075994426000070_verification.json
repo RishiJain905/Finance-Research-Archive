@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate earnings filing (8-K) for a regional bank — not relevant to market structure or macro catalysts",
+    "Actual earnings data is not present in the 8-K body; exhibits (99.1, 99.2, 99.3) containing financial data are referenced but not included in this filing",
+    "event_type is set to 'unknown' — this is a corporate earnings announcement, which should have a specific type like 'earnings_release' if the taxonomy supported it, but it should not be 'unknown'",
+    "Source provides no information on macroeconomic conditions, monetary policy, interest rates, or market structure",
+    "The filing is essentially a container page linking to exhibits — thin content with no standalone research value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The verdict is clear-cut: a regional bank earnings 8-K is not relevant to macro/market structure research. The LLM correctly identified this as irrelevant. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "event_type": "unknown"
+  }
+}

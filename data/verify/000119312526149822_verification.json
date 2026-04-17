@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a routine small-cap biotech 8-K filing about an ATM equity offering, which is company-specific and has no relevance to broader financial markets, trading operations, or macro policy",
+    "event_type set to 'unknown' when the correct type is not among the defined taxonomy values for financial research archiving (monetary policy, speeches, data releases, Treasury/operations, research)",
+    "Source lacks archival value for financial research purposes — it's a routine corporate securities filing material only to AN2 Therapeutics shareholders"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is definitively irrelevant to market structure or macro catalysts. No human review needed — the record correctly identifies the filing's nature and has appropriately left topic and macro_context fields empty. This filing would only be relevant in a company-specific equity research context, not a finance/macro research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

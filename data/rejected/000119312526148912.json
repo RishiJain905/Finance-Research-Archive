@@ -1,0 +1,48 @@
+{
+  "name": "SEC EDGAR",
+  "url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312526148912/d136714d8k.htm",
+  "published_at": "2026-04-09",
+  "source_type": "sec_edgar",
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Record contains no summary of the source content — both Senior Notes ($1.25B due 2031) and Convertible Notes ($3.0B due 2032) offerings are unmentioned",
+      "key_points array is empty — no capture of the debt offering amounts, terms, or use of proceeds",
+      "topic field is empty — no identification that this is a debt capital markets filing for CoreWeave",
+      "event_type is missing entirely — this should be classified as 'treasury_issuance' or similar valid taxonomy value",
+      "source.nested object is empty — lacks source name attribution (should reference SEC EDGAR/CoreWeave 8-K)",
+      "why_it_matters, macro_context, and market_structure_context are all empty",
+      "market_impact section is empty with no asset classes, directional bias, or confidence assessment",
+      "Record is essentially a bare URL with no substantive content extracted from the source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is critically incomplete — it contains only a URL and date with zero extraction of the substantive content from the 8-K filing. While the source itself is a legitimate, high-value SEC filing relevant to market structure (debt issuance by a major AI infrastructure company), the record fails to capture any of this information. Human review needed to either regenerate with proper extraction or manually create the record from the source."
+  },
+  "summary": "CoreWeave, Inc. filed an 8-K announcing two debt offerings: (1) $1.25 billion in senior notes due 2031 and (2) $3.0 billion in convertible senior notes due 2032, both in private placements to qualified institutional buyers under Rule 144A. The company intends to use proceeds for general corporate purposes including debt repayment and, for the convertibles, to fund capped call transactions.",
+  "key_points": [],
+  "why_it_matters": "CoreWeave is a major AI/cloud infrastructure provider. These debt offerings represent significant capital raising activity — combined potential issuance of up to $4.7 billion — reflecting continued heavy investment in GPU compute infrastructure. The convertibles include capped call transactions, which are relevant to options market structure and potential equity derivative exposure.",
+  "macro_context": "The filings come during a period of elevated AI infrastructure spending. CoreWeave's debt financing activity provides insight into capital market conditions for AI-focused companies and the cost of leverage in the sector.",
+  "market_structure_context": "Convertible notes with capped call overlays create structured equity exposure that can affect options markets and warrant monitoring for vol surface impacts. Senior unsecured debt issuance signals credit market appetite for AI infrastructure names.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

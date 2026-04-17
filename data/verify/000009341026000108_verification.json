@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'economic_commentary' is a weak fit for a corporate 8-K earnings guidance filing; 'earnings_guidance' or 'corporate_filing' would be more appropriate if available, but no explicit taxonomy for this exists, so 'economic_commentary' is defensible"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is mostly accurate with all key numbers correctly transcribed from the source. Minor issue is the event_type classification, but this is a taxonomy limitation rather than a factual error. Source is clearly a corporate filing with explicit attribution to Middle East conflict impacts, warranting archival value.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "The filing is relevant to commodities (oil) and equities markets. Production guidance of 3.8-3.9 MMBOED affects oil supply expectations. The timing effects from derivatives marking in a rising price environment (negative $2.7-3.7B) versus commodity price benefits (positive $1.6-2.2B) reflects how financial hedging creates earnings volatility distinct from underlying physical performance. Working capital outflows of $2-4B indicate higher inventory values in a rising commodity price environment."
+  }
+}

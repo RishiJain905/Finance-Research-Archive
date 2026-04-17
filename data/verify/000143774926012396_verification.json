@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate 8-K filing with no macro-relevant content",
+    "Actual earnings figures are in Exhibit 99.1, which is not included in the source text",
+    "No market structure or macro catalyst content present",
+    "event_type set to 'unknown' - while correct that this doesn't fit neatly into the taxonomy, the record should at minimum acknowledge it as a corporate earnings event",
+    "Record appropriately notes lack of relevance but the source itself should not be archived as it adds no value beyond a filing receipt acknowledgment"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's assessment is accurate. This source is irrelevant to the finance research archive's focus on market structure and macro catalysts. The 8-K is purely an earnings announcement receipt with no substantive content included.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "J.B. Hunt Transport Services, Inc. filed an 8-K on April 15, 2026, announcing Q1 2026 revenues and earnings for the quarter ended March 31, 2026. The detailed earnings release is provided as Exhibit 99.1 but the specific financial figures are not included in the 8-K filing text itself.",
+    "why_it_matters": "This is a routine corporate earnings announcement for a trucking and logistics company. The filing itself does not provide macro-relevant commentary or market structure analysis. Any macro insights would require reviewing the attached Exhibit 99.1 earnings release, which is not included in this source text.",
+    "market_structure_context": ""
+  }
+}
