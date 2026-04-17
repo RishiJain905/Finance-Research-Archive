@@ -64,7 +64,18 @@
   "raw_text_path": "data/raw/fed_funds_2026_04_17.txt",
   "notes": "This is raw daily EFFR data from FRED. The source is thin—it provides only the rate value without context about recent FOMC decisions, target range, or policy signals. Cannot determine if 3.64% represents the target midpoint without additional Fed sources. Recommend linking to most recent FOMC statement for target range context. The FRED DFF series typically tracks the Fed's target rate closely but may lag slightly during rate transitions. Recent observation showing flat rate for 5 days suggests stable policy conditions.",
   "linked_quant_context": [],
-  "linked_article_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "keyword_discovery_federalreserve_speech_by_governor_waller_on_bfb4a8b124da31c6",
+      "relationship": "temporally_proximate_article",
+      "reason": "within 3 days, exact topic match, complementary context",
+      "topic_overlap": [
+        "macro catalysts",
+        "fomc"
+      ],
+      "link_score": 127.7
+    }
+  ],
   "quality_tier": {
     "tier": "tier_2",
     "score": 56.0,
