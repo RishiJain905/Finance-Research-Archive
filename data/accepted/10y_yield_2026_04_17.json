@@ -1,7 +1,7 @@
 {
   "id": "10y_yield_2026_04_17",
   "created_at": "2026-04-17T14:40:14.613409+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "10-Year Treasury Yield (DGS10) Daily Snapshot",
@@ -56,29 +56,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record accurately represents the source data (correct yield values, correct dates, correct directional change), but this is a borderline case on archival worth. A raw FRED data snapshot is accurate and attributable but provides no analytical context or macro catalyst explanation. Human judgment is needed to decide whether pure data points without narrative meet the archive's threshold for research content."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-17T15:01:49.133622+00:00"
   },
   "raw_text_path": "data/raw/10y_yield_2026_04_17.txt",
   "notes": "Source is a pure quantitative data series snapshot from FRED. Provides only the latest daily yield observation without narrative context, analysis, or attribution of drivers. Sufficient as a market data point but thin for research archive purposes. Recommend linking to contemporaneous articles or statements that may explain yield moves.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "data-point",
-    "score": 3,
+    "tier": "tier_2",
+    "score": 56.0,
     "reasoning": [
-      "Raw data snapshot with no analytical content",
-      "No macro catalyst attribution or context provided",
-      "Minimal research archival value beyond the data point itself"
+      "quality score: 56.0/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
