@@ -1,7 +1,7 @@
 {
   "id": "2y_yield_2026_04_16",
   "created_at": "2026-04-16T15:10:47.063339+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "2-Year Treasury Yield (DGS2) Daily Snapshot",
@@ -57,30 +57,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "This is a borderline case. The source is factually accurate, properly attributed (FRED with URL), the event_type is valid (data_release_other is appropriate for a yield data point), and there's no fabricated information. However, the record itself acknowledges it lacks catalyst explanation. The record captures market structure relevance (2-year yield as Fed policy expectation gauge) but provides no actionable research value beyond the raw numbers. Human should decide whether thin data snapshots warrant archival inclusion or if linked analysis is preferred."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-17T02:56:52.918471+00:00"
   },
   "raw_text_path": "data/raw/2y_yield_2026_04_16.txt",
   "notes": "This source provides only a single data point from a FRED time series. It is recent (one day old relative to TODAY) and accurate as a factual record, but lacks the qualitative context needed for a research archive. For meaningful macro research, this data point should be linked to accompanying news or analysis explaining the yield movement. Classified as macro catalysts based on TARGET metadata provided.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "data",
-    "score": 40,
+    "tier": "tier_2",
+    "score": 60.5,
     "reasoning": [
-      "Raw time-series data point without narrative",
-      "No catalyst or context provided",
-      "Low research value as standalone record",
-      "Would require linked analysis for RAG utility"
+      "quality score: 60.5/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
