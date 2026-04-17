@@ -1,7 +1,7 @@
 {
   "id": "sofr_2026_04_16",
   "created_at": "2026-04-16T15:08:59.246597+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "data_release_other",
   "title": "SOFR Rate Observation - April 15, 2026",
@@ -60,31 +60,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Source is accurate and properly attributed, but represents raw market data without analytical context. The record honestly acknowledges this limitation. Human judgment needed to determine: (1) Does a timestamped SOFR observation have standalone archival value for a finance research archive, or should it only be archived as supporting data alongside analytical commentary? (2) Should the record be rejected as thin/low-signal, or accepted with a 'data observation' qualifier noting it requires supplementary context?"
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-17T02:57:53.885254+00:00"
   },
   "raw_text_path": "data/raw/sofr_2026_04_16.txt",
   "notes": "Low-information source: this FRED snapshot provides only the raw SOFR rate observation without any commentary on causation, market conditions, or significance. While accurate and verifiable, it has limited standalone research value. Best used in conjunction with contemporaneous market commentary explaining the rate movement.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "tier_3",
-    "score": 5,
+    "tier": "tier_2",
+    "score": 55.5,
     "reasoning": [
-      "Raw data point with no analytical context",
-      "Verifiable and accurate numbers from authoritative source (FRED/Fed Reserve)",
-      "Cannot determine significance of SOFR movement without additional context",
-      "Limited value for RAG purposes without supporting market commentary",
-      "Suitable as a timestamped rate observation but not as substantive research archive"
+      "quality score: 55.5/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
