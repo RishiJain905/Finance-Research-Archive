@@ -1,7 +1,7 @@
 {
   "id": "fed_funds_2026_04_17",
   "created_at": "2026-04-17T14:38:11.324812+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "Effective Federal Funds Rate (DFF) — Daily Observation",
@@ -57,25 +57,33 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "This record is accurate to the source but tests the boundaries of archival value. A single daily EFFR observation with no policy context is thin but may have historical value for rate trajectory tracking. The archive's scope for raw data points needs human judgment—should a single 3.64% reading without FOMC linkage be archived standalone, or is this monitoring data better linked to the most recent FOMC statement for context?"
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "raw_text_path": "data/raw/fed_funds_2026_04_17.txt",
   "notes": "This is raw daily EFFR data from FRED. The source is thin—it provides only the rate value without context about recent FOMC decisions, target range, or policy signals. Cannot determine if 3.64% represents the target midpoint without additional Fed sources. Recommend linking to most recent FOMC statement for target range context. The FRED DFF series typically tracks the Fed's target rate closely but may lag slightly during rate transitions. Recent observation showing flat rate for 5 days suggests stable policy conditions.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "basic",
-    "score": 4,
+    "tier": "tier_2",
+    "score": 56.0,
     "reasoning": [
-      "Single daily data point with no policy context",
-      "No mention of FOMC target range or recent decisions",
-      "Raw observation requires external data for full interpretation",
-      "Source is authoritative (FRED) but content is minimal",
-      "Cannot determine macro catalyst relevance without broader context"
+      "quality score: 56.0/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
-  "telegram_review_fingerprint": "6c04b2bce5a06f4f80f2196406a21314bd467835"
+  "telegram_review_fingerprint": "6c04b2bce5a06f4f80f2196406a21314bd467835",
+  "human_feedback": {
+    "decision": "approve",
+    "reviewed_at": "2026-04-17T15:01:54.271479+00:00"
+  }
 }
