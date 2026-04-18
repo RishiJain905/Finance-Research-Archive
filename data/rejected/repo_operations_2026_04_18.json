@@ -1,0 +1,82 @@
+{
+  "id": "repo_operations_2026_04_18",
+  "created_at": "2026-04-18T14:10:16.405299+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations Data - API Fetch Failure",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "nyfed.org",
+    "published_at": "2026-04-18",
+    "source_type": "api_error"
+  },
+  "summary": "An attempt to retrieve the latest NY Fed repo operation data failed with a 400 Bad Request error. No actual repo operation data was obtained from the NY Fed Markets API for the snapshot date of 2026-04-18. This constitutes a failed data fetch rather than an actual market operations record.",
+  "key_points": [
+    "API endpoint returned 400 Bad Request error",
+    "Target URL was https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation data was retrieved",
+    "Snapshot date requested was 2026-04-18",
+    "Actual operation amounts, rates, or counterparties are unknown"
+  ],
+  "why_it_matters": "NY Fed repo operations are critical components of the federal funds market and short-term funding plumbing. Failed data retrieval means no visibility into the Fed's daily repo operations, which affects understanding of money market conditions, RRP usage, or any temporary liquidity interventions. This record is a diagnostic marker for a failed data collection attempt.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The NY Fed repo operations API failed to return data. Without this information, there is no visibility into daily repo operations including any overnight reverse repo (ON RRP) usage, term repo operations, or changes in the Fed's balance sheet accommodation. The data gap prevents assessment of money market conditions on 2026-04-18.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "api-error",
+    "market-structure",
+    "failed-fetch",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only a 400 Bad Request error - no actual content was retrieved",
+      "No substantive research data exists to archive; this is an API error diagnostic, not research",
+      "Archive value is zero - a failed fetch is not a market structure event or macro catalyst",
+      "The source cannot be used to understand repo operations, money market conditions, or Fed balance sheet activity because no data was obtained",
+      "Archiving a failed API response sets a precedent that degrades archive quality"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately documents the failed fetch, but archiving an API error as a research record has no value for a finance research archive. This should be retried, corrected, or discarded - not archived as research content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_18.txt",
+  "notes": "This is a failed data fetch record, not an actual NY Fed repo operations source. The API endpoint returned a 400 Bad Request, indicating the URL or request parameters may be incorrect. The NY Fed Markets API for repo operations may require authentication, specific date parameters, or the endpoint structure may have changed. This record should be used as a diagnostic marker. No substantive market structure data was obtained.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed_fetch",
+    "score": 0,
+    "reasoning": [
+      "No actual source content was retrieved",
+      "Only an API error message present in source body",
+      "Cannot extract any repo operation data",
+      "No value for market structure research without actual operations data"
+    ]
+  }
+}

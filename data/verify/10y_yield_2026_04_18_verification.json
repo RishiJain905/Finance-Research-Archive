@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — raw price data snapshot has no meaningful categorization in the event taxonomy; this should not be submitted as a research record",
+    "source.url is empty — no specific FRED series URL or link provided, only domain listed",
+    "Source is raw numerical snapshot, not an article, research document, or analytical piece",
+    "No author/institution attribution beyond domain name",
+    "No analytical context — no explanation of what drove the yield move",
+    "No historical context — no comparison to prior periods (1 month, 1 year)",
+    "Record has very limited archival value for research/RAG purposes without accompanying analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is raw price data with no analytical depth, institutional attribution, or contextual narrative. The source does not qualify as a research document. Human review should assess whether single-point data snapshots should be included in the archive at all, or whether this should be rejected in favor of sources that provide macro catalyst context.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

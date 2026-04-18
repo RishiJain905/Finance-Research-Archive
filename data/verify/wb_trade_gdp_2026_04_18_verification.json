@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a failed data query with no actual content - only a null response from the World Bank API endpoint",
+    "No extractable data values, statements, analysis, or policy signals present in source",
+    "Source type is 'data_endpoint' not 'article' - does not meet article-like requirement",
+    "Record provides no basis for market structure or macro catalyst analysis",
+    "Topic 'global_economy' is outside the archive's required focus areas per source metadata topic, and the source itself contains no macro content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection appropriate - source contains zero content (failed API response), cannot support any research, analysis, or archival purpose. No human judgment needed when source is a null data query.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "10y_yield_2026_04_18",
+  "created_at": "2026-04-18T14:09:30.138036+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "10-Year Treasury Yield",
+  "source": {
+    "name": "10-Year Treasury Yield",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-16",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The 10-Year Treasury yield stood at 4.32% as of April 16, 2026, up 3 basis points from the prior day's close of 4.29%. The yield has oscillated in a narrow range between 4.26% and 4.32% over the past five trading days.",
+  "key_points": [
+    "Latest observation: 4.32% on 2026-04-16",
+    "Previous observation: 4.29% on 2026-04-15",
+    "Absolute change: +0.03 (direction: up)",
+    "Recent range (2026-04-10 to 2026-04-16): 4.26% to 4.32%",
+    "Data sourced from FRED (Federal Reserve Economic Data)"
+  ],
+  "why_it_matters": "The 10-year yield is a benchmark rate that influences mortgage costs, corporate borrowing costs, and risk asset valuations. However, this snapshot provides only a single data point without context on what drove the move.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Treasury yields serve as a key input for macro analysis and rate path expectations, but this raw data point does not include any commentary on the drivers of the move or its implications for monetary policy.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.32%",
+    "4.29%",
+    "+0.03 bps"
+  ],
+  "tags": [
+    "10-year-yield",
+    "treasury",
+    "bonds",
+    "macro-input",
+    "yield-curve"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' — raw price data snapshot has no meaningful categorization in the event taxonomy; this should not be submitted as a research record",
+      "source.url is empty — no specific FRED series URL or link provided, only domain listed",
+      "Source is raw numerical snapshot, not an article, research document, or analytical piece",
+      "No author/institution attribution beyond domain name",
+      "No analytical context — no explanation of what drove the yield move",
+      "No historical context — no comparison to prior periods (1 month, 1 year)",
+      "Record has very limited archival value for research/RAG purposes without accompanying analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_18.txt",
+  "notes": "This is a single-point snapshot from FRED, not a research document. Raw price data lacks the analytical depth needed for a meaningful research archive entry. This would need to be linked to an article, commentary, or policy document that provides context for why yields are moving. As-is, it has very limited archival value for RAG retrieval on macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "Source is raw market data, not a structured research document",
+      "Contains no analysis, commentary, or policy signals",
+      "Missing institutional context and attribution",
+      "No historical perspective provided for interpretation",
+      "Cannot extract meaningful insights about macro catalysts"
+    ]
+  }
+}

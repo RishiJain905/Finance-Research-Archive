@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains no actual data - only a null API response indicating 'no valid observations were returned'",
+    "No publication date provided (published_at is empty)",
+    "No URL for source verification (url is empty)",
+    "Source attribution is incomplete - only domain and name are present, no actual link to retrieve the data",
+    "Record has minimal archival value - this is a data retrieval failure, not an informational document",
+    "The record correctly identifies the source as 'data_query' type, but data_release_other as event_type is misleading when no data was actually released"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes a null API result, but the underlying source is a data retrieval failure with no usable information. This raises a policy question: should failed API queries with no data be archived at all? The record is technically accurate but represents a thin, non-informative source with zero archival value for macro research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank API query for indicator FP.CPI.TOTL.ZG (Consumer Price Index inflation rate) returned no valid observations as of the snapshot date 2026-04-18. No actual inflation data, country-level figures, or trend information could be extracted from this source.",
+    "why_it_matters": "This source contains no usable data. The World Bank API query returned null results, providing no inflation figures for macro analysis. Researchers expecting global inflation data from this source will receive no information.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

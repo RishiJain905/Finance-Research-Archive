@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only a 400 Bad Request error - no actual content was retrieved",
+    "No substantive research data exists to archive; this is an API error diagnostic, not research",
+    "Archive value is zero - a failed fetch is not a market structure event or macro catalyst",
+    "The source cannot be used to understand repo operations, money market conditions, or Fed balance sheet activity because no data was obtained",
+    "Archiving a failed API response sets a precedent that degrades archive quality"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately documents the failed fetch, but archiving an API error as a research record has no value for a finance research archive. This should be retried, corrected, or discarded - not archived as research content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

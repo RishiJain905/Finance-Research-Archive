@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an empty API response with no actual GDP data - contains only error message 'No recent valid observations were returned'",
+    "Source attribution is incomplete: URL and domain fields are empty strings",
+    "Source type is 'unknown' but this is clearly a data API response, not a traditional research source",
+    "event_type set to 'unknown' - while technically correct given no data, 'data_release_gdp' would be expected if data existed",
+    "Record has minimal archival value as it documents the absence of data rather than providing actual macro information",
+    "market_impact is correctly empty/null (no data to drive market impact), but this further confirms the thin nature of the source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case where the topic (global_economy/GDP growth) is relevant to macro catalysts, and the record accurately summarizes what happened, but the source itself is completely empty (no actual data). Human review is needed to determine whether documenting the absence of World Bank GDP data has sufficient archival value, or whether this is simply a failed data query that should be rejected.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "World Bank GDP growth indicator NY.GDP.MKTP.KD.ZG returned no valid observations as of 2026-04-18, indicating the data source is currently unavailable or has not yet released updated figures. Without this indicator, macro analysis lacks a key gauge of global economic activity.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

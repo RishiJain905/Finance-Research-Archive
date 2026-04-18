@@ -1,0 +1,87 @@
+{
+  "id": "fed_funds_2026_04_18",
+  "created_at": "2026-04-18T14:08:02.093254+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "market_notice",
+  "title": "Effective Federal Funds Rate (DFF) — Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-16",
+    "source_type": "data_feed"
+  },
+  "summary": "The Effective Federal Funds Rate (EFFR) stands at 3.64% as of 2026-04-16, holding steady at that level since at least 2026-04-12. No change was recorded over the observation period (April 12–16).",
+  "key_points": [
+    "Latest EFFR value: 3.64% (2026-04-16)",
+    "Previous observation: 3.64% (2026-04-15), change: 0 (flat)",
+    "Rate has remained at 3.64% consistently from 2026-04-12 through 2026-04-16",
+    "This is a daily Fed operating rate, not a policy decision announcement"
+  ],
+  "why_it_matters": "The EFFR is the primary overnight lending rate in the US monetary system and serves as the anchor for short-term funding markets. A stable 3.64% indicates no change in current monetary policy implementation. Market participants use this rate as a reference for repo, money market, and short-duration instruments. (Note: EFFR is distinct from SOFR, which is based on Treasury collateral.)",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The 3.64% EFFR reflects the current policy rate in the Fed's operating framework, consistent with the FOMC's target range of 3.75–4.00% (for the upper bound). This daily figure captures actual overnight market rates within that range.",
+  "market_structure_context": "The EFFR is computed as the volume-weighted median of overnight fed funds transactions in the federal funds market. It serves as the primary benchmark for monetary policy implementation. SOFR, by contrast, is based on Treasury repo transactions and is a distinct reference rate.",
+  "important_numbers": [
+    "3.64% — current EFFR level",
+    "0 — absolute change day-over-day"
+  ],
+  "tags": [
+    "fed-funds",
+    "effr",
+    "monetary-policy",
+    "overnight-rate",
+    "fomc",
+    "rate-benchmark"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'market_notice' is not appropriate for this source; FRED data feed is neither a Treasury operation nor a market notice per taxonomy",
+      "event_type 'data_release_other' would be more accurate if treating this as a data point, but even that may overstate significance",
+      "Source is raw data feed with no policy signal, guidance, or forward-looking context",
+      "'why_it_matters' section overstates EFFR's role as 'the SOFR component input' — EFFR is the fed funds rate benchmark, SOFR is a separate Treasury repo-based rate",
+      "Record lacks analytical depth; no context on rate trajectory, policy expectations, or market reaction",
+      "FRED snapshot records historical values but does not itself constitute a catalyst event"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This is a borderline case requiring human judgment: the source data is factually accurate and from an authoritative provider (FRED), but the record represents a raw data snapshot rather than a macro catalyst. The event_type is misclassified, and the analytical value is thin. Human review is needed to determine whether raw data feeds of this type meet archival threshold for the specific use case."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_18.txt",
+  "notes": "This is a data feed snapshot from FRED, not an article or commentary. It records the daily EFFR without providing policy context. The SOURCE METADATA requested 'Effective Federal Funds Rate' as the target topic. While this data is relevant to macro catalysts (as a primary rate benchmark), it does not itself constitute a macro catalyst event—it is merely the current state. The date 2026-04-18 is today, so this is current/recent data with no staleness concern.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data_point",
+    "score": 2,
+    "reasoning": [
+      "Source is structured data feed, not narrative content",
+      "No policy signal, guidance, or forward-looking context provided",
+      "Limited standalone research value; best used as supplementary context",
+      "High factual reliability (FRED is authoritative) but low analytical depth"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "ce0bbb61f956825cf10042caa7c30d418485615e"
+}

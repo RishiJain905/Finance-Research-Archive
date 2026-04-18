@@ -1,0 +1,70 @@
+{
+  "id": "wb_public_debt_2026_04_18",
+  "created_at": "2026-04-18T14:10:40.692855+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-18",
+    "source_type": "data_query"
+  },
+  "summary": "The World Bank API returned no valid observations for indicator GC.DOD.TOTL.GD.ZS (total government debt as % of GDP) on snapshot date 2026-04-18. This is a null result indicating no retrievable data rather than a research document or data release.",
+  "key_points": [
+    "No valid observations returned for public debt indicator GC.DOD.TOTL.GD.ZS",
+    "Data query failed to retrieve current or historical debt-to-GDP figures",
+    "No content available for analysis or archiving"
+  ],
+  "why_it_matters": "This source provides no usable data or analysis. World Bank public debt ratios are macro-relevant for assessing fiscal sustainability across economies, but this particular query yielded no results. Cannot support any research, RAG, or analytical purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "null-result",
+    "gc-dod-totl-gd-zs"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_18.txt",
+  "notes": "Source is a failed API query result with no actual content. The World Bank indicator GC.DOD.TOTL.GD.ZS (total central government debt as % of GDP) returned no observations for snapshot date 2026-04-18. Cannot be used for any research purpose. Would require re-query or alternative data source to obtain public debt figures. Original TOPIC metadata indicates global_economy but source provides no data to support that or any other analysis.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No data content present",
+      "API null result cannot support research",
+      "Cannot verify or extract any numbers",
+      "No analysis or commentary provided"
+    ]
+  }
+}

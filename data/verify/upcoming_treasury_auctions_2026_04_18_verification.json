@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains only an API error message with no substantive market content",
+    "Record accurately describes the failure but has no auction data, dates, or terms to verify",
+    "Archival value is minimal — the record documents a failed data fetch rather than actual market structure information",
+    "No actionable market intelligence can be derived from this source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate in describing the API failure, but the underlying source has no substantive content. This creates ambiguity about whether documenting a failed fetch has archival value, or whether the record should be rejected and re-attempted with corrected parameters.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

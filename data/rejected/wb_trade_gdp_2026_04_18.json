@@ -1,0 +1,77 @@
+{
+  "id": "wb_trade_gdp_2026_04_18",
+  "created_at": "2026-04-18T14:11:23.743132+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "https://data.worldbank.org/indicator/TG.VAL.TOTL.GD.ZS",
+    "published_at": "2026-04-18",
+    "source_type": "data_endpoint",
+    "domain": "data.worldbank.org"
+  },
+  "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no recent valid observations on the retrieval date. This is a data query result indicating no current data is available for this indicator.",
+  "key_points": [
+    "World Bank indicator TG.VAL.TOTL.GD.ZS returned no valid observations",
+    "Retrieval date: 2026-04-18",
+    "No data values, dates, or metadata were provided in the response",
+    "This represents a data retrieval failure, not a substantive research document"
+  ],
+  "why_it_matters": "This source contains no actionable information. A failed data retrieval for an important trade metric (World Trade as % of GDP) provides no basis for market structure or macro catalyst analysis. Users seeking global trade data will need to query an alternative source or retry at a later date.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "data-missing",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a failed data query with no actual content - only a null response from the World Bank API endpoint",
+      "No extractable data values, statements, analysis, or policy signals present in source",
+      "Source type is 'data_endpoint' not 'article' - does not meet article-like requirement",
+      "Record provides no basis for market structure or macro catalyst analysis",
+      "Topic 'global_economy' is outside the archive's required focus areas per source metadata topic, and the source itself contains no macro content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "Automated rejection appropriate - source contains zero content (failed API response), cannot support any research, analysis, or archival purpose. No human judgment needed when source is a null data query."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_18.txt",
+  "notes": "Source is a data endpoint that returned no observations. Topic per metadata is global_economy, which falls outside the required focus on market structure or macro catalysts. This record is not suitable for the finance research archive as it contains no extractable content. Consider querying alternative data sources for World Trade (% of GDP) data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 0,
+    "reasoning": [
+      "No data retrieved from World Bank indicator",
+      "No content available for analysis",
+      "Topic outside required scope",
+      "Cannot support any market or macro assessment"
+    ]
+  }
+}

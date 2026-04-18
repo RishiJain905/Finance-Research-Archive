@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a thin FRED data snapshot with no narrative, analysis, or publication date beyond snapshot date",
+    "PUBLISHED_AT shows 2026-04-18 but latest observation is 2026-04-20, creating temporal inconsistency in source metadata",
+    "No explanation provided in source for what determines the IORB rate level or its relationship to FOMC target range",
+    "Source lacks editorial context typical of article-like content expected for archival value",
+    "Cannot verify from source alone whether IORB is actively set by FOMC or derived from other policy tools"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately captures the factual data points from the source, but the source itself is borderline for archival purposes. FRED data series pages are technically not listing/navigation pages (they provide actual data), but they lack the analytical depth or narrative context typically expected for research archive records. The human review should determine whether raw data snapshots like this meet the archival value threshold, or whether this should be rejected in favor of sources that provide monetary policy context for IORB movements.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Interest on Reserve Balances (IORB) rate is currently 3.65% as of April 20, 2026, unchanged from the prior observation on April 19. The rate has remained flat at 3.65% for the five-day period from April 16 through April 20.",
+    "why_it_matters": "IORB serves as the floor for the federal funds rate in the current monetary policy implementation framework. The 3.65% rate level is consistent with the top of the Federal Open Market Committee's target range for the federal funds rate. Changes to IORB can signal shifts in the Fed's monetary policy stance or implementation adjustments.",
+    "macro_context": "IORB is the interest rate the Federal Reserve pays on reserve balances held by depository institutions at Federal Reserve Banks. It is a key administrative rate set by the Federal Reserve as part of its monetary policy implementation framework, typically positioned at or just below the top of the FOMC's federal funds rate target range.",
+    "market_structure_context": "IORB is a critical rate in the Federal Reserve's framework for implementing monetary policy, serving as the primary mechanism through which the Fed influences short-term interest rates in the banking system."
+  }
+}

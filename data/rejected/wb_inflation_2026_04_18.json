@@ -1,0 +1,73 @@
+{
+  "id": "wb_inflation_2026_04_18",
+  "created_at": "2026-04-18T14:10:38.952652+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "World Inflation Rate (FP.CPI.TOTL.ZG)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "",
+    "source_type": "data_query"
+  },
+  "summary": "The World Bank API query for indicator FP.CPI.TOTL.ZG (Consumer Price Index inflation rate) returned no valid observations as of the snapshot date 2026-04-18. No actual inflation data, country-level figures, or trend information could be extracted from this source.",
+  "key_points": [],
+  "why_it_matters": "This source contains no usable data. The World Bank API query returned null results, providing no inflation figures for macro analysis. Researchers expecting global inflation data from this source will receive no information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "no-data",
+    "api-query"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - only a null API response indicating 'no valid observations were returned'",
+      "No publication date provided (published_at is empty)",
+      "No URL for source verification (url is empty)",
+      "Source attribution is incomplete - only domain and name are present, no actual link to retrieve the data",
+      "Record has minimal archival value - this is a data retrieval failure, not an informational document",
+      "The record correctly identifies the source as 'data_query' type, but data_release_other as event_type is misleading when no data was actually released"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_18.txt",
+  "notes": "Source is a null result from a World Bank API query for inflation data. No actual data points were returned. This is not an informational document but a data retrieval failure. Topic tagged as 'macro catalysts' as inflation is a macro indicator, but the source provides no usable information. SOURCE_TYPE set to 'data_query' as this is neither a publication nor a structured document.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No data returned from source",
+      "Cannot extract any factual content",
+      "API query result with null values",
+      "No verifiable publication date"
+    ]
+  }
+}
