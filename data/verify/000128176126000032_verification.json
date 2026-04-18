@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source body is entirely legal boilerplate with no substantive financial content",
+    "Actual earnings data, press release content, and financial figures reside in referenced exhibits (99.1, 99.2) not included in the source body",
+    "No market-relevant metrics, guidance, or commentary present in body text",
+    "event_type correctly set to 'unknown' as this corporate filing does not match any recognized taxonomy category",
+    "Source is a routine regulatory filing, not article-like content suitable for research archive"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a thin regulatory filing with no substantive content in the body text. The record accurately captures this limitation, but human review is needed to determine if exhibit 99.1 (press release with actual earnings figures) should be retrieved and attached to this record, or if this filing should be excluded from the archive entirely due to insufficient standalone value.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Regions Financial Corporation filed an 8-K on April 17, 2026, announcing preliminary Q1 2026 earnings results via press release (Exhibit 99.1) and supplemental financial information (Exhibit 99.2), with executives scheduled to review results via live audio webcast the same day. The actual press release content and financial figures are not included in the 8-K body text; they are referenced as separate exhibits.",
+    "why_it_matters": "This is a routine corporate earnings announcement from a single regional bank. It provides no market-wide or systemic insights relevant to market structure or macro catalysts. The body text contains only legal boilerplate; actual earnings data must be obtained from the referenced exhibits.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

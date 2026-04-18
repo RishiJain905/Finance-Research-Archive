@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a single-company 8-K filing from a healthcare REIT with no relevance to market structure or macro catalysts as defined by task scope",
+    "event_type set to 'unknown' is technically valid per taxonomy but indicates the source doesn't fit the macro/market scope",
+    "The human review decision was 'reject' which aligns with scope mismatch, but automated record correctly identifies the factual accuracy of the data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the generated record accurately captures the 8-K's factual content and properly notes the scope limitation in 'why_it_matters', this is a borderline case where the source itself is correctly characterized as irrelevant to macro catalysts/market structure. The record quality is good but the source selection is fundamentally misaligned with archive scope. Human decision: Should this single-company REIT filing be excluded entirely, or is there value in keeping it for niche healthcare sector research?",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing provides preliminary Q1 2026 operational metrics for a healthcare REIT. While it shows positive trends in RevPOR and margins for the SHOP segment, this is a single-company corporate disclosure with no direct relevance to market structure or macro catalysts. The filing is not useful for broad market analysis, rate path assessment, or systemic risk evaluation.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
