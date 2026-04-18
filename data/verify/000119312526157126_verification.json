@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a single micro-cap biotech company's delisting notice with no broader market impact",
+    "Record is entirely empty - no summary, key_points, topic, or any substantive content filled in",
+    "Source attribution is missing in the nested 'source' object (all fields blank)",
+    "event_type is not specified",
+    "name field is generic ('SEC EDGAR') rather than specific to the filing",
+    "Published_at shows 2026-04-15 but source body confirms filing date is April 15, 2026 - date matches",
+    "Source is thin - only contains a standard regulatory disclosure with no novel research or market-significant information",
+    "No macro_context or market_structure_context could be meaningfully derived from this source"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is clearly non-compliant with basic requirements - entirely empty with no extractable research content. Source is not relevant to the archive's scope (market structure/macro catalysts).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

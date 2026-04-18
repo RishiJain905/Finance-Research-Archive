@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution fields (name, url, domain, published_at, source_type) are all completely empty",
+    "All content fields (summary, key_points, why_it_matters, macro_context, market_structure_context, notes, market_impact, important_numbers, tags) are empty",
+    "No LLM review was performed - llm_review fields show 0 values and empty issues_found array",
+    "Generated record contains no actual content to verify",
+    "Source is a routine corporate 8-K filing (SPAC asset purchase agreement) with no relevance to market structure or macro catalysts",
+    "event_type appears to be missing/unknown and no value is provided in the record",
+    "Source is a regulatory filing, not an article-like source suitable for archival finance research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is completely blank with no content to verify. All fields are empty or show placeholder values.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Plum Acquisition Corp. III filed an 8-K on April 7, 2026 announcing an Asset Purchase Agreement between Tactical Resources Corp. (Buyer) and Sierra Blanca Quarry, LLC (Seller). Buyer will purchase approximately 1.5 million tons of processed tailings, with PubCo issuing approximately 3,000,000 shares of common stock to Seller. The transaction is subject to closing conditions including the previously announced Business Combination.",
+    "why_it_matters": "This is a routine corporate transaction filing for a SPAC (Special Purpose Acquisition Company) related to a business combination. Of limited relevance to broader market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

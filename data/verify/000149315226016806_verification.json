@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-K filing for NetBrands Corp. (NBND) — individual company annual report with no relevance to market structure or macro catalysts per archive scope",
+    "Source contains only XBRL-tagged financial data (balance sheet, income statement, equity components) — no narrative content related to monetary policy, economic data releases, Treasury operations, or market infrastructure",
+    "Archive scope explicitly requires focus on market structure (trading mechanisms, clearing, settlement) and macro catalysts (Fed policy, rate decisions, economic indicators)",
+    "event_type 'unknown' is correctly assigned as corporate filings do not map to any taxonomy category"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The rejection decision is self-evident: a single company's 10-K filing is categorically outside the archive's scope of market structure and macro catalysts. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

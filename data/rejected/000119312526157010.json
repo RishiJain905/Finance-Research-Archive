@@ -1,0 +1,44 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "All source attribution fields are empty (name, url, domain, published_at, source_type)",
+      "Record contains no summary, key_points, or any substantive content",
+      "Source is a routine SEC 8-K filing for a mid-cap defense contractor (Parsons Corporation) containing only shareholder meeting voting results",
+      "Source is not relevant to market structure or macro catalysts — board elections, auditor ratification, and executive compensation votes are routine corporate governance with no market-moving significance",
+      "Source is thin and low-signal: it contains only vote counts for three standard agenda items at an annual meeting",
+      "No archival value for finance/macro research: this filing would not be cited in research on monetary policy, market structure, or economic catalysts",
+      "event_type would need to be 'unknown' as this does not fit any taxonomy category (not monetary policy, not data release, not research)",
+      "Rule 6 triggered: missing source attribution and thin low-signal source bias toward reject"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

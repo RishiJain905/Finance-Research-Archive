@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts per verification standards",
+    "event_type is 'unknown' when the content could be classified as 'data_release_other' or similar, though no taxonomy value fits perfectly",
+    "The filing contains only routine corporate governance matters (director elections, say-on-pay vote, auditor ratification) with no connection to Fed policy, interest rates, market operations, or macro economic conditions"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately describes the SEC filing content, but the source itself is irrelevant to the archive's scope (market structure, macro catalysts). This is a clear reject case per Core Rule: 'Source is not relevant to market structure or macro catalysts' and Rule 6 on low-signal sources. No human review needed as the record correctly identifies this as 'not-relevant' in tags and notes.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

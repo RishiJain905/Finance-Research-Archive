@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but source is clearly a regulatory_filing - valid taxonomy value should be used",
+    "Source is not relevant to market structure or macro catalysts - routine corporate governance disclosure",
+    "Record correctly identifies source as out of scope but status remains 'review_queue' instead of 'rejected'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor classification issue (event_type); record is factually accurate but source has no relevance to focus areas",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate governance disclosure. The resignation of a single board member without stated disagreement is unlikely to have market impact for PAHC or broader market structure implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
