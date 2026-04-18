@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when it could reasonably be classified as 'treasury_issuance' given the debt offering and redemption announcement",
+    "The record is factually accurate and well-structured, but the source material is company-specific corporate finance (Herbalife debt refinancing) with no broader market structure or macro catalyst relevance per the archive's stated focus"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately captures the 8-K filing content (preliminary Q1 results, $800M notes offering, conditional redemption of 2029 notes at $1,061.25 per $1,000). However, the record explicitly notes it is 'Not relevant to assigned topics (market structure, macro catalysts).' While factually faithful, this archive appears focused on macro catalysts and market structure, and Herbalife's single-company debt refinancing does not meet that scope. Human decision needed on whether to accept peripheral corporate filings or reject based on scope mismatch.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Herbalife Ltd. filed an 8-K on April 14, 2026 announcing preliminary Q1 2026 results, a proposed $800 million senior secured notes offering, and a conditional full redemption of its existing $800 million 12.250% Senior Secured Notes due 2029 at a price of $1,061.25 per $1,000 principal.",
+    "why_it_matters": "This is a corporate debt refinancing announcement for a single company (Herbalife Ltd., ticker HLF). The transaction involves replacing existing 12.250% coupon notes with new debt at potentially different terms. This is company-specific corporate finance activity with no broader market structure or macro implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

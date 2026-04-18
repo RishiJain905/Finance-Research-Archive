@@ -1,0 +1,76 @@
+{
+  "id": "000105862326000017",
+  "created_at": "2026-04-18T03:38:12.346226+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "CUMULUS MEDIA INC 8-K Filing — 2026-04-10",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1058623/000105862326000017/cmls-20260410.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-10",
+    "source_type": "sec_filing"
+  },
+  "summary": "Cumulus Media Inc. filed a Form 8-K on April 10, 2026, reporting operating results for the three months and year ended December 31, 2025 (Q4 2025 and full year 2025) via an attached press release (Exhibit 99.1). The filing is signed by CFO Francisco J. Lopez-Balboa.",
+  "key_points": [
+    "Cumulus Media Inc. filed Form 8-K with the SEC on April 10, 2026",
+    "The filing reports operating results for Q3 and full year ended December 31, 2025",
+    "Press release announcing results is attached as Exhibit 99.1",
+    "Filing signed by Francisco J. Lopez-Balboa, Executive Vice President and CFO",
+    "Registrant is incorporated in Delaware with headquarters in Atlanta, GA"
+  ],
+  "why_it_matters": "This is a routine corporate SEC filing from a single media company. It does not contain any information relevant to Federal Reserve policy, monetary policy decisions, macroeconomic data releases, or financial market structure. It should not be included in a finance research archive focused on market structure or macro catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "cumulus-media",
+    "corporate-results",
+    "q4-2025-results"
+  ],
+  "llm_review": {
+    "initial_confidence": 10,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' but the taxonomy does not include 'unknown' as a valid value - should be a proper taxonomy type or this absence is itself a flag",
+      "Factual error in key_points: source says 'three months and year ended December 31, 2025' (which is Q4 and full year 2025), but record states 'Q3 and full year ended December 31, 2025'",
+      "Source is a single company's routine earnings announcement with no relevance to market structure or macro catalysts as defined by the archive mandate",
+      "topic field is empty, indicating no attempt to classify or contextualize the event"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "No human review needed - the record correctly identifies the source as irrelevant to the archive's mandate. The only action needed is to reject it."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000105862326000017.txt",
+  "notes": "NOT RELEVANT TO MANDATE: This SEC Form 8-K filing from Cumulus Media Inc. is a routine corporate financial disclosure. The source has no relevance to market structure or macro catalysts. It does not discuss Federal Reserve policy, central bank decisions, macroeconomic indicators, Treasury operations, or any market structure topics. The archive scope should be limited to sources containing information on: monetary policy decisions (FOMC statements, rate decisions, projections, minutes), economic data releases (CPI, GDP, employment data), Treasury and market operations, or research/commentary on market structure and macro catalysts. This filing contains none of these elements and should be excluded from the research archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Source is a corporate SEC filing, not relevant to market structure or macro catalysts",
+      "Contains only company-specific earnings announcement from a single media firm",
+      "No policy content, no macro data, no market structure discussion"
+    ]
+  }
+}

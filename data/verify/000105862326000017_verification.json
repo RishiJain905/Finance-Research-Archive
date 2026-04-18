@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but the taxonomy does not include 'unknown' as a valid value - should be a proper taxonomy type or this absence is itself a flag",
+    "Factual error in key_points: source says 'three months and year ended December 31, 2025' (which is Q4 and full year 2025), but record states 'Q3 and full year ended December 31, 2025'",
+    "Source is a single company's routine earnings announcement with no relevance to market structure or macro catalysts as defined by the archive mandate",
+    "topic field is empty, indicating no attempt to classify or contextualize the event"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed - the record correctly identifies the source as irrelevant to the archive's mandate. The only action needed is to reject it.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Cumulus Media Inc. filed a Form 8-K on April 10, 2026, reporting operating results for the three months and year ended December 31, 2025 (Q4 2025 and full year 2025) via an attached press release (Exhibit 99.1). The filing is signed by CFO Francisco J. Lopez-Balboa.",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

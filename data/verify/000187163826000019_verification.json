@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine SEC Form 8-K filing for Blaize Holdings, Inc., a small-cap AI semiconductor company (ticker BZAI)",
+    "Content consists of company-specific preliminary revenue guidance and a customer contract announcement",
+    "No relevance to market structure or macro catalysts as defined by the archive's mandate",
+    "No connection to monetary policy, interest rates, Treasury operations, macroeconomic data releases, or financial system stability",
+    "event_type correctly set to 'unknown' as this corporate filing does not fit any defined taxonomy categories for this archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record correctly identifies the source as irrelevant to the archive's focus. No ambiguity exists—the filing is purely company-specific corporate disclosure with no macro or market structure implications.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing is a routine SEC Form 8-K containing company-specific preliminary earnings guidance and a customer contract announcement for Blaize Holdings, Inc., a small-cap AI semiconductor company. It has no relevance to market structure or macro catalysts and should not be included in a finance research archive focused on monetary policy, interest rates, Treasury operations, macroeconomic data, and financial market structure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

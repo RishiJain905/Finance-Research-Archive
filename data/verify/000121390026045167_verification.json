@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but this is a corporate credit event (forbearance default) — could be categorized as a debt/credit event but no applicable taxonomy value exists; 'unknown' is technically correct per available options",
+    "The human review notes correctly identify this as NOT RELEVANT to market structure or macro catalysts, yet the record was still generated and placed in review_queue rather than rejected",
+    "Source is a company-specific micro-cap credit filing with no broader market structure or macro catalyst implications — this is outside the archive's stated scope",
+    "quality_tier correctly identifies 'not_applicable' with reasoning 'Source is not relevant to market structure or macro catalysts' — yet the record exists rather than being rejected at intake"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately summarizes the 8-K content, but the archive's verification standards explicitly state to reject when 'Source is not relevant to market structure or macro catalysts.' The human review notes acknowledge this is NOT RELEVANT, yet the record was generated rather than rejected. This needs clarification on whether company-specific micro-cap credit events should be archived at all, or if the intake process should filter these out before record generation.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
