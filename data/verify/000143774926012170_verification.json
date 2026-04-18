@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is entirely a corporate 10-K annual filing with no relevance to macro catalysts or market structure",
+    "Source is a micro-cap company (Envirotech Vehicles) with no systemic financial market relevance",
+    "Content is primarily repeated cybersecurity program description with XBRL metadata, lacking substantive narrative",
+    "Source has no monetary policy content, economic data releases, or market operations information",
+    "event_type set to 'unknown' is appropriate given no taxonomy value fits corporate filings"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is internally consistent but fundamentally out of scope. The source is correctly identified as a corporate 10-K filing for a micro-cap EV company with no macro or market structure relevance. The 'irrelevant' topic designation and quality_tier scoring are accurate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
