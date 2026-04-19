@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record has empty summary, key_points, why_it_matters, macro_context, and market_structure_context fields",
+    "Source attribution fields are empty (source.name, source.url, source.domain are all blank)",
+    "Topic field is empty - no indication of what the filing covers",
+    "Tags array is empty - no categorization provided",
+    "event_type is missing from the record entirely",
+    "Source is a corporate governance filing (executive appointment at a biotech company) - not relevant to market structure or macro catalysts for financial markets",
+    "Source is thin content: single executive appointment announcement with no market-moving data or policy implications",
+    "Published_at is 6 days before TODAY (2026-04-19), making this fresh but not valuable for macro research"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is almost entirely empty fields with no content. Additionally, the source (ALX Oncology biotech executive appointment) falls outside the scope of market structure/macro catalyst research that this archive is designed to capture. This is a corporate governance disclosure with no broader market implications.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

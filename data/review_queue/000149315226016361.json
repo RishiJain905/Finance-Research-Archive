@@ -1,0 +1,92 @@
+{
+  "id": "000149315226016361",
+  "created_at": "2026-04-19T04:03:38.737156+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "Newton Golf Company, Inc. 8-K Filing — Entry into Material Definitive Agreement",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1934245/000149315226016361/form8-k.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-07",
+    "source_type": "sec_filing"
+  },
+  "summary": "Newton Golf Company, Inc. (NWTG) filed an 8-K disclosing multiple closings under a securities purchase agreement dated March 16, 2026, involving convertible notes and common stock warrants. The company raised $1,350,000 in aggregate proceeds across four closings (March 16, April 7, and two on April 9, 2026) toward a maximum of $2,000,000 in funding.",
+  "key_points": [
+    "First closing (March 16, 2026): $500,000 principal, 50,000 warrants at $1.75/share exercise price",
+    "Second closing (April 7, 2026): $500,000 principal, 50,000 warrants",
+    "Third closing (April 9, 2026): $100,000 principal, 10,000 warrants",
+    "Fourth closing (April 9, 2026): $250,000 principal, 25,000 warrants",
+    "Convertible notes: 18-month maturity, 10% annual interest (paid in kind), conversion price $1.60/share",
+    "Mandatory conversion trigger: stock closes at or above $3.00 for 10 consecutive trading days"
+  ],
+  "why_it_matters": "This is a small-cap corporate financing event for a Nasdaq-listed golf equipment company (NWTG). It is not relevant to market structure or macro catalysts. The filing does not contain information about Federal Reserve policy, interest rates, Treasury market operations, or broader economic indicators.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$2,000,000 maximum funding",
+    "$850,000 total proceeds raised to date",
+    "$500,000 (first closing)",
+    "$500,000 (second closing)",
+    "$100,000 (third closing)",
+    "$250,000 (fourth closing)",
+    "$1.60/share conversion price",
+    "$1.75/share warrant exercise price",
+    "$3.00/share mandatory conversion trigger",
+    "10% annual interest rate",
+    "18-month maturity"
+  ],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "convertible-notes",
+    "small-cap",
+    "nwtg",
+    "corporate-finance",
+    "not-macro-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Summary states 'three closings' and '$850,000' but source documents four closings with total proceeds of $1,350,000 ($500K + $500K + $100K + $250K)",
+      "Summary claims 'raised $850,000 in aggregate proceeds' but source clearly shows $1,350,000 raised",
+      "Key points list only three closings, omitting the fourth closing ($250,000 principal, 25,000 warrants)",
+      "The record treats this as a corporate financing event but event_type is set to 'unknown' when it should more accurately reflect the nature of the filing"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "reject",
+    "notes": "The summary contains factual errors about the number of closings and total proceeds raised. The source shows four closings totaling $1,350,000, but the record states three closings and $850,000. This is a significant numerical discrepancy that requires correction."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000149315226016361.txt",
+  "notes": "Source excluded from archive: not relevant to market structure or macro catalysts. This is a small-cap (NWTG/Nasdaq) corporate securities purchase agreement disclosure. The filing contains no information related to monetary policy, interest rates, Treasury operations, economic data releases, or financial market structure.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "Not relevant to market structure or macro catalysts",
+      "Small-cap individual company financing event",
+      "No Fed policy, rate decisions, or Treasury operations content",
+      "Corporate finance disclosure outside scope of macro research archive"
+    ]
+  }
+}

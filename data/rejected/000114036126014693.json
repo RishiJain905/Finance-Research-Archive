@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - name, url, domain, published_at, and source_type are all empty",
+      "All key content fields are empty - summary, key_points, why_it_matters, macro_context, market_structure_context, topic are all blank",
+      "event_type field is missing from the record",
+      "No content was generated from the source text",
+      "Source is a thin SEC regulatory filing (8-K) with minimal market-relevant information - only announces a clinical data publication"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record contains no extractable content whatsoever - all source attribution fields and content fields are empty or missing. This appears to be a failed generation attempt rather than a legitimate record requiring verification. Additionally, the source is a company-specific 8-K about a clinical trial data publication, which has limited relevance to macro catalysts or market structure."
+  },
+  "summary": "PDS Biotechnology Corporation filed an 8-K on April 15, 2026, announcing publication of clinical and immunological biomarker data from Stage 1 of a Phase 2 trial evaluating its tumor-targeted IL-12 immunocytokine PDS01ADC, published in the March 10, 2026 issue of Journal of Clinical Oncology (JCO) Oncology Advances.",
+  "key_points": [],
+  "why_it_matters": "Company-specific biotech clinical trial update with limited broader market impact; primarily relevant to PDSB investors and oncology immunotherapy sector watchers.",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

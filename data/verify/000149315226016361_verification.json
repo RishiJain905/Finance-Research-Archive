@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Summary states 'three closings' and '$850,000' but source documents four closings with total proceeds of $1,350,000 ($500K + $500K + $100K + $250K)",
+    "Summary claims 'raised $850,000 in aggregate proceeds' but source clearly shows $1,350,000 raised",
+    "Key points list only three closings, omitting the fourth closing ($250,000 principal, 25,000 warrants)",
+    "The record treats this as a corporate financing event but event_type is set to 'unknown' when it should more accurately reflect the nature of the filing"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The summary contains factual errors about the number of closings and total proceeds raised. The source shows four closings totaling $1,350,000, but the record states three closings and $850,000. This is a significant numerical discrepancy that requires correction.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Newton Golf Company, Inc. (NWTG) filed an 8-K disclosing multiple closings under a securities purchase agreement dated March 16, 2026, involving convertible notes and common stock warrants. The company raised $1,350,000 in aggregate proceeds across four closings (March 16, April 7, and two on April 9, 2026) toward a maximum of $2,000,000 in funding.",
+    "why_it_matters": "This is a small-cap corporate financing event for a Nasdaq-listed golf equipment company (NWTG). It is not relevant to market structure or macro catalysts. The filing does not contain information about Federal Reserve policy, interest rates, Treasury market operations, or broader economic indicators.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

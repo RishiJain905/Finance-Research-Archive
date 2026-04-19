@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a biotech clinical trial announcement (Phase 1 dosing) for MetaVia Inc., a pharmaceutical company. The filing pertains entirely to pharmaceutical development (GLP-1/glucagon receptor agonist for potential metabolic treatment) and has no bearing on financial market structure, central bank policy, or macro economic catalysts.",
+    "event_type set to 'unknown' is technically correct but the correct action is rejection, not retention, since the source falls outside the archive's defined scope.",
+    "Record correctly self-identifies as 'out_of_scope' with quality_tier score of 1, but this should result in rejection rather than placement in review_queue."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately captures the source content, but the source itself is outside the archive's defined scope (biotech clinical trial announcement vs. market structure/macro catalysts). No factual errors exist; the record correctly identifies the scope issue. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

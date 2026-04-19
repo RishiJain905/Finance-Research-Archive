@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'unknown' is technically valid per taxonomy but the filing is clearly a corporate finance event (not applicable to macro/market structure research)",
+    "topic is correctly set to 'not_applicable' but the record was still generated and placed in review_queue rather than auto-rejected"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is a valid SEC filing with accurate extracted data, but it is not relevant to the specified research focus (market structure and macro catalysts). The record acknowledges this ('NO relevance to broader market structure or macro catalysts'). However, the record was still generated and placed in review_queue instead of being auto-rejected. Human decision needed on whether to accept records that are factually accurate but clearly outside scope.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing documents a private convertible debt financing for a micro-cap biotech company. The financing terms (10% interest, sub-$0.05 conversion price, 80% of low prices) are typical for distressed or micro-cap private placements. This represents potential dilution to existing shareholders upon conversion. However, this filing pertains to an individual company's financing activities and has no relevance to broader market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
