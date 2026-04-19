@@ -1,7 +1,7 @@
 {
   "id": "2y_yield_2026_04_18",
   "created_at": "2026-04-18T14:08:50.730797+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2-Year Treasury Yield (DGS2)",
@@ -50,30 +50,31 @@
     "issues_found": []
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Source is a data snapshot rather than a research note. Consider whether raw data points should be archived separately from analytical content."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-19T00:25:10.638210+00:00"
   },
   "raw_text_path": "data/raw/2y_yield_2026_04_18.txt",
   "notes": "This source is a raw FRED data snapshot containing only the daily 2-Year Treasury yield value. It does not contain research analysis, policy commentary, or context for the yield movement. As a stand-alone archive entry, it has limited utility for RAG retrieval unless linked to accompanying analysis explaining the macro significance of this yield level.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "raw_data",
-    "score": 2,
+    "tier": "tier_3",
+    "score": 48.5,
     "reasoning": [
-      "No narrative or analytical content",
-      "Single data point without historical context or catalyst explanation",
-      "Cannot establish macro relevance without external analysis",
-      "Low archival value as standalone record for research retrieval"
+      "quality score: 48.5/100 (acceptable)",
+      "very low verification confidence",
+      "human-approved",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
