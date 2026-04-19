@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate SEC Form 8-K filing with no relevance to market structure or macro catalysts",
+    "Filing body contains only boilerplate legal text; actual financial figures are in exhibits (99.1, 99.2, 99.3) referenced but not included in the document body",
+    "No substantive information to support archival value for research purposes",
+    "event_type set to 'unknown' — correct type would be 'data_release_other' for earnings, but this filing itself contains no actual earnings data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-reasoned and correctly identifies this source as lacking relevance. The verification confidence of 1 accurately reflects the source's minimal value. No factual errors in the summary or key_points.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate regulatory filing announcing Q1 2026 earnings from BNY Mellon. It does not contain information relevant to market structure or macro catalysts. The filing body provides only legal boilerplate and references to exhibits; all substantive financial data is contained in separate exhibits (Earnings Release, Financial Supplement, Quarterly Update Presentation) not included in this 8-K body.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

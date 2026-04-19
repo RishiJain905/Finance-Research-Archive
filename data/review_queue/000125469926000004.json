@@ -1,0 +1,76 @@
+{
+  "id": "000125469926000004",
+  "created_at": "2026-04-19T19:28:15.397574+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "QVC INC 10-K Filing — 2026-04-15",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1254699/000125469926000004/qvc-20251231.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-15",
+    "source_type": "sec_filing"
+  },
+  "summary": "QVC Inc filed its annual 10-K report for fiscal year 2025. The filing contains standard financial statement data including balance sheets, income statements, and notes payable for a retail multimedia company. The source is heavily formatted as XBRL/XML and appears truncated. This is a routine SEC disclosure for a specific publicly-traded company and is not relevant to market structure or macro catalysts.",
+  "key_points": [
+    "This is a QVC Inc 10-K annual report for fiscal year 2025 (fiscal year ending 2025-12-31)",
+    "The source contains XBRL-tagged financial data including senior secured notes (rates include A6.375%, A6.25%, A4.75%, A5.95%, etc.)",
+    "Segment data includes QVC Group, Liberty, and QVC Japan operations",
+    "The filing follows standard US GAAP taxonomy tags for financial reporting",
+    "Source text is truncated/incomplete, limiting extraction of complete financial metrics"
+  ],
+  "why_it_matters": "This filing has no relevance to market structure or macro catalysts. It is a company-specific financial disclosure for QVC, a retail/television shopping company. The filing does not discuss monetary policy, interest rates, market operations, economic indicators, or any elements that would affect broad market structure or serve as macro catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-k",
+    "qvc",
+    "financial-reporting",
+    "outside-scope"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' - while a 10-K is not a perfect fit for the listed taxonomy categories, 'regulatory_filing' would be more descriptive than 'unknown'; however, this falls under the 'unknown' catch-all category which is technically valid",
+      "Source is heavily XBRL/XML formatted with limited human-readable narrative content",
+      "Source body appears truncated, limiting complete verification of all financial metrics"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The generated record has correctly identified this source as outside the archive scope for market structure and macro catalysts research. The internal review process already reached the correct disposition (discard tier). The issues flagged are minor formatting observations rather than substantive factual errors."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000125469926000004.txt",
+  "notes": "OUT OF SCOPE: This is a QVC Inc 10-K annual SEC filing for FY2025. The source contains company-specific financial data (XBRL tags for various debt instruments, segment reporting, equity components). This is NOT relevant to the archive's focus on (1) market structure — market plumbing, operations, trading infrastructure — or (2) macro catalysts — monetary policy decisions, economic data releases, speeches, or other market-moving events. The source is a routine regulatory filing for a single retail company and has no broader market implications. Source is also heavily XBRL-formatted and truncated, limiting extractable content. Do not archive for macro/market structure purposes.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "Not relevant to market structure or macro catalysts",
+      "Company-specific financial filing with no broader market implications",
+      "XBRL format and truncation reduce usability",
+      "Outside archive scope mandate"
+    ]
+  }
+}

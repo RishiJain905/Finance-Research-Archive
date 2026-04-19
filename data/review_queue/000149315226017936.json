@@ -1,0 +1,88 @@
+{
+  "id": "000149315226017936",
+  "created_at": "2026-04-19T19:29:54.474925+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Fusemachines Inc. 8-K Filing — 2026-04-17",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/2033383/000149315226017936/form8-k.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-17",
+    "source_type": "sec_filing"
+  },
+  "summary": "Fusemachines Inc. (ticker: FUSE), a Nasdaq-listed emerging growth company, entered into a common stock purchase agreement (the 'Purchase Agreement') with Roth Principal Investments LLC on April 17, 2026, establishing a controlled equity facility that allows the company to sell up to $20,000,000 of common stock over 36 months through various purchase mechanisms including Market Open Purchases, Intraday Purchases, Pre-Market Purchases, and Post-Market Purchases.",
+  "key_points": [
+    "Fusemachines Inc. entered into a stock purchase agreement with Roth Principal Investments LLC on April 17, 2026",
+    "Maximum commitment amount: $20,000,000 of common stock sales",
+    "Commitment period: up to 36 months following Commencement Date",
+    "11,363,636 shares registered for resale (Purchase Shares)",
+    "Purchase price determined by volume-weighted average price minus a fixed discount",
+    "Company has sole discretion on timing and amount of sales; no obligation to sell",
+    "Threshold price of $0.50 per share required before Company can direct purchases",
+    "Market Open Purchases limited to lesser of 2,000,000 shares or 25% of daily volume"
+  ],
+  "why_it_matters": "This is a routine corporate equity distribution facility (ATM-style offering) providing Fusemachines with a capital raise mechanism. It does not affect broader market structure, monetary policy, or macro conditions. The company's stock (FUSE) and warrants (FUSEW) listed on Nasdaq may experience dilution if the company exercises the facility.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$20,000,000 (maximum commitment amount)",
+    "11,363,636 (registered Purchase Shares)",
+    "36 months (maximum commitment period)",
+    "2,000,000 (Market Open Purchase maximum shares)",
+    "25% (maximum Market Open Purchase percentage of daily volume)",
+    "$0.50 (minimum threshold price)"
+  ],
+  "tags": [
+    "sec-filing",
+    "equity-distribution",
+    "dilution",
+    "at-the-market",
+    "small-cap",
+    "nasdaq",
+    "fuse-stock"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' - while the document doesn't fit neatly into the defined taxonomy categories, a corporate finance event (equity distribution facility) could be considered a catch-all but the field is correctly left as 'unknown' given taxonomy limitations",
+      "Source is a routine small-cap corporate 8-K filing with no relevance to market structure or macro catalysts - consistent with record's quality_tier assessment",
+      "Document is truncated in source body (marked as [TRUNCATED]), though the visible portions support the key facts stated",
+      "topic field is empty string - while this may be intentional given the document's nature, it could be populated as 'corporate_finance' or similar"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is factually accurate and properly attributed, but constitutes a routine small-cap corporate 8-K filing with no relevance to market structure or macro catalysts. The record correctly identifies this as 'Not Relevant' quality tier. While the document meets technical acceptance criteria (source is valid, facts are accurate, no fabricated claims), the research archive's focus areas do not include routine corporate equity distribution agreements. Human decision needed to confirm whether routine corporate filings should be excluded from the archive or tracked for completeness."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000149315226017936.txt",
+  "notes": "This source is a standard SEC Form 8-K for Fusemachines Inc., a small-cap emerging growth company listed on Nasdaq. The filing documents a controlled equity facility—a common type of at-the-market (ATM) equity distribution agreement. The source does not discuss market structure (e.g., trading mechanics, market plumbing, operations) or macro catalysts (e.g., monetary policy, economic data releases, rate decisions). It is not relevant to the target research topics. Document appears recent (April 17, 2026) and is not stale relative to TODAY.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Not Relevant",
+    "score": 1,
+    "reasoning": [
+      "Topic mismatch: source addresses corporate equity distribution, not market structure or macro catalysts",
+      "Low macro significance: small-cap company financing has negligible market-wide impact",
+      "Document type is routine corporate filing with no policy implications"
+    ]
+  }
+}

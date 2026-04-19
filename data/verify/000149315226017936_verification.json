@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - while the document doesn't fit neatly into the defined taxonomy categories, a corporate finance event (equity distribution facility) could be considered a catch-all but the field is correctly left as 'unknown' given taxonomy limitations",
+    "Source is a routine small-cap corporate 8-K filing with no relevance to market structure or macro catalysts - consistent with record's quality_tier assessment",
+    "Document is truncated in source body (marked as [TRUNCATED]), though the visible portions support the key facts stated",
+    "topic field is empty string - while this may be intentional given the document's nature, it could be populated as 'corporate_finance' or similar"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is factually accurate and properly attributed, but constitutes a routine small-cap corporate 8-K filing with no relevance to market structure or macro catalysts. The record correctly identifies this as 'Not Relevant' quality tier. While the document meets technical acceptance criteria (source is valid, facts are accurate, no fabricated claims), the research archive's focus areas do not include routine corporate equity distribution agreements. Human decision needed to confirm whether routine corporate filings should be excluded from the archive or tracked for completeness.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Fusemachines Inc. (ticker: FUSE), a Nasdaq-listed emerging growth company, entered into a common stock purchase agreement (the 'Purchase Agreement') with Roth Principal Investments LLC on April 17, 2026, establishing a controlled equity facility that allows the company to sell up to $20,000,000 of common stock over 36 months through various purchase mechanisms including Market Open Purchases, Intraday Purchases, Pre-Market Purchases, and Post-Market Purchases.",
+    "why_it_matters": "This is a routine corporate equity distribution facility (ATM-style offering) providing Fusemachines with a capital raise mechanism. It does not affect broader market structure, monetary policy, or macro conditions. The company's stock (FUSE) and warrants (FUSEW) listed on Nasdaq may experience dilution if the company exercises the facility.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

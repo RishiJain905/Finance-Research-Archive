@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - while no taxonomy value perfectly fits corporate CFO departures, this could be more precisely categorized if the archive accepts corporate governance events",
+    "The source is factually accurate and well-attributed, but the generated record's notes correctly identify the source as not relevant to the archive's focus on market structure or macro catalysts"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a legitimate, accurately summarized SEC filing about CFO succession, but the archive's scope (market structure or macro catalysts) makes this document borderline. The generated record correctly identifies this as a corporate governance event unrelated to macro policy, interest rates, or market structure. Human review needed to determine if the archive should accept corporate governance SEC filings or if this should be rejected as out of scope.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Consider clarifying whether corporate governance filings like CFO departures are within scope. Current characterization is accurate: routine corporate governance event at a publicly traded company with no apparent market structure or macro relevance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is XBRL taxonomy data with no narrative content - purely financial reporting tags",
+    "Source is a corporate 10-K filing (GIVBUX, INC.) with no relevance to market structure or macro catalysts",
+    "event_type set to 'unknown' - while correct that no valid taxonomy type applies, this indicates the source doesn't fit the archive's scope",
+    "Source contains only numeric data tags and XBRL codes without any analytical, policy, or market-relevant narrative",
+    "Record correctly identifies the source as not relevant, but the underlying source should not be in the archive pipeline"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately describes the source's limitations. The source is a corporate financial filing with no macro or market structure relevance and no narrative content - clear reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is an SEC 10-K annual report for GIVBUX, INC., a publicly traded company. The filing contains standard corporate financial disclosures including balance sheet items, equity structure, and subsequent events. The source contains only XBRL taxonomy codes and numeric data tags with no narrative content relevant to market structure or macro catalysts.",
+    "why_it_matters": "This is a corporate financial filing with no relevance to market structure or macro catalysts. It provides company-specific financial data useful for equity fundamental analysis but does not address broader market dynamics, monetary policy, or economic indicators.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

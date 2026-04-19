@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate bankruptcy/restructuring filing (QVC, Inc.) with no relevance to market structure (trading venues, microstructure, liquidity mechanisms, market operations) or macro catalysts (monetary policy, economic data releases, central bank communications)",
+    "Per CORE RULE 1 and VERIFICATION STANDARDS, source must be relevant to market structure or macro catalysts to be archived",
+    "This 8-K filing is company-specific corporate action; while factually captured in the record, it falls outside the archive's defined scope",
+    "event_type is set to 'unknown' which is technically correct given no taxonomy value fits, but reinforces the mismatch with archive parameters"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and well-structured, but the source type (corporate bankruptcy filing) is definitively outside the archive's stated focus areas of market structure and macro catalysts. The human review already conducted correctly identified this as out-of-scope. No ambiguity exists about relevance—the filing contains no monetary policy content, no economic data, no market structure content, and no regulatory guidance with broader market implications.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
