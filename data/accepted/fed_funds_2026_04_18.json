@@ -1,7 +1,7 @@
 {
   "id": "fed_funds_2026_04_18",
   "created_at": "2026-04-18T14:08:02.093254+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "market_notice",
   "title": "Effective Federal Funds Rate (DFF) — Daily Snapshot",
@@ -56,30 +56,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "This is a borderline case requiring human judgment: the source data is factually accurate and from an authoritative provider (FRED), but the record represents a raw data snapshot rather than a macro catalyst. The event_type is misclassified, and the analytical value is thin. Human review is needed to determine whether raw data feeds of this type meet archival threshold for the specific use case."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-19T00:25:22.070124+00:00"
   },
   "raw_text_path": "data/raw/fed_funds_2026_04_18.txt",
   "notes": "This is a data feed snapshot from FRED, not an article or commentary. It records the daily EFFR without providing policy context. The SOURCE METADATA requested 'Effective Federal Funds Rate' as the target topic. While this data is relevant to macro catalysts (as a primary rate benchmark), it does not itself constitute a macro catalyst event—it is merely the current state. The date 2026-04-18 is today, so this is current/recent data with no staleness concern.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "data_point",
-    "score": 2,
+    "tier": "tier_2",
+    "score": 55.0,
     "reasoning": [
-      "Source is structured data feed, not narrative content",
-      "No policy signal, guidance, or forward-looking context provided",
-      "Limited standalone research value; best used as supplementary context",
-      "High factual reliability (FRED is authoritative) but low analytical depth"
+      "quality score: 55.0/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (6)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
