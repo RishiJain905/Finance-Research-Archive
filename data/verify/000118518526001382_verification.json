@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the filing contains identifiable event types: 'treasury_issuance' would be most appropriate for the convertible debt issuance and equity restructuring, or 'research_paper' for corporate filings if no better fit exists",
+    "published_at shows '2026-04-09' but source body indicates filing date of April 15, 2026 (title); the 2026-04-09 appears to be the event date per Item 8.01, not the filing date"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor classification issue; the record is factually accurate but event_type should be improved",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

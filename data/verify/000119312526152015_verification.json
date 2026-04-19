@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the source describes ATM equity issuance activity which maps to 'treasury_issuance'",
+    "Source is company-specific corporate disclosure, not macro catalyst or market structure content per stated target scope",
+    "The filing's scope is narrow—equity issuance proceeds used for Bitcoin purchases—rather than broader market structure or macroeconomic factors"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Content is factually accurate and source attribution is complete, but the record appropriately identifies scope limitations. Decision can be auto-routed.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing updates Strategy Inc's ongoing capital recycling program—converting ATM equity issuance proceeds into Bitcoin accumulation. Large-scale equity issuance (MSTR, STRC, etc.) and accompanying Bitcoin purchases can affect Bitcoin spot market dynamics and impact MSTR-related equity valuations. The ~$1 billion weekly Bitcoin purchase rate and $21 billion+ available capacity for future issuances demonstrate continued corporate Bitcoin adoption strategy with potential market implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

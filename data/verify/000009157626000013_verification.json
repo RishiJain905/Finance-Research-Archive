@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Event type 'unknown' is flagged, but no attempt was made to select a plausible taxonomy value. While corporate earnings don't fit neatly into the defined taxonomy, the record should have either selected the closest fit (e.g., economic_commentary for earnings commentary) or properly justified the 'unknown' status.",
+    "The record correctly notes this is outside scope for market structure/macro catalyst research—the filing contains no actual financial data, only references to exhibits.",
+    "Source has no actionable macro or market structure content; actual Q1 2026 figures are in exhibits (99.1, 99.2, 99.3) not included in the filing body."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record's assessment is accurate and thorough. The source is a thin corporate earnings announcement with no substantive content in the filing body. The record correctly identifies this as outside scope for market structure/macro catalyst research and recommends rejection. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "KeyCorp filed a Form 8-K on April 16, 2026, announcing Q1 2026 financial results. The filing body references a press release (Exhibit 99.1), Supplemental Information Package (Exhibit 99.2), and Financial Statements (Exhibit 99.3) but does not include their content. No actual financial figures, metrics, or substantive data are present in the filing itself.",
+    "why_it_matters": "This is a routine corporate earnings announcement from a regional bank. The filing body contains no substantive financial data—all actual Q1 2026 earnings figures, net interest margin, loan loss provisions, or balance sheet details are in referenced exhibits not included in this document. This filing provides no actionable information for market structure or macro catalyst analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

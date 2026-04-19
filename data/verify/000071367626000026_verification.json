@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an 8-K cover page/routing document with no substantive content; actual earnings data is in Exhibit 99.1 (press release) and Exhibit 99.2 (financial supplement) which are NOT included in the filing body",
+    "No substantive research value—cannot assess earnings quality, credit trends, net interest margin, loan loss provisioning, or forward guidance from this filing alone",
+    "event_type set to 'unknown' is borderline acceptable given source type, but earnings-related content suggests 'data_release_other' would be more appropriate classification if content were present",
+    "Source is not relevant to market structure or macro catalysts as defined; this is a routine corporate disclosure without catalyst information"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as a low-value, peripheral document. No human review needed—automated rejection is appropriate given the source has no substantive research content for a finance archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "PNC Financial Services Group filed an 8-K on April 15, 2026, referencing Q1 2026 earnings results. The filing itself is a cover page under Item 2.02 that does not contain substantive content—it only furnishes references to Exhibit 99.1 (press release) and Exhibit 99.2 (financial supplement), neither of which are reproduced in this document.",
+    "why_it_matters": "This 8-K filing is a cover page routing document with no substantive data. The actual Q1 2026 earnings press release and financial supplement (Exhibit 99.1 and 99.2) are referenced but not included in the filing body. To capture earnings-related macro insights (credit quality, NIM trends, deposit dynamics, guidance), the actual press release or 10-Q should be archived instead.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

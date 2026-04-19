@@ -1,0 +1,44 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution is entirely missing (name, url, domain, published_at, source_type are all empty)",
+      "Source is raw XBRL structured data from a company 10-Q filing, not an article-like document with narrative content",
+      "Source content is truncated and appears to be machine-generated financial tags rather than readable text",
+      "Source is a single company quarterly filing (BAB, Inc.) which does not constitute market structure or macro catalyst content",
+      "event_type is missing and cannot be determined from the source content",
+      "Summary, key_points, why_it_matters, macro_context, and market_structure_context are all empty",
+      "Individual company 10-Q filings do not have general archival value for a finance research archive focused on market structure and macro catalysts",
+      "Source does not contain FOMC statements, speeches, data releases, treasury operations, or research commentary"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

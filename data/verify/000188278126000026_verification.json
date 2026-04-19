@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — this is an SEC regulatory filing, but 'unknown' is not a valid event type per the taxonomy",
+    "Source is not relevant to market structure or macro catalysts — this is a micro-cap internal equity cancellation with no market-wide significance",
+    "The quality_tier correctly marks this as 'out_of_scope' but the record should be rejected rather than archived"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The summary accurately describes the filing, but the source is clearly outside the archive's scope (micro-cap internal corporate governance action with no relevance to macro catalysts or market structure). Additionally, event_type is 'unknown' which violates the requirement that event_type must be a valid taxonomy value. Recommend rejection based on scope mismatch.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

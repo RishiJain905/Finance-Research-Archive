@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but this is a corporate earnings disclosure filing, which could be categorized as a data release or economic commentary; however, it does not clearly fit the defined taxonomy",
+    "Source is a routine SEC 8-K filing with no substantive earnings data included - only a reference to presentation slides (Exhibit 99.1) that are not part of the filing text",
+    "Record correctly identifies lack of relevance to market structure or macro catalysts, but the record itself was still generated and needs disposition decision"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is a routine corporate regulatory filing with no substantive market or macro data. While the generated record accurately describes the source content and correctly identifies it as irrelevant to archive focus areas, a human decision is needed on whether to accept this record to the review queue (acknowledging low archival value) or reject it outright. The event_type 'unknown' is flagged but is arguably correct given the source does not fit defined taxonomy categories.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "PNC Financial Services Group filed a routine 8-K on April 15, 2026, disclosing via Regulation FD that the company held an investor conference call for Q1 2026 earnings and business results. The filing includes a reference to presentation slides (Exhibit 99.1) but the actual slide content with earnings data is not included in the 8-K text itself.",
+    "why_it_matters": "This is a routine corporate earnings disclosure filing from a regional bank. The source is not relevant to the archive's focus areas (market structure, macro catalysts). The actual Q1 2026 earnings figures and forward guidance would be in the referenced presentation slides (Exhibit 99.1), which are not included in this 8-K text and thus not available for verification.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

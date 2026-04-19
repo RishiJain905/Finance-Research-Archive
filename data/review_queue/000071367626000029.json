@@ -1,0 +1,69 @@
+{
+  "id": "000071367626000029",
+  "created_at": "2026-04-19T13:43:03.506245+00:00",
+  "status": "review_queue",
+  "topic": "unrelated",
+  "event_type": "unknown",
+  "title": "PNC FINANCIAL SERVICES GROUP, INC. 8-K Filing — 2026-04-15",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000029/pnc-20260415.htm",
+    "published_at": "2026-04-15",
+    "source_type": "reg_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "PNC Financial Services Group filed a routine 8-K on April 15, 2026, disclosing via Regulation FD that the company held an investor conference call for Q1 2026 earnings and business results. The filing includes a reference to presentation slides (Exhibit 99.1) but the actual slide content with earnings data is not included in the 8-K text itself.",
+  "key_points": [
+    "PNC Financial Services Group filed 8-K on April 15, 2026 pursuant to Regulation FD disclosure requirements",
+    "Company held investor conference call for Q1 2026 earnings and business results",
+    "Presentation slides referenced as Exhibit 99.1 but actual slide content not included in filing text",
+    "Filing signed by Gregory H. Kozich, Senior Vice President and Controller",
+    "PNC common stock trades on NYSE under symbol PNC"
+  ],
+  "why_it_matters": "This is a routine corporate earnings disclosure filing from a regional bank. The source is not relevant to the archive's focus areas (market structure, macro catalysts). The actual Q1 2026 earnings figures and forward guidance would be in the referenced presentation slides (Exhibit 99.1), which are not included in this 8-K text and thus not available for verification.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "pnc",
+    "bank",
+    "earnings",
+    "q1-2026",
+    "regulation-fd"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' but this is a corporate earnings disclosure filing, which could be categorized as a data release or economic commentary; however, it does not clearly fit the defined taxonomy",
+      "Source is a routine SEC 8-K filing with no substantive earnings data included - only a reference to presentation slides (Exhibit 99.1) that are not part of the filing text",
+      "Record correctly identifies lack of relevance to market structure or macro catalysts, but the record itself was still generated and needs disposition decision"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The source is a routine corporate regulatory filing with no substantive market or macro data. While the generated record accurately describes the source content and correctly identifies it as irrelevant to archive focus areas, a human decision is needed on whether to accept this record to the review queue (acknowledging low archival value) or reject it outright. The event_type 'unknown' is flagged but is arguably correct given the source does not fit defined taxonomy categories."
+  },
+  "raw_text_path": "data/raw/000071367626000029.txt",
+  "notes": "This source is not relevant to the archive's focus areas (market structure, macro catalysts). It is a routine SEC 8-K filing from a commercial bank disclosing an investor earnings call. The actual earnings data and any material financial information would be in the referenced Exhibit 99.1 presentation slides, which are not included in this filing text. Archive quality is low—source provides no actionable market or macro information.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Not relevant to market structure or macro catalysts",
+      "Content is a regulatory wrapper with no substantive financial data",
+      "Actual earnings information referenced but not included in filing text"
+    ]
+  }
+}
