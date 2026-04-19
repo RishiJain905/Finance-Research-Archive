@@ -1,7 +1,7 @@
 {
   "id": "upcoming_treasury_auctions_2026_04_18",
   "created_at": "2026-04-18T14:09:54.428822+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "treasury_issuance",
   "title": "Upcoming Treasury Auctions — API Fetch Failed",
@@ -48,27 +48,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate in describing the API failure, but the underlying source has no substantive content. This creates ambiguity about whether documenting a failed fetch has archival value, or whether the record should be rejected and re-attempted with corrected parameters."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-19T00:24:53.416272+00:00"
   },
   "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_18.txt",
   "notes": "This record documents a failed API call, not an actual source artifact. The source metadata correctly identifies the intent (upcoming Treasury auctions) and topic (market structure), but the retrieved body contains only an HTTP error. No auction data was obtained. Recommend retrying the API call or using an alternative data source (e.g., TreasuryDirect.gov auction calendar) to populate this record with actual market structure information.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "null",
-    "score": 0,
+    "tier": "tier_3",
+    "score": 45.0,
     "reasoning": [
-      "No actual content retrieved — only an API error message. Confidence is essentially zero. This record serves as a placeholder indicating the data fetch failure."
+      "quality score: 45.0/100 (acceptable)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "lower-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
