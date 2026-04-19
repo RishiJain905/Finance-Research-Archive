@@ -1,0 +1,71 @@
+{
+  "id": "wb_public_debt_2026_04_19",
+  "created_at": "2026-04-19T14:08:34.493855+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "World Public Debt Indicator (GC.DOD.TOTL.GD.ZS) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-19",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS (government debt as % of GDP) returned no valid observations for the requested snapshot date. No actionable data was retrieved.",
+  "key_points": [
+    "No valid observations returned for indicator GC.DOD.TOTL.GD.ZS",
+    "Query snapshot date: 2026-04-19",
+    "Indicator represents general government gross debt as a percentage of GDP"
+  ],
+  "why_it_matters": "This query produced no usable macro data. Any analysis based on this would be unsupported.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned no actionable data - record documents a failed data retrieval rather than substantive research",
+      "Record has zero archival value - it contains no macro intelligence, market context, or analytical content",
+      "Empty URL and domain fields indicate incomplete source attribution",
+      "market_impact and macro_context are empty, confirming no market-relevant information exists",
+      "quality_tier correctly identifies the record as having no data, yet it remains in review_queue rather than being rejected"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "While the record is factually accurate about the failed data retrieval (correctly stating 'No valid observations returned'), the core issue is that this record documents a technical API failure rather than containing any substantive macro research content. A record of 'no data returned' does not meet archival value thresholds for a finance research archive, regardless of its accuracy. Human confirmation needed to ensure consistent application of quality standards."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_19.txt",
+  "notes": "Empty data return from World Bank API. No actual information content. Requires data re-query or alternative source.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 0,
+    "reasoning": [
+      "No actual data retrieved"
+    ]
+  }
+}

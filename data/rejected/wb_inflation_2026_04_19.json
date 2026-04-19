@@ -1,0 +1,77 @@
+{
+  "id": "wb_inflation_2026_04_19",
+  "created_at": "2026-04-19T14:07:39.438240+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Inflation Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "",
+    "published_at": "2026-04-19",
+    "source_type": "unknown"
+  },
+  "summary": "The World Bank API returned no valid observations for indicator FP.CPI.TOTL.ZG (World Inflation Rate) as of the 2026-04-19 snapshot date. This represents a data retrieval failure rather than an actual inflation data release.",
+  "key_points": [
+    "World Bank API returned null result for inflation indicator FP.CPI.TOTL.ZG",
+    "No recent valid observations available for this indicator",
+    "Snapshot date: 2026-04-19",
+    "This is a data retrieval failure, not an actual inflation print"
+  ],
+  "why_it_matters": "This source provides no actionable macro data. Rather than reporting an inflation figure, the API returned an error state. This is a technical data access issue, not a macro catalyst.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Inflation data is a primary macro catalyst for central bank policy and market pricing. However, this source contains no inflation figures—only a notification that the World Bank API could not return valid observations for this indicator.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "api-error",
+    "cpi",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' - while no valid event type applies here, this should be noted",
+      "No URL provided in source attribution - World Bank API endpoint would strengthen traceability",
+      "Source provides no actionable data - this is a failed API call, not a valid data release",
+      "Cannot determine from source when inflation data was last successfully available"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_19.txt",
+  "notes": "Source is a World Bank API response that failed to return data. The message 'No recent valid observations were returned' indicates either API connectivity issues, API parameter changes, or that the indicator data has not been updated. This is not a valid inflation data release. Topic mapped to macro catalysts based on indicator type (inflation/CPI), but the source provides no usable information.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "No actual data present - API returned null",
+      "Cannot extract any inflation figures",
+      "Cannot determine if stale or unavailable",
+      "Source provides no actionable information for market analysis"
+    ]
+  }
+}

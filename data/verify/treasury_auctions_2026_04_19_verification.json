@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only an HTTP 404 error message with no actual data content",
+    "No auction results, issuance amounts, or market structure information available",
+    "Source is a failed API call, not actual research content - has no archival value",
+    "Cannot verify any claims because no content exists beyond the error",
+    "event_type set to 'unknown' when the source isn't an event at all - it's a data infrastructure failure"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

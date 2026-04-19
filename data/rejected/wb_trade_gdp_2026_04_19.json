@@ -1,0 +1,70 @@
+{
+  "id": "wb_trade_gdp_2026_04_19",
+  "created_at": "2026-04-19T14:08:47.920016+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — No Data Returned",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-19",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) query returned no valid observations for the requested period. This is a null result with no usable data for the research archive.",
+  "key_points": [
+    "No recent valid observations were returned for indicator TG.VAL.TOTL.GD.ZS",
+    "Source represents a failed data query rather than an actual data release",
+    "No economic figures, trends, or policy signals are present in this source"
+  ],
+  "why_it_matters": "This source provides no actionable information. The query returned empty results, making it unsuitable for any market structure or macro catalyst analysis. Users seeking global trade data will need to query an alternative source or adjust their parameters.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "global-economy",
+    "null-result"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_19.txt",
+  "notes": "This record should be discarded. The source is a failed API/data query that returned zero observations. It contains no information relevant to market structure or macro catalysts. The TOPIC metadata indicates 'global_economy' which is outside the scope of this archive's focus areas.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No data content present — null query result",
+      "Not related to market structure or macro catalysts",
+      "Cannot verify or extract any meaningful information",
+      "Source is a placeholder with zero analytical value"
+    ]
+  }
+}

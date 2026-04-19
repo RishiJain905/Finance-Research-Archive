@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no actionable data - record documents a failed data retrieval rather than substantive research",
+    "Record has zero archival value - it contains no macro intelligence, market context, or analytical content",
+    "Empty URL and domain fields indicate incomplete source attribution",
+    "market_impact and macro_context are empty, confirming no market-relevant information exists",
+    "quality_tier correctly identifies the record as having no data, yet it remains in review_queue rather than being rejected"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the record is factually accurate about the failed data retrieval (correctly stating 'No valid observations returned'), the core issue is that this record documents a technical API failure rather than containing any substantive macro research content. A record of 'no data returned' does not meet archival value thresholds for a finance research archive, regardless of its accuracy. Human confirmation needed to ensure consistent application of quality standards.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS (government debt as % of GDP) returned no valid observations for the requested snapshot date. No actionable data was retrieved.",
+    "why_it_matters": "This query produced no usable macro data. Any analysis based on this would be unsupported.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
