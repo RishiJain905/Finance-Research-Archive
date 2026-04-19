@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when it should be explicitly classified or correctly identified as outside taxonomy scope",
+    "Source is a corporate 8-K filing entirely outside the archive's stated focus on market structure and macro catalysts",
+    "Generated record correctly identifies scope mismatch in 'why_it_matters' and quality_tier, yet still generates a full record for a filing that should not be archived",
+    "No monetary policy, market operations, or macro content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record already correctly assessed this source as outside scope (quality_tier: excluded). Auto-route to rejected is appropriate since the record itself demonstrates the source has no relevance to the archive's focus areas.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate 8-K filing from a Swiss-listed NYSE company proposing a special dividend. The document does not address market structure (e.g., plumbing, operations, trading mechanisms) or macro catalysts (e.g., monetary policy, fiscal policy shifts, economic data releases, geopolitical events). It is a micro-corporate announcement with no systemic or market-wide relevance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

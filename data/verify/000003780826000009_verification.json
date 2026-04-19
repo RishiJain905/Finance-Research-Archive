@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is a routine corporate earnings filing from a single regional bank",
+    "The 8-K body is thin and contains no actual earnings figures; actual data is in Exhibit 99.1 (external exhibit not included in source)",
+    "event_type set to 'unknown' when the record itself correctly notes this has no relevance to any macro catalyst category",
+    "The generated record correctly identifies the source as irrelevant, but the submission should not have entered the archiving pipeline at all"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

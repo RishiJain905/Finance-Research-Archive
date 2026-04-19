@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - while this is technically correct given the taxonomy, an 8-K filing disclosing material credit agreement amendments could arguably map to 'financial_stability_report' if one interprets broadly, though 'unknown' is defensible",
+    "The record is factually accurate and the self-assessment of being outside macro catalyst scope is correct, but the record itself is well-structured and properly formatted"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is self-aware about its scope limitations and accurately represents the source content. While event_type is 'unknown', the record correctly identifies this as a routine corporate credit amendment with no macro catalyst relevance. No human review needed as the record correctly rejects itself.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

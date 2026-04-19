@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record has empty source attribution (name, url, domain, published_at, source_type all blank)",
+      "Source is a routine SEC 8-K corporate filing from a regional bank (F.N.B. Corporation), not relevant to macro catalysts or market structure",
+      "event_type would be 'unknown' - filing does not fit any taxonomy category (no monetary policy, speeches, data releases, treasury operations, or research)",
+      "Source is thin: 8-K contains only dividend announcement and buyback authorization with no substantive analysis or market-relevant context",
+      "No visible archival value for finance research - this is standard corporate disclosure, not a policy decision or key research finding"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source attribution is completely missing from the record, and the source itself is a thin, routine corporate filing with no macro or market structure relevance. This fails multiple rejection criteria."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

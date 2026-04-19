@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a routine BDC NAV disclosure with no relevance to market structure or macro catalysts—core archive focus areas",
+    "event_type set to 'unknown' is technically valid but suboptimal; could be 'data_release_other' given NAV is a periodic disclosure metric"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and well-structured. The primary issue is scope: this is a company-specific NAV filing from a private credit BDC with no systemic market structure or macro relevance. The record correctly identifies this limitation. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Pearl Diver Credit Company Inc. filed a Form 8-K on April 17, 2026, disclosing management's unaudited net asset value per share of $10.48 as of March 31, 2026. The company is a credit-focused investment firm with common stock (PDCC) and preferred stock (PDPA) trading on the NYSE.",
+    "why_it_matters": "This is a routine corporate disclosure from a credit-focused registered investment company (BDC). The NAV-per-share disclosure is standard for BDC-style entities. This filing is NOT relevant to the archive focus areas of market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

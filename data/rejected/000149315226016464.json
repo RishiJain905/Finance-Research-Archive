@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is entirely empty - all fields missing including source attribution (name, url, domain), published_at, source_type, topic, summary, key_points, and all other fields",
+      "Source is a company-specific SEC Form 8-K filing for CareCloud, Inc. (small healthcare technology company) - not relevant to market structure or macro catalysts",
+      "Credit facility and ATM agreement are routine corporate financing events with no systemic market implications",
+      "Source attribution completely missing in generated record",
+      "event_type field is empty - cannot verify against taxonomy",
+      "Record has no archival value as it contains zero extracted information"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely empty with no extractable information. The source itself (a small-cap company's financing agreements) is not relevant to macro finance research. Auto-reject is appropriate."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

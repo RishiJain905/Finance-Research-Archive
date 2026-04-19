@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated research record is entirely empty - all fields are blank with no content",
+      "Source attribution completely missing: name, url, domain, published_at, and source_type are all empty strings",
+      "No summary, key_points, why_it_matters, or any other content provided in the record",
+      "Source is a SEC 8-K corporate governance filing (director departure) - relevance to market structure or macro catalysts is marginal at best",
+      "Unable to verify event_type as no record content was generated"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record generation appears to have failed completely. All fields are empty, making verification impossible. Auto-reject is appropriate."
+  },
+  "summary": "N/A - record is empty",
+  "key_points": [],
+  "why_it_matters": "N/A - record is empty",
+  "macro_context": "N/A - record is empty",
+  "market_structure_context": "N/A - record is empty",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

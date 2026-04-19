@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 9,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but a more specific taxonomy value could be assigned - this is a corporate SEC filing, closest match would be 'regulatory_guidance' or 'unknown' is acceptable given it doesn't fit standard macro/market categories"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record accurately represents the source and correctly identifies it as outside archive scope. However, human review is needed to confirm rejection decision and verify that the scope-matching logic (reject for irrelevance) is working correctly. The record itself is well-constructed but the automated review flags need validation.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
