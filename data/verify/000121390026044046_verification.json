@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an SEC 10-K filing for Profusa, Inc. - a small, thinly-traded biotech company - which is not relevant to market structure or macro catalysts",
+    "Generated research record is completely empty (all fields blank/zero) - no meaningful extraction occurred",
+    "Source is a routine corporate annual report with no financial market research value",
+    "No connection to monetary policy, economic data releases, treasury operations, or market structure research",
+    "Source type 'sec_edgar' with page_type not provided suggests this is a document filing, not a research-relevant article"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is not relevant to finance research archive scope (macro catalysts, market structure). The generated record is entirely empty, indicating a processing failure. A routine small-cap corporate 10-K filing has no archival value for macro-financial research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

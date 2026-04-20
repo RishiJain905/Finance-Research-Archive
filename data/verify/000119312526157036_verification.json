@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but this is a regulatory_filing 8-K. While the taxonomy doesn't have a specific regulatory_filing type, this could be mapped to 'unknown' as a catch-all, but the record doesn't indicate this was considered.",
+    "market_impact confidence is 0 with no asset classes or directional bias specified, though this may be appropriate given the limited market relevance.",
+    "macro_context and market_structure_context are empty, which is consistent with the source's narrow focus but represents missed opportunity to provide any context."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is technically accurate but the source is not relevant to the archive's focus areas (market structure or macro catalysts). The event_type being 'unknown' is borderline since the taxonomy doesn't include 'regulatory_filing'. Human review is needed to confirm this should be rejected based on relevance grounds.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

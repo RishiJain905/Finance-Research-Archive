@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - this is an SEC regulatory filing (8-K) documenting shareholder vote outcomes, which does not map well to the provided taxonomy. Could argue for 'research_paper' as a stretch, but no category fits well for corporate governance/shareholder meeting votes.",
+    "Record is factually accurate against the source text - all vote counts and proposals match.",
+    "The source is correctly assessed as irrelevant to market structure or macro catalysts.",
+    "However, the verification_confidence score of 0 appears to conflate relevance assessment with verification accuracy. The record content accurately reflects the source; the issue is topical relevance, not factual accuracy."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate but assessed as irrelevant to the archive's scope (market structure and macro catalysts). Need human decision on whether irrelevant corporate governance filings should be accepted or rejected based on the archive's scope. The taxonomy also lacks a clear event_type for shareholder meeting outcomes.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

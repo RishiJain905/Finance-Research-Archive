@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - for a regulatory SEC filing, 'regulatory_guidance' would be more appropriate if the source were relevant",
+    "verification_confidence set to 0 incorrectly - the record accurately describes the source content (factual accuracy is not the issue)",
+    "suggested_status should be 'rejected' since source is not relevant to target topics, not 'review_queue'",
+    "The human_review.decision of 'not_relevant' aligns with reject, but suggested_status contradicts this"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-structured and correctly identifies the source as irrelevant to market structure/macro catalysts. The core issue is that suggested_status ('review_queue') contradicts the actual conclusion ('not_relevant'). Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

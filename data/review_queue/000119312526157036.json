@@ -1,0 +1,83 @@
+{
+  "id": "000119312526157036",
+  "created_at": "2026-04-20T14:22:16.899974+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "InPoint Commercial Real Estate Income, Inc. 8-K Filing — 2026-04-15",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1690012/000119312526157036/ck0001690012-20260415.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-15",
+    "source_type": "regulatory_filing"
+  },
+  "summary": "InPoint Commercial Real Estate Income, Inc. filed this 8-K to disclose its monthly NAV calculation as of March 31, 2026. The company reported an aggregate NAV per share of $13.4992, with total net asset value attributable to common stock of $136.6 million across 10.12 million outstanding shares.",
+  "key_points": [
+    "Total net asset value attributable to common stock: $136,612 thousand as of March 31, 2026",
+    "Aggregate NAV per share: $13.4992 across 10,120 thousand outstanding shares",
+    "Largest asset component: Commercial mortgage loans valued at $333,449 thousand",
+    "Largest liability: Repurchase agreements on commercial mortgage loans at $(215,074) thousand",
+    "NAV per share varies by share class, ranging from $13.4884 (Class P) to $13.6705 (Class T)",
+    "Public offering officially terminated on November 1, 2025"
+  ],
+  "why_it_matters": "This filing is a routine corporate disclosure from a specific non-traded REIT issuer. It does not provide information relevant to broad market structure or macro catalysts. It is relevant only to investors in this specific company's shares seeking to understand its internal valuation methodology.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$136,612 thousand — total NAV attributable to common stock",
+    "$13.4992 — aggregate NAV per share",
+    "10,120 thousand — number of outstanding shares",
+    "$333,449 thousand — commercial mortgage loans",
+    "$(215,074) thousand — repurchase agreements liability"
+  ],
+  "tags": [
+    "8-k",
+    "nav-calculation",
+    "non-traded-reit",
+    "commercial-real-estate",
+    "corporate-disclosure"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but this is a regulatory_filing 8-K. While the taxonomy doesn't have a specific regulatory_filing type, this could be mapped to 'unknown' as a catch-all, but the record doesn't indicate this was considered.",
+      "market_impact confidence is 0 with no asset classes or directional bias specified, though this may be appropriate given the limited market relevance.",
+      "macro_context and market_structure_context are empty, which is consistent with the source's narrow focus but represents missed opportunity to provide any context."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is technically accurate but the source is not relevant to the archive's focus areas (market structure or macro catalysts). The event_type being 'unknown' is borderline since the taxonomy doesn't include 'regulatory_filing'. Human review is needed to confirm this should be rejected based on relevance grounds."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000119312526157036.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a routine SEC Form 8-K from a specific non-traded commercial real estate income company disclosing its March 31, 2026 NAV calculation. Contains no information about monetary policy, market operations, economic data, or broader market structure elements. Filed by InPoint Commercial Real Estate Income, Inc. (CIF No. 32-0506267) headquartered in Oak Brook, Illinois. The company manages commercial mortgage loans and real estate owned. This source should be excluded from the finance research archive unless specific corporate analysis of this issuer is needed.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier4",
+    "score": 0,
+    "reasoning": [
+      "Source is a corporate 8-K filing from a specific non-traded REIT issuer",
+      "Content is a routine NAV disclosure with no market-wide or macro implications",
+      "Not relevant to focus areas: market structure or macro catalysts",
+      "Document is high quality (official SEC filing) but completely off-topic for the research archive"
+    ]
+  }
+}
