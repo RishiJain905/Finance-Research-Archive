@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine SEC 8-K filing for a micro-cap biotech company with no securities on any major exchange",
+    "Director resignation is purely corporate governance with no relevance to market structure or macro catalysts",
+    "Contains no information about monetary policy, economic data, market operations, or financial system structure",
+    "Archive mandate is focused on market structure and macro catalysts — this record falls entirely outside scope",
+    "The record is factually accurate but accuracy is insufficient when the source has zero archival value for macro finance research",
+    "event_type set to 'unknown' is appropriate but underscores the mismatch with taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the record is factually accurate in its representation of the SEC filing, the content is clearly irrelevant to macro finance research and market structure. The quality_tier correctly identifies this as 'excluded' with tier score 1. No human review needed — the record should be rejected per rule 1 (not relevant) and rule 6 (thin low-signal source biases toward reject). The record accurately describes the source but does not meet the archive's relevance criteria.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Emmaus Life Sciences, Inc. filed an 8-K on April 14, 2026 disclosing the resignation of director Jon Kuwahara, effective April 15, 2026. The filing is a routine corporate governance disclosure with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This is a routine corporate governance disclosure with no broader market implications. It does not affect monetary policy, macroeconomic conditions, or market structure. Irrelevant for macro finance research.",
+    "market_structure_context": ""
+  }
+}

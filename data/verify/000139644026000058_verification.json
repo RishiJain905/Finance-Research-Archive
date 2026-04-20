@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' — corporate earnings announcement does not fit the defined taxonomy, but this is correct as none of the event types cover routine BDC filings"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly characterized as not relevant to macro/market structure topics. However, human review is needed to confirm the decision: should routine corporate 8-K filings with no macro content be archived at all? The source itself is legitimate and well-sourced, but may lack archival value for a finance research archive focused on market structure and macro catalysts.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Main Street Capital Corporation filed a Form 8-K on April 16, 2026, announcing preliminary estimates of its Q1 2026 financial condition and results of operations (fiscal quarter ended March 31, 2026), pursuant to Item 2.02. The press release containing these estimates is attached as Exhibit 99.1. This is a routine corporate earnings announcement from a business development company (BDC) listed on the NYSE.",
+    "why_it_matters": "This is a routine corporate earnings filing from a single BDC. It does not constitute a macro catalyst or provide insight into market structure. It is not relevant to rate policy, Treasury operations, or broader market dynamics.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

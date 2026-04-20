@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but source is clearly an earnings announcement filing; should be 'data_release_other' or similar",
+    "Source is a routine micro-cap (CREX) corporate filing with zero macro relevance - correct assessment by generated record",
+    "actual financial figures not present in this 8-K (referenced in Exhibit 99.1 press release not included in body)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately captures the source's limited scope and correctly notes macro irrelevance. Minor issue with event_type could be auto-corrected.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Creative Realities, Inc. (Nasdaq: CREX), a Louisville, Kentucky-based technology company, filed a Form 8-K on April 14, 2026 announcing financial results for the three and twelve months ended December 31, 2025 via Item 2.02 (Results of Operations and Financial Condition). The filing references an attached press release (Exhibit 99.1) but does not include the actual financial figures in this cover page document.",
+    "why_it_matters": "This filing is a routine earnings announcement for a micro-cap technology company. It has no relevance to monetary policy, macro economic conditions, interest rate decisions, or market structure. The actual financial figures are contained in the referenced press release (Exhibit 99.1), not in this 8-K cover page."
+  }
+}
