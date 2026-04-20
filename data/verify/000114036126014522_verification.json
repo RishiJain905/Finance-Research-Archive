@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate earnings announcement for a single regional bank (Bank7 Corp.) - not relevant to market structure or macro catalysts",
+    "event_type set to 'unknown' - while correct that this doesn't fit the taxonomy, the source should not be in this archive at all",
+    "Actual financial data referenced in exhibits (99.1 and 99.2) is not included in the filing body, making this a thin placeholder document",
+    "Source is a regulatory filing, not an article-like source with substantive research content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the fundamental problem: this source has no relevance to market structure or macro catalysts. No human review needed - the rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

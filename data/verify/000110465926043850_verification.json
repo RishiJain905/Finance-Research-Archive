@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but for an 8-K filing, 'regulatory_filing' or 'unknown' is acceptable as it doesn't fit neatly into the event taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-calibrated and correctly identifies the source as not relevant to a macro/finance research archive. The summary and key_points are factually accurate. Automated routing is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine SEC 8-K filing from Gevo, Inc., a small-cap sustainable aviation fuel company (Nasdaq: GEVO), announcing withdrawal of its DOE loan guarantee application for the ATJ-60 project in Lake Preston, SD. The filing discusses corporate strategy and financing decisions only. For a macro/finance research archive focused on market structure and macro catalysts, this single-company corporate event has no relevance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

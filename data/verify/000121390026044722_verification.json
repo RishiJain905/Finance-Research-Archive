@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type 'regulatory_filings' is not a valid taxonomy value per the provided taxonomy",
+    "Source is NOT relevant to market structure or macro catalysts - this is a routine corporate 8-K about animal detection supply agreements",
+    "Per CORE RULE 1, source must be relevant to market structure or macro catalysts; this filing fails that threshold",
+    "topic is set to 'not_applicable' and record itself acknowledges no market structure or macro implications"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source fails the fundamental relevance threshold. While the summary is factually accurate and source attribution is correct, this SEC Form 8-K about a supply agreement for AI-powered animal detection systems has no relevance to market structure or macro catalysts. The generated record itself acknowledges this in 'why_it_matters' and 'notes'. No human review needed - clearly reject per stated criteria.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

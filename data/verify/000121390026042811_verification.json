@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Event type is 'unknown' but the document is a corporate acquisition/8-K filing - no valid taxonomy category applies",
+    "Source is explicitly a routine SEC 8-K filing with no relevance to market structure or macro catalysts per the archive's stated focus",
+    "The record correctly identifies zero relevance to the archive's focus areas, yet still proposes 'review_queue' instead of rejection",
+    "why_it_matters field appropriately notes 'no broader market implications' but this should result in rejection, not review"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately captures the source content but correctly identifies that this SEC 8-K filing has no relevance to market structure or macro catalysts. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a micro-cap OTC-listed construction materials company 10-K — not relevant to market structure or macro catalysts",
+    "Source content is garbled XBRL structured data, not human-readable narrative",
+    "event_type set to 'unknown' when it could be 'data_release_other' for SEC filings, but this is moot given the irrelevance",
+    "Record correctly acknowledges the source has no macro relevance, but the archive's focus filter excludes this document type"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source as irrelevant to macro catalysts and market structure. No need for human review — this is a clear reject based on topic focus.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

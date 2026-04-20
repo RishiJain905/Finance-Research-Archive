@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - for a corporate earnings announcement filing, 'data_release_other' would be a more appropriate taxonomy classification",
+    "The filing body contains only metadata and boilerplate; the actual earnings data is in Exhibit 99.1 which is not included in the document text, making this a thin source",
+    "Summary accurately notes the earnings information is not present, but this creates tension with archival value requirements"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record accurately reflects the source content, but raises a fundamental question about archival value. The filing is factually correct (Q1 2026 earnings announcement, April 16, 2026 date, furnished status, BFC ticker, etc.), but the substantive earnings data exists only in an attached exhibit (99.1) not included in this document. A human decision is needed to determine if a Form 8-K containing only metadata about an earnings announcement warrants archival preservation, or if this represents a 'thin low-signal source' that should be rejected per CORE RULE 6.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Bank First Corporation filed a Form 8-K with the SEC on April 16, 2026, announcing earnings for the quarter ended March 31, 2026. The actual earnings data and press release details are contained in Exhibit 99.1, which is referenced but not included in the body of this filing. This is a routine corporate regulatory disclosure from a small Wisconsin-based regional bank (NASDAQ: BFC) and does not contain information relevant to market structure or macro catalysts.",
+    "why_it_matters": "This filing is not relevant to market structure or macro catalysts. It is a routine corporate earnings disclosure from a small regional bank that does not carry broader market implications. The substantive financial information (revenue, earnings, metrics) is in the referenced Exhibit 99.1, which is not present in this document.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
