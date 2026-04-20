@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution entirely missing - name, url, domain, published_at, and source_type fields are all empty",
+    "Source is a thin SEC regulatory filing (8-K) that merely references an attached press release (Exhibit 99.1) containing the actual financial results, which is not included in the source body",
+    "Record has no content whatsoever - summary, key_points, why_it_matters, macro_context, market_structure_context, and notes are all empty",
+    "event_type is missing from the record entirely",
+    "Source is not relevant to macro catalysts or market structure - this is a small-cap technology company (MIND Technology, Inc.) earnings announcement that has no broader market significance",
+    "market_impact, asset_classes, and directional_bias fields are empty, making it impossible to assess any financial relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is completely empty with no source attribution or any content fields filled in. This appears to be a failed record generation rather than a verification case. Even if filled in, the source (a small-cap 8-K earnings filing) lacks relevance to macro catalysts or market structure for a finance research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
