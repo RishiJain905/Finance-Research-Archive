@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no data - empty/null API response with no valid observations",
+    "No source URL provided - source attribution incomplete (World Bank API endpoint missing)",
+    "Cannot extract any substantive economic or market data from null response",
+    "event_type set to 'unknown' which is correct, but source type should be clearer about being a failed query",
+    "No archival value - source contains zero actionable content for market structure or macro catalyst analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies source as non-archivable null response. Clear reject based on empty data - no ambiguity requiring human judgment.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

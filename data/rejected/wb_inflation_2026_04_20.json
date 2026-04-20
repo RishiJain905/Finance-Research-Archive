@@ -1,0 +1,78 @@
+{
+  "id": "wb_inflation_2026_04_20",
+  "created_at": "2026-04-20T15:05:02.244615+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Inflation Rate (FP.CPI.TOTL.ZG) — No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-20",
+    "source_type": "data_release_other"
+  },
+  "summary": "A query to the World Bank's global inflation indicator (FP.CPI.TOTL.ZG) returned no valid observations as of the snapshot date. No inflation data points could be extracted for this record.",
+  "key_points": [
+    "Indicator requested: FP.CPI.TOTL.ZG (Consumer price index, annual %)",
+    "Source: World Bank",
+    "Snapshot date: 2026-04-20",
+    "Result: No recent valid observations were returned",
+    "No country-level or aggregate inflation figures available from this query"
+  ],
+  "why_it_matters": "This record represents a failed data retrieval rather than substantive macro information. Inflation data is a key macro catalyst for central bank policy decisions, but this source provides no actionable figures.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "no-data",
+    "failed-query"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "No URL provided for source attribution - violates field requirement for name + url",
+      "Source contains no substantive content - only a null data response from a failed query",
+      "event_type set to 'unknown' - while no data was returned, this indicates incomplete classification",
+      "Record has no archival value - failed data queries contain no information to preserve",
+      "Source metadata topic 'global_economy' does not align with requirement for 'market structure or macro catalysts' content",
+      "Cannot extract any factual content, important numbers, or key insights from null response"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_20.txt",
+  "notes": "This source is not relevant to market structure or macro catalysts as defined. It is a null data response — no inflation figures were returned. The World Bank query failed to produce observations for indicator FP.CPI.TOTL.ZG. Recommend discarding this record or re-querying with a different indicator or date range. Not archiveable in current form.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "No substantive content — only metadata about a failed data query",
+      "Cannot extract key points, important numbers, or any factual content",
+      "Below minimum quality threshold for archival"
+    ]
+  }
+}

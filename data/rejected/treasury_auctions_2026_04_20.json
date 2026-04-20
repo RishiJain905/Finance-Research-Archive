@@ -1,0 +1,80 @@
+{
+  "id": "treasury_auctions_2026_04_20",
+  "created_at": "2026-04-20T15:02:39.136898+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Treasury Securities Auctions Data",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "domain": "api.fiscaldata.treasury.gov",
+    "published_at": "2026-04-20",
+    "source_type": "unknown"
+  },
+  "summary": "A data retrieval attempt for Treasury securities auction data via the Treasury Fiscal Data API returned a 404 Not Found error, indicating the requested endpoint is currently unavailable or has changed. No actual auction data was retrieved.",
+  "key_points": [
+    "API endpoint returned 404 error: https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "Requested fields included: issue_date, security_type, security_term, offering_amt, total_accepted",
+    "Request was sorted by issue_date descending with page size of 5",
+    "No auction data was successfully retrieved",
+    "Target SNAPSHOT_DATE was 2026_04_20"
+  ],
+  "why_it_matters": "Treasury auction data is a core component of market structure analysis for the US government bond market. The failure to retrieve this data means there is no current visibility into recent auction offerings, acceptance amounts, or auction mechanics for this date.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The 404 error on the Treasury Fiscal Data API endpoint prevents monitoring of Treasury auction operations, which are a key element of US government bond market structure. Auction data would normally include security type, term, offering amount, and total accepted amounts.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api-error",
+    "market-structure",
+    "404-error",
+    "fiscal-data",
+    "bond-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 5,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only an API 404 error message with no actual auction data",
+      "No market structure or macro catalyst information can be extracted from a failed endpoint call",
+      "Record has no substantive research archive value - it merely documents a data access failure",
+      "Source is thin, low-signal, and does not support the stated topic (market structure analysis of Treasury auctions)",
+      "Event type 'treasury_issuance' is valid but misapplied - issuance data would require actual auction results, not an error response"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is well-constructed for what it attempts to document, but the source itself lacks archival value. A failed API call is not a research record worth preserving - it documents the absence of data rather than data itself."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_20.txt",
+  "notes": "Source is a failed API call returning HTTP 404. No auction data was retrieved. The Treasury Fiscal Data API endpoint path may have changed. Recommend attempting alternative endpoint or checking Treasury API documentation. Target topic is market structure (Treasury auction mechanics), but source contains no analyzable data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 0,
+    "reasoning": [
+      "Source contains only an API error message, no actual data",
+      "Cannot extract any market structure or macro catalyst information",
+      "Record has no research archive value in current state",
+      "Requires human investigation to resolve API access issue"
+    ]
+  }
+}

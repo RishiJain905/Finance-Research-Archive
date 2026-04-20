@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a data query failure with no valid observations - provides no usable information",
+    "Cannot support market structure or macro catalyst analysis without data",
+    "Source attribution is incomplete: URL and domain are empty strings",
+    "event_type set to 'unknown' when it could reasonably be 'data_release_other' for a data query result",
+    "No archival value - failed query result has no analytical substance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate to the source but the source itself is a failed data query with no valid observations. This falls clearly under reject criteria: 'Source is too thin or noisy to have archival value' and 'Source is not relevant to market structure or macro catalysts' since there is no data to analyze.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The World Bank API query for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations on 2026-04-20. This failed data retrieval provides no actionable information for market structure or macro catalyst research.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

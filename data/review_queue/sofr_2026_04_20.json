@@ -1,0 +1,85 @@
+{
+  "id": "sofr_2026_04_20",
+  "created_at": "2026-04-20T15:02:39.138938+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "SOFR Rate Observation - April 17, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-20",
+    "source_type": "data_release"
+  },
+  "summary": "SOFR closed at 3.65% on April 17, 2026, down 2 basis points from the prior day's reading of 3.67%. The rate has oscillated within a narrow 9 bps band (3.63% to 3.72%) over the most recent five trading days, indicating stable short-term dollar funding conditions.",
+  "key_points": [
+    "SOFR latest observation: 3.65% on 2026-04-17",
+    "Prior day value: 3.67% on 2026-04-16",
+    "Single-day change: -0.02 (down 2 bps)",
+    "Five-day range: 3.63% (April 13) to 3.72% (April 15)",
+    "Data source: FRED series SOFR, snapshot date 2026-04-20"
+  ],
+  "why_it_matters": "SOFR is the primary overnight dollar funding benchmark, replacing LIBOR across trillions of dollars in derivatives, loans, and floating-rate notes. Daily movements reflect underlying repo market conditions and short-term dollar liquidity. The narrow recent range suggests orderly funding markets absent of acute stress.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "",
+  "market_structure_context": "SOFR (Secured Overnight Financing Rate) is derived from trades in the Treasury General Collateral repo market and serves as the overnight risk-free reference rate for dollar-denominated instruments. The rate's stability near 3.65% reflects benign short-term funding conditions. As the primary replacement for LIBOR, SOFR anchors pricing for interest rate swaps, floating-rate debt, and money market fund benchmarks.",
+  "important_numbers": [
+    "3.65%",
+    "3.67%",
+    "3.72%",
+    "3.63%"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "repo",
+    "short-term-rates",
+    "dollar-funding",
+    "benchmark-rate"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'market_notice' but the source is a quantitative data snapshot. Correct type should be 'data_release_other' since SOFR is a benchmark rate data release, not a market notice or announcement."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record's numerical data is accurate and fully supported by the source. Source attribution is present and correct. However, event_type is misclassified—'market_notice' implies a specific announcement or notice, while this is a routine daily data release from FRED. Human review is needed to correct the event_type before acceptance."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_20.txt",
+  "notes": "Source is a thin quantitative snapshot providing SOFR's daily closing value and recent observations. No policy commentary or forward guidance included. Data is routine daily market data from FRED. Relevance to archive is informational—establishes baseline short-term funding conditions for the record.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_3",
+    "score": 6,
+    "reasoning": [
+      "Routine daily market data point with no policy signal or commentary",
+      "Limited analytical depth beyond raw numbers",
+      "Useful as historical record of funding conditions"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "a533d6ab2f6471528941604af0c56a0511789250"
+}
