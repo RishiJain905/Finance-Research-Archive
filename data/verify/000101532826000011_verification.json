@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts: routine regional bank 8-K earnings filing",
+    "No earnings figures are included in the filing text; exhibits referenced but not provided in source",
+    "event_type set to 'unknown' is correct but confirms lack of macro relevance",
+    "topic 'not_applicable' and quality_tier 'not_applicable' correctly identify this source as out of scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source does not meet relevance criteria for market structure or macro catalyst research. The verification confirms the generated record correctly assessed this as not relevant, but human confirmation is needed before final rejection to ensure archival scope guidelines are properly applied.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing is not relevant to market structure or macro catalyst research. It is a routine corporate earnings announcement for a single regional bank holding company (Wintrust Financial Corporation) and does not provide information about monetary policy, macroeconomic indicators, or market operations. The actual earnings data is contained in exhibits 99.1 and 99.2, which are referenced but not included in this filing text.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

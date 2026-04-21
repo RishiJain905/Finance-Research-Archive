@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'data_release_other' is incorrect. This is a corporate earnings filing, not a government statistical release. Valid options would be more aligned with 'unknown' or a catch-all type, but 'data_release_other' implies official economic data (CPI, GDP, etc.) which this is not.",
+    "Source quality is thin - the filing body only contains headline numbers. Exhibits 99.1 (earnings release) and 99.2 (financial supplement) with detailed breakdowns are referenced but not included in the 8-K body text.",
+    "Topic 'macro catalysts' is marginal - this is a corporate earnings release from a private company, not a macro catalyst in the traditional sense. Provides limited analytical value for an archive focused on market structure and macro catalysts."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the headline financial figures are accurate and source attribution is correct, the event_type is misclassified (corporate earnings vs. government data release), and the source lacks analytical depth due to missing exhibits. Human review needed to determine if corporate earnings filings align with archive collection scope.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "JPMorgan Chase reported Q1 2026 net income of $16.5 billion ($5.94 per share), up from $14.6 billion ($5.07 per share) in Q1 2025. This is a routine 8-K filing providing first quarter earnings headline numbers. Detailed earnings release and financial supplement (Exhibits 99.1 and 99.2) are referenced but not included in the filing body text.",
+    "why_it_matters": "As the largest U.S. bank by assets, JPMorgan Chase's quarterly earnings provide a data point on financial sector performance. The ~17% EPS growth year-over-year indicates continued banking sector profitability. However, this filing contains only headline numbers without detailed segment breakdown, commentary, or forward guidance.",
+    "macro_context": "Corporate earnings from large banks can signal broader economic health, particularly for consumer/commercial banking and trading revenues. However, this 8-K provides only headline numbers without drivers analysis, credit quality metrics, or guidance that would enable macro assessment.",
+    "market_structure_context": ""
+  }
+}

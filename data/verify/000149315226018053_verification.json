@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — a standard SEC 8-K filing disclosing a convertible credit facility could reasonably be categorized as 'data_release_other' or a catch-all financial filing type; leaving it as 'unknown' when the context is clear is unnecessary hedging",
+    "Data discrepancy flagged but unresolved: outstanding principal balance ($24,500,626) exceeds the stated maximum principal ($14,000,000). The source explains the initial balance ($12,097,000) and additional borrowings ($1,214,313), but the arithmetic yields approximately $13.3M—not $24.5M. Either significant additional undisclosed borrowings occurred, or the source contains an error. No explanation is provided.",
+    "The key_points claim the note 'maximum principal amount is $14,000,000' — this is the stated cap, but the actual outstanding balance of $24,500,626 exceeds it, suggesting the note may not have a hard cap or the company drew beyond the stated limit"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately captures the filing's contents and correctly identifies that the source lacks relevance to macro or market structure topics. However, the unexplained balance discrepancy ($24.5M outstanding vs $14M stated maximum) warrants human verification before archiving. Additionally, the archive's relevance criteria should be confirmed—routine micro-cap corporate filings with no broader market implications may not belong in a research archive focused on market structure and macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "VIP Play, Inc., a Nevada micro-cap company, disclosed the terms of its First Amended and Restated Discretionary Convertible Revolving Line of Credit Demand Note with Excel Family Partners, LLLP. The note carries a 12% fixed annual interest rate and allows Excel to convert outstanding debt into common stock at 80% of the lowest recent share price within the prior 12 months. As of April 20, 2026, the aggregate outstanding principal balance was $24,500,626 — which exceeds the stated $14,000,000 maximum, an inconsistency not explained in the filing.",
+    "why_it_matters": "This is a routine corporate debt disclosure for a micro-cap company. It does not contain information relevant to macroeconomic policy, market structure, or broader market catalysts. The note terms (related-party transaction, demand feature, above-market interest rate, conversion rights with dilution potential) are material only to VIP Play's shareholders and are typical for thinly capitalized companies. Note: The outstanding balance ($24,500,626) exceeds the stated maximum principal ($14,000,000), suggesting either an uncapped facility or undisclosed additional borrowings.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

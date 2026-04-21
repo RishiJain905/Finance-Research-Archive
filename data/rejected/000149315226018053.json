@@ -1,0 +1,86 @@
+{
+  "id": "000149315226018053",
+  "created_at": "2026-04-21T04:00:32.739354+00:00",
+  "status": "rejected",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "VIP Play, Inc. 8-K Filing — 2026-04-20",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1832161/000149315226018053/form8-k.htm",
+    "published_at": "2026-04-20",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "VIP Play, Inc., a Nevada micro-cap company, disclosed the terms of its First Amended and Restated Discretionary Convertible Revolving Line of Credit Demand Note with Excel Family Partners, LLLP. The note carries a 12% fixed annual interest rate and allows Excel to convert outstanding debt into common stock at 80% of the lowest recent share price within the prior 12 months. As of April 20, 2026, the aggregate outstanding principal balance was $24,500,626 — which exceeds the stated $14,000,000 maximum, an inconsistency not explained in the filing.",
+  "key_points": [
+    "VIP Play, Inc. entered into a convertible revolving credit note with Excel Family Partners, LLLP controlled by a company insider (Bruce Cassidy, Secretary and sole board member)",
+    "The note maximum principal amount is $14,000,000 with outstanding balance of $24,500,626 as of April 20, 2026",
+    "Interest rate is fixed at 12% per annum; default rate increases to 14% (Fixed Rate + 2%)",
+    "Excel has conversion rights to common stock at 80% of the Lowest Recent Price within a 12-month lookback period; if no shares sold in that period, conversion price defaults to $0.50 per share",
+    "The company borrowed an additional $1,214,313 across seven draws from February 20, 2026 through April 17, 2026",
+    "Note is due and payable upon demand, with no stated maturity date"
+  ],
+  "why_it_matters": "This is a routine corporate debt disclosure for a micro-cap company. It does not contain information relevant to macroeconomic policy, market structure, or broader market catalysts. The note terms (related-party transaction, demand feature, above-market interest rate, conversion rights with dilution potential) are material only to VIP Play's shareholders and are typical for thinly capitalized companies. Note: The outstanding balance ($24,500,626) exceeds the stated maximum principal ($14,000,000), suggesting either an uncapped facility or undisclosed additional borrowings.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$14,000,000 note maximum",
+    "$24,500,626 outstanding principal balance as of 2026-04-20",
+    "$12,097,000 initial balance",
+    "$1,214,313 additional borrowings (Feb-Apr 2026)",
+    "12.0% fixed interest rate",
+    "14.0% default interest rate (Fixed Rate + 2%)",
+    "$0.50 per share default conversion price"
+  ],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "debt-financing",
+    "micro-cap",
+    "related-party-transaction",
+    "convertible-note"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' — a standard SEC 8-K filing disclosing a convertible credit facility could reasonably be categorized as 'data_release_other' or a catch-all financial filing type; leaving it as 'unknown' when the context is clear is unnecessary hedging",
+      "Data discrepancy flagged but unresolved: outstanding principal balance ($24,500,626) exceeds the stated maximum principal ($14,000,000). The source explains the initial balance ($12,097,000) and additional borrowings ($1,214,313), but the arithmetic yields approximately $13.3M—not $24.5M. Either significant additional undisclosed borrowings occurred, or the source contains an error. No explanation is provided.",
+      "The key_points claim the note 'maximum principal amount is $14,000,000' — this is the stated cap, but the actual outstanding balance of $24,500,626 exceeds it, suggesting the note may not have a hard cap or the company drew beyond the stated limit"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately captures the filing's contents and correctly identifies that the source lacks relevance to macro or market structure topics. However, the unexplained balance discrepancy ($24.5M outstanding vs $14M stated maximum) warrants human verification before archiving. Additionally, the archive's relevance criteria should be confirmed—routine micro-cap corporate filings with no broader market implications may not belong in a research archive focused on market structure and macro catalysts."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000149315226018053.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a routine SEC Form 8-K disclosing a convertible revolving credit note for a micro-cap Nevada company (VIP Play, Inc.). The filing describes terms of a related-party loan facility with an insider-controlled entity. No implications for monetary policy, interest rate outlook, Treasury operations, or broader financial market structure. Archived for completeness only; not useful for finance research targeting macro or market structure topics. Potential data discrepancy noted: outstanding balance ($24,500,626) exceeds maximum principal stated ($14,000,000) — not explained in filing.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "Source is a micro-cap corporate filing with no relevance to macro or market structure topics",
+      "No market-wide implications or macro context present",
+      "Company (VIP Play, Inc.) appears to be a thinly capitalized, small public company with minimal market footprint",
+      "Filing quality is acceptable but content scope is extremely narrow"
+    ]
+  }
+}

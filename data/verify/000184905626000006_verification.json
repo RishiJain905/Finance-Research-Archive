@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Record is completely empty - all major fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are blank",
+    "Source attribution is missing - source.name and source.url are empty strings",
+    "Topic is empty",
+    "No event_type populated",
+    "market_impact section is empty with zero confidence",
+    "tags array is empty",
+    "Record has no archival value as it contains no extractable information"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is empty/invalid - all required fields are blank. No human review needed as there is nothing to review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

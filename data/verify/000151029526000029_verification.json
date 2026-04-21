@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when a more specific type should apply - this is a corporate treasury/credit facility event",
+    "topic is correctly marked 'not_relevant' to market structure or macro catalysts",
+    "Source is a routine corporate treasury management event (credit facility refinancing) with no systemic market implications",
+    "The archive focus is market structure and macro catalysts; this filing does not address trading venues, clearing, settlement, central bank policy, or economic data releases"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is accurate but the source is clearly outside the archive's scope. Marathon Petroleum's credit facility refinancing is company-specific treasury management with no relevance to market structure or macro catalysts. The 'unknown' event_type and 'not_relevant' topic correctly identify this limitation. No human review needed - can reject based on scope mismatch.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Marathon Petroleum Corporation and subsidiary MPLX LP entered into new revolving credit agreements on April 7, 2026, replacing their respective 2022 credit facilities. MPC's new facility is $5.0 billion over five years; MPLX's is $2.5 billion over five years. No borrowings were outstanding under the prior agreements. MPC had $2.2 billion in cash and cash equivalents as of March 31, 2026; MPLX held $1.5 billion of that amount.",
+    "why_it_matters": "This is a routine corporate treasury refinancing event. Marathon Petroleum and MPLX are refinancing existing credit facilities with no change in borrowing status. This filing does not address market structure or macro catalysts and has no systematic market implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

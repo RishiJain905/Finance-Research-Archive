@@ -1,0 +1,47 @@
+{
+  "name": "SEC EDGAR",
+  "url": "https://www.sec.gov/Archives/edgar/data/1849056/000184905626000006/oklo-20260410.htm",
+  "domain": "sec.gov",
+  "published_at": "2026-04-14",
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Record is completely empty - all major fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are blank",
+      "Source attribution is missing - source.name and source.url are empty strings",
+      "Topic is empty",
+      "No event_type populated",
+      "market_impact section is empty with zero confidence",
+      "tags array is empty",
+      "Record has no archival value as it contains no extractable information"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is empty/invalid - all required fields are blank. No human review needed as there is nothing to review."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

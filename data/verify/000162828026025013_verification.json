@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a thin SEC 8-K cover page with no substantive content - only administrative boilerplate (securities registration, forward-looking statements disclaimer, signature page)",
+    "Exhibit 99 (actual Q1 2026 earnings presentation slides) is referenced but not included in the filing body - no financial data, earnings figures, or guidance present",
+    "Not relevant to market structure or macro catalysts - this is a corporate regulatory filing, not an economic or policy document",
+    "event_type set to 'unknown' when it should be identified as a corporate disclosure/earnings-related filing",
+    "Cannot assess macro/market impact as no actual data or policy content is present in the source",
+    "Source quality is insufficient for archiving as it provides no actionable market structure or macro catalyst information"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "JPMorgan Chase filed a Form 8-K with the SEC on April 14, 2026, disclosing that the firm held an investor presentation that day to review Q1 2026 earnings. The filing is primarily administrative, listing registered securities on the NYSE and providing company registration details. The actual earnings presentation slides referenced in Exhibit 99 are not included in the filing body.",
+    "why_it_matters": "This 8-K filing confirms JPMorgan Chase held its Q1 2026 earnings review investor presentation on April 14, 2026, establishing a timeline reference for when the bank communicated its quarterly results. However, the filing itself contains no substantive financial data, earnings figures, or forward guidance—the actual presentation content (Exhibit 99) is not present in the body.",
+    "macro_context": "The filing does not contain substantive macro or market data. It is a corporate regulatory filing noting an internal earnings review event.",
+    "market_structure_context": ""
+  }
+}
