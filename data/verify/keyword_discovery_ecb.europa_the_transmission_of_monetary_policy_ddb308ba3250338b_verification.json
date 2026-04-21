@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 8,
+  "verdict": "accept",
+  "issues_found": [
+    "Minor: important_numbers contains '400 bps (current policy rate)' which is ambiguous — this was the peak rate in September 2023, not the current rate after the 200 bps easing cycle"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "",
+    "important_numbers": "['-50 bps (starting rate, July 2022)', '400 bps (peak rate, September 2023)', '200 bps (cumulative easing, June 2024 – June 2025)', '2% (inflation target)']\n\nNote: '400 bps (current policy rate)' was inaccurate; current policy rate reflects post-easing level after 200 bps cut from peak."
+  }
+}

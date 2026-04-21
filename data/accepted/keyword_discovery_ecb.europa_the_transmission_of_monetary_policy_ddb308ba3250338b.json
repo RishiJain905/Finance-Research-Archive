@@ -1,0 +1,117 @@
+{
+  "id": "keyword_discovery_ecb.europa_the_transmission_of_monetary_policy_ddb308ba3250338b",
+  "created_at": "2026-04-21T01:23:20.808743+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "speech_neutral",
+  "title": "The transmission of monetary policy: financial conditions and credit dynamics",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251021~a757abf975.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2025-10-21",
+    "source_type": "speech"
+  },
+  "summary": "ECB Executive Board Member Philip Lane delivered a speech on October 21, 2025, explaining the ECB's framework for assessing monetary policy transmission, including the introduction of a new Macro-Finance Financial Conditions Index (FCI). The speech detailed the ECB's rate path since July 2022 (from -50 bps to 400 bps), the easing cycle from June 2024 to June 2025 (200 bps cumulative cut), and that policy rates have remained unchanged since June 2025. The Macro-Finance FCI remains above its historical average, indicating conditions are less restrictive than peak tightening but not back to pre-pandemic norms.",
+  "key_points": [
+    "ECB raised rates from -50 basis points to 400 basis points between July 2022 and September 2023",
+    "Easing cycle began June 2024; cumulative 200 bps cut by June 2025; rates unchanged since June 2025",
+    "New Macro-Finance FCI incorporates mutual feedback between macroeconomic and financial dynamics, distinguishing it from static FCIs",
+    "The Macro-Finance FCI outperformed other measures in describing euro area macroeconomic dynamics (Chart 1, right panel)",
+    "Despite recent easing, the Macro-Finance FCI remains well above its historical sample average",
+    "The re-anchoring of inflation expectations at 2% means markets do not expect a return to the pre-pandemic 'low for long' rate environment",
+    "Trade tensions and exchange rate dynamics are identified as external factors affecting monetary transmission"
+  ],
+  "why_it_matters": "Lane's speech provides institutional context on how the ECB evaluates whether monetary policy is transmitting effectively to the real economy. The new Macro-Finance FCI offers a more sophisticated tool for assessing financial conditions than previous static measures, potentially influencing future policy assessments. Market participants can use this framework to understand what the ECB watches when evaluating whether to continue easing.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The speech outlines how the ECB assesses transmission through Financial Conditions Indices. The current index remains above historical averages, indicating the cumulative tightening from the 2022-23 rate hiking cycle still weighs on financial conditions despite 200 bps of cuts since June 2024. Lane attributes part of this persistent elevation to a structural shift: inflation expectations are now re-anchored at 2%, removing the market expectation of indefinite low rates that existed pre-pandemic.",
+  "market_structure_context": "Lane detailed the construction and evolution of the new Macro-Finance FCI, which aggregates: short rates (€STR), long rates (10-year nominal OIS), real rates (1-year and 5-year real OIS), sovereign spreads (2-year and 10-year GDP-weighted euro area spreads over OIS), risk assets (investment-grade corporate spreads and CAPE ratio), and euro FX (NEER). The model's key innovation is incorporating feedback loops between macro variables and financial conditions.",
+  "important_numbers": [
+    "-50 bps (starting rate, July 2022)",
+    "400 bps (peak rate, September 2023)",
+    "200 bps (cumulative easing, June 2024 – June 2025)",
+    "2% (inflation target)",
+    "400 bps (current policy rate)"
+  ],
+  "tags": [
+    "ecb",
+    "monetary-policy-transmission",
+    "financial-conditions-index",
+    "philip-lane",
+    "interest-rates",
+    "euro-area",
+    "inflation-expectations",
+    "macro-finance"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": [
+      "Minor: important_numbers contains '400 bps (current policy rate)' which is ambiguous — this was the peak rate in September 2023, not the current rate after the 200 bps easing cycle"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_ecb.europa_the_transmission_of_monetary_policy_ddb308ba3250338b.txt",
+  "notes": "Speech by ECB Executive Board Member Philip Lane at the WE_ARE_IN Macroeconomics and Finance Conference. Source provides detailed institutional methodology for assessing monetary policy transmission. Key value-add: explanation of new Macro-Finance FCI that incorporates macroeconomic feedback loops. Content is analytical and backward-looking on the rate path; no forward guidance signals present. Source is historical (6 months old as of TODAY) — confidence slightly reduced. Source body was truncated mid-speech; credit dynamics section not fully captured.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_13",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "iorb_2026_04_14",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    },
+    {
+      "record_id": "sofr_2026_04_16",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 65.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 73.0,
+    "reasoning": [
+      "quality score: 73.0/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}
