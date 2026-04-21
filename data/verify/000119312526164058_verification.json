@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when it should be identified as a corporate filing event. While 'unknown' may technically be acceptable, this filing clearly doesn't fit any of the defined taxonomy categories (monetary policy, speeches, data releases, Treasury/operations, research). It might warrant a 'corporate_filing' type if such a category exists, or confirm that 'unknown' is appropriate for routine corporate disclosures that don't fit the macro catalyst mandate.",
+    "The record is factually accurate in all other respects - the $6.5 billion total ($500M + $3B + $3B), the security types, the filing date (April 20, 2026), and the legal exhibits are all correctly captured."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type 'unknown' is questionable but defensible. The record correctly identifies that this source has no relevance to market structure or macro catalysts, and the quality_tier 'irrelevant' is appropriate. However, the 'unknown' classification suggests the system couldn't categorize it - confirming this is the correct treatment vs. potentially creating a catch-all corporate filing type would benefit from human judgment.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

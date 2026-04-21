@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a routine corporate SEC Form 8-K for a small-cap aerospace company with no relevance to market structure or macro catalysts",
+    "Topic assigned as 'macro catalysts' is incorrect; source has no macro relevance",
+    "event_type set to 'unknown' is technically valid but reflects that this source falls outside the archive's taxonomy scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is accurately summarized in the record, but the record correctly identifies that the source falls outside the archive's scope (market structure, macro catalysts). Human decision needed on whether to reject or archive under a separate category.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

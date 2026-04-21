@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a company-specific 10-K filing with no relevance to macro market conditions, central bank policy, or market structure",
+    "event_type 'unknown' is technically valid but the record could note this is a 'regulatory_filing' type if such a category existed",
+    "Record correctly identifies irrelevance but suggested_status of 'review_queue' is inconsistent with the clear macro-irrelevance finding",
+    "The why_it_matters field correctly states no macro relevance, suggesting the record should be rejected, not queued for review"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately describes the source and correctly identifies it as irrelevant to macro/market structure research. However, the suggested_status 'review_queue' is inconsistent with the stated reasoning in why_it_matters and human_review notes that clearly indicate rejection is appropriate. A human should confirm: since this is a company-specific 10-K with no macro or market structure content, should it be rejected (per focus area criteria) or reviewed (since the record itself is accurate)?",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a standard SEC regulatory filing for a specific public company. It does not contain information relevant to macro market conditions, central bank policy, or market structure. It is not relevant to the finance research archive focus areas.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

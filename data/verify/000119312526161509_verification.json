@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record contains no substantive content - summary, key_points, why_it_matters, macro_context, market_structure_context are all empty",
+    "event_type field is missing from the record (required for verification)",
+    "topic field is empty",
+    "market_impact field contains empty arrays with zero confidence",
+    "Record appears to be a metadata skeleton with no actual analysis of the 8-K filing content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is essentially blank and contains no extractable content to verify. While the source (SEC 8-K filing) is a valid document, the record has failed to extract any meaningful information about the Madison Air Solutions IPO, pricing details, underwriters, or associated agreements. The record cannot be accepted or reviewed as-is because there is nothing substantive to assess against the source text.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Madison Air Solutions Corporation priced its IPO of Class A common stock at $27.00 per share on April 15, 2026. The company sold 82,692,308 shares through underwriters Goldman Sachs, Barclays Capital, Jefferies, and Wells Fargo Securities. The underwriters exercised their option for additional shares on April 16, 2026, and the offering closed on April 17, 2026. The company is listed on NYSE under the ticker MAIR.",
+    "why_it_matters": "IPO represents new equity supply entering the market. Lock-up agreements, registration rights, and related party agreements detail post-IPO governance structure and potential future supply constraints.",
+    "macro_context": "New public listing adds to equity market supply; IPO activity reflects current market conditions for industrial/services sector companies."
+  }
+}

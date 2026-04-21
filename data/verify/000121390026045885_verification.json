@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when 'regulatory_guidance' would be more appropriate for a company-specific listing compliance filing",
+    "verification_confidence incorrectly set to 0 in llm_review despite summary and key_points being factually accurate",
+    "source_type set to 'unknown' when it should be 'sec_filing' or 'regulatory_filing'",
+    "macro_context and market_structure_context fields are empty when they could note the narrow scope of this filing"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate regarding the SEC filing content, but the verdict and quality_tier of 'excluded' are correct given the archive's focus on market structure and macro catalysts. This 8-K is a micro-cap company-specific compliance matter with no broader market relevance. Human should verify that exclusion decision and confirm whether the archive should include even accurate but off-topic records.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing concerns a micro-cap biotech company's Nasdaq listing compliance and is not relevant to broader market structure or macro catalyst research. It has no market-wide implications and may be excluded from the archive based on topic scope.",
+    "macro_context": "Company-specific SEC filing; no macro implications. ENDRA Life Sciences (NDRA) is a micro-cap biotech with no systemic relevance.",
+    "market_structure_context": "Nasdaq listing compliance matter for a single micro-cap issuer; no market structure implications."
+  }
+}

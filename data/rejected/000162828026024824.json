@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - name, url, domain, published_at, and source_type fields are all empty",
+      "Source is a corporate 8-K filing for Vertiv Holdings Co, an individual company acquisition announcement",
+      "Topic is company-specific M&A, not relevant to market structure or macro catalysts per verification standards",
+      "Generated record is severely underpopulated with critical fields left blank",
+      "No event_type classification provided in the record"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Critical issues prevent automated processing: missing source attribution is a mandatory requirement, source is company-specific M&A rather than macro/market structure relevant, and the record itself is essentially empty with no actionable content."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' and does not fit the provided taxonomy; this SPAC corporate governance filing falls outside the defined event categories",
+    "Record correctly acknowledges no relevance to market structure or macro catalysts in why_it_matters",
+    "Source is a routine SPAC 8-K filing with no broader market implications, making it unsuitable for a finance research archive focused on market structure and macro catalysts",
+    "Summary and key_points are factually accurate but irrelevant to archive mandate"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the source is accurately parsed and source attribution is correct, the content is a routine SPAC corporate governance filing with zero relevance to market structure or macro catalysts. The archive mandate requires relevance to these areas, making this record inappropriate for inclusion regardless of extraction quality.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
