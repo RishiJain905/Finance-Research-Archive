@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific BDC 8-K filing with no relevance to market structure or macro catalysts",
+    "Filing contains only unaudited quarterly estimates with no broader economic implications",
+    "event_type set to 'unknown' is correct but the source does not warrant archival inclusion in a macro/market structure focused archive",
+    "The why_it_matters field correctly identifies this as routine company-specific earnings data with no macro value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate but correctly identifies the source as irrelevant to the archive's scope. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine company-specific earnings preview from a middle market lending BDC. It provides no insight into broader market structure, Federal Reserve policy, or macroeconomic catalysts. Relevant only to investors holding ECC securities directly.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

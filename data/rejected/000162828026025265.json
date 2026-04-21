@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution is completely empty in the record",
+      "All record fields (topic, summary, key_points, etc.) are empty",
+      "The source is a routine 8-K filing for Goodyear's annual shareholder meeting results",
+      "The filing covers routine corporate governance: director elections, say-on-pay vote, auditor ratification",
+      "This is not relevant to market structure or macro catalysts - it is a low-signal corporate governance filing",
+      "All director nominees received strong approval (92-98%); executive compensation approved 95.2%; auditor ratified 81.5% - no controversy or material market signal"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is completely empty with no source attribution. Additionally, the underlying source (8-K for Goodyear annual shareholder meeting results) does not appear to meet the relevance threshold for macro/market catalyst research. This is a routine corporate governance filing with no material market implications."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

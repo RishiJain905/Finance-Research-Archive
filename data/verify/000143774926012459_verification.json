@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single company's 10-K filing, clearly outside scope of macro catalysts or market structure topics",
+    "XBRL-structured financial data provides no narrative on macro conditions, monetary policy, or market structure",
+    "event_type correctly left as 'unknown' but the real issue is source irrelevance, not taxonomy fit",
+    "No actionable macro content in this source regardless of how complete the XBRL data is"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately identifies source as irrelevant to archive purpose. No human judgment needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

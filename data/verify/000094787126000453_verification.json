@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is an individual corporate 8-K filing about executive termination — not relevant to market structure or macro catalysts per archive focus",
+    "Event type 'unknown' is technically correct but leaves classification ambiguous",
+    "The generated record is well-constructed and factually accurate, but correctly identifies the source as out-of-scope for the archive"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is itself well-constructed and correctly notes the source is outside archive focus. However, this case tests whether a record that accurately describes an out-of-scope source should be accepted (and archived) or rejected (and not archived). The record accurately conveys: (1) the filing details, (2) the source quality, (3) the exclusion reasoning. Since it faithfully represents the source while transparently flagging scope mismatch, this may warrant a 'review' verdict rather than reject — to preserve the record as a demonstration of proper scope-filtering.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

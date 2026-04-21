@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 9,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - while no taxonomy value perfectly fits share buyback announcements, 'data_release_other' or similar may be more appropriate than leaving as unknown",
+    "Source is a single-company corporate action with no relevance to market structure (trading venues, clearing, settlement, microstructure) or macro catalysts (monetary policy, economic data releases, central bank communications)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Factual accuracy is high and all claims are supported by the source. Human review is not required to verify accuracy; however, the existing review_queue status appropriately flags that the source may not meet archival relevance criteria for this specific archive focus.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Donnelley Financial Solutions (DFIN) filed an 8-K on April 16, 2026 disclosing that its Board authorized a new share repurchase program of up to $150 million of common stock, replacing a prior program that had approximately $15 million remaining. The new program is effective April 17, 2026 through December 31, 2027.",
+    "why_it_matters": "This is a corporate capital allocation announcement from a single company. It does not relate to market structure or macro catalysts. Share repurchase disclosures of this nature are routine corporate finance events with negligible broader market impact.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

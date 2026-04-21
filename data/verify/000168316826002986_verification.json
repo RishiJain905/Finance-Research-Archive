@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a company-specific SEC 10-K filing containing only XBRL financial data with no narrative content",
+    "Source has no relevance to market structure (trading mechanics, market plumbing, exchange operations) or macro catalysts (central bank decisions, economic data releases, fiscal policy)",
+    "event_type set to 'unknown' which is technically correct given the thin content, but reflects the fundamental scope mismatch"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate in describing the source, but a human reviewer should confirm whether company-specific SEC filings like this 10-K should be excluded from the archive based on scope policy. The source is legitimately archived on SEC EDGAR and is correctly attributed, but contains no macro or market structure relevant content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is an SEC 10-K annual filing for Allied Energy, Inc. (CIK: 0001109262) covering fiscal year ended December 31, 2025. The source consists almost entirely of XBRL-structured financial data tags (balance sheet, equity, revenue, assets, liabilities) with no narrative text or analytical content. This is a company-specific financial disclosure that falls entirely outside the scope of market structure and macro catalysts.",
+    "why_it_matters": "This filing has no relevance to finance research focused on market structure or macro catalysts. It is a company-specific annual financial statement for a small energy company containing only XBRL-tagged financial line items (revenue, assets, liabilities, equity) with no analytical narrative or forward-looking statements.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
