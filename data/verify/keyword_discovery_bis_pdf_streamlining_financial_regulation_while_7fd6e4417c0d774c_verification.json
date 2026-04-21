@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'economic_commentary' but the source is a speech. Should be 'speech_neutral' or similar speech type",
+    "market_impact asset_classes includes 'bonds' but the source does not specifically discuss bond markets",
+    "Topic 'market structure' is borderline - source focuses on prudential banking regulation rather than market operations or microstructure"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type classification is incorrect (speech vs economic commentary). The source discusses prudential banking regulation which may be tangentially related to market structure but focuses on different aspects. The record needs correction on event_type before acceptance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "event_type": "speech_neutral",
+    "market_impact": {
+      "asset_classes": [],
+      "directional_bias": "neutral",
+      "confidence": 1
+    }
+  }
+}

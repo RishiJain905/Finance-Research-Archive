@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "KEY_POINT FACTUAL ERROR: The key point states 'Standardized approach proposal would decrease aggregate CET1 requirements for Category III and IV firms by 5.2% and smaller banking organizations by 7.8%' - The source Table 1 shows 7.8% applies to 'Smaller banking organizations' NOT Category III and IV. Category III and IV total change is -5.2%. The breakdown for Category III and IV is -6.1% (Revised Standardized Approach) +1.9% (other proposed stress test changes).",
+    "SOURCE TYPE AMBIGUITY: The record identifies source_type as 'document' but does not clarify this is an internal Board memo requesting approval to publish proposals. The source states 'ACTIONS REQUESTED: Approval to publish for public comment in the Federal Register.' This is an internal deliberation document, not the public-facing regulatory proposal itself.",
+    "SPECULATION: 'why_it_matters' names specific banks (Goldman Sachs, Morgan Stanley, JPMorgan) without any source evidence. The source only refers to 'Category I and II firms' generically.",
+    "DOCUMENT TRUNCATION: Source body ends at page 5 of 14 pages. Discussion section with background and detailed analysis is incomplete."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Key point has a factual misattribution of percentage changes to bank categories. While the aggregate numbers are correct, assigning 7.8% to Category III and IV firms when it applies to smaller organizations is an error that could propagate into downstream analysis. Human should verify bank category assignments against source table.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Federal Reserve Board of Governors staff memo dated March 19, 2026 requests approval to publish three interconnected regulatory proposals for public comment: a revised Basel III framework for the largest internationally active banks (Category I and II), a revised GSIB surcharge calculation for systemically important banks, and a modified standardized approach for smaller banks. The proposals aim to modernize capital requirements by improving risk sensitivity and reducing burden while maintaining system robustness. The cumulative impact would lower aggregate CET1 capital requirements for Category I and II firms by 4.8% and for smaller banking organizations by 7.8%.",
+    "why_it_matters": "This regulatory package represents a significant recalibration of U.S. bank capital requirements. The net reduction in capital requirements (ranging from 4.8% for large banks to 7.8% for smaller institutions) could free up capital for lending or shareholder returns, potentially benefiting bank equities and potentially encouraging migration of activity from non-banks back to regulated banks. The streamlined framework reduces compliance burden while maintaining capital adequacy standards. Note: This is an internal Board memo seeking approval to publish proposals, not the finalized regulatory text.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

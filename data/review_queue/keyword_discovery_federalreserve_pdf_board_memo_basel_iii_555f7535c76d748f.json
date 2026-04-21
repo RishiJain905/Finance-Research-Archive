@@ -1,0 +1,99 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_board_memo_basel_iii_555f7535c76d748f",
+  "created_at": "2026-04-21T20:43:40.329844+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "Board memo: Basel III proposal, GSIB surcharge proposal, and standardized approach proposal",
+  "source": {
+    "name": "Federal Reserve Board of Governors",
+    "url": "https://www.federalreserve.gov/aboutthefed/boardmeetings/files/board-memo-basel-gsib-standardized-approach-20260319.pdf",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2026-03-19",
+    "source_type": "document"
+  },
+  "summary": "The Federal Reserve Board of Governors staff memo dated March 19, 2026 requests approval to publish three interconnected regulatory proposals for public comment: a revised Basel III framework for the largest internationally active banks (Category I and II), a revised GSIB surcharge calculation for systemically important banks, and a modified standardized approach for smaller banks. The proposals aim to modernize capital requirements by improving risk sensitivity and reducing burden while maintaining system robustness. The cumulative impact would lower aggregate CET1 capital requirements for Category I and II firms by 4.8% and for smaller banking organizations by 7.8%.",
+  "key_points": [
+    "Basel III proposal would revise risk-based capital requirements for Category I and II firms, substantially simplifying the framework by subjecting firms to a single set of risk-based capital calculations",
+    "GSIB surcharge proposal would improve measurement of systemic risk in the framework determining surcharges for largest and most complex banks",
+    "Cumulative CET1 capital requirement changes for Category I and II firms: +1.4% from Basel III NPR, -3.8% from GSIB surcharge NPR, -6.1% from Revised Standardized Approach, +3.1% AOCI Requirement, -4.3% from Proposed Stress Test Changes, resulting in net -4.8%",
+    "Standardized approach proposal would decrease aggregate CET1 requirements for Category III and IV firms by 5.2% and smaller banking organizations by 7.8%",
+    "Since the 2007-09 financial crisis, large banks have more than doubled their capital levels, an increase of more than $1 trillion",
+    "Basel III and standardized approach proposals would increase banks' incentive to engage in mortgage origination and servicing by increasing risk-sensitivity of requirements including removing capital deduction for certain mortgage servicing assets",
+    "Proposals would be issued jointly by the Board, FDIC, and OCC (Basel III and standardized approach) or by the Board alone (GSIB surcharge)"
+  ],
+  "why_it_matters": "This regulatory package represents a significant recalibration of U.S. bank capital requirements. The net reduction in capital requirements (ranging from 4.8% for large banks to 7.8% for smaller institutions) could free up capital for lending or shareholder returns, potentially benefiting bank equities and potentially encouraging migration of activity from non-banks back to regulated banks. The streamlined framework reduces compliance burden while maintaining capital adequacy standards. Note: This is an internal Board memo seeking approval to publish proposals, not the finalized regulatory text.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 4
+  },
+  "macro_context": "While primarily a market structure document, changes to bank capital requirements have macro implications. Reduced capital requirements could modestly boost lending capacity across the banking system. Enhanced risk-sensitivity for mortgage products could support the housing market. The document notes some framework elements had accelerated migration of activities from the regulated banking system to non-banks.",
+  "market_structure_context": "This is core market structure documentation. It directly addresses: (1) risk-based capital framework for large banks, (2) GSIB surcharge methodology for systemically important banks, (3) standardized approach for smaller banks, (4) interaction with stress capital buffer and supplementary leverage ratio requirements, and (5) AOCI (Accumulated Other Comprehensive Income) treatment. The document references prior stress test enhancements (October 24, 2025) and SLR reform (November 25, 2025).",
+  "important_numbers": [
+    "4.8%",
+    "5.2%",
+    "7.8%",
+    "1.4%",
+    "3.8%",
+    "6.1%",
+    "3.1%",
+    "4.3%",
+    "$1 trillion",
+    "2026-03-19"
+  ],
+  "tags": [
+    "basel-iii",
+    "gsib-surcharge",
+    "capital-requirements",
+    "bank-regulation",
+    "federal-reserve",
+    "regulatory-proposal",
+    "standardized-approach",
+    "stress-capital-buffer",
+    "risk-based-capital",
+    "large-banks"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "KEY_POINT FACTUAL ERROR: The key point states 'Standardized approach proposal would decrease aggregate CET1 requirements for Category III and IV firms by 5.2% and smaller banking organizations by 7.8%' - The source Table 1 shows 7.8% applies to 'Smaller banking organizations' NOT Category III and IV. Category III and IV total change is -5.2%. The breakdown for Category III and IV is -6.1% (Revised Standardized Approach) +1.9% (other proposed stress test changes).",
+      "SOURCE TYPE AMBIGUITY: The record identifies source_type as 'document' but does not clarify this is an internal Board memo requesting approval to publish proposals. The source states 'ACTIONS REQUESTED: Approval to publish for public comment in the Federal Register.' This is an internal deliberation document, not the public-facing regulatory proposal itself.",
+      "SPECULATION: 'why_it_matters' names specific banks (Goldman Sachs, Morgan Stanley, JPMorgan) without any source evidence. The source only refers to 'Category I and II firms' generically.",
+      "DOCUMENT TRUNCATION: Source body ends at page 5 of 14 pages. Discussion section with background and detailed analysis is incomplete."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Key point has a factual misattribution of percentage changes to bank categories. While the aggregate numbers are correct, assigning 7.8% to Category III and IV firms when it applies to smaller organizations is an error that could propagate into downstream analysis. Human should verify bank category assignments against source table."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_board_memo_basel_iii_555f7535c76d748f.txt",
+  "notes": "Source is a 14-page board memo PDF that appears truncated at page 5. The document is dated March 19, 2026 and requests approval to publish proposals for public comment in the Federal Register. It contains detailed aggregate impact estimates by bank category. The GSIB surcharge proposal would include amendments to the Systemic Risk Report (FR Y-15). The document references four pillars of the regulatory capital framework: minimum capital requirements, capital buffers, stress capital buffer, and supplementary leverage ratio.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "Document is direct Federal Reserve board memo with explicit dates, numerical impact estimates, and detailed policy descriptions",
+      "Source domain is high-trust (federalreserve.gov)",
+      "Quantities are explicitly stated in tabular format",
+      "Document was published March 19, 2026, within 90 days of TODAY",
+      "Primary limitation is document truncation at page 5 of 14"
+    ]
+  }
+}
