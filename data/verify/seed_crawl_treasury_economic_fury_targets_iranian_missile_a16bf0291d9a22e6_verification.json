@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect. This is an OFAC enforcement action/sanctions designation announcement, not regulatory guidance. A more accurate type would be 'market_notice' given Treasury's operational communications, though 'unknown' is technically safer if no taxonomy choice fits perfectly.",
+    "market_impact confidence score of 3 is appropriately low given source lacks explicit financial market guidance, but directional_bias 'mixed' is vague and not directly supported by source language.",
+    "Source is enforcement-focused, not market-focused — the record correctly notes this limitation but should acknowledge that market impact assessment relies entirely on geopolitical risk inference."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Event type classification is incorrect and should be corrected before archival. While the summary and key_points are factually accurate, the event_type 'regulatory_guidance' does not match the source (sanctions enforcement). Additionally, human review needed to determine appropriate event_type from available taxonomy options and confirm market_impact assessment aligns with archiving standards.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The U.S. Department of the Treasury's OFAC announced a new round of sanctions (April 21, 2026) targeting 14 individuals, entities, and aircraft in Iran, Türkiye, and the UAE as part of the 'Economic Fury' campaign, focusing on procurement networks for ballistic missiles, Shahed-series UAVs, and associated components. Secretary Bessent stated Treasury will continue to target the Iranian regime and those enabling its destabilizing activities, with this being the fifth round of nonproliferation designations tied to the September 2025 UN sanctions reimposition.",
+    "why_it_matters": "These sanctions represent escalation in the U.S. 'Economic Fury' campaign against Iran, directly targeting the supply chains for ballistic missiles and attack drones. Secretary Bessent explicitly cited threats to global energy markets and Iranian 'extortion of global energy markets,' making this relevant for energy sector risk assessment. The timing follows Iran's nuclear non-performance triggering UN sanctions reimposition in September 2025, signaling sustained pressure on Tehran's weapons programs. Energy commodities (crude oil) could face supply disruption risk from regional conflict escalation involving Iranian drones targeting regional energy infrastructure."
+  }
+}
