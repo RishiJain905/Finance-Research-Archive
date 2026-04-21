@@ -1,0 +1,15 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'financial_stability_report' is incorrect. This document is a summary of a stakeholder evidence-gathering event from March 2026. The source explicitly states that a summary of the evidence gathered will be published in the July FSR. This is preliminary stakeholder input, not a Financial Stability Report itself.",
+    "market_impact confidence score of 3 is reasonable given the document is about policy debate rather than concrete decisions, but asset_classes and directional_bias could be considered slightly overstated for a stakeholder discussion document rather than a formal policy outcome."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type is clearly incorrect and should be corrected. While the document content and summary are accurate, the misclassification of event_type is a significant metadata issue that requires correction. This is borderline between review and reject because the content is high quality and relevant, but the event_type is substantively wrong.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Bank of England's Financial Policy Committee published a summary of a March 2026 stakeholder event where views diverged on UK bank capital requirements—some arguing for maintained or increased capital buffers given macroeconomic and geopolitical uncertainty, while others pointed to stress test performance as evidence requirements could be reduced. Key themes included limited buffer usability due to MDA threshold concerns and board risk appetite, and debate over whether the leverage ratio operates as intended as a backstop or is becoming a binding constraint. Note: This document summarizes stakeholder views and does not represent Bank of England positions.",
+    "why_it_matters": "This summary captures the current policy debate on UK bank capital calibration ahead of a formal FPC decision. Market participants should note that buffer usability remains structurally constrained by MDA rules and board risk aversion—meaning even if capital requirements are reduced, banks may not immediately pass through to more lending. The leverage ratio debate has implications for which types of credit (repo vs. SME lending) receive capital allocation. Important caveat: This document presents stakeholder evidence, not official Bank of England policy positions."
+  }
+}
