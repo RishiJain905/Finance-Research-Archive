@@ -1,0 +1,108 @@
+{
+  "id": "arxiv_q_fin_rm_contagion_or_macroeconomic_fluctuations_identifiability_in_a_9e20428a",
+  "created_at": "2026-04-21T04:43:33.015544+00:00",
+  "status": "accepted",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "Contagion or Macroeconomic Fluctuations? Identifiability in Aggregated Default Data",
+  "source": {
+    "name": "arXiv q-fin.RM",
+    "url": "http://arxiv.org/abs/2604.18118v1",
+    "domain": "arxiv.org",
+    "published_at": "2026-04-20T11:37:13+00:00",
+    "source_type": "academic_paper"
+  },
+  "summary": "This paper examines whether contagion effects can be statistically separated from macroeconomic fluctuations in aggregated default count data, using three competing dependence structures: the Lo-Davis model (cumulative contagion), the Torri model (threshold-type contagion), and the Vasicek model (common-factor dependence). Under a hierarchical specification allowing default probability to vary across years, the author finds that most variation in annual default counts is explained by cross-year movements in default conditions rather than within-year contagion. The Torri model's threshold-type contagion is absorbed into macroeconomic heterogeneity after aggregation, while the Lo-Davis model's cumulative contagion leaves a small but persistent component identifiable in both variance decomposition and tail behavior.",
+  "key_points": [
+    "Under i.i.d. specification, the Vasicek (common-factor) model provides the best overall fit for annual default clustering, particularly in the tail distribution",
+    "A hierarchical specification allowing default probability to vary across years shows most annual default count variation is explained by cross-year default condition movements, not within-year contagion",
+    "Threshold-type contagion (Torri model) does not leave a stable component separable from macroeconomic heterogeneity when data is aggregated",
+    "Cumulative contagion (Lo-Davis model) does leave a small but persistent component visible in variance decomposition and tail behavior, even after accounting for macro heterogeneity",
+    "The study addresses identifiability: whether contagion generates distinct statistical signatures in default distributions separate from those induced by macro fluctuations",
+    "The practical implication is that coarse-grained (aggregated) default data may obscure contagion effects, especially for threshold-type mechanisms"
+  ],
+  "why_it_matters": "For credit risk modeling and systemic risk assessment, this paper clarifies a fundamental limitation: aggregated default data may not preserve enough information to distinguish contagion from macro-driven co-movement. This matters for stress testing, contagion detection in financial stability analysis, and understanding how credit crises propagate. The finding that threshold-type contagion is effectively indistinguishable from macro heterogeneity after aggregation suggests that early-warning systems relying on aggregate default signals may miss certain contagion channels.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The paper directly addresses the interaction between macroeconomic fluctuations and credit contagion. It shows that macroeconomic variation dominates most default clustering signals in annual data, which is relevant for understanding how macro shocks (recessions, policy changes) translate into credit market stress. The research implies that during macro downturns, contagion effects may be masked by the dominant macro driver, complicating the attribution of credit losses to contagion vs. economy-wide deterioration.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "credit-risk",
+    "default-contagion",
+    "systemic-risk",
+    "vasicek-model",
+    "macro-linkage",
+    "credit-modeling",
+    "aggregated-data",
+    "risk-factor"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/arxiv_q_fin_rm_contagion_or_macroeconomic_fluctuations_identifiability_in_a_9e20428a.txt",
+  "notes": "Source is a recent (1 day old) academic research paper. While the topic falls under 'macro catalysts' due to its discussion of macroeconomic fluctuations as drivers of default clustering, it is methodology-focused rather than event-driven. The paper provides useful framing for understanding limits of contagion detection in credit markets during stress periods. Not directly related to market structure (no discussion of market plumbing, trading operations, or microstructure). The content is thin (203 words in extracted text), representing only the abstract; full paper analysis would be needed for deeper evaluation of methodology.",
+  "linked_quant_context": [
+    {
+      "record_id": "fed_funds_2026_04_18",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 110.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_17",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 110.0
+    },
+    {
+      "record_id": "fed_funds_2026_04_16",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within 3 days, exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 110.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_3",
+    "score": 53.0,
+    "reasoning": [
+      "quality score: 53.0/100 (acceptable)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "lower-trust source",
+      "peripheral topic",
+      "lower event significance"
+    ]
+  }
+}
