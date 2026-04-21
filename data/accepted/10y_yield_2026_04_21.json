@@ -1,7 +1,7 @@
 {
   "id": "10y_yield_2026_04_21",
   "created_at": "2026-04-21T14:58:38.658904+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "10-Year Treasury Yield (DGS10) Daily Snapshot",
@@ -62,31 +62,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The numerical data is accurate and properly attributed, but the source is a thin data feed with no narrative or catalyst. The record is too mechanically descriptive to serve as standalone archival content. Human should decide whether to (a) reject as too thin, (b) accept as valid reference data, or (c) supplement with linked analytical sources that explain the yield movement."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-21T15:51:55.080279+00:00"
   },
   "raw_text_path": "data/raw/10y_yield_2026_04_21.txt",
   "notes": "Source is a FRED data snapshot providing only the raw daily yield value. This is mechanical market data rather than an analytical source with narrative or catalyst identification. The content is too thin to support meaningful research conclusions without supplementation from news or commentary sources that explain the drivers of the yield movement.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "L1",
-    "score": 30,
+    "tier": "tier_3",
+    "score": 53.5,
     "reasoning": [
-      "Raw market observation only",
-      "No narrative, analysis, or catalyst information",
-      "No indication of what drove the -0.06 change",
-      "Cannot be used as standalone research record without linked context",
-      "Applicable as reference data point only"
+      "quality score: 53.5/100 (acceptable)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
