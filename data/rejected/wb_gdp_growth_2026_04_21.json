@@ -1,0 +1,82 @@
+{
+  "id": "wb_gdp_growth_2026_04_21",
+  "created_at": "2026-04-21T14:59:37.927101+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_gdp",
+  "title": "World GDP Growth Rate (NY.GDP.MKTP.KD.ZG)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-21",
+    "source_type": "data_release",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator NY.GDP.MKTP.KD.ZG returned no valid observations as of the 2026-04-21 snapshot date. This is a technical null result, not an actual data release.",
+  "key_points": [
+    "No valid observations were returned for World GDP Growth Rate indicator (NY.GDP.MKTP.KD.ZG)",
+    "Snapshot date: 2026_04_21",
+    "Source is the World Bank data repository",
+    "No numerical values, growth rates, or comparative data are available from this query"
+  ],
+  "why_it_matters": "This source contains no usable macro data. A null result from a data query has no value for market analysis, macro catalyst assessment, or historical research.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx",
+      "commodities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The absence of World Bank GDP growth data creates a gap in macro catalyst analysis. World Bank GDP figures are commonly used benchmarks for global growth assessments, international comparisons, and emerging market analysis. No substitute data or alternative source is indicated.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp-growth",
+    "null-result",
+    "global-economy",
+    "macro-catalysts",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 10,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type 'data_release_gdp' is factually incorrect - the source explicitly states no valid observations were returned, meaning no GDP data was released at all",
+      "Source has zero archival value - a null result notice provides no numerical data, historical context, or analytical content to preserve",
+      "Source attribution is incomplete - URL and domain fields are empty",
+      "quality_tier 'no-data' with score 0 correctly identifies the source has no usable content, yet the record was still sent to review_queue rather than rejected"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_21.txt",
+  "notes": "Source is a technical data query result showing no valid observations. While related to macro catalysts conceptually, the source itself contains no actionable macro data. No inference possible from this source regarding market conditions, rate paths, or economic catalysts. Relevance to market structure: none.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 0,
+    "reasoning": [
+      "Source contains zero valid observations - purely a null result notice",
+      "Cannot extract any numerical or qualitative data points",
+      "No basis for macro catalyst assessment",
+      "Not a data quality issue but absence of data entirely"
+    ]
+  }
+}

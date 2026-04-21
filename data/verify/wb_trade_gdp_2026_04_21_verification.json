@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned zero valid observations—no data, no analysis, no market-relevant content",
+    "Source URL is empty/missing, preventing verification of the data source",
+    "event_type 'unknown' is suboptimal when this is clearly a data retrieval attempt (should be 'data_release_other')",
+    "Record has no archival value: it documents a failed data query with no substantive findings",
+    "Topic 'global_economy' is tangential to core macro catalysts focus, and with no data returned, the record has zero utility"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record documents a failed data retrieval with no valid observations. While the summary is technically accurate (no data was returned), the record itself has no market or macro relevance, lacks source URL for verification, and contains no actionable information. Given that the source body already shows 'No recent valid observations were returned', preserving this record adds no value to the archive. Rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations for the queried period. This is a data query failure, not an informational source.",
+    "why_it_matters": "A data retrieval that returns zero observations provides no input for any market or macro analysis. This source should be discarded rather than archived.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

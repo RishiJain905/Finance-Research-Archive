@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned zero observations - no actual data content to archive",
+    "Source attribution URL is empty - violates archival requirements",
+    "No publication date provided - cannot assess temporal relevance",
+    "event_type set to 'unknown' but no event exists - this is a failed API query, not an event",
+    "No actionable information for market analysis or macro catalyst assessment",
+    "Source type 'data_snapshot' with zero observations fails basic archival threshold"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies source failure, but underlying source is invalid for archival purposes. No data content = no archival value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank data API returned no valid observations for the world inflation rate indicator (FP.CPI.TOTL.ZG). This is an API error response with zero data content—not a viable research source.",
+    "why_it_matters": "A data API returning zero observations has no archival value. No inflation figures, no temporal markers, no actionable content for macro analysis. This record should be discarded rather than archived.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

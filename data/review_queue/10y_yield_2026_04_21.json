@@ -1,0 +1,94 @@
+{
+  "id": "10y_yield_2026_04_21",
+  "created_at": "2026-04-21T14:58:38.658904+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield (DGS10) Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS10",
+    "published_at": "2026-04-17",
+    "source_type": "data_feed",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 10-Year Treasury Yield closed at 4.26% on 2026-04-17, down 6 basis points from the prior day's 4.32%. This represents a modest daily decline in the benchmark 10-year rate, which has ranged between 4.26% and 4.32% over the most recent five trading days.",
+  "key_points": [
+    "Latest observation: 4.26% on 2026-04-17",
+    "Previous observation: 4.32% on 2026-04-16",
+    "Absolute change: -0.06 percentage points (down day)",
+    "5-day range: 4.26% (low) to 4.32% (high)",
+    "Recent trajectory: 4.30% (Apr 13) → 4.26% (Apr 14) → 4.29% (Apr 15) → 4.32% (Apr 16) → 4.26% (Apr 17)"
+  ],
+  "why_it_matters": "The 10-year Treasury yield is the benchmark for mortgage rates, corporate borrowing costs, and risk-free asset pricing globally. A declining yield may signal reduced inflation expectations or demand for safety, and directly affects valuation of duration-sensitive assets including bonds and growth-oriented equities. Note: The source provides only the raw yield value without identifying the catalyst for this specific movement.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx",
+      "commodities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "As a key macroeconomic indicator, the 10-year yield influences credit conditions across the economy. However, without accompanying narrative or catalyst data, the directional implications for monetary policy expectations are unknown.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.26%",
+    "4.32%",
+    "-0.06",
+    "4.30%",
+    "4.29%"
+  ],
+  "tags": [
+    "10-year treasury",
+    "yield",
+    "macro indicator",
+    "rates",
+    "bond market",
+    "daily data",
+    "fRED"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw market data with no analytical narrative, catalyst identification, or context",
+      "Source type 'data_feed' is borderline for archival purposes - mechanical data rather than article-like content",
+      "Record correctly captures numerical data but why_it_matters contains general economic context not sourced from the text",
+      "No indication of what drove the -0.06 change (flight-to-safety, inflation data, monetary policy expectations, etc.)",
+      "market_impact.confidence is 0, acknowledging the record cannot infer directional implications"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The numerical data is accurate and properly attributed, but the source is a thin data feed with no narrative or catalyst. The record is too mechanically descriptive to serve as standalone archival content. Human should decide whether to (a) reject as too thin, (b) accept as valid reference data, or (c) supplement with linked analytical sources that explain the yield movement."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_21.txt",
+  "notes": "Source is a FRED data snapshot providing only the raw daily yield value. This is mechanical market data rather than an analytical source with narrative or catalyst identification. The content is too thin to support meaningful research conclusions without supplementation from news or commentary sources that explain the drivers of the yield movement.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "L1",
+    "score": 30,
+    "reasoning": [
+      "Raw market observation only",
+      "No narrative, analysis, or catalyst information",
+      "No indication of what drove the -0.06 change",
+      "Cannot be used as standalone research record without linked context",
+      "Applicable as reference data point only"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "7087dc81b21026dc6b3adb707eb0d965870adacb"
+}

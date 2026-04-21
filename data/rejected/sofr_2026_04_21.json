@@ -1,0 +1,90 @@
+{
+  "id": "sofr_2026_04_21",
+  "created_at": "2026-04-21T14:55:50.557797+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "SOFR Daily Rate Observation – 2026-04-20",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-21",
+    "source_type": "data_series"
+  },
+  "summary": "The Secured Overnight Financing Rate (SOFR) recorded at 3.63% on April 20, 2026, down 2 basis points from 3.65% on April 17. Five-day observation range: 3.72% (April 15) to 3.63% (April 20). Source: FRED data series snapshot, no accompanying commentary or drivers provided.",
+  "key_points": [
+    "SOFR recorded at 3.63% for April 20, 2026, a decline of 2 bps from 3.65% on April 17",
+    "Recent SOFR observations: April 20 (3.63%), April 17 (3.65%), April 16 (3.67%), April 15 (3.72%), April 14 (3.66%)",
+    "The April 20 print marks the lowest value in the recent 5-day observation window",
+    "Absolute change of -0.02 bps from the prior observation date",
+    "Direction classified as 'down' for the latest observation",
+    "SOFR is the primary reference rate for overnight secured lending in the U.S. money markets"
+  ],
+  "why_it_matters": "SOFR is the primary reference rate for U.S. money markets and serves as the foundational benchmark for dollar-denominated derivatives and loan agreements. Daily SOFR observations reflect conditions in the overnight secured funding market and inform understanding of short-term funding costs relative to the Fed funds target range. The current level of 3.63% sits below the upper bound of the Fed funds target range.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "SOFR at 3.63% reflects normal money market functioning. The 9 bps decline from the April 15 high of 3.72% suggests temporarily easier short-term funding conditions over the observation window. No policy decision or narrative context provided in source to explain the rate movement.",
+  "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York using tri-party repo data from BNY Mellon. The rate represents the cost of borrowing overnight cash collateralized by U.S. Treasury securities. Source is a 5-day snapshot with no longer-term series data or operational context (RRP balances, TGA flows) provided.",
+  "important_numbers": [
+    "3.63% (latest SOFR, April 20, 2026)",
+    "3.65% (prior SOFR, April 17, 2026)",
+    "-0.02 (absolute change in bps)",
+    "3.72% (high in observation window, April 15)"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "overnight-rate",
+    "repo-market",
+    "secured-financing",
+    "fed-reference-rate",
+    "short-term-rates"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "why_it_matters contains unsupported claim: '$200 trillion in financial contracts' — this figure is not present in the source and appears to be general knowledge being attributed to the source",
+      "Source is raw quantitative data (data_series) with no narrative, analysis, or context — lacks inherent archival value as standalone research record",
+      "Source attribution has empty URL field — 'url': '' — which undermines traceability for a data source",
+      "The record cannot provide causality or drivers for SOFR movement; single-point observations without commentary offer limited research retrieval value",
+      "No evidence of policy decision, speech, research finding, or analytical content in source — purely a numeric snapshot"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_21.txt",
+  "notes": "This is a daily SOFR rate observation from FRED—raw quantitative data rather than analytical content. Relevant to market structure as SOFR is the primary overnight secured funding benchmark, but the source provides no narrative, drivers, or context for the rate level. The observation is valid and recent. Best used in conjunction with longer-term SOFR series or money market operational data (RRP balances, TGA) to derive meaningful market structure insights.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C - Data Observation",
+    "score": 5,
+    "reasoning": [
+      "Valid raw market data point from authoritative source (Federal Reserve Bank of New York via FRED)",
+      "Relevant to market structure topic (SOFR as critical reference rate)",
+      "Limited analytical value due to single observation with no context or commentary",
+      "Recent data (within 24 hours) but thin information content",
+      "Cannot support forward-looking or causal analysis without additional data"
+    ]
+  }
+}

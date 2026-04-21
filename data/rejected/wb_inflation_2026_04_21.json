@@ -1,0 +1,78 @@
+{
+  "id": "wb_inflation_2026_04_21",
+  "created_at": "2026-04-21T15:00:50.828269+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Inflation Rate - World Bank CPI Indicator",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The World Bank data API returned no valid observations for the world inflation rate indicator (FP.CPI.TOTL.ZG). This is an API error response with zero data content—not a viable research source.",
+  "key_points": [
+    "Indicator queried: FP.CPI.TOTL.ZG (Consumer price index, annual growth)",
+    "Result: No recent valid observations were returned",
+    "Source: World Bank data API snapshot at 2026-04-21",
+    "No country-level or aggregate inflation figures available"
+  ],
+  "why_it_matters": "A data API returning zero observations has no archival value. No inflation figures, no temporal markers, no actionable content for macro analysis. This record should be discarded rather than archived.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Inflation data is a key macro catalyst for central bank policy decisions and market pricing. However, this source provides no actual data points, making macro context assessment impossible.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "global-economy",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned zero observations - no actual data content to archive",
+      "Source attribution URL is empty - violates archival requirements",
+      "No publication date provided - cannot assess temporal relevance",
+      "event_type set to 'unknown' but no event exists - this is a failed API query, not an event",
+      "No actionable information for market analysis or macro catalyst assessment",
+      "Source type 'data_snapshot' with zero observations fails basic archival threshold"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_21.txt",
+  "notes": "Source is a data API response that returned no observations. Not a usable source for research. Topic was specified as 'global_economy' but contains no actual data. Recommended action: discard or re-query source for valid data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 0,
+    "reasoning": [
+      "No actual data returned from API",
+      "No publication date for temporal assessment",
+      "Cannot support any market or macro analysis",
+      "Fails basic quality threshold for archive inclusion"
+    ]
+  }
+}

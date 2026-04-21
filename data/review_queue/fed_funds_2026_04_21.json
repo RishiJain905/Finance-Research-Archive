@@ -1,0 +1,85 @@
+{
+  "id": "fed_funds_2026_04_21",
+  "created_at": "2026-04-21T14:55:50.559698+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Effective Federal Funds Rate — Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-17",
+    "source_type": "data_series"
+  },
+  "summary": "The effective federal funds rate held steady at 3.64% from April 13–17, 2026, indicating no change in the overnight borrowing rate during this period. Note: This is a raw data series snapshot with no associated policy commentary or narrative.",
+  "key_points": [
+    "Effective federal funds rate was 3.64% as of 2026-04-17",
+    "No change from prior day (2026-04-16): 3.64%",
+    "Rate remained flat at 3.64% for all observations April 13–17, 2026",
+    "Absolute change over the period: 0 bps"
+  ],
+  "why_it_matters": "The effective federal funds rate is a key benchmark for short-term borrowing costs and influences rates throughout the economy. Flat readings indicate stable overnight liquidity conditions. This snapshot reflects the current Fed target range but carries limited standalone research value without accompanying policy context.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "The effective federal funds rate of 3.64% reflects the current Fed target range (as of the most recent FOMC decision). This daily indicator shows the weighted average rate at which federal funds are traded between depository institutions overnight. This data point should be considered alongside official Fed communications for full policy context.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.64% (effective federal funds rate)",
+    "0 bps (daily change)"
+  ],
+  "tags": [
+    "fed-funds",
+    "interest-rates",
+    "monetary-policy",
+    "overnight-rate",
+    "fomc"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a raw data series export, not an article or research document",
+      "Quality tier rated as 'low' (score: 3) with reasoning citing lack of editorial content and insufficient standalone value for research archive",
+      "No policy context, commentary, or explanation of what drives the rate level",
+      "Macro context field includes generic definitional text rather than source-specific analysis",
+      "Record captures only a static numerical value with no explanatory narrative"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "While the data is accurate (3.64% rate, flat over the period) and source attribution is correct, the quality tier assessment explicitly states this is 'low' with 'insufficient standalone value for research archive.' The source provides no editorial context, policy guidance, or analytical narrative. FRED data series are authoritative data sources, but this particular snapshot lacks the substantive content expected for archival records. Human should confirm whether bare data series exports warrant full archival treatment or should be linked to higher-level policy context (e.g., FOMC decision announcements) before acceptance."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_21.txt",
+  "notes": "Source is a raw FRED data export for series DFF (Effective Federal Funds Rate). The data shows a static value of 3.64% with no commentary, no comparison to the target range, and no indication of Fed policy context. This is a mechanical data point rather than a substantive source. The metadata correctly identifies the target and topic, but the underlying data provides minimal research value without additional context.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Raw data series snapshot with no editorial content or narrative",
+      "Single value only; no context about policy implications",
+      "Cannot be cross-verified against additional information in the source",
+      "Valid data point but insufficient standalone value for research archive"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "54d3d053f079d40978386b6d50cb9ed117f3e1ac"
+}

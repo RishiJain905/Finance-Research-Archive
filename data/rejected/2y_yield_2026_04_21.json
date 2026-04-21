@@ -1,0 +1,87 @@
+{
+  "id": "2y_yield_2026_04_21",
+  "created_at": "2026-04-21T14:57:12.445606+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2-Year Treasury Yield — Daily Snapshot (2026-04-17)",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-17",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The 2-Year Treasury yield closed at 3.71% on 2026-04-17, down 7 basis points from the prior close of 3.78% on 2026-04-16. This represents a single-session decline within a relatively stable range observed over the past week.",
+  "key_points": [
+    "Latest observation: 3.71% (2026-04-17)",
+    "Prior observation: 3.78% (2026-04-16)",
+    "Absolute change: -0.07 percentage point decline",
+    "5-day range: 3.71%–3.78% (relatively flat)",
+    "2-year yield serves as a market-implied proxy for near-term Fed Funds rate expectations"
+  ],
+  "why_it_matters": "The 2-year yield is one of the most policy-sensitive points on the Treasury curve. However, this FRED snapshot alone provides no explanation for the -7bp move. The yield change is minor and falls within a narrow 5-day range (3.71%–3.78%), suggesting no acute catalyst. This record should be cross-referenced with contemporaneous Fed communications, economic data releases, or market events to derive any actionable insight.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year yield of 3.71% positions the market near the current Fed Funds target range (unknown without additional context). The decline from 3.78% to 3.71% over one session suggests some easing of near-term rate expectations, though the move is modest.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.71%",
+    "3.78%",
+    "-0.07 bp"
+  ],
+  "tags": [
+    "treasury",
+    "2-year-yield",
+    "yield-curve",
+    "macro-indicator",
+    "fed-expectations",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' when source is clearly a data snapshot — 'data_release_other' would be the appropriate taxonomy value",
+      "Source attribution missing URL — 'FRED (Federal Reserve Economic Data)' is named but no link to the specific data series is provided",
+      "Source is thin raw price data with no analytical context, narrative, or connection to market catalysts",
+      "Cannot determine what drove the yield change — no link to FOMC decision, data release, or other macro catalyst",
+      "Single daily observation (3.71% on 2026-04-17) insufficient to establish meaningful trend or catalyst without external context",
+      "Record correctly identifies this as low-value but then remains in 'review_queue' — the appropriate action is rejection"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_21.txt",
+  "notes": "This is a raw FRED data snapshot — a single daily observation of the 2-year Treasury yield. As a standalone archive note, it has limited value since it contains no context explaining the move. The yield change (-7 bps) is minor and falls within a narrow 5-day range (3.71%–3.78%), suggesting no acute catalyst. For research purposes, this should be cross-referenced with contemporaneous Fed communications, economic data releases, or market events to derive any actionable insight.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "D",
+    "score": 2,
+    "reasoning": [
+      "Raw price data without context or analysis",
+      "Single daily observation — insufficient for pattern recognition",
+      "No explanation of what drove the yield move",
+      "Relevant to macro catalysts topic but cannot stand alone as meaningful research note"
+    ]
+  }
+}

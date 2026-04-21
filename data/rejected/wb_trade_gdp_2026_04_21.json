@@ -1,0 +1,74 @@
+{
+  "id": "wb_trade_gdp_2026_04_21",
+  "created_at": "2026-04-21T15:01:59+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations for the queried period. This is a data query failure, not an informational source.",
+  "key_points": [
+    "The indicator TG.VAL.TOTL.GD.ZS (World Trade % of GDP) returned no valid observations",
+    "No numeric data is available in this source",
+    "The data retrieval attempt failed or the indicator has no current data"
+  ],
+  "why_it_matters": "A data retrieval that returns zero observations provides no input for any market or macro analysis. This source should be discarded rather than archived.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade",
+    "no-data",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned zero valid observations—no data, no analysis, no market-relevant content",
+      "Source URL is empty/missing, preventing verification of the data source",
+      "event_type 'unknown' is suboptimal when this is clearly a data retrieval attempt (should be 'data_release_other')",
+      "Record has no archival value: it documents a failed data query with no substantive findings",
+      "Topic 'global_economy' is tangential to core macro catalysts focus, and with no data returned, the record has zero utility"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_21.txt",
+  "notes": "OUT OF SCOPE for market structure and macro catalysts analysis. Topic is 'global_economy'. Additionally, no valid data observations were returned—data retrieval returned empty. This source contains no actionable information and should be discarded.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Topic 'global_economy' is outside the scope of this archive (market structure, macro catalysts only)",
+      "No valid observations returned—no actual data to summarize",
+      "No market or macro relevance"
+    ]
+  }
+}

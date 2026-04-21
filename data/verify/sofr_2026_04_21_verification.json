@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "why_it_matters contains unsupported claim: '$200 trillion in financial contracts' — this figure is not present in the source and appears to be general knowledge being attributed to the source",
+    "Source is raw quantitative data (data_series) with no narrative, analysis, or context — lacks inherent archival value as standalone research record",
+    "Source attribution has empty URL field — 'url': '' — which undermines traceability for a data source",
+    "The record cannot provide causality or drivers for SOFR movement; single-point observations without commentary offer limited research retrieval value",
+    "No evidence of policy decision, speech, research finding, or analytical content in source — purely a numeric snapshot"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the numeric data is accurate and transcribed correctly, the record as a whole contains unsupported claims ($200 trillion figure) and lacks the contextual depth needed for a meaningful research archive entry. The source is a thin data snapshot without analytical content. Flagged for rejection per conservative bias — thin, non-article sources with no narrative warrant rejection unless accompanied by deeper context.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Secured Overnight Financing Rate (SOFR) recorded at 3.63% on April 20, 2026, down 2 basis points from 3.65% on April 17. Five-day observation range: 3.72% (April 15) to 3.63% (April 20). Source: FRED data series snapshot, no accompanying commentary or drivers provided.",
+    "why_it_matters": "SOFR is the primary reference rate for U.S. money markets and serves as the foundational benchmark for dollar-denominated derivatives and loan agreements. Daily SOFR observations reflect conditions in the overnight secured funding market and inform understanding of short-term funding costs relative to the Fed funds target range. The current level of 3.63% sits below the upper bound of the Fed funds target range.",
+    "macro_context": "SOFR at 3.63% reflects normal money market functioning. The 9 bps decline from the April 15 high of 3.72% suggests temporarily easier short-term funding conditions over the observation window. No policy decision or narrative context provided in source to explain the rate movement.",
+    "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York using tri-party repo data from BNY Mellon. The rate represents the cost of borrowing overnight cash collateralized by U.S. Treasury securities. Source is a 5-day snapshot with no longer-term series data or operational context (RRP balances, TGA flows) provided."
+  }
+}

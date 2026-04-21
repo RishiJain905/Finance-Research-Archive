@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "URL field is blank — source attribution is incomplete. The record should include the FRED series URL (e.g., https://fred.stlouisfed.org/series/IORB). This is a significant metadata gap.",
+    "published_at is inferred from SNAPSHOT_DATE rather than a distinct publication timestamp — acceptable for a data snapshot but worth noting.",
+    "The source is a raw time series snapshot with no narrative or policy context. The record's why_it_matters and market_structure_context fields add economic framing beyond what the source provides, which is valuable but not directly verifiable against the source."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The data point is accurate and well-captured, but the blank URL violates the source attribution requirement. Human review is needed to determine whether the estimated FRED URL is correct and whether the record's value (baseline data point for Fed rate policy research) warrants inclusion despite the thin source. Additionally, the source is a pure data snapshot with no editorial or analytical content, making it borderline for archival quality — the record's supplementary context helps but cannot be verified against the source.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

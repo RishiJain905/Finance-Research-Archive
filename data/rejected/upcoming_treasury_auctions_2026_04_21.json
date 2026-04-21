@@ -1,0 +1,76 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_21",
+  "created_at": "2026-04-21T14:59:04.975378+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions (API Error)",
+  "source": {
+    "name": "U.S. Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "published_at": "2026-04-21",
+    "source_type": "api_response",
+    "domain": "api.fiscaldata.treasury.gov"
+  },
+  "summary": "A request to the U.S. Treasury Fiscal Data API for upcoming auction data returned a 404 Not Found error. No auction dates, security types, offering amounts, or any other auction schedule data were retrieved. The source attempted to access the upcoming_auctions endpoint but the resource was unavailable at the time of the request.",
+  "key_points": [
+    "API endpoint returned 404 Not Found error for upcoming_auctions resource",
+    "No auction data (dates, security types, offering amounts) was retrieved",
+    "Target URL: https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "Attempted fields: auction_date, security_type, security_term, offering_amt"
+  ],
+  "why_it_matters": "Treasury auction schedules are important market structure information that affects bond market liquidity, primary dealer positioning, and yield curve dynamics. This source failed to deliver any usable data, making it impossible to assess near-term auction supply or plan for Treasury market operations.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "No market structure data available due to API error. Treasury auction operations are a key component of the government securities market infrastructure.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auction",
+    "api-error",
+    "404",
+    "market-structure",
+    "treasury-issuance"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no substantive content - only a 404 API error message",
+      "No actual Treasury auction data, dates, or schedule information was retrieved",
+      "Record documents a technical failure rather than providing research content",
+      "Source has zero archival value for market structure research purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is well-constructed and accurately describes the error, but the source itself is non-informative. A 404 error cannot serve as a basis for market structure or macro catalyst research. The record correctly identifies the failure but there is nothing substantive to archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_21.txt",
+  "notes": "This source is a failed API response with no actual content. The U.S. Treasury Fiscal Data API returned a 404 error when attempting to fetch the upcoming_auctions endpoint. No auction data of any kind was retrieved. This is not a quality source for the research archive. The intended topic (market structure via Treasury auctions) is correct, but the execution failed. Recommend obtaining Treasury auction schedules from alternative sources such as TreasuryDirect.gov auction announcements or the Treasury's official press releases.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "rejected",
+    "score": 0,
+    "reasoning": [
+      "No substantive content retrieved - only error message",
+      "404 error renders source completely non-informative",
+      "Cannot support any market structure or macro catalyst analysis"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw market data with no analytical narrative, catalyst identification, or context",
+    "Source type 'data_feed' is borderline for archival purposes - mechanical data rather than article-like content",
+    "Record correctly captures numerical data but why_it_matters contains general economic context not sourced from the text",
+    "No indication of what drove the -0.06 change (flight-to-safety, inflation data, monetary policy expectations, etc.)",
+    "market_impact.confidence is 0, acknowledging the record cannot infer directional implications"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The numerical data is accurate and properly attributed, but the source is a thin data feed with no narrative or catalyst. The record is too mechanically descriptive to serve as standalone archival content. Human should decide whether to (a) reject as too thin, (b) accept as valid reference data, or (c) supplement with linked analytical sources that explain the yield movement.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 10-Year Treasury Yield closed at 4.26% on 2026-04-17, down 6 basis points from the prior day's 4.32%. This represents a modest daily decline in the benchmark 10-year rate, which has ranged between 4.26% and 4.32% over the most recent five trading days.",
+    "why_it_matters": "The 10-year Treasury yield is the benchmark for mortgage rates, corporate borrowing costs, and risk-free asset pricing globally. A declining yield may signal reduced inflation expectations or demand for safety, and directly affects valuation of duration-sensitive assets including bonds and growth-oriented equities. Note: The source provides only the raw yield value without identifying the catalyst for this specific movement.",
+    "macro_context": "As a key macroeconomic indicator, the 10-year yield influences credit conditions across the economy. However, without accompanying narrative or catalyst data, the directional implications for monetary policy expectations are unknown.",
+    "market_structure_context": ""
+  }
+}

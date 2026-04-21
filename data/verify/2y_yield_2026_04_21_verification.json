@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when source is clearly a data snapshot — 'data_release_other' would be the appropriate taxonomy value",
+    "Source attribution missing URL — 'FRED (Federal Reserve Economic Data)' is named but no link to the specific data series is provided",
+    "Source is thin raw price data with no analytical context, narrative, or connection to market catalysts",
+    "Cannot determine what drove the yield change — no link to FOMC decision, data release, or other macro catalyst",
+    "Single daily observation (3.71% on 2026-04-17) insufficient to establish meaningful trend or catalyst without external context",
+    "Record correctly identifies this as low-value but then remains in 'review_queue' — the appropriate action is rejection"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Low-value data snapshot lacks context and has clear structural deficiencies (missing URL, wrong event_type). The record itself acknowledges it's a thin D-tier source. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The 2-Year Treasury yield closed at 3.71% on 2026-04-17, down 7 basis points from the prior close of 3.78% on 2026-04-16. This represents a single-session decline within a relatively stable range observed over the past week.",
+    "why_it_matters": "The 2-year yield is one of the most policy-sensitive points on the Treasury curve. However, this FRED snapshot alone provides no explanation for the -7bp move. The yield change is minor and falls within a narrow 5-day range (3.71%–3.78%), suggesting no acute catalyst. This record should be cross-referenced with contemporaneous Fed communications, economic data releases, or market events to derive any actionable insight.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

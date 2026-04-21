@@ -1,0 +1,79 @@
+{
+  "id": "repo_operations_2026_04_21",
+  "created_at": "2026-04-21T14:59:35.570570+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations — Data Unavailable (API Error)",
+  "source": {
+    "name": "New York Federal Reserve",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "newyorkfed.org",
+    "published_at": "2026-04-21",
+    "source_type": "data_feed"
+  },
+  "summary": "The NY Fed repo operations data feed returned a 400 Bad Request error on 2026-04-21, preventing retrieval of current overnight or term repo operation results. No operation details, rates, or amounts were available at the time of this snapshot.",
+  "key_points": [
+    "NY Fed repo API endpoint returned HTTP 400 (Bad Request) for the all-results endpoint",
+    "No repo operation details (amounts, rates, counterparties) were retrievable",
+    "The error occurred during the snapshot attempt on 2026-04-21",
+    "Target topic is market structure, specifically overnight repo market operations"
+  ],
+  "why_it_matters": "NY Fed repo operations are a core component of US money market plumbing, influencing short-term funding costs and the effective federal funds rate. Failure to access this data creates a gap in monitoring one of the Fed's primary operational tools.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "NY Fed repo operations are central to the federal reserve's corridor system and short-term liquidity management. The API failure means no visibility into same-day repo rates, dealer participation, or the Fed's balance sheet support for repo markets. This is a market structure data gap.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "market-structure",
+    "api-error",
+    "data-unavailable",
+    "federal-reserve",
+    "money-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "review",
+    "issues_found": [
+      "Source content is a technical error message with no substantive market data or research content",
+      "Cannot verify any operational details (rates, amounts, counterparties) as none were retrieved",
+      "Source is a failed API call, not a publication or data release with archival value",
+      "Record documents a data retrieval failure rather than capturing actual market structure information",
+      "Verification confidence is 0 per human review notes - no factual content to verify against"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is purely an error state. No actual repo operation data was retrieved, so the record cannot be verified for accuracy. The human reviewer must determine: (1) whether this API failure represents a temporary issue worth noting, (2) if the endpoint format may have changed requiring a record update, or (3) whether this type of data gap capture has sufficient archival value to justify inclusion. The record is well-structured for what it documents but lacks the substantive content expected for archiving."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_21.txt",
+  "notes": "Data fetch failed with 400 Bad Request. This record documents the failed attempt rather than any actual NY Fed repo operation. The source_type is listed as 'data_feed' based on the intended target, though no data was received. If this is a recurring issue, consider alternative data sources or endpoint formats for NY Fed repo market data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed_fetch",
+    "score": 1,
+    "reasoning": [
+      "No actual data retrieved — only an error message",
+      "Cannot support any key_points with factual repo operation details",
+      "market_impact is unassessable due to lack of data",
+      "This is a documentation of a data gap, not a content record"
+    ]
+  }
+}

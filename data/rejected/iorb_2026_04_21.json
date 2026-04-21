@@ -1,0 +1,85 @@
+{
+  "id": "iorb_2026_04_21",
+  "created_at": "2026-04-21T14:56:53.408288+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "Interest on Reserve Balances (IORB)",
+  "source": {
+    "name": "FRED / Federal Reserve Bank of St. Louis",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-21",
+    "source_type": "data_release"
+  },
+  "summary": "The Interest on Reserve Balances (IORB) rate stood at 3.65% as of April 21, 2026, unchanged from the prior observation date. The rate has remained flat at 3.65% for at least five consecutive business days (April 17–21). IORB is the interest rate the Federal Reserve pays to depository institutions on their reserve balances held at the Fed.",
+  "key_points": [
+    "IORB latest observation: 3.65% (2026-04-21)",
+    "IORB previous observation: 3.65% (2026-04-20)",
+    "Absolute change: 0 (flat day-over-day)",
+    "Rate has been flat at 3.65% for at least five consecutive trading days (April 17–21)",
+    "IORB functions as a floor in the federal funds market, effectively anchoring the top of the Fed's target range"
+  ],
+  "why_it_matters": "IORB is a key component of the Federal Reserve's monetary policy operating framework. As the rate paid on excess reserves, it influences banks' incentive to lend reserves in the overnight market. It effectively constrains the effective federal funds rate from exceeding the IORB, making it a structural anchor for short-term funding markets. Traders and risk managers monitor IORB to understand the Fed's policy rate ceiling.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 2
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB represents the primary policy rate tool for the Fed's floor system. The flat reading suggests no change to the Fed's administered rate in recent days. This data point is a constituent of the Fed's overnight reverse repo (ON RRP) and federal funds market plumbing; IORB typically sits at the top of the federal funds target range.",
+  "important_numbers": [
+    "3.65% (current IORB rate)",
+    "0 (absolute change from prior day)"
+  ],
+  "tags": [
+    "interest-on-reserve-balances",
+    "iorb",
+    "fed-policy-rate",
+    "reserve-requirements",
+    "monetary-operating-framework",
+    "fed-floor-system",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "URL field is blank — source attribution is incomplete. The record should include the FRED series URL (e.g., https://fred.stlouisfed.org/series/IORB). This is a significant metadata gap.",
+      "published_at is inferred from SNAPSHOT_DATE rather than a distinct publication timestamp — acceptable for a data snapshot but worth noting.",
+      "The source is a raw time series snapshot with no narrative or policy context. The record's why_it_matters and market_structure_context fields add economic framing beyond what the source provides, which is valuable but not directly verifiable against the source."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_21.txt",
+  "notes": "This is a single-observation time series snapshot from FRED. The record captures the factual data point accurately but provides no accompanying commentary on Fed policy direction, market conditions, or historical context. The IORB series reflects the Fed's administered rate on reserves; at 3.65%, this aligns with the top of the current federal funds target range. The source does not indicate any pending policy changes or operational adjustments. This record is useful as a baseline data point for research into Fed rate policy but offers limited standalone archival value.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 5,
+    "reasoning": [
+      "Data point is accurate and directly sourced from FRED",
+      "No policy narrative, commentary, or contextual framing present",
+      "Time series snapshot is thin — lacks historical context or explanatory content",
+      "Relevant to market structure research but limited as a standalone archival item",
+      "Suitable for quantitative series tracking; less suitable for qualitative research analysis"
+    ]
+  }
+}

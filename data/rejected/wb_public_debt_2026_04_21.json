@@ -1,0 +1,79 @@
+{
+  "id": "wb_public_debt_2026_04_21",
+  "created_at": "2026-04-21T15:00:54.233971+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-21",
+    "source_type": "data_api_response",
+    "domain": ""
+  },
+  "summary": "The World Bank data query for indicator GC.DOD.TOTL.GD.ZS (World Public Debt to GDP ratio) returned no valid observations for snapshot date 2026-04-21. The source is a null data response with no actual values, making it non-usable for market structure or macro catalyst analysis.",
+  "key_points": [
+    "Data query for GC.DOD.TOTL.GD.ZS returned 'no recent valid observations'",
+    "Indicator measures total public debt as a percentage of GDP",
+    "Snapshot date is 2026-04-21",
+    "Source contains no actual numeric values or time series data"
+  ],
+  "why_it_matters": "This is a failed data retrieval with no usable content. Public debt-to-GDP ratios are important macro indicators for sovereign credit analysis, fiscal sustainability assessments, and cross-country comparisons, but this particular query produced no data to analyze.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Public debt ratios are key indicators for assessing sovereign fiscal health, potential IMF/program risk, and cross-border capital flow dynamics. No data available from this source to provide context.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "gdp-ratio",
+    "no-data",
+    "data-gap",
+    "macro-indicator",
+    "fiscal"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data values - only a null/no-valid-observations error response from World Bank API",
+      "Record cannot serve any market structure or macro catalyst purpose without actual numeric content",
+      "Source attribution is incomplete - URL and domain are empty strings",
+      "No archival value: failed data retrieval has no analytical substance",
+      "event_type is 'unknown' - appropriate but also confirms the source lacks identifiable event characteristics"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_21.txt",
+  "notes": "This source is a null data response from the World Bank API. The indicator code GC.DOD.TOTL.GD.ZS represents central government debt as a percentage of GDP, but no valid observations were returned for the specified snapshot date. The source has no relevance to market structure and cannot serve as a macro catalyst source due to the absence of actual data. Recommended to seek alternative data sources for public debt metrics.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "No actual data values present in source",
+      "Null response indicates data retrieval failure",
+      "Cannot extract any numeric content for verification",
+      "Insufficient content to support any market analysis"
+    ]
+  }
+}
