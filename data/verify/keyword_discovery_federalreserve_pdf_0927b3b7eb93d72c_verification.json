@@ -1,12 +1,15 @@
 {
   "verification_confidence": 9,
-  "verdict": "accept",
+  "verdict": "reject",
   "issues_found": [
-    "event_type is 'unknown' but could be more specifically classified as 'regulatory_guidance' since this is a comment submitted during a regulatory review process"
+    "Source is a regulatory comment letter on a bank merger application, entirely outside the TARGET scope of market structure or macro catalysts",
+    "Document discusses corporate governance disputes, a Delaware lawsuit, and merger approval processes—not monetary policy, economic data, or market structure",
+    "No relevance to market-moving catalysts, rate decisions, fiscal operations, or financial market structure",
+    "Source has no informational value for macro-financial research"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record is well-constructed and accurately represents the source. The assessment that this document lacks relevance to market structure or macro catalysts is correct and well-supported. The record appropriately notes the source contains unverified third-party allegations, lacks official Fed policy status, and has no quantitative market data.",
-  "suggested_status": "accepted",
+  "human_review_reason": "The record accurately identifies the source as out of scope. The source is a public comment letter on a corporate bank merger, discussing governance allegations and litigation. This is correctly flagged as irrelevant to macro catalysts or market structure research.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

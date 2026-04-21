@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per source metadata - Rule 5 explicitly requires rejection for listing pages",
+    "verification_confidence set to 0 but human_review.required is false, creating internal inconsistency",
+    "Suggested_status 'review_queue' contradicts the human_review decision 'non-archiveable' - listing pages should be rejected, not reviewed",
+    "Source contains multiple paper abstracts but no single document focus - qualifies as container page per Rule 6",
+    "Event_type 'unknown' is technically valid but could be more informative (e.g., 'research_index' if such category existed)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear listing page rejection per Rule 5. The record correctly identifies the non-archivable nature in human_review.decision. No human judgment needed - auto-reject applies.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
