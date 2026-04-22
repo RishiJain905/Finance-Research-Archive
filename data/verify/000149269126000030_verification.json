@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is NOT relevant to market structure or macro catalysts as defined in verification scope",
+    "This is a company-specific corporate earnings announcement from a trucking company",
+    "Event type is correctly identified as 'unknown' but the document does not fit any valid taxonomy category for this archive",
+    "The archive scope focuses on market structure and macro catalysts; company-specific earnings guidance falls outside this scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is well-formed and accurate, but the source itself is out-of-scope by design. Company-specific 8-K filings from individual corporations (as opposed to SEC guidance affecting market structure) do not qualify for this finance research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

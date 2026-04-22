@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - source.name, source.url, source.domain, source.published_at, and source.source_type are all empty",
+      "All record content fields are empty - summary, key_points, why_it_matters, macro_context, market_structure_context have no content",
+      "market_impact and important_numbers fields are also empty",
+      "event_type not specified - cannot verify against taxonomy (should be 'unknown' as this is a routine regulatory filing)",
+      "Source is not relevant to market structure or macro catalysts - this is a routine 8-K filing from a small gold mining company about exploration activities",
+      "Source has no archival value for finance research - no rate decisions, policy changes, economic data, or market-moving information"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is entirely empty/incomplete - no verification possible; source itself is not relevant to finance research archive scope"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

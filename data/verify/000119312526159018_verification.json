@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is set to 'unknown' but should not be categorized as a research record at all since source is out of scope",
+    "Source is a corporate earnings filing with no relevance to market structure or macro catalysts - fails core relevance criterion",
+    "topic set to 'not applicable' indicates recognition that source does not fit archive focus, yet record was still generated"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies source as out of scope. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

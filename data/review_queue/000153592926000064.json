@@ -1,0 +1,87 @@
+{
+  "id": "000153592926000064",
+  "created_at": "2026-04-22T04:00:11.384087+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Voya Financial, Inc. 8-K Filing — 2026-04-21",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1535929/000153592926000064/voya-20260421.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-21",
+    "source_type": "sec_filing"
+  },
+  "summary": "Voya Financial filed an 8-K on April 21, 2026 disclosing preliminary assets under management (AUM) for its Investment Management segment of approximately $353 billion as of March 31, 2026, ahead of its scheduled May 5, 2026 earnings release. The disclosure breaks down AUM by asset type and client category.",
+  "key_points": [
+    "Preliminary IM segment AUM was approximately $353 billion as of March 31, 2026",
+    "Asset composition: $98B equity, $152B fixed income public, $86B fixed income private, $15B alternative, $3B money market",
+    "Client distribution: $170B institutional external, $147B retail external, $37B company general account",
+    "AUM is reported on market value basis",
+    "Full quarterly earnings release scheduled for May 5, 2026"
+  ],
+  "why_it_matters": "This is a routine corporate financial disclosure under Regulation FD. It provides advance AUM visibility into Voya Financial's IM segment performance for Q1 2026 but does not contain policy-relevant information or market-moving data.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$353 billion AUM",
+    "$98 billion equity",
+    "$152 billion fixed income public",
+    "$86 billion fixed income private",
+    "$15 billion alternative",
+    "$3 billion money market",
+    "$170 billion institutional external",
+    "$147 billion retail external",
+    "$37 billion general account"
+  ],
+  "tags": [
+    "corporate-filing",
+    "voya-financial",
+    "aum",
+    "investment-management",
+    "q1-2026"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but could be 'regulatory_guidance' given it's a Reg FD disclosure (minor)",
+      "topic field is empty",
+      "verification_confidence fields show 0 but should reflect accurate content (8+)",
+      "verdict is 'pending' but should be 'accept' given factual accuracy, or 'review' given low relevance"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate but has low relevance to macro/market structure research. The system flagged it as low-quality (tier 'low') and 'not relevant to market structure or macro catalysts'. Human should confirm: (1) whether this 8-K should be archived at all given it lacks macro relevance, (2) whether to keep event_type as 'unknown' or use a better label, (3) whether verification_confidence should be corrected to reflect factual accuracy. The quality_tier reasoning is self-consistent and defensible."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000153592926000064.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a routine corporate SEC filing (Form 8-K) disclosing preliminary AUM figures for an investment management company. Does not contain Fed policy, macro data, or market structure information. Filed under Item 7.01 (Regulation FD) as a scheduled disclosure ahead of earnings. Source is mechanically clean with no ambiguities.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Not relevant to market structure or macro catalysts",
+      "Corporate earnings disclosure with no policy implications",
+      "Purely factual AUM reporting with no market signals",
+      "Low utility for finance research archive targeting Fed/macro themes"
+    ]
+  }
+}

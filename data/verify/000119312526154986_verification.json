@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 8,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - corporate debt redemption doesn't fit neatly into available taxonomy (monetary policy, speeches, data releases, Treasury/operations, research). 'market_notice' could be argued as closest fit, but not definitively correct.",
+    "Source is a corporate 8-K filing - technically accurate and complete, but likely out of scope for a research archive focused on market structure and macro catalysts."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is factually accurate and well-structured. However, the source (corporate debt redemption by an aluminum producer) falls outside the stated scope of 'market structure or macro catalysts.' Human decision needed on whether to archive out-of-scope corporate action filings or discard them.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

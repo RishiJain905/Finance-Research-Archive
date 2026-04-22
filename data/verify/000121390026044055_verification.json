@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "verification_confidence is 0, which is not a valid score per schema (must be 0-10 integer, but 0 indicates record failure not source quality)",
+    "Record correctly identifies source as irrelevant but incorrectly flags human_review.required as false with zero confidence",
+    "Source is a corporate 10-K filing with no relevance to market structure or macro catalysts per stated focus areas",
+    "event_type is 'unknown' when the correct classification is clear from context: this is a regulatory_filing, not a catch-all unknown"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The verification process appears to have failed: verification_confidence of 0 is malformed (should be 0-10), and the combination of zero confidence with human_review.required=false indicates a logic error in the verification workflow. The human_review block also shows decision='' and notes='' despite human_review.required=false, suggesting incomplete processing. This record needs manual cleanup and proper scoring.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This document is a routine annual 10-K filing for Drugs Made In America Acquisition II Corp. (DMIIU), a special purpose acquisition company (SPAC). The filing contains standard XBRL-tagged financial data, including balance sheet elements, equity transactions, related party agreements, and IPO/founder share information. This is a standard corporate securities disclosure with no relevance to market structure dynamics or macro-financial catalysts.",
+    "why_it_matters": "This is a routine corporate financial disclosure from a private SPAC entity. It contains no information relevant to market structure dynamics, macro catalysts, monetary policy, rate decisions, or broader financial market analysis.",
+    "event_type": "research_paper",
+    "topic": "not-relevant"
+  }
+}

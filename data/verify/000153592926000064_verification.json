@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but could be 'regulatory_guidance' given it's a Reg FD disclosure (minor)",
+    "topic field is empty",
+    "verification_confidence fields show 0 but should reflect accurate content (8+)",
+    "verdict is 'pending' but should be 'accept' given factual accuracy, or 'review' given low relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate but has low relevance to macro/market structure research. The system flagged it as low-quality (tier 'low') and 'not relevant to market structure or macro catalysts'. Human should confirm: (1) whether this 8-K should be archived at all given it lacks macro relevance, (2) whether to keep event_type as 'unknown' or use a better label, (3) whether verification_confidence should be corrected to reflect factual accuracy. The quality_tier reasoning is self-consistent and defensible.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Voya Financial filed an 8-K on April 21, 2026 disclosing preliminary assets under management (AUM) for its Investment Management segment of approximately $353 billion as of March 31, 2026, ahead of its scheduled May 5, 2026 earnings release. The disclosure breaks down AUM by asset type and client category.",
+    "why_it_matters": "This is a routine corporate financial disclosure under Regulation FD. It provides advance AUM visibility into Voya Financial's IM segment performance for Q1 2026 but does not contain policy-relevant information or market-moving data.",
+    "market_structure_context": ""
+  }
+}

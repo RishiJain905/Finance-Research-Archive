@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — while the record notes this is not relevant to market structure or macro catalysts, the correct type for an 8-K reporting equity securities conversions would be 'research_paper' or a corporate governance equivalent if such a taxonomy existed",
+    "topic field is empty — should be populated with 'equity-conversion' or similar for completeness"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and well-supported. The decision point is whether a routine corporate equity conversion filing has archival value for a finance research archive focused on market structure and macro catalysts. The human review notes correctly identify this as outside core scope.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate governance filing reporting insider/early investor share conversion. The conversion activity by Silver Lake—a major private equity investor—may signal ongoing reduction of founder-level share structures. It has no direct implications for macro catalysts or market structure. Equity dilution from conversion is disclosed but the scale (approximately 1.3% of total shares) is modest. This filing is likely outside the archive's core focus on monetary policy, economic data, and market operations.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

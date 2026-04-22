@@ -1,0 +1,77 @@
+{
+  "id": "000121390026044055",
+  "created_at": "2026-04-22T03:54:29.361887+00:00",
+  "status": "rejected",
+  "topic": "not-relevant",
+  "event_type": "unknown",
+  "title": "Drugs Made In America Acquisition II Corp. 10-K Filing — 2026-04-15",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/2040475/000121390026044055/ea0285468-10k_drugs2.htm",
+    "published_at": "2026-04-15",
+    "source_type": "unknown",
+    "domain": "www.sec.gov"
+  },
+  "summary": "This document is a routine annual 10-K filing for Drugs Made In America Acquisition II Corp. (DMIIU), a special purpose acquisition company (SPAC). The filing contains standard XBRL-tagged financial data, including balance sheet elements, equity transactions, related party agreements, and IPO/founder share information. This is a standard corporate securities disclosure with no relevance to market structure dynamics or macro-financial catalysts.",
+  "key_points": [
+    "Source is a corporate 10-K annual report for a SPAC, not a policy or market structure document",
+    "Contains XBRL taxonomy tags for standard financial statement elements (retained earnings, additional paid-in capital, common stock)",
+    "Includes IPO-related disclosures (over-allotment option, private placements, sponsor units)",
+    "Lists related party transactions (consulting agreement, CFO agreement, administrative support agreement)",
+    "Fiscal year covered is December 31, 2025",
+    "No discussion of monetary policy, rate decisions, or macro economic catalysts"
+  ],
+  "why_it_matters": "This is a routine corporate financial disclosure from a private SPAC entity. It contains no information relevant to market structure dynamics, macro catalysts, monetary policy, rate decisions, or broader financial market analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-k",
+    "spac",
+    "corporate-finance",
+    "not-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "verification_confidence is 0, which is not a valid score per schema (must be 0-10 integer, but 0 indicates record failure not source quality)",
+      "Record correctly identifies source as irrelevant but incorrectly flags human_review.required as false with zero confidence",
+      "Source is a corporate 10-K filing with no relevance to market structure or macro catalysts per stated focus areas",
+      "event_type is 'unknown' when the correct classification is clear from context: this is a regulatory_filing, not a catch-all unknown"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The verification process appears to have failed: verification_confidence of 0 is malformed (should be 0-10), and the combination of zero confidence with human_review.required=false indicates a logic error in the verification workflow. The human_review block also shows decision='' and notes='' despite human_review.required=false, suggesting incomplete processing. This record needs manual cleanup and proper scoring."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000121390026044055.txt",
+  "notes": "This source is a corporate securities filing (10-K) from a SPAC. It is not relevant to the specified focus areas of market structure or macro catalysts. The document contains standard XBRL-tagged financial statement elements and corporate governance disclosures typical of SPAC annual reports. No policy signals, market structure analysis, or macro catalyst information present. Classification: NOT ARCHIVEABLE for research purposes under stated focus criteria.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "Source is corporate 10-K filing, not market structure or macro catalyst content",
+      "Contains only XBRL taxonomy data and standard financial disclosures",
+      "No policy relevance, no market structure context, no macro catalyst information"
+    ]
+  }
+}

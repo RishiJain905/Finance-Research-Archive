@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "All record fields are empty - no summary, key_points, source attribution (name/url/domain), published_at, source_type, topic, or any content whatsoever",
+    "Source attribution is completely missing - required field per verification standards",
+    "event_type is absent - cannot be validated against taxonomy",
+    "Record is a blank template that failed to extract any content from the source",
+    "Source is a corporate 10-K filing (SEC Edgar document) which is document-like, not article-like, and has marginal relevance to macro catalysts or market structure unless specific risk factors are extracted"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is fundamentally invalid - it contains no generated content whatsoever. This is not a borderline case requiring human judgment; the record failed to extract anything from the source and presents an empty template. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Cannot correct - record contains no content to verify",
+    "why_it_matters": "Cannot correct - record contains no content to verify",
+    "macro_context": "Cannot correct - record contains no content to verify",
+    "market_structure_context": "Cannot correct - record contains no content to verify"
+  }
+}
