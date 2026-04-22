@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate 8-K filing with no relevance to market structure or macro catalysts",
+    "event_type set to 'unknown' is technically valid but the filing is clearly an earnings announcement that doesn't fit the macro-focused taxonomy",
+    "Source is thin: the actual press release (Exhibit 99.1) containing FY2025 financial data is referenced but not included in the 8-K body",
+    "Small-cap company (DTST on Nasdaq Capital Market) has negligible market-wide impact",
+    "No monetary policy, economic data, or structural content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent and accurately describes the source, but the source itself is out of scope. No judgment call needed—routine corporate earnings filings for micro-cap companies fall outside the macro catalyst archive mandate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

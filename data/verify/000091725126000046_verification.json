@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing - 'source' object has empty name, url, domain, published_at, and source_type fields",
+    "Generated record is essentially empty - summary, key_points, why_it_matters, macro_context, market_structure_context are all blank",
+    "event_type is missing entirely (empty string) when a valid taxonomy value is required",
+    "Source is a thin SEC 8-K shell document referencing Exhibits 99.1, 99.2, 99.3 but does not contain actual Q1 2026 earnings data within the filing itself",
+    "Source is a single-company REIT earnings announcement, which has limited relevance to market structure or macro catalysts for a general finance research archive"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The research record is entirely blank/incomplete and cannot be meaningfully verified. Source attribution is required for any record to be accepted. The source itself is a thin SEC 8-K shell referencing separate exhibits rather than substantive content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

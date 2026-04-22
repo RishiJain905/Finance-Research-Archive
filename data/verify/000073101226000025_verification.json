@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type set to 'unknown' - however this is correct given source is corporate earnings filing, not macro/market structure content",
+    "Source is out of scope for research archive focused on market structure and macro catalysts",
+    "No actual earnings data present in filing - only references Exhibit 99.1 which is not included in body"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately identifies the source as out of scope; no verification issues with factual content",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' — while the specific taxonomy values don't include 'corporate_disclosure', the source is clearly a routine corporate announcement with no macro or market structure relevance. 'unknown' is technically correct but could be more descriptive.",
+    "Source is not relevant to market structure or macro catalysts — this is a routine earnings call announcement from a single mortgage REIT with no broader market implications."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is accurate and well-structured, but the source itself lacks relevance to the archive's scope (market structure/macro catalysts). Human review needed to confirm whether routine corporate disclosures like this should be excluded entirely, even if correctly tagged.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Angel Oak Mortgage REIT, Inc. filed an 8-K on April 21, 2026, announcing the date for its Q1 2026 financial results webcast and conference call (scheduled per Exhibit 99.1 press release). The filing is a routine Regulation FD disclosure pursuant to Item 7.01, with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This is a routine corporate disclosure announcing an earnings call date. It carries no relevance to market structure or macro catalysts and is not an actionable market event.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

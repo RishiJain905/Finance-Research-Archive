@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine 8-K for a single mortgage REIT",
+    "Press release content (Exhibit 99.1) containing actual financial results is not included in the filing body",
+    "Source is too thin - the 8-K only announces that a press release was issued without providing the actual results or commentary",
+    "No policy, macro, or structural content present in this filing",
+    "event_type set to 'unknown' is appropriate since this corporate filing does not fit the taxonomy (not monetary policy, speeches, data releases, or research)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identified this source as out of scope. The verification is straightforward: an 8-K announcement referencing a press release (not included in filing text) for a single company's Q1 earnings contains no market structure or macro catalyst content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Annaly Capital Management Inc (NLY) filed a Form 8-K on April 21, 2026, disclosing that the company issued a press release announcing financial results for the quarter ended March 31, 2026. The press release content (Exhibit 99.1) is referenced but not included in the 8-K body.",
+    "why_it_matters": "OUT OF SCOPE. This 8-K filing is a routine corporate disclosure for a single mortgage REIT. It does not address market structure or macro catalysts. The actual press release content (Q1 2026 financial results) is not included in this filing—only an announcement that the press release was issued. This filing provides no information relevant to market structure, macro catalysts, or policy implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

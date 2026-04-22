@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single-company corporate credit amendment (8-K filing) with no relevance to market structure or macro catalysts",
+    "event_type set to 'unknown' - correct by default as no taxonomy value applies to routine corporate filings, but this confirms the source falls outside the archive's scope",
+    "The record is factually accurate in all details but correctly identifies the source as irrelevant to the archive's focus areas"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record already correctly assessed this as irrelevant. The source is a routine corporate credit facility amendment with no macro, monetary policy, or market structure implications. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

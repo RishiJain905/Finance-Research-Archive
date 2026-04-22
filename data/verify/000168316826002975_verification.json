@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-K filing with no relevance to market structure or macro catalysts",
+    "Source contains only company-specific financial data (balance sheets, equity, revenue segmentation) - entirely inappropriate for this archive's focus areas",
+    "event_type correctly set to 'unknown' since none of the taxonomy categories (monetary policy, speeches, data releases, research/regulatory) apply to a standard corporate filing",
+    "Source metadata block was empty, though URL and content allowed basic identification"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this source as irrelevant to the archive's focus. No human review needed - clear reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a 10-K annual filing for BioRegenX, Inc., a micro-cap biotech company. The document contains standard corporate financial data including balance sheet items, revenue segmentation, equity transactions, stock-based compensation, and business operations. It is not relevant to market structure or macro catalysts.",
+    "why_it_matters": "This filing is a standard corporate annual report for a specific biotech company. It has no relevance to the target topics of market structure or macro catalysts. It would only be useful for company-specific equity research, not for macro analysis or market plumbing research.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

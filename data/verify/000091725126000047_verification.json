@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single-company REIT 10-Q filing with no market-wide data, monetary policy signals, economic indicators, or market structure content",
+    "XBRL raw data format is not human-readable without specialized parsing",
+    "event_type set to 'unknown' — while technically correct given no taxonomy value fits corporate filings, this reinforces non-archivable classification",
+    "The source falls outside the archive's documented focus on market structure or macro catalysts per Core Rule 1"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally well-constructed and accurately describes the source content, but the source itself clearly does not meet the relevance threshold for the finance research archive. The generated record correctly identifies this issue in why_it_matters, summary, and notes. No human review needed as the record itself makes the correct determination.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Agree Realty Corporation filed its Q1 2026 10-Q quarterly report on 2026-04-21 for the period ending 2026-03-31. This is a standard XBRL-formatted corporate financial filing containing balance sheet, equity, and debt schedule data for a single-company REIT. The document is not relevant to market structure or macro catalysts; it is a company-specific regulatory filing with no broader market or monetary policy implications.",
+    "why_it_matters": "This source is a company-specific financial filing for a single REIT issuer. It does not contain market-wide data, monetary policy signals, economic indicators, or market structure information. It is not relevant to the finance research archive focus on market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
