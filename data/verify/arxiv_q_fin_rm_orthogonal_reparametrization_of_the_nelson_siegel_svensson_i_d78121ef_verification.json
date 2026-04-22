@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Scope mismatch: Source is a computational mathematics paper (numerical methods for yield curve modeling) rather than work addressing market structure dynamics or macro catalysts. The human review correctly identifies this.",
+    "Record accurately reports the paper does not discuss market dynamics (market_impact.confidence = 0), but this confirms the paper falls outside the stated scope.",
+    "The record correctly describes the paper's methodological nature without fabricating any claims inconsistent with the source.",
+    "The 223-word source text is an abstract; while sufficient for accuracy verification, it provides limited detail on the full paper scope."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source text, but there is a fundamental scope question: is quantitative finance methodology (numerical methods for yield curve fitting) within scope for 'market structure or macro catalysts'? The human review recommends exclusion, but the TARGET field explicitly specifies 'quantitative_finance' topic. A reviewer should decide whether to (a) accept with scope clarification or (b) reject with scope justification.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This methodological paper addresses numerical stability issues in fitting interest rate curves, which is foundational for yield curve construction and fixed income analytics. Practitioners and researchers using NSS models for curve fitting, risk management, or forecasting could benefit from this orthogonalization approach to avoid degenerate parameter estimates and improve model reliability. However, the paper is purely methodological and does not directly address market structure dynamics or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
