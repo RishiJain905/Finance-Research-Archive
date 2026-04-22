@@ -1,7 +1,7 @@
 {
   "id": "arxiv_q_fin_rm_orthogonal_reparametrization_of_the_nelson_siegel_svensson_i_d78121ef",
   "created_at": "2026-04-22T04:41:30.620275+00:00",
-  "status": "review_queue",
+  "status": "rejected",
   "topic": "quantitative_finance",
   "event_type": "research_paper",
   "title": "Orthogonal reparametrization of the Nelson-Siegel-Svensson interest rate curve model: conditioning, diagnostics, and ide",
@@ -52,17 +52,13 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate against the source text, but there is a fundamental scope question: is quantitative finance methodology (numerical methods for yield curve fitting) within scope for 'market structure or macro catalysts'? The human review recommends exclusion, but the TARGET field explicitly specifies 'quantitative_finance' topic. A reviewer should decide whether to (a) accept with scope clarification or (b) reject with scope justification."
+    "required": false,
+    "decision": "rejected_by_human",
+    "notes": "Rejected from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "reject",
+    "reviewed_at": "2026-04-22T04:53:37.517367+00:00"
   },
   "raw_text_path": "data/raw/arxiv_q_fin_rm_orthogonal_reparametrization_of_the_nelson_siegel_svensson_i_d78121ef.txt",
   "notes": "This source is NOT relevant to the target topics of 'market structure' or 'macro catalysts'. It is a technical research paper on mathematical/quantitative finance methodology—specifically numerical methods for improving the conditioning of the Nelson-Siegel-Svensson interest rate curve model. The paper addresses computational statistics and linear algebra techniques (QR decomposition, Fisher information matrix, Gram matrix analysis) rather than market operations, microstructure, or macro economic drivers. While yield curve models are used in fixed income markets, this paper does not discuss market structure or macro catalysts and should be flagged accordingly. The paper is recent (published 2026-04-21), from a reputable academic source (arXiv), and is technically sound but outside scope.",
