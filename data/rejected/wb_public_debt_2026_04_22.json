@@ -1,0 +1,75 @@
+{
+  "id": "wb_public_debt_2026_04_22",
+  "created_at": "2026-04-22T15:00:54.412377+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "A World Bank data query for indicator GC.DOD.TOTL.GD.ZS (total central government debt as a percentage of GDP) returned no valid observations for any recent period. No usable data, statistics, or analysis is present in this source.",
+  "key_points": [
+    "The World Bank indicator GC.DOD.TOTL.GD.ZS (government debt-to-GDP) returned zero valid observations on the snapshot date.",
+    "No debt figures, percentages, country breakdowns, or time series data are available from this source.",
+    "The source appears to be a failed or incomplete data API response rather than a research document."
+  ],
+  "why_it_matters": "Public debt levels are a key macro catalyst for sovereign bond markets, currency valuations, and fiscal sustainability assessments. However, this source provides no actual debt data to inform such analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "gc.dod.totl.gd.zs"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data, statistics, or research content - only an API error message indicating zero valid observations were returned",
+      "This is a failed data retrieval, not a research document, and has no archival value for macro catalyst analysis",
+      "event_type is 'unknown' but source_type is 'data_release_other' - inconsistency between fields",
+      "No market structure or macro catalyst signal can be derived from a source with zero observations",
+      "Per core rules: thin low-signal sources bias toward reject; source is too thin to have archival value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_22.txt",
+  "notes": "Source is not relevant to market structure or macro catalysts. This is a data query response with no valid observations. No research content, no statistics, no narrative. Cannot construct a meaningful research note from this source. The World Bank indicator GC.DOD.TOTL.GD.ZS requires a valid data pull - this snapshot failed to retrieve any records.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 0,
+    "reasoning": [
+      "Data query returned zero valid observations",
+      "No actual debt statistics available",
+      "No analysis or commentary present",
+      "Not usable as a research note without underlying data"
+    ]
+  }
+}

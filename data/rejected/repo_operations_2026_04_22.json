@@ -1,0 +1,78 @@
+{
+  "id": "repo_operations_2026_04_22",
+  "created_at": "2026-04-22T14:59:19.377500+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations – Data Fetch Failed",
+  "source": {
+    "name": "NY Fed Repo Operations",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "newyorkfed.org",
+    "published_at": "",
+    "source_type": "api_error"
+  },
+  "summary": "A request to the NY Fed Markets public API for the latest repo operation results returned a 400 Bad Request error. No repo operation data was retrieved for this snapshot.",
+  "key_points": [
+    "Target endpoint: https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "API returned HTTP 400 Bad Request — the request was malformed or rejected",
+    "No repo operation data (amounts, rates, counterparties, results) was retrieved",
+    "This snapshot captures a failed data retrieval attempt, not actual repo market data"
+  ],
+  "why_it_matters": "NY Fed repo operations are a direct window into short-term dollar funding conditions and the Federal Reserve's management of the federal funds rate corridor. A failed data fetch at the API level indicates either a transient system issue or a structural change in the API endpoint. Without this data, it is impossible to assess whether the NY Fed conducted overnight or term repo operations on this date.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The NY Fed repo market API is the authoritative public source for Fed repo operation results (overnight and term repos, including any special operations). The 400 error prevents any analysis of today's repo operation status, which is relevant to understanding short-end liquidity conditions.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "api-error",
+    "market-structure",
+    "fed-funds",
+    "liquidity",
+    "short-term-funding"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only an HTTP 400 error message with no substantive market data",
+      "Record documents a failed data retrieval attempt rather than an actual market event or operation",
+      "Zero analytical value for market structure research - nothing to verify or archive",
+      "API error source does not meet threshold for archival content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is factually accurate about what the source contains (a 400 error), but documents a technical failure rather than a market event. While the record is honest and well-structured, archiving an empty API error provides no value to the finance research archive. Human should verify this is a data pipeline issue, not an attempt to archive a non-event."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_22.txt",
+  "notes": "This record is a technical artifact of a failed data retrieval attempt. The source contains no substantive content about repo market operations. The 400 Bad Request error suggests either: (1) the API endpoint format has changed, (2) the URL structure requires additional path parameters, or (3) the API has rate-limiting or blocking for this request pattern. In its current state, this source has zero analytical value for market structure research. Recommend: (a) verify the correct NY Fed Markets API endpoint format, (b) retry with appropriate headers/parameters, or (c) fall back to alternative sources such as the H.4.1 statistical release for Fed balance sheet data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed_fetch",
+    "score": 0,
+    "reasoning": [
+      "Source provides no data — only an error message from the NY Fed Markets API",
+      "Cannot extract any market structure relevant information (repo amounts, rates, operation types)",
+      "API failure renders this record non-archivable as meaningful market structure data",
+      "Lowest possible quality tier due to complete absence of substantive content"
+    ]
+  }
+}

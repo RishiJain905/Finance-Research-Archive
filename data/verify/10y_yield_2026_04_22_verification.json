@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source URL is empty - violates the requirement that 'source attribution (name + url) is present'",
+    "Source is raw data feed observation (FRED series DGS10 snapshot), not an analytical article or event release with archival value",
+    "No causal context provided: source has no information on macro drivers, policy implications, or forward guidance",
+    "market_impact confidence of 1 is appropriate given the source provides no directional catalyst information",
+    "quality_tier correctly identifies this as 'raw_data' with score 2, confirming thin archival value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-rejection is appropriate because the source fails the fundamental requirement: no URL makes this non-citable and the source is raw data with no analytical content or context.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

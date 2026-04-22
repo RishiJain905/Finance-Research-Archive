@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source URL is empty - no actual source URL captured, only domain listed",
+    "Source is a 404 error response with no actual market structure data - purely a technical failure",
+    "event_type set to 'unknown' when it should be 'unknown' - correctly left as unknown since no event occurred",
+    "No auction prices, sizes, bid-to-cover ratios, or participation metrics present - nothing to verify",
+    "Source has zero archival value: a failed API call tells us nothing about Treasury market structure",
+    "Records a non-event (API error) that cannot be used for research, RAG, or decision-making"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut reject: source is a technical failure with no actual data. The record accurately describes the error, but an error message has no archival utility for market structure research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "API request to Treasury Fiscal Data for auction securities data returned a 404 error. No auction data was retrieved.",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

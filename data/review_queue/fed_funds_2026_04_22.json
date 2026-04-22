@@ -1,0 +1,89 @@
+{
+  "id": "fed_funds_2026_04_22",
+  "created_at": "2026-04-22T14:55:45.187689+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Effective Federal Funds Rate (DFF) — Daily Observation",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "published_at": "2026-04-22",
+    "source_type": "data_release",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The Effective Federal Funds Rate (DFF) remained flat at 3.64% from April 16–20, 2026, indicating stable overnight lending rates in the federal funds market. The rate has shown no change over this five-day observation window.",
+  "key_points": [
+    "Effective Federal Funds Rate (DFF) recorded at 3.64% on April 20, 2026",
+    "Rate unchanged from April 19, 2026 (absolute change: 0, direction: flat)",
+    "Rate steady at 3.64% consistently from April 16–20, 2026",
+    "Source: Federal Reserve Economic Data (FRED), series code DFF",
+    "This is the daily effective rate reflecting actual overnight lending transactions"
+  ],
+  "why_it_matters": "The effective federal funds rate is the primary monetary policy target for the Federal Reserve. A steady 3.64% rate indicates no recent FOMC action to shift the policy rate and reflects stable conditions in overnight funding markets. Market participants tracking rate expectations use this data point to assess the current policy stance.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 5
+  },
+  "macro_context": "The 3.64% effective federal funds rate represents the weighted average rate for overnight lending between banks. The stability at 3.64% across the five-day observation window (April 16-20) indicates no policy changes or market stress during this period. Actual FOMC target range details should be confirmed from official FOMC sources rather than assumed.",
+  "market_structure_context": "The DFF series captures the weighted average rate for overnight transactions in the federal funds market. Stability at 3.64% from April 16–20 indicates orderly market functioning without pressure on overnight lending rates.",
+  "important_numbers": [
+    "3.64%",
+    "3.64%",
+    "3.64%",
+    "3.64%",
+    "3.64%",
+    "0"
+  ],
+  "tags": [
+    "fed-funds",
+    "effective-rate",
+    "overnight-rate",
+    "monetary-policy",
+    "interest-rates",
+    "fomc-target"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "macro_context claims a specific '3.00-3.25% target range' but this exact target range is not present in the source; this is an extrapolation that should be verified or removed",
+      "published_at date (2026-04-22) reflects TODAY rather than the actual observation date (2026-04-20); while this may reflect the publication date of the FRED snapshot, the distinction should be noted",
+      "Source quality is inherently thin (single data point with no policy narrative), limiting archival value beyond confirming current rate level"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Confidence is 6-7 (borderline). The record is factually supported by the source for all verifiable claims (rate level, flat direction, observation dates), but contains one extrapolation (target range) that is not in the source and should be corrected before acceptance."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_22.txt",
+  "notes": "Source is a FRED data snapshot showing only the current effective federal funds rate level. No policy decision, statement, or forward guidance is contained in this source. The rate has been stable at 3.64% across all five recent observations, indicating no market stress or policy changes during this period. This is a thin source providing only a single data point without broader context.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "basic",
+    "score": 4,
+    "reasoning": [
+      "Single data point with no narrative or policy context",
+      "Stable rate indicated with no explanation for current level",
+      "No historical comparison, vote tally, or forward guidance",
+      "Limited analytical value beyond confirming current rate level"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "99fed73d50ee86001789d2aa4193921dab3c2737"
+}

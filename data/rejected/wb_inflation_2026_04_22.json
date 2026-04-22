@@ -1,0 +1,75 @@
+{
+  "id": "wb_inflation_2026_04_22",
+  "created_at": "2026-04-22T15:00:32.846853+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Inflation Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-22",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank data query for indicator FP.CPI.TOTL.ZG (World Inflation Rate) returned no valid observations as of the snapshot date. No inflation data is available from this source request.",
+  "key_points": [
+    "Indicator FP.CPI.TOTL.ZG (World Inflation Rate) returned zero valid observations",
+    "Source is a World Bank data API response, not an article or document",
+    "No inflation figures, prior periods, or revisions are available from this source",
+    "The query is contemporaneous with the TODAY date but provides no usable data"
+  ],
+  "why_it_matters": "No usable inflation data was retrieved. This source cannot support any macro analysis, rate path assessment, or market impact evaluation.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "api-query",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned no valid observations - the API query produced a null result with zero usable data",
+      "Source has no archival value for financial research; a failed data query cannot support any macro analysis",
+      "No URL provided in source attribution (only domain listed)",
+      "event_type 'data_release_other' is assigned but the source contains no actual data release"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_22.txt",
+  "notes": "NOT RELEVANT to focus areas (market structure, macro catalysts). Source is a failed data API query returning zero observations. No inflation data exists in this record. Topic assigned as 'global_economy' per metadata, but this source is not usable for any macro research or archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No actual data returned from source",
+      "Source provides no usable information for market structure or macro catalyst analysis",
+      "Failed query result has no archival value for financial research"
+    ]
+  }
+}

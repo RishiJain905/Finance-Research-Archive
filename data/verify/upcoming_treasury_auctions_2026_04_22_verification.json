@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains only a 404 error message with no actionable auction data",
+    "No auction dates, sizes, or security types were retrieved to archive",
+    "The record accurately reflects the failure but contains no market-relevant information",
+    "limited archival value since no substantive market data was captured"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly documents the API failure, but it contains no substantive market structure data to archive. The source has zero information content beyond a technical error. While the record correctly avoids fabricating data, a human should decide whether documenting a failed API call has sufficient archival value for a finance research archive, or whether this should be rejected as 'thin/noisy' per guidelines.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

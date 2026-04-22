@@ -1,0 +1,115 @@
+{
+  "id": "sofr_2026_04_22",
+  "created_at": "2026-04-22T14:55:45.187561+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "SOFR Rate Snapshot - April 21, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Bank of St. Louis)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-22",
+    "source_type": "data_release"
+  },
+  "summary": "SOFR closed at 3.63% on April 21, 2026, unchanged from the prior day. The rate has declined 9 basis points over the past week from 3.72% on April 15 to 3.63% on April 21.",
+  "key_points": [
+    "SOFR latest observation: 3.63% on 2026-04-21",
+    "SOFR previous observation: 3.63% on 2026-04-20",
+    "Direction: flat (0 bps change from prior day)",
+    "Recent trend: 3.72% (Apr 15) → 3.67% (Apr 16) → 3.65% (Apr 17) → 3.63% (Apr 20-21)",
+    "Decline of 9 bps over the past week"
+  ],
+  "why_it_matters": "SOFR is the primary overnight reference rate for U.S. dollar markets, used as the benchmark for trillions of dollars in derivatives, loans, and floating-rate instruments. Tracking daily SOFR levels provides real-time insight into short-term funding conditions and money market stress.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "SOFR is derived from overnight Treasury reverse repurchase agreements collateralized by Treasury securities. The flat reading suggests stable overnight funding markets with no acute stress in the repo market.",
+  "important_numbers": [
+    "3.63% (current SOFR)",
+    "3.63% (prior day SOFR)",
+    "0 bps (day-over-day change)",
+    "9 bps (decline from Apr 15 to Apr 21)"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "overnight-rate",
+    "fed-funds-alternative",
+    "market-structure",
+    "repo"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 8,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_22.txt",
+  "notes": "This is a pure data observation with no analytical content. The record captures the current SOFR level but provides no context for interpretation. For research purposes, this serves as a time-series anchor point. The flat reading is notable in context of the prior week's declining trend, suggesting stabilization near 3.63%. However, without accompanying FOMC or money market commentary, the macro significance is indeterminate.",
+  "linked_quant_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "keyword_discovery_federalreserve_speech_by_governor_waller_on_c542233a5da6214c",
+      "relationship": "narrative_context_for_quant_snapshot",
+      "reason": "near-day, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 145.0
+    },
+    {
+      "record_id": "arxiv_econ_gn_the_hidden_plumbing_of_stablecoins_financial_and_technologic_8decc0ad",
+      "relationship": "temporally_proximate_article",
+      "reason": "within 3 days, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 125.0
+    },
+    {
+      "record_id": "keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "sofr",
+        "market-structure"
+      ],
+      "link_score": 92.5
+    }
+  ],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 69.0,
+    "reasoning": [
+      "quality score: 69.0/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

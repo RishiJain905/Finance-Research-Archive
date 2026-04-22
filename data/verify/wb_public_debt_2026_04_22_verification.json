@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data, statistics, or research content - only an API error message indicating zero valid observations were returned",
+    "This is a failed data retrieval, not a research document, and has no archival value for macro catalyst analysis",
+    "event_type is 'unknown' but source_type is 'data_release_other' - inconsistency between fields",
+    "No market structure or macro catalyst signal can be derived from a source with zero observations",
+    "Per core rules: thin low-signal sources bias toward reject; source is too thin to have archival value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The decision is clear-cut: a failed API response returning zero valid observations has no archival value for a finance research archive. The generated record accurately describes the source failure, but archiving a record documenting a data query failure adds noise without signal. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

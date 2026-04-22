@@ -1,0 +1,87 @@
+{
+  "id": "2y_yield_2026_04_22",
+  "created_at": "2026-04-22T14:57:18.199028+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2) — FRED Time Series Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "published_at": "2026-04-20",
+    "source_type": "data_series",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 2-Year Treasury yield closed at 3.72% on April 20, 2026, up 1 basis point from the prior reading of 3.71% on April 17. The yield has ranged between 3.71% and 3.78% over the past week, showing marginal volatility amid a relatively stable range.",
+  "key_points": [
+    "2-Year Treasury yield: 3.72% as of 2026-04-20",
+    "Previous reading: 3.71% (2026-04-17), change of +0.01 bps",
+    "Recent observations show narrow range: 3.71%–3.78% over April 14–20",
+    "Data sourced from FRED series DGS2 (Federal Reserve Bank of St. Louis)"
+  ],
+  "why_it_matters": "The 2-year yield reflects near-term rate expectations and is sensitive to Fed policy signals. This raw data snapshot provides only an anchor point for quantitative analysis—no narrative, policy context, or market catalyst is present in the source.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year Treasury yield is a market-derived proxy for expected Fed policy rates over the next two years. This time series observation (3.72% on April 20, 2026) provides a single data point without explanation of what drove the level change or what macro factors are at play. The source contains no analytical content.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.72%",
+    "3.71%",
+    "3.78%",
+    "3.76%",
+    "+0.01 bps"
+  ],
+  "tags": [
+    "treasury",
+    "2-year-yield",
+    "macro",
+    "rate-expectations",
+    "fred",
+    "fixed-income"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw time series data with no analytical content, narrative, or macro interpretation",
+      "event_type 'data_release_other' is borderline—FRED yield data is not a scheduled data release like CPI or GDP; it's a continuous market-derived rate",
+      "Cannot serve as a standalone research archive entry without linked article context providing catalyst information",
+      "The source is too thin to have standalone archival value despite data accuracy"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record correctly identifies its own limitations (quality_tier: low, notes acknowledging thin data). Data points are factually accurate. However, the fundamental question is whether a bare time series snapshot—with no narrative, policy discussion, or macro catalyst—should be archived as a standalone research record. The LLM assessment is honest (confidence 0, notes to use as quantitative input). This needs human judgment on archival policy: does the archive want to include raw data points, or only content-rich sources?"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_22.txt",
+  "notes": "This source is a FRED time series snapshot containing only a single data point (3.72%) and recent observations. It is not an article, commentary, or research note—it lacks any analytical content or narrative. While the data is relevant to the 'macro catalysts' topic (2-year yields reflect rate expectations), the source is too thin to constitute a meaningful archiveable research note. Confidence set to 2/10. Use this data as a quantitative input rather than a standalone source.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Raw quantitative data with no narrative or analysis",
+      "No policy content, market commentary, or event description",
+      "Only one observation and five recent data points provided",
+      "Cannot serve as a standalone research archive entry without linked article context"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "0064d5a9ed952eb58a3f1ef7c4a0861d82ef7dbd"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "wb_trade_gdp_2026_04_22",
+  "created_at": "2026-04-22T15:01:20.470023+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — World Bank Indicator TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-22",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank API returned no valid observations for the World Trade (% of GDP) indicator (TG.VAL.TOTL.GD.ZS) as of 2026-04-22. The source consists only of an error message indicating no data is currently available for this metric.",
+  "key_points": [
+    "No recent valid observations were returned for indicator TG.VAL.TOTL.GD.ZS",
+    "The source contains no numeric data, time series, or analytical content",
+    "This appears to be a data retrieval failure or a dataset with no current observations",
+    "No information is available on world trade as a percentage of GDP from this source"
+  ],
+  "why_it_matters": "This source provides no usable information. The World Bank API returned a null response with no data points. No analysis of global trade patterns or their relationship to GDP can be derived from this source.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "null-data",
+    "no-observations",
+    "api-null-response"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains zero data — only an error message: 'No recent valid observations were returned for indicator TG.VAL.TOTL.GD.ZS'",
+      "Not relevant to market structure or macro catalysts — provides no analytical content, time series, or numeric data",
+      "No archival value — an empty API null response cannot support any research, analysis, or market assessment",
+      "Source attribution URL is empty — 'World Bank' name is present but no actual URL provided",
+      "Cannot be archived as a research note — no information exists to summarize or derive insight from"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_22.txt",
+  "notes": "This source is not relevant to market structure or macro catalysts. It is a null data response from the World Bank API containing no usable information. The source consists solely of the message: 'No recent valid observations were returned for indicator TG.VAL.TOTL.GD.ZS.' This record should likely be discarded or re-queried to obtain actual data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 0,
+    "reasoning": [
+      "No valid observations returned — source contains zero data",
+      "Cannot support any market structure or macro catalyst analysis",
+      "Not relevant to specified focus topics",
+      "Should be re-queried or flagged as a data retrieval error"
+    ]
+  }
+}

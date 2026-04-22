@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no valid observations - the API query produced a null result with zero usable data",
+    "Source has no archival value for financial research; a failed data query cannot support any macro analysis",
+    "No URL provided in source attribution (only domain listed)",
+    "event_type 'data_release_other' is assigned but the source contains no actual data release"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut rejection: the record accurately describes a null/empty source, but the source itself has no archival value for financial research. A failed API query returning zero observations cannot support market structure analysis, macro catalysts, or any investment-related research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "No usable inflation data was retrieved. This source cannot support any macro analysis, rate path assessment, or market impact evaluation.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

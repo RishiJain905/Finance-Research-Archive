@@ -1,0 +1,81 @@
+{
+  "id": "iorb_2026_04_22",
+  "created_at": "2026-04-22T14:56:15.291547+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "Interest on Reserve Balances (IORB) — 2026-04-22",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-22",
+    "source_type": "data_release"
+  },
+  "summary": "The Fed's Interest on Reserve Balances (IORB) rate remained flat at 3.65% as of April 22, 2026, unchanged from the prior day and the prior week. The IORB is the rate the Federal Reserve pays to depository institutions on reserve balances held at Federal Reserve Banks, serving as the floor of the federal funds rate corridor.",
+  "key_points": [
+    "IORB current rate: 3.65% (as of 2026-04-22)",
+    "Prior day value: 3.65% (2026-04-21) — no change",
+    "Rate has been flat at 3.65% for at least 5 consecutive observations (April 18–22)",
+    "IORB functions as the effective floor of the federal funds target rate range",
+    "The rate is determined by the top of the Fed's target range (currently 4.50%) minus the 0–15 bps spread used in the floor system"
+  ],
+  "why_it_matters": "IORB is a key structural element of the Fed's current monetary policy operating framework. It directly affects banks' incentive to hold reserves at the Fed versus lending in the repo or fed funds markets. As the corridor floor, it anchors money market rates and influences short-term funding costs across the financial system. Traders in repo, fed funds, and short-term money markets monitor IORB daily.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 6
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB is the primary policy rate anchor in the Fed's ample-reserves framework. Set 15 basis points below the top of the target range (4.50%), it defines the effective floor for overnight rates in repo and fed funds markets. The flat reading indicates no change to the Fed's policy rate corridor or reserve remuneration.",
+  "important_numbers": [
+    "3.65% — current IORB rate",
+    "4.50% — approximate top of Fed funds target range (floor offset)"
+  ],
+  "tags": [
+    "iorb",
+    "federal-reserve",
+    "policy-rate",
+    "reserve-balances",
+    "money-market",
+    "corridor-floor",
+    "fed-operating-framework"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "duplicate_event:sofr_2026_04_22"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_22.txt",
+  "notes": "This is a daily data point from FRED, not an explicit policy announcement. The flat rate indicates no change to reserve remuneration policy. Source is authoritative (Federal Reserve data via St. Louis Fed). Relevance to market structure is clear — IORB defines the policy rate floor in the Fed's operating framework. The data is current (published April 22, 2026) and internally consistent.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "quantitative",
+    "score": 7,
+    "reasoning": [
+      "Authoritative source: Federal Reserve via FRED",
+      "Exact numeric values provided",
+      "Multiple observations confirm flat trend",
+      "Low information density — a single rate fix, not a policy shift",
+      "Irrelevant to macro catalysts; relevant to market structure only"
+    ]
+  }
+}

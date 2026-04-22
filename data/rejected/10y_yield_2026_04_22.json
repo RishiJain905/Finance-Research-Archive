@@ -1,0 +1,85 @@
+{
+  "id": "10y_yield_2026_04_22",
+  "created_at": "2026-04-22T14:57:49.267888+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield (DGS10) - Daily Observation",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-20",
+    "source_type": "data_feed"
+  },
+  "summary": "The 10-Year Treasury Yield remained flat at 4.26% between April 17 and April 20, 2026, with no change recorded. Recent observations show yields trading in a narrow range between 4.26% and 4.32% over the past week.",
+  "key_points": [
+    "Latest observation: 4.26% as of 2026-04-20",
+    "Previous observation: 4.26% as of 2026-04-17 (zero change)",
+    "Recent range: 4.26% to 4.32% across five observations from April 14-20",
+    "Yield peaked at 4.32% on 2026-04-16 before declining back to 4.26%"
+  ],
+  "why_it_matters": "The 10-year Treasury yield is a benchmark for mortgage rates, corporate borrowing costs, and risk-free returns. A flat reading at 4.26% suggests near-term stability in financing costs and risk-free return expectations.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "A stable 10-year yield near 4.26% indicates market consensus pricing in a steady rate environment with no immediate catalyst for directional movement. The yield remains within a tight 6-basis-point range over the observation period.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.26%",
+    "4.32%",
+    "4.29%"
+  ],
+  "tags": [
+    "10y-yield",
+    "treasury",
+    "risk-free-rate",
+    "yield-curve",
+    "fred",
+    "daily-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - violates the requirement that 'source attribution (name + url) is present'",
+      "Source is raw data feed observation (FRED series DGS10 snapshot), not an analytical article or event release with archival value",
+      "No causal context provided: source has no information on macro drivers, policy implications, or forward guidance",
+      "market_impact confidence of 1 is appropriate given the source provides no directional catalyst information",
+      "quality_tier correctly identifies this as 'raw_data' with score 2, confirming thin archival value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_22.txt",
+  "notes": "Source is a passive FRED data observation (series DGS10), not an analytical article or event release. Contains only the latest daily observation and a brief recent history. Provides the yield level but no causal context, forward guidance, or policy interpretation. Low richness for research purposes; best used as a data point anchor rather than standalone source. Consider pairing with FOMC statements or economic commentary for macro context.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "raw_data",
+    "score": 2,
+    "reasoning": [
+      "No analytical content or narrative",
+      "No context for macro drivers or policy implications",
+      "No comparison to historical averages or prior periods beyond 5 days",
+      "Useful only as a factual data point for time-series analysis"
+    ]
+  }
+}

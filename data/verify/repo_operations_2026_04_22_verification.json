@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only an HTTP 400 error message with no substantive market data",
+    "Record documents a failed data retrieval attempt rather than an actual market event or operation",
+    "Zero analytical value for market structure research - nothing to verify or archive",
+    "API error source does not meet threshold for archival content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate about what the source contains (a 400 error), but documents a technical failure rather than a market event. While the record is honest and well-structured, archiving an empty API error provides no value to the finance research archive. Human should verify this is a data pipeline issue, not an attempt to archive a non-event.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

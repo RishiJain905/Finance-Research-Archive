@@ -1,0 +1,80 @@
+{
+  "id": "treasury_auctions_2026_04_22",
+  "created_at": "2026-04-22T14:58:10.683302+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Treasury Auction Data - Fetch Error (404)",
+  "source": {
+    "name": "Treasury Fiscal Data",
+    "url": "",
+    "domain": "fiscaldata.treasury.gov",
+    "published_at": "2026-04-22",
+    "source_type": "unknown"
+  },
+  "summary": "API request to Treasury Fiscal Data for auction securities data returned a 404 error. No auction data was retrieved.",
+  "key_points": [
+    "API endpoint returned 404 Not Found for the auction_data_securities resource",
+    "Snapshot date: 2026-04-22",
+    "Attempted fields: issue_date, security_type, security_term, offering_amt, total_accepted",
+    "No actual auction data, prices, or bid details available in this source"
+  ],
+  "why_it_matters": "Treasury auction data is a core component of market structure analysis—auction sizes, bidder participation, and tail sizes reveal dealer capacity and demand dynamics. This source provides no usable information.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "No market structure data available. Treasury auction mechanics, bid-to-cover ratios, and dealer participation—key indicators of market structure health—cannot be assessed from this source.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-auctions",
+    "market-structure",
+    "api-error",
+    "404",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - no actual source URL captured, only domain listed",
+      "Source is a 404 error response with no actual market structure data - purely a technical failure",
+      "event_type set to 'unknown' when it should be 'unknown' - correctly left as unknown since no event occurred",
+      "No auction prices, sizes, bid-to-cover ratios, or participation metrics present - nothing to verify",
+      "Source has zero archival value: a failed API call tells us nothing about Treasury market structure",
+      "Records a non-event (API error) that cannot be used for research, RAG, or decision-making"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_22.txt",
+  "notes": "This record documents a failed data fetch. The source contains no actual auction data—only an error message. For Treasury auction data, consider alternative sources such as Treasury Direct auction results or Bloomberg auction data feeds. No summary or key points beyond the error itself can be derived.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 0,
+    "reasoning": [
+      "Source is a 404 error response with no actual content",
+      "No factual claims can be extracted or verified",
+      "Theoretical relevance to market structure is noted but cannot be substantiated",
+      "This record should not be used for any analysis or decision-making"
+    ]
+  }
+}

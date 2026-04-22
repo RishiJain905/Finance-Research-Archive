@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "macro_context claims a specific '3.00-3.25% target range' but this exact target range is not present in the source; this is an extrapolation that should be verified or removed",
+    "published_at date (2026-04-22) reflects TODAY rather than the actual observation date (2026-04-20); while this may reflect the publication date of the FRED snapshot, the distinction should be noted",
+    "Source quality is inherently thin (single data point with no policy narrative), limiting archival value beyond confirming current rate level"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Confidence is 6-7 (borderline). The record is factually supported by the source for all verifiable claims (rate level, flat direction, observation dates), but contains one extrapolation (target range) that is not in the source and should be corrected before acceptance.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The 3.64% effective federal funds rate represents the weighted average rate for overnight lending between banks. The stability at 3.64% across the five-day observation window (April 16-20) indicates no policy changes or market stress during this period. Actual FOMC target range details should be confirmed from official FOMC sources rather than assumed.",
+    "market_structure_context": ""
+  }
+}
