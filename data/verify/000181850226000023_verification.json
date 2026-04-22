@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect — this is a corporate 8-K filing disclosing credit facility amendments and TRS termination, not regulatory guidance",
+    "Source is not relevant to market structure or macro catalysts per archive mandate — it is an individual company filing for a small-cap fintech (OppFi Inc., market cap ~$300M) with no broader market implications",
+    "Record contains no macro_context or market_structure_context, correctly noting 'no implications for broader financial markets, monetary policy, or market structure'",
+    "internal inconsistency: llm_review.verdict is 'pending' but human_review.decision is 'exclude'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is categorically outside archive scope. Human review already correctly identified this as 'exclude' noting source is not relevant to market structure or macro catalysts. The filing addresses internal credit facility modifications and TRS termination applicable only to OppFi Inc. investors.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

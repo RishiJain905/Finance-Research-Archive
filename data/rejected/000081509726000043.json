@@ -1,0 +1,83 @@
+{
+  "id": "000081509726000043",
+  "created_at": "2026-04-22T14:18:09.686346+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Form 8-K - Carnival Corporation / Carnival plc",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000043/ccl-20260417.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-17",
+    "source_type": "sec_filing"
+  },
+  "summary": "Carnival Corporation and Carnival plc held their annual shareholder meetings on April 17, 2026, with all director nominees elected and all board-recommended proposals approved by shareholders. The filing also documents a Court Meeting regarding the proposed dual-listed company (DLC) unification and redomiciliation of Carnival Corporation from Panama to Bermuda.",
+  "key_points": [
+    "All 11 director nominees (including Micky Arison, Josh Weinstein, and Randy Weisenburger) were re-elected to serve until the next annual meetings",
+    "Shareholders approved advisory vote on executive compensation with 879,051,088 votes for (88.2% of votes cast)",
+    "Deloitte LLP appointed as independent auditor for Carnival plc; Deloitte & Touche LLP ratified for Carnival Corporation",
+    "Shareholders authorized Carnival plc to buy back ordinary shares in the open market (1,053,498,983 votes for)",
+    "Carnival plc Court Meeting approved the DLC unification and redomiciliation scheme (shareholder majority and 75% value threshold met)",
+    "Proxies for 1,205,637,579 shares were received representing the voting base"
+  ],
+  "why_it_matters": "This filing documents corporate governance outcomes for one of the world's largest cruise operators. The DLC unification and redomiciliation from Panama to Bermuda represents a structural corporate change but does not constitute a macro catalyst or market structure event. The shareholder votes were overwhelming in favor of all proposals, indicating no material governance risks.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "1,205,637,579 shares entitled to vote",
+    "879,051,088 votes for executive compensation (88.2%)",
+    "1,053,498,983 votes for share buyback authority"
+  ],
+  "tags": [
+    "carnival",
+    "corporate-governance",
+    "sec-filing",
+    "shareholder-vote",
+    "dlc-unification",
+    "redomiciliation",
+    "8-k"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Topic field incorrectly set to 'macro catalysts' when source is explicitly noted as NOT relevant to macro catalysts - internal contradiction in record",
+      "event_type 'unknown' is technically correct since no taxonomy value fits this source type, but this indicates source is outside the archive's scope",
+      "Record acknowledges source is 'NOT RELEVANT to market structure or macro catalysts' yet is placed in review_queue with suggested_status of accepted - misaligned with record's own analysis",
+      "Source is routine corporate governance filing (annual shareholder votes + DLC unification approval) - contains no market-moving information, policy signals, or economic data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This record contains an internal contradiction: topic is set to 'macro catalysts' but the record's own notes explicitly state 'NOT RELEVANT to market structure or macro catalysts'. The source is factually accurate (correctly summarizes shareholder meeting outcomes and DLC unification approval), but the record's topic assignment and status are inconsistent. Human review needed to confirm whether this should be rejected for topic mismatch despite accurate summary, or whether a topic correction alone is sufficient."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000081509726000043.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a corporate governance filing for Carnival Corporation/Plc documenting annual shareholder meeting results and DLC unification approval. Contains no information related to monetary policy, economic data releases, market operations, or regulatory guidance. No macro or market structure implications. Recommend filtering out from research archive as it does not meet topic relevance criteria.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "irrelevant",
+    "score": 1,
+    "reasoning": [
+      "Corporate governance filing outside scope of macro catalysts and market structure focus",
+      "No policy or market-moving information present",
+      "Document type is routine 8-K compliance filing"
+    ]
+  }
+}

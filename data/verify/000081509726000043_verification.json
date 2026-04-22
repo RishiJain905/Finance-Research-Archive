@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Topic field incorrectly set to 'macro catalysts' when source is explicitly noted as NOT relevant to macro catalysts - internal contradiction in record",
+    "event_type 'unknown' is technically correct since no taxonomy value fits this source type, but this indicates source is outside the archive's scope",
+    "Record acknowledges source is 'NOT RELEVANT to market structure or macro catalysts' yet is placed in review_queue with suggested_status of accepted - misaligned with record's own analysis",
+    "Source is routine corporate governance filing (annual shareholder votes + DLC unification approval) - contains no market-moving information, policy signals, or economic data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record contains an internal contradiction: topic is set to 'macro catalysts' but the record's own notes explicitly state 'NOT RELEVANT to market structure or macro catalysts'. The source is factually accurate (correctly summarizes shareholder meeting outcomes and DLC unification approval), but the record's topic assignment and status are inconsistent. Human review needed to confirm whether this should be rejected for topic mismatch despite accurate summary, or whether a topic correction alone is sufficient.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
