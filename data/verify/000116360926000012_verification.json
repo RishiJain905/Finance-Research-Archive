@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "All source attribution fields are empty (name, url, domain, published_at, source_type)",
+    "All record fields are empty (summary, key_points, why_it_matters, macro_context, market_structure_context)",
+    "Source is a minor 8-K filing from a small agricultural cooperative with no relevance to market structure or macro catalysts",
+    "event_type is not specified",
+    "Source type is SEC EDGAR but this is a thin corporate filing, not an article-like source with archival value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is entirely blank - all fields are empty. This is an auto-reject regardless of source content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

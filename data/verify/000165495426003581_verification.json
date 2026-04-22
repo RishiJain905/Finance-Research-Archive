@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' — while the 8-K filing doesn't fit neatly into the defined taxonomy, 'regulatory_filing' would be more informative than 'unknown'",
+    "topic 'not_relevant' is correctly identified but the record was still submitted for verification — flagging for consistency check"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent: topic is correctly marked as 'not_relevant' and human_review correctly notes the document was 'not_archived'. The summary is accurate and source attribution is present. The primary issue is that event_type 'unknown' is imprecise but not incorrect for an 8-K corporate filing that doesn't fit the defined taxonomy. No action needed as the record has already been appropriately dispositioned.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

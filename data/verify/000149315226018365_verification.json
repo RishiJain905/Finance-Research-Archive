@@ -1,0 +1,15 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - this SEC Form 8-K filing is a corporate governance/regulatory disclosure, which could reasonably be classified as 'regulatory_guidance' or similar, making 'unknown' an avoidable default",
+    "The record correctly identifies the source as not relevant to the archive scope (market structure/macro catalysts), but this highlights a scope-vs-accuracy distinction: the factual summary is accurate, yet the source is entirely outside scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is not relevant to the archive's focus on market structure and macro catalysts - it is a routine corporate governance filing. While the factual content is accurately captured, the record's quality tier correctly flags it as 'not_aligned'. Human review is needed to confirm the 'not_aligned' classification and verify whether sources like this should be excluded at ingestion or after review.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "BullFrog AI Holdings, Inc. filed a Form 8-K announcing that its 2026 Annual Meeting of Stockholders is scheduled for June 11, 2026, with a shareholder proposal nomination deadline of April 29, 2026. The company is listed on the Nasdaq Capital Market (tickers: BFRG, BFRGW) and qualifies as an emerging growth company. This is a routine corporate governance disclosure with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This is a routine SEC Form 8-K filing for a small-cap AI company announcing annual meeting logistics. It has no relevance to market structure or macro catalysts. The filing provides only corporate governance information and does not contain any economic data, monetary policy content, or market-moving information."
+  }
+}

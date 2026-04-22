@@ -1,0 +1,71 @@
+{
+  "id": "000121390026044140",
+  "created_at": "2026-04-22T08:21:59.865212+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Constellation Acquisition Corp I 8-K Filing — 2026-04-15",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1834032/000121390026044140/ea0286517-8k425_constell1.htm",
+    "published_at": "2026-04-15",
+    "source_type": "document",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Constellation Acquisition Corp I (CSTAF), a Cayman Islands-incorporated SPAC, filed a Form 8-K on April 15, 2026, announcing a rescheduling of an investor webinar for its proposed business combination with HiTech Minerals Inc. and US Elemental Inc. (target entity to be listed as PubCo on Nasdaq). The webinar was moved to April 22, 2026 at 10AM Eastern Time. The filing contains standard forward-looking statement disclaimers and Regulation FD disclosure language.",
+  "key_points": [
+    "Registrant: Constellation Acquisition Corp I, incorporated in Cayman Islands, ticker CSTAF on OTCQB market",
+    "Business combination involves CSTA, HiTech Minerals Inc., and US Elemental Inc. (to become PubCo)",
+    "Investor webinar rescheduled from original date to April 22, 2026 at 10AM Eastern Time",
+    "Exchange listings on OTCQB include Class A ordinary shares (CSTAF), warrants (CSTWF), and units (CSTUF)",
+    "Registrant qualifies as an emerging growth company under Rule 405 of the Securities Act",
+    "Exhibit 99.1 contains the joint press release; Exhibits 99.2 and 99.3 contain investor relations notices"
+  ],
+  "why_it_matters": "This filing is a corporate disclosure related to a single SPAC transaction and does not contain market-wide relevant information. It is not relevant to market structure or macro catalysts. The SPAC business combination announcement is a micro-event affecting only the specific securities involved (CSTAF/CSTWF/CSTUF).",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "spac",
+    "business-combination",
+    "sec-filing",
+    "8-k",
+    "merger",
+    "constellation-acquisition",
+    "hitech-minerals"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' when it should be a valid taxonomy value. This is a corporate disclosure (8-K filing), which could map to 'regulatory_guidance' or similar, but 'unknown' when the type is obvious violates standards.",
+      "Source is NOT relevant to market structure or macro catalysts — a routine SPAC business combination announcement affecting only CSTAF/CSTWF/CSTUF securities. Has no macro or market structure implications.",
+      "Record has low archival value for a finance research archive focused on market structure and macro catalysts. This is a micro corporate event.",
+      "The record correctly identifies the irrelevance in 'why_it_matters' and 'human_review.notes', yet still assigns a review_queue status — internal consistency issue."
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record itself acknowledges the source is not relevant to market structure or macro catalysts. Given the stated archival focus and the event_type being incorrectly set to 'unknown' when categorization is obvious, auto-rejection is appropriate without human review needed."
+  },
+  "raw_text_path": "data/raw/000121390026044140.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a routine SEC Form 8-K filing announcing an investor webinar for a SPAC business combination. Contains no information about monetary policy, interest rates, market operations, economic data, or broader market structure considerations. The filing was truncated at 'instituted against Contracting Pa' but appears to be a standard forward-looking statements disclaimer. Low archival value for finance research focused on market structure and macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "not-applicable",
+    "score": 0,
+    "reasoning": [
+      "Not relevant to target topics (market structure, macro catalysts)",
+      "Micro corporate event (single SPAC transaction)",
+      "No macro or market structure implications"
+    ]
+  }
+}

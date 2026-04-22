@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when it should be a valid taxonomy value. This is a corporate disclosure (8-K filing), which could map to 'regulatory_guidance' or similar, but 'unknown' when the type is obvious violates standards.",
+    "Source is NOT relevant to market structure or macro catalysts — a routine SPAC business combination announcement affecting only CSTAF/CSTWF/CSTUF securities. Has no macro or market structure implications.",
+    "Record has low archival value for a finance research archive focused on market structure and macro catalysts. This is a micro corporate event.",
+    "The record correctly identifies the irrelevance in 'why_it_matters' and 'human_review.notes', yet still assigns a review_queue status — internal consistency issue."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record itself acknowledges the source is not relevant to market structure or macro catalysts. Given the stated archival focus and the event_type being incorrectly set to 'unknown' when categorization is obvious, auto-rejection is appropriate without human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

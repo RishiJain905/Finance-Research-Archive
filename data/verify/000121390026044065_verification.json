@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is essentially empty - all key fields (summary, key_points, topic, why_it_matters, macro_context, market_structure_context) are blank",
+    "Source attribution is missing - name, url, domain, published_at, and source_type are all empty strings",
+    "No market-relevant content extracted from the SEC 10-K filing",
+    "Record has no archival value as it provides zero research signal"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is fundamentally empty - no content was extracted from the source document. No human review can salvage a record with zero information.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

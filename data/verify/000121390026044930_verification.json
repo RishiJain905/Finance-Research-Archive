@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic 'market structure' is not appropriate for this source; the filing contains only a procedural announcement with no analytical content about market plumbing, trading mechanics, or structural dynamics",
+    "event_type set to 'unknown' — while technically valid, a corporate filing announcing unit separation has no plausible fit within the provided taxonomy; the field should be dropped or left empty rather than using 'unknown' as a catch-all",
+    "Record has low archival value for a finance research archive; this is a single SPAC's routine procedural disclosure with no broader market or systemic implications"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate and well-structured, but source lacks research value for a macro/market-structure archive. Topic assignment is questionable, and the record appears to be a low-quality candidate despite accurate transcription. Human reviewer should confirm whether routine SPAC procedural filings belong in this archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
