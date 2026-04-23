@@ -1,7 +1,7 @@
 {
   "id": "upcoming_treasury_auctions_2026_04_22",
   "created_at": "2026-04-22T14:58:55.218874+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "market structure",
   "event_type": "treasury_issuance",
   "title": "Upcoming Treasury Auctions",
@@ -47,28 +47,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record is factually accurate and properly documents the API failure, but it contains no substantive market structure data to archive. The source has zero information content beyond a technical error. While the record correctly avoids fabricating data, a human should decide whether documenting a failed API call has sufficient archival value for a finance research archive, or whether this should be rejected as 'thin/noisy' per guidelines."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-23T22:10:09.119090+00:00"
   },
   "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_22.txt",
   "notes": "This record was generated from a failed API request to Treasury Fiscal Data. The attempted endpoint (upcoming_auctions) returned 404, indicating either the endpoint has changed, the data is temporarily unavailable, or the URL structure differs from what was used. No content to summarize. Recommend manual retrieval via Treasury Direct or alternative data source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "no-data",
-    "score": 0,
+    "tier": "tier_3",
+    "score": 42.5,
     "reasoning": [
-      "API returned 404 error; no data retrieved",
-      "No auction information available to assess market structure implications"
+      "quality score: 42.5/100 (acceptable)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "no structured quantitative data",
+      "lower-trust source",
+      "moderate topic relevance",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
