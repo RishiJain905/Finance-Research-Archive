@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a micro-cap SPAC filing on OTC Markets with no systemic market implications",
+    "event_type set to 'unknown' when the source is a routine corporate 8-K filing; no clear taxonomy fit for archive mandate",
+    "Record has no archival value for a finance research archive focused on market structure and macro catalysts",
+    "llm_review.verification_confidence is set to 0 which appears inconsistent with the accurate summary"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate but the source itself does not meet the archive's relevance criteria. Human confirmation needed to ensure the rejection decision is intentional and not an oversight.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing from WinVest Acquisition Corp. is a micro-cap SPAC (Special Purpose Acquisition Company) listed on OTC Markets. The document describes routine internal financing arrangements between the company and its sponsor—specifically an extension of the business combination deadline via a promissory note drawdown. The filing has zero relevance to market structure or macro catalysts as defined in the archive mandate. It does not discuss monetary policy, interest rates, market operations, economic data releases, or any systemic financial market elements.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

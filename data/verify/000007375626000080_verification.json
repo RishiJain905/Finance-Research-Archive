@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when it could be more specifically categorized as 'data_release_other' since this is a corporate earnings disclosure under SEC Item 2.02",
+    "Minor classification improvement possible, but current state is acceptable"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is accurate and correctly identifies the source as not relevant to market structure or macro catalysts. The decision to exclude is well-supported. Human review not needed.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate SEC filing for Oceaneering International, an oilfield/marine services company. The filing discloses Q1 2026 earnings via a press release attachment (Exhibit 99.1), but the 8-K body contains no substantive financial data. Individual company earnings for a mid-size services company have negligible relevance to broad market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

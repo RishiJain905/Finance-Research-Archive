@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate governance 8-K filing entirely outside the archive's scope of market structure or macro catalysts",
+    "event_type is set to 'unknown' — while corporate filings don't fit neatly into the taxonomy, the record should note this is a corporate governance disclosure, not a macro catalyst event",
+    "topic is set to 'macro catalysts' which is incorrect — this is corporate governance/executive compensation",
+    "why_it_matters correctly identifies the source has no relevance to macro catalysts, but this raises the question of why the record was generated at all for this archive",
+    "quality_tier correctly identifies the source as 'irrelevant' to archive scope — this contradiction (generating a record for clearly out-of-scope content) suggests pipeline issues"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record itself acknowledges the source is irrelevant to the archive focus in multiple places (why_it_matters, quality_tier, notes). The rejection is straightforward — no human judgment needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

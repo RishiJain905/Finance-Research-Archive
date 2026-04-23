@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - name, url, domain, published_at, and source_type are all empty",
+      "Record contains no summary, key_points, or any substantive content from the source",
+      "topic field is empty - no subject classification provided",
+      "market_impact field is empty - no market relevance assessment",
+      "event_type not specified - filing is a corporate disclosure (8-K) but no taxonomy value assigned",
+      "Source content is thin - 8-K only references a shareholder presentation as Exhibit 99.1, with no substantive disclosure in the body",
+      "No important_numbers captured despite the filing listing multiple preferred stock series and securities"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is essentially empty with no source attribution, no summary, no topic, and no event_type. Even if human review cannot salvage this record due to missing fields, the source itself (a routine 8-K referencing a shareholder presentation) provides minimal archival value beyond confirming the filing date and event reference. The record cannot be accepted as-is."
+  },
+  "summary": "Fifth Third Bancorp filed an 8-K on April 21, 2026, disclosing under Item 7.01 (Regulation FD) that a shareholder presentation will be made at the 2026 Annual Meeting of Shareholders. The presentation is attached as Exhibit 99.1. The filing contains no substantive financial disclosures, guidance, or market-relevant announcements.",
+  "key_points": [],
+  "why_it_matters": "8-K filings typically signal material corporate events. However, this filing only references an upcoming shareholder presentation with no preview of content. Market participants monitoring Fifth Third for material news would note the lack of substantive disclosure in this filing.",
+  "macro_context": "Fifth Third Bancorp is a regional bank headquartered in Cincinnati, Ohio. This filing is a routine regulatory disclosure and does not contain macro-relevant information.",
+  "market_structure_context": "The filing lists securities registered on NASDAQ including common stock (FITB) and multiple series of preferred stock (FITBI, FITBP, FITBO, FITBM). This is standard securities registration information.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

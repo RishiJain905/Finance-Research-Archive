@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'data_release_other' is incorrect - this is a corporate SEC 8-K filing (earnings release + governance change), not a macroeconomic data release. The correct event_type should be 'unknown' or the record should note this is out of scope.",
+    "topic is set to 'macro catalysts' but the source is a single-company earnings filing with no macro relevance. The record's own notes acknowledge 'SOURCE OUT OF SCOPE'.",
+    "The record is self-contradictory: assigned macro catalyst topic and data_release event type while simultaneously noting the source is out of scope for both market structure and macro catalysts."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source content is factually accurate and faithfully represented, but the classification is inconsistent. The record correctly identifies this as out-of-scope in notes/quality_tier but uses 'macro catalysts' topic and 'data_release_other' event_type, which is contradictory. Human review needed to reconcile classification and determine whether this should be rejected for scope mismatch or accepted as an accurately described out-of-scope source.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
