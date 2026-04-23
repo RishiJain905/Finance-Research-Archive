@@ -1,7 +1,7 @@
 {
   "id": "2y_yield_2026_04_23",
   "created_at": "2026-04-23T15:26:04.570209+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "2-Year Treasury Yield (DGS2) — FRED Snapshot",
@@ -59,31 +59,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Record is factually accurate against the source (all numbers match), but the source itself is a raw data snapshot with zero analytical content. FRED database observations are better suited as supporting context in a research note rather than standalone archival records. The record has no fabricated claims, but it has negligible standalone value given the thinness. Human should decide if raw data snapshots from FRED meet archival thresholds for this collection."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-23T22:10:17.533137+00:00"
   },
   "raw_text_path": "data/raw/2y_yield_2026_04_23.txt",
   "notes": "This is a quantitative market data snapshot from FRED, not an analytical or commentary source. The source provides only raw yield observations without any accompanying macro context, policy signals, or analytical narrative. Useful for time-series tracking and rate expectation calibration but thin as a standalone research note. The yield move is directionally informative but insufficient to drive a trading signal without corroborating news or data.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "C",
-    "score": 4,
+    "tier": "tier_2",
+    "score": 56.0,
     "reasoning": [
-      "Raw data point only; no commentary or analysis",
-      "Informative as a rate expectation indicator but lacks catalyst context",
-      "Recent observation (within 90 days); freshness is acceptable",
-      "Very thin extraction—only factual numbers present",
-      "Lowest common denominator: yield value and direction only"
+      "quality score: 56.0/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (5)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
