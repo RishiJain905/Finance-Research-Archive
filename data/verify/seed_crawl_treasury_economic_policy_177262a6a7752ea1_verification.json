@@ -1,19 +1,20 @@
 {
-  "verification_confidence": 10,
+  "verification_confidence": 1,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation_page per source metadata - violates Rule 5 (reject homepage, navigation_page, listing_page, search_page)",
-    "Source contains no specific economic data, policy decisions, or actionable research content",
-    "No publication date available for temporal assessment",
-    "Source describes departmental functions rather than publishing substantive analysis or data",
-    "event_type set to 'unknown' which is correct for this source type but confirms low archival value"
+    "Source is a navigation_page — per Rule 5, navigation pages must be rejected",
+    "Source has no published date (published_at is empty)",
+    "Source contains only general descriptive text about office functions with no substantive content",
+    "No specific policy announcements, economic data releases, or market-relevant information present",
+    "Source is thin and low-signal — qualifies as non-archivable per Rule 6",
+    "event_type set to 'unknown' — appropriate given source has no specific event, but reinforces non-archivable nature"
   ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "The record accurately identifies the source's limitations and the rejection decision is clear-cut based on source type. No ambiguity exists.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This is a Treasury.gov section landing page describing the general functions of the Economic Policy office, including reporting on economic developments, analyzing financial markets, and producing estimates of Total Taxable Resources. The page contains no specific policy announcements, economic data releases, or substantive content to archive.",
+    "why_it_matters": "This page has no direct market relevance. It is a navigation hub describing an office's general responsibilities with no specific policy content, economic data, or actionable information for market participants.",
     "macro_context": "",
     "market_structure_context": ""
   }

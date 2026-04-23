@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_economic_policy_177262a6a7752ea1",
-  "created_at": "2026-03-31T09:47:19.305819+00:00",
+  "created_at": "2026-04-23T17:27:09.602042+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,22 +8,23 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/economic-policy",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "navigation_page",
-    "domain": "home.treasury.gov"
+    "source_type": "navigation_page"
   },
-  "summary": "This is a high-level Treasury Department landing page describing the general functions of the Economic Policy office, including its responsibilities for economic analysis, Total Taxable Resources reporting, Social Security and Medicare trustees reports, blog posts, and research papers. The page contains no specific economic data, policy decisions, or actionable research content.",
+  "summary": "This is a Treasury.gov section landing page describing the general functions of the Economic Policy office, including reporting on economic developments, analyzing financial markets, and producing estimates of Total Taxable Resources. The page contains no specific policy announcements, economic data releases, or substantive content to archive.",
   "key_points": [
-    "Page describes broad mandate of Treasury's Economic Policy office for economic analysis and policy determination",
-    "Mentions Total Taxable Resources (TTR) reporting under Public Law 102-321",
-    "References annual Social Security and Medicare trustees reports to Congress",
-    "Lists blog posts and working/research papers as content types",
-    "No specific economic indicators, data releases, or policy announcements included"
+    "Economic Policy office reports on current and prospective economic developments",
+    "Office assists in determining appropriate economic policies",
+    "Reviews and analyzes domestic and international economic issues and financial market developments",
+    "Produces Total Taxable Resources estimates for states under Public Law 102-321",
+    "References Social Security and Medicare trustees reports",
+    "Contains links to blog posts and working papers but no direct substantive content"
   ],
-  "why_it_matters": "This page provides no actionable market intelligence. It is a static navigation hub describing departmental functions rather than publishing substantive economic analysis or data. Traders, analysts, and researchers should seek actual report links rather than this index page.",
+  "why_it_matters": "This page has no direct market relevance. It is a navigation hub describing an office's general responsibilities with no specific policy content, economic data, or actionable information for market participants.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "neutral",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -33,25 +34,47 @@
     "treasury",
     "economic-policy",
     "navigation-page",
-    "no-content"
+    "non-archivable"
   ],
   "llm_review": {
     "initial_confidence": 1,
-    "verification_confidence": 10,
+    "verification_confidence": 1,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation_page per source metadata - violates Rule 5 (reject homepage, navigation_page, listing_page, search_page)",
-      "Source contains no specific economic data, policy decisions, or actionable research content",
-      "No publication date available for temporal assessment",
-      "Source describes departmental functions rather than publishing substantive analysis or data",
-      "event_type set to 'unknown' which is correct for this source type but confirms low archival value"
+      "Source is a navigation_page — per Rule 5, navigation pages must be rejected",
+      "Source has no published date (published_at is empty)",
+      "Source contains only general descriptive text about office functions with no substantive content",
+      "No specific policy announcements, economic data releases, or market-relevant information present",
+      "Source is thin and low-signal — qualifies as non-archivable per Rule 6",
+      "event_type set to 'unknown' — appropriate given source has no specific event, but reinforces non-archivable nature"
     ]
   },
   "human_review": {
     "required": false,
-    "decision": "reject",
+    "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_treasury_economic_policy_177262a6a7752ea1.txt",
-  "notes": "Non-archiveable navigation page. No specific publication date, no economic data, no policy content. Source metadata indicates TARGET was 'macro catalysts' but the page itself provides no macro catalyst information. Marked as low value for finance research archive purposes."
+  "notes": "Source is a Treasury.gov section landing page (navigation_page), not an archiveable document. Contains only a general description of the Economic Policy office's functions. No specific policy content, economic data, or market-relevant information present. Per Rule 6, navigation pages should be treated as non-archiveable. No date, no numbers, no actionable content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "Navigation page with no substantive content",
+      "No published date",
+      "Describes office functions but contains no specific policy or data",
+      "Non-archivable per Rule 6",
+      "Insufficient information to support any market or macro analysis"
+    ]
+  }
 }

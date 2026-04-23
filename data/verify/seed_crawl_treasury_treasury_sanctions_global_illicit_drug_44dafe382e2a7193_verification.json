@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when the correct type could be identified as a sanctions/enforcement action, though no matching taxonomy value exists",
+    "Source classification (macro catalysts) is inconsistent with actual content - this is a law enforcement/national security announcement about drug trafficking sanctions with no direct relevance to financial markets, monetary policy, or macroeconomic catalysts",
+    "why_it_matters field correctly identifies the lack of market relevance, but the record should have been rejected at intake given the fundamental topic mismatch"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source but documents a fundamental category mismatch. The source is a Treasury OFAC sanctions press release on drug trafficking enforcement, which has no relevance to macro catalysts or market structure as defined by the verification framework. The record correctly notes this in why_it_matters, but the intake metadata incorrectly classified it under 'macro catalysts.' A human should confirm rejection based on topic scope rather than factual accuracy.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

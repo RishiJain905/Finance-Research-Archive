@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Topic mismatch: Source is labeled 'macro catalysts' but content is a Treasury sanctions/enforcement press release with no direct relevance to monetary policy, economic data, interest rates, or market structure",
+    "event_type 'regulatory_guidance' is questionable - this is an enforcement action/press release, not regulatory guidance; 'market_notice' or 'financial_stability_report' would be more accurate",
+    "Source has no direct macro or market impact - it describes law enforcement against overseas fraud networks",
+    "The record's own internal review correctly identifies this mismatch and suggests reclassification or exclusion"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source content is accurately summarized but is fundamentally not relevant to the archive's scope of 'macro catalysts' and 'market structure' events. The TARGET metadata appears mislabeled. Human decision needed on whether to accept with reclassification (e.g., 'financial_stability_report' or 'market_notice') or reject entirely. If accepted, event_type should be corrected and topics retagged.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a Treasury sanctions action targeting overseas fraud networks involved in digital asset investment scams. While it removes some fraudulent platforms from the ecosystem, it does not constitute a macro catalyst or market structure event. It falls under financial stability/crime enforcement rather than monetary policy or market operations.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
