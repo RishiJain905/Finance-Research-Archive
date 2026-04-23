@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when this is clearly a routine corporate earnings disclosure filing. While not fitting neatly into the macro-focused taxonomy, 'unknown' should be replaced with a more descriptive type if one exists or documented as a known limitation."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and source attribution is correct. However, human review is needed to confirm that routine corporate SEC filings (earnings announcements) should be accepted into the archive given their limited macro/market structure relevance. The conservative rule suggests preferring review over accept for uncertain cases. Additionally, the 'unknown' event_type should be confirmed as appropriate given the available taxonomy.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

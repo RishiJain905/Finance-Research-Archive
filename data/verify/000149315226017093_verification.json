@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type set to 'unknown' - while no taxonomy value fits this source perfectly, 'regulatory_filing' or a corporate governance category would be more appropriate than 'unknown'",
+    "Source is a routine corporate governance 8-K filing with no relevance to market structure or macro catalysts as specified in the focus areas",
+    "The record's own assessment acknowledges the source is not relevant to specified focus areas"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source falls outside the archive's focus areas (market structure and macro catalysts). The record correctly identifies this, but the event_type being 'unknown' when a more specific category could be assigned, and the overall record quality for archival purposes needs confirmation. Source should be rejected from this particular archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Netcapital Inc. (NCPL) filed an 8-K disclosing the termination of CEO Rich Wheeless on April 12, 2026 and the subsequent appointment of Todd Violette as CEO on April 13, 2026, along with the terms of Violette's employment agreement including a $120,000 annual base salary.",
+    "why_it_matters": "This is a routine corporate governance filing for a small-cap company (Nasdaq: NCPL) regarding executive management changes. It has no relevance to market structure or macro catalysts and falls outside the scope of this finance research archive focused on market structure and macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

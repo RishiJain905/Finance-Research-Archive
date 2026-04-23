@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — this is a 'corporate governance' type event which is not represented in the taxonomy, but 'unknown' is technically not a valid option per the taxonomy. However, the record correctly identifies it has no macro relevance.",
+    "Record correctly identifies the filing as 'not_covered' topic with no relevance to macro-financial research, but this creates a philosophical question: should archives ingest records they explicitly classify as out-of-scope?",
+    "Summary and key_points are factually accurate — vote counts, share numbers, and dates all match source.",
+    "why_it_matters assessment is correct: this is routine corporate governance with no market structure or macro catalyst relevance."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, but raises a policy question: the source is a legitimate 8-K filing correctly parsed, yet the record itself acknowledges the content is outside this archive's focus (market structure, macro catalysts). The human should decide whether: (a) reject because it's out of scope, or (b) accept the record as a properly classified 'not_covered' case that serves as a negative example/foundation. The verification confidence of 6-7 reflects that the technical execution is good but the scope fit is questionable.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
