@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is NOT relevant to archive focus areas (market structure, macro catalysts). This is a routine microcap corporate SEC Form 8-K filing with no macro or market structure applicability.",
+    "event_type set to 'unknown' - while technically valid, the source does not belong to any defined taxonomy category (monetary policy, speeches, data releases, Treasury/operations, research)",
+    "Source has no relevance to Federal Reserve policy, interest rates, economic data releases, Treasury operations, or market-wide structural elements"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record has correctly identified this source as irrelevant to the archive's scope. However, human confirmation is needed to formally reject and ensure the rejection logic is applied consistently. The source is a microcap corporate filing (Visium Technologies, Inc.) that applies only to that company's shareholders and has no market-wide or macro significance.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

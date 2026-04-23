@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - should be 'data_release_other' since this is a Q1 financial results disclosure",
+    "Source is not relevant to market structure or macro catalysts - routine corporate earnings release",
+    "Record correctly acknowledges lack of relevance but should still use appropriate event_type",
+    "Published April 21, 2026 - within 90-day window but has no archival value for market structure/macro research"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the record is factually accurate in acknowledging this filing has no relevance to market structure or macro catalysts, the event_type being 'unknown' should be corrected to 'data_release_other' per taxonomy rules. Human review needed to confirm: (1) the archive scope should exclude routine corporate earnings releases from non-financial-sector companies, and (2) whether to update event_type or reject the record entirely.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "3M Company filed an 8-K on April 21, 2026, reporting first-quarter 2026 financial results and reiterating full-year 2026 guidance. This is a routine corporate earnings disclosure.",
+    "why_it_matters": "This filing is not relevant to market structure or macro catalysts. 3M is a diversified industrial conglomerate; its Q1 earnings do not constitute a market-moving economic data release or policy signal. The filing has no macro or market structure significance."
+  }
+}

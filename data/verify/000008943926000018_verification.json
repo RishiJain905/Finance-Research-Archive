@@ -1,0 +1,15 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' when it could be more specifically classified as 'data_release_other' for a quarterly earnings/financial report",
+    "quality_tier set to 'not-applicable' when a more appropriate value might be 'low' or 'filtered' for irrelevant sources"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this source as irrelevant to market structure and macro catalysts and appropriately recommends rejection. Minor refinements to event_type classification would improve accuracy, but the core assessment is sound.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Mueller Industries Inc filed its Q1 2026 10-Q quarterly report covering the period ended March 28, 2026. The filing contains standard XBRL-formatted financial data including balance sheet, income statement, and segment breakdown for this copper and brass manufacturing company. This source is not relevant to market structure or macro catalysts.",
+    "why_it_matters": "This source has no relevance to market structure or macro catalysts. It is a corporate financial filing for an individual industrial company and does not provide information relevant to central bank policy, market operations, economic data, or financial market structure."
+  }
+}

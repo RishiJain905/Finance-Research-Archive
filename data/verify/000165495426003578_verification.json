@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect - this is a corporate securities filing about preferred stock issuance, not regulatory guidance",
+    "Source is not relevant to market structure or macro catalysts per verification criteria - routine micro-cap OTCQB 8-K with no broader financial market implications",
+    "The archive's stated scope targets market structure and macro catalysts; a debt-for-equity swap at a small OTCQB company falls outside this scope",
+    "why_it_matters correctly identifies lack of relevance but record should be rejected rather than reviewed given scope mismatch"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source lacks relevance to market structure or macro catalysts. No human review needed as the disqualifying factor (scope mismatch) is clear.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine micro-cap corporate filing involving debt-for-equity swap and preferred stock issuance for a small OTCQB-listed company. It has no relevance to market structure or macro catalysts and does not affect broader financial markets.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

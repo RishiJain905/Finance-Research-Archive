@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a micro-cap company (Visium Technologies) 8-K filing about preferred stock issuance for an acquisition - not relevant to macro catalysts or market structure",
+      "Generated record is completely empty with no summary, key_points, or any field populated",
+      "No event_type provided in record; source does not fit the taxonomy (monetary policy, speeches, data releases, treasury operations, research) - this is routine corporate disclosure",
+      "Source is thin, low-signal disclosure document with no broader market significance",
+      "Source attribution in record is empty (name, url, domain all blank)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Clear reject - source is not relevant to macro/market structure research archive scope, and generated record is entirely empty"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

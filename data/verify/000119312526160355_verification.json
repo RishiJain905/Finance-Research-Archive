@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' — while this filing doesn't fit standard macro event types, the record acknowledges it correctly identifies the source as outside scope",
+    "source is entirely irrelevant to market structure or macro catalysts (biotech equity offering)",
+    "record correctly classifies the source as 'not-macro-relevant' but the archival value determination requires human decision on scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is accurately summarized but falls completely outside the archive's scope (biotech equity offering, no macro relevance). The record correctly identifies this limitation. Human decision needed: should non-macro corporate securities filings be archived? The record is well-constructed but the scope question cannot be auto-resolved.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
