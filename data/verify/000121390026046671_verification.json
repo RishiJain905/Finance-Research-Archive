@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but the correct type is identifiable as a regulatory/compliance event (regulatory_filing)",
+    "topic field is empty - record lacks a specified topic",
+    "why_it_matters assessment is overly broad - dismissing as 'not relevant' may be premature; delisting risk can signal broader concerns for similar small-cap companies in audit/backlog situations",
+    "verdict shows 'pending' while initial_confidence is 8, suggesting inconsistent internal logic"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly sourced, but has two concrete identification gaps: (1) event_type is 'unknown' when it should be classified as a regulatory/compliance event, and (2) topic field is empty. Additionally, the 'not relevant' assessment may be too broad - delisting notices can signal sector-wide or size-specific concerns worth monitoring.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Apimeds Pharmaceuticals US, Inc. (APUS) received an NYSE American non-compliance notice on April 17, 2026, due to failure to timely file Form 10-K for FY2025. The company has a six-month cure period (expires October 17, 2026) and expects to file by April 30, 2026. Trading continues with .LF designation while an April 2, 2026 trading halt remains in effect. While company-specific, such delisting notices for small-cap companies may indicate broader concerns about audit capacity or financial reporting backlogs in the pharmaceutical/biotech sector.",
+    "topic": "nyse-listing-compliance",
+    "event_type": "regulatory_guidance"
+  }
+}

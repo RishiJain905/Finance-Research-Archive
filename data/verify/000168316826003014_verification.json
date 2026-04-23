@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is essentially empty - summary, key_points, topic, why_it_matters are all blank",
+    "source.sub_fields (name, url, domain, published_at, source_type) are all empty - proper source attribution to sec.gov is missing",
+    "event_type field is missing entirely from the record",
+    "topic field is empty - should identify as 'SEC 8-K filing' or 'Regulation FD Disclosure'",
+    "The record has no archival value as documented; it's a non-functional template",
+    "Key information from source is not extracted: company name (DarkPulse, Inc.), CEO (Dennis O'Leary), event (Oil & Gas Virtual Investor Conference), date (April 16, 2026)"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is a non-functional template with nearly all fields empty. While the source is a legitimate SEC 8-K filing, the record fails to extract any substantive information from it. The record requires complete reconstruction before it can be evaluated for archival value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "DarkPulse, Inc. filed an 8-K on April 16, 2026, disclosing under Regulation FD that founder & CEO Dennis O'Leary will present at the Oil & Gas Virtual Investor Conference hosted by VirtualInvestorConferences.com on the same date. The filing includes the press release as Exhibit 99.1.",
+    "why_it_matters": "This is a routine regulatory disclosure announcing an investor relations event. The filing explicitly states the press release is not material and the company has no duty to update the information. This type of 8-K filing typically has minimal market impact as it only announces an upcoming presentation rather than disclosing new financial or operational information.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

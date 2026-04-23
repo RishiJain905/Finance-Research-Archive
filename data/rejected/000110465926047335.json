@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - no source attribution (name, url, domain, published_at, source_type), no topic, no summary, no key_points, no meaningful content",
+      "Source attribution missing entirely - cannot verify record against source without metadata",
+      "Source is an SEC 8-K regulatory filing for a small-cap pharmaceutical company (Cumberland Pharmaceuticals, ticker CPIX) - not relevant to market structure or macro catalysts",
+      "This is a company-specific M&A announcement with no broader market implications; inappropriate for a macro/market structure research archive",
+      "No event_type provided in record - cannot verify taxonomy compliance"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is empty with no content to verify; auto-reject is appropriate"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single-company 8-K filing with no relevance to market structure or macro catalysts — only corporate earnings guidance",
+    "event_type is set to 'unknown' but this is clearly a data_release_other equivalent (earnings guidance under Item 2.02)",
+    "No substantive content in the filing body — the referenced press release (Exhibit 99.1) is not included; claims cannot be verified",
+    "No specific financial figures, guidance numbers, or revenue data provided",
+    "Small-cap NASDAQ company (OESX) with no systemic market relevance",
+    "Thin source with insufficient archival value for a macro/market structure research archive"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies this as a thin corporate filing with no macro or market structure relevance. The decision to recommend rejection aligns with archive scope requirements. However, human review is needed to formally reject and potentially log this for a separate corporate earnings tracking system.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Orion Energy Systems, Inc. filed a Form 8-K on April 15, 2026 (signed April 16, 2026) under Item 2.02, attaching a press release that reiterates expectations for increased growth and profitability in fiscal 2026 and fiscal 2027. No specific financial figures or guidance numbers are provided in the filing.",
+    "why_it_matters": "This 8-K filing contains no actionable market or macro information. It is a routine SEC disclosure from a small-cap energy technology company (NASDAQ: OESX) providing internal business outlook guidance. The filing lacks specific metrics, revenue figures, or any market-moving data. Exhibit 99.1 (the press release) is referenced but not included in the filing body, preventing verification of claims.",
+    "macro_context": "Not applicable — individual company earnings guidance with no broader macro or market structure implications.",
+    "market_structure_context": "Not applicable — single-company filing with no systemic relevance to market structure or macro catalysts."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing: name, url, domain, published_at, and source_type are all empty",
+      "Research record is entirely unfilled - no summary, key_points, why_it_matters, macro_context, or market_structure_context provided",
+      "event_type field is empty/missing",
+      "No market_impact data provided",
+      "Cannot verify any claims because no claims were generated",
+      "Source is a company 10-K filing (DarkPulse, Inc.) which has limited relevance to market structure or macro catalysts as defined in verification standards"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is a completely empty template with no content to verify. Rejection is appropriate due to missing source attribution and absence of any generated content."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

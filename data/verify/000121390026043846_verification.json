@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts per CORE RULES. This is a micro-cap corporate SEC filing for SUNation Energy, Inc. (SUNE, Nasdaq), a small-cap solar company disclosing routine internal debt management with related parties.",
+    "event_type is set to 'unknown' but the correct classification is obvious: this is a corporate filing (8-K) disclosing material agreements. However, even with a specific event type, the source does not meet the relevance threshold.",
+    "Per CORE RULES: 'Source is not relevant to market structure or macro catalysts' warrants rejection. The record's own 'why_it_matters' field acknowledges 'no material relevance to market structure or macro catalysts' and calls it 'micro-cap corporate finance filing' with 'no systemic market implications'."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is factually accurate and well-structured, but the record correctly identifies it as irrelevant to the archive's focus. No verification issues exist with the record content itself.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
