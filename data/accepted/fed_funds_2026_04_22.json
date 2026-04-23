@@ -1,7 +1,7 @@
 {
   "id": "fed_funds_2026_04_22",
   "created_at": "2026-04-22T14:55:45.187689+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "Effective Federal Funds Rate (DFF) — Daily Observation",
@@ -58,30 +58,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "Confidence is 6-7 (borderline). The record is factually supported by the source for all verifiable claims (rate level, flat direction, observation dates), but contains one extrapolation (target range) that is not in the source and should be corrected before acceptance."
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-23T22:09:53.538785+00:00"
   },
   "raw_text_path": "data/raw/fed_funds_2026_04_22.txt",
   "notes": "Source is a FRED data snapshot showing only the current effective federal funds rate level. No policy decision, statement, or forward guidance is contained in this source. The rate has been stable at 3.64% across all five recent observations, indicating no market stress or policy changes during this period. This is a thin source providing only a single data point without broader context.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "basic",
-    "score": 4,
+    "tier": "tier_2",
+    "score": 60.5,
     "reasoning": [
-      "Single data point with no narrative or policy context",
-      "Stable rate indicated with no explanation for current level",
-      "No historical comparison, vote tally, or forward guidance",
-      "Limited analytical value beyond confirming current rate level"
+      "quality score: 60.5/100 (useful_context)",
+      "moderate verification confidence",
+      "human-approved",
+      "multiple issues found (3)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
