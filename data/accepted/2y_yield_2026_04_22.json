@@ -1,7 +1,7 @@
 {
   "id": "2y_yield_2026_04_22",
   "created_at": "2026-04-22T14:57:18.199028+00:00",
-  "status": "review_queue",
+  "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "data_release_other",
   "title": "2-Year Treasury Yield (DGS2) — FRED Time Series Snapshot",
@@ -56,30 +56,31 @@
     ]
   },
   "human_review": {
-    "required": true,
-    "decision": "",
-    "notes": "The record correctly identifies its own limitations (quality_tier: low, notes acknowledging thin data). Data points are factually accurate. However, the fundamental question is whether a bare time series snapshot—with no narrative, policy discussion, or macro catalyst—should be archived as a standalone research record. The LLM assessment is honest (confidence 0, notes to use as quantitative input). This needs human judgment on archival policy: does the archive want to include raw data points, or only content-rich sources?"
+    "required": false,
+    "decision": "approved_by_human",
+    "notes": "Approved from Telegram review flow."
   },
   "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "decision": "approve",
+    "reviewed_at": "2026-04-23T22:09:59.414561+00:00"
   },
   "raw_text_path": "data/raw/2y_yield_2026_04_22.txt",
   "notes": "This source is a FRED time series snapshot containing only a single data point (3.72%) and recent observations. It is not an article, commentary, or research note—it lacks any analytical content or narrative. While the data is relevant to the 'macro catalysts' topic (2-year yields reflect rate expectations), the source is too thin to constitute a meaningful archiveable research note. Confidence set to 2/10. Use this data as a quantitative input rather than a standalone source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 2,
+    "tier": "tier_2",
+    "score": 57.0,
     "reasoning": [
-      "Raw quantitative data with no narrative or analysis",
-      "No policy content, market commentary, or event description",
-      "Only one observation and five recent data points provided",
-      "Cannot serve as a standalone research archive entry without linked article context"
+      "quality score: 57.0/100 (useful_context)",
+      "low verification confidence",
+      "human-approved",
+      "multiple issues found (4)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "peripheral topic",
+      "lower event significance"
     ]
   },
   "telegram_review_sent": true,
