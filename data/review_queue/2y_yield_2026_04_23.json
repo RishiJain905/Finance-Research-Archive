@@ -1,0 +1,91 @@
+{
+  "id": "2y_yield_2026_04_23",
+  "created_at": "2026-04-23T15:26:04.570209+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2) — FRED Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "published_at": "2026-04-23",
+    "source_type": "data_snapshot",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 2-Year Treasury Yield stood at 3.78% as of 2026-04-21, up 6 basis points from the prior day's 3.72%. The yield has held in a narrow band between 3.71% and 3.78% over the preceding week, with no outsized moves. This instrument is the most rate-sensitive point on the U.S. Treasury curve, reflecting near-term rate expectations.",
+  "key_points": [
+    "2-Year Treasury Yield (DGS2) at 3.78% on 2026-04-21, up 6 bps from prior session (3.72%)",
+    "Recent observations cluster in a tight 7 bps range: 3.71%–3.78% over April 15–21",
+    "No accompanying commentary, news, or policy signals in this data snapshot",
+    "Data sourced from FRED/Federal Reserve Bank of St. Louis"
+  ],
+  "why_it_matters": "The 2-year yield is the most responsive point on the U.S. Treasury curve to Federal Reserve rate expectations. A 3.78% level signals the market's consensus for the near-term rate path. Movement in this yield directly affects short-term borrowing costs, swap pricing, and rate-sensitive equities. This is raw market data without interpretation.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year yield encodes near-term rate expectations. A 6 bps single-day move is modest. No macro catalyst (data release, Fed communication) is attached to this snapshot. The yield range of 3.71–3.78% suggests rate expectations are stable with slight upward bias over this period.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.78%",
+    "0.06 bps",
+    "3.72%",
+    "3.71%",
+    "3.76%"
+  ],
+  "tags": [
+    "2-year-yield",
+    "treasury",
+    "interest-rates",
+    "macro-catalysts",
+    "fred",
+    "yield-curve",
+    "short-rate"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw quantitative data with no analytical commentary or policy context — extremely thin extraction",
+      "event_type 'data_release_other' is a stretch; this is a database observation, not a formal data release",
+      "published_at (2026-04-23) reflects snapshot date, not the observation date (2026-04-21) — potentially misleading metadata",
+      "No macro catalyst or policy signal present in source; record lacks actionable research value as standalone entry",
+      "The 'why_it_matters' and 'market_structure_context' are generic market knowledge, not derived from the source"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is factually accurate against the source (all numbers match), but the source itself is a raw data snapshot with zero analytical content. FRED database observations are better suited as supporting context in a research note rather than standalone archival records. The record has no fabricated claims, but it has negligible standalone value given the thinness. Human should decide if raw data snapshots from FRED meet archival thresholds for this collection."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_23.txt",
+  "notes": "This is a quantitative market data snapshot from FRED, not an analytical or commentary source. The source provides only raw yield observations without any accompanying macro context, policy signals, or analytical narrative. Useful for time-series tracking and rate expectation calibration but thin as a standalone research note. The yield move is directionally informative but insufficient to drive a trading signal without corroborating news or data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "C",
+    "score": 4,
+    "reasoning": [
+      "Raw data point only; no commentary or analysis",
+      "Informative as a rate expectation indicator but lacks catalyst context",
+      "Recent observation (within 90 days); freshness is acceptable",
+      "Very thin extraction—only factual numbers present",
+      "Lowest common denominator: yield value and direction only"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "91204e03c7514790d81a0d8e6165a9ab3f07756a"
+}

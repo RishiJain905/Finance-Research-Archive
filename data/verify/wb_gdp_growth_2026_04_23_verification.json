@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only a data retrieval failure message with no actual GDP figures or economic data",
+    "No substantive economic content can be extracted or archived",
+    "Empty URL for source attribution is a significant gap for a data source record",
+    "Record constitutes a failed data query rather than a research publication or data release",
+    "why_it_matters contains generic macro claims that are not substantively supported by this empty source",
+    "No numeric values, regional breakdowns, or any market-relevant information present",
+    "quality_tier correctly identified source as no-content with score 0"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The verification is straightforward: the source provides no usable data—it is explicitly a 'no valid observations returned' response. This cannot be archived as research or a data release since there is no actual content. The record itself accurately describes this situation. No human decision needed; reject is clear-cut based on CORE RULE 6 (too thin to have archival value).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "GDP growth data is a key macro catalyst influencing central bank policy decisions and market expectations. The absence of this data point creates a gap in monitoring global economic conditions.",
+    "market_structure_context": ""
+  }
+}

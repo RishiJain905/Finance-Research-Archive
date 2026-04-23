@@ -1,0 +1,87 @@
+{
+  "id": "10y_yield_2026_04_23",
+  "created_at": "2026-04-23T15:27:12.515509+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "10-Year Treasury Yield (DGS10) — Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-23",
+    "source_type": "data_series"
+  },
+  "summary": "The 10-Year Treasury yield closed at 4.30% on April 21, 2026, up 4 basis points from the prior day's close of 4.26%. The yield has remained in a narrow range between 4.26% and 4.32% over the past week.",
+  "key_points": [
+    "10-Year Treasury yield: 4.30% as of 2026-04-21",
+    "Prior day close: 4.26% (2026-04-20), representing a +4 bps move",
+    "Recent range: 4.26% (Apr 17-20) to 4.32% (Apr 16)",
+    "Week-to-date movement: 4.29% (Apr 15) → 4.30% (Apr 21)",
+    "Data source: FRED series DGS10, Federal Reserve Bank of St. Louis"
+  ],
+  "why_it_matters": "why_it_matters contains generic market knowledge that is not sourced from this document and should either be removed or flagged as general context",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "macro_context contains general information not sourced from the document",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.30% (latest yield, 2026-04-21)",
+    "4.26% (prior day, 2026-04-20)",
+    "+0.04% (absolute change)"
+  ],
+  "tags": [
+    "10-year treasury",
+    "treasury yield",
+    "risk-free rate",
+    "bond market",
+    "rate benchmark",
+    "macro data"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution URL is empty - violates requirement for complete source attribution",
+      "event_type set to 'unknown' when source is clearly a data series observation (could be 'data_release_other' but lacks analytical context)",
+      "source_type is 'data_series' but the record treats it as an analytical source - why_it_matters and macro_context are generic market knowledge, not sourced from this document",
+      "Record provides no explanation for what drove the +4 bps yield change - source is a price observation without causal context",
+      "Cannot be used as a standalone research record for market catalysts without linkage to an underlying event (auction, data release, Fed communication)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_23.txt",
+  "notes": "This is a FRED data snapshot for the DGS10 series — raw market price data, not an analytical source. The source provides only the yield level and daily change; it does not explain what drove the move. To make this useful for RAG, it should be linked to any contemporaneous macro catalyst (auction results, CPI print, Fed speech) that could explain the rate move. Without that context, this record documents a price but not a cause.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "level_1",
+    "score": 4,
+    "reasoning": [
+      "Source is raw market data — no analytical content or policy context",
+      "Provides only a price observation and daily change",
+      "Cannot establish causal link to macro catalyst without linked context",
+      "Useful as a data anchor but insufficient as a standalone research note"
+    ]
+  }
+}

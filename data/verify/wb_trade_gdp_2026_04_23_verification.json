@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no actual data - purely a null/empty query result",
+    "Record contains zero actionable information for research or decision-making",
+    "No macro signals, market structure data, or investment-relevant content can be derived",
+    "Archival value is essentially zero - suitable only as diagnostic record of failed data pull",
+    "event_type set to 'unknown' but source has no data type or content to classify",
+    "why_it_matters field explicitly states 'no actionable information' - self-defeating for an archival record"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut reject case: the source is a failed API query with no data, and the generated record itself acknowledges it provides 'no actionable information.' This is not a case where human judgment is needed - the quality tier is 'no-data' with score 0, and even the record's own notes admit it lacks relevance to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

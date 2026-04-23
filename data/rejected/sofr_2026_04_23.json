@@ -1,0 +1,80 @@
+{
+  "id": "sofr_2026_04_23",
+  "created_at": "2026-04-23T15:24:25.337124+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "SOFR Rate Observation - April 22, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "published_at": "2026-04-22",
+    "source_type": "data_export",
+    "domain": ""
+  },
+  "summary": "SOFR settled at 3.64% on April 22, 2026, up 1 basis point from the prior day's reading of 3.63%. The 5-day range spans 3.63% to 3.67%, indicating relatively stable overnight funding conditions. This data point reflects the current cost of overnight secured borrowing in the US repo market, serving as the primary benchmark for dollar-denominated derivatives and lending contracts.",
+  "key_points": [
+    "SOFR closed at 3.64% on April 22, 2026 (up 1 bp from 3.63% on April 21)",
+    "Recent 5-day range: 3.63% to 3.67% (April 16 high of 3.67%)",
+    "The rate has been stable in a narrow band around 3.64%",
+    "SOFR is a secured overnight rate derived from repo transactions cleared through the Fed",
+    "SOFR serves as the primary benchmark for $500 trillion+ in financial contracts",
+    "The data represents the snapshot_date of the latest available observation"
+  ],
+  "why_it_matters": "SOFR is the cornerstone reference rate for US money markets and affects the pricing of derivatives, floating-rate loans, and securitization products. Even small changes in SOFR signal shifts in bank funding conditions and the broader cost of short-term capital. Market participants use SOFR levels to gauge stress in the secured funding market and to price interest rate swaps and Eurodollar futures.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "money markets"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "",
+  "market_structure_context": "SOFR is produced by the Federal Reserve Bank of New York using overnight repo transactions secured by Treasury securities. It replaced LIBOR as the primary reference rate for dollar markets. The current 3.64% level reflects normal money market conditions with no indication of stress. The narrow recent range (3.63-3.67%) suggests stable collateral availability and balanced supply/demand in the overnight repo market.",
+  "important_numbers": [
+    "3.64% — latest SOFR (2026-04-22)",
+    "3.63% — previous SOFR (2026-04-21)",
+    "0.01 bp — absolute change",
+    "3.67% — 5-day high (2026-04-16)",
+    "3.63% — 5-day low (2026-04-17, 20, 21)"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "repo",
+    "overnight-rate",
+    "market-structure",
+    "fed-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - FRED is an authoritative source but the specific data link is missing, preventing verification",
+      "event_type is 'unknown' but this is clearly a data release (SOFR daily observation); could be classified as 'data_release_other'",
+      "Source is a raw data export with no narrative or analytical content - the record was generated from thin quantitative data",
+      "macro_context and market_structure_context fields are present but the latter is partially derived/generic rather than sourced",
+      "Record has limited standalone research value - a single daily SOFR observation without trend or catalyst context is not sufficient for archival research purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_23.txt",
+  "notes": "This is a single-day quantitative observation from FRED, not an article or research document. It captures a market structure indicator (SOFR) at a point in time. The data is current and accurate but offers limited analytical depth without additional context. A single day's SOFR reading is not sufficient to draw conclusions about market conditions or trends; it serves as a baseline data point for ongoing monitoring. The source is mechanically generated and contains no policy commentary or forward-looking statements.",
+  "quality_tier": {
+    "tier": "C - Data Point",
+    "score": 5,
+    "reasoning": [
+      "Raw quantitative data without narrative context",
+      "Current observation (within 24 hours of snapshot date)",
+      "FRED is a reliable, authoritative source for market data",
+      "Limited standalone research value; useful as a benchmark data point",
+      "No policy signals or analytical commentary present"
+    ]
+  }
+}

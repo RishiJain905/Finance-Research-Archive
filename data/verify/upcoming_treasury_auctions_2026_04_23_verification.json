@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains zero usable content — only a 404 error response",
+    "No auction data, dates, or market-relevant information can be extracted",
+    "The record documents a data failure rather than a market catalyst or policy development",
+    "event_type set to 'unknown' — could arguably be 'market_notice' but content is too thin to determine",
+    "No archival value in documenting an API outage; record functions as a system error log"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately captures the API failure but source provides no substantive market information. While the error documentation is technically accurate, archiving a 404 error as research yields minimal value. Human decision needed to determine whether to (a) reject this as non-archivable, (b) retry with corrected parameters, or (c) flag for manual search of alternative auction schedule sources.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

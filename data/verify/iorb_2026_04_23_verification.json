@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'market_notice' is incorrect for this source. This is a data release from FRED, not an operational market notice. Should be 'data_release_other' or similar data category.",
+    "Source is a minimal daily snapshot with no analytical or policy context — flat data point confirming status quo with limited archival value beyond monitoring.",
+    "Source has no narrative, commentary, or policy signal; quality tier 'low' (score 4) is appropriate.",
+    "Cannot assess broader implications (e.g., whether flat IORB reflects policy design vs. temporary reserve conditions) without additional context."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "event_type mismatch between source classification (data_release) and record classification (market_notice) needs resolution. While the data itself is accurate and source attribution is correct, the event_type should be corrected to a data-release category for proper taxonomy alignment. Human review to confirm taxonomy selection.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Interest on Reserve Balances (IORB) rate remained unchanged at 3.65% on April 23, 2026, holding flat from the prior day and the preceding several days.",
+    "why_it_matters": "IORB is the interest rate the Federal Reserve pays to depository institutions on reserve balances held at the Fed. As part of the current monetary policy implementation framework, IORB serves as a key floor for money market rates. The stable reading indicates no change in the Fed's policy rate setting or reserve supply conditions. This data point reflects the current stance of monetary policy and provides insight into short-term funding costs for banks.",
+    "macro_context": "",
+    "market_structure_context": "IORB is a critical component of the Fed's floor system for monetary policy implementation. It establishes the risk-free floor for short-term rates in the banking system. Banks with excess reserves earn IORB, which influences their willingness to lend excess reserves in the federal funds or repo markets."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains zero actual data — only an API error log (404 Not Found)",
+    "No auction data, numbers, dates, or results can be extracted from this source",
+    "Record documents an error rather than substantive market structure content",
+    "Cannot verify any market-relevant information (issue dates, offering amounts, security types, acceptance totals)",
+    "Thin, low-signal source with no archival value per Rule 6"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is an API error message with no actual content. This is a clear reject case — there is nothing to archive. Human review is not needed for zero-content sources.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

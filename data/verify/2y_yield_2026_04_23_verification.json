@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw quantitative data with no analytical commentary or policy context — extremely thin extraction",
+    "event_type 'data_release_other' is a stretch; this is a database observation, not a formal data release",
+    "published_at (2026-04-23) reflects snapshot date, not the observation date (2026-04-21) — potentially misleading metadata",
+    "No macro catalyst or policy signal present in source; record lacks actionable research value as standalone entry",
+    "The 'why_it_matters' and 'market_structure_context' are generic market knowledge, not derived from the source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate against the source (all numbers match), but the source itself is a raw data snapshot with zero analytical content. FRED database observations are better suited as supporting context in a research note rather than standalone archival records. The record has no fabricated claims, but it has negligible standalone value given the thinness. Human should decide if raw data snapshots from FRED meet archival thresholds for this collection.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The 2-year yield encodes near-term rate expectations. A 6 bps single-day move is modest. No macro catalyst (data release, Fed communication) is attached to this snapshot. The yield range of 3.71–3.78% suggests rate expectations are stable with slight upward bias over this period.",
+    "market_structure_context": ""
+  }
+}

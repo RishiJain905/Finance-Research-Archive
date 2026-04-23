@@ -1,0 +1,79 @@
+{
+  "id": "wb_inflation_2026_04_23",
+  "created_at": "2026-04-23T15:29:20.921012+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Inflation Rate Indicator Query (FP.CPI.TOTL.ZG)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-23",
+    "source_type": "data_release_other"
+  },
+  "summary": "A query to the World Bank indicator FP.CPI.TOTL.ZG (inflation, consumer prices) returned no valid observations as of 2026-04-23. The source contains zero substantive data—no headline inflation figures, no country-level breakdowns, no historical comparisons.",
+  "key_points": [
+    "No valid observations returned for indicator FP.CPI.TOTL.ZG",
+    "Query snapshot date: 2026-04-23",
+    "Indicator FP.CPI.TOTL.ZG is the World Bank's consumer price inflation measure",
+    "Source provides no usable macro data"
+  ],
+  "why_it_matters": "Inflation data is a primary macro catalyst for central bank policy decisions and market pricing. The absence of any actual data renders this source useless for research, RAG, or decision-making purposes. Re-querying with adjusted parameters or locating an alternative data provider is recommended.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "No macro context available. The source confirms zero data availability for inflation indicators.",
+  "market_structure_context": "The World Bank API failed to return any inflation data for the queried indicator. This constitutes a failed data retrieval, not a meaningful economic signal. Researchers seeking global inflation figures should consult alternative sources such as IMF, OECD, or national statistical agencies.",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "consumer-prices",
+    "no-data",
+    "api-query",
+    "g20"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains zero actual data—no inflation figures, no country data, no time series",
+      "Failed API/query response: 'No recent valid observations were returned' for indicator FP.CPI.TOTL.ZG",
+      "Not relevant to market structure or macro catalysts research—source is empty",
+      "Cannot be archived as useful research material; no substantive content",
+      "Source URL is empty, reducing traceability",
+      "event_type set to 'unknown'—acceptable given the empty source, but the source_type 'data_release_other' is misleading since no data was released"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_23.txt",
+  "notes": "This source is a failed query response with zero usable content. The World Bank API returned 'No recent valid observations' for the consumer price inflation indicator. This is not an archiveable research document—it contains no data, no analysis, and no actionable information. Recommend re-querying the source or locating an alternative data provider for global inflation figures.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "Zero data content—no inflation observations",
+      "Failed API query response",
+      "Cannot be used for research, RAG, or market analysis",
+      "Not relevant to target topics (market structure, macro catalysts) due to lack of any data"
+    ]
+  }
+}

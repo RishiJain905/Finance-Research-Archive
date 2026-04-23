@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source URL is empty - FRED is an authoritative source but the specific data link is missing, preventing verification",
+    "event_type is 'unknown' but this is clearly a data release (SOFR daily observation); could be classified as 'data_release_other'",
+    "Source is a raw data export with no narrative or analytical content - the record was generated from thin quantitative data",
+    "macro_context and market_structure_context fields are present but the latter is partially derived/generic rather than sourced",
+    "Record has limited standalone research value - a single daily SOFR observation without trend or catalyst context is not sufficient for archival research purposes"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The issues are concrete and determinative: missing source URL combined with the source being raw quantitative data (not an article) with minimal research value. These issues cannot be resolved through review - the record does not meet the threshold for archival research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

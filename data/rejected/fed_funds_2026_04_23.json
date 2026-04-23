@@ -1,0 +1,50 @@
+{
+  "id": "fed_funds_2026_04_23",
+  "status": "rejected",
+  "topic": "monetary_policy",
+  "source": {
+    "name": "FRED",
+    "published_at": "2026-04-21T00:00:00Z",
+    "url": "",
+    "domain": "",
+    "source_type": ""
+  },
+  "effective_rate": 3.64,
+  "target_range": "3.25-3.50",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution missing: URL is empty, domain is empty, source_type is empty",
+      "Target range '3.25-3.50' is not present in the source and appears to be fabricated - source only provides effective rate of 3.64%",
+      "summary field is empty - no content generated from source",
+      "key_points field is empty - no content generated from source",
+      "why_it_matters field is empty - no content generated from source",
+      "macro_context field is empty - no content generated from source",
+      "market_structure_context field is empty - no content generated from source",
+      "market_impact is empty with zero confidence - no analysis provided",
+      "published_at '2026-04-21' does not match snapshot date '2026-04-23' indicating stale capture",
+      "source_type set to empty - cannot verify if this is an article-like source",
+      "Record is essentially a raw data export with no analytical content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is missing all substantive fields (summary, key_points, why_it_matters, macro_context, market_structure_context) and contains a fabricated target range not supported by source. Additionally, source attribution is entirely missing. The record represents a bare minimum data export rather than a research record worth archiving."
+  },
+  "summary": "FRED data snapshot showing Effective Federal Funds Rate at 3.64% as of 2026-04-21, unchanged from previous day. Rate has remained flat at 3.64% from April 17-21, 2026.",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": []
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source attribution URL is empty - violates requirement for complete source attribution",
+    "event_type set to 'unknown' when source is clearly a data series observation (could be 'data_release_other' but lacks analytical context)",
+    "source_type is 'data_series' but the record treats it as an analytical source - why_it_matters and macro_context are generic market knowledge, not sourced from this document",
+    "Record provides no explanation for what drove the +4 bps yield change - source is a price observation without causal context",
+    "Cannot be used as a standalone research record for market catalysts without linkage to an underlying event (auction, data release, Fed communication)"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is raw market price data with no analytical depth. Record accurately captures the data point but adds no causal explanation. The record is technically correct but thin - useful as a data anchor but not as a standalone market catalyst record. Human should determine whether to accept with linkage to a contemporaneous macro catalyst or reject for insufficient archival value as-is.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "why_it_matters contains generic market knowledge that is not sourced from this document and should either be removed or flagged as general context",
+    "macro_context": "macro_context contains general information not sourced from the document",
+    "market_structure_context": ""
+  }
+}

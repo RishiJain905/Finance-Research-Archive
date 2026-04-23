@@ -1,0 +1,81 @@
+{
+  "id": "wb_gdp_growth_2026_04_23",
+  "created_at": "2026-04-23T15:29:15.746893+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_gdp",
+  "title": "World GDP Growth Rate — No Data Returned",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-23",
+    "source_type": "data_release"
+  },
+  "summary": "A data query for World Bank GDP growth rate indicator (NY.GDP.MKTP.KD.ZG) returned no valid observations as of 2026-04-23. The source provides no actual economic data, only a data retrieval failure notice.",
+  "key_points": [
+    "Indicator queried: NY.GDP.MKTP.KD.ZG (World GDP Growth Rate, constant 2017 US$, annual growth)",
+    "Data source: World Bank",
+    "Query result: No recent valid observations returned",
+    "No numeric values, growth figures, or regional breakdowns provided",
+    "This constitutes a data retrieval failure, not an economic publication"
+  ],
+  "why_it_matters": "GDP growth data is a key macro catalyst influencing central bank policy decisions and market expectations. The absence of this data point creates a gap in monitoring global economic conditions.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "GDP growth rate data is typically used to assess global economic momentum and informs risk appetite across asset classes. No such data is currently available from this source.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp",
+    "global-economy",
+    "data-unavailable",
+    "macro-catalyst",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains only a data retrieval failure message with no actual GDP figures or economic data",
+      "No substantive economic content can be extracted or archived",
+      "Empty URL for source attribution is a significant gap for a data source record",
+      "Record constitutes a failed data query rather than a research publication or data release",
+      "why_it_matters contains generic macro claims that are not substantively supported by this empty source",
+      "No numeric values, regional breakdowns, or any market-relevant information present",
+      "quality_tier correctly identified source as no-content with score 0"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_23.txt",
+  "notes": "Source is a data retrieval failure, not a research publication. The World Bank API query for GDP growth rate (NY.GDP.MKTP.KD.ZG) returned no observations. This may indicate a data availability issue, API access problem, or that recent GDP figures have not yet been published by the World Bank. No macro or market structure content can be extracted. Archived as a record of the failed query rather than as substantive economic data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 0,
+    "reasoning": [
+      "Source provides no substantive data or analysis",
+      "Only contains a data retrieval failure notice",
+      "Cannot support any market or macro conclusions",
+      "Archived for completeness to document the failed data pull"
+    ]
+  }
+}

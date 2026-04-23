@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains zero actual data—no inflation figures, no country data, no time series",
+    "Failed API/query response: 'No recent valid observations were returned' for indicator FP.CPI.TOTL.ZG",
+    "Not relevant to market structure or macro catalysts research—source is empty",
+    "Cannot be archived as useful research material; no substantive content",
+    "Source URL is empty, reducing traceability",
+    "event_type set to 'unknown'—acceptable given the empty source, but the source_type 'data_release_other' is misleading since no data was released"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the generated record is honest and accurate about the source being empty, the source itself has zero archival value. A failed database query with no data cannot support any research, RAG, or analytical purpose. Human review should confirm discarding this source and potentially re-querying with different parameters.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "A query to the World Bank indicator FP.CPI.TOTL.ZG (inflation, consumer prices) returned no valid observations as of 2026-04-23. The source contains zero substantive data—no headline inflation figures, no country-level breakdowns, no historical comparisons.",
+    "why_it_matters": "Inflation data is a primary macro catalyst for central bank policy decisions and market pricing. The absence of any actual data renders this source useless for research, RAG, or decision-making purposes. Re-querying with adjusted parameters or locating an alternative data provider is recommended.",
+    "macro_context": "No macro context available. The source confirms zero data availability for inflation indicators.",
+    "market_structure_context": "The World Bank API failed to return any inflation data for the queried indicator. This constitutes a failed data retrieval, not a meaningful economic signal. Researchers seeking global inflation figures should consult alternative sources such as IMF, OECD, or national statistical agencies."
+  }
+}
