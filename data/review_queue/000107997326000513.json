@@ -1,0 +1,76 @@
+{
+  "id": "000107997326000513",
+  "created_at": "2026-04-24T14:18:44.968392+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "Lightwave Logic, Inc. 8-K Filing — 2026-04-21",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000513/lwlg_8k.htm",
+    "published_at": "2026-04-21",
+    "source_type": "sec_edgar",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Lightwave Logic, Inc. filed an 8-K on April 20, 2026, disclosing an amendment to its sales agreement with Roth Capital Partners to increase the aggregate at-the-market (ATM) share offering capacity to $51,404,500. The company has already sold 8,079,319 shares for gross proceeds of approximately $35 million under the existing agreement.",
+  "key_points": [
+    "Amendment dated April 20, 2026 increases ATM sales agreement capacity to $51,404,500",
+    "Company has sold 8,079,319 shares for approximately $35 million gross proceeds to date",
+    "Shares registered under Form S-3 shelf registration (File No. 333-281059)",
+    "Registration Statement originally filed in August 2024",
+    "Sales agent: Roth Capital Partners, LLC",
+    "Legal opinion provided by Snell & Wilmer L.L.P."
+  ],
+  "why_it_matters": "This is a micro-cap equity financing event. The source does not discuss any monetary policy, market operations, economic data, or structural market mechanics. The filing represents standard ATM equity dilution for a small-cap Nasdaq-listed company and has no broader market implications.",
+  "market_impact": {
+    "asset_classes": [
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$51,404,500 (new share offering capacity)",
+    "8,079,319 shares sold",
+    "$35 million gross proceeds raised",
+    "4,079,319 shares outstanding referenced"
+  ],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "lightwave-logic",
+    "equity-offering",
+    "atm",
+    "nasdaq",
+    "dilution"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Factual error in important_numbers: '4,079,319 shares outstanding referenced' — this number does not appear anywhere in the source. The source only mentions 8,079,319 shares sold under the agreement, not 4,079,319 shares outstanding.",
+      "event_type set to 'unknown' is technically valid per taxonomy, but the record acknowledges this is a routine equity financing event with no macro relevance. If the archive's scope excludes micro-cap corporate filings, this record may be fundamentally misaligned with collection criteria."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "not_relevant",
+    "notes": "The record correctly identifies the source as irrelevant to market structure and macro catalysts, but contains a fabricated data point (4,079,319 shares outstanding) not present in the source text. While the overall assessment is sound, this factual error requires correction before the record could be used. Additionally, the record may be better served by auto-rejection given the clear scope mismatch (micro-cap equity financing) rather than placement in review_queue."
+  },
+  "raw_text_path": "data/raw/000107997326000513.txt",
+  "notes": "Not relevant to market structure or macro catalysts. This is a company-specific 8-K filing about equity financing via an at-the-market offering. The company (Lightwave Logic) is a small-cap photonics technology firm listed on Nasdaq. The filing contains no macro or structural market information and should be excluded from the research archive unless specifically archiving micro-cap equity offerings.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Not relevant to target topics (market structure, macro catalysts)",
+      "Company-specific corporate filing with no market-wide implications",
+      "Micro-cap equity financing event with no structural significance"
+    ]
+  }
+}

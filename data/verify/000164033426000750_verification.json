@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is completely empty - all fields are blank",
+    "Source attribution missing from record (source.name, source.url, source.domain, source.published_at, source.source_type all empty)",
+    "Source is an individual company SEC Form 10-K filing (Cloudweb, Inc.) - not relevant to market structure or macro catalysts",
+    "event_type is missing from record and not inferable as a valid taxonomy value",
+    "Source is a regulatory filing, not article-like content suitable for market/macro archive",
+    "Source metadata shows URL: https://www.sec.gov/Archives/edgar/data/1619227/000164033426000750/clow_10k.htm but this was not captured in the record"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record generation failure is unambiguous - no content was produced",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

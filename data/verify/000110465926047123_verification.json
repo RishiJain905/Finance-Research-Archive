@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a corporate 8-K filing reporting individual company earnings (Q1 2026) with no broader market structure or macro catalyst relevance",
+    "Event type set to 'unknown' but the filing could be categorized as 'data_release_other' or 'economic_commentary' if treating as earnings-related event",
+    "The actual earnings content (press release Exhibit 99.1, supplemental materials Exhibit 99.2) is referenced but not included in the filing body, making the source thin"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes the source, but the scope question requires human judgment: a corporate earnings 8-K may have archival value if it reveals sector-specific developments, weather impacts on utilities, regulatory changes, or other energy-sector macro signals, even if it doesn't fit the narrow definition of market structure or macro catalysts.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "CenterPoint Energy, Inc. filed an 8-K current report on April 23, 2026, disclosing first quarter 2026 earnings and announcing a conference call to discuss results. The filing references a press release (Exhibit 99.1) and supplemental materials (Exhibit 99.2) neither of which are included in the body text.",
+    "why_it_matters": "This is a routine corporate earnings disclosure from a regulated utility holding company. It provides no market structure or macro catalyst information relevant to the finance research archive scope.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

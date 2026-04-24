@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is raw XBRL markup rather than parsed financial statements - structured data is difficult to extract meaningful analysis from",
+    "Content is company-specific financial reporting with no macro or market structure relevance",
+    "No forward-looking policy statements, no economic indicators, no market-moving information",
+    "Source is a regulatory filing type (10-Q) which is standard corporate disclosure rather than research content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately characterizes the source as not relevant to market structure or macro catalysts. The generated record's own assessment (quality tier: excluded, confidence: 1) aligns with verification standards that bias toward reject for thin, company-specific sources lacking macro relevance.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

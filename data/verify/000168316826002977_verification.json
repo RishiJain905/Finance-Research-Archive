@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is correctly identified as out-of-scope for the finance research archive's focus on market structure and macro catalysts",
+    "The event_type 'unknown' is acceptable given the source is a regulatory filing not matching the specified taxonomy categories",
+    "No substantive errors in the record - the summary, key_points, and why_it_matters accurately characterize the source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is technically accurate in identifying the source as a corporate 10-K filing with no market structure or macro catalyst relevance. However, since the source is clearly out-of-scope and the suggested_status is 'review_queue' rather than 'rejected', human confirmation is needed to decide whether to exclude this document or create a bypass record for archive completeness.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

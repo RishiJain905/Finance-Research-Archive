@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when it should be 'research' (regulatory_filing / corporate_governance subtype). The source is an SEC 8-K with corporate governance votes.",
+    "Source is not relevant to market structure or macro catalysts per archive mandate. This is a routine utility company 8-K with only internal corporate governance matters (director elections, auditor ratification, executive compensation vote, officer exculpation charter amendment).",
+    "No market-moving, macro, or market structure information present in the source.",
+    "topic field is empty when it should indicate 'corporate governance' or similar."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as irrelevant to the archive's focus, but the event_type 'unknown' is incorrect and should be 'research'. However, even with corrected event_type, the source should be rejected because it lacks relevance to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "CenterPoint Energy filed an 8-K disclosing results from its April 16, 2026 annual shareholder meeting, including election of 12 directors, ratification of Deloitte & Touche as auditor, approval of executive compensation, and approval of an amended certificate of formation providing limited officer exculpation under Texas law.",
+    "why_it_matters": "This is a routine corporate governance filing for a regulated utility (NYSE: CNP). It contains no market-moving information, no earnings data, no forward guidance, and no regulatory developments relevant to broader financial markets. The only marginally notable item is the closer vote on the officer exculpation charter amendment (61% for), which is a standard corporate law provision with no market impact.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

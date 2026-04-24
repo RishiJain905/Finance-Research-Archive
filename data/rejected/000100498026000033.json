@@ -1,0 +1,75 @@
+{
+  "id": "000100498026000033",
+  "created_at": "2026-04-24T14:17:56.394116+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "PG&E Corp 10-Q Filing — 2026-04-23",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1004980/000100498026000033/pcg-20260331.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-23",
+    "source_type": "sec_filing"
+  },
+  "summary": "This is a standard SEC 10-Q quarterly financial filing for PG&E Corp (ticker: PCG) covering Q1 2026 (period ending 2026-03-31). The filing contains corporate financial data including balance sheet items, equity structure, and operating metrics for Pacific Gas & Electric Co. This source is not relevant to market structure or macro catalysts.",
+  "key_points": [
+    "Filing type: 10-Q for Q1 2026 (period ending 2026-03-31)",
+    "Filed with SEC on 2026-04-23 by PG&E Corp (CIK: 0001004980)",
+    "Entity: Pacific Gas & Electric Co, a regulated utility company",
+    "Securities listed on NYSE (Common Stock No Par Value)",
+    "Contains XBRL-tagged financial data including debt, equity, and regulatory asset information",
+    "Source is a corporate earnings filing with no relevance to market structure or macro catalysts"
+  ],
+  "why_it_matters": "This filing is not relevant to the archive's focus areas. PG&E Corp 10-Q filings contain company-specific financial and operational data for a regulated utility. They do not address monetary policy, market structure, systemic risk, or macro economic catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-q",
+    "pge-corp",
+    "utility",
+    "earnings",
+    "not-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type set to 'unknown' - while technically valid per taxonomy, a 10-Q filing could more precisely be categorized if it were in-scope",
+      "The record correctly identifies the source as not relevant to market structure or macro catalysts"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is unambiguously outside archive scope. This is a standard corporate 10-Q filing for PG&E Corp (a regulated utility) containing company-specific financial data. Per the archive's defined focus areas (market structure, macro catalysts), this source has no relevance. The generated record correctly captures this."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000100498026000033.txt",
+  "notes": "NOT RELEVANT TO ARCHIVE SCOPE. This is a corporate quarterly financial filing (10-Q) from PG&E Corp, a regulated utility. The source contains no information related to market structure (market plumbing, trading mechanisms, settlement, clearing, liquidity) or macro catalysts (monetary policy, central bank decisions, economic data releases). Filed 2026-04-23 for Q1 2026 period. Source truncated in processing but XBRL metadata confirms it is a standard SEC filing with no policy-relevant content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "out_of_scope",
+    "score": 0,
+    "reasoning": [
+      "Source is a corporate 10-Q filing, not relevant to market structure or macro catalysts",
+      "Archive focus is on monetary policy, central bank communications, market operations, and economic data releases"
+    ]
+  }
+}

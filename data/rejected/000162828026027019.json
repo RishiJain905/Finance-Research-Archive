@@ -1,0 +1,44 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - all fields are blank with no content",
+      "Source attribution is missing: no name, url, domain, or source_type provided",
+      "No summary, key_points, why_it_matters, macro_context, or market_structure_context provided",
+      "No event_type specified",
+      "No topic or tags included",
+      "No market_impact or important_numbers captured",
+      "Record provides zero archival value as it contains no information from the source",
+      "Although the source (SEC 10-Q filing for Philip Morris International) is a valid document, the generated record fails to extract or summarize any content from it"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is blank and cannot be salvaged; automated rejection is appropriate"
+  },
+  "summary": "Source is a Q1 2026 10-Q filing for Philip Morris International Inc. (ticker: PM), covering the period January 1 - March 31, 2026, filed with the SEC on April 17, 2026. The document contains unaudited financial statements, management discussion and analysis, and detailed notes to financial statements including debt obligations, segment reporting (International Smoke-Free, International Combustibles, U.S. Segment), hedging activities, and stock-based compensation information.",
+  "key_points": [],
+  "why_it_matters": "Philip Morris International is a major global tobacco company with significant market capitalization. This quarterly filing provides updated financial performance data for a consumer staples company that is actively transitioning toward smoke-free products. The filing includes detailed balance sheet information, cash flow data, and segment-level results that are relevant for equity analysis.",
+  "macro_context": "Philip Morris operates in the tobacco/cigarettes industry, classified under consumer staples. The company faces ongoing regulatory pressures, excise tax burdens, and secular decline in combustible tobacco volumes globally. The company's smoke-free product portfolio (IQOS heated tobacco) represents a strategic pivot. Currency translation effects (EUR, BRL, IDR) significantly impact reported results given international operations.",
+  "market_structure_context": "As a large-cap consumer staples stock, Philip Morris is held by both passive (ETF) and active managers. The 10-Q filing provides detailed debt structure information (multiple note issuances from 2026-2044) relevant for credit analysis. The company has significant related-party disclosures and hedging programs for foreign exchange and interest rate risk.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Factual error in important_numbers: '4,079,319 shares outstanding referenced' — this number does not appear anywhere in the source. The source only mentions 8,079,319 shares sold under the agreement, not 4,079,319 shares outstanding.",
+    "event_type set to 'unknown' is technically valid per taxonomy, but the record acknowledges this is a routine equity financing event with no macro relevance. If the archive's scope excludes micro-cap corporate filings, this record may be fundamentally misaligned with collection criteria."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies the source as irrelevant to market structure and macro catalysts, but contains a fabricated data point (4,079,319 shares outstanding) not present in the source text. While the overall assessment is sound, this factual error requires correction before the record could be used. Additionally, the record may be better served by auto-rejection given the clear scope mismatch (micro-cap equity financing) rather than placement in review_queue.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Lightwave Logic, Inc. filed an 8-K on April 20, 2026, disclosing an amendment to its sales agreement with Roth Capital Partners to increase the aggregate at-the-market (ATM) share offering capacity to $51,404,500. The company has already sold 8,079,319 shares for gross proceeds of approximately $35 million under the existing agreement.",
+    "why_it_matters": "This is a micro-cap equity financing event. The source does not discuss any monetary policy, market operations, economic data, or structural market mechanics. The filing represents standard ATM equity dilution for a small-cap Nasdaq-listed company and has no broader market implications.",
+    "market_structure_context": "",
+    "macro_context": ""
+  }
+}
