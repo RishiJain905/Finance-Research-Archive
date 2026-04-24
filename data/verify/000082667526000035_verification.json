@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Topic 'macro catalysts' is inappropriate — this is a single company's earnings release with no macro catalyst content",
+    "Important financial figures missing from record: net loss of $(0.41) per common share and dividends declared of $0.51 per common share",
+    "Record acknowledges lack of macro relevance but still queued for review rather than rejected",
+    "Event type 'economic_commentary' is semantically questionable for a corporate earnings press release attached to an 8-K"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source text with correct source attribution and valid event_type taxonomy value. However, there are two substantive concerns: (1) important financial figures from the source (net loss $0.41/share, dividends $0.51/share) are missing from key_points and important_numbers, and (2) the record appears out of scope for this archive as it contains zero macro catalyst or market structure content — it is a single mortgage REIT's quarterly earnings filing. Human judgment is needed to determine if the record should be rejected for irrelevance or accepted with topic/event_type correction.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Dynex Capital, Inc. filed its Q1 2026 8-K on April 20, 2026, reporting a total economic return of $(0.34) per common share (or -2.5% of beginning book value), a comprehensive loss of $(0.42) per common share, net loss of $(0.41) per common share, and book value of $12.60 per share as of March 31, 2026. The company declared dividends of $0.51 per common share, raised $442 million in equity capital through ATM issuances, and reported $6.0 billion in net investment purchases during the quarter.",
+    "why_it_matters": "This is a corporate earnings release from a single mortgage REIT (Dynex Capital). It is not a macroeconomic catalyst or market structure event. The filing has no direct relevance to Fed policy, rate decisions, Treasury operations, or systemic market events. It may be relevant for sector-specific analysis of agency mortgage REITs but falls outside the scope of macro catalysts and market structure research.",
+    "market_structure_context": ""
+  }
+}

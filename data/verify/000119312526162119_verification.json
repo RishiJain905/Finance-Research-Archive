@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is extremely thin - only legal boilerplate and registration information present",
+    "Exhibit 99.1 (the substantive announcement) is referenced but not included in source text",
+    "event_type is 'unknown' - while arguably correct given thin content, a regulatory filing could have been tagged 'regulatory_guidance'",
+    "Cannot assess market impact since the actual announcement content is missing",
+    "Archive scope question: 8-K filings with no substantive content may not warrant storage"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately reflects the source, which correctly notes the lack of substantive content. However, human review is needed to decide: (1) whether to store this record as evidence of a regulatory filing even with no content, (2) whether to flag the missing Exhibit 99.1 for separate retrieval, and (3) whether thin regulatory filings without market-moving content meet the archive's relevance threshold. The record quality is good but the underlying source is too thin for a clear accept/reject decision.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "American Airlines Group Inc. filed an 8-K on April 17, 2026, under Item 7.01 (Regulation FD Disclosure). The filing contains only standard SEC boilerplate, legal disclaimers, forward-looking statement warnings, and company registration information. Exhibit 99.1 (the substantive statement referenced in the filing) is not included in this document.",
+    "why_it_matters": "This 8-K filing provides no actionable market information. The substantive content is contained in Exhibit 99.1, which is referenced but not provided in this source. To extract any alpha or macro relevance, the separate exhibit must be retrieved.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

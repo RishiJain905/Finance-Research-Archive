@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but this is an SEC 8-K filing about a satellite launch failure - should be more specific or justify 'unknown' classification",
+    "The record correctly identifies the source as irrelevant to market structure/macro catalysts, but the event_type taxonomy should still be populated with the best available option",
+    "market_impact confidence is 0 (placeholder), making impact assessment unclear"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies that this SEC 8-K filing is company-specific and irrelevant to market structure or macro catalysts, and the summary accurately reflects the source content. However, event_type is set to 'unknown' when it should be classified to the best available taxonomy option (e.g., 'research_paper' for SEC filings, or a specific operational event type if available). Additionally, while the record is accurate, the relevance assessment is borderline and may warrant discussion about what SEC filings should be included in the archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "AST SpaceMobile filed an 8-K on April 19, 2026 reporting that its Block 2 BlueBird 7 satellite was placed into a lower than planned orbit during the New Glenn 3 mission and will be de-orbited. The company expects to recover the satellite cost under its insurance policy. BlueBird 8 to 10 are expected to be ready to ship in approximately 30 days, and the company maintains its target of approximately 45 satellites in orbit by end of 2026.",
+    "why_it_matters": "This is a company-specific operational update about a satellite launch failure. The impact is limited to ASTS equity and does not relate to market structure or macro catalysts that would affect broader financial markets.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

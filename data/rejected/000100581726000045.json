@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "All record fields are empty — no summary, key_points, or attribution provided",
+      "event_type 'data_release_employment' is completely incorrect — source is a regional bank 8-K filing announcing Q1 earnings and dividend",
+      "Source is a small regional bank (Tompkins Financial Corp, ticker TMP on NYSE American) with no relevance to macro catalysts or market structure",
+      "Source attribution fields (name, url, published_at) are all blank",
+      "This filing is routine corporate disclosure, not a market-moving event"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

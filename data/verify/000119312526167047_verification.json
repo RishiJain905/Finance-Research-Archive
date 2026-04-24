@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is entirely empty - all fields are blank with no summary, key_points, why_it_matters, or any other content",
+    "Source attribution missing: source.name, source.url, source.domain, source.published_at, and source_type are all empty",
+    "Source is a routine SEC 8-K filing about an executive promotion (CFO title change and RSU grant) - not relevant to market structure or macro catalysts",
+    "event_type is missing from the record; this filing type does not fit any defined taxonomy category (monetary policy, speeches, data releases, treasury/operations, research)",
+    "The source content describes a standard CFO promotion at a small regional utility with no market-moving implications"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is completely empty/unfilled, making verification impossible. Additionally, the source itself is a routine corporate filing about an executive promotion at a small Wisconsin utility (MGE Energy, ~$3B market cap) that has no meaningful relevance to market structure or macro catalysts that would warrant archival inclusion in a finance research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts per archive scope",
+    "Source is a corporate earnings filing for a single company (American Airlines) — below archive focus thresholds",
+    "event_type set to 'unknown' — correct given taxonomy mismatch, but reinforces that document falls outside scope",
+    "No substantive data in filing text; actual financial figures are in referenced Exhibits 99.1 and 99.2 which are not included",
+    "Archive guidance explicitly states: 'Missing source attribution, container pages, and thin low-signal sources bias toward reject' — this filing is functionally a container page for external exhibits"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies the scope mismatch. No need for human review — the verdict is clear based on archive mandate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
