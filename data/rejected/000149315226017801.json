@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated research record is completely empty - all fields are blank strings with no source attribution, summary, key_points, or any content",
+      "Source is a routine SEC Form 8-K filing for Greenway Technologies, Inc. (a micro-cap OTC company) regarding change of accountant - not relevant to market structure or macro catalysts",
+      "Source has no archival value for a finance research archive focused on market structure or macro catalysts",
+      "Source is a regulatory filing (SEC EDGAR), not article-like research content",
+      "event_type cannot be mapped to any valid taxonomy value - this is corporate governance/administrative content, not monetary policy, speeches, data releases, or research",
+      "Source date (April 17, 2026) appears to be in the future relative to TODAY (2026-04-24) but the event described is dated April 18, 2025 - date inconsistency in source document itself",
+      "Even if content were populated, the underlying source would not meet criteria for inclusion in a finance research archive"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is empty - no content to review. Source is irrelevant to archive's focus area (market structure/macro catalysts) and is a routine micro-cap administrative filing."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

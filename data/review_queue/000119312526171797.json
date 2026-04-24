@@ -1,0 +1,57 @@
+{
+  "id": "000119312526171797",
+  "created_at": "2026-04-24T04:09:15.750457+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "POPULAR, INC. 8-K Filing — 2026-04-23",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/763901/000119312526171797/d96899d8k.htm",
+    "published_at": "2026-04-23",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Popular, Inc. filed a Form 8-K on April 23, 2026, disclosing unaudited financial results for the quarter ended March 31, 2026 (Q1 2026) pursuant to Item 2.02, and furnishing a conference call presentation under Item 7.01. Exhibits 99.1 (press release) and 99.2 (conference call presentation) are attached but their full text is not included in the 8-K body. The filing also lists the registrant's securities — Common Stock (BPOP) and 6.125% Cumulative Monthly Income Trust Preferred Securities (BPOPM) — traded on NASDAQ.",
+  "key_points": [
+    "Popular, Inc. filed Form 8-K on April 23, 2026, reporting Q1 2026 unaudited financial results.",
+    "Results were disclosed under Item 2.02 (Results of Operations and Financial Condition), referencing Exhibit 99.1.",
+    "A conference call presentation (Exhibit 99.2) was furnished under Item 7.01 (Regulation FD Disclosure).",
+    "Full content of the press release and presentation is not present in the 8-K body text provided.",
+    "Traded securities: Common Stock BPOP and preferred securities BPOPM, both on NASDAQ.",
+    "Filed by Senior Vice President and Corporate Comptroller Denissa M. Rodríguez on April 23, 2026."
+  ],
+  "why_it_matters": "This 8-K is a corporate financial-results disclosure from a NASDAQ-listed regional bank (Popular, Inc., headquartered in Puerto Rico). It is not relevant to market structure or macro catalysts. The filing provides only metadata and exhibit references; the substantive financial figures are contained in Exhibit 99.1, which is not included in the source body.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "corporate-results",
+    "popular-inc",
+    "q1-2026",
+    "regional-bank"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "topic field is blank/empty - should reflect corporate earnings or financial results disclosure",
+      "event_type set to 'unknown' - while technically acceptable, this is a quarterly earnings announcement which could map to 'data_release_other' or similar"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This 8-K filing is a routine corporate earnings announcement from a regional bank (Popular, Inc., Puerto Rico) that discloses Q1 2026 financial results. The record is factually accurate: the source body contains only 8-K boilerplate and references to Exhibits 99.1 (press release) and 99.2 (conference call presentation) whose full text is not included. The record correctly identifies the filing as out-of-scope for market structure or macro catalysts. However, the topic field is blank and event_type is 'unknown' - both should be populated even if marking the source as low-priority. Human review is needed to confirm: (1) whether corporate earnings from regional banks should be archived at all, and (2) to correct the topic/event_type fields. The source is not a homepage, navigation page, or container page - it is an article-like filing, so rejection for PAGE_TYPE does not apply."
+  },
+  "raw_text_path": "data/raw/000119312526171797.txt",
+  "notes": "Source is a standard SEC Form 8-K for a regional bank's Q1 2026 earnings announcement. Not relevant to market structure or macro catalysts. The source body contains only boilerplate 8-K text and exhibit references; the actual financial data resides in Exhibit 99.1, which is not included. This filing type (corporate earnings) falls outside the scope of the target taxonomy. Recommend discarding or marking out-of-scope."
+}

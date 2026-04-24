@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is a company-specific 10-K filing for Vystar Corp",
+    "event_type is set to 'unknown' but should be flagged as incorrect; while technically a regulatory filing, it does not fit the archive's focus",
+    "Verdict field contains 'pending' which is not a valid value — should be 'reject'",
+    "Source is XBRL-tagged financial data rather than article-like content, lacking substantive narrative or analysis",
+    "No archival value for this archive's focus areas (monetary policy, market structure, macro catalysts)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is straightforwardly not relevant to the archive's scope. While human review could confirm the rejection, the decision is clear: a single company's 10-K filing has no bearing on market structure or macro catalysts regardless of its accuracy.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Vystar Corp (CIK 0001308027) filed its annual 10-K report for fiscal year 2025 (ended 2025-12-31). The filing contains XBRL-tagged financial data including balance sheet, equity components, and related party disclosures. This is a company-specific SEC filing with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This source is not relevant to the finance research archive's focus on market structure and macro catalysts. It is a single-company annual filing with no implications for monetary policy, interest rates, macroeconomic conditions, or financial market infrastructure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no substantive content—earnings figures are referenced in Exhibit 99.1 which is not included in the 8-K body",
+    "Event type set to 'unknown' when correct classification is clear: this is a routine corporate earnings announcement",
+    "Not relevant to market structure or macro catalysts focus (routine regional bank filing with no financial data)",
+    "Source is too thin to have archival value for market/macro research purposes",
+    "The filing references a press release (Exhibit 99.1) as the actual source of earnings data, but that press release is not provided"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear-cut case: source is a thin SEC wrapper with no substantive data, not relevant to macro/market structure research. No human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "BancFirst Corporation filed a Form 8-K on April 16, 2026, announcing Q1 2026 earnings for the quarter ended March 31, 2026. The filing is a regulatory wrapper that references a press release (Exhibit 99.1) for actual earnings figures; no financial data is included in the 8-K body itself.",
+    "why_it_matters": "This is a routine corporate earnings announcement from a regional Oklahoma bank holding company (BancFirst, ticker BANF). The filing provides no substantive financial data—all material information is contained in Exhibit 99.1 (earnings press release), which is not reproduced in the 8-K. Not relevant to Federal Reserve policy, macroeconomic indicators, or market structure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

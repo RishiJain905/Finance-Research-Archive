@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 8,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a pharmaceutical company 8-K filing with no relevance to market structure or macro catalysts",
+    "Content is entirely focused on company-specific clinical development milestones, patent strategy, and FDA regulatory matters for a single drug candidate",
+    "Event_type is 'unknown' but source falls clearly outside all defined taxonomy categories (monetary policy, speeches, data releases, Treasury operations, research with macro implications)",
+    "Source contains no content related to Federal Reserve policy, interest rates, macroeconomic indicators, Treasury operations, market structure, or any market-moving macro catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately captures the source content, but the source itself is fundamentally outside the defined scope. The generated record's own analysis correctly identifies this as 'NOT RELEVANT TO FOCUS AREAS.' No human review needed—auto-reject is appropriate given the clear scope mismatch.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but could reasonably be classified as 'regulatory_guidance' since this 8-K filing discloses Nasdaq delisting determination under Listing Rule 5550(b), which is regulatory compliance information",
+    "Source is an individual company 8-K filing with no broader market structure or macro catalyst relevance, which is correctly flagged in the quality_tier and topic"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and faithfully represents the source content. The primary issue is that the record correctly identifies this as out-of-scope for the archive's focus areas (market structure/macro catalysts), making 'review' appropriate as an auto-route decision. No fabricated claims or misrepresented facts detected.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

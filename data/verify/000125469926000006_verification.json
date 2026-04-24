@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when a valid taxonomy value should be assigned",
+    "Source is company-specific corporate bankruptcy with limited relevance to macro catalysts or systemic market structure research",
+    "market_structure_context and why_it_matters overstate the research value for a macro-focused finance archive"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type 'unknown' requires categorization (should be assignable from the taxonomy). Additionally, the source is a narrow corporate bankruptcy event with limited archival value for macro/market structure research—human judgment needed to determine if this belongs in the archive given its company-specific nature.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "QVC, Inc. received notice from NYSE Regulation on April 17, 2026 that the exchange has commenced proceedings to delist the company's 6.375% Senior Secured Notes due 2067 (QVCD) and 6.250% Senior Secured Notes due 2068 (QVCC). Trading on NYSE has been suspended immediately. The delisting follows QVC Group and affiliates filing for Chapter 11 bankruptcy on April 16, 2026 in the Southern District of Texas. The notes will be moved to OTC Pink Limited Market.",
+    "why_it_matters": "QVC's senior secured notes are being delisted from NYSE and will transition to OTC Pink Limited Market following a Chapter 11 filing. This illustrates NYSE delisting procedures when companies enter bankruptcy under Section 802.01D (suitability for continued listing). Note holders face exchange-to-OTC transition with halted trading during proceedings. Under the prepackaged Chapter 11 plan, existing notes will be cancelled and holders will receive distributions per the plan with no guarantee of recovery matching principal amounts. This is a company-specific corporate event with limited broader market structure implications.",
+    "market_structure_context": ""
+  }
+}

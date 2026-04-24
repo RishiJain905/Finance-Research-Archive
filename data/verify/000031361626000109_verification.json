@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - routine single-company corporate earnings filing",
+    "Content is thin - only 8-K cover page present; actual earnings data is in Exhibit 99.1 which is not included in source",
+    "event_type set to 'unknown' when correct type would be 'unknown' - fits no taxonomy category as this is a corporate filing, not a macro event",
+    "No market-moving information, policy implications, or broader market relevance",
+    "Source quality is low - cover page only provides securities listings and filing metadata"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear reject based on scope criteria - this is a single-company corporate filing with no relevance to market structure or macro catalysts",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Danaher Corporation filed a Form 8-K on April 21, 2026 (signed April 20, 2026) announcing Q1 2026 financial results for the quarter ended March 27, 2026. The filing contains only the cover page referencing an earnings press release (Exhibit 99.1) without the actual results data. The company also listed its registered securities including common stock and nine series of senior notes on NYSE.",
+    "why_it_matters": "This is a routine corporate earnings filing for a single company (DHR). It has no relevance to market structure or macro catalysts. The substantive financial results are referenced but not included in this filing—only the cover page is present.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

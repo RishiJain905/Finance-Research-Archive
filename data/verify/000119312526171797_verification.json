@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "topic field is blank/empty - should reflect corporate earnings or financial results disclosure",
+    "event_type set to 'unknown' - while technically acceptable, this is a quarterly earnings announcement which could map to 'data_release_other' or similar"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This 8-K filing is a routine corporate earnings announcement from a regional bank (Popular, Inc., Puerto Rico) that discloses Q1 2026 financial results. The record is factually accurate: the source body contains only 8-K boilerplate and references to Exhibits 99.1 (press release) and 99.2 (conference call presentation) whose full text is not included. The record correctly identifies the filing as out-of-scope for market structure or macro catalysts. However, the topic field is blank and event_type is 'unknown' - both should be populated even if marking the source as low-priority. Human review is needed to confirm: (1) whether corporate earnings from regional banks should be archived at all, and (2) to correct the topic/event_type fields. The source is not a homepage, navigation page, or container page - it is an article-like filing, so rejection for PAGE_TYPE does not apply.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
