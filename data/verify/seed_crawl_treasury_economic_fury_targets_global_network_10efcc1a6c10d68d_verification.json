@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect. This is a Treasury sanctions enforcement announcement (OFAC press release), not regulatory guidance. The correct type should be 'market_notice' or potentially 'financial_stability_report' given the taxonomy options."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The event_type misclassification needs correction. 'regulatory_guidance' typically refers to formal guidance documents explaining rules, not enforcement action announcements. The record content is otherwise accurate and well-sourced, but the taxonomy mismatch requires human verification to ensure proper routing.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
