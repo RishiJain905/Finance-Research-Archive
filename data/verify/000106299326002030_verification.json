@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Event type 'unknown' is technically valid per taxonomy but suggests the record does not fit any defined category",
+    "topic field set to 'irrelevant' - while accurate assessment, this creates internal inconsistency with archiving purpose"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is a valid SEC filing with accurate content, but the record correctly identifies this as outside the archive's focus on market structure and macro catalysts. Automated rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "SunOpta Inc., a food/beverage company dual-listed on Nasdaq (STKL) and TSX (SOY), filed a Form 8-K reporting shareholder voting results from a special meeting held April 16, 2026. Shareholders approved a statutory arrangement under which Pegasus BidCo B.V., through subsidiary 2786694 Alberta Ltd., will acquire all outstanding common shares. The Arrangement Resolution passed with 95,088,870 votes for, 1,728,826 against, and 151,336 abstentions, representing approximately 80% voter turnout.",
+    "why_it_matters": "This is a standard M&A transaction completion milestone for a micro-cap Canadian food company being acquired by a Dutch private equity entity. The shareholder vote is a procedural step in the acquisition process. The event has no relevance to market structure or macro catalysts—it is purely a corporate governance matter affecting only SunOpta shareholders and has no systemic market importance.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

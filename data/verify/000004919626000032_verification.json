@@ -1,0 +1,14 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but could plausibly be classified as 'data_release_other' since it's an earnings release with quantifiable financial data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately identifies the source as a corporate earnings filing and correctly notes it lacks relevance to market structure or macro catalysts. However, the event_type 'unknown' is overly conservative—an earnings release is fundamentally a data release event, even if not macro-economic in nature. The record should be reviewed to determine whether this should be (a) rejected as not fitting archive criteria, or (b) reclassified and retained in an alternative taxonomy for corporate earnings.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Huntington Bancshares Incorporated filed an 8-K on April 23, 2026, announcing Q1 2026 earnings for the quarter ended March 31, 2026. The filing includes standard forward-looking statement disclosures and risk factors related to economic conditions, inflation, interest rates, and deposit volatility. This is a routine corporate earnings announcement with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This filing is not relevant to the finance research archive's focus areas. It is a routine corporate earnings announcement from a regional bank and does not address market structure or macro catalysts."
+  }
+}

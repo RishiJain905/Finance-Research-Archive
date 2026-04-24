@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty — all fields (source.name, source.url, source.domain, source.published_at, source.source_type, topic, summary, key_points, why_it_matters, macro_context, market_structure_context, notes, market_impact, important_numbers, tags) are blank or missing",
+      "Source attribution is completely missing in the generated record despite source metadata being available (url: https://www.sec.gov/Archives/edgar/data/764065/000076406526000070/clf-20260331.htm)",
+      "Record has no archival value whatsoever — contains no extractable information, summary, or analysis",
+      "No event_type populated in the record",
+      "Source is a corporate SEC 10-Q filing (Cleveland-Cliffs Inc. Q1 2026), which is relevant to individual company analysis but generates a completely empty record that adds nothing to the archive"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is entirely blank and cannot be salvaged — this is an automated reject without need for human review. The source metadata exists but the generated record captured none of it."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

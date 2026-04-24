@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is a corporate earnings announcement from a brokerage firm",
+    "Source text is largely boilerplate with no substantive policy or market content",
+    "Earnings data referenced in Exhibit 99.1 (press release) is not included in the source body, making the record thin and uninformative",
+    "event_type set to 'unknown' is technically valid but confirms the record has no clear categorization",
+    "No archival value for target topics (market structure, macro catalysts)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies lack of relevance; auto-rejection is appropriate per rules for sources not relevant to market structure or macro catalysts",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Interactive Brokers Group, Inc. filed an 8-K on April 21, 2026, reporting Q1 2026 financial results for the quarter ended March 31, 2026. The filing incorporates by reference a press release (Exhibit 99.1) but does not include the actual earnings figures in the body. This is a routine corporate disclosure, not a policy or market structure document.",
+    "why_it_matters": "This filing does not contain information relevant to market structure or macro catalysts. It is a corporate earnings announcement from a brokerage firm. The actual earnings content is in Exhibit 99.1, which is not provided in this source text."
+  }
+}

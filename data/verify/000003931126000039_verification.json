@@ -1,0 +1,25 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing - name, url, domain, published_at, source_type all empty in generated record",
+    "URL is clearly identifiable from source: https://www.sec.gov/Archives/edgar/data/39311/000003931126000039/ibcp-20260421.htm",
+    "Published date is 2026-04-21 (source metadata shows this)",
+    "Source type is sec_edgar (identifiable from source metadata)",
+    "Source is a routine SEC 8-K filing from a regional bank with no macro or market structure relevance",
+    "Content is thin - the 8-K only references a Shareholder Presentation (Exhibit 99.1) but the exhibit content is not included in the source body",
+    "No substantive financial data, guidance, or market-relevant information present in the source",
+    "event_type is missing and cannot be reasonably determined from this routine corporate filing",
+    "Regional bank (Independent Bank Corp, Grand Rapids MI, NASDAQ:IBCP) does not constitute a significant market catalyst",
+    "Record has no archival value for macro or market structure research purposes"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record fundamentally fails verification criteria: missing source attribution is a hard rule violation, and the source itself lacks relevance, substantive content, and archival value for finance research. The SEC 8-K is a routine corporate filing that provides no meaningful market or macro information.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

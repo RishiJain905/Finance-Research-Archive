@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - should be set to a valid taxonomy value or flagged; closest match would be 'unknown' but M&A filings don't fit neatly into the taxonomy",
+    "topic 'macro catalysts' is a mismatch with source content - source is about corporate airline M&A, not macro/market structure",
+    "The record is well-constructed and factually accurate, but the topic assignment creates scope mismatch"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate and well-sourced, but needs clarification on whether corporate M&A filings should be included in this archive given the stated focus on macro catalysts and market structure. The why_it_matters and quality_tier correctly identify the scope mismatch. Human decision needed on whether to accept with topic correction or reject for out-of-scope content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

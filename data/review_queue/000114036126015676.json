@@ -1,0 +1,70 @@
+{
+  "id": "000114036126015676",
+  "created_at": "2026-04-24T08:47:11.380055+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Allegiant Travel CO 8-K Filing — 2026-04-20",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1362468/000114036126015676/ef20070919_8k.htm",
+    "published_at": "2026-04-20",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Allegiant Travel Company filed an 8-K announcing that its Nominating and Governance Committee approved two Sun Country designees (Jennifer Vogel and Thomas Kennedy) to join the Allegiant Board upon completion of the planned merger. The filing also disclosed an Advisory Services Agreement with Sun Country's CEO, Jude Bricker, effective post-merger at $26,250 per month.",
+  "key_points": [
+    "Allegiant Travel and Sun Country Airlines merger announced January 11, 2026; expected to close in 2026",
+    "Three Sun Country designees will join the Allegiant Board post-merger: CEO Jude Bricker plus two board members (Jennifer Vogel and Thomas Kennedy)",
+    "Jude Bricker will serve as independent contractor under Advisory Services Agreement at $26,250/month",
+    "Advisory Services Agreement covers integration support, single operating certificate consolidation, charter/cargo customer retention, and business continuity consulting",
+    "Agreement terms: ends upon obtaining single operating certificate, Bricker leaving board, or 15-day notice; minimum 12-month term if triggered within first year"
+  ],
+  "why_it_matters": "This is a corporate M&A filing for a regional airline merger. It has no relevance to market structure (market operations, plumbing, infrastructure) or macro catalysts (Fed policy, rate decisions, economic data releases). This filing falls entirely outside the scope of finance research relevant to macro and market structure analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$26,250 per month (Advisory Services Agreement fee)"
+  ],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "merger-acquisition",
+    "airline",
+    "allegiant-travel",
+    "sun-country"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type set to 'unknown' - should be set to a valid taxonomy value or flagged; closest match would be 'unknown' but M&A filings don't fit neatly into the taxonomy",
+      "topic 'macro catalysts' is a mismatch with source content - source is about corporate airline M&A, not macro/market structure",
+      "The record is well-constructed and factually accurate, but the topic assignment creates scope mismatch"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is factually accurate and well-sourced, but needs clarification on whether corporate M&A filings should be included in this archive given the stated focus on macro catalysts and market structure. The why_it_matters and quality_tier correctly identify the scope mismatch. Human decision needed on whether to accept with topic correction or reject for out-of-scope content."
+  },
+  "raw_text_path": "data/raw/000114036126015676.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a corporate 8-K filing announcing board appointments and an advisory services agreement related to the Allegiant-Sun Country airline merger. Should be excluded from macro/market structure research archive. The source is a legitimate SEC filing but falls entirely outside the scope of this finance research collection.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Source is a corporate M&A filing, not relevant to macro catalysts or market structure",
+      "No Fed policy, rate decisions, economic data, or market operations content",
+      "Topic mismatch with archive focus — should be filtered at ingestion"
+    ]
+  }
+}

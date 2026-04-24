@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate 8-K filing for a regional bank's quarterly earnings — clearly out of scope for a finance research archive focused on market structure and macro catalysts",
+    "event_type correctly set to 'unknown' — no taxonomy value fits this corporate earnings announcement",
+    "Record is well-structured and factually accurate, but relevance rules mandate rejection",
+    "Exhibits 99.1 and 99.2 (actual earnings press release and slides) are referenced but not included in the source text"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is correctly classified as out-of-scope. Auto-rejection is appropriate given the explicit irrelevance of regional bank earnings filings to market structure and macro catalyst research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
