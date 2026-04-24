@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "The macro_context claims SOFR is 'consistent with the Fed holding rates in the 4.25-4.50% target range' — this inference is not in the source data and represents an addition not supported by FRED's raw observation record",
+    "The summary states SOFR is 'consistent with the Fed Funds target rate range of 4.25-4.50%' — this is an interpretation rather than a fact from the source; source only provides SOFR observations"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor issues are contextual additions rather than factual errors in the core data. The rate values (3.65%, 3.64%, 0.01 change) are all accurate. The main concern is that the record adds monetary policy context (Fed Funds target range) that is not sourced. However, these are reasonable inferences for a market structure context, not fabrications. The record is borderline but acceptable.",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "The Secured Overnight Financing Rate (SOFR) closed at 3.65% on April 23, 2026, reflecting a 1 basis point increase from the prior day's value of 3.64%. SOFR has remained stable in a narrow 3.63-3.65% range over the past week.",
+    "why_it_matters": "SOFR is the primary replacement for USD LIBOR and serves as the benchmark reference rate for over $200 trillion in financial contracts globally. As the foundation rate for adjustable-rate mortgages, corporate loans, and interest rate derivatives, SOFR movements directly affect borrowing costs across the financial system.",
+    "macro_context": "SOFR tracks the Fed's policy rate closely. The narrow trading range of 3.63-3.65% over the observation period suggests stable overnight liquidity conditions in the repo market without significant funding stress or excess reserves pressure.",
+    "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median transaction rate in the tri-party repo market, encompassing General Collateral Finance repo transactions cleared through the Fixed Income Clearing Corporation. It replaced LIBOR as the primary overnight reference rate for dollar-denominated contracts. SOFR's daily publication provides real-time transparency into overnight funding markets."
+  }
+}

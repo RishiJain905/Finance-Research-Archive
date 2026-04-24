@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw daily rate data from FRED series DFF with no accompanying analysis or policy signal",
+    "event_type 'data_release_other' is technically valid but the source is a continuous data feed, not a discrete 'release' - borderline classification",
+    "macro_context states the effective rate 'suggests' a target range of 3.50-3.75% - this is a reasonable inference but the source itself does not explicitly state this",
+    "Record correctly acknowledges the source is 'Tier 4 - Minimal' quality with limited standalone analytical value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The record is factually accurate and well-structured, with appropriate caveats about limited analytical value. However, the source is extremely thin (5 consecutive identical data points with no policy context), raising questions about archival value. Human judgment is needed to determine if raw daily rate observations meet the threshold for inclusion in a research archive, or if they should be linked to the relevant FOMC decision instead.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The effective Fed funds rate of 3.64% (as of 2026-04-22) reflects current overnight lending conditions. The rate has been flat for 5 consecutive observations (April 18-22, 2026), indicating unchanged monetary policy. Note: The source does not explicitly confirm the current target range; the 3.50-3.75% inference is based on typical effective rate behavior within target ranges.",
+    "market_structure_context": ""
+  }
+}

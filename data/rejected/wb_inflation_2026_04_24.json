@@ -1,0 +1,76 @@
+{
+  "id": "wb_inflation_2026_04_24",
+  "created_at": "2026-04-24T14:55:34.494087+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Inflation Rate Indicator Query - No Valid Observations",
+  "source": {
+    "name": "World Bank",
+    "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+    "published_at": "2026-04-24",
+    "source_type": "data_release_other",
+    "domain": "data.worldbank.org"
+  },
+  "summary": "A query for the World Bank inflation indicator (FP.CPI.TOTL.ZG) on 2026-04-24 returned no valid observations, yielding an empty dataset. No actual inflation data was available for analysis.",
+  "key_points": [
+    "Indicator requested: FP.CPI.TOTL.ZG (World Bank Consumer Price Inflation)",
+    "Query date: 2026-04-24",
+    "Result: No recent valid observations returned",
+    "Data source is the World Bank Global Economic Monitoring database"
+  ],
+  "why_it_matters": "This represents a failed data retrieval rather than usable research content. No macro inflation data points could be extracted for the specified date range.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "World Bank CPI indicator (FP.CPI.TOTL.ZG) measures annual percentage change in consumer prices across countries. The query returned empty, possibly due to data availability gaps, reporting lags, or API issues.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "macro-data",
+    "no-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains zero usable data - only a 'no valid observations' API response message",
+      "Cannot support any market structure or macro catalyst analysis",
+      "event_type set to 'unknown' - while no data was returned, the record should reflect that this is a failed data query rather than an unknown event type",
+      "Record accurately describes the failure but provides no archival value as there is no research content or data to preserve"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The source is a data query failure with no actual content. No human review needed - the record correctly identifies this as low-quality content, and the source fails CORE RULE #6 (thin low-signal source bias toward reject)."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_24.txt",
+  "notes": "Low-quality source: data query returned empty. No actual research content or market-relevant information available. Topic classified as 'macro catalysts' based on attempted data type (inflation), but source itself provides no macro context to analyze.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "No actual data content - only a data availability notice",
+      "Cannot support any market or macro analysis",
+      "Failed API/data query result, not research output",
+      "Provides no information actionable for RAG purposes"
+    ]
+  }
+}

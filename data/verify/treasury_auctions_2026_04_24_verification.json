@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a 404 error response with zero actual content - no auction data, figures, or market structure information",
+    "Source provides no archival value - error messages are not research documents",
+    "record contains no actual market data to verify",
+    "event_type 'unknown' is technically valid but masks the fact that there is no event to classify",
+    "url field is empty, indicating failed data retrieval"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a straightforward reject. The source is a technical error message with no content. The generated record correctly identifies this as a 404 failure, but error responses should not be archived as research records.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

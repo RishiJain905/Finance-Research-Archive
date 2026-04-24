@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains zero usable data - only a 'no valid observations' API response message",
+    "Cannot support any market structure or macro catalyst analysis",
+    "event_type set to 'unknown' - while no data was returned, the record should reflect that this is a failed data query rather than an unknown event type",
+    "Record accurately describes the failure but provides no archival value as there is no research content or data to preserve"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is a data query failure with no actual content. No human review needed - the record correctly identifies this as low-quality content, and the source fails CORE RULE #6 (thin low-signal source bias toward reject).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

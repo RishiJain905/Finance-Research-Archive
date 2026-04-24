@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw market data (a data feed snapshot), not an article or research document with narrative",
+    "No explanation of what drove the yield level or the 1bp movement",
+    "market_impact.confidence is set to 0, indicating no confidence assessment was made",
+    "event_type 'data_release_other' is technically valid but the source is more precisely a data series snapshot than a 'release'"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source provides accurate numeric data that is faithfully reflected in the record, but the archival value of raw data snapshots without narrative is borderline. Human review needed to determine if this qualifies as acceptable standalone archival content or if it should be rejected as too thin.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

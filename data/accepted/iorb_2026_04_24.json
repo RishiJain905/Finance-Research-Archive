@@ -1,0 +1,111 @@
+{
+  "id": "iorb_2026_04_24",
+  "created_at": "2026-04-24T14:52:04.811131+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Interest on Reserve Balances (IORB) — 2026-04-24",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-24",
+    "source_type": "data_release"
+  },
+  "summary": "The Federal Reserve's Interest on Reserve Balances (IORB) rate remained flat at 3.65% on April 24, 2026, unchanged from the prior five days. The IORB rate serves as the administered floor for the federal funds rate within the Fed's current operating framework.",
+  "key_points": [
+    "IORB rate stands at 3.65% as of April 24, 2026",
+    "Rate has been flat at 3.65% for five consecutive days (April 20–24, 2026)",
+    "No change from prior day (April 23, 2026): absolute change of 0",
+    "IORB is the Fed's administered rate paid on bank reserve balances held at the Fed",
+    "IORB functions as the effective floor for the federal funds rate under current policy implementation framework"
+  ],
+  "why_it_matters": "The IORB rate is a key component of the Fed's monetary policy implementation framework. It sets the floor for overnight rates in money markets, affecting repo markets, T-bill demand, and the effective fed funds rate. Banks arbitrage between fed funds, repo, and reserve holdings based on this rate. Monitoring IORB stability helps assess whether the Fed's current balance sheet reduction (QT) is causing any stress in money markets or admin rates.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 6
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB is part of the Fed's floor system for implementing monetary policy, established under the IORB regime in 2018. The current 3.65% rate reflects recent adjustments to the administered rate as part of balance sheet normalization. This rate is below the top of the current Fed funds target range (4.00%) and above the bottom (3.75%), positioning it as a soft floor for money market rates.",
+  "important_numbers": [
+    "3.65%",
+    "0 (absolute change)"
+  ],
+  "tags": [
+    "interest-on-reserve-balances",
+    "iorb",
+    "fed-administered-rate",
+    "monetary-policy-implementation",
+    "balance-sheet-operations",
+    "fed-floor"
+  ],
+  "llm_review": {
+    "initial_confidence": 9,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": []
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_24.txt",
+  "notes": "This is a FRED data snapshot, not an editorial or analysis article. Source contains high-quality quantitative data with consistent observations over five days. No interpretive content provided by source. The IORB rate itself is an administered parameter rather than a market-determined rate, making this a structural/operational data point. Classification as balance_sheet_update reflects its role in QT/balance sheet normalization rather than a formal policy statement.",
+  "linked_quant_context": [],
+  "linked_article_context": [
+    {
+      "record_id": "keyword_discovery_federalreserve_speech_by_governor_waller_on_c542233a5da6214c",
+      "relationship": "temporally_proximate_article",
+      "reason": "within 3 days, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 125.0
+    },
+    {
+      "record_id": "arxiv_econ_gn_the_hidden_plumbing_of_stablecoins_financial_and_technologic_8decc0ad",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a week, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 105.0
+    },
+    {
+      "record_id": "bis_speeches_rss_lisa_d_cook_reflections_on_financial_stability_8995f831",
+      "relationship": "temporally_proximate_article",
+      "reason": "within a month, exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure"
+      ],
+      "link_score": 100.0
+    }
+  ],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 71.5,
+    "reasoning": [
+      "quality score: 71.5/100 (useful_context)",
+      "high verification confidence",
+      "no issues found during verification",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "medium-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

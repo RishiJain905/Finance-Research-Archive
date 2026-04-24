@@ -1,0 +1,78 @@
+{
+  "id": "wb_trade_gdp_2026_04_24",
+  "created_at": "2026-04-24T14:56:35.959397+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-24",
+    "source_type": "data_api_response",
+    "domain": ""
+  },
+  "summary": "The World Bank API returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) as of the snapshot date 2026-04-24. This is a data availability issue, not a substantive research document, and provides no actionable information for market structure or macro catalyst analysis.",
+  "key_points": [
+    "No valid observations returned for the World Trade (% of GDP) indicator",
+    "Source is a data API response indicating data unavailability rather than a research document",
+    "No economic figures, trends, or commentary provided in this source",
+    "Cannot be used for macro catalyst or market structure analysis due to absence of data"
+  ],
+  "why_it_matters": "This source has no analytical value. The World Bank API query returned empty results, providing zero data for assessing global trade trends or their implications for monetary policy, market structure, or risk assessment.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "data-unavailable",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a data API failure response with no valid observations - provides zero actionable data",
+      "Source is not a research document and cannot be classified into any meaningful event_type category",
+      "Source has no relevance to market structure or macro catalysts as defined",
+      "No URL or domain provided for source attribution",
+      "Cannot extract any economic figures, trends, or commentary",
+      "Source has no archival value for financial analysis purposes"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_24.txt",
+  "notes": "This record should be discarded or marked as unusable. The source is a World Bank API response with indicator TG.VAL.TOTL.GD.ZS that returned no valid observations. This is not a research document or data release—it's a data availability failure. Topic incorrectly assigned as 'global_economy' in metadata; while trade/GDP is technically macro-related, the absence of any data makes it irrelevant to the target topics of market structure and macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No valid data observations present in source",
+      "Source is a data API failure response, not a research document",
+      "Provides zero actionable information for financial analysis",
+      "Cannot be classified into any event type taxonomy category"
+    ]
+  }
+}

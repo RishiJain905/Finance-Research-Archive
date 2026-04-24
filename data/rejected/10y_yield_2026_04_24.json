@@ -1,0 +1,89 @@
+{
+  "id": "10y_yield_2026_04_24",
+  "created_at": "2026-04-24T14:53:31.478031+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "10-Year Treasury Yield (DGS10) - Daily Data Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_snapshot",
+    "domain": ""
+  },
+  "summary": "The 10-Year Treasury Yield stood at 4.3% as of 2026-04-22, unchanged from the prior day (2026-04-21). The yield has remained relatively stable in the 4.26-4.32% range over the five trading days spanning 2026-04-16 through 2026-04-22.",
+  "key_points": [
+    "10-Year Treasury Yield: 4.3% as of 2026-04-22",
+    "Prior day value: 4.3% (2026-04-21) — no change (flat)",
+    "5-day range: 4.26% to 4.32%",
+    "Observations span 2026-04-16 to 2026-04-22"
+  ],
+  "why_it_matters": "Treasury yields serve as benchmark borrowing costs and risk-free rate references for the broader economy. The 4.3% level indicates elevated risk-free rates relative to historical norms. However, this snapshot provides no analytical context — no commentary on drivers, macro implications, or Fed policy signals.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "No macro context or catalyst analysis is provided in the source. The data point alone does not explain what drove the yield level or whether it signals anything about the economic outlook.",
+  "market_structure_context": "No market structure content in source.",
+  "important_numbers": [
+    "4.3% (10-Year Treasury Yield, 2026-04-22)",
+    "4.3% (prior day, 2026-04-21)",
+    "4.26% (low on 2026-04-17 and 2026-04-20)",
+    "4.32% (high on 2026-04-16)"
+  ],
+  "tags": [
+    "10-year-treasury",
+    "yield-curve",
+    "bond-yields",
+    "risk-free-rate",
+    "fred-data",
+    "us-treasury"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution is incomplete: URL field is empty, domain field is empty",
+      "Published_at is empty — only snapshot date provided, no publication context",
+      "Event type 'unknown' is technically valid but indicates source doesn't fit taxonomy — raw data snapshot is not a research artifact",
+      "Extremely thin content: only 5 numeric observations with no narrative, analysis, or policy context",
+      "Source is a raw FRED data export — suitable as a data point but not as standalone research archive entry",
+      "The record acknowledges 'no macro context or catalyst analysis is provided' — this violates the relevance standard for macro catalysts topic",
+      "quality_tier is 'minimal' with score 2 — the record itself identifies low archival value",
+      "Cannot meaningfully support RAG retrieval for research insights without analytical content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_24.txt",
+  "notes": "This is a raw FRED data export for the DGS10 series. It contains only the numeric time series values with no accompanying analysis, narrative, or macro context. As a standalone source for a finance research archive, it is thin — useful as a data point but not as a substantive research note. Consider whether raw price data should be archived separately or linked to analytical content that references it. The topic 'macro catalysts' is assigned per TARGET metadata but the source does not identify any catalyst; it is merely a market observable.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "minimal",
+    "score": 2,
+    "reasoning": [
+      "Raw market observable with no analytical content",
+      "No policy context or macro drivers identified",
+      "Only 5 data points over 5 days — insufficient for trend analysis",
+      "No narrative or commentary provided",
+      "Cannot support RAG retrieval for research insights"
+    ]
+  }
+}

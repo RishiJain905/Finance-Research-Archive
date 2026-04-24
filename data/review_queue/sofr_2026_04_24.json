@@ -1,0 +1,88 @@
+{
+  "id": "sofr_2026_04_24",
+  "created_at": "2026-04-24T14:50:55.821605+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "data_release_other",
+  "title": "SOFR Daily Rate — April 23, 2026",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "published_at": "2026-04-23",
+    "source_type": "data_release",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The Secured Overnight Financing Rate (SOFR) closed at 3.65% on April 23, 2026, reflecting a 1 basis point increase from the prior day's value of 3.64%. SOFR has remained stable in a narrow 3.63-3.65% range over the past week.",
+  "key_points": [
+    "SOFR closed at 3.65% on April 23, 2026, up 1 bp from 3.64% on April 22",
+    "SOFR has traded in a 3.63-3.65% range over the five trading days from April 17-23, 2026",
+    "The absolute daily change was 0.01 percentage points (1 basis point)",
+    "SOFR movement direction was 'up' from the previous observation",
+    "Recent observations: April 20-21 at 3.63%, April 17 and April 23 both at 3.65%"
+  ],
+  "why_it_matters": "SOFR is the primary replacement for USD LIBOR and serves as the benchmark reference rate for over $200 trillion in financial contracts globally. As the foundation rate for adjustable-rate mortgages, corporate loans, and interest rate derivatives, SOFR movements directly affect borrowing costs across the financial system.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "SOFR tracks the Fed's policy rate closely. The narrow trading range of 3.63-3.65% over the observation period suggests stable overnight liquidity conditions in the repo market without significant funding stress or excess reserves pressure.",
+  "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median transaction rate in the tri-party repo market, encompassing General Collateral Finance repo transactions cleared through the Fixed Income Clearing Corporation. It replaced LIBOR as the primary overnight reference rate for dollar-denominated contracts. SOFR's daily publication provides real-time transparency into overnight funding markets.",
+  "important_numbers": [
+    "3.65%",
+    "3.64%",
+    "0.01",
+    "3.63%"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "money-market",
+    "benchmark-rate",
+    "fed",
+    "overnight-rate",
+    "libor-transition",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "The macro_context claims SOFR is 'consistent with the Fed holding rates in the 4.25-4.50% target range' — this inference is not in the source data and represents an addition not supported by FRED's raw observation record",
+      "The summary states SOFR is 'consistent with the Fed Funds target rate range of 4.25-4.50%' — this is an interpretation rather than a fact from the source; source only provides SOFR observations"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Minor issues are contextual additions rather than factual errors in the core data. The rate values (3.65%, 3.64%, 0.01 change) are all accurate. The main concern is that the record adds monetary policy context (Fed Funds target range) that is not sourced. However, these are reasonable inferences for a market structure context, not fabrications. The record is borderline but acceptable."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_24.txt",
+  "notes": "This is a daily market data snapshot from FRED, not a policy document. The source is thin but provides authoritative raw rate data with precise observation dates and values. SOFR is highly relevant to market structure as the successor to LIBOR and the primary reference rate for global dollar markets. Confidence slightly reduced due to limited depth of information (single daily observation) but the data is accurate and sourced from official Fed data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_3",
+    "score": 6,
+    "reasoning": [
+      "Raw daily data point rather than analytical content",
+      "Provides precise rate values and dates from authoritative source",
+      "Relevant to market structure as foundational benchmark rate",
+      "Limited analytical context but data integrity is high"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "a6c1c6cfed44da13c29cc4516be205ee096ce80c"
+}

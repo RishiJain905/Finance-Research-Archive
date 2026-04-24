@@ -1,0 +1,85 @@
+{
+  "id": "fed_funds_2026_04_24",
+  "created_at": "2026-04-24T14:50:55.821398+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Effective Federal Funds Rate",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "published_at": "2026-04-22",
+    "source_type": "data_series",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The Effective Federal Funds Rate (DFF) remained flat at 3.64% from April 18 through April 22, 2026. This represents a daily observed rate, not a policy decision. The rate shows no change from the prior observation on April 21, 2026.",
+  "key_points": [
+    "Effective Federal Funds Rate: 3.64% as of 2026-04-22",
+    "No change from previous observation (3.64% on 2026-04-21)",
+    "Rate remained flat at 3.64% for five consecutive observations (April 18-22)",
+    "Absolute change: 0 basis points",
+    "Source is the daily observed effective rate, not a Fed policy decision"
+  ],
+  "why_it_matters": "The effective Fed funds rate is the primary policy rate benchmark. A flat reading at 3.64% indicates no change in overnight lending conditions. However, this single observation provides minimal analytical value without context about the rate decision cycle or recent FOMC communications.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 1
+  },
+  "macro_context": "The effective Fed funds rate of 3.64% (as of 2026-04-22) reflects current overnight lending conditions. The rate has been flat for 5 consecutive observations (April 18-22, 2026), indicating unchanged monetary policy. Note: The source does not explicitly confirm the current target range; the 3.50-3.75% inference is based on typical effective rate behavior within target ranges.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.64% (effective Fed funds rate)",
+    "0 bps (change)"
+  ],
+  "tags": [
+    "fed-funds",
+    "monetary-policy",
+    "interest-rates",
+    "overnight-rate",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw daily rate data from FRED series DFF with no accompanying analysis or policy signal",
+      "event_type 'data_release_other' is technically valid but the source is a continuous data feed, not a discrete 'release' - borderline classification",
+      "macro_context states the effective rate 'suggests' a target range of 3.50-3.75% - this is a reasonable inference but the source itself does not explicitly state this",
+      "Record correctly acknowledges the source is 'Tier 4 - Minimal' quality with limited standalone analytical value"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This is a borderline case. The record is factually accurate and well-structured, with appropriate caveats about limited analytical value. However, the source is extremely thin (5 consecutive identical data points with no policy context), raising questions about archival value. Human judgment is needed to determine if raw daily rate observations meet the threshold for inclusion in a research archive, or if they should be linked to the relevant FOMC decision instead."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_24.txt",
+  "notes": "This is raw daily rate data from FRED, not an FOMC decision or statement. The observation shows a stable effective rate at 3.64%. No policy signal can be extracted from this single data point. For research purposes, this should be linked to the relevant FOMC decision that established the current target range.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Tier 4 - Minimal",
+    "score": 2,
+    "reasoning": [
+      "Single data point with no analysis or commentary",
+      "No policy decision or forward guidance",
+      "Cannot be meaningfully linked to macro catalysts without additional context",
+      "Useful as a data reference point only"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "8b19e1d609b7829d37895659e16920053e0c701f"
+}

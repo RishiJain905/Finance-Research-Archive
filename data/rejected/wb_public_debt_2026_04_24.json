@@ -1,0 +1,76 @@
+{
+  "id": "wb_public_debt_2026_04_24",
+  "created_at": "2026-04-24T14:56:16.894645+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS)",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-24",
+    "source_type": "unknown"
+  },
+  "summary": "The World Bank indicator query for global public debt (GC.DOD.TOTL.GD.ZS) returned no recent valid observations as of the snapshot date. The source contains no usable data, observations, or commentary to archive.",
+  "key_points": [
+    "Query returned no valid observations for indicator GC.DOD.TOTL.GD.ZS",
+    "Indicator represents total public debt as percentage of GDP",
+    "Snapshot date: 2026-04-24",
+    "Source provides no numerical values, no temporal data, and no analysis"
+  ],
+  "why_it_matters": "This source cannot support any research on public debt levels, debt sustainability, or macro fiscal conditions. Any attempt to use this record for RAG retrieval would return no actionable information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "indicator-query",
+    "null-response"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a null API response containing no valid observations, no data, no numbers, and no analysis",
+      "Record accurately describes the empty source, but empty sources have effectively zero archival value for market structure or macro catalysts research",
+      "event_type correctly set to 'unknown' but this further confirms the source lacks the substance to be categorized",
+      "Cannot be meaningfully archived as no actionable information exists to retrieve for RAG or any analytical purpose"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_24.txt",
+  "notes": "This record represents a failed or empty data query rather than a substantive source. The World Bank indicator GC.DOD.TOTL.GD.ZS (total public debt as percentage of GDP) did not return any observations for the referenced snapshot date. This is not relevant to market structure or macro catalysts research as it contains zero actionable information. Archive value is effectively zero.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 0,
+    "reasoning": [
+      "No actual data returned from indicator query",
+      "No observations, no numbers, no analysis present",
+      "Null response provides no basis for any financial or economic assessment",
+      "Source type cannot be determined from available metadata"
+    ]
+  }
+}

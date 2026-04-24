@@ -1,0 +1,95 @@
+{
+  "id": "2y_yield_2026_04_24",
+  "created_at": "2026-04-24T14:52:16.932299+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2) Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-22",
+    "source_type": "data_feed"
+  },
+  "summary": "The 2-Year Treasury yield stood at 3.79% as of April 22, 2026, up 1 basis point from the prior day's 3.78%. The yield has ranged from 3.71% to 3.79% over the prior week.",
+  "key_points": [
+    "Latest 2-Year Treasury yield: 3.79% (2026-04-22)",
+    "Prior observation: 3.78% (2026-04-21)",
+    "Absolute change: +1 basis point",
+    "Recent range (2026-04-16 to 2026-04-22): 3.71% to 3.79%",
+    "The data is sourced from FRED series DGS2"
+  ],
+  "why_it_matters": "The 2-year yield is the most rate-expectation-sensitive point on the Treasury curve and closely tracks fed funds rate expectations over the next ~2 years. A 3.79% yield indicates the market is pricing in a relatively high-for-longer rate environment. However, this source provides only a raw number without narrative or catalyst explanation.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year yield reflects near-term rate expectations and is highly sensitive to FOMC policy signals, inflation data, and growth surprises. The recent range suggests modest volatility but the source does not explain what drove the level. Without context, the macro significance of 3.79% is unclear.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.79% (current 2-year yield, 2026-04-22)",
+    "3.78% (prior day, 2026-04-21)",
+    "+0.01 bps (daily change)"
+  ],
+  "tags": [
+    "treasury-yields",
+    "2-year-yield",
+    "macro-catalysts",
+    "rate-expectations",
+    "fred-data",
+    "daily-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw market data (a data feed snapshot), not an article or research document with narrative",
+      "No explanation of what drove the yield level or the 1bp movement",
+      "market_impact.confidence is set to 0, indicating no confidence assessment was made",
+      "event_type 'data_release_other' is technically valid but the source is more precisely a data series snapshot than a 'release'"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The source provides accurate numeric data that is faithfully reflected in the record, but the archival value of raw data snapshots without narrative is borderline. Human review needed to determine if this qualifies as acceptable standalone archival content or if it should be rejected as too thin."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_24.txt",
+  "notes": "This source is a FRED data feed snapshot for the 2-Year Treasury yield. It provides only the raw numeric value with no accompanying analysis, narrative, or explanation of drivers. As a standalone archival record, it has very low information value. The data point is relevant to macro catalysts (yield levels reflect rate expectations) but the source itself contributes no interpretive content. Consider linking this to an associated article or analyst note that explains the yield level. PAGE_TYPE not provided in metadata; treated as data_feed.",
+  "linked_quant_context": [
+    {
+      "series": "DGS2",
+      "latest_value": 3.79,
+      "latest_date": "2026-04-22",
+      "source": "FRED"
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data point",
+    "score": 1,
+    "reasoning": [
+      "Raw market data with no narrative or analysis",
+      "No context provided for yield movement or level",
+      "Not a research document or article",
+      "Minimal archival value as standalone record",
+      "Would be more useful if linked to macro commentary or research"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "eddcf06781912bb34c9196e2021b082a07530137"
+}
