@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Target 'market structure' is poorly matched to content - document is banking capital adequacy regulation, not trading venue mechanics, market order book dynamics, or market operations",
+    "IRRBB methodology in this document refers to internal bank interest rate risk management for capital calculations, not market structure context",
+    "Macro context field is empty - document contains no macro catalyst content",
+    "Quality tier flagged as 'low' with score 4 due to poor target relevance, despite high domain authority and document substance",
+    "The document is accurate and well-structured, but the classification problem (regulatory guidance on bank capital frameworks as 'market structure') undermines archival value for stated purposes"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Document is factually accurate regulatory guidance from high-authority source (Bank of England/PRA), but fundamental mismatch between TARGET='market structure' and source content (banking capital adequacy regulation). Human decision required to determine: (1) whether banking supervision/regulation documents qualify under this archive's scope, or (2) whether record should be reclassified to different topic or rejected. event_type='regulatory_guidance' is valid and correct for this source type.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "The document covers IRRBB (interest rate risk in the banking book) methodology for bank capital adequacy purposes - this is internal bank risk management for balance sheet hedging, not market structure in the sense of trading venue mechanics or market operations. Banking sector structural risk management is distinct from financial market microstructure."
+  }
+}

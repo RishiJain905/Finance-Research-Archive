@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the document type is clearly identifiable as a government budget request. Valid taxonomy values would be 'regulatory_guidance' or similar administrative document type.",
+    "source_type incorrectly listed as 'research_paper' when the source is a FY 2026 budget justification document, not a research paper.",
+    "Relevance to market structure is indirect and thin—the document is primarily an administrative budget request rather than market structure analysis.",
+    "No substantive market structure findings, policy signals, or forward guidance present. Contains only organizational tables and budget figures.",
+    "Published May 2025 (approx. 11 months ago as of TODAY=2026-04-25), flagged as historical without clear archival value justification.",
+    "market_impact confidence is 0 and no asset_classes listed, accurately reflecting the document's lack of market-relevant content."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Document is a government budget request with limited market structure research value. The event_type 'unknown' and source_type 'research_paper' classification are incorrect. While the document contains factual budget figures ($410M, 650 FTE, 12.3% increase), it lacks substantive market structure analysis. Human review needed to determine whether administrative budget documents have sufficient archival value for a finance research archive focused on market structure dynamics.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The CFTC is requesting $410.0 million and 650 FTE for FY 2026, a 12.3 percent increase over FY 2025 enacted budget. The document provides divisional budget allocations (Enforcement, Market Oversight, Clearing and Risk, Data, etc.) and includes statistical appendices on the number of registered entities (SEFs, DCMs, DCOs, FCMs, SDRs) as of FY 2024. The document is a budget justification, not market structure research.",
+    "why_it_matters": "Budget appropriations determine CFTC's operational capacity for derivatives market oversight, enforcement, and systemic risk monitoring. However, this is an administrative budget document with no policy signals, market analysis, or research findings—it is not market structure research.",
+    "macro_context": "",
+    "market_structure_context": "The document references market infrastructure through entity registration counts (SEFs, DCMs, DCOs, FCMs, SDRs) and trading volume statistics in appendices. However, the budget justification itself provides no analysis of market structure implications, risks, or trends."
+  }
+}
