@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' when the document type is identifiable as a budget request/regulatory document — more appropriate types would be 'regulatory_guidance' or 'research_paper'",
+    "Source is truncated mid-document (ends during table at 'Table 11: D'), preventing full verification of content",
+    "source_type field is empty and should indicate 'pdf_document' or similar",
+    "No market-moving data or forward-looking policy decisions present — document is administrative in nature",
+    "market_impact asset_classes array is empty, directional_bias is 'unknown', and confidence is 0 — correctly reflects non-market-catalyst nature but could be noted more explicitly"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a government budget document with limited market-moving relevance. While the record accurately summarizes the CFTC's FY 2027 budget priorities, the 'unknown' event_type should be corrected to a valid taxonomy value. The truncation prevents full content verification. Given the low signal for market research purposes, human judgment is needed to determine archival value.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Consider noting more explicitly that this is a budget planning document with no immediate market impact — it signals regulatory trajectory but does not contain market-moving data or policy decisions that would directly affect trading.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

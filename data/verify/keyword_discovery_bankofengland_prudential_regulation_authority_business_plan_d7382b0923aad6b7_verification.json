@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "TARGET specifies 'market structure' but source is a prudential supervision business plan focused on supervisory priorities, firm regulation, and organizational efficiency—not trading venues, market making, order flow, or execution quality",
+    "Relevance to market structure is tangential; document addresses regulatory policy for banks and insurers rather than market microstructure or trading operations",
+    "The quality tier correctly identifies this as 'low' relevance to target topics, yet suggested_status is 'review_queue' without clear resolution path",
+    "No substantive market-moving content; document is administrative planning guidance with no direct policy rate, balance sheet, or trading mechanism implications"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-sourced from a trusted authority (Bank of England/PRA). However, there is a fundamental mismatch between the TARGET ('market structure') and the source content (prudential business plan). While the document mentions liquidity requirements, Basel III, and bank run resilience, these are supervisory policy elements rather than market structure topics. Human judgment is needed to determine whether prudential regulatory planning documents have sufficient archival value for a market structure archive, even when published by high-trust institutional sources.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The PRA Business Plan 2026/27 outlines supervisory priorities for 1,254 regulated firms (686 deposit-takers, 568 insurers), confirming continued focus on safety, soundness, and policyholder protection while implementing Basel III reforms and streamlining supervision. Recent Middle East market turbulence is cited as reinforcing the importance of resilience.",
+    "why_it_matters": "This business plan signals the PRA's supervisory priorities for UK banks and insurers over the coming year. While primarily an administrative planning document, it indicates regulatory trajectory on capital adequacy, liquidity requirements, and ring-fencing reforms that could affect market participants' operational environment. Direct market impact is limited as the document outlines planned work rather than imminent policy changes.",
+    "macro_context": "",
+    "market_structure_context": "The document references liquidity reporting for insurers, bank liquidity requirements in response to faster bank runs (observed mainly in US in 2023), and ring-fencing regime reforms. These touch on financial stability infrastructure but represent supervisory/regulatory policy rather than market microstructure or trading venue operations. Relevance to core market structure topics (trading mechanisms, order flow, market making, execution quality) is tangential."
+  }
+}
