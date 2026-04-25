@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing - name, url, domain, published_at, and source_type are all empty",
+    "Generated record has no content - summary, key_points, why_it_matters, macro_context, market_structure_context, notes, market_impact, important_numbers, and tags are all empty",
+    "Source is a corporate M&A filing (SoundHound AI acquiring LivePerson) with minimal relevance to macro catalysts or market structure",
+    "Source type is not a standard taxonomy event type - 8-K regulatory filing does not map cleanly to event types like fomc_statement, data_release_cpi, etc.",
+    "Record has no archival value for finance research purposes when completely empty"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is entirely blank with no fields populated. Additionally, the source is a specific corporate M&A event that lacks relevance to broader macro catalysts or market structure themes that would typically warrant archiving in a finance research context.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

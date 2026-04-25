@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'data_release_other' as this is a quarterly earnings announcement",
+    "Source is a corporate 8-K filing with no relevance to market structure or macro catalysts - out of scope for the archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this source as out-of-scope for macro/market structure research. Minor issue: event_type could be specified as 'data_release_other' but this does not change the overall assessment that the source should be excluded from the archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Patterson-UTI Energy, Inc. (ticker PTEN, Nasdaq) filed a Form 8-K on April 22, 2026 announcing Q1 2026 financial results for the three months ended March 31, 2026. The earnings press release was furnished as Exhibit 99.1. This is a standard corporate disclosure unrelated to macro catalysts or market structure.",
+    "why_it_matters": "This is a company-specific earnings filing for an oilfield services provider. It has no relevance to macro-level market structure or broad macro catalyst analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "000005086326000079",
+  "created_at": "2026-04-25T03:43:04.308441+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "INTEL CORP 10-Q Filing — 2026-04-24",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000079/intc-20260328.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-24",
+    "source_type": "sec_filing"
+  },
+  "summary": "Intel Corporation filed its 10-Q quarterly report for the period ending March 28, 2026. The filing contains standard XBRL-tagged financial data including balance sheet items, segment performance, and subsequent events. This is a corporate earnings filing with no relevance to market structure or macro catalysts as defined for this archive.",
+  "key_points": [
+    "Intel Corporation filed Form 10-Q for fiscal Q1 2026 (period ending 2026-03-28)",
+    "The filing includes XBRL-tagged financial data for segments: Client Computing Group, Datacenter and AI, Intel Foundry",
+    "Contains subsequent events dated 2026-04-07 and 2026-04-08 related to Ireland SCIP arrangement",
+    "Includes restructuring plan disclosures (2024 and 2025 plans)",
+    "References Department of Commerce matters (CHIPS Act related)",
+    "Contains equity method investee and disposal group (Altera) disclosures"
+  ],
+  "why_it_matters": "This is a company-specific quarterly financial filing. It is not relevant to market structure (market microstructure, trading venues, market maker rules, order dynamics) or macro catalysts (central bank decisions, economic data releases, geopolitical catalysts). This source should not be included in a finance research archive focused on those topics.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "intel",
+    "10-q",
+    "sec-filing",
+    "earnings",
+    "quarterly-report",
+    "not-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a corporate earnings filing (Intel 10-Q) with no relevance to market structure or macro catalysts as defined in archive scope",
+      "event_type set to 'unknown' - appropriate in this case since corporate filings don't fit the taxonomy, but reinforces out-of-scope classification",
+      "Archive scope explicitly excludes company-specific financial filings; this record correctly identifies the source as out of scope"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is already well-structured in identifying this as out of scope. No verification of facts needed - rejection is straightforward."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000005086326000079.txt",
+  "notes": "SOURCE OUT OF SCOPE: This Intel Corporation 10-Q filing is a corporate quarterly financial report. It is not relevant to market structure (market microstructure, trading operations, market plumbing) or macro catalysts (central bank policy, economic data releases, geopolitical events). The archive scope should remain focused on those topics. This document has been flagged as OUT OF SCOPE.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "out_of_scope",
+    "score": 0,
+    "reasoning": [
+      "Corporate earnings filing not relevant to market structure or macro catalysts",
+      "Source is a standard SEC 10-Q with no macro or market structure implications"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate earnings filing (Intel 10-Q) with no relevance to market structure or macro catalysts as defined in archive scope",
+    "event_type set to 'unknown' - appropriate in this case since corporate filings don't fit the taxonomy, but reinforces out-of-scope classification",
+    "Archive scope explicitly excludes company-specific financial filings; this record correctly identifies the source as out of scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is already well-structured in identifying this as out of scope. No verification of facts needed - rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "000090616326000034",
+  "created_at": "2026-04-25T03:45:50.653171+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "NVR INC 8-K Filing — 2026-04-22",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/906163/000090616326000034/nvr-20260422.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-22",
+    "source_type": "sec_filing"
+  },
+  "summary": "NVR, Inc. filed a Form 8-K on April 22, 2026, disclosing Q1 2026 financial results via an attached press release (Exhibit 99.1). The filing itself contains only boilerplate SEC language and the CFO signature; no substantive financial figures are present in the body. This is a routine corporate earnings disclosure with no relevance to market structure or macro catalysts.",
+  "key_points": [
+    "NVR, Inc. is a homebuilder headquartered in Reston, Virginia, trading on the NYSE under symbol NVR.",
+    "The 8-K reports Q1 2026 financial results for the quarter ended March 31, 2026.",
+    "The actual press release with financial figures is attached as Exhibit 99.1 and not included in the 8-K body text.",
+    "Signed by Daniel D. Malzahn, Senior Vice President, CFO and Treasurer."
+  ],
+  "why_it_matters": "This filing is not relevant to market structure or macro catalyst research. It is a routine corporate earnings disclosure from a single homebuilder company. While NVR's results may be directionally relevant to the residential construction sector, this source contains no substantive data and does not address monetary policy, market operations, or broader macro economic catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "earnings",
+    "nvr",
+    "homebuilder",
+    "q1-2026"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' when it should be 'data_release_other' - this is a quarterly earnings disclosure, which is a valid and obvious data release type",
+      "Source is correctly identified as thin/low-signal (boilerplate 8-K body with actual data in exhibit not included)",
+      "Source attribution is present and accurate",
+      "Summary accurately represents the source content"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is technically accurate but event_type 'unknown' is an obvious error. This is clearly a corporate earnings release (8-K reporting Q1 2026 financial results). While the source is correctly assessed as out of scope for market structure/macro catalyst research, the missing event_type classification warrants correction before final disposition. If the archive accepts corporate earnings data, this should be reclassified as 'data_release_other'."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000090616326000034.txt",
+  "notes": "OUT OF SCOPE — This is a corporate earnings 8-K filing from NVR, Inc. (homebuilder). The source contains no data relevant to market structure or macro catalysts. The actual Q1 2026 financial figures are in Exhibit 99.1, which is not included in the 8-K body. Recommend excluding from finance research archive unless specifically tracking NVR corporate fundamentals.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "Corporate earnings filing with no substantive content in body text",
+      "Outside defined scope (not market structure or macro catalyst)",
+      "Financial data exists only in referenced exhibit not included in source"
+    ]
+  }
+}

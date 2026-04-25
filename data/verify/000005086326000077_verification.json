@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type 'data_release_other' is incorrect — individual corporate earnings filings are not macro catalysts or market-level data releases",
+    "Source is not relevant to market structure or macro catalysts — this is a single company's earnings disclosure, not a macroeconomic indicator",
+    "Source body contains no financial numbers; only the 8-K regulatory wrapper is present, making the record inherently incomplete",
+    "No archival value: the record contains no extractable data or figures; substantive content is in Exhibit 99.1 which is not included in the source body",
+    "The record accurately describes what's in the source, but the source itself has no relevance to this archive's focus"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is factually accurate regarding what the source contains, but both the source and the record fail the relevance threshold. This archive focuses on market structure and macro catalysts — individual company earnings announcements (even from blue-chip firms) are not macro-level events. The source has no actual financial figures, further limiting any potential value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
