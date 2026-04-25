@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' but 'regulatory_guidance' is a valid taxonomy value that applies to this business plan document",
+    "Target/metadata says 'market structure' but the document is a regulatory administration/business plan, not market structure in the trading microstructure sense (trading venues, market making, order flow, market plumbing)",
+    "Document does not contain macro catalysts - no rate decisions, economic data releases, or policy communications with actionable signals for markets",
+    "Source is functionally an administrative planning document with supervisory priorities rather than content that would inform trading decisions or market microstructure analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record presents a scope mismatch: the source metadata says 'market structure' target but the content is a regulatory business plan. While the facts in the summary and key_points are accurate and verifiable, the core question is whether regulatory planning documents belong in a market structure/macro catalyst archive. The event_type should be corrected from 'unknown' to 'regulatory_guidance' if the record is to be retained. Human decision needed on scope alignment.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This business plan provides regulatory architecture for UK banking and insurance sectors. While not directly market-moving for trading, it signals the regulatory environment and supervisory priorities that will shape bank behavior, capital deployment, and insurance sector risk-taking through 2026/27. The Basel III completion and simplified small bank regime affect capital requirement calculations across the sector.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

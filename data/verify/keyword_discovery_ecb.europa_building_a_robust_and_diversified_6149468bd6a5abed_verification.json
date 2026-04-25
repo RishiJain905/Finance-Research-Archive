@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type mismatch: record uses 'economic_commentary' but source is clearly a speech (speech_neutral would be appropriate for an introductory welcome address)",
+    "Source published 2022-03-22, over 4 years before TODAY (2026-04-25); exceeds 90-day staleness threshold by approximately 1,495 days",
+    "Source body was truncated; conclusion section may contain additional relevant content that could affect archival value assessment",
+    "Several regulatory initiatives referenced (ESMA climate stress test, European Commission consultation on EU clearing capacity) have likely progressed or evolved since 2022—current status unverified",
+    "Geopolitical context (Russia-Ukraine conflict onset) is significantly dated"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the source is high-quality (official ECB publication, authoritative speaker, technically substantive on market structure), it is over 4 years old with references to regulatory initiatives that have likely evolved. The truncated body prevents full verification. Human assessment needed to determine whether the historical policy content and clearing ecosystem principles still have sufficient archival value or represent stale content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

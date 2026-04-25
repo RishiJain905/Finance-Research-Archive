@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a government budget/appropriation document, not a market-moving event or policy statement—limited research utility for market structure or macro catalysts",
+    "Document provides regulatory statistics but no policy changes, market analysis, or forward-looking signals",
+    "Event_type set to 'unknown'—acceptable for administrative documents but the record acknowledges it doesn't fit the taxonomy",
+    "Quality tier rated 'low' with score 3—appropriate given administrative nature and absence of market-moving content",
+    "The record is self-consistently cautious (quality_tier, llm_review issues, human_review notes all flag low value) yet verification_confidence is 0 which contradicts the record's own assessment"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent and appropriately flags the document as low-value administrative content. The discrepancy between verification_confidence (0) and the self-assessment (quality_tier: low, score: 3) should be resolved, but the record is salvageable without human intervention.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The CFTC submitted its FY 2026 budget request of $410.0 million and 650 FTE, representing a 12.3% increase over FY 2025 enacted levels. The document outlines organizational structure, divisional budgets, and regulatory statistics for derivatives markets including DCMs, DCOs, SEFs, FCMs, and SDRs. This is a government administrative/appropriations document with no market-moving content or policy decisions.",
+    "why_it_matters": "This budget document provides background context on U.S. derivatives market regulatory infrastructure—registration counts, trading volumes, clearing statistics. It does NOT contain policy changes, market analysis, or macro catalyst information. Archival value is limited to understanding the CFTC's organizational capacity and scope.",
+    "market_structure_context": "The document provides a snapshot of U.S. derivatives market infrastructure as of FY 2024 data: registered DCMs (contract markets), DCOs (clearing organizations including systemically important SIDCOs), SEFs (swap execution facilities), FCMs (futures commission merchants), and SDRs (swap data repositories). Volume statistics show growth in futures and swaps traded, with cleared vs. uncleared breakdowns. This represents the regulatory landscape for derivatives market structure but does NOT contain policy changes, market analysis, or market-moving signals."
+  }
+}
