@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - name, url, domain, published_at, source_type all empty",
+      "Source is a routine corporate governance 8-K (shareholder meeting votes) - not relevant to market structure or macro catalysts",
+      "Event type 'unknown' is correct given this is a routine SEC filing, but such filings lack archival value for this archive's purposes",
+      "Generated record has empty fields for summary, key_points, why_it_matters, macro_context, market_structure_context, and other critical fields",
+      "Source is too thin - contains only standard boilerplate 8-K content with no market-moving information",
+      "Lincoln Electric is a single industrial company; election of directors and auditor ratification have no macro or market structure relevance"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Clear reject criteria met - missing source attribution, source not relevant to macro/market structure, record incomplete, and content lacks archival value"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

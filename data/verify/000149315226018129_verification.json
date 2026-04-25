@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a micro-cap company 8-K filing with no relevance to macro catalysts or market structure—the archive's stated focus.",
+    "Topic labeled 'market structure' in record but source does not address broad market structure, trading mechanisms, or market plumbing.",
+    "event_type 'regulatory_guidance' is technically valid but somewhat imprecise; this is an SEC company disclosure filing, not regulatory guidance per se.",
+    "Record accurately summarizes the 8-K content but the source itself is not suitable for an archive focused on macro catalysts and market structure."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, but the underlying source is not relevant to the archive's focus on macro catalysts and market structure. Human judgment needed to decide whether to accept with a different topic/tag or exclude entirely.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Could be revised to: 'Micro-cap company listing compliance matter. Affects ONMD shareholders but has no broader market implications. Relevant to small-cap/nasdaq listing rule analysis but not to macro catalysts or broad market structure.'",
+    "macro_context": "",
+    "market_structure_context": "Single-company compliance matter. Does not address market-wide structure, trading mechanisms, or market plumbing. Not relevant to market structure analysis."
+  }
+}

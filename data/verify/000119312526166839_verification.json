@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Topic correctly flagged as 'irrelevant' - this is a company-specific operational disclosure about a Japanese insurance subsidiary, not market structure or macro catalysts",
+    "The generated record accurately reflects the source limitations: Exhibit 99.1 (the substantive news release) is not included in the 8-K body text",
+    "No fabricated claims - summary and key_points are factually supported by the source text",
+    "event_type is correctly 'unknown' as 8-K filings don't fit neatly into the available taxonomy (monetary policy, speeches, data releases, Treasury operations, or research)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and accurately reflects the source. The human review flag can be set to false because the decision is clear-cut: this is a legitimate SEC filing but it falls outside the archive's focus areas (market structure, macro catalysts). No human judgment needed - auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

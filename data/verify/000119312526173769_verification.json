@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but the correct type should be 'unknown' as this is a corporate governance/CFO change event that does not fit into any specific macro or market structure category in the taxonomy"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a company-specific 8-K filing that is technically accurate but falls outside the archive's focus on market structure and macro catalysts. The record correctly captures the facts from the source (CFO resignation, interim appointment, compensation details) but the why_it_matters field appropriately notes this has no broader market implications. This borderline case requires human decision on whether to archive routine corporate governance filings.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
