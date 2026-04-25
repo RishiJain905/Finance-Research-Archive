@@ -1,0 +1,75 @@
+{
+  "id": "wb_trade_gdp_2026_04_25",
+  "created_at": "2026-04-25T14:14:47.025843+00:00",
+  "status": "rejected",
+  "topic": "not_relevant",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - World Bank Indicator TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-25",
+    "source_type": "data_indicator"
+  },
+  "summary": "The World Bank returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP). This is a null response from the World Bank API indicating the requested data is unavailable, empty, or outside the valid query range.",
+  "key_points": [
+    "No recent valid observations were returned for indicator TG.VAL.TOTL.GD.ZS",
+    "The source contains no actual economic data points or time series",
+    "The snapshot date is 2026-04-25 but no data values are provided",
+    "This source cannot be used for any market structure or macro catalyst analysis"
+  ],
+  "why_it_matters": "This source provides no usable information. It is a null response from the World Bank API indicating that trade/GDP data is not available for the requested parameters. It cannot support any research, analysis, or decision-making. Recommend retrying with adjusted query parameters or discarding this record from the archive.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Not applicable — no data provided to establish any macro context.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "null-response"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - only a null API response indicating no valid observations were returned",
+      "Source provides no useful information for market structure or macro catalyst analysis",
+      "Source is below minimum quality threshold for archival - empty response has no research value",
+      "event_type set to 'unknown' which is appropriate for this null response, but contributes to rejection",
+      "Source attribution URL is empty, which is typical for raw API responses but reduces traceability"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_25.txt",
+  "notes": "Source metadata indicated topic 'global_economy' but content is not relevant to 'market structure' or 'macro catalysts'. The source returned a null response with no actual observations. This record should be flagged as a failed data retrieval rather than a valid research document. Recommend either adjusting query parameters or discarding this record from the archive.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "No actual data content — null response only",
+      "Cannot support any research purpose",
+      "Below quality threshold for RAG archive"
+    ]
+  }
+}

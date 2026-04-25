@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source has no URL - source attribution is incomplete (domain listed but no actual source URL)",
+    "No actual data returned; source is a failed API query with zero informational content",
+    "Source has no archival value - a failed data retrieval with no numbers, no analysis, and no actionable content",
+    "event_type 'unknown' combined with source_type 'data_release_other' is internally inconsistent",
+    "Cannot assess macro catalyst implications when source provides no data to analyze"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank API returned no valid observations for indicator GC.DOD.TOTL.GD.ZS (total public debt as % of GDP) on snapshot date 2026-04-25. This is a failed data retrieval with no usable content—no debt figures, country data, or comparative metrics were returned.",
+    "why_it_matters": "Public debt-to-GDP ratios are critical macro indicators for sovereign risk assessment and fiscal sustainability analysis. However, this source provides no data to support any such analysis.",
+    "macro_context": "The World Bank's public debt indicator GC.DOD.TOTL.GD.ZS tracks sovereign indebtedness globally. The source returned no observations, providing no basis for macro assessment.",
+    "market_structure_context": ""
+  }
+}

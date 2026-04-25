@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - reasonable for raw data series, but the record could reasonably be classified as 'rate_decision' or 'data_release_other' since EFFR observations reflect the current policy rate environment",
+    "Macro context is somewhat speculative - claims rate 'in range established during 2022-2023 hiking cycle' without source support for this historical framing",
+    "Record provides no target range bounds (upper/lower limits) which would add meaningful context for the effective rate of 3.64%"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source and all key numbers match (3.64%, flat over five days, zero change). However, the 'unknown' event_type may be overly conservative - this could validly be treated as a data_release_other or rate-level observation. The quality tier is appropriately marked 'low' given the raw data nature. Human review needed to determine if a bare EFFR snapshot has sufficient archival value given it captures no policy narrative, no historical context on when rate reached this level, and no target range information.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The macro_context field overstates certainty by claiming the rate 'places the current target rate in the range established during the 2022-2023 hiking cycle' without source support. The source only provides current observations, not historical context. Consider removing or qualifying this statement.",
+    "market_structure_context": ""
+  }
+}

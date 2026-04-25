@@ -1,0 +1,95 @@
+{
+  "id": "10y_yield_2026_04_25",
+  "created_at": "2026-04-25T14:11:35.745201+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield (DGS10)",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS10",
+    "published_at": "2026-04-23",
+    "source_type": "data_snapshot",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 10-Year Treasury yield registered at 4.34% on April 23, 2026, up 4 basis points from the prior observation of 4.30% on April 22. Over the observation period (April 17-23), the yield has risen from 4.26% to 4.34%, indicating gradual upward movement.",
+  "key_points": [
+    "10-Year Treasury yield settled at 4.34% on April 23, 2026",
+    "Up 4 basis points from previous close of 4.30% on April 22",
+    "Yield rose from 4.26% level observed April 17-20",
+    "Direction: yield moving upward over the observation period",
+    "Latest observation is 2 days prior to record date (April 25)"
+  ],
+  "why_it_matters": "The 10-year Treasury yield is a benchmark rate that influences mortgage costs, corporate borrowing rates, and risk asset valuations. This observation reflects current market pricing of US fiscal dynamics, inflation expectations, and monetary policy outlook. The move from 4.26% to 4.34% over six days suggests gradual yield steepening, though the source provides no explanation of the drivers behind this move.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      " equities",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "With no accompanying commentary or cross-asset context, the directional implications for rate policy and risk appetite cannot be determined from this data snapshot alone. The 4.34% level reflects current market pricing but the source does not explain whether this move reflects changing inflation expectations, fiscal concerns, or other macro factors.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.34%",
+    "4.30%",
+    "4.26%",
+    "4 bps",
+    "2026-04-23",
+    "2026-04-22",
+    "2026-04-20",
+    "2026-04-17"
+  ],
+  "tags": [
+    "10-year yield",
+    "treasury",
+    "yield curve",
+    "us rates",
+    "macro data",
+    "basis points",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'data_release_other' is technically valid but imprecise for this source - FRED time-series snapshot is not a scheduled economic data release with narrative",
+      "Summary uses 'closed' which is an assumption - source shows 'observation value' not specifically closing yield",
+      "Source provides no drivers or catalyst explanation for the yield move from 4.26% to 4.34%",
+      "Record correctly acknowledges the data alone cannot determine macro implications, but this limits archival value",
+      "why_it_matters section provides generic bond market context rather than source-specific context about why this observation matters"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate against the source data, but represents thin content - raw time-series observations without analytical framing. The source is authoritative (FRED), the numbers are correct, and event_type is valid but imprecise. Human judgment is needed to determine whether standalone yield observations meet archival value thresholds for a macro catalysts archive, or if this should be linked to richer analytical content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_25.txt",
+  "notes": "Thin content: raw time-series data snapshot only. No analytical context, drivers, or commentary provided. Data represents the most recent observation for a single economic indicator without explanation. Archival value is limited without accompanying research or cross-reference to catalysts. The rise from 4.26% to 4.34% over 6 days suggests gradual yield steepening but the source does not explain the cause.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 5,
+    "reasoning": [
+      "Raw quantitative snapshot from FRED time series",
+      "No narrative content or analysis",
+      "Limited standalone archival value for RAG",
+      "Would benefit from linked analytical content"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "36b48c4281a3bc4f8e53d820e67b254e58e355ec"
+}

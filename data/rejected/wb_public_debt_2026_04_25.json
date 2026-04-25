@@ -1,0 +1,77 @@
+{
+  "id": "wb_public_debt_2026_04_25",
+  "created_at": "2026-04-25T14:14:39.497379+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt - No Valid Observations Returned",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-25",
+    "source_type": "data_release_other"
+  },
+  "summary": "The World Bank API returned no valid observations for indicator GC.DOD.TOTL.GD.ZS (total public debt as % of GDP) on snapshot date 2026-04-25. This is a failed data retrieval with no usable content—no debt figures, country data, or comparative metrics were returned.",
+  "key_points": [
+    "No recent valid observations were returned for indicator GC.DOD.TOTL.GD.ZS",
+    "Snapshot date: 2026-04-25",
+    "No country-level, regional, or global aggregate debt figures provided",
+    "Source appears to be a failed API query or database retrieval with no usable content"
+  ],
+  "why_it_matters": "Public debt-to-GDP ratios are critical macro indicators for sovereign risk assessment and fiscal sustainability analysis. However, this source provides no data to support any such analysis.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "equities",
+      "commodities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The World Bank's public debt indicator GC.DOD.TOTL.GD.ZS tracks sovereign indebtedness globally. The source returned no observations, providing no basis for macro assessment.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "data-failure",
+    "no-data",
+    "api-error"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source has no URL - source attribution is incomplete (domain listed but no actual source URL)",
+      "No actual data returned; source is a failed API query with zero informational content",
+      "Source has no archival value - a failed data retrieval with no numbers, no analysis, and no actionable content",
+      "event_type 'unknown' combined with source_type 'data_release_other' is internally inconsistent",
+      "Cannot assess macro catalyst implications when source provides no data to analyze"
+    ],
+    "human_review": {
+      "required": true,
+      "decision": "",
+      "notes": "Low-quality source: no actionable information. Human reviewer should confirm whether to discard or flag for re-query."
+    },
+    "notes": "This record documents a data retrieval failure. The World Bank API returned no valid observations for the public debt indicator. The source is thin to the point of being non-informative—it cannot support any macro analysis, market structure observation, or policy relevance. The topic is set to 'macro catalysts' based on the indicator's subject matter, but the event_type remains 'unknown' as no event occurred. Recommend re-querying the indicator or verifying the indicator code."
+  },
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No numeric data provided",
+      "API returned zero observations",
+      "Cannot extract any market-relevant information",
+      "No publication date for actual data (only snapshot date of failed query)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "notes": ""
+}

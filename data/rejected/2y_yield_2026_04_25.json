@@ -1,0 +1,92 @@
+{
+  "id": "2y_yield_2026_04_25",
+  "created_at": "2026-04-25T14:11:22.455779+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2)",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "published_at": "2026-04-23",
+    "source_type": "data_series",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 2-Year Treasury Yield increased 12 basis points over the week ending April 23, 2026, rising from 3.71% to 3.83%. The most recent daily change was +4 bps on April 23. This is raw market data from FRED with no analyst commentary or causal attribution provided.",
+  "key_points": [
+    "2-Year Treasury Yield as of 2026-04-23: 3.83%",
+    "Prior day (2026-04-22): 3.79% (+0.04 bps daily change)",
+    "Week-over-week change: +12 bps (from 3.71% on 2026-04-17 to 3.83% on 2026-04-23)",
+    "Trend shows consistent daily increases: 3.72% (Apr 20), 3.78% (Apr 21), 3.79% (Apr 22), 3.83% (Apr 23)",
+    "Data source: FRED series DGS2 (constant maturity)",
+    "No narrative or explanation provided for the yield movement"
+  ],
+  "why_it_matters": "The 2-year yield is highly sensitive to near-term Fed rate expectations and serves as a market-based proxy for policy rate expectations over the next 2 years. A 12-bp weekly rise suggests either firming rate-cut expectations being unwound or increasing growth/inflation concerns pricing into the front end of the curve.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx"
+    ],
+    "directional_bias": "risk_off",
+    "confidence": 3
+  },
+  "macro_context": "Rising 2-year yields typically reflect tightening financial conditions and can signal reduced expectations for Fed rate cuts or heightened growth/inflation concerns. The directional bias toward risk-off reflects that higher short-term rates increase borrowing costs and can compress equity valuations.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.83% (latest 2Y yield, 2026-04-23)",
+    "3.79% (prior day, 2026-04-22)",
+    "3.71% (week start, 2026-04-17)",
+    "+0.04 bps (single-day change on 2026-04-23)",
+    "+12 bps (week-over-week change)"
+  ],
+  "tags": [
+    "2-year yield",
+    "treasury",
+    "macro catalyst",
+    "fed expectations",
+    "front-end rates",
+    "yield curve",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is raw time-series market data with no analytical content, causal attribution, or narrative — qualifies as thin/low-signal content per Rule 6",
+      "event_type 'data_release_other' is a misclassification: this is not a scheduled economic data release (CPI, GDP, employment). It is daily market yield data being mechanically updated",
+      "FRED series pages are effectively data feeds/pages, not article-like sources with archival-quality content",
+      "The record itself acknowledges 'This is raw FRED market data, not a processed research article or commentary' and 'Treat as a data point requiring supplementary context'",
+      "quality_tier is 'tier3' with reasoning citing lack of analytical content — inconsistent with an accept/review verdict",
+      "No analyst commentary or causal explanation present in source; cannot determine what drove yield movement"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The issues are clear-cut: (1) source is raw time-series data with no analytical content, (2) event_type is misapplied, (3) the record explicitly identifies the source as thin data requiring supplementary context. No subjective judgment needed."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_25.txt",
+  "notes": "This is raw FRED market data, not a processed research article or commentary. The record captures the quantitative observation but lacks any analytical framing. The yield increase could reflect multiple macro catalysts (inflation data, Fed speakers, employment report) but none are cited. Treat as a data point requiring supplementary context for interpretation. Source type 'data_series' indicates mechanical data feed rather than archival-quality content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier3",
+    "score": 4,
+    "reasoning": [
+      "Raw market data only, no analytical content",
+      "No causal attribution provided",
+      "Missing narrative context around what drove the yield change",
+      "Sufficient for quantitative tracking but limited for macro interpretation"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source returned no valid data - empty result set provides no actionable information",
+    "Source attribution is missing: URL is empty, published_at is empty, source_type is empty, domain is empty",
+    "Record cannot serve archival purpose - no data or content to preserve",
+    "Source is a failed data query response, not an article-like source with research value",
+    "event_type set to 'unknown' is appropriate given no data released, but this confirms record has no value",
+    "No macro catalyst or market-relevant content can be extracted"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is accurate to the source but source itself is not archive-worthy. No data retrieval with zero observations cannot support any research or market analysis purpose.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

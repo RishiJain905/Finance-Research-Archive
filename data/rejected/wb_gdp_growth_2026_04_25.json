@@ -1,0 +1,76 @@
+{
+  "id": "wb_gdp_growth_2026_04_25",
+  "created_at": "2026-04-25T14:13:41.922642+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World GDP Growth Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-25",
+    "source_type": ""
+  },
+  "summary": "The World Bank indicator NY.GDP.MKTP.KD.ZG (World GDP Growth Rate) returned no valid observations as of the 2026-04-25 snapshot. The data query failed to produce any usable GDP growth figures.",
+  "key_points": [
+    "Indicator NY.GDP.MKTP.KD.ZG returned no valid observations for snapshot date 2026-04-25",
+    "Source is a direct data query result with no actual values provided",
+    "No country-specific, regional, or global GDP growth rates are available from this source",
+    "Snapshot date (2026-04-25) indicates current data was attempted but unavailable"
+  ],
+  "why_it_matters": "This source cannot be used for macro catalyst analysis as it contains no actual GDP growth data. Any research relying on this indicator for global economic context or comparative growth analysis will lack the underlying figures.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp-growth",
+    "no-data",
+    "indicator-query",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a failed data query with no valid observations - contains zero informational content",
+      "No macro catalyst or market-relevant information can be extracted",
+      "Source has no archival value; archiving a null result serves no research purpose",
+      "Topic mismatch per CORE RULES: metadata specifies 'global_economy' which is outside core focus areas (market structure, macro catalysts)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "While human review was initially flagged, the record accurately describes a failed data pull. The verdict is clear: a null result from a data query is not archivable content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_25.txt",
+  "notes": "Source is a failed World Bank data query with no valid observations. The indicator NY.GDP.MKTP.KD.ZG (World GDP GDP Growth Rate) returned empty results for snapshot date 2026-04-25. This source provides no usable information for market structure or macro catalyst analysis. Note that the provided topic 'global_economy' falls outside the core focus areas of this archive (market structure, macro catalysts). Archive as non-archivable until valid GDP growth observations are available.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "fail",
+    "score": 0,
+    "reasoning": [
+      "No valid data observations returned from World Bank API query",
+      "Source is a data infrastructure failure rather than informational content",
+      "Cannot extract any market-relevant facts or macro figures",
+      "Zero utility for research archive purposes"
+    ]
+  }
+}

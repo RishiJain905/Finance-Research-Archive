@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'data_release_other' is technically valid but imprecise for this source - FRED time-series snapshot is not a scheduled economic data release with narrative",
+    "Summary uses 'closed' which is an assumption - source shows 'observation value' not specifically closing yield",
+    "Source provides no drivers or catalyst explanation for the yield move from 4.26% to 4.34%",
+    "Record correctly acknowledges the data alone cannot determine macro implications, but this limits archival value",
+    "why_it_matters section provides generic bond market context rather than source-specific context about why this observation matters"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source data, but represents thin content - raw time-series observations without analytical framing. The source is authoritative (FRED), the numbers are correct, and event_type is valid but imprecise. Human judgment is needed to determine whether standalone yield observations meet archival value thresholds for a macro catalysts archive, or if this should be linked to richer analytical content.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 10-Year Treasury yield registered at 4.34% on April 23, 2026, up 4 basis points from the prior observation of 4.30% on April 22. Over the observation period (April 17-23), the yield has risen from 4.26% to 4.34%, indicating gradual upward movement.",
+    "why_it_matters": "The 10-year Treasury yield is a benchmark rate that influences mortgage costs, corporate borrowing rates, and risk asset valuations. This observation reflects current market pricing of US fiscal dynamics, inflation expectations, and monetary policy outlook. The move from 4.26% to 4.34% over six days suggests gradual yield steepening, though the source provides no explanation of the drivers behind this move.",
+    "macro_context": "With no accompanying commentary or cross-asset context, the directional implications for rate policy and risk appetite cannot be determined from this data snapshot alone. The 4.34% level reflects current market pricing but the source does not explain whether this move reflects changing inflation expectations, fiscal concerns, or other macro factors.",
+    "market_structure_context": ""
+  }
+}

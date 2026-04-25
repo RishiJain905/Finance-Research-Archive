@@ -1,0 +1,85 @@
+{
+  "id": "fed_funds_2026_04_25",
+  "created_at": "2026-04-25T14:10:16.907178+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Effective Federal Funds Rate (DFF) — Daily Observation",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DFF",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-25",
+    "source_type": "data_series"
+  },
+  "summary": "The Effective Federal Funds Rate (EFFR) stood at 3.64% as of April 23, 2026, unchanged from the prior observation on April 22. The rate has remained flat at 3.64% across the five trading days from April 19 through April 23, 2026, indicating stable overnight funding conditions in the federal funds market.",
+  "key_points": [
+    "EFFR recorded at 3.64% on 2026-04-23 (latest observation)",
+    "Rate unchanged at 3.64% from prior day (2026-04-22); zero change",
+    "Consistent reading of 3.64% observed across April 19–23, 2026 (five consecutive trading days)",
+    "Source is raw FRED data series (DFF), not an official Fed announcement"
+  ],
+  "why_it_matters": "The EFFR is the key policy rate benchmark for short-term funding markets. A flat reading at 3.64% over five consecutive days suggests the Fed's target rate is holding steady and overnight funding conditions are stable. This data point confirms the current monetary policy stance without signaling any change.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The macro_context field overstates certainty by claiming the rate 'places the current target rate in the range established during the 2022-2023 hiking cycle' without source support. The source only provides current observations, not historical context. Consider removing or qualifying this statement.",
+  "market_structure_context": "The EFFR is the weighted average rate at which overnight funds are traded between depository institutions in the federal funds market. Five consecutive flat readings at 3.64% reflect a stable overnight rate environment consistent with the current federal funds target range.",
+  "important_numbers": [
+    "3.64%",
+    "5 (consecutive flat trading days: April 19–23, 2026)",
+    "0 (absolute change day-over-day)"
+  ],
+  "tags": [
+    "effr",
+    "fed-funds",
+    "monetary-policy",
+    "short-term-rates",
+    "overnight-funding",
+    "rate-level"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type set to 'unknown' - reasonable for raw data series, but the record could reasonably be classified as 'rate_decision' or 'data_release_other' since EFFR observations reflect the current policy rate environment",
+      "Macro context is somewhat speculative - claims rate 'in range established during 2022-2023 hiking cycle' without source support for this historical framing",
+      "Record provides no target range bounds (upper/lower limits) which would add meaningful context for the effective rate of 3.64%"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate against the source and all key numbers match (3.64%, flat over five days, zero change). However, the 'unknown' event_type may be overly conservative - this could validly be treated as a data_release_other or rate-level observation. The quality tier is appropriately marked 'low' given the raw data nature. Human review needed to determine if a bare EFFR snapshot has sufficient archival value given it captures no policy narrative, no historical context on when rate reached this level, and no target range information."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/fed_funds_2026_04_25.txt",
+  "notes": "Source is a FRED data series snapshot rather than a policy announcement, commentary, or economic release. It captures the latest daily EFFR observation only. The source provides no historical context (when rate reached 3.64%), no target range bounds, and no narrative. Confirmed relevance to macro catalysts via TARGET metadata. Classified as 'unknown' event type because raw data series does not fit the taxonomy of policy decisions, speeches, data releases, or market operations notices. Confidence at 5 due to factual precision of quoted numbers but limited analytical value of the record.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Raw data point only — no policy content, commentary, or analytical framing",
+      "FRED snapshot provides minimal context beyond the rate value itself",
+      "Five-day flat observation confirms stability but offers no market-moving information",
+      "Relevance to macro catalysts is indirect (rate level only)"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "94889a576170544dbf89c1535c6b4cc365471f64"
+}

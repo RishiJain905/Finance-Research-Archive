@@ -1,0 +1,91 @@
+{
+  "id": "iorb_2026_04_25",
+  "created_at": "2026-04-25T14:10:16.907075+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Interest on Reserve Balances (IORB) — Current Rate",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/IORB",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-25",
+    "source_type": "data_release"
+  },
+  "summary": "The Interest on Reserve Balances (IORB) rate stands at 3.65% as of April 27, 2026, unchanged from the prior observation on April 26. The rate has remained flat at 3.65% across all observed dates from April 23–27, 2026, indicating stable Fed policy settings in the current observation window.",
+  "key_points": [
+    "IORB current rate: 3.65% (2026-04-27)",
+    "IORB previous rate: 3.65% (2026-04-26)",
+    "Absolute change: 0 (flat) over the observed period",
+    "Rate has been flat at 3.65% from April 23–27, 2026 (5 consecutive observations)",
+    "IORB is the interest rate the Federal Reserve pays on reserves held by depository institutions at Fed banks",
+    "IORB serves as the primary policy rate tool in the current Fed operating framework, setting the floor for the federal funds rate"
+  ],
+  "why_it_matters": "IORB is the key policy rate in the Fed's current operating framework, directly influencing banks' cost of capital and incentive to lend or hold reserves. A flat IORB indicates the Fed is maintaining its current policy stance without signaling imminent rate changes. This rate directly impacts short-term funding markets, money market fund yields, and repo market dynamics, making it essential for monitoring monetary policy direction and market liquidity conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "repo",
+      "money_market_funds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 8
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB functions as the floor rate in the Fed's interest-on-reserves regime, which began post-2008 financial crisis. When the Fed raised rates in the 2022–2023 cycle, IORB moved in lockstep with the federal funds rate target, making it the primary operational target. Banks have less incentive to lend in the fed funds market below IORB, effectively anchoring short-term rates and influencing repo market dynamics. The stability of IORB at 3.65% suggests no pending changes to the Fed's monetary policy operations or balance sheet management approach.",
+  "important_numbers": [
+    "3.65%",
+    "2026-04-27",
+    "0 (flat change)"
+  ],
+  "tags": [
+    "interest-on-reserve-balances",
+    "iorb",
+    "fed-policy-rate",
+    "reserve-balances",
+    "monetary-policy",
+    "fed-operating-framework",
+    "short-term-rates"
+  ],
+  "llm_review": {
+    "initial_confidence": 9,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'balance_sheet_update' is misclassified; IORB is a policy rate indicator, not a balance sheet operation. A more accurate type would be 'rate_decision' (if tracking a decision) or 'data_release_other' (for ongoing rate monitoring). 'balance_sheet_update' implies Fed asset purchase/sell operations or reserve balance level changes.",
+      "The record's analytical depth (why_it_matters, market_structure_context) is derived from the LLM rather than the source text, which only provides raw numerical data. This is acceptable for a 'reference' tier but worth noting."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Event type misclassification (balance_sheet_update vs rate decision/data release) requires human judgment to correct. The factual data is accurate and well-supported, and the LLM-generated context is reasonable, but the taxonomy classification needs verification."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_25.txt",
+  "notes": "Source is a direct data observation from FRED (Federal Reserve Economic Data), providing authoritative daily IORB values. This is recent data (snapshot date 2026-04-25, latest observation 2026-04-27), making it a current reference for Fed policy rates. The data is thin in that it only shows the current rate without additional context (e.g., no vote tally, no statement, no forward guidance). However, as a data series observation, it is reliable and directly relevant to market structure monitoring. The flat rate over 5 days confirms stable Fed policy at this point in time.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reference",
+    "score": 8,
+    "reasoning": [
+      "Data series observation from authoritative Fed source (FRED)",
+      "Recent and current (TODAY matches snapshot date)",
+      "Clear and unambiguous numerical values",
+      "Limited in analytical depth (raw data only, no commentary)",
+      "Highly relevant to market structure monitoring",
+      "IORB is a core policy rate directly tied to Fed operations"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "0bb3ae1e8f8b0ec22da0404e99409c09077f41f6"
+}

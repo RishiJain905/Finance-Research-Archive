@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'balance_sheet_update' is misclassified; IORB is a policy rate indicator, not a balance sheet operation. A more accurate type would be 'rate_decision' (if tracking a decision) or 'data_release_other' (for ongoing rate monitoring). 'balance_sheet_update' implies Fed asset purchase/sell operations or reserve balance level changes.",
+    "The record's analytical depth (why_it_matters, market_structure_context) is derived from the LLM rather than the source text, which only provides raw numerical data. This is acceptable for a 'reference' tier but worth noting."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Event type misclassification (balance_sheet_update vs rate decision/data release) requires human judgment to correct. The factual data is accurate and well-supported, and the LLM-generated context is reasonable, but the taxonomy classification needs verification.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "wb_inflation_2026_04_25",
+  "created_at": "2026-04-25T14:13:51.165800+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Inflation Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "The World Bank inflation indicator (FP.CPI.TOTL.ZG) query returned no valid observations as of the 2026-04-25 snapshot date. No data was retrieved.",
+  "key_points": [
+    "World Bank indicator FP.CPI.TOTL.ZG query returned zero valid observations.",
+    "Snapshot date: 2026_04_25.",
+    "No inflation data available for any country or region.",
+    "Source provides no actionable macro data."
+  ],
+  "why_it_matters": "No macro catalyst or market-relevant data could be extracted. The source fails to deliver the inflation data it ostensibly targets, making it non-actionable for research or trading purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "global-economy",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source returned no valid data - empty result set provides no actionable information",
+      "Source attribution is missing: URL is empty, published_at is empty, source_type is empty, domain is empty",
+      "Record cannot serve archival purpose - no data or content to preserve",
+      "Source is a failed data query response, not an article-like source with research value",
+      "event_type set to 'unknown' is appropriate given no data released, but this confirms record has no value",
+      "No macro catalyst or market-relevant content can be extracted"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is accurate to the source but source itself is not archive-worthy. No data retrieval with zero observations cannot support any research or market analysis purpose."
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_25.txt",
+  "notes": "Source metadata indicates TOPIC: global_economy and TARGET: World Inflation Rate, but the actual body contains only a failure message. No valid observations were returned for indicator FP.CPI.TOTL.ZG. This is not relevant to the mandate topics of market structure or macro catalysts. The page appears to be a data API response or table that failed to load. Low quality source with no extractable content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "null",
+    "score": 0,
+    "reasoning": [
+      "No valid data returned from source",
+      "Source provides no actionable information",
+      "Cannot be used for research or RAG purposes"
+    ]
+  }
+}
