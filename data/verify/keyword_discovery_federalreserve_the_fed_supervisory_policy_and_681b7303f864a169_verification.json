@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per metadata and content analysis - Rule 5 mandates rejection for listing pages",
+    "No substantive content: page is a static index/directory cataloging existing regulatory documents",
+    "No market-moving information, policy decisions, or analytical content present",
+    "Not directly relevant to market structure (trading operations/market infrastructure) as defined in task scope",
+    "Published_at date (2026-04-20) reflects page update timestamp, not publication of any specific document",
+    "event_type 'regulatory_guidance' is technically valid but misleading - page does not present guidance, only links to it"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source type is unambiguous listing page; Rule 5 requires automatic rejection regardless of human review",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but could reasonably be 'research_paper' or 'economic_commentary' as an official government document, though the taxonomy lacks a perfect fit for government budget documents",
+    "Source content is truncated; only table of contents and executive summary visible, limiting full verification of document depth",
+    "Document is a government administrative budget request with tangential relevance to market structure topic; provides organizational/budgetary data rather than market analysis or policy guidance",
+    "No market-moving content, policy signals, or analytical insights present in the source",
+    "Source published May 2025 (approximately 11.5 months prior to TODAY); older than 90 days threshold"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record accurately captures the truncated source content and honestly acknowledges the document's low relevance to market structure research. However, human review is warranted because: (1) event_type classification is questionable and needs human judgment on whether 'unknown' is appropriate given the taxonomy lacks a government-budget category, (2) the source is relevant as baseline reference for CFTC regulatory scope but is thin for market structure analysis purposes, and (3) the decision to accept/reject depends on whether administrative budget documents have sufficient archival value for this archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The CFTC FY 2026 budget request totals $410.0 million and 650 full-time equivalent (FTE) positions, representing a 12.3 percent increase above the FY 2025 enacted budget. This is a government administrative budget document outlining agency resources and organizational structure across divisions including Enforcement, Market Oversight, Clearing and Risk, and Market Participants Division. The document provides baseline operational data about registered market entities (SEFs, DCMs, DCOs, FCMs, SDRs) for budgetary purposes. [Source is truncated; full content not available for review.]",
+    "why_it_matters": "This CFTC budget document provides baseline reference information on agency resources and operational scope for understanding derivatives market oversight infrastructure. However, it does not contain policy analysis, regulatory proposals, or market structure insights. It serves as an administrative record of agency budgeting rather than a market structure or macro catalyst document. The document may have historical value for understanding CFTC resource allocation but offers no actionable market intelligence.",
+    "macro_context": "Published May 2025, this budget request represents the CFTC's funding proposal for FY 2026 under the current administration. It reflects the agency's operational priorities and resource allocation across market oversight functions. The 12.3% budget increase request indicates expanded agency capacity for derivatives market regulation.",
+    "market_structure_context": "The document contains administrative data about registered market entities (Swap Execution Facilities, Designated Contract Markets, Derivatives Clearing Organizations, Futures Commission Merchants, Swap Data Repositories) for operational and budgetary purposes. Figures include entity counts, contract volumes, notional values, and margin requirements. This data serves agency resource planning rather than providing market structure analysis or trading insights."
+  }
+}
