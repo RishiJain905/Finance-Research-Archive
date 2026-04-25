@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - while technically valid per taxonomy, this 8-K filing could more precisely be classified as a corporate governance event if the archive intends to capture such filings",
+    "Topic is explicitly 'not_applicable' which aligns with the assessment of low relevance",
+    "The record is accurate and well-constructed for what it documents, but source relevance to archive focus areas (market structure, macro catalysts) is zero"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record accurately represents an SEC 8-K filing containing routine corporate governance voting results. The source content is factually correct and properly documented. However, the source has no relevance to market structure or macro catalysts (the archive's stated focus areas). The generated record correctly identifies this as 'irrelevant' with quality_tier 'irrelevant'. The decision hinges on whether the archive should include accurate records of irrelevant sources or exclude them entirely. This is a policy judgment that requires human review.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate governance filing for Whirlpool Corporation, a consumer appliances manufacturer. It contains no information relevant to market structure or macro catalysts. The voting results are standard annual meeting disclosures with no unusual outcomes or policy implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

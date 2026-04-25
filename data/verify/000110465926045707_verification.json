@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source URL mismatch: Record cites '000110465926045706' but source metadata and content confirm the correct URL is '000110465926045707'. This is a critical attribution error.",
+    "event_type is set to 'unknown' but this is a corporate M&A announcement with no relevance to the provided taxonomy categories (monetary policy, speeches, data releases, Treasury/operations, research). The event type is incorrectly classified.",
+    "topic field is set to 'macro catalysts' but the record itself acknowledges the source is not relevant to macro catalysts, Fed policy, or market structure. Topic is inconsistent with content.",
+    "Source is a regional bank M&A announcement, which is outside the scope of market structure or macro catalysts research as defined in the archive mandate.",
+    "No macro market signals, Fed policy content, interest rate data, or market structure implications in this filing."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Critical URL mismatch error and clear out-of-scope determination make automatic rejection appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

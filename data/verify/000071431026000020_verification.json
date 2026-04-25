@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when the correct type is clearly 'data_release_other' (earnings announcement from a financial institution)",
+    "Record correctly identifies this as non-archivable for a market structure/macro catalyst research archive",
+    "verification_confidence in llm_review is 0 (placeholder value not properly calculated)"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is correctly classified as non-archivable for a finance research archive focused on market structure and macro catalysts. However, the event_type should not be 'unknown'—it should be 'data_release_other' per taxonomy rules. The human_review.notes are accurate and complete. Auto-routing is appropriate but human confirmation would validate the non-archivable conclusion.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Valley National Bancorp filed a Form 8-K on April 23, 2026, announcing Q1 2026 financial results via press release (Exhibit 99.1) and presenting investor materials (Exhibit 99.2). The filing is furnished under Items 2.02 and 7.01 of Regulation FD, indicating non-material, informational disclosure rather than a filing subject to Section 18 liabilities.",
+    "why_it_matters": "This is a routine corporate earnings disclosure from a single regional bank. It has no relevance to broader market structure or macro catalysts. The filing does not contain information about monetary policy, interest rates, Treasury operations, or systemic market dynamics. Appropriate for corporate finance research but not for an archive focused on macro catalysts and market structure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

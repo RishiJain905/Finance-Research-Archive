@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but should be 'data_release_other' since this is a quarterly earnings data release",
+    "topic field is empty - should reflect 'corporate earnings' or similar",
+    "Source relevance is correctly flagged as outside scope, but record is still technically accurate and well-structured"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate and well-constructed. The scope mismatch (corporate earnings vs. market structure/macro catalysts) is correctly identified, making this a straightforward review case.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Covenant Logistics Group, Inc. filed a Form 8-K with the SEC on April 23, 2026, disclosing Q1 2026 financial and operating results via Item 2.02. This is a routine corporate earnings disclosure from a logistics company trading on NYSE under symbol CVLG.",
+    "why_it_matters": "This source is not relevant to market structure or macro catalysts. It is a routine corporate earnings release from a mid-cap logistics company and does not contain information about central bank policy, market operations, economic data releases, or structural market elements.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

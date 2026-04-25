@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is incorrect for an executive resignation 8-K. This is a mandatory corporate disclosure (Item 5.02), not regulatory guidance. The source itself provides no evidence of guidance or policy direction.",
+    "topic set to 'not_relevant' which conflicts with the archive focus, yet the record was still submitted for review rather than rejected.",
+    "Event type misclassification makes it difficult to properly categorize even if other fields are accurate."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The summary and key_points accurately reflect the source content, and the notes correctly identify this as company-specific with no macro relevance. However, event_type is mislabeled as 'regulatory_guidance' when it should be 'unknown' or a more appropriate category. The record also shows internal inconsistency—topic is 'not_relevant' but status is 'review_queue'. Human review needed to either correct the event_type and accept with appropriate scope note, or formally reject as outside archive focus.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Joby Aviation, Inc. filed an 8-K on April 20, 2026 disclosing that Didier Papadapoulos, President of Aircraft OEM, will resign effective July 3, 2026 to spend time with family and pursue personal interests. The company stated the resignation is not related to any disagreement or dispute. Mr. Papadapoulos will provide ongoing advisory services to the company.",
+    "why_it_matters": "This is a routine corporate governance disclosure. Executive departures at early-stage aerospace companies can signal strategic shifts or operational challenges, though the company explicitly denies any negative context. Not relevant to macro market analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is entirely empty - no summary, key_points, or any content fields populated",
+    "Source attribution fields (name, url, domain) are all blank",
+    "event_type is missing from the record entirely",
+    "source_type is missing from the record",
+    "published_at is missing from the record",
+    "No topic, why_it_matters, macro_context, or market_structure_context provided",
+    "No market_impact, important_numbers, or tags populated",
+    "The source is an SEC 8-K corporate governance filing, which is a regulatory disclosure document rather than an article with analytical content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is completely empty with no content generated whatsoever. This appears to be a failure case where no research synthesis was produced from the source. The source itself is a valid SEC 8-K filing regarding board changes at Aircastle Limited (two resignations, two new Marubeni-nominated directors appointed), but the record fails to capture any of this information. Additionally, source attribution is missing entirely.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Aircastle Limited filed an 8-K disclosing board changes effective April 16, 2026. Two directors (Takayuki Sakakida, Chairman since April 2024, and Takashi Tsunoda) resigned. Two new directors nominated by Marubeni Corporation were appointed: Tomoaki Ogasawara (who became Chairman, previously Managing Director of Total Engine Asset Management, a Marubeni-ST Engineering joint venture) and Satoshi Irie (currently General Manager of Marubeni's Asset Finance Department). Both new directors are graduates of Hitotsubashi University and will not receive compensation from the Company for board service.",
+    "why_it_matters": "The replacement of two board members (including the Chairman) with Marubeni-nominated directors may signal increased Japanese parent influence over the aircraft leasing company, potentially affecting strategic priorities and investor relations.",
+    "macro_context": "Aircastle is a major aircraft leasing company. Board composition changes at leasing firms can reflect broader trends in aviation finance and Japanese corporate engagement in global aviation markets.",
+    "market_structure_context": "Corporate governance changes at an aircraft leasing company are relevant for fixed income and equity investors holding Aircastle debt or equity. The involvement of Marubeni (a major trading house) suggests continued Japanese institutional backing of aviation leasing operations."
+  }
+}

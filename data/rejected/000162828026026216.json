@@ -1,0 +1,77 @@
+{
+  "id": "000162828026026216",
+  "created_at": "2026-04-25T19:32:55.129206+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Aircastle LTD 10-K Filing — 2026-04-21",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1362988/000162828026026216/ayr-20260228.htm",
+    "published_at": "2026-04-21",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Aircastle LTD filed its annual 10-K report for fiscal year ending February 28, 2026. The filing consists primarily of XBRL (eXtensible Business Reporting Language) structured data tags covering standard financial statement elements including stockholder equity, fair value measurements, and debt disclosures. The company is an aircraft leasing firm holding passenger and freighter aircraft assets.",
+  "key_points": [
+    "Aircastle LTD is an aircraft leasing company (CIK: 0001362988)",
+    "Fiscal year end: February 28, 2026",
+    "Filing date: April 14, 2026 (document date) / April 21, 2026 (available date)",
+    "The source content is primarily XBRL financial data tags, not narrative disclosure",
+    "Financial elements include Common Stock, Preferred Stock, Additional Paid-In Capital, Retained Earnings",
+    "Asset categories mentioned: Passenger Aircraft, Freighter Aircraft, Flight Equipment under operating leases"
+  ],
+  "why_it_matters": "This is a corporate annual report for a single aircraft leasing company. It contains no information relevant to broad market structure (market operations, plumbing, institutional frameworks) or macro catalysts (central bank policy, economic data releases, geopolitical events). The filing has no implications for monetary policy, rate expectations, or systemic market dynamics.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-k",
+    "aircraft-leasing",
+    "corporate-finance",
+    "annual-report"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type set to 'unknown' - should be 'research_paper' for a corporate filing if it were in scope",
+      "Source content is almost entirely XBRL structured data tags with no substantive narrative",
+      "10-K filing for a single aircraft leasing company has no relevance to market structure or macro catalysts as defined by the archive",
+      "Corporate financial statements are out of scope for this archive focused on market operations and macro catalysts"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record correctly identifies this source as out of scope. No human review needed - the assessment is straightforward: a corporate 10-K filing for an aircraft leasing company does not contain information relevant to market structure or macro catalysts, and the source content is primarily machine-readable XBRL data rather than human-readable narrative."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000162828026026216.txt",
+  "notes": "This source is OUT OF SCOPE for the finance research archive. The focus areas are market structure and macro catalysts. This 10-K filing for Aircastle LTD (an aircraft leasing company) is a corporate financial statement, not relevant to central bank policy, interest rates, market operations, economic data releases, or financial system structure. The source consists largely of XBRL structured data tags rather than substantive narrative content. Recommend exclusion from the archive unless specific Aircastle company research is desired.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "out_of_scope",
+    "score": 1,
+    "reasoning": [
+      "Source is a corporate 10-K filing, not a macro or market structure document",
+      "XBRL-heavy content limits human-readable information extraction",
+      "No relevance to stated archive focus areas"
+    ]
+  }
+}

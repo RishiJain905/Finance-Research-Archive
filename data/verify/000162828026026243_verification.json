@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when 'data_release_other' would be appropriate for a quarterly earnings release",
+    "Record correctly notes out-of-scope for market structure/macro catalyst focus but this should be a proactive rejection rather than review_queue placement"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate and well-supported by source. The out-of-scope determination is correct - this is a corporate earnings release with no market structure or macro catalyst content. The decision to place in review_queue appears to be an error; per CORE RULE 6, thin low-signal sources bias toward reject, and per the archive's stated focus, this should be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Aircastle Limited, a commercial aircraft leasing company, reported Q4 fiscal 2025 net income of $57 million on total revenues of $251 million, and full-year net income of $194 million, up 57% from fiscal 2024. The company acquired 46 aircraft for $1.7 billion during the year and raised $1.25 billion in new financings, including a $650 million unsecured senior note issuance and $600 million unsecured term loan.",
+    "why_it_matters": "This is a corporate earnings release from a single aircraft leasing company. While it provides company-specific financial and operational data, it does not address broader market structure dynamics or macro market catalysts. The source is relevant only for aircraft leasing sector analysis or company-specific investment research, not for the archive's targeted focus areas of market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

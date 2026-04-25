@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type set to 'unknown' - should be 'research_paper' for a corporate filing if it were in scope",
+    "Source content is almost entirely XBRL structured data tags with no substantive narrative",
+    "10-K filing for a single aircraft leasing company has no relevance to market structure or macro catalysts as defined by the archive",
+    "Corporate financial statements are out of scope for this archive focused on market operations and macro catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies this source as out of scope. No human review needed - the assessment is straightforward: a corporate 10-K filing for an aircraft leasing company does not contain information relevant to market structure or macro catalysts, and the source content is primarily machine-readable XBRL data rather than human-readable narrative.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Aircastle LTD filed its annual 10-K report for fiscal year ending February 28, 2026. The filing consists primarily of XBRL (eXtensible Business Reporting Language) structured data tags covering standard financial statement elements including stockholder equity, fair value measurements, and debt disclosures. The company is an aircraft leasing firm holding passenger and freighter aircraft assets.",
+    "why_it_matters": "This is a corporate annual report for a single aircraft leasing company. It contains no information relevant to broad market structure (market operations, plumbing, institutional frameworks) or macro catalysts (central bank policy, economic data releases, geopolitical events). The filing has no implications for monetary policy, rate expectations, or systemic market dynamics.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
