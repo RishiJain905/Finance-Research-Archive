@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine 8-K filing with no substantive content in the body - exhibits (press release, presentation) are referenced but not included",
+    "Not relevant to market structure or macro catalysts - this is a single mid-size regional bank's quarterly earnings notification",
+    "No financial data, narrative, or market-moving information present in the filing itself",
+    "event_type set to 'unknown' is technically correct as no taxonomy value applies, but also indicates the source lacks relevance to target topics"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Low-quality source for the target use case. Record correctly identifies the filing as routine with no macro signal. Clear reject based on lack of relevance to market structure/macro catalysts and thin content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Cathay General Bancorp filed an 8-K with the SEC on April 22, 2026, disclosing Q1 2026 financial results via Item 2.02 and announcing a conference call for the same day. The filing references a press release (Exhibit 99.1) and presentation materials (Exhibit 99.2) but does not include the actual financial figures or substantive content in this filing.",
+    "why_it_matters": "This is a routine corporate disclosure from a mid-size regional bank. It does not contain market-moving information or macro-level data. The substantive Q1 2026 financial results are in the referenced press release (Exhibit 99.1), which is not included in this 8-K body.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

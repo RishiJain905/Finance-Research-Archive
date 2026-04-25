@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but should be a valid taxonomy value; however, none of the taxonomy options directly fit an SEC 8-K filing about an ABS indenture waiver",
+    "Record accurately reflects the source content but the archival value determination is correct: this is a company-specific filing with no market structure or macro catalyst relevance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and well-structured. The human review notes correctly identify this as out of scope for market structure/macro focus. Minor issue is event_type 'unknown' but this reflects a taxonomy gap rather than an error.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

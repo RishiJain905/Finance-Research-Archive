@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a corporate 8-K for a homebuilder's credit agreement modification",
+    "event_type is 'unknown' which, while technically valid, confirms the source doesn't map to any recognized event category",
+    "topic correctly classified as 'not-relevant' but the record should not be archived given lack of relevance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-formed and factually accurate, but the source is a corporate SEC filing for Tri Pointe Homes (a homebuilder) amending its credit facility for a merger. This has no relevance to market structure, monetary policy, interest rates, Treasury markets, or macro catalysts. The archive's stated focus areas are not served by this document.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

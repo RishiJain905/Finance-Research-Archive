@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is set to 'economic_commentary' but the source is an SEC Form 8-K corporate filing, not economic commentary",
+    "Source is NOT relevant to market structure or macro catalysts as defined in archive scope - this is a routine corporate earnings disclosure from an insurance company",
+    "verification_confidence field shows 0 instead of a valid 0-10 integer",
+    "quality_tier correctly identifies out_of_scope but the record should not have been generated for an out-of-scope source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is correctly identified as out_of_scope by the record itself, but the record still proceeds to fill out all fields and assigns it a topic of 'macro catalysts' when the human notes explicitly state 'NOT relevant to market structure or macro catalysts'. The event_type is misclassified. The record should be rejected and not archived.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "OUT OF SCOPE - This SEC Form 8-K filing from Corebridge Financial contains only preliminary Q1 2026 earnings information and merger-related disclosures. The source has NO relevance to market structure (no market operations, plumbing, or trading mechanics discussed) and NO relevance to macro catalysts (no Fed policy, central bank communications, or macroeconomic data). This should not be included in a finance research archive focused on market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

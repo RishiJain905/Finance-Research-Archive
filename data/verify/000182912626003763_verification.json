@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Event type is 'unknown' - while no taxonomy value perfectly fits a SPAC IPO filing, 'data_release_other' or similar could apply if treating as market event",
+    "Source scope question: Archive focus appears to be macro catalysts and market structure; routine SPAC IPOs typically have negligible market impact",
+    "The record itself acknowledges 'no relevance to macro catalysts or market structure' but was still generated and placed in review_queue rather than rejected"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate with correct numbers and proper source attribution, but the archive scope (market structure, macro catalysts) is unclear. A $100M SPAC IPO has no discernible macro impact, yet the filing is a valid SEC document with precise financial data. Human should decide whether routine corporate filings (even accurate ones) belong in the archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "QuasarEdge Acquisition Corporation, a Cayman Islands-domiciled SPAC, completed its IPO on April 16, 2026, raising $100 million through the sale of 10 million units at $10 each, along with a $2.7 million private placement to its sponsor Aspira Capital Consulting LTD. Total proceeds of $100.5 million were placed in a trust account for the benefit of public shareholders.",
+    "why_it_matters": "Routine SPAC IPO filing. The $100M trust represents a small blank-check company raise with no discernible impact on credit markets, equity flows, or broader capital markets. SPAC IPOs as an asset class have waned in market relevance since peak 2020-2021 activity. This filing documents corporate formation, not a market-moving event.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
