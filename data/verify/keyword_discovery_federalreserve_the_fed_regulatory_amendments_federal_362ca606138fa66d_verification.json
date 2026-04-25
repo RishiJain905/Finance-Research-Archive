@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation_page per rule #5 - reject required",
+    "event_type is 'unknown' but correct type is 'rate_decision' (series of rate changes) or 'market_notice' - should not be unknown",
+    "Source is a listing/index page containing only meta-information about amendments, not the actual notices",
+    "Individual rate decisions (values, timing) exist only in linked PDFs, not in this source",
+    "No single published_at date exists for the page as a whole",
+    "Empty published_at field fails source attribution requirements",
+    "Page has no original analytical content - it's purely an index"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection per rule #5: navigation_page page type. This is a directory/index of Fed regulatory amendments, not a single archiveable document. Individual rate decision notices (PDFs) would need to be extracted separately.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This is a Federal Reserve navigation page listing historical regulatory amendments related to primary and secondary credit rate changes at Federal Reserve Banks, spanning from 2008 to December 2025. The page is not a single archiveable document but rather a chronological index of individual notices documenting rate increases and decreases.",
+    "why_it_matters": "This page serves as an authoritative index for Fed discount window rate history. However, it contains no new analytical content and individual rate decisions must be accessed via linked PDFs.",
+    "market_structure_context": "This page documents historical changes to the Fed's primary credit (discount window) rate and secondary credit rate. These rates are part of the Fed's lending facilities that serve as backstops to the banking system."
+  }
+}

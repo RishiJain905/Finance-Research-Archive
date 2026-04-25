@@ -1,0 +1,83 @@
+{
+  "id": "keyword_discovery_federalreserve_the_fed_regulatory_amendments_federal_362ca606138fa66d",
+  "created_at": "2026-04-25T08:43:04.932060+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Regulatory Amendments - Federal Reserve",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/supervisionreg/reghist.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "",
+    "source_type": "navigation_page"
+  },
+  "summary": "This is a Federal Reserve navigation page listing historical regulatory amendments related to primary and secondary credit rate changes at Federal Reserve Banks, spanning from 2008 to December 2025. The page is not a single archiveable document but rather a chronological index of individual notices documenting rate increases and decreases.",
+  "key_points": [
+    "The page lists amendments to the Fed's primary and secondary credit rates dating from 2008 to late 2025",
+    "Most recent amendments documented: rate decreases effective December 19, 2025, November 14, 2025, October 2, 2025, and January 15, 2025",
+    "Historical rate increases documented from 2022-2023 as the Fed tightened policy",
+    "The listing also includes technical amendments such as the TALF program expiration (effective June 8, 2018)",
+    "Emergency lending procedure amendments (effective January 1, 2016) are documented",
+    "Each amendment notice links to a separate PDF document for specific details"
+  ],
+  "why_it_matters": "This page serves as an authoritative index for Fed discount window rate history. However, it contains no new analytical content and individual rate decisions must be accessed via linked PDFs.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "This page documents historical changes to the Fed's primary credit (discount window) rate and secondary credit rate. These rates are part of the Fed's lending facilities that serve as backstops to the banking system.",
+  "important_numbers": [],
+  "tags": [
+    "federal-reserve",
+    "regulatory-amendments",
+    "primary-credit",
+    "secondary-credit",
+    "discount-window",
+    "rate-changes",
+    "historical-index"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a navigation_page per rule #5 - reject required",
+      "event_type is 'unknown' but correct type is 'rate_decision' (series of rate changes) or 'market_notice' - should not be unknown",
+      "Source is a listing/index page containing only meta-information about amendments, not the actual notices",
+      "Individual rate decisions (values, timing) exist only in linked PDFs, not in this source",
+      "No single published_at date exists for the page as a whole",
+      "Empty published_at field fails source attribution requirements",
+      "Page has no original analytical content - it's purely an index"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_regulatory_amendments_federal_362ca606138fa66d.txt",
+  "notes": "Non-archivable navigation page. This is a directory/index of Federal Reserve regulatory amendments rather than a specific research document. Individual amendment notices (PDFs) would need to be accessed separately for detailed rate information and policy context. The page structure confirms this is a listing page per source metadata.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Navigation page with no original content",
+      "Contains only historical index of amendments, not the actual notices",
+      "Cannot extract specific rate values without accessing linked PDFs",
+      "Rule #6 explicitly flags this page type as non-archiveable"
+    ]
+  }
+}

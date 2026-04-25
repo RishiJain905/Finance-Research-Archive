@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - a budget document containing market structure data on regulated entities should have a more specific classification. Given the taxonomy, 'economic_commentary' or 'research_paper' would be more appropriate than leaving it as unknown.",
+    "market_impact shows asset_classes: ['volatility'] and directional_bias: 'neutral' with confidence: 0 - this appears to be a placeholder. A budget document with no market-moving content should not have volatility classified as an affected asset class.",
+    "verification_confidence is 0 (placeholder) rather than an actual assessment score.",
+    "Published_at date of 2025-05-01 is inferred from document header 'May 2025' - not explicitly stated in source body."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies that this is a budget document with descriptive/inventory-based market structure data rather than market-moving content. However, critical fields (event_type, market_impact, verification_confidence) contain placeholders or defaults that need human assessment before routing. The event_type 'unknown' when taxonomy options exist is a concrete flag.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The CFTC is requesting $410.0 million and 650 full-time equivalent (FTE) positions for FY 2026, representing a 12.3 percent increase above the FY 2025 enacted budget. The document outlines funding requests across divisions including Enforcement, Market Oversight, Clearing and Risk, and Market Participants Division, along with data on regulated entities such as SEFs, DCMs, DCOs, FCMs, and SDRs.",
+    "why_it_matters": "This budget document provides structural information about the CFTC's oversight framework and regulatory infrastructure. It establishes the operational scope of derivatives market oversight, including the number of registered entities (SEFs, DCMs, DCOs, FCMs, SDRs) that the CFTC supervises. The document contains figures on trading volume growth, margin requirements, and customer funds held in FCM accounts. While not market-moving, it provides baseline data for understanding market structure and regulatory capacity in derivatives markets.",
+    "macro_context": "This is a government budget request rather than a macroeconomic release or policy announcement. It reflects the CFTC's planned operational capacity for FY 2026 and does not contain forward guidance on monetary policy, regulatory changes, or market-moving signals.",
+    "market_structure_context": "The document provides structural data on U.S. derivatives market infrastructure: SEFs execute swaps trading; DCMs operate designated contract markets; DCOs clear derivatives transactions; FCMs handle customer margin and funds; SDRs record swap transaction data. Figure 2 shows growth in contract trading volume; Figure 8 documents margin requirements; Figure 7 shows customer funds held in FCM accounts. Tables 19-28 enumerate registered entities by type with FY 2024 data."
+  }
+}

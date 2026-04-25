@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but a budget request from a major regulator is closest to 'research_paper' in the taxonomy, though no category perfectly fits",
+    "Relevance to market structure is tangential - document discusses regulatory priorities and innovation trends but provides no substantive market structure analysis or metrics",
+    "Document is a budget justification with limited analytical content - contains no actionable market data, price information, or trading metrics",
+    "Source attribution in metadata shows 'TARGET': 'market structure' in name field, though this appears to be a system artifact rather than an error in the generated record itself"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is factually accurate and well-sourced from the PDF content. All key numbers ($410M, 650 FTE, 12.3% increase) match the source, and the summary correctly captures the CFTC's stated priorities around technological innovation. However, the document has limited analytical value for a market structure/macro catalyst research archive - it's an administrative budget request that describes regulatory intentions rather than providing substantive market analysis, data, or actionable intelligence. The record should be accepted only if such budget documents have established archival value for tracking regulatory priorities, otherwise rejected as too thin for this archive's purpose.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The CFTC has submitted its FY 2027 budget request seeking $410 million and 650 full-time equivalents, representing a 12.3% increase over FY 2026 enacted levels, to support the agency's oversight of U.S. derivatives markets amid rapid technological innovation including blockchain, crypto assets, AI, and new retail-focused derivatives products.",
+    "why_it_matters": "This budget request reflects the CFTC's assessment of the technological transformation occurring in derivatives markets. The agency's resource levels determine its capacity to oversee increasingly complex and fast-moving trading systems, detect fraud and manipulation, and protect retail participants in markets historically dominated by institutional players.",
+    "macro_context": "As a budget request rather than a policy announcement, this document does not provide direct macro catalyst information. However, the CFTC's resource priorities signal which market segments and risks the agency considers most pressing for FY 2027, including oversight of digital asset derivatives, AI-driven trading systems, and retail investor protection.",
+    "market_structure_context": "The document identifies several structural shifts in derivatives markets requiring regulatory attention: blockchain-based trading/clearing/settlement systems, AI-driven order execution at high speeds and volumes, smart contracts for automated derivatives, and proliferation of retail-focused derivatives platforms. However, as a budget document, it does not provide substantive analysis of current market structure conditions or regulatory actions that would affect market participants."
+  }
+}
