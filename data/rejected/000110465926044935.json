@@ -1,0 +1,79 @@
+{
+  "id": "000110465926044935",
+  "created_at": "2026-04-26T04:05:57.569685+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Mesa Royalty Trust 8-K Filing — April 2026 Distribution Announcement",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/313364/000110465926044935/tm2612042d1_8k.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-17",
+    "source_type": "sec_filing"
+  },
+  "summary": "Mesa Royalty Trust filed a Form 8-K on April 17, 2026, furnishing a press release (Exhibit 99.1) announcing royalty income and income distribution for April 2026. The filing is a standard SEC disclosure by The Bank of New York Mellon Trust Company, N.A. as trustee, with registered units (MTR) traded on the NYSE. The press release containing actual distribution figures is not included in the source body.",
+  "key_points": [
+    "Mesa Royalty Trust filed Form 8-K on April 17, 2026 (date of earliest event).",
+    "The filing announces royalty income and income distribution for the month of April 2026.",
+    "The trustee is The Bank of New York Mellon Trust Company, N.A.",
+    "Units of Beneficial Interest (ticker MTR) are registered on the NYSE.",
+    "The press release (Exhibit 99.1) is furnished but not filed pursuant to SEC Release No. 33-8176."
+  ],
+  "why_it_matters": "This is a routine corporate disclosure from a specific oil and gas royalty trust. It has no relevance to market structure or macro economic catalysts. The filing only references a distribution announcement; actual distribution numbers are in Exhibit 99.1 which is not provided in this source.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "mesa-royalty-trust",
+    "royalty-trust",
+    "distribution",
+    "nyse",
+    "mtr"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' but should be 'regulatory_guidance' for an 8-K filing - correct type is identifiable from context",
+      "Source is not relevant to market structure or macro catalysts as defined in verification standards",
+      "Exhibit 99.1 containing actual distribution figures is referenced but not included in source body",
+      "Filing is routine boilerplate with no macro-relevant data or market structure implications"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "Issues are clear-cut: source is a routine company-specific 8-K with no relevance to macro catalysts or market structure. The event_type 'unknown' is incorrect - 8-K filings should be 'regulatory_guidance'. Automated rejection is appropriate."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000110465926044935.txt",
+  "notes": "Source is not relevant to the research focus on market structure or macro catalysts. This is a company-specific 8-K filing for Mesa Royalty Trust (oil/gas royalty trust). The filing only references the distribution announcement; actual distribution numbers are in Exhibit 99.1 which is not provided. Low-quality source for macro/market structure research.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 2,
+    "reasoning": [
+      "Not relevant to market structure or macro catalysts",
+      "8-K filing contains no macro-relevant data",
+      "Distribution amounts not provided in source body",
+      "Routine corporate disclosure with no market structure implications"
+    ]
+  }
+}

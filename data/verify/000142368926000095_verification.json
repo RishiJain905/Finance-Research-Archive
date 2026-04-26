@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - a corporate earnings release could reasonably map to 'research' or another taxonomy category, though no perfect fit exists",
+    "topic is 'macro catalysts' but source is a company-specific earnings filing with no macro analysis or market structure content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is factually accurate and all financial figures match the SEC filing. The record appropriately identifies this as company-specific financial data rather than market structure or macro catalyst content. The 'unknown' event_type is technically correct given the taxonomy lacks a corporate earnings category, but this is a minor classification issue rather than an accuracy problem. Record is ready for auto-route.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "AGNC Investment Corp., a mortgage REIT, reported a Q1 2026 total comprehensive loss of $(0.18) per common share, with tangible net book value of $8.38 per share and an 'at risk' leverage ratio of 7.4x. The company's $94.7 billion investment portfolio is concentrated in Agency mortgage-backed securities including TBA market positions.",
+    "why_it_matters": "This is a corporate earnings release for a single mortgage REIT and does not constitute market structure analysis or macro catalyst information. While Agency MBS exposure is mentioned, the filing focuses on company-specific financial metrics rather than broader market dynamics. Excluded from archive based on scope.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

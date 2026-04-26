@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'regulatory_guidance' for an 8-K filing - correct type is identifiable from context",
+    "Source is not relevant to market structure or macro catalysts as defined in verification standards",
+    "Exhibit 99.1 containing actual distribution figures is referenced but not included in source body",
+    "Filing is routine boilerplate with no macro-relevant data or market structure implications"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are clear-cut: source is a routine company-specific 8-K with no relevance to macro catalysts or market structure. The event_type 'unknown' is incorrect - 8-K filings should be 'regulatory_guidance'. Automated rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "event_type": "regulatory_guidance",
+    "summary": "Mesa Royalty Trust filed a Form 8-K on April 17, 2026, furnishing a press release (Exhibit 99.1) announcing royalty income and income distribution for April 2026. The filing is a standard SEC disclosure by The Bank of New York Mellon Trust Company, N.A. as trustee, with registered units (MTR) traded on the NYSE. The press release containing actual distribution figures is not included in the source body.",
+    "why_it_matters": "This is a routine corporate disclosure from a specific oil and gas royalty trust. It has no relevance to market structure or macro economic catalysts. The filing only references a distribution announcement; actual distribution numbers are in Exhibit 99.1 which is not provided in this source."
+  }
+}

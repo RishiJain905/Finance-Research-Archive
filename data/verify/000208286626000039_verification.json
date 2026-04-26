@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - correct for this source type as it does not fit the macro-focused taxonomy",
+    "Topic field left blank - should be populated with 'Corporate Earnings' or similar for discoverability",
+    "why_it_matters is a judgment call about relevance rather than neutral description of source content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is accurately processed and correctly attributed to SEC EDGAR. However, the record presents a binary relevance determination ('not relevant to market structure or macro catalysts') without nuance. Individual company earnings filings could have archival value if: (1) the archive covers regional banking sector, (2) Q1 results reveal something broader about bank health, credit conditions, or deposit trends, or (3) the filing contains forward-looking statements with macro implications. Human review needed to determine whether this archive's scope justifies including single-company corporate disclosures or if only systemically significant institutions should be included.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Pinnacle Financial Partners, Inc. filed a Form 8-K on April 22, 2026, disclosing Q1 2026 financial results for the three-month period ended March 31, 2026. The filing includes a press release (Exhibit 99.1) and slide presentation (Exhibit 99.2), with an investor webcast scheduled for April 23, 2026 at 8:30 a.m. ET. The company is a Georgia-chartered bank holding company (PNFP) with common stock and three preferred series listed on the NYSE.",
+    "why_it_matters": "Regional bank earnings releases provide insight into local economic conditions, credit quality, and deposit dynamics. Pinnacle Financial Partners operates primarily in the Southeast US; Q1 2026 results may reflect trends in commercial real estate exposure, net interest margin compression, or loan growth relevant to regional economic analysis.",
+    "macro_context": "Regional bank earnings can serve as leading indicators for local economic health, though this filing focuses on company-specific results rather than systemic analysis.",
+    "market_structure_context": ""
+  }
+}
