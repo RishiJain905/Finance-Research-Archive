@@ -1,0 +1,95 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_transcript_of_chair_powells_48399d6c41d17bab",
+  "created_at": "2026-04-26T06:09:30.738620+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "fomc_statement",
+  "title": "Transcript of Chair Powell's Press Conference -- September 17, 2025",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20250917.pdf",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-09-17",
+    "source_type": "research_paper"
+  },
+  "summary": "The Federal Reserve cut its policy interest rate by 25 basis points to a target range of 4% to 4¼% on September 17, 2025, citing a shift in the balance of risks toward downside employment risks and still-elevated inflation. Chair Powell emphasized that the FOMC is balancing dual-mandate goals amid a softer labor market (unemployment at 4.3%, payrolls at 29,000/month) and persistent inflation (PCE at 2.7%, core PCE at 2.9%). The median SEP projection shows the federal funds rate declining to 3.6% by end-2025 and 3.4% by end-2026.",
+  "key_points": [
+    "Fed lowered target range for federal funds rate by ¼ percentage point to 4 to 4¼ percent",
+    "Unemployment rate rose to 4.3% in August; payroll job gains slowed to just 29,000 per month over the past three months",
+    "Total PCE inflation was 2.7% and core PCE inflation was 2.9% over the 12 months ending in August",
+    "Median SEP projection for federal funds rate: 3.6% at end of 2025, 3.4% at end of 2026, 3.1% at end of 2027",
+    "Chair Powell stated near-term inflation risks are tilted upward and employment risks tilted downward, requiring balance of dual mandate",
+    "Tariff effects on goods prices are being observed but their overall effects on activity and inflation remain uncertain"
+  ],
+  "why_it_matters": "This press conference provides the official rationale for the Fed's rate-cut decision and signals the policy path ahead. The balance of risks has shifted toward employment concerns while inflation remains above target, creating a delicate situation where the Fed is navigating between supporting a softening labor market and preventing inflation from becoming entrenched.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 6
+  },
+  "macro_context": "The Fed is navigating a challenging environment where employment risks have risen (unemployment at 4.3%, weak payrolls) while inflation remains above target at 2.7-2.9% PCE. GDP growth has moderated to 1.5% in H1 2025 from 2.5% last year. The FOMC is communicating that policy is being adjusted toward a more neutral stance, with rate projections declining over the next two years. Tariff-related price pressures are being monitored but their persistence remains uncertain.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4-4¼% (target federal funds rate range after cut)",
+    "4.3% (unemployment rate in August)",
+    "29,000 per month (payroll job gains over past 3 months)",
+    "2.7% (total PCE inflation over 12 months ending August)",
+    "2.9% (core PCE inflation over 12 months ending August)",
+    "3.6% (median SEP federal funds rate projection at end 2025)",
+    "3.4% (median SEP federal funds rate projection at end 2026)",
+    "3.1% (median SEP federal funds rate projection at end 2027)",
+    "1.5% (GDP growth H1 2025)",
+    "1.6% (median SEP GDP projection 2025)"
+  ],
+  "tags": [
+    "fomc",
+    "rate-decision",
+    "fed-funds",
+    "powell",
+    "inflation",
+    "employment",
+    "sep",
+    "tariffs",
+    "dual-mandate"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'fomc_statement' but source is a press conference transcript. FOMC statement refers to the official policy decision announcement; this source is the Q&A transcript from the press conference following the rate decision. Consider 'speech_neutral' or 'economic_commentary' as more accurate event_type values.",
+      "source_type is 'research_paper' but this is a press conference transcript - not a research paper. The source_type field mischaracterizes the document type."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is mostly accurate and well-supported with strong alignment to source content. The event_type and source_type classification issues are notable but not critical - they represent categorization ambiguity rather than factual errors. Since the core policy information is accurate and the source is a high-quality primary Federal Reserve document, auto-routing to review_queue is appropriate for category refinement."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_transcript_of_chair_powells_48399d6c41d17bab.txt",
+  "notes": "Source is a primary Federal Reserve document - official press conference transcript. The source body is truncated near the end of the document, cutting off mid-Q&A. Published 219 days before TODAY; classified as historical record. Confidence slightly reduced due to truncation but core policy content is complete.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "Primary source from Federal Reserve with authoritative policy content",
+      "Direct quotes available for key policy signals",
+      "Contains quantitative data (inflation, employment, rate projections)",
+      "Minor deduction for truncation and age"
+    ]
+  }
+}

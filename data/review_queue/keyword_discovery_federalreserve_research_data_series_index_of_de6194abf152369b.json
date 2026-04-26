@@ -1,0 +1,89 @@
+{
+  "id": "keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b",
+  "created_at": "2026-04-26T06:04:42.315926+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "Research Data Series: Index of Common Inflation Expectations",
+  "source": {
+    "name": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.html",
+    "published_at": "2021-03-05",
+    "source_type": "article",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve published a FEDS Note introducing the Index of Common Inflation Expectations (CIE), a quarterly research data series that summarizes the comovement of various inflation expectations measures using a dynamic factor model. The March 2021 release contains estimates through 2020Q4, with subsequent quarterly updates scheduled for the third Friday of the first month of each quarter. An updated version of the CIE was introduced in April 2022 with methodological refinements, and the data file was last updated April 17, 2026.",
+  "key_points": [
+    "The CIE uses a dynamic factor model to summarize comovement across multiple inflation expectations measures",
+    "The original CIE projected onto SPF (Survey of Professional Forecasters) 10-year PCE inflation and Michigan Survey 5-10 year expectations",
+    "April 2022 update added New York Fed Survey of Consumer Expectations measures (1-year and 3-year ahead) and Michigan 25th/75th percentile measures",
+    "The 5-year TIPS breakeven inflation measure was removed as redundant with other TIPS data",
+    "The original CIE was phased out and replaced by the updated version in the October 2022 release",
+    "The series is explicitly experimental and may be discontinued at any time; it is for informational purposes only"
+  ],
+  "why_it_matters": "The CIE provides a single summary measure of inflation expectations across multiple surveys and market-based indicators. Market participants and policymakers monitor inflation expectations as a key input for monetary policy decisions and bond market pricing. The experimental nature means users should treat it as supplementary research rather than official Fed guidance.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "Inflation expectations are a critical input for Fed policy decisions. The CIE aggregates information from SPF, Michigan Survey, and NY Fed SCE to provide a comprehensive view of expected inflation over various horizons. Changes in the CIE could signal shifting inflation dynamics relevant to the Fed's dual mandate.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "2020Q4 (data through this quarter in original release)",
+    "2013 (start of New York Fed SCE, explaining why it was not in original index)",
+    "AR(5) (autoregressive order of the latent factor in updated model)"
+  ],
+  "tags": [
+    "federal-reserve",
+    "inflation-expectations",
+    "cie-index",
+    "dynamic-factor-model",
+    "feds-notes",
+    "research-data-series",
+    "pce-inflation",
+    "consumer-expectations"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'research_paper' is technically valid but imprecise — the source explicitly describes FEDS Notes as shorter, less technical articles distinct from FEDS Working Papers. 'economic_commentary' or 'blog_post' may be more accurate, though research_paper is not factually wrong.",
+      "market_impact.asset_classes (bonds, volatility) and directional_bias (neutral) are reasonable inferences for an inflation expectations series but not explicitly stated in the source. Confidence of 0 appropriately reflects this uncertainty.",
+      "No specific CIE numerical values or historical data points provided in the source — the record correctly notes this is methodological documentation."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is well-constructed and factually accurate. The only substantive question is event_type precision, but research_paper is within valid taxonomy and defensible. The note about low market impact confidence is appropriate for a research data series vs. a policy event."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b.txt",
+  "notes": "Source is a methodological/research documentation page for the CIE index rather than a policy announcement or economic data release. No specific CIE numerical values are provided in this source text. The original publication (March 2021) is historical; the data file was last updated April 17, 2026 per the source. Relevant to macro catalysts as inflation expectations are a key driver of monetary policy and market reactions. Low market impact confidence because this is a research series, not a policy event. Domain trust is high (federalreserve.gov). Authored by Fed economists Hie Joo Ahn and Chad Fulton.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "High domain trust tier - federalreserve.gov is authoritative source",
+      "Clear authorship and institutional affiliation provided",
+      "Methodology described with specific technical details",
+      "Explicit disclaimer about experimental nature",
+      "No apparent conflicts of interest",
+      "Date metadata shows source is regularly maintained (last update April 2026)"
+    ]
+  }
+}

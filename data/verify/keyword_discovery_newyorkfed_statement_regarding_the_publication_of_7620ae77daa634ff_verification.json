@@ -1,14 +1,16 @@
 {
   "verification_confidence": 9,
   "verdict": "accept",
-  "issues_found": [],
+  "issues_found": [
+    "The phrase 'unusual overlap' in why_it_matters is an editorial characterization not present in the source text. The source simply states the factual overlap without labeling it as unusual."
+  ],
   "human_review_required": false,
   "human_review_reason": "",
   "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "This operating policy notice documents a market infrastructure scenario where key overnight reference rates (SOFR, TGCR, BGCR) will be unavailable for one business day due to the overlap of Good Friday and the March Employment Situation report release. Participants relying on SOFR for derivatives pricing, collateral management, or overnight fund valuations need to account for this publication gap. The gap affects the SOFR Averages and Index calculations, which require consistent underlying rate data.",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The notice highlights critical market plumbing dependencies: cleared Treasury repo settlement is essential for calculating TGCR and BGCR, and without it, two of three Treasury repo market segments used to compute SOFR are unavailable. This demonstrates how interconnected market infrastructure is with reference rate integrity and why any disruption to repo settlement cascades into reference rate publication."
   }
 }

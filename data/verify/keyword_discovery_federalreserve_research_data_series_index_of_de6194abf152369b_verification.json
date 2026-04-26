@@ -1,9 +1,13 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'research_paper' is technically valid but imprecise — the source explicitly describes FEDS Notes as shorter, less technical articles distinct from FEDS Working Papers. 'economic_commentary' or 'blog_post' may be more accurate, though research_paper is not factually wrong.",
+    "market_impact.asset_classes (bonds, volatility) and directional_bias (neutral) are reasonable inferences for an inflation expectations series but not explicitly stated in the source. Confidence of 0 appropriately reflects this uncertainty.",
+    "No specific CIE numerical values or historical data points provided in the source — the record correctly notes this is methodological documentation."
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Record is well-constructed and factually accurate. The only substantive question is event_type precision, but research_paper is within valid taxonomy and defensible. The note about low market impact confidence is appropriate for a research data series vs. a policy event.",
   "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",

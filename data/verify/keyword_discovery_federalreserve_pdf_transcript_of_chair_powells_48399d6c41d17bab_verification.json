@@ -1,22 +1,17 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 7,
+  "verdict": "review",
   "issues_found": [
-    "Critical fields are completely empty: summary, key_points, why_it_matters, macro_context, market_structure_context",
-    "market_impact has empty arrays and zero confidence - no meaningful content",
-    "important_numbers array is empty despite source containing key data (25bps cut, 4-4.25% target range, 2.7% PCE inflation, 4.3% unemployment)",
-    "tags array is empty",
-    "published_at is missing in nested source object",
-    "source_type in nested source object is empty",
-    "source_type set to 'research_paper' is questionable - this is a press conference transcript, though it could fall under economic_commentary"
+    "event_type is 'fomc_statement' but source is a press conference transcript. FOMC statement refers to the official policy decision announcement; this source is the Q&A transcript from the press conference following the rate decision. Consider 'speech_neutral' or 'economic_commentary' as more accurate event_type values.",
+    "source_type is 'research_paper' but this is a press conference transcript - not a research paper. The source_type field mischaracterizes the document type."
   ],
-  "human_review_required": true,
-  "human_review_reason": "The generated record is essentially empty - all major content fields (summary, key_points, why_it_matters, macro_context, market_structure_context, important_numbers, tags) are blank. The record provides no usable content despite the source being a substantive Fed press conference with significant policy information. This appears to be a failed generation rather than a verification candidate. Human review is required to either regenerate the record properly or diagnose why content was not extracted.",
-  "suggested_status": "rejected",
+  "human_review_required": false,
+  "human_review_reason": "The record is mostly accurate and well-supported with strong alignment to source content. The event_type and source_type classification issues are notable but not critical - they represent categorization ambiguity rather than factual errors. Since the core policy information is accurate and the source is a high-quality primary Federal Reserve document, auto-routing to review_queue is appropriate for category refinement.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "Chair Powell announced a 25bps rate cut to 4-4.25%, citing shifted balance of risks with increased downside employment risks and upside inflation risks. GDP growth moderated to ~1.5% in H1 2025. Unemployment edged up to 4.3% with payrolls slowing to 29k/month. Total PCE inflation was 2.7% and core PCE 2.9% through August. SEP median projections show GDP at 1.6% (2025) and 1.8% (2026), unemployment at 4.5% end-2025, and fed funds rate at 3.6% end-2025. Powell noted tariff effects on goods prices and that the Committee remains committed to dual mandate goals.",
-    "why_it_matters": "The Fed's second consecutive 25bps cut signals a pivot toward addressing labor market weakening while inflation remains above target. The shift in balance of risks toward employment concerns marks a notable policy inflection. Markets will scrutinize the updated SEP projections and Powell's remarks on tariff pass-through for signals about the pace of further easing.",
-    "macro_context": "GDP growth slowed from 2.5% in 2024 to ~1.5% in H1 2025. Labor market has softened with payrolls well below breakeven. Inflation at 2.7-2.9% PCE remains above the 2% target. Tariff impacts beginning to show in goods prices. The dual mandate risks have shifted: near-term inflation risks tilted upward, employment risks tilted downward.",
-    "market_structure_context": "FOMC press conference following the September 2025 rate decision. Key inputs for rates, FX, and equity markets. The 25bps cut and accompanying policy statement provide guidance on the near-term rate path. SEP dot plot updates and Powell Q&A on tariff effects are critical for front-end rates and risk asset positioning."
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }
