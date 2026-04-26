@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - budget documents don't fit neatly into the taxonomy, but this should be noted rather than left as unknown",
+    "TOPIC metadata states 'market structure' but the document is an administrative budget request with only incidental market structure-adjacent data in appendices",
+    "Source contains no analytical content on market structure dynamics, trading mechanisms, or microstructure insights",
+    "Source is administrative/governmental rather than research or analytical content",
+    "The record's quality_tier correctly identifies this as low-priority (score 2) but verification_confidence was set to 0 instead of an actual assessment"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately summarizes the source content (budget figures are correct), but the source itself has low relevance to the stated topic (market structure) and is administrative rather than analytical. The event_type being 'unknown' and the topic misalignment warrant human review to confirm archival value and correct categorization.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The CFTC's FY 2026 budget request seeks $410.0 million and 650 full-time equivalents (FTE), representing a 12.3% increase over FY 2025. The document outlines funding by division (Enforcement, Market Oversight, Clearing and Risk, etc.) and includes statistical appendices on regulated entities such as SEFs, DCMs, DCOs, and FCMs.",
+    "why_it_matters": "This is an administrative budget document that provides CFTC operational funding details and registry counts. While it contains incidental market structure-adjacent data (entity counts, trading volumes in appendices), it does not provide analytical content on market structure or macro catalysts. Primarily relevant for understanding CFTC resource allocation.",
+    "macro_context": "",
+    "market_structure_context": "The document contains descriptive appendices with registry counts (SEFs, DCMs, DCOs, FCMs, SDRs) and trading volume statistics, but these are incidental to the primary purpose of the budget request. No substantive market structure analysis is provided."
+  }
+}
