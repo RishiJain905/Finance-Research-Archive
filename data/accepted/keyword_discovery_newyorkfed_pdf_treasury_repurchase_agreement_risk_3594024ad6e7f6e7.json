@@ -1,0 +1,124 @@
+{
+  "id": "keyword_discovery_newyorkfed_pdf_treasury_repurchase_agreement_risk_3594024ad6e7f6e7",
+  "created_at": "2026-04-26T12:49:42.633644+00:00",
+  "status": "accepted",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "[PDF] Treasury Repurchase Agreement Risk Management",
+  "source": {
+    "name": "Federal Reserve Bank of New York (TMPG)",
+    "url": "https://www.newyorkfed.org/medialibrary/Microsites/tmpg/files/Treasury-Repurchase-Agreement-Risk-Management-Recommendation-FAQs.pdf",
+    "domain": "www.newyorkfed.org",
+    "published_at": "2025-05-22",
+    "source_type": "pdf"
+  },
+  "summary": "The Treasury Market Practices Group (TMPG) published FAQs on May 22, 2025, updating best practice recommendations for U.S. Treasury repo risk management, recommending that counterparties apply haircuts or margin on repo transactions to mitigate systemic risks. The guidance highlights inconsistencies in bilateral repo risk management practices and calls for prudent risk management including haircuts alongside robust frameworks and legally enforceable agreements. The recommended implementation deadline is June 2026, with firms expected to prioritize their most material counterparty exposures using a risk-based rolling approach.",
+  "key_points": [
+    "TMPG recommends that all Treasury repo transactions apply haircuts or margin reflecting counterparty credit risk, liquidity risk, and market risk, in conjunction with other risk management tools like position limits, netting agreements, and portfolio margining",
+    "The guidance was prompted by identified risks including lack of consistency and transparency in bilaterally managed repo risk practices, and potential systemic risks from market participants defaulting on large quantities of unhedged repos",
+    "The TMPG working group included representation from dealers, money funds, hedge funds, asset managers, financial market utilities, clearing banks, foreign central banks, Treasury, and Federal Reserve Bank of New York staff",
+    "The document references a 2022 white paper on clearing and settlement, a February 2023 working group convened after that white paper, and a pilot data study by the U.S. Treasury's Office of Financial Research on the non-centrally cleared bilateral repo market",
+    "TMPG recommends firms implement the best practice by June 2026 using a risk-based approach that prioritizes most material counterparty exposures on a rolling basis",
+    "Centrally cleared repos already adhere to the best practice through CCP margining regimes; however, not all repo transactions will be eligible for central clearing under SEC rule amendments",
+    "Legal documentation must describe margining regime timing, frequency, and thresholds; valuation of exposures and collateral; and close-out netting procedures"
+  ],
+  "why_it_matters": "This guidance directly addresses systemic vulnerabilities in the $1+ trillion Treasury repo market by standardizing risk management practices for bilaterally cleared repos that remain outside central clearing. Market participants, prime brokers, and money market funds should prepare for implementation by June 2026, which may affect counterparty credit terms and collateral arrangements in repo financing. The guidance reduces the risk of repo market dislocations during stress periods by ensuring leverage is properly risk-managed and priced.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "This document is directly relevant to Treasury market structure, specifically addressing the non-centrally cleared bilateral repo (NCCBR) market segment. It recommends haircuts and margin requirements as risk management tools and notes the interaction between bilateral repo practices and the ongoing expansion of central clearing mandated by SEC rule amendments. The document establishes best practices for legally enforceable documentation covering margining regimes, valuation, and close-out netting.",
+  "important_numbers": [
+    "June 2026 (implementation deadline)"
+  ],
+  "tags": [
+    "repo",
+    "treasury-market",
+    "risk-management",
+    "tmpg",
+    "haircuts",
+    "margin",
+    "bilateral-repo",
+    "central-clearing",
+    "market-structure",
+    "best-practices"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 9,
+    "verdict": "accept",
+    "issues_found": [
+      "The record does not mention that TMPG explicitly states the best practice recommendations 'do not take a view on customer margin segregation for repo trades that are intermediated into central clearing' - this nuance is missing but not materially incorrect"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_newyorkfed_pdf_treasury_repurchase_agreement_risk_3594024ad6e7f6e7.txt",
+  "notes": "Source is a high-quality PDF from New York Fed's TMPG, published May 22, 2025. Within 90-day recency threshold. The source body was truncated at the end, but sufficient content was captured for comprehensive analysis. Document provides FAQs explaining TMPG's best practice recommendations for Treasury repo risk management including rationale, implementation guidance, and legal agreement requirements.",
+  "linked_quant_context": [
+    {
+      "record_id": "sofr_2026_04_13",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "repo",
+        "market-structure"
+      ],
+      "link_score": 71.0
+    },
+    {
+      "record_id": "sofr_2026_04_16",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "repo",
+        "market-structure"
+      ],
+      "link_score": 71.0
+    },
+    {
+      "record_id": "sofr_2026_04_22",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match, complementary context",
+      "topic_overlap": [
+        "market structure",
+        "repo",
+        "market-structure"
+      ],
+      "link_score": 71.0
+    }
+  ],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_2",
+    "score": 75.5,
+    "reasoning": [
+      "quality score: 75.5/100 (useful_context)",
+      "high verification confidence",
+      "minor issues found (1)",
+      "clear why_it_matters explanation",
+      "contains useful structured numbers",
+      "high-trust source",
+      "moderate topic relevance",
+      "lower event significance"
+    ]
+  }
+}

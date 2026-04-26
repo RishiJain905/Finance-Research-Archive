@@ -1,7 +1,9 @@
 {
-  "verification_confidence": 9,
+  "verification_confidence": 8,
   "verdict": "accept",
-  "issues_found": [],
+  "issues_found": [
+    "verification_confidence field in output shows 0, but initial_confidence and quality_tier.score both indicate 8—this is a data inconsistency, not a content error"
+  ],
   "human_review_required": false,
   "human_review_reason": "",
   "suggested_status": "accepted",

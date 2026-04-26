@@ -1,50 +1,48 @@
 {
   "id": "keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff",
-  "created_at": "2026-04-12T21:06:56.117474+00:00",
+  "created_at": "2026-04-26T12:47:29.762061+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "market_notice",
   "title": "Statement Regarding the Publication of Reference Rates on Friday, April 3, 2026",
   "source": {
-    "name": "New York Fed",
+    "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_260312a",
+    "domain": "www.newyorkfed.org",
     "published_at": "2026-03-12",
-    "source_type": "policy_statement",
-    "domain": "www.newyorkfed.org"
+    "source_type": "operating_policy"
   },
-  "summary": "The New York Fed announced that SOFR, TGCR, BGCR, and related reference rates will not be published on Friday, April 3, 2026, due to Good Friday and the March Employment Situation release. Settlement of cleared Treasury repo will not be available that day, eliminating two of three market segments used to calculate Treasury repo reference rates. EFFR and OBFR will continue to publish per the New York Fed's holiday schedule.",
+  "summary": "The New York Fed announced that TGCR, BGCR, SOFR, and SOFR Averages/Index will not be published on Friday, April 3, 2026 due to the March Employment Situation report release and the resulting non-closure of government securities markets, which disrupts cleared Treasury repo settlement—the basis for two of three market segments used to calculate Treasury repo reference rates. These rates will be published on Monday, April 6, reflecting Thursday-to-Monday repo transactions. EFFR and OBFR will still be published on April 3 per the Fed's regular holiday schedule.",
   "key_points": [
-    "No publication of TGCR, BGCR, SOFR, SOFR Averages, or SOFR Index on Friday, April 3, 2026",
-    "EFFR and OBFR will be published on April 3, 2026 per the New York Fed's holiday schedule",
-    "Settlement of cleared Treasury repo is not scheduled for April 3, eliminating two of three market segments used to calculate Treasury repo reference rates",
-    "On Monday April 6, TGCR, BGCR, and SOFR will be published reflecting Thursday April 2 settling transactions maturing Monday April 6",
+    "No publication of TGCR, BGCR, SOFR, or SOFR Averages/Index on Friday, April 3, 2026",
+    "Absence of cleared Treasury repo settlement eliminates two of three market segments used to calculate Treasury repo reference rates",
+    "On Monday April 6, TGCR, BGCR, and SOFR will be published reflecting same-day settling Treasury repo transactions settling Thursday April 2 and maturing Monday April 6",
     "SOFR Averages and Index published April 6 will have a value date of April 6",
-    "SIFMA did not recommend a full market closure for U.S. government securities trading, but repo market participants broadly expect to treat April 3 as a holiday"
+    "EFFR and OBFR publication follows NY Fed holiday schedule and will be published on Friday April 3",
+    "Repo market participants broadly expect to treat April 3 as a holiday despite SIFMA not recommending full market closure"
   ],
-  "why_it_matters": "Market participants relying on SOFR-based products or using SOFR for valuation, margining, or benchmarking need to adjust for a gap in reference rate publication. The absence of cleared repo settlement eliminates most intraday rate discovery, creating a temporary blind spot in overnight funding market metrics.",
+  "why_it_matters": "This operational notice affects the integrity and timing of SOFR-based markets. Market participants who rely on SOFR as a reference rate for derivatives, loans, or risk calculations will face a gap in published rates. The disruption to cleared Treasury repo settlement means the most robustly calculated Treasury repo reference rates (TGCR/BGCR) cannot be computed. This is relevant for anyone with floating-rate exposures, valuation models, or collateral desks that depend on daily SOFR publication.",
   "market_impact": {
     "asset_classes": [
-      "bonds"
+      "bonds",
+      "repo"
     ],
     "directional_bias": "neutral",
     "confidence": 3
   },
   "macro_context": "",
-  "market_structure_context": "This is a scheduled operational notice about reference rate publication arrangements during a market holiday. It highlights the dependency of SOFR on cleared Treasury repo settlement availability and the distinction between government securities trading (which continues) and repo market settlement (which halts).",
-  "important_numbers": [
-    "Friday April 3, 2026 (date of rate non-publication)",
-    "Monday April 6, 2026 (date rates will resume)",
-    "Thursday April 2, 2026 (settled transaction reference date)"
-  ],
+  "market_structure_context": "The notice highlights market plumbing dependencies: SOFR and related Treasury repo reference rates depend on cleared repo settlement availability. When cleared Treasury repo settlement is unavailable, two of three market segments used to calculate Treasury repo rates are eliminated, preventing same-day publication. This underscores the interdependency between data release calendars, SIFMA holiday recommendations, and critical overnight rate calculations. EFFR and OBFR use a different calculation methodology not dependent on cleared repo settlement, allowing them to publish on schedule.",
+  "important_numbers": [],
   "tags": [
-    "newyorkfed",
     "sofr",
     "tgcr",
     "bgcr",
-    "reference-rates",
+    "effr",
+    "obfr",
     "repo-market",
-    "market-structure",
-    "operational-notice"
+    "reference-rates",
+    "new-york-fed",
+    "market-closure"
   ],
   "llm_review": {
     "initial_confidence": 8,
@@ -66,49 +64,27 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff.txt",
-  "notes": "Source is a brief operational notice from the New York Fed. While relevant to market structure, content is factual with minimal depth. Published March 12, 2026—contemporaneous with TODAY, so not stale. EFFR/OBFR publication on holidays is noted as following New York Fed's own holiday schedule, which may differ from full market closure recommendations.",
+  "notes": "This is an operational market notice from the New York Fed, not a policy decision. The source is highly authoritative and domain-trust-tier high. Published 45 days before TODAY (2026-04-26), so within the 90-day freshness window. The notice is directly relevant to market structure as it documents the mechanics of reference rate publication and repo market infrastructure. The title in the source metadata has a slight inconsistency—appears to read 'April 3, 2026 March 12, 2026' which is likely a formatting error with the date and publication date adjacent.",
   "linked_quant_context": [
-    {
-      "record_id": "sofr_2026_04_10",
-      "relationship": "temporally_proximate_quant",
-      "reason": "within a month, exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "market-structure",
-        "sofr"
-      ],
-      "link_score": 92.5
-    },
-    {
-      "record_id": "iorb_2026_04_11",
-      "relationship": "temporally_proximate_quant",
-      "reason": "within a month, exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "market-structure"
-      ],
-      "link_score": 88.8
-    },
     {
       "record_id": "sofr_2026_04_13",
       "relationship": "temporally_proximate_quant",
       "reason": "within a month, exact topic match, complementary context",
       "topic_overlap": [
         "market structure",
-        "sofr",
-        "market-structure"
+        "sofr"
       ],
-      "link_score": 92.5
+      "link_score": 88.3
     },
     {
-      "record_id": "iorb_2026_04_14",
+      "record_id": "sofr_2026_04_16",
       "relationship": "temporally_proximate_quant",
       "reason": "within a month, exact topic match, complementary context",
       "topic_overlap": [
         "market structure",
-        "market-structure"
+        "sofr"
       ],
-      "link_score": 88.8
+      "link_score": 88.3
     },
     {
       "record_id": "sofr_2026_04_22",
@@ -116,22 +92,21 @@
       "reason": "within a month, exact topic match, complementary context",
       "topic_overlap": [
         "market structure",
-        "sofr",
-        "market-structure"
+        "sofr"
       ],
-      "link_score": 92.5
+      "link_score": 88.3
     }
   ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 76.5,
+    "score": 66.5,
     "reasoning": [
-      "quality score: 76.5/100 (useful_context)",
+      "quality score: 66.5/100 (useful_context)",
       "high verification confidence",
       "no issues found during verification",
       "clear why_it_matters explanation",
-      "contains useful structured numbers",
+      "no structured quantitative data",
       "high-trust source",
       "moderate topic relevance",
       "lower event significance"

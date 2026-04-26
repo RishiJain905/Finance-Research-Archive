@@ -1,0 +1,82 @@
+{
+  "id": "keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b",
+  "created_at": "2026-04-26T12:41:54.295343+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "research_paper",
+  "title": "Research Data Series: Index of Common Inflation Expectations",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.html",
+    "published_at": "2021-03-05",
+    "source_type": "research_paper",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "The Federal Reserve Board publishes the Index of Common Inflation Expectations (CIE), a dynamic factor model that summarizes comovement across various inflation expectations measures. The original March 2021 note announces this quarterly research data series, with updates posted at noon Eastern Time on the third Friday of January, April, July, and October. The April 2022 update introduced methodological changes including new survey data from the NY Fed Survey of Consumer Expectations and modifications to the autoregressive process order.",
+  "key_points": [
+    "CIE summarizes inflation expectations using a dynamic factor model, projected onto SPF 10-year PCE inflation and Michigan 5-10 year measures",
+    "April 2022 update added NY Fed Survey of Consumer Expectations 1-year and 3-year measures and Michigan Survey 25th/75th percentile measures",
+    "April 2022 update removed 5-year TIPS breakeven inflation as redundant and redefined Livingston Survey measure to G_ZM_To_12M",
+    "Updated index assumes autoregressive process of order 5 for the latent factor dynamics",
+    "Original CIE columns phased out by October 2022; current columns are CIE_spf and CIE_mich",
+    "The CIE is explicitly labeled as experimental research, published for informational purposes only, and may be discontinued at any time"
+  ],
+  "why_it_matters": "This research data series provides a consolidated signal of inflation expectations drawn from multiple surveys and market-based measures (SPF, Michigan, NY Fed SCE, Livingston Survey, TIPS breakevens). As a macro indicator, the CIE aggregates common movements in inflation expectations. The source itself describes the index construction methodology and update schedule rather than providing current readings or interpretations of current market conditions. The CIE is explicitly experimental and disclaimer-labeled for informational use only.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "The CIE tracks common movements in inflation expectations across multiple data sources including surveys (SPF, Michigan, Livingston, NY Fed SCE) and market-based measures (TIPS breakevens). As a macro indicator, it could signal changes in inflation anchoring if it diverges from the Fed's 2% target, but the source itself does not provide current readings or interpret market conditions.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "inflation-expectations",
+    "cie",
+    "federal-reserve",
+    "research-data",
+    "dynamic-factor-model",
+    "pce-inflation",
+    "survey-data",
+    "tips-breakeven",
+    "spf",
+    "michigan-survey"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 7,
+    "verdict": "accept",
+    "issues_found": [
+      "The source describes itself as a methodology and data series announcement, not a research paper with findings. The 'research_paper' event_type is borderline; 'economic_commentary' or 'blog_post' might be more accurate descriptors for FEDS Notes.",
+      "The 'why_it_matters' section states the CIE 'could signal changes in inflation anchoring if it diverges from the Fed's 2% target' - this is speculative inference not supported by the source text, which only describes the index construction methodology."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Minor issues are present but do not undermine the record's core accuracy. The summary is factually correct regarding the CIE methodology and quarterly update schedule. The source attribution is complete and correct. While the event_type classification could be refined, it is not invalid."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b.txt",
+  "notes": "This is a methodological announcement for a research data series, not a market catalyst. The original publication is from March 2021, though the data file was last updated April 17, 2026. The source describes the CIE construction methodology and quarterly update schedule but does not contain actual inflation expectations data or current readings. The CIE itself is experimental and explicitly disclaimer-labeled for informational use only. Relevance to macro catalysts is indirect—the index aggregates inflation expectations but the source text does not provide current values or interpret current conditions. Published via FEDS Notes, which presents staff views rather than official Fed positions.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Source is methodological research announcement rather than macro catalyst",
+      "Original publication 5+ years old with methodology updates since then",
+      "No actual current inflation expectations data in source text",
+      "CIE explicitly experimental with potential discontinuation risk",
+      "Limited direct applicability as market-moving event or catalyst"
+    ]
+  }
+}

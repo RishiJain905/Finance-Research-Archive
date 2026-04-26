@@ -1,13 +1,16 @@
 {
-  "verification_confidence": 8,
+  "verification_confidence": 7,
   "verdict": "accept",
-  "issues_found": [],
+  "issues_found": [
+    "The source describes itself as a methodology and data series announcement, not a research paper with findings. The 'research_paper' event_type is borderline; 'economic_commentary' or 'blog_post' might be more accurate descriptors for FEDS Notes.",
+    "The 'why_it_matters' section states the CIE 'could signal changes in inflation anchoring if it diverges from the Fed's 2% target' - this is speculative inference not supported by the source text, which only describes the index construction methodology."
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
+  "human_review_reason": "Minor issues are present but do not undermine the record's core accuracy. The summary is factually correct regarding the CIE methodology and quarterly update schedule. The source attribution is complete and correct. While the event_type classification could be refined, it is not invalid.",
   "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
+    "why_it_matters": "This research data series provides a consolidated signal of inflation expectations drawn from multiple surveys and market-based measures (SPF, Michigan, NY Fed SCE, Livingston Survey, TIPS breakevens). As a macro indicator, the CIE aggregates common movements in inflation expectations. The source itself describes the index construction methodology and update schedule rather than providing current readings or interpretations of current market conditions. The CIE is explicitly experimental and disclaimer-labeled for informational use only.",
     "macro_context": "",
     "market_structure_context": ""
   }

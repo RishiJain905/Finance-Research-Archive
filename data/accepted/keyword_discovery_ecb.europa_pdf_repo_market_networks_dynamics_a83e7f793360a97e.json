@@ -1,6 +1,6 @@
 {
   "id": "keyword_discovery_ecb.europa_pdf_repo_market_networks_dynamics_a83e7f793360a97e",
-  "created_at": "2026-04-12T01:38:33.514610+00:00",
+  "created_at": "2026-04-26T12:51:13.828995+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "research_paper",
@@ -8,84 +8,68 @@
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp3205~c6d8b5cfb0.en.pdf",
-    "published_at": "2025-02-01",
-    "source_type": "research_paper",
-    "domain": "www.ecb.europa.eu"
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2025-02",
+    "source_type": "research_paper"
   },
-  "summary": "This ECB Working Paper examines the resilience of the euro-denominated repo market during periods of financial stress using transaction-level data and network analysis from 2021 to mid-February 2025. The paper finds that the euro repo market exhibits a core-periphery structure where connectivity intensifies during stress, trading volumes and spreads remain stable at the sectoral level, and borrowing costs decline as stress increases—indicating the market functions as a shock absorber.",
+  "summary": "This ECB Working Paper examines the resilience of the euro-denominated repo market during episodes of financial stress using transaction-level data and network analysis from 2021 to mid-February 2025. The paper finds that the institutional repo network exhibits a core-periphery structure where connectivity intensifies during stress periods, with connections between banks growing even during stress. At the sectoral level, trading volumes and repo spreads remain broadly stable, and at the market level, borrowing costs decline as financial stress increases, indicating the euro repo market functions as a shock absorber.",
   "key_points": [
-    "The euro repo market has a core-periphery structure with a small core of highly active institutions conducting most trading",
-    "Network connectivity intensifies during stress periods, particularly among bank-to-bank trades",
-    "Trading volumes and repo spreads remain broadly stable at the sectoral level under stress conditions",
-    "At the market level, borrowing costs decline as financial stress increases, consistent with the repo market acting as a shock absorber",
-    "The euro repo market accounts for 56% of daily euro money market transactions and 30% of outstanding amounts",
-    "Outstanding repo values increased 4.9% from June 2023 to June 2024",
-    "The paper uses the Composite indicator of systemic stress (CISS) to define financial stress periods",
-    "Data source is the Securities Financing Transactions Data Store (SFTDS)"
+    "Euro repo market has core-periphery network structure with small core of highly active institutions conducting most trading",
+    "Connections between institutions, especially bank-to-bank trading, have grown over time even during stress periods",
+    "Financial stress is associated with lower spreads at market level, consistent with repo market functioning as a shock absorber",
+    "Trading volumes and borrowing costs between different institution types remain stable under stress",
+    "Repo market is largest segment of euro money market: 56% of daily transactions, 30% of outstanding amounts",
+    "Total outstanding repos increased 4.9% from June 2023 to June 2024 according to ICMA survey of 61 European financial institutions",
+    "NBFIs play increasingly prominent role in repo markets, with potential for vulnerabilities to propagate more rapidly"
   ],
-  "why_it_matters": "Repo markets are essential plumbing for short-term secured funding and monetary policy transmission. Understanding how the network structure behaves under stress is critical for regulators designing repo market rules and financial stability frameworks. The finding that the market absorbs shocks through pricing adjustments (lower spreads under stress) suggests resilience, but the core-periphery structure also implies concentrated counterparty risk that could be exploited during severe dislocations.",
+  "why_it_matters": "This research provides empirical evidence on how the euro repo market—the largest segment of euro money markets—behaves under financial stress. Understanding that repo spreads decline during stress periods (shock absorber function) contradicts assumptions that stress always tightens liquidity conditions. The core-periphery structure finding has implications for systemic risk monitoring: stress events may concentrate in a small group of highly connected institutions. Regulators and financial institutions can use these insights to design more resilient market structures and better anticipate contagion risks.",
   "market_impact": {
     "asset_classes": [
-      "bonds",
-      "fx"
+      "bonds"
     ],
     "directional_bias": "neutral",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The paper directly addresses market structure through network analysis of repo market participants. Key structural findings include: (1) core-periphery topology where a small number of highly active institutions dominate trading; (2) network density and connectivity increase during stress periods, particularly in bank-to-bank segments; (3) the shift from unsecured to secured (repo) markets over the past decade has made the secured segment the primary venue for euro short-term trading; (4) non-bank financial institutions (NBFIs) play an increasingly prominent role, raising systemic propagation concerns.",
+  "market_structure_context": "The paper directly analyzes repo market network topology, finding a core-periphery structure with intensified connectivity during stress. It examines density and strength metrics, repo spreads, haircuts, and maturities across stress periods. The analysis reveals that bank-to-bank connections have grown over time, and that the repo market maintains stable trading volumes and declining spreads during stress—indicating resilient market plumbing that absorbs shocks through pricing adjustments rather than volume disruptions.",
   "important_numbers": [
     "56% of daily euro money market transactions",
     "30% of outstanding amounts",
-    "4.9% increase in outstanding repos (June 2023 to June 2024)",
-    "Analysis period: 2021 to mid-February 2025"
+    "4.9% increase in outstanding repos (June 2023 to June 2024)"
   ],
   "tags": [
     "repo-market",
     "network-analysis",
-    "ecb",
     "market-structure",
-    "financial-stability",
-    "euro-money-market",
-    "stress-testing",
+    "euro-area",
+    "financial-stress",
     "systemic-risk",
-    "nbfi",
-    "secured-funding"
+    "ecb-working-paper",
+    "core-periphery",
+    "shock-absorber"
   ],
   "llm_review": {
     "initial_confidence": 8,
-    "verification_confidence": 9,
+    "verification_confidence": 8,
     "verdict": "accept",
     "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Source is a recent (early 2025) ECB working paper from a high-trust domain. The PDF contains substantive research on repo market network dynamics and resilience under stress. Source body was truncated but sufficient content was available to extract key findings. The paper is directly relevant to market structure as it examines network topology, connectivity patterns, and market functioning during stress."
+    "notes": ""
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_ecb.europa_pdf_repo_market_networks_dynamics_a83e7f793360a97e.txt",
-  "notes": "The source is a peer-reviewed ECB Working Paper (No 3205) authored by Vanessa Schöller. The disclaimer notes views are the author's own, not necessarily ECB official position. The paper provides empirical evidence on euro repo market resilience and structure that has direct implications for financial stability monitoring and repo market regulation. No publication date was explicitly stated in the visible text; domain metadata suggests early 2025 publication.",
+  "notes": "Source is high-quality ECB Working Paper with clear academic methodology. Author disclaimer notes views are personal and not ECB official position. Publication date not explicitly stated; data extends to mid-February 2025. Content is directly relevant to market structure with empirical findings on repo market network dynamics. Market impact confidence set to 0 because this is academic research rather than a market-moving event—the paper describes historical market behavior rather than predicting future reactions.",
   "linked_quant_context": [
-    {
-      "record_id": "sofr_2026_04_10",
-      "relationship": "temporally_proximate_quant",
-      "reason": "exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "market-structure"
-      ],
-      "link_score": 68.0
-    },
-    {
-      "record_id": "iorb_2026_04_11",
-      "relationship": "temporally_proximate_quant",
-      "reason": "exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "market-structure"
-      ],
-      "link_score": 68.0
-    },
     {
       "record_id": "sofr_2026_04_13",
       "relationship": "temporally_proximate_quant",
@@ -94,7 +78,7 @@
         "market structure",
         "market-structure"
       ],
-      "link_score": 68.0
+      "link_score": 68.3
     },
     {
       "record_id": "iorb_2026_04_14",
@@ -104,25 +88,25 @@
         "market structure",
         "market-structure"
       ],
-      "link_score": 68.0
+      "link_score": 68.3
     },
     {
-      "record_id": "sofr_2026_04_22",
+      "record_id": "sofr_2026_04_16",
       "relationship": "temporally_proximate_quant",
       "reason": "exact topic match, complementary context",
       "topic_overlap": [
         "market structure",
         "market-structure"
       ],
-      "link_score": 68.0
+      "link_score": 68.3
     }
   ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 76.5,
+    "score": 74.0,
     "reasoning": [
-      "quality score: 76.5/100 (useful_context)",
+      "quality score: 74.0/100 (useful_context)",
       "high verification confidence",
       "no issues found during verification",
       "clear why_it_matters explanation",
