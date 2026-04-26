@@ -1,14 +1,17 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "asset_classes includes 'fx' and 'volatility' but source text does not mention FX or volatility impacts - these are unsupported additions",
+    "event_type 'regulatory_guidance' is technically valid but imprecise; this is a feedback statement on a discussion paper, more accurately classified as 'research_paper' or 'economic_commentary'",
+    "why_it_matters framing is somewhat more expansive than the source: states 'could significantly affect' dealers, investors, and 'impacting gilt market functioning' - the source is more cautionary and focuses on ongoing policy exploration rather than committed reforms"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Issues are minor and factual content is well-supported. The source is high-quality (Bank of England), recent (April 2026), and substantive. Human review not required for auto-routing.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "why_it_matters": "The gilt repo market is critical infrastructure for UK financial stability, government cash management, and market-based funding. This feedback statement indicates the Bank is exploring potential reforms including central clearing mandates and minimum haircuts, though no firm commitments are made. Market participants should monitor this policy development as outcomes could affect clearing requirements, margin practices, and dealer balance sheet management in the UK gilt market.",
     "market_structure_context": ""
   }
 }

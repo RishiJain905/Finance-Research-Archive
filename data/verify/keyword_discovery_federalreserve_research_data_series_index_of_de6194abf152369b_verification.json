@@ -1,14 +1,17 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Original publication date (2021-03-05) is over 5 years old relative to TODAY (2026-04-26), though page was updated as recently as April 17, 2026",
+    "Source is methodology/data infrastructure document, not current macro data or policy catalyst",
+    "Quality tier assigned as 'low' seems excessive given the record accurately describes this as methodology rather than claiming it has current macro significance"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Record is accurate and well-supported by source. Minor concern is age of original publication, but this is a Federal Reserve research methodology document that has been actively maintained (April 2022 methodology update, April 2026 data file update). The record correctly characterizes it as methodology rather than a market catalyst. Can be auto-routed to review queue for archival consideration.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Federal Reserve published a methodology note for the Index of Common Inflation Expectations (CIE), a dynamic factor model that summarizes comovement across various inflation expectations measures. The note describes quarterly publication schedule and later (April 2022) methodology updates including additions from the NY Fed Survey of Consumer Expectations and changes to TIPS and Livingston Survey measures.",
+    "why_it_matters": "This FEDS Note announces a standardized methodology for tracking inflation expectations across multiple data sources. However, this is not a macro catalyst itself—it is a methodology/data infrastructure document. The CIE is explicitly described as experimental and may be discontinued at any time.",
+    "macro_context": "Inflation expectations are a key input to monetary policy decisions and market pricing. The CIE aggregates multiple surveys and market-based measures to provide a comprehensive view. However, this source describes the methodology rather than providing current inflation expectations data."
   }
 }
