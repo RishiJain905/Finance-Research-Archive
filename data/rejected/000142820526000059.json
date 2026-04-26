@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution entirely missing from record (name, url, domain, published_at, source_type all blank)",
+      "event_type field is missing/empty - cannot verify taxonomy compliance",
+      "Generated record has no summary, key_points, why_it_matters, or macro_context",
+      "Source is raw XBRL structured data, not human-readable narrative content",
+      "Source is a single-company quarterly 10-Q filing with no macro or market structure relevance",
+      "Record provides no extractable signal for market impact, asset classes, or directional bias",
+      "No archival value as presented - no meaningful content was generated from the source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated research record is essentially empty - all fields including summary, key_points, and source attribution are blank. The source is raw XBRL financial data from a single company's quarterly filing, which has no inherent relevance to market structure or macro catalysts without additional context or narrative analysis."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but the correct type for an SEC 10-K filing could reasonably be classified as 'research_paper' given the taxonomy options available"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is a company-specific SEC filing with no relevance to market structure or macro catalysts. While the record is factually accurate and properly flags its own limitations, the fundamental issue is that the source falls entirely outside the archive's scope (market structure and macro catalysts). Human review is needed to determine whether to accept the record as a properly-flagged out-of-scope entry or reject it on relevance grounds.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The current text explains irrelevance to macro topics but could be more direct about the archive scope: 'This source is outside the archive's target scope. It is a routine SEC 10-K annual filing for a small-cap coffee retail company with no content related to Federal Reserve policy, monetary policy decisions, interest rate guidance, Treasury market operations, economic data releases, or broader market structure dynamics.'",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

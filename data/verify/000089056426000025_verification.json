@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'regulatory_guidance' which is incorrect. This is a corporate name/ticker change filing, not regulatory guidance. Should be 'unknown' or similar catch-all.",
+    "Source content has no relevance to market structure or macro catalysts — it's a routine corporate administrative filing about a company name change and ticker symbol update.",
+    "The record correctly identifies this as non-relevant in why_it_matters, but the event_type and classification are inconsistent with the stated purpose."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed — the core issue is clear: the source is factually accurate but irrelevant to the archive's focus on market structure and macro catalysts. The event_type misclassification ('regulatory_guidance' for a name change filing) is a minor issue compared to the fundamental non-relevance of the content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

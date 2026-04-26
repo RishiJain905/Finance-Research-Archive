@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — while the source is a corporate earnings announcement (not macro-relevant), the record correctly identifies this as an earnings announcement under Item 2.02. A more precise classification like 'unknown' is technically correct given the taxonomy lacks a corporate earnings category.",
+    "topic field is empty — should be populated as 'corporate-earnings' or similar",
+    "Source is not relevant to the archive's macro/market structure focus — ASGN Inc is a staffing services company; this 8-K defers all substantive financial data to Exhibit 99.1 which is not included in the filing body"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, but the source itself falls outside the archive's scope of market structure and macro catalysts. The filing is a standard corporate earnings announcement with no policy, macro, or structural content. While the record correctly identifies the filing type and notes its limited relevance, human confirmation is needed to confirm rejection based on scope rather than accuracy.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

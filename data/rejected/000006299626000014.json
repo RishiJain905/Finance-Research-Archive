@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Research record is completely empty - all fields are blank with no content generated",
+      "Source attribution fields (name, url, domain, source_type) are all empty in the record",
+      "event_type is missing/not set in the record",
+      "Source is raw XBRL/HTML data from SEC filing, not article-like content with narrative analysis",
+      "No summary, key_points, why_it_matters, or any substantive content present to verify",
+      "Source type 'sec_edgar' with raw XBRL data has low signal value for market structure or macro catalysts research"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is empty with no content to review; rejection is automatic based on missing required fields"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

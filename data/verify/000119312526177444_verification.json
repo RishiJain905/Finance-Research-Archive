@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single company 8-K filing with no relevance to market structure or macro catalysts",
+    "Topic misclassified as 'macro catalysts' - this is a routine corporate dividend announcement",
+    "event_type set to 'unknown' which is correct since the source doesn't fit the taxonomy",
+    "Filing has zero archival value for market structure or macro catalyst research",
+    "Source is a thin, single-purpose corporate action document inappropriate for this archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear rejection case. The source is factually accurate but entirely irrelevant to the archive's stated focus areas.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

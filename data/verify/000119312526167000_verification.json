@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a corporate earnings filing with no macro or market structure relevance to the target archive",
+    "event_type is 'unknown' but this is correctly appropriate given the source does not fit monetary policy, speeches, data releases, Treasury operations, or research categories",
+    "The actual Q1 2026 earnings data is in Exhibit 99.1 (external press release) not included in this filing text"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately characterizes the source as irrelevant to macro/market structure research and correctly notes it should be archived separately as a corporate earnings filing. No factual errors in summary or key_points. Human review not needed as the assessment is sound.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K filing is a routine corporate earnings announcement from Community Health Systems (CYH) for Q1 2026. It contains only standard SEC filing boilerplate and references an external press release (Exhibit 99.1) containing the actual financial results. The filing has no relevance to market structure or macro catalysts research—typical archive scope per system instructions.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

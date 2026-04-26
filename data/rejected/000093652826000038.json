@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution completely missing - all source fields (name, url, domain, published_at, source_type) are empty",
+      "Source is an SEC Form 8-K regulatory filing, not a research document or article",
+      "Source contains only 8-K header and forward-looking statement boilerplate; actual earnings content is in Exhibit 99.1 (press release) which is not included in the body text",
+      "Source is not relevant to market structure or macro catalysts - this is a regional bank's earnings announcement (WaFd, a Seattle-based bank)",
+      "event_type cannot be determined as appropriate from this source - corporate earnings announcements don't fit the provided taxonomy (monetary policy, speeches, data releases, Treasury operations, research)",
+      "Generated record provides no actual summary, key_points, or meaningful content from the source",
+      "Source has no archival value for finance research purposes - it's a thin regulatory document with no substantive analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is fundamentally flawed with missing source attribution and empty content fields - rejection is clear-cut without requiring human review"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}
