@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine regional bank 8-K referencing a press release with no substantive content included",
+    "Filing is too thin/noisy to have archival value for finance research purposes",
+    "Press release exhibit 99.1 not provided in source; cannot determine what event triggered the 8-K",
+    "event_type correctly set to 'unknown' but the record itself correctly identifies this source has no macro relevance",
+    "Regional bank disclosure (WABC, market cap implications unknown but likely small-cap) has no broad market or macro significance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and accurately characterizes the source as irrelevant and too thin. The assessment that this should not be archived for finance research is correct. No need for human review - auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

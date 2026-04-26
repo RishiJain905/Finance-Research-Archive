@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution is entirely missing — name, url, domain, published_at, and source_type fields are all empty",
+    "The 8-K itself contains no actual earnings figures; it only references an external press release (Exhibit 99.1) that is not included in this filing",
+    "Record summary cannot be verified since source text contains no financial numbers, only a reference to a separate press release",
+    "Vertiv is a mid-cap infrastructure/data center company — not a financial institution or policy-making body; this is a thin, company-specific earnings announcement with no macro relevance",
+    "This appears to be a container/reference page rather than a substantive source with archival value on its own"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source attribution is entirely missing, the 8-K text contains no actual financial data (just a reference to a separate press release), and the source appears to have no macro catalyst or market structure relevance. This is a thin corporate filing that cannot be verified against its own content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
