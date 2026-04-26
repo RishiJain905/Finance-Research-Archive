@@ -1,0 +1,77 @@
+{
+  "id": "wb_trade_gdp_2026_04_26",
+  "created_at": "2026-04-26T14:14:17.888233+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - Data Query Failure",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-26",
+    "source_type": "unknown",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) query returned no valid observations as of 2026-04-26. No data was retrieved for this macro indicator, rendering the source unusable for analysis or archival purposes.",
+  "key_points": [
+    "Query for indicator TG.VAL.TOTL.GD.ZS returned no valid observations",
+    "Snapshot date: 2026-04-26",
+    "Source is a data retrieval failure, not an actual data release",
+    "No numeric values, historical context, or comparative data available"
+  ],
+  "why_it_matters": "This source provides no actionable information. World Trade as % of GDP is a macro indicator that could inform understanding of globalization trends, trade volumes relative to economic output, and cross-border capital flows. Without actual data, no analysis can be performed.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-indicator",
+    "no-data",
+    "query-failure",
+    "global-economy"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - failed query response with zero observations",
+      "Source attribution URL is empty - no way to verify or re-query the source",
+      "No numeric content, qualitative content, or any usable information for archival purposes",
+      "event_type correctly set to 'unknown' but this further confirms the source lacks any specific event categorization",
+      "topic 'global_economy' does not match required focus areas (market structure, macro catalysts) when source provides no actual data"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "reject",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_26.txt",
+  "notes": "Source is not relevant to market structure or macro catalysts analysis. It is a failed data query that returned no observations. The World Bank indicator TG.VAL.TOTL.GD.ZS is conceptually a macro indicator (trade as % of GDP), but without data, it provides no utility for research archival or RAG purposes. The metadata TARGET is 'World Trade (% of GDP)' with TOPIC 'global_economy' - this does not fall within the required focus areas of market structure or macro catalysts unless actual data is present.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "Source is a data query failure with no actual observations",
+      "Completely lacks numeric or qualitative content",
+      "Cannot be used for any research, analysis, or retrieval purpose",
+      "Does not contain information relevant to specified topics"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data or observations - only a failed API query response",
+    "Source attribution is entirely missing: url is empty, published_at is empty, domain is empty",
+    "Source is a data retrieval confirmation, not an article or research report",
+    "No archival value - an empty data response has no research utility",
+    "event_type is 'unknown' - while arguably correct given no data, a data_release_gdp would be expected if observations existed",
+    "Topic 'global_economy' is appropriate but moot given no content to analyze"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly identifies the source has no content. The source fails basic standards (no attribution, no data, not article-like) making rejection appropriate without human intervention.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "This source is a World Bank API query response for indicator NY.GDP.MKTP.KD.ZG (GDP real growth rate) that returned no valid observations. No substantive data or analysis is available.",
+    "why_it_matters": "The World Bank GDP growth indicator is typically a key macro benchmark. However, this particular response contains no usable data, making it unsuitable for research or market analysis purposes.",
+    "macro_context": "GDP growth data is a primary macro catalyst for markets, influencing central bank policy decisions, sovereign bond yields, and risk asset valuations. However, this source contains no actual data points.",
+    "market_structure_context": ""
+  }
+}

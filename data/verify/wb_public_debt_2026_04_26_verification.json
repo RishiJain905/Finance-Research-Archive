@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data - only a failed API response message stating 'No recent valid observations were returned'",
+    "Zero information content - cannot support any research claim, market analysis, or RAG retrieval",
+    "Source attribution is incomplete - World Bank named but URL and domain are empty",
+    "event_type set to 'unknown' when it should be 'data_release_other' (though data release failed)",
+    "No archival value - failed query has no utility for future reference"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The verdict is unambiguous - this is a failed API query with zero information content. No human review needed to determine rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS (Total Public Debt to GDP) returned no valid observations for the queried period (2026-04-26). This is a failed data query yielding zero information content.",
+    "why_it_matters": "Public debt data would normally be relevant to macro catalysts for sovereign risk and fiscal sustainability analysis, but this source contains no actual data to support any market-relevant assessment.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

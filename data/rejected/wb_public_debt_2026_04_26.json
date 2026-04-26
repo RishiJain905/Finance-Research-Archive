@@ -1,0 +1,75 @@
+{
+  "id": "wb_public_debt_2026_04_26",
+  "created_at": "2026-04-26T14:13:50.633812+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt (GC.DOD.TOTL.GD.ZS) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-26",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS (Total Public Debt to GDP) returned no valid observations for the queried period (2026-04-26). This is a failed data query yielding zero information content.",
+  "key_points": [
+    "Indicator GC.DOD.TOTL.GD.ZS (World Bank Total Public Debt to GDP) produced zero valid observations",
+    "Query snapshot date: 2026-04-26",
+    "No actual debt figures, country breakdowns, or trend data are available from this source"
+  ],
+  "why_it_matters": "Public debt data would normally be relevant to macro catalysts for sovereign risk and fiscal sustainability analysis, but this source contains no actual data to support any market-relevant assessment.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "failed-query",
+    "gc-dod-totl-gd-zs"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - only a failed API response message stating 'No recent valid observations were returned'",
+      "Zero information content - cannot support any research claim, market analysis, or RAG retrieval",
+      "Source attribution is incomplete - World Bank named but URL and domain are empty",
+      "event_type set to 'unknown' when it should be 'data_release_other' (though data release failed)",
+      "No archival value - failed query has no utility for future reference"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_26.txt",
+  "notes": "CRITICAL FAILURE: This source is a World Bank API query that returned no data. The body contains only the message 'No recent valid observations were returned for indicator GC.DOD.TOTL.GD.ZS.' This is not a valid research document. The SOURCE METADATA indicates topic 'global_economy' which is outside the archive's scope (market structure, macro catalysts). Even within macro catalysts, there is no actual macro data present. Recommend re-querying the World Bank API with correct parameters or locating an alternative data source for public debt figures.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "Zero information content - empty data response",
+      "Not relevant to designated focus topics",
+      "Cannot support any research claim or RAG retrieval"
+    ]
+  }
+}

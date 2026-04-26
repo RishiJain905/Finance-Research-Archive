@@ -1,0 +1,67 @@
+{
+  "id": "wb_gdp_growth_2026_04_26",
+  "created_at": "2026-04-26T14:12:46.765137+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World GDP Growth Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_table",
+    "domain": ""
+  },
+  "summary": "This source is a World Bank API query response for indicator NY.GDP.MKTP.KD.ZG (GDP real growth rate) that returned no valid observations. No substantive data or analysis is available.",
+  "key_points": [
+    "Indicator requested: NY.GDP.MKTP.KD.ZG (GDP real growth rate, constant 2017 USD)",
+    "Result: No recent valid observations were returned",
+    "Source type: World Bank data snapshot query from 2026-04-26",
+    "No country-level or aggregate GDP data available in this response"
+  ],
+  "why_it_matters": "The World Bank GDP growth indicator is typically a key macro benchmark. However, this particular response contains no usable data, making it unsuitable for research or market analysis purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "GDP growth data is a primary macro catalyst for markets, influencing central bank policy decisions, sovereign bond yields, and risk asset valuations. However, this source contains no actual data points.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp",
+    "global-economy",
+    "no-data",
+    "api-response"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data or observations - only a failed API query response",
+      "Source attribution is entirely missing: url is empty, published_at is empty, domain is empty",
+      "Source is a data retrieval confirmation, not an article or research report",
+      "No archival value - an empty data response has no research utility",
+      "event_type is 'unknown' - while arguably correct given no data, a data_release_gdp would be expected if observations existed",
+      "Topic 'global_economy' is appropriate but moot given no content to analyze"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_26.txt",
+  "notes": "This source is NOT relevant to market structure or macro catalysts as defined. Topic is global_economy. No content to analyze — the World Bank API returned no observations for the requested GDP growth indicator. Should be deprioritized or re-queried for a different indicator or time period.",
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 0,
+    "reasoning": [
+      "Empty data response with no usable information",
+      "Topic does not align with focus areas (market structure, macro catalysts)",
+      "Cannot produce any meaningful research note"
+    ]
+  }
+}

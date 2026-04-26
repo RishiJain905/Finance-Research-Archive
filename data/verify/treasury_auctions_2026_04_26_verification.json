@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a 404 error response, not actual archivable content",
+    "No market-relevant data exists in this source",
+    "Source cannot serve any research or RAG purpose",
+    "event_type 'unknown' is technically valid but uninformative given the absence of any event",
+    "quality_tier correctly identifies source as 'non-archivable' - this aligns with reject criteria"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The quality_tier assessment of 'non-archivable' with score 0 is correct. The source is an API error page with no substantive content. The record accurately describes the error but the underlying source provides no archival value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

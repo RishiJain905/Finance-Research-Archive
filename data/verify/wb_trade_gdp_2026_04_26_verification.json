@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data - failed query response with zero observations",
+    "Source attribution URL is empty - no way to verify or re-query the source",
+    "No numeric content, qualitative content, or any usable information for archival purposes",
+    "event_type correctly set to 'unknown' but this further confirms the source lacks any specific event categorization",
+    "topic 'global_economy' does not match required focus areas (market structure, macro catalysts) when source provides no actual data"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is a null result data query with no actual observations. The generated record is factually accurate in describing the query failure, but the source itself has zero archival value. Per CORE RULE 6, missing source attribution and thin low-signal sources bias toward reject. No human review needed as the rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

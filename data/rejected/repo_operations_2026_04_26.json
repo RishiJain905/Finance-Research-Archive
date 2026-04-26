@@ -1,0 +1,78 @@
+{
+  "id": "repo_operations_2026_04_26",
+  "created_at": "2026-04-26T14:12:35.511025+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "NY Fed Repo Operations - Data Fetch Error",
+  "source": {
+    "name": "New York Fed",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "newyorkfed.org",
+    "published_at": "",
+    "source_type": ""
+  },
+  "summary": "The attempted data fetch from the New York Fed's repo operations API endpoint returned a 400 Bad Request error. No repo operation data was captured.",
+  "key_points": [
+    "HTTP 400 Bad Request error occurred when attempting to fetch from NY Fed markets API",
+    "Endpoint: https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation data was retrieved",
+    "Error source: nyfed (as stated in source attribution)"
+  ],
+  "why_it_matters": "This is a data capture failure, not a meaningful source. No market structure information about Fed repo operations, counterparty participation, or overnight funding conditions was retrieved.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Unable to access NY Fed repo operations data due to API error. Repo operations are part of the Fed's money market operations framework and provide insight into short-term funding conditions and the Fed's balance sheet management.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "market-structure",
+    "data-fetch-error",
+    "fed-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Source contains only an HTTP 400 error message with no actual repo operations data",
+      "No substantive market structure content was captured due to API failure",
+      "event_type set to 'unknown' when this should be classified as an operational/market notice type if capturing the failure is warranted",
+      "No published_at date available - cannot assess source freshness",
+      "Record documents a data capture failure rather than a meaningful market catalyst or research finding",
+      "Low archival value since no actual information about Fed repo operations was retrieved"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately describes the data fetch failure, but the source itself has no substantive content. This appears to be a technical artifact documenting an operational failure rather than a meaningful research source. Human review needed to decide whether failed data captures warrant archiving, or if this should be discarded in favor of re-attempting the data retrieval."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_26.txt",
+  "notes": "Data fetch failure - 400 Bad Request. No repo operations data captured. This appears to be a transient or persistent API error. The source provides no market structure content because no content was retrieved. Recommend attempting re-fetch or manual data retrieval from NY Fed markets website.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "fail",
+    "score": 0,
+    "reasoning": [
+      "Source contains only an error message, no actual data",
+      "No information content to analyze",
+      "Unable to extract any market structure or macro catalyst information",
+      "Data capture was unsuccessful"
+    ]
+  }
+}
