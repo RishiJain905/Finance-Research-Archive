@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when it should be noted as a corporate cybersecurity disclosure - no taxonomy value fits this source type",
+    "Source is a company-specific cybersecurity incident at Itron, Inc. (ITRI) - outside the scope of market structure and macro catalysts",
+    "Source has no relevance to Federal Reserve policy, Treasury market operations, interest rates, economic data, or market microstructure",
+    "The generated record correctly identifies this as excluded content, but the event_type field cannot properly categorize it"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "While the source is a legitimate 8-K filing and the record accurately summarizes it, the content is completely outside the target scope of market structure and macro catalysts. The record itself acknowledges this (quality_tier: excluded). Human review needed to confirm scope boundaries - should corporate cybersecurity disclosures be archived if they have no broader market implications?",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Itron, Inc. filed an 8-K on April 24, 2026 disclosing that an unauthorized third party gained access to certain corporate systems on April 13, 2026. The company activated its cybersecurity response plan, notified law enforcement, and took remediation actions. No unauthorized activity was observed in customer-hosted systems, and operations have continued in all material respects. The company does not currently believe the incident has had or is reasonably likely to have a material impact.",
+    "why_it_matters": "This 8-K filing is a company-specific cybersecurity disclosure for Itron, Inc. (ticker ITRI), a utility technology company. It does not relate to market structure or macro catalysts and has no bearing on Federal Reserve policy, interest rates, Treasury market operations, or broad macroeconomic conditions. Only archive if the research archive scope includes corporate operational risk and cybersecurity disclosures.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

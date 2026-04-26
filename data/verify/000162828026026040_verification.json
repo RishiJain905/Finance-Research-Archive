@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing with XBRL data, not relevant to market structure or macro catalysts",
+    "Source contains no narrative content, only XBRL financial tags",
+    "SEC filing format is a structured data document, not an article-like source with readable content",
+    "event_type 'unknown' is technically valid but correctly reflects the source has no macro/market structure relevance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "NETSTREIT Corp. filed its Q1 2026 10-Q report on April 14, 2026, covering the quarter ended March 31, 2026. The filing consists primarily of XBRL-tagged financial data (balance sheet, income statement, equity changes) for this single-tenant net lease REIT. This is a corporate financial disclosure with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This filing is a routine corporate earnings document. It has no relevance to macro catalysts (Fed policy, central bank decisions, economic data) or market structure (market plumbing, trading operations). Only useful for company-specific financial analysis of NETSTREIT."
+  }
+}

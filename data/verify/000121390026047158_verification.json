@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' — while the source is an SEC 8-K corporate governance filing that doesn't fit neatly into the taxonomy (not monetary policy, speech, data release, or Treasury), 'unknown' should be a last resort; consider whether this warrants a new category or if it can be excluded based on scope rather than taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and the source is a legitimate SEC filing. The record correctly identifies this as outside archive focus areas. Confidence is 7 (borderline) due to event_type ambiguity, but the summary and key_points accurately reflect the source content regarding board changes and the merger agreement.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "USA Rare Earth, Inc. filed a Form 8-K on April 23, 2026 disclosing that two board members will not stand for reelection at the June 3, 2026 annual meeting, reducing the board to six directors. The company also announced a definitive merger agreement with SVRE Holdings Ltd. and Serra Verde Rare Earths Ltd., expected to close in Q3 2026, which will add two directors to the board.",
+    "why_it_matters": "This is a routine corporate governance filing for a Nasdaq-listed company. It does not relate to monetary policy, interest rates, economic data releases, or financial market structure. Archival value is limited for a finance research archive focused on market structure and macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

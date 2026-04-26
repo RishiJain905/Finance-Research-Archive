@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 9,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — while the source is an SEC 8-K filing which doesn't fit neatly into the defined taxonomy, this could more accurately be reflected as 'corporate-debt-issuance' if that category existed, but 'unknown' is acceptable for out-of-scope items"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source accuracy is high (all facts verified), but relevance to archive scope is the primary question. This is a corporate convertible notes issuance by a solar manufacturing company. The record correctly identifies it as outside the defined focus on macro catalysts and market structure. Human decision needed on whether corporate finance events are within scope.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
