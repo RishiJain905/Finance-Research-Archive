@@ -1,10 +1,13 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'research_paper' is imprecise - this is a discussion paper feedback statement summarizing industry responses to a policy consultation, not original research. 'economic_commentary' or 'regulatory_guidance' would be more accurate taxonomy values.",
+    "Source body is truncated (ends mid-sentence: 'marginini') - unable to verify whether final paragraphs about policy progression contain additional material facts that should be captured."
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Minor issues: event_type classification could be more precise, and source truncation raises possibility of missing content, but record captures core substance accurately. Issues are not severe enough to require human intervention.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

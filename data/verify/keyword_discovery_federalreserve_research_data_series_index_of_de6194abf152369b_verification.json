@@ -1,10 +1,13 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Record appropriately notes the source is methodology/research infrastructure rather than current macro data, but the conclusion to review_queue vs reject should be reconsidered given the source's high-trust domain (federalreserve.gov), accurate technical description, and archival value for macro research infrastructure",
+    "Published 2021-03-05 but last updated 2026-04-17 - source is not stale, it has been continuously maintained and should be assessed as current methodology documentation"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case requiring human judgment on archival relevance. The source is factually accurate and from a high-trust domain, but its relevance to 'macro catalysts' is indirect—it's methodology documentation for a research data series, not current macro information. A human should decide whether methodology documentation for Fed research infrastructure belongs in a macro catalysts archive.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

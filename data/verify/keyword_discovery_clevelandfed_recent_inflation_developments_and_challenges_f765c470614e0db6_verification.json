@@ -1,10 +1,13 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source dated May 2016 — nearly 10 years before TODAY (2026-04-26). Per rule 8, age alone is not disqualifying if archival value is clear, but current relevance is limited.",
+    "Record correctly notes age-related concerns and appropriately assigned to review_queue, but confidence score of 4 is conservative given that content extraction is accurate and well-structured."
+  ],
   "human_review_required": false,
-  "human_review_reason": "Record is well-constructed with accurate content, proper attribution, and valid event classification. Age (10 years) is explicitly noted; record appropriately frames historical archival value rather than current market relevance.",
-  "suggested_status": "accepted",
+  "human_review_reason": "Automated routing appropriate: the record is well-constructed and factually accurate, but needs a human decision on whether 2016 archival value justifies acceptance given limited current macro relevance.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

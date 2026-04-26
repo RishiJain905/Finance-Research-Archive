@@ -1,19 +1,16 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source body is truncated—cannot verify if FAQ content after 'portfolio margining written agreements' is complete or if any additional claims were missed",
-    "why_it_matters contains '$4+ trillion' figure for the repo market which is not stated in the source text; this figure should be verified or attributed to external sources",
-    "event_type 'regulatory_guidance' is plausible but debatable—the source is technically a FAQ document about best practice recommendations; 'research_paper' or 'market_notice' are alternative valid classifications",
-    "market_impact section has confidence: 0, indicating no directional assessment was provided"
+    "Unsupported claim: 'Weak risk management in the $1+ trillion Treasury repo market' — the source does not provide a specific dollar figure for the repo market size"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record is mostly well-constructed with accurate summary and key points supported by the source. The $4+ trillion figure is the most substantive issue but it's contextual color rather than a core factual error. The event type ambiguity is minor. These are borderline issues that don't preclude auto-routing.",
+  "human_review_reason": "One unsupported claim in why_it_matters (the $1+ trillion figure) needs correction, but the record is otherwise accurate and well-structured. This is a minor issue that can be auto-corrected.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "The U.S. repo market is foundational to short-term funding and market liquidity. This guidance directly addresses systemic vulnerabilities by pushing all bilateral repo counterparties toward consistent margin practices. Market participants will need to update legal agreements, policies, and collateral management systems before the June 2026 deadline. (Note: $4+ trillion market size figure not verified in source—should be attributed to external data if included.)",
+    "why_it_matters": "Weak risk management in the Treasury repo market can pose systemic risks if major participants default. This guidance aims to standardize haircuts and margin practices across bilateral repo transactions, reducing leverage opacity and improving financial system stability during market stress. Market participants handling material repo exposures should begin evaluating their legal agreements and policies now to meet the June 2026 deadline.",
     "macro_context": "",
-    "market_structure_context": "The document provides detailed market structure guidance on repo market risk management. Key elements include: (1) haircuts should reflect counterparty credit risk, liquidity risk, and market risks; (2) legally enforceable documentation required for margining regime including timing, frequency, thresholds, valuation, and close-out provisions; (3) netting agreements and portfolio margining can supplement but not replace haircuts; (4) centrally cleared repos already compliant; (5) repo intermediated into central clearing still requires bilateral risk management between client and facilitating participant."
+    "market_structure_context": "This guidance directly addresses Treasury market plumbing by recommending standardized haircuts/margin for bilateral repo. It follows the 2022 TMPG white paper on clearing/settlement and a pilot data study by Treasury's Office of Financial Research on the non-centrally cleared bilateral repo market. The guidance complements SEC rule amendments expanding central clearing, which will cover some but not all repo volume."
   }
 }
