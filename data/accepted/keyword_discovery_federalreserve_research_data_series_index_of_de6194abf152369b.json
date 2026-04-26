@@ -1,46 +1,51 @@
 {
   "id": "keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b",
-  "created_at": "2026-04-12T21:09:41.360666+00:00",
+  "created_at": "2026-04-26T20:30:53.690947+00:00",
   "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "research_paper",
   "title": "Research Data Series: Index of Common Inflation Expectations",
   "source": {
-    "name": "Federal Reserve Board",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.html",
     "domain": "www.federalreserve.gov",
     "published_at": "2021-03-05",
-    "source_type": "research_page"
+    "source_type": "research_paper"
   },
-  "summary": "The Federal Reserve introduced the Index of Common Inflation Expectations (CIE), a dynamic factor model that summarizes comovement across multiple inflation expectations measures, to be published quarterly as an experimental research data series. An April 2022 update added New York Fed Survey of Consumer Expectations measures and modified the model specification. The source serves as methodology documentation rather than a data release or policy announcement.",
+  "summary": "The Federal Reserve Board staff published a methodology note for the Index of Common Inflation Expectations (CIE), a dynamic factor model that summarizes comovement across multiple inflation expectations measures. The CIE is published quarterly as an experimental research data series, with updates scheduled for noon Eastern Time on the third Friday of January, April, July, and October. An updated version of the CIE was introduced in April 2022, incorporating additional survey data and methodological refinements, with the original series being phased out by October 2022.",
   "key_points": [
-    "CIE uses a dynamic factor model to extract common movements across a wide variety of inflation expectations measures",
-    "April 2022 update added 1-year-ahead and 3-year-ahead measures from NY Fed's Survey of Consumer Expectations",
-    "Added 25th and 75th percentiles of inflation expectations from University of Michigan Survey",
-    "Removed 5-year TIPS breakeven inflation measure as redundant with other TIPS data",
-    "Updated latent factor dynamics assumed to follow autoregressive process of order 5",
-    "Original CIE phased out by October 2022; only updated versions retained",
-    "Updates published quarterly on third Friday of January, April, July, October at noon ET",
-    "Explicitly labeled as experimental research series for informational purposes only"
+    "The CIE is a dynamic factor model summarizing comovement across a wide variety of inflation expectations measures",
+    "Original CIE was updated in April 2022 to add the NY Fed Survey of Consumer Expectations (1-year and 3-year ahead measures) and Michigan Survey percentiles (25th and 75th)",
+    "The updated CIE removed the 5-year TIPS breakeven inflation measure as redundant and redefined the Livingston Survey 1-year measure to use a 12-month growth rate",
+    "The CIE produces projections onto SPF 10-year PCE inflation and Michigan next 5-10 years inflation",
+    "Quarterly updates are posted at noon ET on the third Friday of January, April, July, and October, or the first Friday following an FOMC meeting if that date conflicts",
+    "This is explicitly an experimental research series that may be discontinued and should be used for informational purposes only"
   ],
-  "why_it_matters": "The CIE provides a unified signal of inflation expectations across multiple surveys and market-based measures, which is relevant for understanding wage-price dynamics and Fed reaction function. However, this source is methodology documentation rather than market-moving data—the actual index values would be found in the CSV data file, not this note.",
+  "why_it_matters": "The CIE provides a consolidated signal of inflation expectations across multiple surveys and market measures. Market participants and policymakers monitor inflation expectations as a key input for rate path expectations and inflation risk premium assessment. As a Federal Reserve staff research product, it offers a model-based summary of common trends in expectations data.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "Inflation expectations are a key macro catalyst as they influence actual inflation via wage bargaining and price-setting behavior. The CIE methodology allows aggregation of expectations across SPF professional forecasts, Michigan consumer surveys, and TIPS-based breakeven rates. This source does not provide actual index values or discuss macro implications—it is methodological documentation for how the index is constructed.",
+  "macro_context": "Inflation expectations are a critical input for monetary policy formulation and market pricing. The CIE synthesizes multiple surveys (SPF, Michigan, NY Fed SCE, Livingston) and market-based measures (TIPS breakeven inflation) into a unified indicator. Changes in the CIE could signal shifts in perceived inflation risk or anchoring of expectations, which directly influences Fed policy calculus and real asset pricing.",
   "market_structure_context": "",
-  "important_numbers": [],
+  "important_numbers": [
+    "2021-03-05 (original publication)",
+    "2022-04-15 (updated index release)",
+    "2022-10 (phase-out of original CIE)"
+  ],
   "tags": [
     "inflation-expectations",
+    "cie",
     "dynamic-factor-model",
-    "fed-reserve",
-    "cie-index",
-    "research-methodology",
-    "surveys",
-    "tips",
-    "experimental-series"
+    "fed-staff-research",
+    "pce-inflation",
+    "survey-data",
+    "tips-breakeven",
+    "federal-reserve"
   ],
   "llm_review": {
     "initial_confidence": 7,
@@ -51,7 +56,7 @@
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Source is methodology documentation rather than market-moving content. Consider whether research_paper is the most appropriate event_type, or if economic_commentary better fits the FEDS Notes format."
+    "notes": ""
   },
   "human_feedback": {
     "decision": "",
@@ -62,10 +67,10 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_research_data_series_index_of_de6194abf152369b.txt",
-  "notes": "Historical record (published 2021-03-05). Source is methodology documentation for an experimental Fed research series. The data file (CSV) would contain actual index values; this note explains the methodology and April 2022 model changes. No direct market impact as this is not a policy announcement. Topic relevance: inflation expectations are macro catalysts, so methodology documentation for an expectations index is tangentially relevant to macro research but does not itself provide actionable macro catalyst information.",
+  "notes": "Source is a Federal Reserve staff methodology note documenting an experimental data series. While related to macro catalysts (inflation expectations are a key macro indicator), this is primarily archival methodology documentation rather than a direct market catalyst. Published March 5, 2021 (historical record). The April 17, 2026 update timestamp at the bottom indicates the data files were refreshed, but the note content itself is dated. Relevant as background/reference for understanding the CIE indicator used in inflation expectations analysis.",
   "linked_quant_context": [
     {
-      "record_id": "2y_yield_2026_04_11",
+      "record_id": "2y_yield_2026_04_22",
       "relationship": "temporally_proximate_quant",
       "reason": "exact topic match",
       "topic_overlap": [
@@ -74,7 +79,16 @@
       "link_score": 50.0
     },
     {
-      "record_id": "fed_funds_2026_04_10",
+      "record_id": "fed_funds_2026_04_22",
+      "relationship": "temporally_proximate_quant",
+      "reason": "exact topic match",
+      "topic_overlap": [
+        "macro catalysts"
+      ],
+      "link_score": 50.0
+    },
+    {
+      "record_id": "2y_yield_2026_04_16",
       "relationship": "temporally_proximate_quant",
       "reason": "exact topic match",
       "topic_overlap": [
@@ -86,13 +100,13 @@
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 62.0,
+    "score": 72.0,
     "reasoning": [
-      "quality score: 62.0/100 (useful_context)",
+      "quality score: 72.0/100 (useful_context)",
       "high verification confidence",
       "no issues found during verification",
       "clear why_it_matters explanation",
-      "no structured quantitative data",
+      "contains useful structured numbers",
       "high-trust source",
       "peripheral topic",
       "lower event significance"
