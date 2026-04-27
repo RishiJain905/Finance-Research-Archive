@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing with no relevance to market structure or macro catalysts",
+    "event_type is set to 'unknown' when the record itself acknowledges the source has no relevance to the archive's focus areas",
+    "Source is thin corporate financial data (XBRL tags) with no analytical content or market-relevant commentary",
+    "why_it_matters field explicitly states 'This source is not relevant to the archive's focus areas'",
+    "Record correctly identifies the source as not-relevant but was still submitted for verification"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent in noting non-relevance, but this self-defeating assessment confirms the source should not be archived for this research focus.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate regulatory filing (8-K) from a small regional bank, not relevant to market structure or macro catalysts",
+    "No macro-level policy information, market structure content, or systemic relevance present",
+    "event_type set to 'unknown' - corporate earnings releases do not fit the taxonomy of macro-relevant events (FOMC, data releases, speeches, etc.)",
+    "Record correctly identifies content as 'not relevant' and assigns quality_tier 'excluded', yet suggests status 'review_queue' - inconsistent with own assessment",
+    "Filing is routine corporate earnings announcement with no archival value for macro research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately describes source content and correctly concludes the filing is not relevant to macro research. The decision path is clear: reject. Human review is not needed to confirm what the record already acknowledges.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

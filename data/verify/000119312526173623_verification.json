@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific 10-Q filing for MarineMax Inc (recreational boating retailer) with no relevance to market structure or macro catalysts",
+    "Source contains no monetary policy content, economic data releases, market operations, or trading infrastructure information",
+    "Source is raw XBRL/structured financial data rather than readable prose, limiting any potential research value",
+    "event_type set to 'unknown' when the document type is clearly a corporate financial data release",
+    "Archive focus areas (market structure, macro catalysts) explicitly exclude individual company earnings filings"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "MarineMax Inc (ticker: HZO) filed its 10-Q quarterly report on 2026-04-23. This is a standard SEC financial filing for a recreational boating retail and manufacturing company. The filing contains detailed revenue breakdowns by segment, debt facility disclosures, and concentration risk information. This source is NOT relevant to market structure or macro catalysts as it is a company-specific earnings/financial disclosure with no discussion of broader market operations, monetary policy, or macroeconomic indicators.",
+    "why_it_matters": "This source does not matter for the specified focus areas of market structure and macro catalysts. It is a standard corporate financial filing providing company-specific financial information about a recreational boating retailer. There is no relevance to broader market operations, monetary policy, or macroeconomic analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
