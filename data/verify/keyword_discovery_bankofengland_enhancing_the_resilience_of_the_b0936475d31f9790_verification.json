@@ -1,10 +1,13 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'economic_commentary' is not ideal; 'regulatory_guidance' or 'monetary_policy_report' would better reflect the policy feedback statement nature of the source",
+    "source_type in record is 'research_paper' but the source is a feedback statement on a discussion paper, not a research paper - classification is imprecise"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Content is factually accurate and well-supported by source. The record correctly captures industry responses and Bank intentions. Issues are classification-related rather than substantive accuracy problems. Record can be improved but does not contain fabricated claims or significant mischaracterizations.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

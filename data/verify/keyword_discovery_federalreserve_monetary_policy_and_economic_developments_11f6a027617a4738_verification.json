@@ -1,21 +1,18 @@
 {
-  "verification_confidence": 2,
-  "verdict": "reject",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "PAGE_TYPE is navigation_page — this is an explicit reject criterion per verification rules",
-    "Source is a navigation/listing page structure rather than direct archival content",
-    "Source is an index/excerpt page pointing to actual Monetary Policy Reports (available as PDFs), not the substantive reports themselves",
-    "Source body was truncated, meaning complete content is unavailable for verification",
-    "Published_at (2019-02-01) is over 7 years old relative to TODAY (2026-04-12); while archival value exists, the navigation_page source type disqualifies it regardless",
-    "The actual Monetary Policy Reports referenced in the source (February 2019 and July 2018 PDFs) would be higher-quality archival sources"
+    "source_type incorrectly labeled as 'listing_page' - this is actually the monetary policy chapter of a Federal Reserve annual report, which is primary content, not a navigation or container page",
+    "Source body truncated mid-sentence on international developments section, potentially missing relevant content",
+    "Document age is approximately 7 years relative to TODAY, though this is a retrospective archival document with legitimate historical value per rules"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Rule violation is unambiguous — navigation_page is an automatic reject regardless of content quality or human review",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "The record's source_type classification appears incorrect (listing_page vs actual report chapter), and source body truncation raises completeness concerns. However, the document has genuine archival value as an official Federal Reserve retrospective on 2018 monetary policy, and all factual claims in the summary appear supported by the visible source content. Human review needed to confirm source_type accuracy, assess completeness impact, and verify whether this historical document meets current archival relevance criteria for the intended use case.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This Federal Reserve annual report excerpt reviews U.S. monetary policy and economic developments from 2018, documenting two rate hikes in H2 2018 that brought the federal funds target range to 2-1/4 to 2-1/2 percent, followed by a shift to a patient stance at the January 2019 FOMC meeting in response to softer global growth and muted inflation. The labor market strengthened with unemployment near 4 percent and payrolls averaging 224,000 per month, while PCE inflation fell to 1.7 percent and GDP growth reached approximately 3 percent for the year. [Note: Source body was truncated; additional content on international developments was cut off.]",
+    "why_it_matters": "This document provides the Fed's official retrospective assessment of 2018 monetary policy and economic conditions, including the policy rationale for late-2018 rate hikes and the subsequent pivot to patience. It documents the transition from gradual tightening to accommodation as financial market volatility increased amid global growth concerns and trade tensions. The financial stability section is relevant to understanding systemic risk conditions. As a historical document from early 2019, this should be treated as an archival reference rather than current market intelligence.",
+    "macro_context": "The source documents a macro backdrop of solid growth (3% GDP), below-target inflation (1.7% PCE), and a strengthening labor market (4% unemployment). Late 2018 saw deteriorating risk appetite, widening credit spreads, and declining equity and Treasury yields as investors grew concerned about global growth and trade tensions. The Fed responded by signaling patience rather than continued tightening. [Source body truncated on international developments.]",
+    "market_structure_context": "The financial stability section notes funding risks are low relative to pre-crisis, bank capital ratios at historical highs, consumer borrowing aligned with incomes, but elevated business debt and deteriorated credit standards in leveraged loan segments warrant monitoring."
   }
 }

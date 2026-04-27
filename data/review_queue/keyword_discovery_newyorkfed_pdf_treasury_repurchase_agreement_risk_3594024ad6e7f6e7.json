@@ -1,69 +1,86 @@
 {
   "id": "keyword_discovery_newyorkfed_pdf_treasury_repurchase_agreement_risk_3594024ad6e7f6e7",
-  "created_at": "2026-04-12T21:08:19.437025+00:00",
+  "created_at": "2026-04-27T01:41:22.201232+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
-  "title": "Treasury Repurchase Agreement Risk Management Recommendation FAQs",
+  "title": "Treasury Repurchase Agreement Risk Management FAQs",
   "source": {
-    "name": "Federal Reserve Bank of New York / Treasury Market Practices Group",
+    "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/medialibrary/Microsites/tmpg/files/Treasury-Repurchase-Agreement-Risk-Management-Recommendation-FAQs.pdf",
+    "domain": "www.newyorkfed.org",
     "published_at": "2025-05-22",
-    "source_type": "research_paper",
-    "domain": "www.newyorkfed.org"
+    "source_type": "research_paper"
   },
-  "summary": "The Treasury Market Practices Group (TMPG) released best practice recommendations on U.S. Treasury repo risk management, calling for consistent application of haircuts and margin on repurchase agreements to address systemic risks in the non-centrally cleared bilateral repo market. The TMPG identifies significant inconsistencies and lack of transparency in current bilateral repo risk management practices that could pose threats to financial stability during market stress.",
+  "summary": "The Treasury Market Practices Group (TMPG) released FAQs on May 22, 2025, clarifying recommended best practices for Treasury repo risk management, including the application of haircuts or margin on repos alongside other risk management techniques. The guidance aims to address inconsistencies in bilateral repo market risk management and potential systemic risks from leverage that may not be properly priced or risk managed.",
   "key_points": [
-    "TMPG recommends all Treasury repos should include haircuts or margin reflecting counterparty credit risk, liquidity risk, and market risk",
-    "Bilateral repo market lacks consistency and transparency in risk management practices, making full leverage exposure potentially misunderstood by market participants",
-    "Large quantities of unhedged repo positions could pose systemic risks to overall market functioning if participants default",
-    "Working group formed February 2023 included dealers, money funds, hedge funds, asset managers, FMUs, clearing banks, foreign central banks, Treasury, and NY Fed staff",
-    "Implementation deadline set for June 2026 with rolling, risk-based approach prioritizing material counterparty exposures",
-    "Centrally cleared repo already adheres to recommended best practices through existing CCP margining regimes"
+    "TMPG recommends that all Treasury repos should be subject to prudent risk management, including application of haircuts (or margin) on the value of securities",
+    "Current bilateral repo market risk management practices lack consistency and transparency, and full leverage in the repo market may not be understood or properly priced by market participants",
+    "Large quantities of repos without prudent risk management could pose systemic risks to overall market functioning if one or more market participants default",
+    "Implementation deadline: TMPG recommends firms implement the best practice by June 2026 using a risk-based rolling approach prioritizing most material counterparty exposures",
+    "Centrally cleared repos already adhere to the recommended best practice through existing CCP margining/risk management regimes",
+    "Legal agreements must be enforceable and describe margining regime, valuation of exposures and collateral, and close-out netting procedures"
   ],
-  "why_it_matters": "The U.S. repo market is foundational to short-term funding and market liquidity. This guidance directly addresses systemic vulnerabilities by pushing all bilateral repo counterparties toward consistent margin practices. Market participants will need to update legal agreements, policies, and collateral management systems before the June 2026 deadline. (Note: $4+ trillion market size figure not verified in source—should be attributed to external data if included.)",
+  "why_it_matters": "The TMPG guidance addresses systemic risks in the Treasury repo market, where inconsistent risk management practices in bilateral repo create potential for cascading defaults during market stress. This guidance codifies minimum risk management standards (haircuts, margin, legal documentation) that will become standard practice ahead of mandatory central clearing implementation.",
   "market_impact": {
     "asset_classes": [
-      "bonds",
-      "repo"
+      "bonds"
     ],
     "directional_bias": "neutral",
-    "confidence": 0
+    "confidence": 4
   },
   "macro_context": "",
-  "market_structure_context": "The document provides detailed market structure guidance on repo market risk management. Key elements include: (1) haircuts should reflect counterparty credit risk, liquidity risk, and market risks; (2) legally enforceable documentation required for margining regime including timing, frequency, thresholds, valuation, and close-out provisions; (3) netting agreements and portfolio margining can supplement but not replace haircuts; (4) centrally cleared repos already compliant; (5) repo intermediated into central clearing still requires bilateral risk management between client and facilitating participant.",
+  "market_structure_context": "The document directly addresses market plumbing issues: bilateral repo market risk management inconsistencies, leverage opacity, and systemic risk concerns. Recommends haircuts/margin as counterparty credit and liquidity risk mitigation. Central clearing expansion (SEC rule amendments) is acknowledged as ongoing but not fully addressing NCCBR market risks. Implementation of best practices scheduled for June 2026.",
   "important_numbers": [
-    "June 2026 (implementation deadline)"
+    "June 2026 (implementation deadline)",
+    "February 2023 (working group convened)"
   ],
   "tags": [
-    "tmpg",
-    "repo",
+    "treasury-repo",
     "risk-management",
+    "tmpg",
     "haircuts",
     "margin",
-    "market-structure",
-    "federal-reserve",
     "bilateral-repo",
-    "clearing"
+    "central-clearing",
+    "systemic-risk"
   ],
   "llm_review": {
-    "initial_confidence": 8,
+    "initial_confidence": 7,
     "verification_confidence": 7,
     "verdict": "review",
     "issues_found": [
-      "Source body is truncated—cannot verify if FAQ content after 'portfolio margining written agreements' is complete or if any additional claims were missed",
-      "why_it_matters contains '$4+ trillion' figure for the repo market which is not stated in the source text; this figure should be verified or attributed to external sources",
-      "event_type 'regulatory_guidance' is plausible but debatable—the source is technically a FAQ document about best practice recommendations; 'research_paper' or 'market_notice' are alternative valid classifications",
-      "market_impact section has confidence: 0, indicating no directional assessment was provided"
+      "The '$4+ trillion Treasury repo market' figure appears in why_it_matters but is not present in the source text provided. This specific number should either be removed or sourced from elsewhere in the document.",
+      "Source body is truncated mid-sentence (legal agreement section cut off). This creates some uncertainty about completeness, though the available content appears to be accurately summarized."
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The record is mostly well-constructed with accurate summary and key points supported by the source. The $4+ trillion figure is the most substantive issue but it's contextual color rather than a core factual error. The event type ambiguity is minor. These are borderline issues that don't preclude auto-routing."
+    "notes": "The record is mostly accurate and well-structured. The specific $4+ trillion figure is the only unsupported claim that stands out. Given the high-authority source and overall accuracy, auto-routing to review_queue is appropriate for minor correction."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_newyorkfed_pdf_treasury_repurchase_agreement_risk_3594024ad6e7f6e7.txt",
-  "notes": "High-quality source from authoritative domain (NY Fed/TMPG). Directly addresses market structure concerns in Treasury repo market. Published May 2025, prior to TODAY (April 2026) — approximately 11 months old. The source is still relevant as the June 2026 implementation deadline has likely now passed or is imminent. Historical record noted per rule 8. Source_type classified as research_paper given PDF format and FAQ/whitepaper nature, though could alternatively be regulatory_guidance.",
-  "telegram_review_sent": true,
-  "telegram_review_fingerprint": "a2c844b975e616f35eea3881944c4793fdd97cb2"
+  "notes": "Historical record: published May 22, 2025 (approx. 11 months prior to TODAY). Source is high-authority (NY Fed/TMPG) but older. Market impact confidence lowered due to guidance nature (recommended best practices, not binding requirements) and the extended implementation timeline. The source discusses structural market plumbing issues (bilateral repo risk management, systemic risk, central clearing expansion) directly relevant to market structure topic.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 8,
+    "reasoning": [
+      "Source is authoritative: Federal Reserve Bank of New York / Treasury Market Practices Group",
+      "Domain is high-trust tier (newyorkfed.org)",
+      "Specific, concrete guidance with implementation timeline",
+      "Addresses direct market structure concerns (repo market risk management, systemic risk)",
+      "Published date makes this a historical record (11 months old) — noted accordingly",
+      "Body truncated — potential missing information in legal agreement section"
+    ]
+  }
 }

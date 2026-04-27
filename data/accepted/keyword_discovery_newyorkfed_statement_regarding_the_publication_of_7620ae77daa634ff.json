@@ -1,53 +1,53 @@
 {
   "id": "keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff",
-  "created_at": "2026-04-12T21:06:56.117474+00:00",
+  "created_at": "2026-04-27T01:37:41.142020+00:00",
   "status": "accepted",
   "topic": "market structure",
   "event_type": "market_notice",
   "title": "Statement Regarding the Publication of Reference Rates on Friday, April 3, 2026",
   "source": {
-    "name": "New York Fed",
+    "name": "Federal Reserve Bank of New York",
     "url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_260312a",
     "published_at": "2026-03-12",
-    "source_type": "policy_statement",
+    "source_type": "operating_policy_statement",
     "domain": "www.newyorkfed.org"
   },
-  "summary": "The New York Fed announced that SOFR, TGCR, BGCR, and related reference rates will not be published on Friday, April 3, 2026, due to Good Friday and the March Employment Situation release. Settlement of cleared Treasury repo will not be available that day, eliminating two of three market segments used to calculate Treasury repo reference rates. EFFR and OBFR will continue to publish per the New York Fed's holiday schedule.",
+  "summary": "The New York Fed announced that TGCR, BGCR, SOFR, and SOFR Averages will not be published on Friday, April 3, 2026 (Good Friday), due to repo market participants broadly expecting to treat that date as a holiday. Settlement of cleared Treasury repo will not be available, eliminating two of three market segments used to calculate these Treasury repo reference rates. EFFR and OBFR will continue to publish on April 3 as they follow the NY Fed's own holiday schedule.",
   "key_points": [
-    "No publication of TGCR, BGCR, SOFR, SOFR Averages, or SOFR Index on Friday, April 3, 2026",
-    "EFFR and OBFR will be published on April 3, 2026 per the New York Fed's holiday schedule",
-    "Settlement of cleared Treasury repo is not scheduled for April 3, eliminating two of three market segments used to calculate Treasury repo reference rates",
-    "On Monday April 6, TGCR, BGCR, and SOFR will be published reflecting Thursday April 2 settling transactions maturing Monday April 6",
-    "SOFR Averages and Index published April 6 will have a value date of April 6",
-    "SIFMA did not recommend a full market closure for U.S. government securities trading, but repo market participants broadly expect to treat April 3 as a holiday"
+    "TGCR, BGCR, SOFR, and SOFR Averages/Index will not publish on April 3, 2026",
+    "EFFR and OBFR will publish on April 3, 2026 (follow NY Fed holiday schedule)",
+    "Cleared Treasury repo settlement unavailable on April 3, eliminating two of three segments for TGCR/BGCR/SOFR",
+    "SIFMA did not recommend full closure of US government securities trading due to March Employment Situation report release",
+    "On April 6, TGCR, BGCR, and SOFR will publish reflecting same-day settling repo transactions settling Thursday April 2 and maturing Monday April 6"
   ],
-  "why_it_matters": "Market participants relying on SOFR-based products or using SOFR for valuation, margining, or benchmarking need to adjust for a gap in reference rate publication. The absence of cleared repo settlement eliminates most intraday rate discovery, creating a temporary blind spot in overnight funding market metrics.",
+  "why_it_matters": "Market participants relying on SOFR-based instruments, derivatives pricing, or lending benchmarks need to know that Friday April 3 reference rates will be unavailable. This affects any contracts, valuations, or risk systems that depend on continuous SOFR publication. The gap in published SOFR values means market participants should plan for alternative data handling or pricing adjustments during this period.",
   "market_impact": {
     "asset_classes": [
-      "bonds"
+      "bonds",
+      "repo",
+      "volatility"
     ],
     "directional_bias": "neutral",
-    "confidence": 3
+    "confidence": 2
   },
   "macro_context": "",
-  "market_structure_context": "This is a scheduled operational notice about reference rate publication arrangements during a market holiday. It highlights the dependency of SOFR on cleared Treasury repo settlement availability and the distinction between government securities trading (which continues) and repo market settlement (which halts).",
-  "important_numbers": [
-    "Friday April 3, 2026 (date of rate non-publication)",
-    "Monday April 6, 2026 (date rates will resume)",
-    "Thursday April 2, 2026 (settled transaction reference date)"
-  ],
+  "market_structure_context": "This statement documents how reference rate publication adapts to market holiday schedules. The split treatment—EFFR/OBFR published but TGCR/BGCR/SOFR suspended—reflects the different holiday conventions across federal funds, bank funding, and Treasury repo markets. The suspension of cleared repo settlement directly impacts the three-segment calculation methodology for Treasury GC rates.",
+  "important_numbers": [],
   "tags": [
-    "newyorkfed",
     "sofr",
     "tgcr",
     "bgcr",
+    "effr",
+    "obfr",
     "reference-rates",
+    "ny-fed",
     "repo-market",
-    "market-structure",
-    "operational-notice"
+    "market-closure",
+    "good-friday",
+    "market-structure"
   ],
   "llm_review": {
-    "initial_confidence": 8,
+    "initial_confidence": 9,
     "verification_confidence": 9,
     "verdict": "accept",
     "issues_found": []
@@ -66,10 +66,10 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_newyorkfed_statement_regarding_the_publication_of_7620ae77daa634ff.txt",
-  "notes": "Source is a brief operational notice from the New York Fed. While relevant to market structure, content is factual with minimal depth. Published March 12, 2026—contemporaneous with TODAY, so not stale. EFFR/OBFR publication on holidays is noted as following New York Fed's own holiday schedule, which may differ from full market closure recommendations.",
+  "notes": "Source is a formal operating policy statement from the NY Fed. Published March 12, 2026, approximately 7 weeks before the affected date (April 3, 2026). This is a forward-looking notice about market operations rather than historical data. The statement is highly relevant to market structure as it details the mechanics of reference rate publication under non-standard market conditions.",
   "linked_quant_context": [
     {
-      "record_id": "sofr_2026_04_10",
+      "record_id": "sofr_2026_04_13",
       "relationship": "temporally_proximate_quant",
       "reason": "within a month, exact topic match, complementary context",
       "topic_overlap": [
@@ -77,38 +77,18 @@
         "market-structure",
         "sofr"
       ],
-      "link_score": 92.5
+      "link_score": 90.5
     },
     {
-      "record_id": "iorb_2026_04_11",
+      "record_id": "sofr_2026_04_16",
       "relationship": "temporally_proximate_quant",
       "reason": "within a month, exact topic match, complementary context",
       "topic_overlap": [
         "market structure",
-        "market-structure"
+        "market-structure",
+        "sofr"
       ],
-      "link_score": 88.8
-    },
-    {
-      "record_id": "sofr_2026_04_13",
-      "relationship": "temporally_proximate_quant",
-      "reason": "within a month, exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "sofr",
-        "market-structure"
-      ],
-      "link_score": 92.5
-    },
-    {
-      "record_id": "iorb_2026_04_14",
-      "relationship": "temporally_proximate_quant",
-      "reason": "within a month, exact topic match, complementary context",
-      "topic_overlap": [
-        "market structure",
-        "market-structure"
-      ],
-      "link_score": 88.8
+      "link_score": 90.5
     },
     {
       "record_id": "sofr_2026_04_22",
@@ -116,22 +96,22 @@
       "reason": "within a month, exact topic match, complementary context",
       "topic_overlap": [
         "market structure",
-        "sofr",
-        "market-structure"
+        "market-structure",
+        "sofr"
       ],
-      "link_score": 92.5
+      "link_score": 90.5
     }
   ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 76.5,
+    "score": 66.5,
     "reasoning": [
-      "quality score: 76.5/100 (useful_context)",
+      "quality score: 66.5/100 (useful_context)",
       "high verification confidence",
       "no issues found during verification",
       "clear why_it_matters explanation",
-      "contains useful structured numbers",
+      "no structured quantitative data",
       "high-trust source",
       "moderate topic relevance",
       "lower event significance"

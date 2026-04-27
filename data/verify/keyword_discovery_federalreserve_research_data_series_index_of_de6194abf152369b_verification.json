@@ -1,14 +1,19 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is 5+ years old (published March 2021) with last data update noted as April 17, 2026 - actual data files referenced but not embedded in source text",
+    "No current inflation expectations values provided - only methodology documentation establishing the CIE framework",
+    "No market signals, policy signals, or actionable macro information contained in the document",
+    "Source explicitly states CIE 'may be discontinued at any time' and 'should be used for informational purposes only' with liability disclaimer",
+    "Content is extremely thin - primarily technical specifications about data file columns and update schedules rather than substantive analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source relevance to macro catalysts is marginal. While inflation expectations measurement is related to macro analysis, this document only establishes methodology and update schedules - no actual current data, policy signals, or market-moving information. The source qualifies as research documentation from an authoritative domain (Federal Reserve), but its archival value for a macro catalysts archive is questionable since it contains no actionable macro data. However, the source is factually accurate and properly attributed, warranting human review on whether methodology documentation has sufficient archival value for this specific archive.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Federal Reserve published a FEDS Note describing the Index of Common Inflation Expectations (CIE), a dynamic factor model that summarizes comovement across multiple inflation expectations measures. The note documents quarterly update procedures and April 2022 methodology changes including additions of NY Fed SCE and Michigan Survey percentile measures. No actual current inflation expectations data is provided - only the data framework.",
+    "why_it_matters": "The CIE is a Fed research data series designed to synthesize inflation expectations across multiple surveys and market measures into a single index. This document establishes the methodology framework and update schedule rather than presenting actual current data or policy signals. Useful for understanding the CIE's structure and update cadence, but contains no actionable macro data.",
+    "macro_context": "This source documents inflation expectations measurement methodology rather than presenting macro data or catalyst events. No current inflation expectations values are provided - only the framework for how such data would be computed and when updates are published. The CIE data files are referenced but not embedded in the source text."
   }
 }

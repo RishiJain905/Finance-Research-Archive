@@ -1,17 +1,17 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "source_type is 'navigation_page' - per Rule 5, navigation pages must be rejected",
-    "No publication date provided (published_at is empty) - cannot assess recency or archival relevance",
-    "Source content is thin - only a brief description of repo operations with links to resources, no specific data or current operational information",
-    "This is a directory/landing page that merely describes what repo operations are and provides links to FAQs, historical data, and policies - not an actionable market intelligence source",
-    "event_type 'market_notice' is questionable - a market_notice should convey specific operational information or decisions, not just describe general framework",
-    "No actionable market intelligence, policy signals, or recent decisions documented",
-    "Source has no archival value as it contains no specific market-relevant information beyond what any Fed website visitor could find"
+    "Source is a navigation/landing page (source_type correctly identified as 'navigation_page') - violates CORE RULE 5 which mandates rejection of navigation pages",
+    "Scraped content is thin - contains only high-level descriptive text and navigation links, no specific operational data",
+    "No published_at date in source metadata to assess recency or archival value",
+    "No actionable market data, amounts, rates, or participant information provided",
+    "Record has no standalone research value as presented - serves only as a reference to other pages",
+    "event_type 'market_notice' is questionable since the source provides no notice, just a framework description",
+    "Cannot support any market impact assessment due to absence of specific data"
   ],
-  "human_review_required": false,
-  "human_review_reason": "This is a clear reject case per Rule 5 - navigation/landing pages do not meet archival standards regardless of domain trust. The source correctly identifies this as a navigation page with thin content, no publication date, and no actionable intelligence. No human review needed; auto-reject is appropriate.",
+  "human_review_required": true,
+  "human_review_reason": "This is a clear reject case per CORE RULE 5. The source is a navigation hub page with no specific operational data, amounts, rates, or actionable content. While the generated record accurately identifies these deficiencies, human review confirms the record should be rejected rather than placed in review queue. Rule 5 explicitly requires rejection of navigation pages regardless of content quality.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
