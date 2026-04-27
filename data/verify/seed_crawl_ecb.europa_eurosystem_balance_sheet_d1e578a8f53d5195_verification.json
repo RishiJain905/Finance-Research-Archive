@@ -2,19 +2,14 @@
   "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/listing index page (index.en.html) - contains only metadata, language selectors, and links to CSV/XLS downloads, not substantive content",
-    "No actual balance sheet figures present in source body - all data exists only in downloadable files not included in the crawl",
-    "Cannot verify any numerical claims or market impact without actual data in the source",
-    "Source quality is too thin to have archival value as a research record",
-    "This is a container page providing access to data, not the data itself"
+    "Source is a navigation/download portal page with no substantive content in the page body",
+    "No actual balance sheet figures, analysis, or policy commentary present in crawled text",
+    "All data must be accessed via downloadable CSV/XLS files - not in source body",
+    "Navigation page type per CORE RULE 5 - should be rejected regardless of record accuracy",
+    "Source has no archival value as a standalone research document; underlying data files would be needed"
   ],
   "human_review_required": false,
-  "human_review_reason": "Clear reject based on source type being a navigation page and having no substantive content. The record correctly identifies this as a thin landing page, but the source cannot support a meaningful research record.",
+  "human_review_reason": "Record correctly identifies the page as a navigation portal. The source cannot serve as a standalone research document - it provides only download links. Rejection is clear per CORE RULE 5.",
   "suggested_status": "rejected",
-  "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
-  }
+  "corrected_fields": {}
 }

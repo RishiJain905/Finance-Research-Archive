@@ -1,20 +1,20 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a homepage/landing page per URL structure - Core Rule 5 explicitly rejects homepage types",
-    "Crawled content is critically thin - only 2-3 sentences of generic descriptive text with no substantive data",
-    "No publication date provided - cannot assess recency or staleness",
-    "No actual fiscal data, debt statistics, deficit figures, or policy content captured",
-    "Event_type set to 'unknown' when source is the Financial Report - should be 'financial_stability_report' if substantive content existed",
-    "Source cannot support market structure or macro catalyst research in current state"
+    "Source is a landing/navigation page, not actual Financial Report content",
+    "Source body contains only a single generic sentence with no fiscal data, numbers, or policy content",
+    "No published_at date to assess recency",
+    "event_type set to 'unknown' - correct given insufficient content to determine type",
+    "Source URL structure (home.treasury.gov) and thin content indicate container page",
+    "No market structure or macro catalyst content present"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record's assessment is accurate and the decision is clear-cut per Core Rules. No ambiguity exists - homepage page type with critically thin content explicitly fails multiple rejection criteria.",
+  "human_review_reason": "Automated rejection is appropriate: this is clearly a landing/navigation page with insufficient content per Rule 5. The record correctly identifies all material issues.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is a Treasury.gov landing page for the Financial Report of the U.S. Government. The crawled content is extremely thin, containing only a generic one-sentence description stating the report provides a comprehensive view of federal government finances, along with references to the Bureau of the Fiscal Service and Federal Accounting Standards Advisory Board. No actual fiscal data, balance figures, debt statistics, or policy content was captured.",
-    "why_it_matters": "This source cannot support market structure or macro catalyst research. The crawled content is insufficient to extract any relevant fiscal data, debt metrics, or policy implications. Analysts seeking U.S. fiscal health indicators would need the full annual Financial Report document, not this thin landing page.",
+    "summary": "This is a Treasury landing page for the Financial Report of the United States Government. The source body contains only a generic one-sentence description of the report's purpose: providing a comprehensive view of federal government finances to the President, Congress, and the American people. No actual financial data, fiscal projections, or substantive content is present in the source text.",
+    "why_it_matters": "This source is too thin to be useful for research purposes. It is a navigation/landing page that describes what the Financial Report is, rather than containing the actual report content with fiscal data, debt levels, or government finance metrics.",
     "macro_context": "",
     "market_structure_context": ""
   }

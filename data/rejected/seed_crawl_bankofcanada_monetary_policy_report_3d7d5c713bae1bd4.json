@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofcanada_monetary_policy_report_3d7d5c713bae1bd4",
-  "created_at": "2026-04-13T06:28:37.265668+00:00",
+  "created_at": "2026-04-27T06:38:48.705756+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "monetary_policy_report",
@@ -10,56 +10,56 @@
     "url": "https://www.bankofcanada.ca/publications/mpr/",
     "domain": "www.bankofcanada.ca",
     "published_at": "2026-01-28",
-    "source_type": "blog_post"
+    "source_type": "publication_page"
   },
-  "summary": "The Bank of Canada published its January 2026 Monetary Policy Report assessing the Canadian economy's adjustment to US tariffs and the new global trade landscape. The Bank projects modest growth as the economy continues to adjust, with inflation expected to remain near the 2% target. The adjustment process is described as taking time. [Note: This record captures only a brief summary excerpt. The full report with detailed projections and policy analysis was not available in the crawled content.]",
+  "summary": "The Bank of Canada's January 2026 Monetary Policy Report indicates the Canadian economy is continuing to adjust to US tariffs and the new global trade landscape, with growth expected to remain modest over the projection period. The Report projects inflation will remain near the 2% target. The adjustment process is characterized as one that will take time.",
   "key_points": [
-    "Canadian economy is adjusting to US tariffs and new global trade conditions",
-    "Growth is expected to be modest during the adjustment period",
+    "Canadian economy continues to adjust to US tariffs and new global trade landscape",
+    "Growth is expected to be modest during the projection period",
     "Inflation is projected to remain near the 2% target",
-    "The adjustment process is expected to take time"
+    "The adjustment to tariffs is expected to take time"
   ],
-  "why_it_matters": "This quarterly monetary policy report from the Bank of Canada provides the central bank's official assessment of economic conditions and outlook. The focus on tariff adjustments and trade uncertainty signals potential risks to Canada's growth trajectory, while the inflation projection near target suggests the Bank sees limited need for immediate policy tightening. Market participants trading CAD, Canadian equities, or bonds will want the full report for specific projections and policy implications.",
+  "why_it_matters": "This report signals that the Bank of Canada expects continued economic headwinds from US trade policy while maintaining its inflation mandate. The near-target inflation projection suggests the BoC sees limited need for urgent policy action to address price pressures, potentially leaving room for accommodation if growth weakens further.",
   "market_impact": {
     "asset_classes": [
-      "fx",
       "equities",
-      "bonds"
+      "bonds",
+      "fx"
     ],
     "directional_bias": "mixed",
     "confidence": 0
   },
-  "macro_context": "The report addresses the impact of US tariffs on the Canadian economy, indicating trade policy uncertainty as a key macro risk. The projection for inflation near the 2% target suggests the Bank of Canada expects demand-side pressures to remain subdued, potentially leaving room for accommodative policy if growth weakens. The modest growth outlook reflects uncertainty from trade disruptions. [Note: Detailed economic projections and quantitative forecasts from the full report were not captured in this source.]",
+  "macro_context": "The report centers on trade-related economic adjustment. US tariffs represent a significant macro catalyst affecting Canada's export-oriented economy. The near-target inflation outlook gives the Bank flexibility to support growth if needed, but the modest growth projection suggests the BoC is not anticipating a strong economic rebound in the near term.",
   "market_structure_context": "",
   "important_numbers": [
-    "2% (inflation target)"
+    "2%",
+    "2026"
   ],
   "tags": [
-    "bank of canada",
-    "monetary policy report",
+    "bank-of-canada",
+    "monetary-policy-report",
     "tariffs",
-    "trade",
-    "canadian economy",
-    "inflation target",
-    "growth outlook",
-    "q1-2026"
+    "trade-war",
+    "inflation-target",
+    "canada",
+    "modest-growth"
   ],
   "llm_review": {
-    "initial_confidence": 4,
-    "verification_confidence": 5,
+    "initial_confidence": 3,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "Source content is extremely thin—only a 3-4 sentence metadata summary was captured, not the actual Monetary Policy Report content",
-      "Source is classified as 'blog_post' but metadata explicitly identifies it as 'Monetary Policy Report' (Publications category)—this is a source_type misclassification",
-      "Cannot verify any specific projections, numerical forecasts, or policy forward guidance because this data was not captured",
-      "market_impact confidence is 0, indicating the automated assessment could not evaluate market implications",
-      "quality_tier of 30 (low) confirms content is insufficient for reliable archiving"
+      "Source is a publication listing page (URL /publications/mpr/) not the actual full Monetary Policy Report",
+      "Source body contains only 3 sentences of meta description—actual report content not captured",
+      "Cannot verify specific inflation forecasts, growth projections, or policy details against full report",
+      "Record has minimal archival value given source thinness",
+      "event_type is correct but source quality prevents proper verification"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "placeholder_source"
+    "notes": "Source is confirmed as a listing/publication page containing only meta description. Core rules explicitly reject homepage, navigation, listing, and search pages. However, the content is from 89 days ago (within 90-day window), is a legitimate Bank of Canada publication page, and is relevant to macro catalysts. Human review needed to determine if the thin but legitimate source has sufficient archival value to override the listing-page rejection criterion."
   },
   "human_feedback": {
     "decision": "",
@@ -70,18 +70,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_bankofcanada_monetary_policy_report_3d7d5c713bae1bd4.txt",
-  "notes": "Source captured only a brief summary excerpt of the Bank of Canada January 2026 Monetary Policy Report. The full report with detailed projections, economic analysis, and policy forward guidance was not captured in this crawl. This record is a placeholder indicating the report exists and was published; full analysis requires the complete document. The captured content does confirm the report's publication date (January 28, 2026) and the general thematic focus on tariff adjustment impacts.",
+  "notes": "This is a Bank of Canada Monetary Policy Report summary/listing page, not the full report. The source body contains only a brief meta description. Event type classified as monetary_policy_report based on the publication title. Source is relevant to macro catalysts (tariffs, growth outlook, inflation). However, the thin content significantly limits the value of this archive entry. Low confidence due to lack of substantive data from source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 30,
+    "score": 3,
     "reasoning": [
-      "Extremely thin source content—only summary paragraph captured",
-      "No specific numerical projections or data points available",
-      "Cannot verify claims about inflation or growth without full report",
-      "Likely a metadata or index page rather than actual report content",
-      "High domain trust (Bank of Canada official) partially offsets content weakness"
+      "Content is extremely thin - only 3 sentences of meta description",
+      "No specific policy numbers or projections provided",
+      "Cannot verify findings against full report",
+      "Limited use for RAG without full report text"
     ]
   }
 }

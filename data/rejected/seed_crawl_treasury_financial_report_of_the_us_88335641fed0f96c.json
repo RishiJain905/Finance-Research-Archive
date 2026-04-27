@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_financial_report_of_the_us_88335641fed0f96c",
-  "created_at": "2026-04-13T06:25:01.586566+00:00",
+  "created_at": "2026-04-27T06:40:54.713695+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -10,19 +10,19 @@
     "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/financial-report-of-the",
     "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "homepage"
+    "source_type": ""
   },
-  "summary": "This source is a Treasury.gov landing page for the Financial Report of the U.S. Government. The crawled content is extremely thin, containing only a generic one-sentence description stating the report provides a comprehensive view of federal government finances, along with references to the Bureau of the Fiscal Service and Federal Accounting Standards Advisory Board. No actual fiscal data, balance figures, debt statistics, or policy content was captured.",
+  "summary": "This is a Treasury landing page for the Financial Report of the United States Government. The source body contains only a generic one-sentence description of the report's purpose: providing a comprehensive view of federal government finances to the President, Congress, and the American people. No actual financial data, fiscal projections, or substantive content is present in the source text.",
   "key_points": [
-    "Source is a Treasury.gov landing page with minimal crawled content",
-    "Crawled text states the Financial Report provides a comprehensive view of federal government finances",
-    "No publication date, fiscal data, debt levels, deficit figures, or actionable content captured",
-    "This appears to be a navigation or homepage-type page, not substantive archiveable content"
+    "Source is a Treasury landing page for the Financial Report of the U.S. Government, not the report itself",
+    "Source body contains only a single generic description with no fiscal data, numbers, or policy content",
+    "No published date provided in the source text",
+    "No market structure or macro catalyst content present"
   ],
-  "why_it_matters": "This source cannot support market structure or macro catalyst research. The crawled content is insufficient to extract any relevant fiscal data, debt metrics, or policy implications. Analysts seeking U.S. fiscal health indicators would need the full annual Financial Report document, not this thin landing page.",
+  "why_it_matters": "This source is too thin to be useful for research purposes. It is a navigation/landing page that describes what the Financial Report is, rather than containing the actual report content with fiscal data, debt levels, or government finance metrics.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -30,28 +30,28 @@
   "important_numbers": [],
   "tags": [
     "treasury",
-    "fiscal-report",
-    "federal-government",
+    "fiscal",
+    "government-finances",
     "landing-page",
     "insufficient-content"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 2,
+    "initial_confidence": 1,
+    "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a homepage/landing page per URL structure - Core Rule 5 explicitly rejects homepage types",
-      "Crawled content is critically thin - only 2-3 sentences of generic descriptive text with no substantive data",
-      "No publication date provided - cannot assess recency or staleness",
-      "No actual fiscal data, debt statistics, deficit figures, or policy content captured",
-      "Event_type set to 'unknown' when source is the Financial Report - should be 'financial_stability_report' if substantive content existed",
-      "Source cannot support market structure or macro catalyst research in current state"
+      "Source is a landing/navigation page, not actual Financial Report content",
+      "Source body contains only a single generic sentence with no fiscal data, numbers, or policy content",
+      "No published_at date to assess recency",
+      "event_type set to 'unknown' - correct given insufficient content to determine type",
+      "Source URL structure (home.treasury.gov) and thin content indicate container page",
+      "No market structure or macro catalyst content present"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "container_page"
+    "notes": "Automated rejection is appropriate: this is clearly a landing/navigation page with insufficient content per Rule 5. The record correctly identifies all material issues."
   },
   "human_feedback": {
     "decision": "",
@@ -62,18 +62,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_financial_report_of_the_us_88335641fed0f96c.txt",
-  "notes": "This is a seed crawl of a Treasury.gov landing page with no substantive content captured. The crawled text does not include any actual fiscal data, debt figures, deficit numbers, or policy content. This source is not relevant to market structure or macro catalysts in its current state. Recommend either: (1) locating the full Financial Report of the U.S. Government PDF/document for proper archiving, or (2) excluding this seed crawl from the research archive as it contains no actionable content.",
+  "notes": "Non-archiveable: This is a Treasury landing page (likely homepage or navigation_page type) with only a one-sentence generic description. No actual Financial Report content, fiscal data, or macro-relevant information present. Source is not suitable for market structure or macro catalyst research without access to the full report. Recommend searching for the actual Financial Report document rather than this page.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Critically thin crawled content - only generic descriptive text",
-      "No publication date to assess recency",
-      "No fiscal data, debt statistics, or balance sheet information captured",
-      "Appears to be a homepage/navigation page type - per Core Rules this is non-archiveable",
-      "Cannot support market structure or macro catalyst research objectives"
+      "Extremely thin source body - single descriptive sentence only",
+      "No actual fiscal data or government finance metrics present",
+      "Appears to be a landing/navigation page not the substantive report",
+      "No published_at date to assess recency",
+      "Source type unclear but likely navigation or homepage based on URL structure and content"
     ]
   }
 }

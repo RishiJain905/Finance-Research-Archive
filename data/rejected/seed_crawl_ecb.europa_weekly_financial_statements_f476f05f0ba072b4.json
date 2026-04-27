@@ -1,0 +1,81 @@
+{
+  "id": "seed_crawl_ecb.europa_weekly_financial_statements_f476f05f0ba072b4",
+  "created_at": "2026-04-27T06:42:36.587307+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Weekly financial statements",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/wfs/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "",
+    "source_type": "listing_page"
+  },
+  "summary": "This is an ECB webpage describing the publication schedule for the Eurosystem's weekly financial statements, which are published on Tuesdays relating to the preceding Friday. The page outlines exceptions to the standard publication day (e.g., first financial statement of each quarter published Wednesdays) and provides the 2026 publication calendar with special dates.",
+  "key_points": [
+    "Weekly financial statements of the Eurosystem are published on Tuesdays, relating to the preceding Friday",
+    "First financial statement of each quarter is published on Wednesday instead of Tuesday to allow time for quarterly revaluation",
+    "TARGET system closures make those days non-business days for financial reporting purposes",
+    "2026 exceptions include: Week 1 (7 January, Wednesday), Week 14 (9 April, Thursday for Easter Monday), Week 27 (8 July, Wednesday), Week 40 (7 October, Wednesday)",
+    "The page links to related content including consolidated weekly financial statement user guide, annual balance sheet, and asset purchase programmes (PEPP)"
+  ],
+  "why_it_matters": "This page is an administrative scheduling notice and does not contain actionable financial data or market intelligence. The actual weekly financial statements would contain balance sheet data relevant to ECB operations (PEPP, APP holdings), but this specific page only describes when those statements are published.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "While weekly financial statements themselves reflect ECB balance sheet operations relevant to market structure, this page is merely a publication schedule guide and does not contain any actual balance sheet figures or operational data.",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "eurosystem",
+    "weekly-financial-statements",
+    "publication-schedule",
+    "target-system",
+    "2026-calendar"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing_page/navigation page that only contains publication scheduling information, no actual financial statement data",
+      "Source has no publication date, making recency assessment impossible",
+      "Source contains no actionable financial data, market analysis, or macro catalyst content",
+      "event_type 'unknown' is technically accurate but this page does not qualify as archiveable content under macro catalysts target",
+      "Source is a container/index page linking to actual financial statements rather than the statements themselves",
+      "PAGE_TYPE triggered reject per Rule 5: listing_page sources should be rejected"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page, placeholder_source"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_weekly_financial_statements_f476f05f0ba072b4.txt",
+  "notes": "This source is not relevant to market structure or macro catalysts analysis. It is an administrative webpage describing the publication schedule for ECB weekly financial statements, with links to related content. The actual weekly financial statements (which would contain balance sheet data, PEPP holdings, etc.) are not present in this page. Source has no publication date, no actual data, and provides no market-moving information. Recommend identifying and archiving the actual weekly financial statement releases instead of this index page.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "non-archivable",
+    "score": 1,
+    "reasoning": [
+      "This is a scheduling/index page, not an archiveable content page",
+      "Contains no financial data, market analysis, or macro catalyst content",
+      "No publication date available to assess recency",
+      "Actual weekly financial statements should be archived separately with their specific dates",
+      "Insufficient content for meaningful RAG retrieval"
+    ]
+  }
+}

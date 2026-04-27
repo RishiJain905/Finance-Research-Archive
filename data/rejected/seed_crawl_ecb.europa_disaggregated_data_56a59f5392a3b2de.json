@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_disaggregated_data_56a59f5392a3b2de",
-  "created_at": "2026-04-13T06:32:00.670799+00:00",
+  "created_at": "2026-04-27T06:41:37.808755+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -12,15 +12,16 @@
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This ECB page is a release calendar for monthly disaggregated financial statement data, showing reference and publication dates through 2027 but containing no substantive macro research, policy signals, or market commentary. The page functions as an index/schedule listing for future data releases.",
+  "summary": "This page is a publication calendar and download index for ECB disaggregated balance sheet data, showing reference and publication dates for Eurosystem financial statements from 2016 through 2026. No substantive policy content, economic analysis, or market-moving information is present.",
   "key_points": [
-    "Page contains only a schedule of ECB disaggregated financial statement release dates (reference dates and publication dates) from 2023 through early 2027",
-    "No macro research, economic analysis, or policy commentary is present in the content",
-    "Disaggregated data describes how ECB and NCBs contribute to the Eurosystem consolidated financial statement",
-    "No actual data values, statistics, or numerical content beyond calendar dates",
-    "Source metadata target is 'macro catalysts' but page contains no macro-relevant content"
+    "Page provides a monthly publication schedule for ECB/NCB contribution data to the Eurosystem consolidated financial statement",
+    "Upcoming reference dates listed from April 2026 through January 2027",
+    "Historical downloads available from December 2016 through December 2022",
+    "Actual data files are separate downloadable items (CSV/Excel) not present in this page content",
+    "No policy guidance, economic projections, or market commentary provided",
+    "Source type is a listing/index page, not an archiveable research document"
   ],
-  "why_it_matters": "This page has no research or analytical value for macro catalysts. It is a pure administrative release calendar that does not contain any economic data, policy signals, or market-moving information. Users seeking ECB macro research would need to consult actual policy statements, economic reports, or research publications.",
+  "why_it_matters": "This source has no direct market or policy relevance. It is an administrative calendar page that merely indexes when balance sheet data will be published. Researchers seeking ECB balance sheet data must access the actual download files, not this index page.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,14 +32,14 @@
   "important_numbers": [],
   "tags": [
     "ecb",
-    "disaggregated-data",
-    "financial-statements",
-    "release-calendar",
-    "no-content",
-    "listing-page"
+    "balance-sheet",
+    "eurosystem",
+    "data-calendar",
+    "listing-page",
+    "no-content"
   ],
   "llm_review": {
-    "initial_confidence": 1,
+    "initial_confidence": 2,
     "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": []
@@ -57,17 +58,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_disaggregated_data_56a59f5392a3b2de.txt",
-  "notes": "This source is a release calendar/indexing page with no macro research content. It lists only dates for future ECB disaggregated financial statement releases. Not suitable for macro catalysts research. Treated as non-archiveable per Rule 6 (listing_page).",
+  "notes": "Non-archiveable listing page. Contains only a publication calendar and download links for ECB disaggregated financial statement data. No policy content, economic analysis, or market-moving information. The actual data resides in separate downloadable files. This page provides no value for market structure or macro catalyst research. Recommend skipping or linking to actual data downloads instead.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "rejected",
-    "score": 1,
+    "tier": "low",
+    "score": 2,
     "reasoning": [
-      "No substantive research content",
-      "Listing page with only calendar dates",
-      "Does not address macro catalysts or market structure",
-      "Source metadata does not match actual content"
+      "Source type is listing_page - per rules, should be treated as non-archiveable",
+      "No substantive content present - only calendar dates and download links",
+      "No policy signals, economic data, or market analysis",
+      "Published_at timestamp missing, preventing age assessment",
+      "Actual data values not present in source text"
     ]
   }
 }

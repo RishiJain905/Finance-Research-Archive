@@ -1,21 +1,19 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source type is listing_page — explicitly non-archivable per CORE RULE 6",
-    "No substantive content; only report titles and dates in table format",
-    "Not relevant to market structure or macro catalysts as a standalone source",
-    "No published_at date for the page itself",
-    "Cannot extract market-relevant findings from this index page",
-    "event_type set to 'unknown' — acceptable given the source is an index with no specific event"
+    "Source type is 'listing_page' per Rule 5: listing pages must be rejected",
+    "Source is a pure container/index page with no substantive policy analysis or data",
+    "Source has no market-moving content; it is a bibliographic listing of historical reports",
+    "No published_at date; the page serves as an archive index rather than a dated document",
+    "Event type 'unknown' is technically valid but the source contains no event to classify",
+    "No individual report content accessible; all data requires navigating to separate documents"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record's own analysis is correct and complete. No ambiguity exists about the source type or archival eligibility. The record properly identifies this as a non-archivable listing page and recommends rejection.",
+  "human_review_reason": "The record's own analysis is accurate and well-reasoned. The source is unambiguously a listing page with no archival value per Rule 5. No human review needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This page is a historical index/catalog of Office of Tax Policy reports dating from 1944 to October 2025, organized into 'Official Reports' and 'Reports to Congress.' It contains no substantive policy analysis or market-relevant content—it is purely a bibliographic listing. The most recent entry is October 2025's 'Report on the Replacement of Direct File.'",
+    "why_it_matters": "This page does not function as a macro catalyst. It is a navigation/index page for historical documents. Tax policy can influence macro conditions, but this catalog contains no actionable research or recent policy conclusions that would affect market participants."
   }
 }

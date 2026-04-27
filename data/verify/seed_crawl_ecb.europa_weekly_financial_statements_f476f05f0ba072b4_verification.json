@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page/navigation page that only contains publication scheduling information, no actual financial statement data",
+    "Source has no publication date, making recency assessment impossible",
+    "Source contains no actionable financial data, market analysis, or macro catalyst content",
+    "event_type 'unknown' is technically accurate but this page does not qualify as archiveable content under macro catalysts target",
+    "Source is a container/index page linking to actual financial statements rather than the statements themselves",
+    "PAGE_TYPE triggered reject per Rule 5: listing_page sources should be rejected"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately describes the source content and correctly identifies quality_tier as 'non-archivable'. The source is a scheduling/administrative page with no market-moving information, which triggers Rule 5 (listing_page = reject) and Rule 6 (container pages bias toward reject). Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

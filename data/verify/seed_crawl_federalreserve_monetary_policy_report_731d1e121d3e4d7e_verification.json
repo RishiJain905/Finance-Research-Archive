@@ -2,19 +2,19 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/navigation page (index) containing only links to historical Monetary Policy Reports, not substantive content",
-    "No policy positions, economic data, forward guidance, or market-relevant information can be extracted",
-    "Per CORE RULE 5: listing_page sources must be rejected",
-    "Source attribution and URL are present but the page itself has no archival value as a standalone research resource",
-    "event_type set to 'unknown' is correct here as no specific monetary policy event can be attributed to this page"
+    "Source is a listing/navigation page with no substantive content - it only indexes historical Monetary Policy Reports from 1996-2025",
+    "No actual policy content, economic data, or market-relevant information present",
+    "event_type correctly set to 'unknown' but the record should not be archived as macro catalyst content",
+    "Per Rule 5: listing_page sources must be rejected regardless of other factors",
+    "Source has no archival value for market structure or macro catalyst research purposes"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record accurately identifies that this is a listing page with no substantive content. The LLM analysis correctly assessed the page quality as low and noted that archive candidates should be the actual report HTML/PDF documents, not this index. Rejection is appropriate per rule 5.",
+  "human_review_reason": "The generated record already correctly identifies this as a listing page with no substantive content. The self-verification in the record is accurate. No human review needed - the record appropriately flags the source type limitation.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This page is a navigation index for the Federal Reserve's semiannual Monetary Policy Report, containing links to reports from 1996-2025 with no substantive content. The page provides access to Congressional testimonies and supporting documentation but lacks any current macro catalyst information.",
+    "why_it_matters": "This is a directory page with no current macro information. Reports and testimonies serve as official documentation but contain no actionable market signals or economic indicators.",
+    "macro_context": "No substantive content available for analysis.",
+    "market_structure_context": "No market structure information present."
   }
 }

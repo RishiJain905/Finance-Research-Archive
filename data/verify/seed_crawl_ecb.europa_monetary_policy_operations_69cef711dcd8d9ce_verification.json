@@ -1,21 +1,20 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 10,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/index page per CORE RULES section 5; navigation pages are non-archiveable and should be rejected",
-    "source_type correctly identified as 'navigation_page' in record",
-    "event_type is 'unknown' but should be something like 'balance_sheet_update' given the source content describes ECB annual balance sheet data publications",
-    "No published_at date provided in source metadata",
-    "Content is extremely thin - only structural description of monetary policy operation categories and download links to CSV/XLS files",
-    "No substantive policy content, research findings, or actionable market intelligence present"
+    "Navigation/index page per Rule 6 — source URL contains 'index.en.html' and content consists only of data download links and section navigation",
+    "No substantive policy content, commentary, or research — only generic description of monetary policy operation types",
+    "No published date stated — cannot assess recency",
+    "No market-relevant information for macro catalysts or market structure research",
+    "event_type correctly set to 'unknown' as no valid event type applies"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record correctly identifies the navigation page issue and applies appropriate rejection rationale. Auto-routing to rejected is appropriate.",
+  "human_review_reason": "Automated verification is sufficient. The source is unambiguously a navigation page with no substantive content. Rule 6 is explicitly violated.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "The ECB Eurosystem publishes annual consolidated balance sheet data disclosing its monetary policy operations for the years 1999-2025. The page serves as an index providing downloadable CSV and XLS data files. No specific current-period data, policy decisions, or actionable insights are contained in this source; it is a navigation/reference page only.",
-    "why_it_matters": "This source serves as a data repository index rather than providing actionable research content. It offers no current policy signals, decision outcomes, or analytical commentary relevant to market participants. The value lies only in data file accessibility for historical balance sheet analysis.",
-    "macro_context": "The page provides access to historical ECB balance sheet data (1999-2025) but contains no current-period information, policy decisions, or analytical content.",
-    "market_structure_context": "This page is a navigation/index structure providing access to ECB annual balance sheet data files. The underlying data (once downloaded) would be relevant to understanding ECB balance sheet composition and monetary policy implementation, but the page itself contains no substantive content for research purposes."
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

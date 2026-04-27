@@ -1,19 +1,20 @@
 {
-  "verification_confidence": 5,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "Source content is extremely thin—only a 3-4 sentence metadata summary was captured, not the actual Monetary Policy Report content",
-    "Source is classified as 'blog_post' but metadata explicitly identifies it as 'Monetary Policy Report' (Publications category)—this is a source_type misclassification",
-    "Cannot verify any specific projections, numerical forecasts, or policy forward guidance because this data was not captured",
-    "market_impact confidence is 0, indicating the automated assessment could not evaluate market implications",
-    "quality_tier of 30 (low) confirms content is insufficient for reliable archiving"
+    "Source is a publication listing page (URL /publications/mpr/) not the actual full Monetary Policy Report",
+    "Source body contains only 3 sentences of meta description—actual report content not captured",
+    "Cannot verify specific inflation forecasts, growth projections, or policy details against full report",
+    "Record has minimal archival value given source thinness",
+    "event_type is correct but source quality prevents proper verification"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source content is too thin to archive reliably. The crawl captured only a brief metadata description of the January 2026 Monetary Policy Report, not the actual report content with projections and analysis. Human reviewer should either: (1) locate and retrieve the full PDF/report, (2) confirm this listing page is the correct source and full content needs separate retrieval, or (3) reject if full report cannot be obtained. Additionally, the source_type field is misclassified as 'blog_post' when the source metadata clearly identifies it as a 'Monetary Policy Report' (Publications type).",
-  "suggested_status": "review_queue",
+  "human_review_reason": "Source is confirmed as a listing/publication page containing only meta description. Core rules explicitly reject homepage, navigation, listing, and search pages. However, the content is from 89 days ago (within 90-day window), is a legitimate Bank of Canada publication page, and is relevant to macro catalysts. Human review needed to determine if the thin but legitimate source has sufficient archival value to override the listing-page rejection criterion.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "The Bank of Canada published its January 2026 Monetary Policy Report assessing the Canadian economy's adjustment to US tariffs and the new global trade landscape. The Bank projects modest growth as the economy continues to adjust, with inflation expected to remain near the 2% target. The adjustment process is described as taking time. [Note: This record captures only a brief summary excerpt. The full report with detailed projections and policy analysis was not available in the crawled content.]",
-    "why_it_matters": "This quarterly monetary policy report from the Bank of Canada provides the central bank's official assessment of economic conditions and outlook. The focus on tariff adjustments and trade uncertainty signals potential risks to Canada's growth trajectory, while the inflation projection near target suggests the Bank sees limited need for immediate policy tightening. Market participants trading CAD, Canadian equities, or bonds will want the full report for specific projections and policy implications.",
-    "macro_context": "The report addresses the impact of US tariffs on the Canadian economy, indicating trade policy uncertainty as a key macro risk. The projection for inflation near the 2% target suggests the Bank of Canada expects demand-side pressures to remain subdued, potentially leaving room for accommodative policy if growth weakens. The modest growth outlook reflects uncertainty from trade disruptions. [Note: Detailed economic projections and quantitative forecasts from the full report were not captured in this source.]"
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

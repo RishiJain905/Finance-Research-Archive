@@ -1,27 +1,27 @@
 {
   "id": "seed_crawl_federalreserve_federal_reserve_supervision_and_regulation_59107318a6976951",
-  "created_at": "2026-04-13T06:23:20.828313+00:00",
+  "created_at": "2026-04-27T06:36:01.025643+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "financial_stability_report",
+  "event_type": "unknown",
   "title": "Federal Reserve Supervision and Regulation Report",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/publications/supervision-and-regulation-report.htm",
     "domain": "www.federalreserve.gov",
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This page is a navigation index for the Federal Reserve's Supervision and Regulation Report, providing links to HTML and PDF versions of reports and testimonies from 2018 through December 2025. The page itself does not contain substantive content—only metadata describing available documents.",
+  "summary": "This is a navigation/index landing page for the Federal Reserve Supervision and Regulation Report archive, not an actual report. The page lists links to HTML and PDF versions of reports from 2018 through December 2025, along with associated Congressional testimony. No substantive report content is present in this source.",
   "key_points": [
-    "Page is a listing/index page containing navigation links to archived reports, not the reports themselves",
-    "Reports are published semiannually with both HTML and PDF formats available",
-    "The latest report listed is December 2025; last update stated as December 01, 2025",
-    "Each report entry includes the main report plus associated chart data and descriptions where applicable",
-    "Testimony versions (HTML/PDF) are also archived alongside each report",
-    "Covers a historical span from 2018 through December 2025"
+    "This is a listing/navigation page only, not an actual report document",
+    "No report content is provided—only links to archived reports and testimony",
+    "Available reports span from 2018 to December 2025",
+    "Each report entry includes HTML, PDF, and in some cases Data Sources links",
+    "The page last updated December 01, 2025",
+    "Page serves as an index page with no macro or market structure data"
   ],
-  "why_it_matters": "This index page is not directly useful for research—substance is in the linked reports. However, it serves as the gateway to semiannual financial stability assessments that track banking conditions and Fed supervisory activities, which are macro-relevant documents.",
+  "why_it_matters": "This source has no actionable content for RAG retrieval. It is an archival index page that merely points to the actual reports. To obtain useful information on banking supervision, regulatory activities, or financial stability, one must access the individual linked reports, not this navigation page.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,24 +31,19 @@
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "fed",
+    "federal-reserve",
     "supervision",
-    "banking",
     "regulation",
-    "semiannual-report",
-    "listing-page"
+    "banking",
+    "congressional-testimony",
+    "non-archivable",
+    "index-page"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 1,
+    "initial_confidence": 1,
+    "verification_confidence": 10,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing/navigation page per PAGE_TYPE rules (source body shows only links to reports, no substantive content)",
-      "event_type set to 'financial_stability_report' but this page is not a report—it is only an index to reports; the actual report PDFs/HTMLs should be crawled separately",
-      "No published_at date in source; page only states last update as December 01, 2025",
-      "Record correctly identifies itself as a 'listing_page' with no substantive content, yet suggested_status is 'review_queue' instead of 'rejected'",
-      "No market structure or macro catalyst data can be extracted from this listing page"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -64,17 +59,16 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_federal_reserve_supervision_and_regulation_59107318a6976951.txt",
-  "notes": "Source is a navigation/listing page per PAGE_TYPE guidance. Does not contain substantive research content. The Federal Reserve Supervision and Regulation Report is a semiannual publication covering banking conditions and Fed supervisory activities. However, this page only provides links to those reports—not the reports themselves. To capture actual macro-relevant content, the individual report files (December 2025 HTML/PDF, etc.) should be targeted for crawling separately. Confidence kept low because this page has no market structure or macro catalyst data.",
+  "notes": "NON-ARCHIVABLE: This is a listing page (navigation/index) with no substantive content. The actual Federal Reserve Supervision and Regulation reports exist as separate linked documents (HTML/PDF). This seed_crawl record captures only the index page. Recommend archiving the individual report links (e.g., 2025 December Report) for actual research value. No macro catalysts or market structure information can be extracted from this source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 2,
+    "tier": "none",
+    "score": 0,
     "reasoning": [
-      "Listing page with no substantive content",
-      "No market structure or macro catalyst data present",
-      "No specific event data (decision, speech, data release) on page",
-      "High domain trust (federalreserve.gov) but page type unsuitable for archiving"
+      "Navigation/index page with no substantive content",
+      "No extractable data points, key findings, or market-relevant information",
+      "Listed as listing_page per SOURCE METADATA, explicitly non-archiveable per CORE RULE 6"
     ]
   }
 }

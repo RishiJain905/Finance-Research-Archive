@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_monetary_policy_statements_15ddf0e9f6c3230d",
-  "created_at": "2026-04-13T06:26:19.463098+00:00",
+  "created_at": "2026-04-27T06:37:05.359536+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -9,20 +9,21 @@
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/html/index.en.html",
     "published_at": "",
-    "source_type": "listing_page",
+    "source_type": "navigation_page",
     "domain": "www.ecb.europa.eu"
   },
-  "summary": "This is a navigation/index page for ECB monetary policy press conference statements, not an actual policy statement. It provides only generic procedural information about how the ECB's Governing Council conducts monetary policy decisions on a six-week cycle and where to watch press conferences.",
+  "summary": "This is a navigation/landing page on the ECB website that describes the framework for ECB monetary policy statements rather than containing any actual policy content. It explains that the Governing Council makes decisions every six weeks and that press conferences follow at 14:45 CET, but provides no specific policy decisions, data, or numbers.",
   "key_points": [
-    "The ECB Governing Council takes monetary policy decisions every six weeks",
-    "Press conferences are held at 14:45 CET immediately after meetings",
-    "This page is an index/listing page linking to actual press conference statements, not an actual statement itself",
-    "No specific policy decisions, rates, or guidance are contained in this source"
+    "The Governing Council takes monetary policy decisions every six weeks",
+    "Press conferences are held at 14:45 CET following each meeting",
+    "The page is a navigation hub linking to decisions, accounts, and press conferences rather than hosting substantive policy content",
+    "No specific policy decisions, rate levels, or forward guidance are present in this page",
+    "Published_at date is not provided in the source metadata, preventing recency assessment"
   ],
-  "why_it_matters": "This source does not contain actionable financial information. It is merely a navigation portal that links to actual ECB monetary policy statements. It cannot be used for market analysis or research without accessing the individual linked statements.",
+  "why_it_matters": "This page provides no substantive content for market analysis. It is a procedural overview page that cannot be used for research retrieval or RAG purposes as it contains no actual monetary policy decisions, economic data, or policy signals.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "unknown",
+    "directional_bias": "",
     "confidence": 0
   },
   "macro_context": "",
@@ -32,22 +33,13 @@
     "ecb",
     "monetary-policy",
     "navigation-page",
-    "no-content",
-    "press-conference"
+    "no-content"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 1,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing/navigation page (per source_type: 'listing_page')",
-      "CORE RULE #5: listing_page sources must be rejected",
-      "No actual ECB policy content, decision, or guidance present in source",
-      "Source provides only generic procedural description (six-week cycle, press conference time)",
-      "No published_at date available for temporal assessment",
-      "Source cannot support any market or macro research use case",
-      "event_type is 'unknown' - correct for this source type, but reinforces non-archival nature"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -63,18 +55,16 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_monetary_policy_statements_15ddf0e9f6c3230d.txt",
-  "notes": "SOURCE IS NON-ARCHIVEABLE: This is a landing/index page for ECB monetary policy statements, not an actual statement. Per CORE RULE #6, listing_page sources should be treated as non-archiveable. The page contains only generic process information: six-week decision cycle, press conference time (14:45 CET), and links to the 'most recent press conference' and 'monetary policy accounts'. No specific policy content, decisions, rate information, or forward guidance is present. This source cannot support any market or macro analysis. Human reviewer should decide whether to discard this record or seek the actual individual press conference statement pages.",
+  "notes": "Non-archiveable navigation page. The source contains only a procedural description of how ECB monetary policy statements work, with links to actual content but no substantive policy information itself. No actual rate decisions, inflation data, GDP figures, or other macro catalyst content is present. Source is not relevant to market structure or macro catalysts.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 1,
+    "tier": "excluded",
+    "score": 0,
     "reasoning": [
-      "Source is a navigation/index page with no actual policy content",
-      "No published date available for temporal assessment",
-      "Extremely thin content - only generic procedural descriptions",
-      "Cannot support any market or macro research use case",
-      "Per classification rules, listing_page types are non-archiveable"
+      "Navigation page with no substantive content per Rule 6",
+      "No monetary policy decision or macro data present",
+      "Cannot be used for research retrieval or RAG"
     ]
   }
 }

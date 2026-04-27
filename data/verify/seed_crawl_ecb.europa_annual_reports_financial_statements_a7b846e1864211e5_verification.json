@@ -1,10 +1,17 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing/navigation page (index page for ECB annual reports section) - violates CORE RULE 5",
+    "Source type correctly identified as 'listing_page' but this should trigger automatic rejection per rules",
+    "No substantive content present - only 'All pages in this section' navigation text",
+    "No publication date provided",
+    "event_type set to 'unknown' which is acceptable given no actual content to classify, but the record should still be rejected",
+    "Generated record accurately identifies this as non-archivable but suggested_status of 'review_queue' is inconsistent with CORE RULE 5"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "This is a clear reject case per CORE RULE 5 - listing pages must be rejected. Human review is not needed as the evidence is unambiguous.",
+  "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

@@ -1,14 +1,16 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 1,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/listing page that should be rejected per rule #5",
-    "No substantive archival content - only provides links to report editions",
-    "event_type 'balance_sheet_update' is technically valid but misleading; the actual report content would qualify, not this listing page",
-    "Source does not contain actual balance sheet data, policy signals, or market information"
+    "Source is a navigation/listing page (source_type correctly identified as 'navigation_page') — Rule #6 applies: reject listing pages",
+    "Source contains no substantive content — only hyperlinks to report archives",
+    "No actual balance sheet data, figures, policy decisions, or analysis present in the source",
+    "Cannot extract event details, policy signals, or market-relevant information",
+    "event_type set to 'unknown' which is correct — no actual report content to classify",
+    "Record summary is accurate but the source itself has no archival value"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record correctly identifies the source as a non-archivable listing page. No ambiguity - auto-reject is appropriate.",
+  "human_review_reason": "This is a clear reject case per Rule #6: listing_page/navigation_page must be rejected. The record correctly identifies the source's nature but the source is non-archiveable.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

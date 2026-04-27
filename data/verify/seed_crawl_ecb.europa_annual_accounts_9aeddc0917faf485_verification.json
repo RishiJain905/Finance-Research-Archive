@@ -1,17 +1,14 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 4,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation_page per metadata - Rule 5 explicitly requires rejection of navigation pages",
-    "Source is thin, backward-looking accounting document with no policy signals, forward guidance, or market-moving information",
-    "event_type is 'unknown' but the page is a navigation/index page for ECB Annual Accounts - not a substantive financial document or market catalyst",
-    "Source provides only high-level summary figures (balance sheet, loss) without detailed financial analysis or policy implications",
-    "Relevance to macro catalysts is low - this is financial reporting rather than a market catalyst",
-    "The record itself acknowledges the source is a 'landing page linking to the full Annual Accounts' with 'no substantive analysis'",
-    "quality_tier correctly identified as 'low' with score of 3"
+    "Source is a listing/index page (metadata confirms 'listing_page'), which CORE RULE 5 requires rejecting regardless of content quality",
+    "The page aggregates multiple resources (2025 accounts, FAQs, explainers, CSV downloads, historical releases) but is itself a navigation hub rather than the substantive document",
+    "The actual 'Annual Accounts 2025' document appears to be a separate linked press release, not this page itself",
+    "Quality tier correctly assessed as 'low' (score 4) due to backward-looking accounting nature with no forward signals"
   ],
   "human_review_required": false,
-  "human_review_reason": "Automated rejection is appropriate - the source metadata explicitly identifies this as a navigation_page, which triggers Rule 5 rejection. The record's own analysis correctly identifies this as a thin source with low archival value for macro catalysts.",
+  "human_review_reason": "Source type is definitively a listing page per metadata, which is a clear rejection criterion. The record accurately reflects the page's content, but the page type itself disqualifies it from archival acceptance regardless of factual accuracy.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

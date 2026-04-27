@@ -1,30 +1,30 @@
 {
   "id": "seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea",
-  "created_at": "2026-04-13T06:30:49.889759+00:00",
+  "created_at": "2026-04-27T06:39:39.197520+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "financial_stability_report",
   "title": "Financial Stability Report",
   "source": {
-    "name": "Board of Governors of the Federal Reserve System",
+    "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/publications/financial-stability-report.htm",
-    "published_at": "2025-11-07",
-    "source_type": "listing_page",
-    "domain": "www.federalreserve.gov"
+    "domain": "www.federalreserve.gov",
+    "published_at": "",
+    "source_type": "listing_page"
   },
-  "summary": "This Federal Reserve page is a navigation index listing historical Financial Stability Reports from 2018 through November 2025, providing links to HTML, PDF, and chart data for each release. The page does not contain the substantive content of any individual report and serves only as an archive index.",
+  "summary": "This is a Federal Reserve landing page that indexes Financial Stability Reports from 2018 through November 2025. The most recent report available is November 2025. The page provides HTML, PDF, and chart data links for each semi-annual release but contains no substantive content from the reports themselves.",
   "key_points": [
-    "Page is a listing/navigation index, not an actual report",
-    "Links to reports from May/November cycles spanning 2018-2025",
-    "Includes both HTML and PDF versions of each report",
-    "Provides links to chart data and descriptions for each report",
-    "Last update date shown: November 7, 2025",
-    "Contains links to prior Vice Chair/Governor statements for some report dates"
+    "The Federal Reserve publishes a Financial Stability Report semi-annually (November and April)",
+    "Most recent report: November 2025 (HTML | PDF | Chart Data)",
+    "Previous report: April 2025 (HTML | PDF | Chart Data)",
+    "Archive spans reports from 2018 through 2025",
+    "Last Update stated as November 07, 2025",
+    "The page is a navigation/index page, not the actual report content"
   ],
-  "why_it_matters": "This page does not contain substantive macro or market structure content. It is a navigation index that requires selecting a specific report date to access actual analysis. Researchers seeking Financial Stability Report content must navigate to a specific report link rather than this index page.",
+  "why_it_matters": "Financial Stability Reports assess the resilience of the U.S. financial system and are a key macro catalyst publication. However, this source is only the index page—it links to the actual reports but contains no substantive analysis. The individual report PDFs (November 2025, April 2025) would be the archiveable content.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -33,19 +33,19 @@
   "tags": [
     "federal-reserve",
     "financial-stability",
-    "listing-page",
-    "navigation-index",
-    "us-financial-system"
+    "systemic-risk",
+    "semiannual-report",
+    "listing-page"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 3,
+    "initial_confidence": 3,
+    "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "Core Rule 5 violation: Page is a navigation/listing page (source_type: listing_page) which must be rejected",
-      "No substantive macro catalyst or market structure content present",
-      "Cannot serve as archiveable research record - requires crawling individual report links",
-      "The record correctly identifies this as non-archivable, but per rules it must be rejected rather than routed to review queue"
+      "Source is a listing/navigation page (index of Financial Stability Reports), not actual report content",
+      "No substantive analysis present - only links to HTML, PDF, and chart data for each report",
+      "Per Core Rule #5, listing_page type sources must be rejected",
+      "Per Core Rule #6, listing pages are non-archiveable with thin low-signal content"
     ]
   },
   "human_review": {
@@ -62,18 +62,16 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea.txt",
-  "notes": "Non-archiveable listing page per Core Rule 6. Contains only hyperlinks to historical Financial Stability Reports (2018-2025) and does not include substantive content. To capture actual report data, individual report URLs should be processed separately. The November 2025 report would be the most recent and most relevant for current macro catalyst assessment.",
+  "notes": "Low-value source: listing page with no substantive content. The November 2025 and April 2025 FSR actual reports should be crawled separately for archival purposes. Per Core Rule #6, listing pages are treated as non-archiveable. The FSR reports themselves (when retrieved) would be classified as financial_stability_report under the event type taxonomy.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 2,
+    "tier": "not_applicable",
+    "score": 0,
     "reasoning": [
-      "Listing/navigation page with no substantive content",
-      "Does not contain macro catalysts analysis",
-      "Does not contain market structure analysis",
-      "Core Rule 6 violation: listing_page is non-archiveable",
-      "Requires further crawling of specific report links to obtain archiveable content"
+      "Source is a listing/navigation page, not actual report content",
+      "No substantive financial stability analysis present in this crawl",
+      "November 2025 FSR report itself should be crawled as separate source"
     ]
   }
 }

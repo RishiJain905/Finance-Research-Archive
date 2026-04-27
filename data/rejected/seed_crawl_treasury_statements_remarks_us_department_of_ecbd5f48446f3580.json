@@ -1,41 +1,72 @@
 {
-  "source": {
-    "name": "macro catalysts",
-    "url": "https://home.treasury.gov/news/press-releases/statements-remarks",
-    "domain": "home.treasury.gov",
-    "published_at": "",
-    "source_type": ""
-  },
+  "id": "seed_crawl_treasury_statements_remarks_us_department_of_ecbd5f48446f3580",
+  "created_at": "2026-04-27T06:43:05.756848+00:00",
+  "status": "rejected",
   "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Statements & Remarks | U.S. Department of the Treasury",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/news/press-releases/statements-remarks",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "This source is a Treasury Department index page listing recent statements and remarks from Secretary Scott Bessent and Assistant Secretary Chris Pilkerton, spanning January to April 2026. The page provides only titles, speakers, dates, and committees—no substantive policy content is included in the listing itself.",
+  "key_points": [
+    "This is an index/listing page with no substantive policy content—only titles and speakers are listed.",
+    "Listed items include statements before congressional committees (Senate Banking, House Financial Services) and public remarks on topics such as liquidity regulation and economic security.",
+    "The most recent entry is Assistant Secretary Chris Pilkerton's remarks at an ACI CFIUS Conference (April 22, 2026).",
+    "Secretary Bessent's IMFC-DC Statement dated March 30, 2026, appears in the listing but without content preview.",
+    "A February 20, 2026 entry titled 'Remarks: A Reset on Liquidity Regulation' may be relevant to market structure, but no content is accessible from this listing page."
+  ],
+  "why_it_matters": "Individual Treasury Secretary statements and congressional testimony can serve as macro catalysts through signaling fiscal priorities, regulatory direction, or administration economic policy. However, this listing page provides no access to actual content—each statement would need to be retrieved individually by URL.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The 'Remarks: A Reset on Liquidity Regulation' entry dated February 20, 2026, could be relevant to market structure if retrieved and reviewed.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-secretary",
+    "congressional-testimony",
+    "bessent",
+    "listing-page",
+    "no-content"
+  ],
   "llm_review": {
-    "initial_confidence": 0,
-    "verification_confidence": 0,
+    "initial_confidence": 2,
+    "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing/navigation page containing multiple links, not a single article or document",
-      "Generated record contains no substantive content - all fields are empty",
-      "No specific event, speech, or statement is identified for archiving",
-      "source_type is empty and source is not article-like",
-      "Unable to verify any claims because no actual source content was provided beyond a list of links"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+    "notes": "container_page"
   },
-  "summary": "",
-  "key_points": [],
-  "why_it_matters": "",
-  "macro_context": "",
-  "market_structure_context": "",
-  "notes": "",
-  "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "",
-    "confidence": 0
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
-  "important_numbers": [],
-  "tags": [],
-  "status": "rejected"
+  "raw_text_path": "data/raw/seed_crawl_treasury_statements_remarks_us_department_of_ecbd5f48446f3580.txt",
+  "notes": "Non-archivable: listing page provides no policy content. Per CORE RULE 6, homepage and listing_page types should be treated as non-archiveable. Individual statements from Secretary Bessent before congressional committees may be relevant macro catalysts if accessed directly.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "No substantive policy content on listing page",
+      "Only titles, speakers, and dates provided",
+      "Cannot extract market-relevant facts or guidance",
+      "Individual URLs required for actual archive material"
+    ]
+  }
 }

@@ -1,66 +1,69 @@
 {
   "id": "seed_crawl_ecb.europa_annual_accounts_9aeddc0917faf485",
-  "created_at": "2026-04-13T06:33:05.587702+00:00",
+  "created_at": "2026-04-27T06:41:57.040090+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "monetary_policy_report",
   "title": "Annual Accounts",
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/annual/annual-accounts/html/index.en.html",
     "domain": "www.ecb.europa.eu",
     "published_at": "2026-02-26",
-    "source_type": "navigation_page"
+    "source_type": "seed_crawl"
   },
-  "summary": "The ECB published its Annual Accounts for 2025, reporting a balance sheet of €603.3 billion (down €37.3 billion from the prior year) and a loss of €1,254 million. The balance sheet contraction reflects the Eurosystem ceasing reinvestments of principal payments from maturing securities under its asset purchase programmes. This is primarily an accounting document rather than a market-moving release.",
+  "summary": "The ECB published its Annual Accounts for 2025 on February 26, 2026, reporting a balance sheet contraction of €37.3 billion to €603.3 billion, driven primarily by the cessation of reinvestments under its asset purchase programmes. The ECB recorded a loss of €1,254 million, significantly lower than 2024, due to decreased interest expense from the net TARGET liability.",
   "key_points": [
-    "ECB balance sheet contracted by €37.3 billion in 2025 to €603.3 billion, driven by non-reinvestment of APP principal maturities",
-    "Loss for 2025 was €1,254 million, significantly lower than 2024 due to reduced interest expense on net TARGET liability",
-    "Losses will remain on balance sheet to be offset against future profits, consistent with prior two years",
-    "Annual Accounts published 26 February 2026, representing year-end 2025 financial position",
-    "The document comprises management report, financial statements, auditor's report, and profit distribution note",
-    "This is an informational landing page linking to the full Annual Accounts and supporting materials"
+    "ECB balance sheet contracted by €37.3 billion in 2025, reaching €603.3 billion",
+    "Contraction was mainly due to declining monetary policy securities as the Eurosystem stopped reinvesting principal payments from maturing APP securities",
+    "ECB recorded a loss of €1,254 million for 2025, substantially lower than 2024 losses",
+    "Loss reduction was driven by decreased interest expense from net TARGET liability",
+    "Losses will remain on balance sheet to be offset against future profits",
+    "Annual Accounts are published each February as part of the ECB's Annual Report"
   ],
-  "why_it_matters": "This source provides the ECB's own financial position and is not a direct macro catalyst for markets. The balance sheet contraction reflects passive QT (quantitative tightening) from maturing securities rather than active policy changes. Loss figures indicate the ECB's financial stress from holding assets funded by higher-cost liabilities but do not directly affect monetary policy transmission or rate expectations.",
+  "why_it_matters": "This retrospective financial accounting document provides transparency on the ECB's balance sheet trajectory during ongoing QT. The €37.3 billion contraction reflects the mechanical unwind of QE-era holdings, while the TARGET liability interest expense continues to represent a structural cost of TARGET2 imbalances within the euro system. These figures are backward-looking and do not directly signal near-term policy changes.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
     "directional_bias": "neutral",
     "confidence": 0
   },
-  "macro_context": "The ECB's financial losses and balance sheet contraction are consequences of the monetary policy normalization process. The decline in monetary policy securities reflects the winding down of APP reinvestments, a passive form of QT. However, this annual accounts document does not convey forward guidance or policy signals that would affect market expectations for euro area rates.",
-  "market_structure_context": "",
+  "macro_context": "The balance sheet contraction reflects the ECB's passive QT through ceased APP reinvestments. The loss attributable to TARGET liability interest expense relates to cross-border payment imbalances within the euro area. These are accounting outcomes of prior policy decisions, not forward-looking indicators.",
+  "market_structure_context": "The mention of TARGET liability relates to TARGET2, the European retail payment infrastructure. Interest expenses on TARGET balances reflect the cost of cross-border settlement within the euro payment system, though this Annual Accounts document does not detail operational aspects of market plumbing.",
   "important_numbers": [
     "€603.3 billion (balance sheet total)",
-    "€37.3 billion (balance sheet contraction)",
-    "€1,254 million (loss for 2025)"
+    "-€37.3 billion (balance sheet contraction)",
+    "-€1,254 million (loss for 2025)"
   ],
   "tags": [
     "ecb",
     "annual-accounts",
     "balance-sheet",
     "qt",
+    "target2",
+    "monetary-policy",
+    "euro-system",
+    "losses",
     "app",
-    "financial-statements",
-    "euro-area"
+    "qe-unwind"
   ],
   "llm_review": {
     "initial_confidence": 5,
-    "verification_confidence": 3,
+    "verification_confidence": 4,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation_page per metadata - Rule 5 explicitly requires rejection of navigation pages",
-      "Source is thin, backward-looking accounting document with no policy signals, forward guidance, or market-moving information",
-      "event_type is 'unknown' but the page is a navigation/index page for ECB Annual Accounts - not a substantive financial document or market catalyst",
-      "Source provides only high-level summary figures (balance sheet, loss) without detailed financial analysis or policy implications",
-      "Relevance to macro catalysts is low - this is financial reporting rather than a market catalyst",
-      "The record itself acknowledges the source is a 'landing page linking to the full Annual Accounts' with 'no substantive analysis'",
-      "quality_tier correctly identified as 'low' with score of 3"
+      "Source is a listing/index page (metadata confirms 'listing_page'), which CORE RULE 5 requires rejecting regardless of content quality",
+      "The page aggregates multiple resources (2025 accounts, FAQs, explainers, CSV downloads, historical releases) but is itself a navigation hub rather than the substantive document",
+      "The actual 'Annual Accounts 2025' document appears to be a separate linked press release, not this page itself",
+      "Quality tier correctly assessed as 'low' (score 4) due to backward-looking accounting nature with no forward signals"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "container_page"
+    "notes": "Source type is definitively a listing page per metadata, which is a clear rejection criterion. The record accurately reflects the page's content, but the page type itself disqualifies it from archival acceptance regardless of factual accuracy."
   },
   "human_feedback": {
     "decision": "",
@@ -71,17 +74,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_annual_accounts_9aeddc0917faf485.txt",
-  "notes": "Source is the ECB Annual Accounts landing page (navigation page). Content is thin and primarily descriptive, linking to the actual annual accounts PDF, press release, and FAQ. The source contains summary financial figures (balance sheet €603.3bn, loss €1,254m, contraction €37.3bn) but no substantive analysis or policy signals. Relevance to macro catalysts is low; this is accounting/financial reporting rather than a market catalyst. Published 26 February 2026, making it recent but not timely in the sense of containing new market-relevant information. PAGE_TYPE is navigation_page, which the rules indicate should be noted as non-archiveable.",
+  "notes": "This source is primarily an accounting/financial reporting document, not a market catalyst. While it contains balance sheet data relevant to QT tracking and mentions TARGET liability (market infrastructure), it does not provide forward-looking policy signals or near-term market-moving information. Published February 26, 2026, this is the most recent annual accounts available. The document is low-density for macro catalyst purposes but has mild relevance for monitoring ECB balance sheet trajectory.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 3,
+    "score": 4,
     "reasoning": [
-      "Navigation page with thin content - mostly links and summary statistics",
-      "No policy signals, forward guidance, or market-moving information",
-      "Backward-looking financial accounting document",
-      "Source metadata explicitly identifies page_type as navigation_page"
+      "Backward-looking financial accounting document with no forward signals",
+      "Low direct relevance to near-term market catalysts",
+      "Balance sheet and loss figures are historical accounting outcomes",
+      "TARGET liability mentioned without operational detail"
     ]
   }
 }

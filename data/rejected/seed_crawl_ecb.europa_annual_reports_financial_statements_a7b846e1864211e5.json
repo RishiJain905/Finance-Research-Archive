@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_annual_reports_financial_statements_a7b846e1864211e5",
-  "created_at": "2026-04-13T06:27:18.203442+00:00",
+  "created_at": "2026-04-27T06:37:45.865688+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -12,14 +12,14 @@
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This source is an index page on the ECB website that lists annual reports and financial statements. The page contains no substantive content, only metadata indicating it is a section index for ECB annual reports and financial statements. No specific report data, macro indicators, or policy-relevant content is present in this source.",
+  "summary": "This is a section index/listing page for ECB annual reports and financial statements, not actual archival content. The page provides no substantive research, data, or policy information.",
   "key_points": [
-    "Source is a navigation/index page listing ECB annual reports and financial statements",
-    "No actual report content, data, or analysis present in this source",
-    "Source metadata indicates domain trust tier is high, but page content is minimal",
-    "No published date provided in the source body"
+    "Source is a navigation/listing page for the ECB's annual reports section",
+    "Contains no actual report content, data, or policy information",
+    "No publication date provided",
+    "Not relevant to market structure or macro catalysts as substantive source"
   ],
-  "why_it_matters": "This source does not contain actionable macro catalyst or market structure information. It is merely a directory/index to annual reports. The actual annual reports would be the relevant sources for research, not this index page.",
+  "why_it_matters": "This page cannot serve as an archiveable research record. It is a site navigation index that provides access to annual reports but contains no standalone research value or policy content.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,15 +31,21 @@
   "tags": [
     "ecb",
     "annual-reports",
-    "financial-statements",
-    "listing-page",
-    "non-archiveable"
+    "index-page",
+    "non-archivable"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 9,
+    "initial_confidence": 0,
+    "verification_confidence": 3,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "Source is a listing/navigation page (index page for ECB annual reports section) - violates CORE RULE 5",
+      "Source type correctly identified as 'listing_page' but this should trigger automatic rejection per rules",
+      "No substantive content present - only 'All pages in this section' navigation text",
+      "No publication date provided",
+      "event_type set to 'unknown' which is acceptable given no actual content to classify, but the record should still be rejected",
+      "Generated record accurately identifies this as non-archivable but suggested_status of 'review_queue' is inconsistent with CORE RULE 5"
+    ]
   },
   "human_review": {
     "required": false,
@@ -55,17 +61,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_annual_reports_financial_statements_a7b846e1864211e5.txt",
-  "notes": "This is a listing_page (navigation/index) that does not contain archiveable research content. The source body contains only metadata labels (LANE, DISCOVERY_METHOD, DOMAIN_TRUST_TIER) and the page title. No actual ECB annual report content is present. Recommend targeting specific annual report documents rather than this index page for macro catalyst research.",
+  "notes": "This is a section index page ('All pages in this section') for ECB annual reports. Per CORE RULE 6, listing_page and navigation_page types are treated as non-archiveable. No publication date, no actual report content, no research data. This cannot serve as a research archive entry.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 1,
+    "tier": "non-archivable",
+    "score": 0,
     "reasoning": [
-      "No substantive content in source body",
-      "Listing/navigation page type per source_type guidance",
-      "Cannot extract any macro catalyst or market structure data",
-      "Source appears to be crawl metadata rather than actual page content"
+      "Source is a listing/navigation page, not actual content",
+      "Contains no substantive research, data, or policy information",
+      "No publication date provided",
+      "Cannot provide market structure or macro catalyst information"
     ]
   }
 }

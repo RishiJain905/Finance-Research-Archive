@@ -1,14 +1,14 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 9,
   "verdict": "reject",
   "issues_found": [
-    "Core Rule 5 violation: Page is a navigation/listing page (source_type: listing_page) which must be rejected",
-    "No substantive macro catalyst or market structure content present",
-    "Cannot serve as archiveable research record - requires crawling individual report links",
-    "The record correctly identifies this as non-archivable, but per rules it must be rejected rather than routed to review queue"
+    "Source is a listing/navigation page (index of Financial Stability Reports), not actual report content",
+    "No substantive analysis present - only links to HTML, PDF, and chart data for each report",
+    "Per Core Rule #5, listing_page type sources must be rejected",
+    "Per Core Rule #6, listing pages are non-archiveable with thin low-signal content"
   ],
   "human_review_required": false,
-  "human_review_reason": "The generated record already correctly identifies the fundamental problem (listing page). While human review was flagged, the issue is unambiguous: per Core Rule 5, listing pages must be rejected. No subjective judgment needed.",
+  "human_review_reason": "The generated record accurately identifies the source limitations. The record itself is well-verified and correctly recommends rejection. No human review needed - the record can be auto-rejected based on clear Core Rule violations.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

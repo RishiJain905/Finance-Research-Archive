@@ -1,15 +1,15 @@
 {
-  "verification_confidence": 4,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is classified as 'listing_page' in source_type, which violates Rule 5: 'If PAGE_TYPE is homepage, navigation_page, listing_page, or search_page — reject'",
-    "This is the landing page/index for the ECB Annual Report 2024, not the full report itself. The actual full report is linked but not included in this source.",
-    "Content is limited to summary statistics without the detailed policy analysis that would appear in the complete annual report",
-    "The generated record's own quality_tier assessment notes 'Landing page with summary statistics rather than full report content' and 'Limited depth - detailed analysis missing'",
-    "Archival value is diminished because users seeking policy analysis would need to access the linked full report instead"
+    "Source is a landing/listing page (index page for Annual Reports), not substantive content — violates CORE RULE #5",
+    "Page contains only dashboard-style summary statistics; no substantive policy analysis or assessment",
+    "The actual detailed 2024 Annual Report is accessible via a separate 'Full report' link — this record captures only the index page",
+    "No market structure content present",
+    "Low archival utility: a navigation hub vs. archival-worthy analytical content"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record correctly identifies this as a listing_page, and Rule 5 explicitly requires rejection of such source types. The core facts (inflation 2.4%, 100 bps rate cuts, deposit rate 3.00%) are accurate, but the source type violation is unambiguous.",
+  "human_review_reason": "The issues are clear-cut: a listing/index page cannot be accepted per CORE RULE #5 regardless of content accuracy. The record correctly identifies the source as a listing_page and notes the low archival value. Rejection is appropriate without human review.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "review",
+  "issues_found": [
+    "Source body is severely truncated—contains only metadata summary and author list, not actual report content",
+    "No specific risk factors, metrics, policy recommendations, or substantive analysis available for verification",
+    "Cannot assess whether key_points and why_it_matters claims are fully supported without full report text",
+    "Published 354 days before TODAY—exceeds 90-day threshold, requires justification of archival value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source body is a brief metadata summary rather than the actual Financial Stability Report. The record accurately reflects what was captured, but meaningful verification of the report's actual findings is impossible without the full document. Human review needed to determine if: (1) the full report can be obtained from an archived source, (2) this truncated metadata record has sufficient archival value to preserve, or (3) the record should be rejected pending the full report.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Bank of Canada's May 2025 Financial Stability Report—available only as a metadata summary at this time—states that Canada's financial system is resilient after successfully weathering the pandemic, elevated inflation, and sharp interest rate increases. However, an ongoing trade war is identified as a threat to the Canadian economy and poses risks to financial stability.",
+    "why_it_matters": "If this metadata record is all that can be archived, it provides limited signal. The full Financial Stability Report would normally contain detailed assessments of household indebtedness, corporate debt vulnerabilities, bank capital buffers, and non-bank financial sector risks that would be essential for macro analysis.",
+    "macro_context": "The metadata summary indicates the Bank of Canada explicitly linked trade war conditions to financial stability risks. However, without the full report text, specific transmission mechanisms and forward-looking risk assessments cannot be verified.",
+    "market_structure_context": ""
+  }
+}
