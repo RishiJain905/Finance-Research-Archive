@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_economic_policy_reports_0438f41088109675",
-  "created_at": "2026-04-13T06:25:14.065324+00:00",
+  "created_at": "2026-04-27T10:29:58.836036+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -12,16 +12,16 @@
     "source_type": "listing_page",
     "domain": "home.treasury.gov"
   },
-  "summary": "This is a Treasury Department listing page containing links to approximately 30 historical economic policy reports spanning 2009 to 2023. The most recent entry is the 'Equitable Recovery Report' from October 2023. No single document content is present; only a navigation index of available reports.",
+  "summary": "This is a Treasury Department index page listing hyperlinks to various historical economic policy reports spanning 2009-2023. The listed reports cover topics including labor markets, childcare, infrastructure investment, social safety nets, and public-private partnerships. No single document is presented; the page serves as a navigation hub to individual reports. The most recent entry is from October 2023, making the content stale for current macro analysis.",
   "key_points": [
-    "This is a listing/navigation page, not a specific research document",
-    "Contains links to Treasury economic reports from 2009-2023",
-    "Most recent report: 'Equitable Recovery Report' (October 2023)",
-    "Includes labor market, infrastructure, childcare, and household economic security studies",
-    "No publication date provided for the page itself",
-    "No specific macro catalyst content or analysis present in this source"
+    "This is a listing/navigation page, not an individual research document or current macro analysis",
+    "Listed reports cover diverse topics: labor markets, childcare economics, infrastructure, social insurance, and public-private partnerships",
+    "Most recent report listed is from October 2023 (Equitable Recovery Report)",
+    "Earliest reports date to 2009-2010 (HIRE Act tax exemption analysis, Build America Bonds)",
+    "No substantive content or analysis is present on this page itself",
+    "All listed items are hyperlinks; actual reports are not included in this source"
   ],
-  "why_it_matters": "This page is not directly actionable for market research. It serves as a directory to Treasury historical reports but does not contain analysis or data relevant to current macro catalyst assessment. The listing page itself has no publish date and the content is stale (oldest items from 2009, most recent from 2023).",
+  "why_it_matters": "This page provides no actionable macro catalyst information. It is an archival index of historical Treasury economic analyses. For RAG purposes, the individual linked reports would need to be retrieved separately for any substantive content. The listing page itself has no value for real-time or near-term market analysis.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -34,20 +34,15 @@
     "treasury",
     "economic-policy",
     "listing-page",
-    "historical-reports",
-    "non-archivable"
+    "non-archivable",
+    "historical",
+    "stale"
   ],
   "llm_review": {
     "initial_confidence": 2,
     "verification_confidence": 9,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page per metadata source_type — rule 5 mandates rejection for listing pages",
-      "Source is a navigation/index page with no substantive research content to archive",
-      "No publication date provided for the page itself, only for listed items",
-      "Source contains no market-relevant data, analysis, or macro catalyst content",
-      "Individual reports would need to be crawled separately for actual content"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -63,18 +58,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_economic_policy_reports_0438f41088109675.txt",
-  "notes": "NON-ARCHIVABLE: This source is a Treasury Department navigation page containing only a list of report titles and dates. It does not contain the actual reports or any specific macro catalyst analysis. The page structure is crawl metadata ('seed_crawl') with no publication timestamp. Individual reports listed here (e.g., 'Equitable Recovery Report' Oct 2023, 'Labor Unions and the Middle Class' Aug 2023) would need to be accessed individually for substantive content. Current date (2026-04-13) makes even the most recent item historical. Not suitable for real-time or near-term macro catalyst tracking.",
+  "notes": "NON-ARCHIVABLE: This is a Treasury Department listing page containing hyperlinks to historical economic reports (2009-2023). No individual report content is present. PAGE_TYPE likely listing_page or navigation_page per Core Rule 6. Recommended action: retrieve and index individual reports separately if substantive content is needed. All reports are historical and stale relative to TODAY (2026-04-27). Not relevant to current macro catalysts or market structure analysis.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
+    "tier": "reject",
     "score": 0,
     "reasoning": [
-      "Listing page only, no substantive content",
-      "No publication date, making recency assessment impossible",
-      "Most recent linked item is 2.5+ years old",
-      "Cannot extract market-relevant data or analysis",
-      "Does not meet criteria for macro catalyst or market structure archive"
+      "Listing page with no substantive content",
+      "Historical/stale material (most recent Oct 2023)",
+      "No macro catalyst or market structure information present",
+      "Not a standalone archiveable research document"
     ]
   }
 }

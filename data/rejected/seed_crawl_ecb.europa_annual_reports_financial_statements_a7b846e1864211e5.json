@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_ecb.europa_annual_reports_financial_statements_a7b846e1864211e5",
-  "created_at": "2026-04-13T06:27:18.203442+00:00",
+  "created_at": "2026-04-27T10:26:48.090229+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -12,14 +12,14 @@
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This source is an index page on the ECB website that lists annual reports and financial statements. The page contains no substantive content, only metadata indicating it is a section index for ECB annual reports and financial statements. No specific report data, macro indicators, or policy-relevant content is present in this source.",
+  "summary": "This is a section index/listing page for the ECB's annual reports and financial statements. It contains no actual document content—only a navigation header stating 'Annual reports & financial statements All pages in this section.' No specific report, data, or analysis is present to extract or summarize.",
   "key_points": [
-    "Source is a navigation/index page listing ECB annual reports and financial statements",
-    "No actual report content, data, or analysis present in this source",
-    "Source metadata indicates domain trust tier is high, but page content is minimal",
-    "No published date provided in the source body"
+    "Source is a listing page (section index) for ECB annual reports, not an archiveable document",
+    "No published date is associated with this page; no specific report is referenced",
+    "No macro catalyst or market structure content is present in the source body",
+    "Page was discovered via seed_crawl; DOMAIN_TRUST_TIER: high"
   ],
-  "why_it_matters": "This source does not contain actionable macro catalyst or market structure information. It is merely a directory/index to annual reports. The actual annual reports would be the relevant sources for research, not this index page.",
+  "why_it_matters": "This listing page provides no actionable information. It is a navigation index that would link to individual annual reports, but no specific report, statement, or data point is present in this source. Cannot be used for research purposes.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,15 +31,20 @@
   "tags": [
     "ecb",
     "annual-reports",
-    "financial-statements",
     "listing-page",
-    "non-archiveable"
+    "no-content"
   ],
   "llm_review": {
     "initial_confidence": 1,
-    "verification_confidence": 9,
+    "verification_confidence": 0,
     "verdict": "reject",
-    "issues_found": []
+    "issues_found": [
+      "Source is a listing_page per Rule 6; listing pages are non-archiveable and must be rejected",
+      "Source body contains only navigation text with no actual document content",
+      "No published_at date available; source lacks basic temporal metadata",
+      "Cannot extract any market structure or macro catalyst information from this source",
+      "event_type set to 'unknown' but this is acceptable given the source has no content to categorize"
+    ]
   },
   "human_review": {
     "required": false,
@@ -55,17 +60,16 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_annual_reports_financial_statements_a7b846e1864211e5.txt",
-  "notes": "This is a listing_page (navigation/index) that does not contain archiveable research content. The source body contains only metadata labels (LANE, DISCOVERY_METHOD, DOMAIN_TRUST_TIER) and the page title. No actual ECB annual report content is present. Recommend targeting specific annual report documents rather than this index page for macro catalyst research.",
+  "notes": "NON-ARCHIVABLE: This is a section index/listing page for ECB annual reports, not an individual document. Per Rule 6, listing_page types are non-archiveable. The source body contains only the navigation text 'Annual reports & financial statements All pages in this section' with no actual report content. No published_at date is available. Recommend crawling a specific annual report from this section instead. The source domain (ecb.europa.eu) is high-trust, but the content has no research value as captured.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 1,
+    "tier": "non-usable",
+    "score": 0,
     "reasoning": [
-      "No substantive content in source body",
-      "Listing/navigation page type per source_type guidance",
-      "Cannot extract any macro catalyst or market structure data",
-      "Source appears to be crawl metadata rather than actual page content"
+      "Listing page with no document content",
+      "No published date or specific report referenced",
+      "Cannot extract any market-relevant information"
     ]
   }
 }

@@ -1,21 +1,18 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 10,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing/navigation page (per source_type: 'listing_page')",
-    "CORE RULE #5: listing_page sources must be rejected",
-    "No actual ECB policy content, decision, or guidance present in source",
-    "Source provides only generic procedural description (six-week cycle, press conference time)",
-    "No published_at date available for temporal assessment",
-    "Source cannot support any market or macro research use case",
-    "event_type is 'unknown' - correct for this source type, but reinforces non-archival nature"
+    "Source is a navigation_page per Core Rule 5 - must reject",
+    "No actual policy content present - only generic procedural text about ECB meeting cadence",
+    "No published_at timestamp available",
+    "event_type correctly set to 'unknown' since no policy information exists to classify"
   ],
   "human_review_required": false,
-  "human_review_reason": "No human review needed. The generated record correctly identifies the source as a non-archiveable navigation page and appropriately recommends rejection. The source clearly violates CORE RULE #5 (listing_page) and RULE #6 (thin/noisy sources). Auto-rejection is appropriate.",
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This page is a navigation menu for ECB monetary policy communications, not an actual policy statement or decision. It describes the ECB's six-week meeting cadence and press conference logistics (14:45 CET), but contains no policy content, data, or decisions.",
+    "why_it_matters": "This page has no research value for market structure or macro catalysts. It is a structural navigation page that lists links to policy statements rather than containing any actual policy content itself.",
     "macro_context": "",
     "market_structure_context": ""
   }

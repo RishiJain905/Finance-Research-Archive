@@ -1,27 +1,27 @@
 {
   "id": "seed_crawl_federalreserve_federal_reserve_balance_sheet_developments_acde7cbadcecd2e6",
-  "created_at": "2026-04-13T06:20:45.445764+00:00",
+  "created_at": "2026-04-27T10:24:01.938606+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "balance_sheet_update",
   "title": "Federal Reserve Balance Sheet Developments",
   "source": {
-    "name": "Board of Governors of the Federal Reserve System",
+    "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/monetarypolicy/publications/balance-sheet-developments-report.htm",
     "domain": "www.federalreserve.gov",
     "published_at": "2025-11-26",
     "source_type": "listing_page"
   },
-  "summary": "This is a navigation/listing page on the Federal Reserve website that provides links to the Balance Sheet Developments report but does not contain the actual report content itself. The page describes the report's purpose (transparency about monetary policy and financial stability) and lists available editions going back to November 2021.",
+  "summary": "This is a Federal Reserve landing page that serves as an index to the Balance Sheet Developments report series. It does not contain the actual report content but rather lists links to prior quarterly editions from November 2025 back to May 2022. The page describes the report's purpose: to provide transparency on Fed actions related to monetary policy and financial stability.",
   "key_points": [
-    "Page is a listing/index page for the Balance Sheet Developments report, not the report itself",
-    "Most recent report listed is November 2025 (HTML | PDF)",
-    "Previous editions available: May 2025, December 2024, May 2024, November 2023, May 2023, November 2022, May 2022, November 2021",
-    "Page last updated: November 26, 2025",
-    "Report covers: Federal Reserve balance sheet trends, key asset changes, key liability changes",
-    "Historical reports available from June 2009 onwards under different titles"
+    "This is a listing/navigation page, not the actual balance sheet report content",
+    "Most recent available report is November 2025 (HTML and PDF links provided)",
+    "Prior editions listed: May 2025, December 2024, May 2024, November 2023, May 2023, November 2022, May 2022, November 2021",
+    "Report previously published as 'Quarterly Report on Federal Reserve Balance Sheet Developments' (Nov 2012–Aug 2020) and 'Monthly Report on Credit and Liquidity Programs and the Balance Sheet' (Jun 2009–Aug 2012)",
+    "Last update date: November 26, 2025",
+    "Report covers Federal Reserve balance sheet trends, key asset changes, and key liability changes"
   ],
-  "why_it_matters": "This page does not contain substantive archival content. It is a directory/index page that links to PDF and HTML reports. To obtain the actual balance sheet data or policy information, one must follow the links to individual report editions. As a standalone source, this page has no actionable macro or market structure information.",
+  "why_it_matters": "This listing page provides access points to the Fed's balance sheet transparency reports, which track QE/QT operations and balance sheet composition. However, the substantive balance sheet data and analysis are in the linked PDFs/HTML reports, not on this page itself.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -34,18 +34,19 @@
     "federal-reserve",
     "balance-sheet",
     "listing-page",
-    "non-archivable",
-    "fed-policies"
+    "quarterly-report",
+    "monetary-policy",
+    "transparency"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 3,
+    "verification_confidence": 10,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing page that should be rejected per rule #5",
-      "No substantive archival content - only provides links to report editions",
-      "event_type 'balance_sheet_update' is technically valid but misleading; the actual report content would qualify, not this listing page",
-      "Source does not contain actual balance sheet data, policy signals, or market information"
+      "Source is a listing/navigation page (index page for Balance Sheet Developments report series) containing only links to prior reports, not substantive content",
+      "No quantitative balance sheet data, policy details, or analysis present on this page",
+      "Cannot derive market-structure-relevant information without accessing individual linked reports",
+      "Under Rule 5, listing_page type requires rejection"
     ]
   },
   "human_review": {
@@ -62,17 +63,16 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_federal_reserve_balance_sheet_developments_acde7cbadcecd2e6.txt",
-  "notes": "Low-quality source. This is a navigation/index page that does not contain the actual Balance Sheet Developments report. The page only lists links to reports and provides a brief description of what those reports contain. No substantive policy data, balance sheet figures, or market signals are present in this source. Per rule #6, listing pages should be treated as non-archiveable. The published_at date was not provided in metadata but extracted from page content as November 26, 2025 (Last Update). Recommend crawling the actual report linked (November 2025 HTML | PDF) for meaningful archival content.",
+  "notes": "Non-archiveable: This is a listing page providing navigation links to prior balance sheet reports. No substantive balance sheet data, numbers, or policy analysis present. Actual balance sheet developments data resides in the linked reports (November 2025, May 2025, etc.). Recommended action: follow links to actual report pages for archiveable content.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 2,
+    "score": 0,
     "reasoning": [
-      "Source is a listing/navigation page, not substantive content",
-      "Contains no actual balance sheet data or policy signals",
-      "Only provides metadata about available reports",
-      "Does not meet criteria for reliable macro catalyst documentation"
+      "Source is a listing/navigation page, not source content",
+      "No substantive quantitative data present",
+      "Cannot extract market-structure-relevant details without accessing linked reports"
     ]
   }
 }

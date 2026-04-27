@@ -1,0 +1,77 @@
+{
+  "id": "seed_crawl_ecb.europa_weekly_financial_statements_f476f05f0ba072b4",
+  "created_at": "2026-04-27T10:31:26.405486+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "Weekly financial statements",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/wfs/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2026-04-27",
+    "source_type": "listing_page"
+  },
+  "summary": "This is a landing page for ECB's weekly financial statements publication schedule, explaining the Eurosystem's logistics for publishing weekly financial statements. The page contains publication timing rules, exceptions for quarter-end closings, and a table of 2026 publication date anomalies.",
+  "key_points": [
+    "Weekly financial statements relate to the preceding Friday and publish on Tuesdays",
+    "First financial statement of each quarter publishes on Wednesday instead of Tuesday to allow time for quarterly revaluation",
+    "Publication schedule is adjusted when TARGET system is closed",
+    "2026 exception dates listed: January 7, April 9, July 8, October 7 (all Wednesday publications due to quarterly revaluation)",
+    "Easter Monday (April 6, 2026) is noted as a TARGET Closing Day affecting Week 14 publication"
+  ],
+  "why_it_matters": "This page documents the operational logistics of ECB data dissemination. It is not itself an economic release or policy communication; it merely schedules when weekly balance sheet data will become available.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "ecb",
+    "weekly-financial-statements",
+    "publication-schedule",
+    "eurosystem"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a listing/navigation page (index page for weekly financial statements), not an archiveable research document",
+      "Content is purely administrative logistics about publication timing—no economic data, no policy signals, no market-moving content",
+      "event_type is set to 'unknown' but the correct type is not obvious from context because there is no substantive event to classify",
+      "Source provides no actual financial statement data, no macro indicators, no policy communications",
+      "No actionable market or macro information present; this is metadata about data availability timing",
+      "Page type qualifies for rejection per Rule 5 (listing_page)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_weekly_financial_statements_f476f05f0ba072b4.txt",
+  "notes": "This is a documentation/schedule page for ECB weekly financial statements. While the TARGET metadata specifies macro catalysts, the actual page content is operational logistics only—no economic data, no policy signals, no market-moving information. Not suitable for research archive as substantive content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "not_applicable",
+    "score": 0,
+    "reasoning": [
+      "Source is administrative scheduling content, not research content",
+      "No actionable market or macro information",
+      "Page type is listing_page, treated as non-archiveable per rules"
+    ]
+  }
+}

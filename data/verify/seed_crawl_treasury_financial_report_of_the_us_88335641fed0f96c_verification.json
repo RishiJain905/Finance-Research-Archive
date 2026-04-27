@@ -1,20 +1,20 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a homepage/landing page per URL structure - Core Rule 5 explicitly rejects homepage types",
-    "Crawled content is critically thin - only 2-3 sentences of generic descriptive text with no substantive data",
-    "No publication date provided - cannot assess recency or staleness",
-    "No actual fiscal data, debt statistics, deficit figures, or policy content captured",
-    "Event_type set to 'unknown' when source is the Financial Report - should be 'financial_stability_report' if substantive content existed",
-    "Source cannot support market structure or macro catalyst research in current state"
+    "Source body is a generic navigation/landing page description with no substantive fiscal data, balance sheet figures, debt statistics, or policy content",
+    "Source is explicitly a navigation_page (source_type), which violates Rule 6: navigation pages are non-archiveable",
+    "event_type is set to 'unknown' - the page is a Treasury Financial Report landing page, which could reasonably be classified as 'financial_stability_report' or similar, but even so the actual substantive report is not present",
+    "No publication date available in source content",
+    "Source contains only ~50 words of generic description - appears to be a seed crawl placeholder rather than actual report content",
+    "Cannot archive what is essentially a navigation/landing page rather than the actual Financial Report document"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record's assessment is accurate and the decision is clear-cut per Core Rules. No ambiguity exists - homepage page type with critically thin content explicitly fails multiple rejection criteria.",
+  "human_review_reason": "The source is a navigation page with no substantive content. This is a clear reject per Rule 6 (navigation pages are non-archiveable). The generated record correctly identifies this issue. No human review needed - the record should be discarded.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This source is a Treasury.gov landing page for the Financial Report of the U.S. Government. The crawled content is extremely thin, containing only a generic one-sentence description stating the report provides a comprehensive view of federal government finances, along with references to the Bureau of the Fiscal Service and Federal Accounting Standards Advisory Board. No actual fiscal data, balance figures, debt statistics, or policy content was captured.",
-    "why_it_matters": "This source cannot support market structure or macro catalyst research. The crawled content is insufficient to extract any relevant fiscal data, debt metrics, or policy implications. Analysts seeking U.S. fiscal health indicators would need the full annual Financial Report document, not this thin landing page.",
+    "summary": "This source is a navigation/landing page for the Treasury's annual Financial Report. The body contains only a generic one-sentence description with no actual fiscal data, balance sheet figures, debt statistics, or policy content.",
+    "why_it_matters": "This source cannot be archived as it contains no substantive content. The actual Financial Report of the U.S. Government would include detailed U.S. government finances including debt levels, receipts, outlays, and federal agency financial statements, but none of this is present in this source.",
     "macro_context": "",
     "market_structure_context": ""
   }

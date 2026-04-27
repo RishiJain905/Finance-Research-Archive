@@ -2,15 +2,15 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source type is listing_page — explicitly non-archivable per CORE RULE 6",
-    "No substantive content; only report titles and dates in table format",
-    "Not relevant to market structure or macro catalysts as a standalone source",
-    "No published_at date for the page itself",
-    "Cannot extract market-relevant findings from this index page",
-    "event_type set to 'unknown' — acceptable given the source is an index with no specific event"
+    "Source is a listing/index page containing only a bibliography of reports, not substantive research content",
+    "Core Rule 5 violation: listing_page type is explicitly rejected from archival processing",
+    "No published_at date available, and page contains no current macro catalyst information",
+    "event_type incorrectly set to 'unknown' when clearly the source is not any valid event type category",
+    "Market impact cannot be assessed from this source type; directional_bias and confidence fields are empty/null",
+    "macro_context and market_structure_context fields are empty, indicating no substantive content to populate them"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record's own analysis is correct and complete. No ambiguity exists about the source type or archival eligibility. The record properly identifies this as a non-archivable listing page and recommends rejection.",
+  "human_review_reason": "Automated rejection is appropriate. The source is explicitly a listing page (index/bibliography) which Core Rule 5 requires rejection for. The generated record correctly identifies this issue and recommends rejection. No human judgment needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

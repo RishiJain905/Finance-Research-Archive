@@ -1,55 +1,57 @@
 {
   "id": "seed_crawl_ecb.europa_monetary_policy_strategy_and_implementation_063cc94cda548bc5",
-  "created_at": "2026-03-31T18:18:25.658598+00:00",
+  "created_at": "2026-04-27T10:32:24.172598+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "unknown",
+  "event_type": "research_paper",
   "title": "Monetary policy, strategy and implementation",
   "source": {
     "name": "European Central Bank",
-    "url": "",
-    "domain": "ecb.europa.eu",
+    "url": "https://www.ecb.europa.eu/pub/economic-research/research_agenda/monetary_policy/html/index.en.html",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "www.ecb.europa.eu"
   },
-  "summary": "This page is a high-level index describing the ECB's monetary policy research framework, outlining broad areas of interest including transmission channels, side effects of accommodative policy, forward guidance, implementation challenges, and policy normalisation. No specific policy decisions, dates, or concrete data are provided.",
+  "summary": "The ECB publishes a research agenda outlining six broad research areas related to monetary policy: transmission channels, side effects of accommodative policy, forward guidance, implementation issues, the 'new normal' of low natural rates and effective lower bound constraints, and policy normalisation. This page is a section index listing research themes rather than a specific publication, policy decision, or data release. [NOTE: This source is a listing/navigation page and should be rejected per verification rules.]",
   "key_points": [
-    "ECB research covers monetary policy transmission channels including heterogeneity across households, firms, and banks",
-    "Research examines side effects of prolonged accommodative monetary policy including negative rate costs, inequality, and financial stability",
-    "Forward guidance research focuses on effectiveness in theory and optimal design",
-    "Implementation research covers money market functioning, Basel III implications, and collateral framework effects",
-    "Policy normalisation research addresses pace and combination of interest rate and balance sheet adjustments",
-    "The page is an index/navigation page listing research categories rather than containing substantive research output"
+    "ECB identifies six general research areas: monetary policy transmission, side effects of accommodative policy, forward guidance, monetary policy implementation, the 'new normal' (ELB constraints), and policy normalisation",
+    "Research on transmission focuses on heterogeneity across households, firms, banks; survey data for expectations; bank-level lending conditions; and climate change implications",
+    "Side effects research examines costs/benefits of negative deposit rates, asset price/wealth/income inequality effects, and financial stability implications",
+    "Forward guidance research covers theoretical effectiveness determinants, empirical evidence, and optimal design",
+    "Implementation research addresses money market functioning, Basel III implications, climate change effects, and the collateral framework",
+    "Policy normalisation research examines pace and combination of interest rate and balance sheet normalisation, and role of banking/financial conditions"
   ],
-  "why_it_matters": "This page provides institutional context on ECB research priorities but does not contain actionable market information. It is useful for understanding the ECB's analytical framework but lacks specific policy signals, data, or guidance relevant to immediate market positioning.",
+  "why_it_matters": "[REJECTED - Listing page provides no actionable information, no publication date, and no specific research outputs.]",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "neutral",
+    "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The research areas described indicate ECB concerns about effective lower bound constraints, financial stability risks from accommodative policy, and the optimal path for policy normalisation. However, no specific forecasts, timelines, or policy recommendations are provided.",
-  "market_structure_context": "",
+  "macro_context": "[REJECTED - Cannot assess macro context from a navigation page with no publication date.]",
+  "market_structure_context": "[REJECTED - Cannot assess market structure context from a navigation page with no publication date.]",
   "important_numbers": [],
   "tags": [
     "ecb",
+    "research-agenda",
     "monetary-policy",
-    "research-framework",
-    "transmission-channels",
+    "transmission",
     "forward-guidance",
-    "policy-normalisation",
-    "financial-stability"
+    "normalisation",
+    "negative-rates",
+    "effective-lower-bound"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 3,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "PAGE_TYPE is listing_page per source content ('All pages in this section'), triggering automatic rejection per CORE RULE 5",
-      "Empty URL field prevents source verification",
-      "No published_at date provided; cannot establish recency or archival value",
-      "Content is an index/navigation page describing research categories rather than substantive research output",
-      "No specific policy decisions, numbers, dates, or actionable market signals present",
-      "event_type set to 'unknown' but the page contains no specific event to classify"
+      "source_type is 'listing_page' - per Rule 5, listing/navigation pages must be rejected",
+      "URL ends with /index.en.html and body text ends with 'All pages in this section', confirming this is a section index",
+      "published_at is empty - temporal assessment impossible and violates core metadata requirements",
+      "event_type 'research_paper' is incorrect - this is a navigation/index page listing research areas, not an actual research paper",
+      "Contains no specific data, forecasts, policy decisions, or actionable findings",
+      "Source provides only high-level research area descriptions without concrete outputs",
+      "No publication date means no archival value dating can be established"
     ]
   },
   "human_review": {
@@ -57,6 +59,27 @@
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_monetary_policy_strategy_and_implementation_063cc94cda548bc5.txt",
-  "notes": "SOURCE_TYPE classified as listing_page per CORE RULE 6. This is a navigation/index page describing ECB research categories rather than a specific policy document, speech, or data release. Contains no published date, no specific numbers, and no actionable market signals. Low utility for RAG applications requiring specific macro catalyst events. Confidence set to 2 due to thin content and lack of specificity."
+  "notes": "NON-ARCHIVEABLE: This is a section index/listing page (URL ends in /index.en.html, text ends with 'All pages in this section'). No publication date is available. Contains only high-level research area descriptions without specific findings, data, or policy commitments. While the research topics are relevant to macro catalysts, the page itself provides no actionable information. Recommend linking to specific ECB research papers or working papers from this section that have actual publication dates and content.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "No publication date - temporal assessment impossible",
+      "Listing/navigation page type per rules 6 and 7 - non-archiveable",
+      "No specific numbers, data points, or decisions stated",
+      "High-level framework document with no concrete findings",
+      "Contains only research topic descriptions, not actual research outputs"
+    ]
+  }
 }

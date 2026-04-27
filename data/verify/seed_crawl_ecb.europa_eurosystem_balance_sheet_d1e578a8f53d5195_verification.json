@@ -1,20 +1,21 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 3,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/listing index page (index.en.html) - contains only metadata, language selectors, and links to CSV/XLS downloads, not substantive content",
-    "No actual balance sheet figures present in source body - all data exists only in downloadable files not included in the crawl",
-    "Cannot verify any numerical claims or market impact without actual data in the source",
-    "Source quality is too thin to have archival value as a research record",
-    "This is a container page providing access to data, not the data itself"
+    "Source is a listing_page/navigation portal per Rule 5 - must reject",
+    "event_type is 'unknown' but should be 'balance_sheet_update' from Treasury/operations taxonomy",
+    "No published_at date provided in source metadata",
+    "Source contains no substantive macro catalyst data - only links to downloadable files",
+    "No actual balance sheet figures present in page content",
+    "Summary is accurate but the source itself lacks archival value for macro catalyst research",
+    "Rule 6 applies: thin, low-signal source lacking actionable information"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Clear reject based on source type being a navigation page and having no substantive content. The record correctly identifies this as a thin landing page, but the source cannot support a meaningful research record.",
+  "human_review_required": true,
+  "human_review_reason": "Source is a navigation/index page with no substantive macro catalyst content. While the generated record accurately describes the page's nature and limitations, the source itself fails multiple acceptance criteria (listing_page type, no published date, no figures, no actionable data). This is a clear reject per Rule 5.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This ECB webpage is a navigation and download portal for the annual consolidated balance sheet of the Eurosystem. It links to CSV/XLS data files (1999-2025) and references a consolidated balance sheet as of 31 December 2025 published 26 February 2026, but presents no actual balance sheet figures in the page content. The page also notes a legal framework update per Guideline (EU) 2024/2941.",
+    "why_it_matters": "This page is an index/reference for data files rather than a source of actionable macro information. Researchers seeking Eurosystem balance sheet data must download external files rather than consult this page.",
+    "event_type": "balance_sheet_update"
   }
 }

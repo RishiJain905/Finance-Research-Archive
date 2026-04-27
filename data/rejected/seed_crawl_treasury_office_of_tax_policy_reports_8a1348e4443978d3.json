@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_office_of_tax_policy_reports_8a1348e4443978d3",
-  "created_at": "2026-04-13T06:23:47.919364+00:00",
+  "created_at": "2026-04-27T10:29:04.280459+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,19 +8,19 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/policy-issues/tax-policy/office-of-tax-policy-reports",
+    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page",
-    "domain": "home.treasury.gov"
+    "source_type": "listing_page"
   },
-  "summary": "This is a Treasury Department navigation page listing historical Office of Tax Policy reports and Reports to Congress spanning 1944 to October 2025. It serves as an index/catalog, not a substantive policy document. No specific report content, current macro analysis, or market-relevant information is present on this page itself.",
+  "summary": "This is a Treasury Department archive index page listing historical Office of Tax Policy reports dating from 1944 to October 2025. The page is a bibliography/catalog of reports rather than a substantive research document. The most recently listed report is the October 2025 'Report on the Replacement of Direct File.'",
   "key_points": [
-    "Page is a listing/index page for tax policy reports, not a standalone document",
-    "Reports listed range from December 1944 ('The Postwar Corporation Tax Structure') to October 2025 ('Report on the Replacement of Direct File')",
-    "Includes two sections: 'Official Reports' covering tax code analysis, and 'Reports to Congress' mandated reports",
-    "No substantive content, findings, or data from any individual report is present on this listing page",
-    "Source provides no current market structure or macro catalyst information"
+    "This is a listing page (index/bibliography), not an archiveable research document itself.",
+    "Most recent report listed is October 2025 'Report on the Replacement of Direct File.'",
+    "Reports cover topics including tax reform, corporate taxation, income inequality, Social Security taxation, and tax compliance.",
+    "Many listed reports date from the 1970s-1990s, making them historical documents.",
+    "Individual reports would need to be accessed separately for substantive content."
   ],
-  "why_it_matters": "This source does not directly matter for finance research as it contains no substantive policy content—it is merely a catalog page. Tax policy changes can be macro catalysts, but this page provides no analysis or actionable information.",
+  "why_it_matters": "This page serves as a directory to Treasury tax policy research but provides no direct market or macro signals. Individual reports within this archive may contain policy-relevant content, but this index page does not.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -33,20 +33,21 @@
     "treasury",
     "tax-policy",
     "listing-page",
-    "non-archivable",
-    "historical-reports"
+    "historical-reports",
+    "direct-file",
+    "tax-reform"
   ],
   "llm_review": {
-    "initial_confidence": 2,
+    "initial_confidence": 0,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source type is listing_page — explicitly non-archivable per CORE RULE 6",
-      "No substantive content; only report titles and dates in table format",
-      "Not relevant to market structure or macro catalysts as a standalone source",
-      "No published_at date for the page itself",
-      "Cannot extract market-relevant findings from this index page",
-      "event_type set to 'unknown' — acceptable given the source is an index with no specific event"
+      "Source is a listing/index page containing only a bibliography of reports, not substantive research content",
+      "Core Rule 5 violation: listing_page type is explicitly rejected from archival processing",
+      "No published_at date available, and page contains no current macro catalyst information",
+      "event_type incorrectly set to 'unknown' when clearly the source is not any valid event type category",
+      "Market impact cannot be assessed from this source type; directional_bias and confidence fields are empty/null",
+      "macro_context and market_structure_context fields are empty, indicating no substantive content to populate them"
     ]
   },
   "human_review": {
@@ -63,17 +64,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_office_of_tax_policy_reports_8a1348e4443978d3.txt",
-  "notes": "CLASSIFICATION: NON-ARCHIVABLE. This is a listing_page per CORE RULE 6. The page contains only an index of historical Treasury tax policy reports with titles and dates. No substantive content, policy analysis, market data, or macro catalyst information is present. Relevant only as a reference index to find individual reports; the individual reports themselves (not this page) would be candidates for archiving. The oldest report listed is December 1944; the most recent is October 2025 but no content is included.",
+  "notes": "Non-archiveable: This is a listing page providing only a bibliography of Treasury Office of Tax Policy reports. The page does not contain substantive macro catalyst information or market structure content. Individual reports referenced here (e.g., the October 2025 Direct File report) would require separate processing to yield researchable content.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "discard",
-    "score": 0,
+    "tier": "low",
+    "score": 2,
     "reasoning": [
-      "Listing/navigation page with no substantive content",
-      "Non-archivable per rule 6",
-      "No market-relevant information present",
-      "Cannot extract data or findings from this source type"
+      "Listing/index page with no substantive content",
+      "Not directly relevant to market structure or macro catalysts",
+      "Historical archive bibliography rather than current research",
+      "Cannot assess market impact from this source type"
     ]
   }
 }

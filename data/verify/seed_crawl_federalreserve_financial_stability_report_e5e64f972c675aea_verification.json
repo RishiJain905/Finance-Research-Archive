@@ -1,19 +1,20 @@
 {
-  "verification_confidence": 3,
+  "verification_confidence": 2,
   "verdict": "reject",
   "issues_found": [
-    "Core Rule 5 violation: Page is a navigation/listing page (source_type: listing_page) which must be rejected",
-    "No substantive macro catalyst or market structure content present",
-    "Cannot serve as archiveable research record - requires crawling individual report links",
-    "The record correctly identifies this as non-archivable, but per rules it must be rejected rather than routed to review queue"
+    "Source is a listing_page (navigation/index page), not actual report content per Rule 5",
+    "No substantive Financial Stability Report findings, numbers, or analysis present in source",
+    "Cannot extract meaningful macro catalyst information from a directory/index page",
+    "source_type correctly identified as 'listing_page' but this should trigger automatic rejection",
+    "Only contains links to archived reports (2018-2025) - no actual content from any individual report"
   ],
   "human_review_required": false,
-  "human_review_reason": "The generated record already correctly identifies the fundamental problem (listing page). While human review was flagged, the issue is unambiguous: per Core Rule 5, listing pages must be rejected. No subjective judgment needed.",
+  "human_review_reason": "The record correctly and thoroughly identified that this source is a listing page with no substantive content. No human review needed - the rejection is clear-cut per Core Rule 5.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "This is a Federal Reserve Board landing page that indexes Financial Stability Reports from 2018-2025, including both spring and fall semi-annual editions. The page provides links to HTML, PDF, and chart data for each report. No specific content, findings, or numbers from any individual report are included in this source.",
+    "why_it_matters": "Financial Stability Reports provide the Fed's assessment of system-wide financial risks including asset valuations, leverage, funding risks, and interconnections. However, this source is only the index page—not the actual report content. To access relevant macro catalyst information, one must navigate to a specific report edition.",
+    "macro_context": "Financial Stability Reports address systemic risks that can act as macro catalysts—credit deterioration, asset price dislocations, funding stresses, and contagion risks. However, this landing page provides no details on the Fed's current risk assessments.",
     "market_structure_context": ""
   }
 }

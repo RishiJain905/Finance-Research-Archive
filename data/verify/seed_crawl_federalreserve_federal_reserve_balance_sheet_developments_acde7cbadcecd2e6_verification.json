@@ -1,14 +1,14 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 10,
   "verdict": "reject",
   "issues_found": [
-    "Source is a navigation/listing page that should be rejected per rule #5",
-    "No substantive archival content - only provides links to report editions",
-    "event_type 'balance_sheet_update' is technically valid but misleading; the actual report content would qualify, not this listing page",
-    "Source does not contain actual balance sheet data, policy signals, or market information"
+    "Source is a listing/navigation page (index page for Balance Sheet Developments report series) containing only links to prior reports, not substantive content",
+    "No quantitative balance sheet data, policy details, or analysis present on this page",
+    "Cannot derive market-structure-relevant information without accessing individual linked reports",
+    "Under Rule 5, listing_page type requires rejection"
   ],
   "human_review_required": false,
-  "human_review_reason": "Record correctly identifies the source as a non-archivable listing page. No ambiguity - auto-reject is appropriate.",
+  "human_review_reason": "The generated record correctly identifies this as a non-archiveable listing page with no substantive content. Auto-rejection is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

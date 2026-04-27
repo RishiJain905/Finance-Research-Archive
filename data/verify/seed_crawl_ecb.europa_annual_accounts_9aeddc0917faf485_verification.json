@@ -1,18 +1,16 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 4,
+  "verdict": "review",
   "issues_found": [
-    "Source is a navigation_page per metadata - Rule 5 explicitly requires rejection of navigation pages",
-    "Source is thin, backward-looking accounting document with no policy signals, forward guidance, or market-moving information",
-    "event_type is 'unknown' but the page is a navigation/index page for ECB Annual Accounts - not a substantive financial document or market catalyst",
-    "Source provides only high-level summary figures (balance sheet, loss) without detailed financial analysis or policy implications",
-    "Relevance to macro catalysts is low - this is financial reporting rather than a market catalyst",
-    "The record itself acknowledges the source is a 'landing page linking to the full Annual Accounts' with 'no substantive analysis'",
-    "quality_tier correctly identified as 'low' with score of 3"
+    "Topic mismatch: metadata specifies 'macro catalysts' but source is the ECB's own financial accounts (accounting document), not a macro catalyst or market-moving release",
+    "event_type 'monetary_policy_report' is questionable: this is an annual financial statement/accounting disclosure, not a traditional monetary policy report that discusses economic conditions, outlook, or policy implications",
+    "Source is thin/structural: the page is primarily an index with summary figures; substantive data requires downloading CSV/XLSX files",
+    "Source is backward-looking accounting rather than actionable macro information",
+    "The record's 'why_it_matters' and 'market_structure_context' sections correctly identify the limited relevance, but this suggests the original topic assignment was incorrect"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Automated rejection is appropriate - the source metadata explicitly identifies this as a navigation_page, which triggers Rule 5 rejection. The record's own analysis correctly identifies this as a thin source with low archival value for macro catalysts.",
-  "suggested_status": "rejected",
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate on the figures provided, but the fundamental issue is whether this source belongs in a 'macro catalysts' archive. The source is the ECB's own financial accounts—an accounting document about the ECB's balance sheet and profit/loss position—not a macro catalyst. While technically accurate, archiving this under 'macro catalysts' is questionable. Human decision needed on whether ECB's internal financial position has sufficient archival value for the specified topic, or whether this should be reclassified/rejected.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

@@ -1,63 +1,61 @@
 {
   "id": "seed_crawl_ecb.europa_eurosystem_balance_sheet_d1e578a8f53d5195",
-  "created_at": "2026-04-13T06:22:00.417254+00:00",
+  "created_at": "2026-04-27T10:24:51.079547+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "balance_sheet_update",
-  "title": "Annual consolidated balance sheet of the Eurosystem",
+  "event_type": "unknown",
+  "title": "Eurosystem balance sheet",
   "source": {
     "name": "European Central Bank",
     "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/annual/balance/html/index.en.html",
-    "published_at": "2026-02-26",
-    "source_type": "seed_crawl",
-    "domain": "www.ecb.europa.eu"
+    "domain": "www.ecb.europa.eu",
+    "published_at": "",
+    "source_type": "listing_page"
   },
-  "summary": "The ECB publishes the annual consolidated balance sheet of the Eurosystem, comprising assets and liabilities of national central banks (NCBs) and the ECB at year-end. The most recent consolidated balance sheet is as at 31 December 2025, published with the Annual Accounts on 26 February 2026. Intra-Eurosystem claims and liabilities are netted and not shown separately.",
+  "summary": "This ECB webpage is a navigation and download portal for the annual consolidated balance sheet of the Eurosystem. It links to CSV/XLS data files (1999-2025) and references a consolidated balance sheet as of 31 December 2025 published 26 February 2026, but presents no actual balance sheet figures in the page content. The page also notes a legal framework update per Guideline (EU) 2024/2941.",
   "key_points": [
-    "Annual consolidated balance sheet includes assets and liabilities of all Eurosystem NCBs and the ECB",
-    "Balance sheet data is as at year-end (31 December 2025 for the most recent period)",
-    "Intra-Eurosystem claims and liabilities are netted and excluded from the consolidated presentation",
-    "The 2025 balance sheet was published on 26 February 2026 with the Annual Accounts",
-    "Data available for download in CSV and XLS formats covering 1999-2025",
-    "2024 presentation was updated per ECB Guideline (EU) 2024/2941 on accounting and financial reporting"
+    "Page is a data portal/listing page linking to balance sheet data rather than containing the data itself",
+    "References consolidated balance sheet as at 31 December 2025, published 26 February 2026",
+    "Provides downloadable data files (CSV, XLS) for annual consolidated balance sheets 1999-2025",
+    "Mentions legal framework update per Guideline (EU) 2024/2941 of 14 November 2024",
+    "No specific balance sheet figures (e.g., total assets, key asset categories) are presented in the page text",
+    "Part of ECB Annual Report accountability and financial reporting framework"
   ],
-  "why_it_matters": "The Eurosystem consolidated balance sheet provides the aggregate view of ECB and NCB assets/liabilities, serving as a reference for QT/QE program tracking and European monetary policy operations. However, this source page contains only metadata and links to data—no actual balance sheet figures are present.",
+  "why_it_matters": "This page is an index/reference for data files rather than a source of actionable macro information. Researchers seeking Eurosystem balance sheet data must download external files rather than consult this page.",
   "market_impact": {
-    "asset_classes": [
-      "bonds",
-      "fx"
-    ],
+    "asset_classes": [],
     "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "The Eurosystem balance sheet size and composition are macro-relevant as they reflect the scale of ECB monetary policy operations including APP/PEPP holdings, lending operations, and reserve composition. Actual figures would be needed to assess current policy stance.",
+  "macro_context": "",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "ecb",
     "eurosystem",
     "balance-sheet",
-    "ncbs",
     "central-bank",
     "annual-accounts",
-    "quantitative-policy"
+    "data-portal"
   ],
   "llm_review": {
-    "initial_confidence": 4,
-    "verification_confidence": 2,
+    "initial_confidence": 2,
+    "verification_confidence": 3,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation/listing index page (index.en.html) - contains only metadata, language selectors, and links to CSV/XLS downloads, not substantive content",
-      "No actual balance sheet figures present in source body - all data exists only in downloadable files not included in the crawl",
-      "Cannot verify any numerical claims or market impact without actual data in the source",
-      "Source quality is too thin to have archival value as a research record",
-      "This is a container page providing access to data, not the data itself"
+      "Source is a listing_page/navigation portal per Rule 5 - must reject",
+      "event_type is 'unknown' but should be 'balance_sheet_update' from Treasury/operations taxonomy",
+      "No published_at date provided in source metadata",
+      "Source contains no substantive macro catalyst data - only links to downloadable files",
+      "No actual balance sheet figures present in page content",
+      "Summary is accurate but the source itself lacks archival value for macro catalyst research",
+      "Rule 6 applies: thin, low-signal source lacking actionable information"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "Clear reject based on source type being a navigation page and having no substantive content. The record correctly identifies this as a thin landing page, but the source cannot support a meaningful research record."
+    "notes": "container_page"
   },
   "human_feedback": {
     "decision": "",
@@ -68,17 +66,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_ecb.europa_eurosystem_balance_sheet_d1e578a8f53d5195.txt",
-  "notes": "This source is a thin landing page without actual balance sheet figures. The page describes what the Eurosystem annual consolidated balance sheet contains and provides links to download the data (CSV/XLS for 1999-2025). The most recent balance sheet date referenced is 31 December 2025. No quantitative data is present in the source body to assess current policy operations. Consider this record as a pointer to data rather than a substantive source—actual balance sheet figures would require crawling the linked data files or a separate substantive document. Quality tier lowered due to thin content.",
+  "notes": "Source metadata indicates TARGET: macro catalysts, but the actual page content is a thin navigation/index page for balance sheet data downloads. No macro catalyst information is present. Published_at is empty. PAGE_TYPE is listing_page. Recommend searching for the actual consolidated balance sheet publication or Annual Accounts 2025 document instead.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 3,
+    "score": 2,
     "reasoning": [
-      "Source body contains no actual balance sheet figures—just metadata and links",
-      "Landing/index page type, not a substantive document",
-      "Cannot assess market impact without numerical data",
-      "No analysis, commentary, or policy signals present in the text"
+      "Navigation/listing page with no substantive content",
+      "No published_at date available",
+      "Balance sheet figures not present - only links to data files",
+      "Insufficient for macro catalyst or market structure research"
     ]
   }
 }

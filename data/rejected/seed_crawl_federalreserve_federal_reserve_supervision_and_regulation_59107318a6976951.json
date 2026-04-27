@@ -1,27 +1,26 @@
 {
   "id": "seed_crawl_federalreserve_federal_reserve_supervision_and_regulation_59107318a6976951",
-  "created_at": "2026-04-13T06:23:20.828313+00:00",
+  "created_at": "2026-04-27T10:25:44.230437+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "financial_stability_report",
+  "event_type": "unknown",
   "title": "Federal Reserve Supervision and Regulation Report",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/publications/supervision-and-regulation-report.htm",
     "domain": "www.federalreserve.gov",
-    "published_at": "",
-    "source_type": "listing_page"
+    "published_at": "2025-12-01",
+    "source_type": "navigation_page"
   },
-  "summary": "This page is a navigation index for the Federal Reserve's Supervision and Regulation Report, providing links to HTML and PDF versions of reports and testimonies from 2018 through December 2025. The page itself does not contain substantive content—only metadata describing available documents.",
+  "summary": "This is a navigation/index page for the Federal Reserve Supervision and Regulation Report series, listing links to reports and testimony from multiple periods (2025 December, 2024 November, 2024 May, 2023, 2022, 2021, 2020, 2019, 2018). The page does not contain the actual report content but serves as an archive index for these publications.",
   "key_points": [
-    "Page is a listing/index page containing navigation links to archived reports, not the reports themselves",
-    "Reports are published semiannually with both HTML and PDF formats available",
-    "The latest report listed is December 2025; last update stated as December 01, 2025",
-    "Each report entry includes the main report plus associated chart data and descriptions where applicable",
-    "Testimony versions (HTML/PDF) are also archived alongside each report",
-    "Covers a historical span from 2018 through December 2025"
+    "This is a landing page/index listing, not an actual report document — it contains hyperlinks to HTML, PDF, and data files for multiple report periods.",
+    "The most recent report period listed is December 2025 (Report and Testimony available in HTML and PDF formats).",
+    "The page last updated December 01, 2025 per page metadata.",
+    "The source is described as summarizing banking conditions and Fed supervisory/regulatory activities, typically presented alongside semiannual testimony by the Vice Chair for Supervision.",
+    "Reports are available for: 2025 December, 2024 November, 2024 May, 2023 November, 2023 May, 2022 November, 2022 May, 2021 November, 2021 April, 2020 November, 2020 May, 2019 November, 2019 May, 2018."
   ],
-  "why_it_matters": "This index page is not directly useful for research—substance is in the linked reports. However, it serves as the gateway to semiannual financial stability assessments that track banking conditions and Fed supervisory activities, which are macro-relevant documents.",
+  "why_it_matters": "This source is a non-archiveable navigation page and does not contain substantive research content. It should be replaced with the actual report documents (HTML or PDF) for archival purposes. The underlying reports contain banking condition assessments and supervisory findings relevant to financial stability.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -31,24 +30,18 @@
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
-    "fed",
+    "federal-reserve",
     "supervision",
-    "banking",
     "regulation",
-    "semiannual-report",
-    "listing-page"
+    "banking-conditions",
+    "index-page",
+    "non-archivable"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 1,
+    "verification_confidence": 10,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing/navigation page per PAGE_TYPE rules (source body shows only links to reports, no substantive content)",
-      "event_type set to 'financial_stability_report' but this page is not a report—it is only an index to reports; the actual report PDFs/HTMLs should be crawled separately",
-      "No published_at date in source; page only states last update as December 01, 2025",
-      "Record correctly identifies itself as a 'listing_page' with no substantive content, yet suggested_status is 'review_queue' instead of 'rejected'",
-      "No market structure or macro catalyst data can be extracted from this listing page"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
@@ -64,17 +57,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_federal_reserve_supervision_and_regulation_59107318a6976951.txt",
-  "notes": "Source is a navigation/listing page per PAGE_TYPE guidance. Does not contain substantive research content. The Federal Reserve Supervision and Regulation Report is a semiannual publication covering banking conditions and Fed supervisory activities. However, this page only provides links to those reports—not the reports themselves. To capture actual macro-relevant content, the individual report files (December 2025 HTML/PDF, etc.) should be targeted for crawling separately. Confidence kept low because this page has no market structure or macro catalyst data.",
+  "notes": "This seed_crawl record captures a navigation page listing the Federal Reserve Supervision and Regulation Report series. The page does not contain substantive research content relevant to market structure or macro catalysts — it merely indexes multiple report archives. Per CORE RULE 6, navigation/listing pages are non-archiveable. The underlying reports (which do contain banking condition analyses and supervisory findings) would be the appropriate archival targets. Confidence set to 2/10 given the page provides no specific data, statements, or analysis — only metadata about available publications.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Listing page with no substantive content",
-      "No market structure or macro catalyst data present",
-      "No specific event data (decision, speech, data release) on page",
-      "High domain trust (federalreserve.gov) but page type unsuitable for archiving"
+      "Navigation page with no substantive content",
+      "No actual report data, numbers, or policy statements present",
+      "Source type is navigation_page per page diagnostics",
+      "Last update date (2025-12-01) is recent but irrelevant without report content",
+      "Low utility for RAG applications targeting market structure or macro catalysts"
     ]
   }
 }

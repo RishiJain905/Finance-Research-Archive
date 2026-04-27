@@ -1,0 +1,74 @@
+{
+  "id": "seed_crawl_ecb.europa_annual_accounts_9aeddc0917faf485",
+  "created_at": "2026-04-27T10:30:54.525788+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "monetary_policy_report",
+  "title": "Annual Accounts",
+  "source": {
+    "name": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/press/annual-reports-financial-statements/annual/annual-accounts/html/index.en.html",
+    "domain": "www.ecb.europa.eu",
+    "published_at": "2026-02-26",
+    "source_type": "webpage"
+  },
+  "summary": "The ECB's Annual Accounts for 2025 show a balance sheet of €603.3 billion, contracted by €37.3 billion from the prior year primarily due to ceased reinvestments under asset purchase programmes. The ECB recorded a loss of €1,254 million, significantly lower than 2024, driven by reduced interest expense from the net TARGET liability.",
+  "key_points": [
+    "ECB balance sheet stood at €603.3 billion in 2025, a contraction of €37.3 billion year-over-year",
+    "Balance sheet decline was driven by the Eurosystem no longer reinvesting principal payments from maturing securities under asset purchase programmes",
+    "ECB recorded a loss of €1,254 million for 2025, down significantly from 2024",
+    "The loss reduction was primarily due to decreased interest expense from the net TARGET liability",
+    "Losses will remain on the balance sheet to be offset against future profits",
+    "The page also links to Annual Accounts for prior years (2024, 2023, 2022, 2021)"
+  ],
+  "why_it_matters": "This document provides the ECB's own financial position and is distinct from policy decisions. The balance sheet contraction reflects the passive impact of maturing APP securities not being reinvested—a technical/mechanical effect of the ECB's existing framework rather than an active policy shift. The TARGET-related loss reflects intra-Eurosystem imbalances but does not directly impact monetary policy transmission or market conditions.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The source contains minimal macro context as it focuses on the ECB's own accounting rather than macroeconomic conditions or forward-looking policy signals. The balance sheet contraction (€37.3 billion) reflects passive wind-down mechanics, not an active tightening or easing stance.",
+  "market_structure_context": "The cessation of APP reinvestments contributes to gradual balance sheet reduction. This affects the composition of Eurosystem assets but is a known, telegraphed mechanical process rather than a market structure event.",
+  "important_numbers": [
+    "€603.3 billion (balance sheet total)",
+    "€37.3 billion (balance sheet contraction in 2025)",
+    "€1,254 million (loss for 2025)"
+  ],
+  "tags": [
+    "ecb",
+    "annual-accounts",
+    "balance-sheet",
+    "eurosystem",
+    "app",
+    "target",
+    "loss",
+    "financial-statements"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Topic mismatch: metadata specifies 'macro catalysts' but source is the ECB's own financial accounts (accounting document), not a macro catalyst or market-moving release",
+      "event_type 'monetary_policy_report' is questionable: this is an annual financial statement/accounting disclosure, not a traditional monetary policy report that discusses economic conditions, outlook, or policy implications",
+      "Source is thin/structural: the page is primarily an index with summary figures; substantive data requires downloading CSV/XLSX files",
+      "Source is backward-looking accounting rather than actionable macro information",
+      "The record's 'why_it_matters' and 'market_structure_context' sections correctly identify the limited relevance, but this suggests the original topic assignment was incorrect"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate on the figures provided, but the fundamental issue is whether this source belongs in a 'macro catalysts' archive. The source is the ECB's own financial accounts—an accounting document about the ECB's balance sheet and profit/loss position—not a macro catalyst. While technically accurate, archiving this under 'macro catalysts' is questionable. Human decision needed on whether ECB's internal financial position has sufficient archival value for the specified topic, or whether this should be reclassified/rejected."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_ecb.europa_annual_accounts_9aeddc0917faf485.txt",
+  "notes": "SOURCE RELEVANCE ASSESSMENT: The metadata TARGET is 'macro catalysts' but the source content is the ECB's Annual Accounts—an accounting document reporting the ECB's own financial position and results. This is not a macro catalyst (no policy decision, data release, or market-moving event) nor market structure content. The source is recent (February 2026) and high-domain-trust, but low on actionable information for the specified topics. The balance sheet contraction and loss figures are mechanically interesting as they reflect passive QT mechanics but do not themselves constitute macro catalysts. Recommend either archiving with low priority or noting that topic alignment is weak."
+}

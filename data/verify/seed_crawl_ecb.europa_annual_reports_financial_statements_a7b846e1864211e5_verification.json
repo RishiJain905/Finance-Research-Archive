@@ -1,13 +1,19 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a listing_page per Rule 6; listing pages are non-archiveable and must be rejected",
+    "Source body contains only navigation text with no actual document content",
+    "No published_at date available; source lacks basic temporal metadata",
+    "Cannot extract any market structure or macro catalyst information from this source",
+    "event_type set to 'unknown' but this is acceptable given the source has no content to categorize"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "The record correctly and thoroughly documents why this source fails verification standards. The listing page violation is unambiguous per Rule 6. No human review needed.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "This is a section index/listing page for the ECB's annual reports and financial statements. It contains no actual document content—only a navigation header stating 'Annual reports & financial statements All pages in this section.' No specific report, data, or analysis is present to extract or summarize.",
+    "why_it_matters": "This listing page provides no actionable information. It is a navigation index that would link to individual annual reports, but no specific report, statement, or data point is present in this source. Cannot be used for research purposes.",
     "macro_context": "",
     "market_structure_context": ""
   }

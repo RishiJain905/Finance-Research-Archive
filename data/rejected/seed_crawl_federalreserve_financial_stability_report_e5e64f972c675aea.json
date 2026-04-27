@@ -1,51 +1,50 @@
 {
   "id": "seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea",
-  "created_at": "2026-04-13T06:30:49.889759+00:00",
+  "created_at": "2026-04-27T10:28:47.129537+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "financial_stability_report",
   "title": "Financial Stability Report",
   "source": {
-    "name": "Board of Governors of the Federal Reserve System",
+    "name": "Federal Reserve Board",
     "url": "https://www.federalreserve.gov/publications/financial-stability-report.htm",
+    "domain": "www.federalreserve.gov",
     "published_at": "2025-11-07",
-    "source_type": "listing_page",
-    "domain": "www.federalreserve.gov"
+    "source_type": "listing_page"
   },
-  "summary": "This Federal Reserve page is a navigation index listing historical Financial Stability Reports from 2018 through November 2025, providing links to HTML, PDF, and chart data for each release. The page does not contain the substantive content of any individual report and serves only as an archive index.",
+  "summary": "This is a Federal Reserve Board landing page that indexes Financial Stability Reports from 2018-2025, including both spring and fall semi-annual editions. The page provides links to HTML, PDF, and chart data for each report. No specific content, findings, or numbers from any individual report are included in this source.",
   "key_points": [
-    "Page is a listing/navigation index, not an actual report",
-    "Links to reports from May/November cycles spanning 2018-2025",
-    "Includes both HTML and PDF versions of each report",
-    "Provides links to chart data and descriptions for each report",
-    "Last update date shown: November 7, 2025",
-    "Contains links to prior Vice Chair/Governor statements for some report dates"
+    "The most recent report in the listing is from November 2025",
+    "Reports are published semi-annually (April and November cycles)",
+    "The landing page itself contains no Financial Stability Report content—only navigation links to archived reports",
+    "Each report includes HTML, PDF, and chart data/descriptions versions"
   ],
-  "why_it_matters": "This page does not contain substantive macro or market structure content. It is a navigation index that requires selecting a specific report date to access actual analysis. Researchers seeking Financial Stability Report content must navigate to a specific report link rather than this index page.",
+  "why_it_matters": "Financial Stability Reports provide the Fed's assessment of system-wide financial risks including asset valuations, leverage, funding risks, and interconnections. However, this source is only the index page—not the actual report content. To access relevant macro catalyst information, one must navigate to a specific report edition.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
-  "macro_context": "",
+  "macro_context": "Financial Stability Reports address systemic risks that can act as macro catalysts—credit deterioration, asset price dislocations, funding stresses, and contagion risks. However, this landing page provides no details on the Fed's current risk assessments.",
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
     "federal-reserve",
-    "financial-stability",
-    "listing-page",
-    "navigation-index",
-    "us-financial-system"
+    "financial-stability-report",
+    "systemic-risk",
+    "banking-supervision",
+    "listing-page"
   ],
   "llm_review": {
     "initial_confidence": 2,
-    "verification_confidence": 3,
+    "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Core Rule 5 violation: Page is a navigation/listing page (source_type: listing_page) which must be rejected",
-      "No substantive macro catalyst or market structure content present",
-      "Cannot serve as archiveable research record - requires crawling individual report links",
-      "The record correctly identifies this as non-archivable, but per rules it must be rejected rather than routed to review queue"
+      "Source is a listing_page (navigation/index page), not actual report content per Rule 5",
+      "No substantive Financial Stability Report findings, numbers, or analysis present in source",
+      "Cannot extract meaningful macro catalyst information from a directory/index page",
+      "source_type correctly identified as 'listing_page' but this should trigger automatic rejection",
+      "Only contains links to archived reports (2018-2025) - no actual content from any individual report"
     ]
   },
   "human_review": {
@@ -62,18 +61,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_financial_stability_report_e5e64f972c675aea.txt",
-  "notes": "Non-archiveable listing page per Core Rule 6. Contains only hyperlinks to historical Financial Stability Reports (2018-2025) and does not include substantive content. To capture actual report data, individual report URLs should be processed separately. The November 2025 report would be the most recent and most relevant for current macro catalyst assessment.",
+  "notes": "This source is the Federal Reserve Financial Stability Report landing page—a listing page that indexes report archives. It contains no actual report content. The listing shows reports from 2018-2025 (November 2025 being the most recent). For macro catalyst research, the actual report content would need to be accessed from one of the linked HTML/PDF files. The Fed's Financial Stability Reports discuss asset valuation pressures, household and business debt burdens, leverage in the financial sector, funding risks, and interconnections—topics highly relevant to macro catalysts—but none of this detail is present in this source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Listing/navigation page with no substantive content",
-      "Does not contain macro catalysts analysis",
-      "Does not contain market structure analysis",
-      "Core Rule 6 violation: listing_page is non-archiveable",
-      "Requires further crawling of specific report links to obtain archiveable content"
+      "Source is a listing page with no substantive content",
+      "No actual Financial Stability Report findings present",
+      "Cannot provide meaningful macro catalyst or market structure analysis",
+      "Only useful as a directory to locate actual reports"
     ]
   }
 }

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a publication index/listing page, not the actual Financial Stability Report content. The source body contains only metadata-level information with no substantive analysis.",
+    "Record has empty key_points, why_it_matters, macro_context, and market_structure_context fields.",
+    "Record's own confidence data acknowledges low data availability (0.1) and notes 'Minimal substantive content captured in source'.",
+    "Source quality is too thin to have meaningful archival value as a research record.",
+    "event_type is technically valid but the source doesn't provide any actual financial stability report content to verify against."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-reject is appropriate here. The source is clearly a thin, metadata-only listing page rather than actual report content. The record itself acknowledges this limitation. No human judgment is needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
