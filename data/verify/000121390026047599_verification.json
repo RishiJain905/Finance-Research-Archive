@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is empty string - no valid taxonomy value provided (should be 'unknown' at minimum)",
+    "Source is a micro-cap biotech 8-K filing with no relevance to market structure or macro catalysts",
+    "The record is factually accurate but represents low archival value for a finance/macro research archive",
+    "record correctly identifies lack of relevance but still submitted with status 'review_queue'",
+    "Source scope is company-specific equity financing, outside typical archive focus"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate but raises a threshold question: should micro-cap biotech equity offerings be archived by a finance/macro research archive? The source is valid (SEC filing) and well-parsed, but the archive mandate question needs human judgment.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a standard small-cap biotech equity financing event. It has no relevance to broader market structure or macro catalysts. The filing is company-specific and would only be relevant to investors holding or considering CTXR shares.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

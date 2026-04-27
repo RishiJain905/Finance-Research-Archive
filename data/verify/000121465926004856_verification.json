@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate 8-K filing entirely unrelated to market structure or macro catalysts",
+    "Topic 'macro catalysts' is incorrect - source contains no macro, monetary policy, interest rate, economic data, or market plumbing content",
+    "event_type 'unknown' is accurate as this source fits no defined taxonomy, but the broader categorization is fundamentally wrong for this archive's focus",
+    "Source is too thin to have archival value for finance research - only announces an investor call with no substantive financial information",
+    "Company is a small-cap NYSE American issuer (GPUS) with no systemic relevance to broader markets"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate about the source content, but the source itself is inappropriate for a macro/market structure research archive. The record correctly identifies this in the why_it_matters field. No ambiguity - this is a corporate AI announcement, not a market catalyst.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

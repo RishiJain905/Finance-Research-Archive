@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' — correct since source doesn't fit standard macro/market structure taxonomy, but human should confirm if corporate M&A is ever in scope",
+    "Source body was truncated at character limit; equity award treatment details not fully visible"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is factually accurate and well-structured, but source is a corporate M&A filing that falls outside the archive's defined focus on market structure and macro catalysts. Human decision needed to confirm: (1) whether corporate M&A filings should ever be archived, and (2) if this specific scope exclusion is correct. Truncated source also limits completeness verification.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
