@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — this is a data release (time-series observation) and should be 'data_release_other'. Flagging as incorrect event type.",
+    "macro_context adds a Fed funds target range claim ('4.25–4.50%') that is not present in the FRED source text. This is external information being injected into the record.",
+    "market_impact.confidence is 0 — no actual market impact assessment is provided despite the field existing in the schema."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source for the SOFR values and trend, but has two clear issues: (1) event_type should not be 'unknown' when the correct type (data_release_other) is obvious from context, and (2) macro_context contains a specific Fed funds rate claim that does not appear in the source text and should be removed or flagged. Also, the record has no editorial value — it is a raw data snapshot with no narrative, which limits archival research utility.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "Remove the specific Fed funds target claim (4.25–4.50%). The source only provides SOFR observations and does not include any Fed funds rate reference. A corrected version would read: 'A drifting upward in SOFR suggests persistent tightness in overnight funding. SOFR typically trades close to the effective Fed funds rate, making it a barometer of banking system liquidity conditions.'",
+    "market_structure_context": ""
+  }
+}

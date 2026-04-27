@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an API error with no actual content - 404 response provides zero auction data, dates, amounts, or security types",
+    "Source attribution is completely missing: name is generic, url is empty, domain is empty, published_at is empty",
+    "No archival value: a record documenting a failed API call does not provide useful market structure information",
+    "Event type 'treasury_issuance' is not applicable since no actual issuance data was retrieved",
+    "Record is thin and non-substantive - only describes a data retrieval failure with no underlying market intelligence"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is a 404 error with no actual data. The record accurately describes the error but the source itself provides zero market-relevant content. No auction details, dates, or amounts exist to archive. Clear rejection without human review needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

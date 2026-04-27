@@ -1,0 +1,74 @@
+{
+  "id": "wb_public_debt_2026_04_27",
+  "created_at": "2026-04-27T15:23:56.197222+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Public Debt",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator GC.DOD.TOTL.GD.ZS returned no valid observations for the queried period. No public debt data is available in this source.",
+  "key_points": [
+    "No recent valid observations were returned for indicator GC.DOD.TOTL.GD.ZS (World Public Debt as % of GDP)",
+    "Source metadata indicates a target of 'World Public Debt' with topic 'global_economy'",
+    "The snapshot date is 2026-04-27 but no actual data values were retrieved"
+  ],
+  "why_it_matters": "This source contains no usable data. It cannot be used for any analysis of public debt levels or trends.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "no-data",
+    "indicator-failure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a null response containing no actual data - has no archival value",
+      "No usable information for market structure or macro catalyst analysis",
+      "No URL provided for source verification",
+      "No published_at date provided",
+      "Source is outside the scope of the archive (market structure and macro catalysts)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "This is a clear-cut reject case. The source contains no data - just a null response from a World Bank indicator query. It cannot support any analysis or serve any archival purpose. The generated record itself correctly identifies this as irrelevant to market structure/macro catalysts."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_27.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This source is a World Bank indicator query that returned no data. It should be excluded from the finance research archive. The topic specified in metadata is 'global_economy', which falls outside the scope of this archive (market structure and macro catalysts only).",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No data content",
+      "Outside scope of target topics",
+      "Cannot support any analysis or retrieval use case"
+    ]
+  }
+}

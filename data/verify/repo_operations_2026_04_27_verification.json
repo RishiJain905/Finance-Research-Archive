@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an error message only — contains no actual repo operation data, numbers, or market information",
+    "Source is too thin to have archival value — cannot document any repo operation details, terms, counterparties, or rates",
+    "event_type 'market_notice' is misleading — the source contains no market notice, only a data fetch failure message",
+    "Record accurately describes the failure but still cannot serve archival purpose since no data was captured",
+    "quality_tier correctly identifies source as 'unprocessable', which aligns with reject verdict"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source failed to load entirely. The record is an honest account of the failure but has no archival value since no repo operation data was retrieved. Manual re-fetch or direct page visit to https://markets.newyorkfed.org/read/latest-recent-operations would be needed to obtain actual data.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

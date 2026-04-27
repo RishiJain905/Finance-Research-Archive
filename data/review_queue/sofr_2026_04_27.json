@@ -1,0 +1,87 @@
+{
+  "id": "sofr_2026_04_27",
+  "created_at": "2026-04-27T15:21:25.483399+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "SOFR Daily Rate — Week of April 20–24, 2026",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-27",
+    "source_type": "time_series_observation"
+  },
+  "summary": "SOFR settled at 3.66% on April 24, 2026, up 1 bp from the prior day and 3 bps above the April 20 reading of 3.63%, reflecting a modest upward drift in overnight secured funding costs over the observation week.",
+  "key_points": [
+    "SOFR closed at 3.66% on April 24, 2026 (latest observation)",
+    "Prior day SOFR was 3.65% on April 23, 2026",
+    "Absolute change from April 23 to April 24: +1 bp",
+    "5-day trend: 3.63% (Apr 20) → 3.63% (Apr 21) → 3.64% (Apr 22) → 3.65% (Apr 23) → 3.66% (Apr 24)",
+    "SOFR is the Secured Overnight Financing Rate, used as the primary benchmark for short-term lending markets and derivatives pricing"
+  ],
+  "why_it_matters": "SOFR is the dominant reference rate for trillions of dollars in floating-rate contracts, repo markets, and short-term funding. Even small daily moves signal shifting conditions in the overnight banking system and influence the effective cost of leverage across markets.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "Remove the specific Fed funds target claim (4.25–4.50%). The source only provides SOFR observations and does not include any Fed funds rate reference. A corrected version would read: 'A drifting upward in SOFR suggests persistent tightness in overnight funding. SOFR typically trades close to the effective Fed funds rate, making it a barometer of banking system liquidity conditions.'",
+  "market_structure_context": "SOFR is compiled from overnight Treasury general collateral repo transactions cleared through the Fixed Income Clearing Corporation. It is the foundational rate for the Fed's ongoing balance sheet normalization (QT) framework and serves as the fallback rate referenced in SOFR-linked derivatives and loan agreements.",
+  "important_numbers": [
+    "3.66% (SOFR April 24, 2026)",
+    "3.65% (SOFR April 23, 2026)",
+    "3.63% (SOFR April 20, 2026)"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "overnight-rate",
+    "short-term-funding",
+    "fed-hold",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 6,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' — this is a data release (time-series observation) and should be 'data_release_other'. Flagging as incorrect event type.",
+      "macro_context adds a Fed funds target range claim ('4.25–4.50%') that is not present in the FRED source text. This is external information being injected into the record.",
+      "market_impact.confidence is 0 — no actual market impact assessment is provided despite the field existing in the schema."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate against the source for the SOFR values and trend, but has two clear issues: (1) event_type should not be 'unknown' when the correct type (data_release_other) is obvious from context, and (2) macro_context contains a specific Fed funds rate claim that does not appear in the source text and should be removed or flagged. Also, the record has no editorial value — it is a raw data snapshot with no narrative, which limits archival research utility."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_27.txt",
+  "notes": "This is a raw FRED time-series snapshot for SOFR, providing a single-week window of daily overnight secured rates. The data is accurate and sourced directly from the Federal Reserve Bank of New York via FRED. However, the record contains no narrative, no market context, and no forward-looking signal. Value for research lies in monitoring SOFR drift over time as a proxy for banking system liquidity and funding stress. The source is not stale—published April 27 with April 24 as the latest observation.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_3",
+    "score": 3,
+    "reasoning": [
+      "Raw market rate snapshot — no editorial or analytical layer",
+      "Provides only a 5-day window; lacks longer-term trend data",
+      "Single data point with no explanatory context",
+      "Relevant to market structure topic but limited standalone research value"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "08b5906358e7e0f077dd9b3cbac8415afd9b2174"
+}

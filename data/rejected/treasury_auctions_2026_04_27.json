@@ -1,0 +1,77 @@
+{
+  "id": "treasury_auctions_2026_04_27",
+  "created_at": "2026-04-27T15:21:25.483036+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "domain": "fiscaldata.treasury.gov",
+    "published_at": "2026-04-27",
+    "source_type": "api_response"
+  },
+  "summary": "API request to Treasury Fiscal Data API for auction data returned a 404 error. No auction data was retrieved.",
+  "key_points": [
+    "Failed to fetch Treasury auction data: 404 Client Error: Not Found",
+    "Endpoint requested: /services/api/v1/accounting/od/auction_data_securities",
+    "Fields attempted: issue_date, security_type, security_term, offering_amt, total_accepted",
+    "No actual auction data received"
+  ],
+  "why_it_matters": "Cannot assess Treasury auction dynamics, demand patterns, or market structure conditions due to data retrieval failure.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "No data retrieved. Treasury auction metrics (bid-to-cover, tail, awarded amounts) are primary market structure data points that would normally be extracted from this source.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api-error",
+    "market-structure",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a 404 error response - no actual content retrieved",
+      "No auction data, bid-to-cover ratios, yields, or market structure information exists in source",
+      "Source target 'Treasury Securities Auctions Data' cannot be fulfilled",
+      "Record documents failure state rather than substantive market data",
+      "event_type correctly set to 'unknown' but this confirms lack of archivable content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Automated decision is appropriate. The source is an error log with zero content. The record accurately captures the failure but has no archival value as there is no actual market structure or macro data to preserve."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_27.txt",
+  "notes": "This source is a technical error log, not an archiveable document. The API request for Treasury auction data returned 404 Not Found. No auction data (bid-to-cover, yields, awarded amounts, etc.) was retrieved. Topic is market structure as specified in target, but no market structure data exists in this source. This record documents the failure state for potential retry or manual lookup. Date is 2026-04-27 (today), so freshness is current but content is empty.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-content",
+    "score": 0,
+    "reasoning": [
+      "API returned 404 error - no content retrieved",
+      "No auction data, bid-to-cover ratios, or yields available",
+      "Cannot fulfill source target of Treasury Securities Auctions Data",
+      "Record exists to document data gap, not to archive substantive information"
+    ]
+  }
+}

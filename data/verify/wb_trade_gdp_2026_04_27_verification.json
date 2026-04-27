@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains zero data observations - only a null result message with no analytical content",
+    "Source URL is missing (empty string) - violates source attribution requirement",
+    "Source is not relevant to market structure or macro catalysts - it's a failed data query with no research value",
+    "event_type is 'unknown' but source_type is 'data_release_other' - inconsistent",
+    "No publication date provided in source metadata (only snapshot_date)",
+    "Record cannot support RAG retrieval or market research - provides no actionable information",
+    "Source is too thin to have archival value"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate about the null data, but the source itself is worthless for research purposes. The issues are clear-cut: missing URL, no data content, no analytical value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations for the current snapshot date. The data query produced an empty result set with zero analytical content.",
+    "why_it_matters": "This source contains no actionable content. A null result from a data query provides no information for research, market analysis, or RAG retrieval purposes. The source has no archival value.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

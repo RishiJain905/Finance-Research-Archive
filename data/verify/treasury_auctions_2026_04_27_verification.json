@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a 404 error response - no actual content retrieved",
+    "No auction data, bid-to-cover ratios, yields, or market structure information exists in source",
+    "Source target 'Treasury Securities Auctions Data' cannot be fulfilled",
+    "Record documents failure state rather than substantive market data",
+    "event_type correctly set to 'unknown' but this confirms lack of archivable content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated decision is appropriate. The source is an error log with zero content. The record accurately captures the failure but has no archival value as there is no actual market structure or macro data to preserve.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

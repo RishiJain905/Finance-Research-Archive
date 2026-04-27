@@ -1,0 +1,77 @@
+{
+  "id": "wb_inflation_2026_04_27",
+  "created_at": "2026-04-27T15:23:47.834965+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Inflation Rate — No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "",
+    "source_type": "data_query"
+  },
+  "summary": "The World Bank inflation indicator (FP.CPI.TOTL.ZG) returned no valid observations for snapshot date 2026-04-27. No usable inflation data is available from this source query.",
+  "key_points": [
+    "No recent valid observations returned for World Bank inflation indicator FP.CPI.TOTL.ZG",
+    "Snapshot date: 2026-04-27",
+    "Query produced an empty result set"
+  ],
+  "why_it_matters": "This source provides no actionable data for macro analysis or inflation monitoring. Users seeking inflation data will need to query alternative sources.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "global-economy",
+    "indicator-query"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a data query response with no actual observations - contains only an error/empty result message",
+      "Source type is 'data_query' - qualifies as a container/thin page per Core Rule #5 and #6",
+      "No URL provided in source attribution (url field is empty)",
+      "Source provides no actionable macro data, analysis, or commentary",
+      "Cannot establish any market relevance when underlying data is absent",
+      "event_type 'unknown' is flagged but this is actually appropriate - no valid event type applies to empty query results"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_27.txt",
+  "notes": "NOT ARCHIVABLE — This source is a data query response with no actual observations returned. It does not provide information relevant to market structure or macro catalysts. The World Bank indicator FP.CPI.TOTL.ZG query for 2026-04-27 produced an empty result set. Source is too thin to summarize reliably and has no relevance to finance research archive objectives.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No data points returned from query",
+      "Source provides no inflation figures or macro context",
+      "Cannot support any analytical conclusions",
+      "Does not meet relevance threshold for market structure or macro catalysts"
+    ]
+  }
+}

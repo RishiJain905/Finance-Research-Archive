@@ -1,0 +1,77 @@
+{
+  "id": "repo_operations_2026_04_27",
+  "created_at": "2026-04-27T15:22:51.875968+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations — Data Unavailable",
+  "source": {
+    "name": "NY Fed Repo Operations",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "domain": "newyorkfed.org",
+    "published_at": "2026-04-27",
+    "source_type": "unknown"
+  },
+  "summary": "The attempt to retrieve NY Fed repo operation data failed with a 400 Bad Request error. No actual repo operation data was retrieved.",
+  "key_points": [
+    "Data fetch failed with 400 Bad Request error for https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation results, terms, or counterparties were retrieved",
+    "The snapshot date of 2026_04_27 is present but no corresponding data is available",
+    "Target topic was market structure (repo operations) but source contains no actionable data"
+  ],
+  "why_it_matters": "NY Fed repo operations are a key component of short-term funding market plumbing. The absence of this data means there is no record of the most recent repo operation results for this date, creating a gap in market structure documentation.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The NY Fed repo operation data was not available to document. Repo operations are part of the Federal Reserve's framework for managing short-term interest rates and providing liquidity to eligible counterparties.",
+  "important_numbers": [],
+  "tags": [
+    "repo-operations",
+    "ny-fed",
+    "market-structure",
+    "data-fetch-failure",
+    "400-error"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is an error message only — contains no actual repo operation data, numbers, or market information",
+      "Source is too thin to have archival value — cannot document any repo operation details, terms, counterparties, or rates",
+      "event_type 'market_notice' is misleading — the source contains no market notice, only a data fetch failure message",
+      "Record accurately describes the failure but still cannot serve archival purpose since no data was captured",
+      "quality_tier correctly identifies source as 'unprocessable', which aligns with reject verdict"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source failed to load entirely. The record is an honest account of the failure but has no archival value since no repo operation data was retrieved. Manual re-fetch or direct page visit to https://markets.newyorkfed.org/read/latest-recent-operations would be needed to obtain actual data."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_27.txt",
+  "notes": "This source represents a failed data retrieval. The NY Fed API returned a 400 Bad Request for the repo operations endpoint. No actual repo operation data (operation type, amount, term, participants, stop-out rate, awarded amount) was captured. Source is too thin to produce a meaningful research record. Recommend manual check of NY Fed repo operations page at https://markets.newyorkfed.org/read/latest-recent-operations for current data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "unprocessable",
+    "score": 0,
+    "reasoning": [
+      "Source body contains only error message, not actual data",
+      "No verifiable numbers or facts can be extracted",
+      "Cannot produce actionable market structure research note",
+      "Human review required to re-fetch data"
+    ]
+  }
+}

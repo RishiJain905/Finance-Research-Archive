@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a null API response with no actual GDP data or any actionable content",
+    "Source URL is empty/missing, violating source attribution requirement",
+    "quality_tier correctly identifies this as 'junk' with zero score",
+    "Cannot extract any meaningful economic information from empty data payload",
+    "Source has no archival value - it is a failed query result, not a record of actual economic data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source contains no data whatsoever - only a null API response. While the generated record accurately describes this null state, the source itself does not meet the relevance threshold. A failed API query with zero observations is not a valid source for macro catalyst or market structure research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
