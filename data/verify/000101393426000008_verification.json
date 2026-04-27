@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single-corporation 8-K filing with no relevance to market structure or macro catalysts as defined in the archive mandate",
+    "event_type is 'unknown' which is correct, but this further confirms the source doesn't fit the taxonomy",
+    "topic is 'not_applicable' which is accurate but confirms out-of-scope status",
+    "quality_tier correctly identifies 'out_of_scope' with score 2, yet suggested_status should be 'rejected' instead of remaining in review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the record is factually accurate in describing the source, the source itself is explicitly outside the archive's scope. The archive focuses on market structure and macro catalysts; this is a routine single-corporation earnings announcement with zero relevance to those focus areas. No human review is needed as the decision is straightforward: reject based on scope.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

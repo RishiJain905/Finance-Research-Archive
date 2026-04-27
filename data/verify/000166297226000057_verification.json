@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Title discrepancy: record title says '2026-04-23' but source metadata and content indicate the filing date is April 22, 2026",
+    "Event type 'unknown' is correctly flagged but technically does not fit any taxonomy category, which is appropriate given the source is a corporate earnings filing",
+    "Source is a corporate earnings announcement (BREIT private REIT Q1 preliminary results), not a macro catalyst or market structure document per the archive focus criteria"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is clearly out of scope for a macro catalysts/market structure archive (corporate REIT earnings filing), but the record is factually accurate against the source text and well-documented. Human decision needed on whether to accept for archival purposes with different topic categorization or reject based on scope.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Blackstone Real Estate Income Trust (BREIT) filed a Form 8-K on April 22, 2026, announcing preliminary estimated Q1 2026 same property net operating income (NOI) increased approximately 3% year-over-year. The filing reports estimated net loss of $375,804 thousand for Q1 2026 versus actual net loss of $395,076 thousand in Q1 2025. The filing explicitly states this data is preliminary, unaudited, and not a comprehensive statement of financial results.",
+    "why_it_matters": "This is a corporate earnings announcement from Blackstone Real Estate Income Trust (BREIT), a major private real estate investment trust. It provides proprietary fund-level performance data that is preliminary and unaudited. The 3% same-property NOI growth figure may be relevant to real estate sector investors tracking BREIT performance trends, but does not constitute macro economic data or market-moving information under the macro catalysts/market structure focus criteria.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

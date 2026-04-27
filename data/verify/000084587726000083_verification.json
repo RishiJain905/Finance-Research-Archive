@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate governance filing with no relevance to market structure or macro catalysts",
+    "event_type is set to 'unknown' when research_paper or a corporate filing category would be more appropriate",
+    "Record correctly notes 'NOT RELEVANT TO MARKET STRUCTURE OR MACRO CATALYSTS' in notes but still proceeds to archive",
+    "The archival purpose requires relevance to market structure or macro catalysts; this filing meets neither criterion",
+    "quality_tier correctly identifies source as 'not-applicable' but suggests review_queue status inconsistently"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a clear reject case. The source is factually accurate but fundamentally outside the archive's scope (corporate executive appointment). The record's own notes acknowledge 'NOT RELEVANT TO MARKET STRUCTURE OR MACRO CATALYSTS' yet still routes to review_queue. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

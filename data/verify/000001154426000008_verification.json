@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 8-K cover page only; actual Q1 2026 earnings press release (Exhibit 99.1) is not included in the filing text",
+    "Topic correctly identified as 'not_relevant' - corporate insurance company earnings reference has no bearing on market structure or macro catalysts",
+    "event_type is 'unknown' - corporate earnings filings do not map to any valid taxonomy value (fomc_statement, rate_decision, speech_*, data_release_*, treasury_issuance, etc.)",
+    "Thin, low-signal content - only standard SEC cover page language and disclosure provisions present",
+    "No macro or market structure implications can be extracted from this source"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is already correctly classified as not relevant. The source is a thin corporate filing cover page without substantive content. Rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

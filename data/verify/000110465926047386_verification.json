@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — correctly identified by the record itself",
+    "Event type set to 'unknown' is accurate; this corporate filing does not fit any defined taxonomy category",
+    "The filing contains no substantive content — Exhibit 99.1 (actual presentation materials) is referenced but not included in the filing text",
+    "Topic field correctly left empty as source falls outside target categories",
+    "Quality tier 'discard' is appropriate for a routine regional bank corporate disclosure with no market-moving information"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately characterizes the source as irrelevant to target topics. No factual errors in describing the filing content. Auto-route is appropriate given the source's clear lack of relevance to market structure or macro catalysts.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing is not relevant to market structure or macro catalysts. It is a routine SEC disclosure from a regional bank holding company (Republic Bancorp, Inc., ticker RBCAA) about its Annual Meeting of Shareholders. The filing contains Item 7.01 (Regulation FD Disclosure) referencing presentation materials (Exhibit 99.1) that are not included in the filing text. No monetary policy signals, economic data, or market structure information.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

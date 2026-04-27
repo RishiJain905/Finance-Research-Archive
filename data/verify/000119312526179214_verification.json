@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a biotech company (ERAS) 8-K filing focused on clinical trial data and patent dispute - not relevant to market structure or macro catalysts",
+    "topic is 'not_applicable' which correctly identifies the source as outside the archiving mandate",
+    "event_type is 'unknown' - while this is a regulatory filing, the event type taxonomy does not include corporate regulatory filings as valid types, which is appropriate here since this filing does not relate to market structure topics"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Although the source is factually accurate and properly attributed, it falls entirely outside the verification pass mandate. This is a small-cap biotech 8-K about a clinical trial announcement and patent dispute - matters of interest only to ERAS equity investors. The quality_tier correctly identifies this as tier_4_low_relevance with score 2. The record appropriately notes 'NOT RELEVANT to focus areas.' This should be rejected because it does not relate to market structure, monetary policy, macro catalysts, or market operations.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

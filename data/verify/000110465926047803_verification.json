@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type incorrectly set to 'unknown' when it should reflect a catch-all for corporate M&A activity not fitting standard macro/market structure taxonomy",
+    "llm_review.verification_confidence shows 0 but should be higher (source content is factually accurate, only relevance is the issue)",
+    "quality_tier.tier set to 'not_applicable' with score 0 despite the source being a valid, well-structured SEC filing"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is factually accurate but raises a classification question: should this archive accept corporate M&A SEC filings that are outside market structure/macro focus areas? The human decision is needed to determine if non-relevant sources should be rejected outright or routed differently.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "DigitalBridge Group, Inc. filed an 8-K disclosing results from a special stockholder meeting on April 23, 2026, where shareholders approved a merger with Duncan Holdco LLC. The merger proposal passed with 121,177,032 votes for against 3,900,209 votes against. An advisory vote on executive compensation related to the merger was not approved.",
+    "why_it_matters": "This is a routine corporate M&A disclosure with no relevance to market structure or macro economic catalysts. It pertains solely to a specific company's private equity-backed merger transaction and shareholder voting outcomes.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

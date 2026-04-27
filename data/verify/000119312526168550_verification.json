@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — micro-cap regional bank 8-K with company-specific disclosure only",
+    "event_type is 'unknown' and cannot be properly mapped to any taxonomy value — the record concerns a single-company earnings/dividend announcement with no macro relevance",
+    "Source is too thin to have archival value for finance research — Q1 earnings details are referenced but the actual press release (Exhibit 99.1) is not included in the filing body",
+    "why_it_matters correctly identifies the source as 'irrelevant to macro analysis' — this contradicts archival worthiness",
+    "quality_tier correctly classifies this as 'peripheral' with score 2 — confirms lack of research utility"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's own analysis acknowledges this source is 'OUT OF SCOPE' and 'peripheral'. The source is a micro-cap regional bank 8-K with no macro or market structure relevance. Even though the factual summary is accurate, the source fails the basic relevance threshold for acceptance into a finance research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
