@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when the source is a corporate earnings 8-K filing (Item 2.02 Results of Operations). While no perfect taxonomy exists, 'data_release_other' would be more appropriate than 'unknown'.",
+    "source_type is 'unknown' when the source is clearly a regulatory filing (SEC 8-K).",
+    "The record acknowledges this filing is not relevant to market structure or macro catalysts, which is correct, but still assigns it to 'review_queue' rather than making a clear determination.",
+    "quality_tier shows 'excluded' with score 0, but suggested_status is 'review_queue' — these are inconsistent."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are minor inconsistencies in the record structure rather than factual errors. The core assessment (not relevant to archive focus) is accurate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "First Citizens BancShares Inc filed its Q1 2026 8-K on April 23, 2026, reporting quarterly earnings for the period ending March 31, 2026. The filing includes a press release, investor presentation, and financial supplement. The document is a routine SEC disclosure for a regional bank holding company and does not address systemic market structure or macro-level catalysts.",
+    "why_it_matters": "This filing is not relevant to market structure or macro catalysts. It is a single corporate earnings release for a regional bank with no systemic implications disclosed in the available text. The filing does not contain central bank policy, market operations, or macro data releases that would affect broader financial markets.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

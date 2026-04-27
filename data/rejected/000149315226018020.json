@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - all fields are blank",
+      "Source attribution is entirely missing (no name, url, domain, published_at, or source_type)",
+      "Source is a SEC Form 8-K regulatory filing, not relevant to market structure or macro catalysts",
+      "Source is thin - contains only cover page metadata with reference to an attached press release not included in the text",
+      "The subject matter (institutional investor framework for a single small-cap company) has no meaningful market structure or macro relevance",
+      "event_type cannot be determined as this is a regulatory filing, not one of the defined taxonomy types"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely empty with no data to verify. The source itself is a thin regulatory filing about a small-cap company's institutional investor framework with no macro or market structure relevance."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}
