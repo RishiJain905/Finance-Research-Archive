@@ -1,20 +1,17 @@
 {
-  "verification_confidence": 4,
-  "verdict": "reject",
+  "verification_confidence": 7,
+  "verdict": "review",
   "issues_found": [
-    "Source body is truncated at the framework/overview section only - substantive Sections 1-5 (Asset Valuations, Borrowing, Leverage, Funding Risks) and their detailed analysis are not captured",
-    "The record summary and key_points draw only from the framework introduction (pp. i-v), not from the actual vulnerability assessments and data that constitute the report's core content",
-    "The record cannot be verified as faithful to the complete source because the substantive sections that would allow meaningful verification are missing",
-    "Without the detailed analysis sections, the record lacks the quantitative data, figures, and specific vulnerability assessments that make this report valuable for market structure research",
-    "Published_at of 2025-11-07 is 157 days before TODAY (2026-04-12), which is outside the 90-day window for routine acceptance and the report is now stale without any indication the latest report has been superseded"
+    "Source body was truncated; full report content cannot be fully verified for specific quantitative findings or detailed near-term risk assessments",
+    "Published date (2025-11-07) is approximately 170 days before TODAY (2026-04-27), exceeding the 90-day threshold, though archival value is clear for a key Federal Reserve assessment"
   ],
-  "human_review_required": true,
-  "human_review_reason": "Source truncation prevents complete verification. The record captures only the framework introduction, not the substantive vulnerability assessments in Sections 1-5. Human decision needed on whether partial framework extraction has sufficient archival value, or whether the full PDF should be reprocessed.",
-  "suggested_status": "rejected",
+  "human_review_required": false,
+  "human_review_reason": "Confidence score of 7 places this in review_queue range. The record accurately reflects visible source content. Truncation is a limitation but not a factual error in the record. Given clear archival value of Fed's official financial stability assessment and high source authority, auto-routing to review_queue is appropriate.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "The Federal Reserve Board's November 2025 Financial Stability Report presents the Fed's current assessment of U.S. financial system stability, focusing on four key vulnerability categories: asset valuations, borrowing by businesses and households, leverage in the financial sector, and funding risks. The report reflects data available as of October 23, 2025. The Fed's framework distinguishes between unpredictable shocks and monitoring vulnerabilities that could amplify systemic stress. [NOTE: This summary is based on framework section only - substantive sections not captured in source body]",
-    "why_it_matters": "This semi-annual report provides market participants and researchers with the Federal Reserve's official view on systemic risks and financial system vulnerabilities. While not immediately market-moving like a rate decision, it informs the public about areas the Fed is monitoring for potential stress, which can affect risk appetite and market structure considerations. The report's assessment of leverage and funding risks is particularly relevant for understanding potential vulnerabilities in repo markets, money market funds, and bank funding dynamics. [NOTE: Verification of these claims against substantive report content is not possible with current truncated source]",
-    "macro_context": "Financial stability assessments inform broader macroprudential policy and can signal areas of concern that may affect credit availability and economic activity. The report's framework connects systemic vulnerabilities to potential real economic effects through credit channel disruptions.",
-    "market_structure_context": "The report directly addresses market structure concerns including: maturity transformation risks in financial institutions, liquidity transformation vulnerabilities, fire sale dynamics from rapid asset liquidations, and funding market stress propagation. Box 4.1 provides targeted assessment of short-term funding risk. The document describes the Fed's role in fostering payment and settlement system safety and efficiency. [NOTE: This description is based on framework section only - Box content and detailed analyses in Sections 1-5 were not captured]"
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }

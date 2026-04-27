@@ -1,0 +1,93 @@
+{
+  "id": "keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_c8d1998242ca949a",
+  "created_at": "2026-04-27T06:40:59.384197+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "Supervisory Stress Test Documentation Final 2026 Global Market Shock Component February 2026",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2026-final-gms-model.pdf",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2026-02-01",
+    "source_type": "research_paper"
+  },
+  "summary": "The Federal Reserve Board published the final documentation for the 2026 Supervisory Stress Test's Global Market Shock (GMS) component, which applies hypothetical shocks to financial risk factors including equities, currencies, commodities, interest rates, and credit securities under a severely adverse scenario. Firms with aggregate trading assets and liabilities of $50 billion or more, or 10% or more of total consolidated assets, must incorporate these shocks into their stress test projections. Losses from the global market shock are recognized in the first quarter of the scenario horizon, with no changes assumed in subsequent quarters.",
+  "key_points": [
+    "The global market shock component applies instantaneous hypothetical shocks to risk factors including public equity returns, exchange rates, government yields, swap rates, interest rate options, commodity futures, and credit spreads",
+    "Firms subject to the GMS include those with aggregate trading assets and liabilities of $50 billion or more, or 10% or more of total consolidated assets (excluding Category IV firms under the tailoring framework)",
+    "Losses from the global market shock are recognized in Q1 of the severely adverse scenario's nine-quarter projection horizon, based on the assumption that market dislocations can occur rapidly",
+    "The as-of date for position data was October 11, 2024 for the 2025 stress test cycle; firms may use data from their weekly reporting cycle falling within the business week of the as-of date",
+    "No revisions were made to this final documentation from the October 2025 proposed version other than typographical fixes",
+    "Risk factors are classified into primary, secondary, and remaining categories, with modeling approaches capturing relationships between these factor tiers"
+  ],
+  "why_it_matters": "This documentation establishes the methodology by which the Federal Reserve assesses whether large trading firms can absorb losses from severe market dislocations. Understanding the GMS framework is essential for banks and trading desks to anticipate potential capital impacts under stress scenarios, as the shocks directly affect mark-to-market losses on trading and counterparty credit positions.",
+  "market_impact": {
+    "asset_classes": [
+      "equities",
+      "bonds",
+      "fx",
+      "commodities",
+      "volatility"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 0
+  },
+  "macro_context": "The global market shock component is part of the DFAST (Dodd-Frank Act Supervisory Stress Tests) severely adverse scenario, designed to assess bank capital resilience rather than forecast economic conditions. The macro scenario extends over a nine-quarter projection horizon, with the market shock impact confined to Q1.",
+  "market_structure_context": "The document details the modeling approach for risk factor relationships, including liquidity horizons for different asset classes, and describes how the Fed calibrates shocks to equity indices, interest rates, credit spreads, and volatility surfaces across key advanced and emerging market economies.",
+  "important_numbers": [
+    "$50 billion",
+    "10% of total consolidated assets",
+    "9 quarters"
+  ],
+  "tags": [
+    "stress-test",
+    "dfast",
+    "global-market-shock",
+    "federal-reserve",
+    "bank-capital",
+    "trading-risk",
+    "regulatory",
+    "supervisory",
+    "risk-factors",
+    "severely-adverse"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Document body is truncated; while the visible content supports the key claims, full verification of modeling details is not possible from truncated source",
+      "Specific numerical shock values are not in this methodology document (they are in a separate GMS template), but this is appropriate since the record describes methodology, not the actual shock values",
+      "published_at field (2026-02-01) is inferred from the title; not explicitly stated in document metadata, though title confirms February 2026 publication"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Source is high-authority Federal Reserve documentation on market structure-relevant stress test methodology. The key claims about firm thresholds ($50B, 10%), loss recognition timing (Q1), and risk factor categories are all supported by the visible source content. Minor uncertainties relate to the truncation and published_at inference, but these are not critical issues. Auto-routing to review queue is appropriate given borderline confidence."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_c8d1998242ca949a.txt",
+  "notes": "Source is relevant to market structure as it documents the Federal Reserve's methodology for applying global market shocks in supervisory stress tests. The document covers risk factor selection (equities, FX, rates, commodities, credit), liquidity horizons, and the modeling relationships between primary, secondary, and remaining risk factors. This is a methodology/technical documentation source rather than a direct market catalyst. The February 2026 publication date makes it recent relative to the April 2026 reference date. Document domain is federalreserve.gov (high trust tier). Source was discovered via search keyword approach.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "high",
+    "score": 85,
+    "reasoning": [
+      "Official Federal Reserve Board documentation from high-trust domain",
+      "Published on official federalreserve.gov website",
+      "Authoritative source for stress test methodology",
+      "Recent publication (February 2026) relative to reference date",
+      "Technical depth appropriate for regulatory guidance document"
+    ]
+  }
+}

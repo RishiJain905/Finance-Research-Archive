@@ -1,13 +1,15 @@
 {
-  "verification_confidence": 7,
-  "verdict": "accept",
+  "verification_confidence": 6,
+  "verdict": "review",
   "issues_found": [
-    "Source body is truncated (starts mid-chapter) - limited verification available beyond introduction and table of contents",
-    "Document is historical (June 2021, ~4.8 years old) but has clear archival value as a major Brookings Task Force report on financial stability"
+    "Source body is truncated - only Chapter 1 (Introduction) is visible in the provided text",
+    "Key claims about specific chapters (Treasury market liquidity dynamics, open-end fund mechanics, clearinghouse risks, insurance companies, housing finance) are inferred from table of contents rather than verified from actual content",
+    "Recommendations referenced in key_points ('proposes recommendations to enhance regulatory structure') cannot be verified against actual recommendation text in truncated source",
+    "Cannot confirm if the detailed findings on market structure issues are accurately characterized"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "The source is a legitimate Brookings Institution research report with high domain trust and the summary/key_points accurately reflect the visible introduction chapter. However, the truncated source limits verification of claims about specific findings from Chapters 3-9 (Treasury market liquidity, open-end funds, clearinghouses, etc.). Human reviewer should assess whether complete report text is needed for full verification or if the introduction alone provides sufficient basis for archiving this record.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

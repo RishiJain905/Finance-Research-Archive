@@ -1,14 +1,18 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "source.source_type is 'research_paper' but CDIAC meeting notes are more accurately described as advisory council meeting records, not a research paper",
+    "Source body was truncated; discussion on later topics (monetary policy, rate outlook) may not be captured",
+    "market_structure_context is empty when source does contain relevant depository institution-specific observations (e.g., technology costs for banks, insurance availability challenges)"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Record is mostly accurate with good signal from a high-trust domain source. Issues identified are classification nuances rather than factual errors.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "CDIAC members noted depository institutions are facing rising technology costs (up to 10% year-over-year versus prior 2-3% averages) and constrained insurance availability. Banks are offering higher hourly rates for entry-level positions like tellers, but are benefiting from talent pool expansion as large banks and tech firms shed jobs. These dynamics affect operating costs and competitive positioning for community depository institutions."
   }
 }

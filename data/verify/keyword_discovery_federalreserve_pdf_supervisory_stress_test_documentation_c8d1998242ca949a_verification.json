@@ -1,10 +1,14 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Document body is truncated; while the visible content supports the key claims, full verification of modeling details is not possible from truncated source",
+    "Specific numerical shock values are not in this methodology document (they are in a separate GMS template), but this is appropriate since the record describes methodology, not the actual shock values",
+    "published_at field (2026-02-01) is inferred from the title; not explicitly stated in document metadata, though title confirms February 2026 publication"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_reason": "Source is high-authority Federal Reserve documentation on market structure-relevant stress test methodology. The key claims about firm thresholds ($50B, 10%), loss recognition timing (Q1), and risk factor categories are all supported by the visible source content. Minor uncertainties relate to the truncation and published_at inference, but these are not critical issues. Auto-routing to review queue is appropriate given borderline confidence.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

@@ -1,6 +1,6 @@
 {
   "id": "keyword_discovery_federalreserve_pdf_commercial_bank_examination_manual_13a7164e6041f15b",
-  "created_at": "2026-04-12T21:10:49.433120+00:00",
+  "created_at": "2026-04-27T06:28:56.609756+00:00",
   "status": "review_queue",
   "topic": "macro catalysts",
   "event_type": "regulatory_guidance",
@@ -8,57 +8,58 @@
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/publications/files/cbem-3000-202602.pdf",
-    "published_at": "2020-11-01",
-    "source_type": "pdf",
+    "published_at": "2026-02-01",
+    "source_type": "research_paper",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This Federal Reserve examination manual (Section 3000) provides procedural guidance for bank examiners on assessing capital adequacy, earnings, liquidity, and market risk sensitivity at state member banks. The document describes Regulation Q (12 CFR Part 217) capital requirements adopted in 2013, detailing the three-tier capital framework (Common Equity Tier 1, Additional Tier 1, and Tier 2 capital) used to evaluate whether banking organizations maintain sufficient capital to absorb losses and continue lending during economic stress.",
+  "summary": "This Federal Reserve examination manual section explains how bank examiners assess capital adequacy under Regulation Q, detailing the three components of regulatory capital (Common Equity Tier 1, Additional Tier 1, and Tier 2) and the framework for calculating risk-weighted assets. The document is internal supervisory guidance for bank examiners, not an analysis of current macro conditions or market catalysts.",
   "key_points": [
-    "Regulation Q (12 CFR Part 217) was adopted in 2013 by the Federal Reserve, FDIC, and OCC to replace general risk-based capital requirements and address weaknesses highlighted during the 2008-09 financial crisis",
+    "Capital adequacy triggers the most supervisory action under the Prompt Corrective Action provisions of section 38 of the Federal Deposit Insurance Act (12 U.S.C. 1831o)",
+    "Regulation Q (12 CFR Part 217) was adopted in 2013 by the Federal Reserve, FDIC, and OCC to replace general risk-based capital, advanced approaches, market risk, and leverage capital requirements",
     "The three components of regulatory capital are: (1) Common Equity Tier 1 capital, (2) Additional Tier 1 capital, and (3) Tier 2 capital",
-    "Common Equity Tier 1 capital represents the highest-quality and most loss-absorbing form of capital, primarily composed of common stock and retained earnings",
-    "The risk-based capital ratio is calculated by dividing qualifying capital (numerator) by risk-weighted assets (denominator)",
-    "Capital adequacy triggers the most supervisory action under the Prompt Corrective Action (PCA) provisions of section 38 of the Federal Deposit Insurance Act (12 U.S.C. 1831o)",
-    "Regulation Q applies to state member banks, U.S.-domiciled bank holding companies, and covered savings and loan holding companies on a consolidated basis"
+    "Common Equity Tier 1 capital is the highest-quality and most loss-absorbing form of capital, primarily composed of common stock and retained earnings",
+    "Under the standardized approach of Regulation Q, banking organizations are not required to include all components of accumulated other comprehensive income (AOCI) in CET1 capital",
+    "Advanced approaches banking organizations must include most AOCI components in their Common Equity Tier 1 capital calculation"
   ],
-  "why_it_matters": "This document is an internal examination manual for bank regulators, not a market-moving release or macroeconomic analysis. It codifies how Federal Reserve examiners evaluate whether banks have sufficient capital buffers. While important for understanding bank supervision, it does not contain time-sensitive market intelligence or macro catalyst information relevant to trading decisions.",
+  "why_it_matters": "This Federal Reserve examination manual section explains how bank examiners assess capital adequacy under Regulation Q, detailing the three components of regulatory capital (Common Equity Tier 1, Additional Tier 1, and Tier 2) and the framework for calculating risk-weighted assets. The document is internal supervisory guidance for bank examiners and provides foundational regulatory definitions. It is not an analysis of current macro conditions, market catalysts, or forward-looking policy guidance.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
     "directional_bias": "neutral",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "",
-  "important_numbers": [
-    "12 CFR Part 217 (Regulation Q)",
-    "12 U.S.C. 1831o (FDIA section 38 - PCA provision)",
-    "Three components of regulatory capital",
-    "Risk-based capital ratio formula"
-  ],
+  "market_structure_context": "The document describes the regulatory capital framework (Regulation Q, 12 CFR Part 217) that governs bank balance sheets, including risk-weighted asset calculations and capital component definitions (CET1, AT1, Tier 2). This framework shapes how banks structure their capital and affects market expectations around bank resilience. However, the document is examination guidance for bank examiners explaining existing regulatory definitions, not market structure analysis or current market signals.",
+  "important_numbers": [],
   "tags": [
-    "federal-reserve",
-    "bank-regulation",
-    "capital-requirements",
+    "bank-capital",
     "regulation-q",
-    "bank-examination",
-    "prompt-corrective-action",
-    "bank-capital"
+    "capital-adequacy",
+    "fed-examination",
+    "regulatory-guidance",
+    "basel",
+    "risk-weighted-assets",
+    "cet1",
+    "tier-1-capital",
+    "banking-supervision"
   ],
   "llm_review": {
-    "initial_confidence": 7,
+    "initial_confidence": 5,
     "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "Source content is procedural examination guidance, not market-moving macro catalyst information - while accurate, relevance to archive mandate is questionable",
-      "PDF filename (cbem-3000-202602.pdf) suggests February 2026 file version, but source body states 'Effective date November 2020' - date discrepancy needs clarification",
-      "Source date of November 2020 is over 90 days before TODAY (2026-04-12), approaching 5.5 years old",
-      "Record appropriately flags source is 'not relevant to market-moving financial research' but TARGET metadata claims 'macro catalysts'"
+      "Source is examination manual/internal guidance explaining regulatory definitions, not an analysis of current macro conditions or market catalysts",
+      "PUBLISHED_AT (2026-02-01) is approximately 85 days before TODAY (2026-04-27), within 90-day window, but content describes static regulatory framework",
+      "Record correctly identifies low relevance to macro catalyst analysis but suggests it has archival value for regulatory context",
+      "event_type 'regulatory_guidance' is valid and plausible given source content"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The record is factually accurate regarding the source content (Regulation Q details, capital framework, etc.), but there is a fundamental question about whether procedural bank examination manuals belong in a macro catalyst research archive. The record correctly identifies this relevance issue. Additionally, there is a date discrepancy between the PDF filename (202602) suggesting February 2026 and the content effective date of November 2020 that warrants human verification. The content is correct and well-structured, but the archival value for a macro catalyst archive is unclear."
+    "notes": "Record accurately summarizes source content. The key_points are all factually supported by the source text. However, the fundamental question is whether this examination manual section belongs in a macro catalyst archive - it is internal supervisory guidance explaining regulatory definitions rather than market-moving content, data releases, or policy announcements."
   },
   "human_feedback": {
     "decision": "",
@@ -69,12 +70,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_commercial_bank_examination_manual_13a7164e6041f15b.txt",
-  "notes": "Source is not relevant to market structure or macro catalysts. This is a Federal Reserve examination manual describing how bank examiners assess capital adequacy under Regulation Q. The document is procedural/supervisory guidance, not market analysis. It describes the three-tier capital framework (CET1, Additional Tier 1, Tier 2) and the Prompt Corrective Action framework under FDIA section 38. No market-moving content. Source metadata shows TARGET: macro catalysts, but the actual content is about bank examination procedures. Historical document effective November 2020, though the PDF filename suggests a February 2026 file update.",
+  "notes": "This source is an examination manual section explaining regulatory capital definitions and assessment procedures. It is not a macro catalyst or market structure analysis. While it provides important context on bank capital regulation under Regulation Q, it does not contain current market signals, data releases, or forward-looking policy guidance. The document defines regulatory capital components (CET1, AT1, Tier 2) and risk-weighted asset calculations used by bank examiners. For macro catalyst purposes, this is background regulatory context rather than an actionable source.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "",
-    "score": 0,
-    "reasoning": []
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Internal examination manual, not market-moving content",
+      "Contains no current macro data or policy signals",
+      "Provides regulatory definitions only, no forward-looking analysis",
+      "Published date Feb 2026 recent but content is static framework documentation"
+    ]
   }
 }

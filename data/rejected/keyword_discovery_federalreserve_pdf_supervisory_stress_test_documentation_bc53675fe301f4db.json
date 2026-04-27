@@ -1,30 +1,31 @@
 {
   "id": "keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_bc53675fe301f4db",
-  "created_at": "2026-04-12T16:49:16.993696+00:00",
+  "created_at": "2026-04-27T06:43:28.776186+00:00",
   "status": "rejected",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
-  "title": "[PDF] Supervisory Stress Test Documentation Credit Risk Models",
+  "title": "Supervisory Stress Test Documentation Credit Risk Models",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Federal Reserve Board",
     "url": "https://www.federalreserve.gov/supervisionreg/files/credit-risk-models.pdf",
-    "domain": "www.federalreserve.gov",
     "published_at": "2026-01-01",
-    "source_type": "unknown"
+    "source_type": "research_paper",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This Federal Reserve document provides technical documentation of credit risk models used in the 2026 Supervisory Stress Test, covering Corporate, Commercial Real Estate, First Lien Mortgage, Home Equity, Credit Card, Auto, and Other Retail model categories. The January 2026 revision adds transparency on model coefficients and technical corrections. This is granular supervisory methodology documentation that does not address market structure or macro catalysts directly.",
+  "summary": "This Federal Reserve document (October 2025, updated January 2026) provides technical documentation on credit risk models used in the 2026 Supervisory Stress Test. It covers seven model categories: Corporate, Commercial Real Estate, First Lien Mortgage, Home Equity, Credit Card, Auto, and Other Retail. The January 2026 revision added transparency on model coefficients and made technical corrections.",
   "key_points": [
-    "Documents credit risk models used for 2026 Supervisory Stress Test across seven retail and commercial categories",
-    "Updated January 2026 to add transparency on regression coefficients and make technical corrections",
-    "Covers model components including PD (Probability of Default), LGD (Loss Given Default), and related specifications",
-    "Includes Corporate Model, CRE Model, First Lien Mortgage Model, Home Equity Model, Credit Card Model, Auto Model, and Other Retail Model",
-    "Document provides technical model specifications including spline knot implementations and estimation sample windows",
-    "Source is targeted at bank compliance and regulatory supervision, not market participants"
+    "Document details credit risk model methodology for 2026 Supervisory Stress Test covering seven retail and corporate credit categories",
+    "January 2026 updates provided additional transparency on coefficients used in proposed credit risk models",
+    "Technical corrections included revisions to loan category assignments, spline knot interpretations, and table corrections in First Lien LGD Model",
+    "Document is primarily technical reference material for bank supervisors assessing capital adequacy under adverse scenarios",
+    "Source metadata target topic 'market structure' does not accurately reflect document content, which focuses on credit risk modeling methodology"
   ],
-  "why_it_matters": "This document is relevant to bank regulators and large financial institutions subject to stress testing requirements. It has no direct bearing on market microstructure, trading operations, or macro catalysts. It is granular technical documentation that would not be useful for market structure or macro catalyst research.",
+  "why_it_matters": "This documentation establishes the analytical framework the Federal Reserve will use to assess whether large banks can absorb losses under adverse economic scenarios. The 2026 stress test results will determine capital distribution restrictions for major financial institutions.",
   "market_impact": {
-    "asset_classes": [],
-    "directional_bias": "neutral",
+    "asset_classes": [
+      "equities"
+    ],
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -34,46 +35,39 @@
     "federal-reserve",
     "stress-test",
     "credit-risk",
-    "supervisory",
-    "regulatory-documentation"
+    "banking-supervision",
+    "regulatory",
+    "capital-requirements"
   ],
   "llm_review": {
-    "initial_confidence": 7,
-    "verification_confidence": 3,
+    "initial_confidence": 6,
+    "verification_confidence": 4,
     "verdict": "reject",
     "issues_found": [
-      "SOURCE METADATA TARGET 'market structure' does not match document content - this is supervisory stress test model documentation, not market structure research",
-      "Document is regulatory methodology for bank stress testing (DFAST/CCAR), not market microstructure or trading analysis",
-      "Record correctly identifies lack of market relevance in why_it_matters but the system still generated and attempted to archive this record",
-      "topic field assigned as 'market structure' in record contradicts the document's actual content",
-      "Source has no bearing on market microstructure, trading operations, or macro catalysts as the record itself acknowledges"
+      "Source TARGET topic 'market structure' is incorrect; document is about credit risk model methodology for supervisory stress testing, not market structure (execution, market plumbing, trading operations)",
+      "Document does not contain information relevant to macro catalysts (rate decisions, economic data releases, monetary policy actions)",
+      "Content focuses on banking supervision and regulatory capital assessment methodology, which is outside the scope of 'market structure or macro catalysts' as defined in verification standards",
+      "The document is regulatory in nature but does not provide guidance affecting market participants' trading or execution operations",
+      "Despite high source quality and accurate summary, the fundamental relevance to the archive's focus areas is missing"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "The source metadata incorrectly tagged this as 'market structure' TARGET, and the system generated a research record for content that has no relevance to market structure or macro catalysts. The document is internal Federal Reserve supervisory methodology for credit risk models used in stress testing - designed for bank compliance officers, not market analysts. While the document is from a high-trust domain and is technically accurate, it fundamentally does not belong in a market structure research archive. The generated record properly identifies this mismatch but still processes it for archiving."
-  },
-  "human_feedback": {
-    "decision": "",
-    "notes": "",
-    "source_feedback": null,
-    "topic_feedback": null,
-    "reviewed_at": "",
-    "reviewer_id": ""
+    "notes": "Issue is clear-cut: source is irrelevant to stated focus areas. No human judgment needed to determine mis-match between document content (stress test methodology) and archive scope (market structure/macro catalysts)."
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_pdf_supervisory_stress_test_documentation_bc53675fe301f4db.txt",
-  "notes": "SOURCE NOT RELEVANT to market structure or macro catalysts. Document is internal supervisory methodology for stress test credit risk models. While from a high-trust domain (federalreserve.gov), the content addresses bank regulatory compliance methodology rather than market operations, microstructure, or macro catalysts. Recommend topic reassignment to 'regulatory/supervisory' or exclusion from archive. The PDF is a reference document for DFAST/CCAR model specifications with no direct market implications.",
+  "notes": "Source is technically high-quality official Fed documentation, but does not align with stated focus areas of market structure or macro catalysts. The TARGET in metadata appears to be an error. Document pertains to banking supervision and regulatory capital assessment rather than market operations or macro-economic catalysts. If focus area is strictly market structure/macro catalysts, this document should be excluded from the archive.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 3,
+    "tier": "high",
+    "score": 8,
     "reasoning": [
-      "Document is regulatory/supervisory methodology, not market structure or macro catalyst research",
-      "Mismatch between stated TARGET and actual content",
-      "Technical document designed for bank compliance officers, not market analysts",
-      "No market impact or directional signals present"
+      "Official Federal Reserve source",
+      "Technical documentation with precise methodology details",
+      "Recent publication (January 2026 update)",
+      "Well-structured with clear table of contents"
     ]
   }
 }

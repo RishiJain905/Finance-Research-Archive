@@ -1,16 +1,18 @@
 {
-  "verification_confidence": 5,
-  "verdict": "review",
+  "verification_confidence": 4,
+  "verdict": "reject",
   "issues_found": [
-    "Topic mismatch: TARGET and TOPIC specify 'market structure', but the source is bank supervisory stress test methodology documentation (credit risk models for DFAST). This does not address trading market structure, market microstructure, or macro catalysts.",
-    "why_it_matters correctly identifies the disconnect: 'not directly relevant to trading market structure or macro catalysts'",
-    "The document is high-quality, authoritative Federal Reserve material, but is out of scope for the specified topic taxonomy"
+    "Source TARGET topic 'market structure' is incorrect; document is about credit risk model methodology for supervisory stress testing, not market structure (execution, market plumbing, trading operations)",
+    "Document does not contain information relevant to macro catalysts (rate decisions, economic data releases, monetary policy actions)",
+    "Content focuses on banking supervision and regulatory capital assessment methodology, which is outside the scope of 'market structure or macro catalysts' as defined in verification standards",
+    "The document is regulatory in nature but does not provide guidance affecting market participants' trading or execution operations",
+    "Despite high source quality and accurate summary, the fundamental relevance to the archive's focus areas is missing"
   ],
-  "human_review_required": true,
-  "human_review_reason": "Source is technically accurate and well-documented, but fundamentally misaligned with the specified TARGET of 'market structure'. The human review notes appropriately flag this as out-of-scope. Decision needed: (1) reclassify topic to 'regulatory' or 'banking' if the archive should include supervisory documentation, or (2) reject as topic mismatch if only market structure/macro content is in scope.",
-  "suggested_status": "review_queue",
+  "human_review_required": false,
+  "human_review_reason": "Issue is clear-cut: source is irrelevant to stated focus areas. No human judgment needed to determine mis-match between document content (stress test methodology) and archive scope (market structure/macro catalysts).",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
+    "summary": "This Federal Reserve document (October 2025, updated January 2026) provides technical documentation on credit risk models used in the 2026 Supervisory Stress Test. It covers seven model categories: Corporate, Commercial Real Estate, First Lien Mortgage, Home Equity, Credit Card, Auto, and Other Retail. The January 2026 revision added transparency on model coefficients and made technical corrections.",
     "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
