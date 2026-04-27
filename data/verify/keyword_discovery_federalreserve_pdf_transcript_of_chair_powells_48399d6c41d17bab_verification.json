@@ -1,22 +1,19 @@
 {
-  "verification_confidence": 3,
-  "verdict": "reject",
+  "verification_confidence": 7,
+  "verdict": "review",
   "issues_found": [
-    "Critical fields are completely empty: summary, key_points, why_it_matters, macro_context, market_structure_context",
-    "market_impact has empty arrays and zero confidence - no meaningful content",
-    "important_numbers array is empty despite source containing key data (25bps cut, 4-4.25% target range, 2.7% PCE inflation, 4.3% unemployment)",
-    "tags array is empty",
-    "published_at is missing in nested source object",
-    "source_type in nested source object is empty",
-    "source_type set to 'research_paper' is questionable - this is a press conference transcript, though it could fall under economic_commentary"
+    "event_type is 'fomc_statement' but the source is a press conference transcript, not the formal FOMC policy statement. This is a content classification error—the transcript is the Q&A session following the statement, not the statement itself. event_type should be 'economic_commentary' or a press-conference-specific type if available in the taxonomy.",
+    "source.source_type is 'research_paper' but the source is a press conference transcript. This misclassification should be corrected to a transcript or press-conference type.",
+    "human_review_required is false, but human_review.decision is empty. This inconsistency suggests the auto-route logic may not have executed properly. Given the classification errors, human review should be required to confirm the correct event type.",
+    "The record correctly notes the rate decision and key economic figures, but the press conference format means the record captures Powell's verbal framing and Q&A context that differs from a formal statement. The why_it_matters and key_points appropriately interpret Powell's language, but the underlying event classification remains wrong."
   ],
   "human_review_required": true,
-  "human_review_reason": "The generated record is essentially empty - all major content fields (summary, key_points, why_it_matters, macro_context, market_structure_context, important_numbers, tags) are blank. The record provides no usable content despite the source being a substantive Fed press conference with significant policy information. This appears to be a failed generation rather than a verification candidate. Human review is required to either regenerate the record properly or diagnose why content was not extracted.",
-  "suggested_status": "rejected",
+  "human_review_reason": "The record has accurate content (rate decision, inflation figures, SEP projections all match the source), but event_type and source_type are factually misclassified. The source is a press conference transcript, not an FOMC statement. A human reviewer should confirm whether to change event_type to 'economic_commentary' or accept the broader 'fomc_statement' classification for archival purposes. Additionally, the source age (7 months) exceeds the 90-day threshold and the notes correctly flag this as a historical record.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "Chair Powell announced a 25bps rate cut to 4-4.25%, citing shifted balance of risks with increased downside employment risks and upside inflation risks. GDP growth moderated to ~1.5% in H1 2025. Unemployment edged up to 4.3% with payrolls slowing to 29k/month. Total PCE inflation was 2.7% and core PCE 2.9% through August. SEP median projections show GDP at 1.6% (2025) and 1.8% (2026), unemployment at 4.5% end-2025, and fed funds rate at 3.6% end-2025. Powell noted tariff effects on goods prices and that the Committee remains committed to dual mandate goals.",
-    "why_it_matters": "The Fed's second consecutive 25bps cut signals a pivot toward addressing labor market weakening while inflation remains above target. The shift in balance of risks toward employment concerns marks a notable policy inflection. Markets will scrutinize the updated SEP projections and Powell's remarks on tariff pass-through for signals about the pace of further easing.",
-    "macro_context": "GDP growth slowed from 2.5% in 2024 to ~1.5% in H1 2025. Labor market has softened with payrolls well below breakeven. Inflation at 2.7-2.9% PCE remains above the 2% target. Tariff impacts beginning to show in goods prices. The dual mandate risks have shifted: near-term inflation risks tilted upward, employment risks tilted downward.",
-    "market_structure_context": "FOMC press conference following the September 2025 rate decision. Key inputs for rates, FX, and equity markets. The 25bps cut and accompanying policy statement provide guidance on the near-term rate path. SEP dot plot updates and Powell Q&A on tariff effects are critical for front-end rates and risk asset positioning."
+    "summary": "The FOMC cut the federal funds rate by 25 basis points to 4-4.25% on September 17, 2025, citing a shift in the balance of risks with downside risks to employment having risen. Chair Powell noted that while the unemployment rate remains low at 4.3%, payroll job gains have slowed significantly to 29,000 per month, and total PCE inflation rose 2.7% year-over-year with core PCE at 2.9%. The committee continues to reduce its balance sheet and raised near-term inflation expectations citing tariff effects. [Note: This summary accurately reflects the transcript content, but the source is a press conference transcript, not a formal FOMC statement.]",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
   }
 }
