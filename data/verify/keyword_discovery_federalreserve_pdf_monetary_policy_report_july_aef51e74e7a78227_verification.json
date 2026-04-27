@@ -2,17 +2,17 @@
   "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "Source body truncated; substantive sections (Parts 1, 2, 3) not captured, only front matter available",
-    "Document is approximately 7.75 years old (2018-07-13 to 2026-04-13), limiting near-term applicability",
-    "Unable to verify substantive economic analysis sections or any specific near-term policy signals from the full report"
+    "Source body is truncated - only front matter and table of contents captured; substantive content from Parts 1-3 (economic developments, monetary policy details, projections) not available",
+    "Cannot verify economic data, policy signals, or substantive analysis referenced in why_it_matters since report body is missing",
+    "Historical document (July 2018) is approximately 7 years and 9 months old, exceeding the 90-day threshold significantly"
   ],
-  "human_review_required": true,
-  "human_review_reason": "This is a high-authority Federal Reserve document with accurately captured summary and key points from the available front matter. However, the source body truncation means substantive economic analysis is missing, and the document's age (7.75 years) significantly limits its utility for near-term macro catalysts analysis. Human review needed to determine whether this historical document has sufficient archival value for the intended use case, despite the 90-day exemption for documents with clear archival value.",
+  "human_review_required": false,
+  "human_review_reason": "The source body captured the transmittal letter and the Statement on Longer-Run Goals and Monetary Policy Strategy, which is actually the core philosophical framework of the report. Key factual claims in the record (2% PCE inflation target, symmetric stance, 4.6% median unemployment estimate) are verifiable from the provided source text. The truncated content, while incomplete, is sufficient to verify the factual accuracy of the extracted summary and key points.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "The Federal Reserve submitted its quarterly Monetary Policy Report to Congress on July 13, 2018, reaffirming its dual mandate: maximum employment and price stability (2% inflation target measured by PCE). Chairman Jerome H. Powell transmitted the report, which outlines the FOMC's commitment to a symmetric inflation goal and the Committee's balanced approach when employment and inflation objectives conflict. The report references the median FOMC estimate of 4.6% as the longer-run normal unemployment rate. Note: Source text captured only the front matter and statement of longer-run goals; substantive economic analysis (Parts 1-3) was truncated and unavailable.",
+    "why_it_matters": "This quarterly report establishes the foundational policy framework and mandate interpretation that guided Fed decision-making in mid-2018. For macro analysis, it provides the official baseline for how the FOMC thinks about the employment-inflation tradeoff, the symmetric nature of its inflation target, and the uncertainty inherent in estimating maximum employment. Market participants use these documents to understand the Fed's reaction function and policy strategy. [Note: Substantive economic analysis and projections from Parts 1-3 of the report are not available in the source text for verification.]",
+    "macro_context": "The report discusses the Fed's understanding of how monetary policy transmits to the real economy through lagged effects, and how the Committee balances employment deviations against inflation deviations when objectives conflict. This framework was relevant to understanding policy decisions during the 2018 tightening cycle. [Note: Detailed economic and financial developments, international analysis, and full monetary policy discussion from report body not available for extraction.]",
     "market_structure_context": ""
   }
 }
