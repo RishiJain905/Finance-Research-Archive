@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is inaccurate - this is a budget transmittal letter, not regulatory guidance",
+    "Source is an administrative budget document with peripheral relevance to market structure",
+    "Document describes funding intentions and organizational structure, not specific regulatory proposals or market mechanics",
+    "Source does not contain market-moving information or macro catalysts",
+    "event_type should likely be 'unknown' or this should be tagged as an administrative/operational document rather than research",
+    "market_impact correctly shows 0 confidence and unknown directional bias, which is appropriate"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Budget documents occupy an edge case - they accurately describe regulatory priorities and resource allocation but contain no specific market structure changes, rule proposals, or macro catalysts. The event_type 'regulatory_guidance' is misapplied. Human should decide if administrative budget documents have sufficient archival value for this archive given the low market structure relevance.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The CFTC has submitted its FY 2027 budget request of $410 million and 650 FTEs, representing a 12.3% increase from FY 2026, to support its role as regulator of U.S. futures, swaps, and options markets amid rapid technological innovation including blockchain, crypto assets, AI, and smart contracts.",
+    "why_it_matters": "This budget document signals CFTC's regulatory priorities and resource allocation for overseeing U.S. derivatives markets. While not directly impacting markets, it indicates the agency's capacity to address new technologies (crypto, AI trading, blockchain) and enforce existing rules, which affects compliance costs and regulatory risk for market participants.",
+    "macro_context": "",
+    "market_structure_context": "The document describes the CFTC's structural role as primary regulator of futures, swaps, and options markets, and outlines organizational divisions responsible for market oversight, clearing/risk, and market participants. It does not describe any specific market structure changes or operational updates."
+  }
+}
