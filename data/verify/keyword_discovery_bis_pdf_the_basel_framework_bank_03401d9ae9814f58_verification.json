@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Source is a 1,982-page compilation of existing standards rather than a discrete analytical publication or new policy development",
-    "Published_at is blank - represents an ongoing framework not a specific publication date",
-    "Archival value is ambiguous - foundational reference documents may not belong in a research archive focused on market catalysts",
-    "The record correctly identifies this as not being a market catalyst but appropriately flags the market structure relevance"
+    "Published_at date (2026-04-28) appears to be the download date, not an actual publication date. The source PDF itself does not provide a specific publication date for this framework version.",
+    "This is a reference compilation document rather than a discrete policy event. Contains no specific policy decisions, rate announcements, or actionable market intelligence.",
+    "No forward guidance or decision language present; summary and key_points are accurate but describe the document's structure rather than any specific outcome.",
+    "Record is appropriately conservative in noting 'no specific numbers to act upon' but this means low signal for market catalysts."
   ],
-  "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and well-constructed, but raises a legitimate policy question: should comprehensive framework compilation documents (as opposed to specific policy changes, research findings, or discrete events) be archived? This requires a judgment call on archival scope that the automated system cannot make.",
+  "human_review_required": false,
+  "human_review_reason": "Record is accurate and well-structured. Human review is not required as the issues identified are minor and clearly documented by the system itself. The record appropriately captures the document's nature as a comprehensive regulatory reference rather than a discrete policy event.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Basel Framework is the comprehensive compilation of all standards set by the Basel Committee on Banking Supervision (BCBS), the primary global standard setter for prudential bank regulation. This 1982-page PDF document covers capital definitions, risk-based capital requirements, credit risk approaches, market risk frameworks, operational risk, leverage ratios, and other prudential standards that internationally active banks must implement. Note: The specific publication date of this framework version is not stated in the document.",
+    "why_it_matters": "This is the foundational regulatory reference for global bank capital and risk standards. While not a specific policy announcement, it defines the rules that govern bank capital requirements, risk weighting methodologies, and market risk calculations—all of which affect how banks allocate capital and the cost of market-making activities.",
+    "macro_context": "The Basel Framework provides the regulatory architecture that shapes bank behavior globally. Key sections cover: banking book vs trading book boundaries; standardised and internal models approaches for market risk; counterparty credit risk frameworks; and capital treatment for securities financing transactions."
   }
 }

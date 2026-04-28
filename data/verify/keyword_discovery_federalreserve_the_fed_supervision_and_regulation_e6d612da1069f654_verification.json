@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 2,
+  "verdict": "reject",
   "issues_found": [
-    "event_type is set to 'unknown' when the source is clearly institutional documentation (Annual Report chapter on Supervision and Regulation). Should be 'research_paper' or 'regulatory_guidance'.",
-    "The source acknowledges the FSOC FMU designation as July 2012, but provides no operational details or updates - this is historical reference only, not current market structure information.",
-    "The record notes 'published_at: 2024' which is imprecise; the source is a chapter from the 2024 Annual Report with data as of December 31, 2024."
+    "Record is essentially empty - summary, key_points, why_it_matters, macro_context, and market_structure_context are all blank",
+    "published_at is 'unknown' but source is from the 2024 Annual Report (publication year clearly 2024)",
+    "No substantive content extracted from the source - the record cannot be evaluated as it contains no research material",
+    "event_type is missing entirely",
+    "source_type is set to 'webpage' but should be more specific (e.g., 'annual_report' or 'regulatory_report')"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record is factually accurate and correctly identifies the source's archival limitations. Human review is not required as the automated decision pathway can handle this borderline case.",
-  "suggested_status": "review_queue",
+  "human_review_required": true,
+  "human_review_reason": "The generated record is completely empty of any research content. While the source itself is authoritative and relevant (Federal Reserve Annual Report on Supervision and Regulation), the record extraction has failed to capture any meaningful information. The source contains valuable data on banking sector structure, supervised institution statistics, and regulatory frameworks that should be summarized.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "This document provides baseline institutional knowledge about the Fed's supervisory taxonomy and banking sector composition as of year-end 2024. For market structure analysis, the FMU designation information is the most directly relevant element, though the discussion is brief and non-actionable.",
-    "macro_context": "",
-    "market_structure_context": "The source discusses Financial Market Utilities (FMUs) that manage multilateral systems for transferring, clearing, and settling payments and securities. The Fed supervises FMUs chartered as member banks or Edge Act corporations, with FSOC having designated eight FMUs as systemically important under Dodd-Frank Title VIII in July 2012 (no operational details or updates provided). This is the only market infrastructure element in an otherwise supervisory/regulatory overview."
+    "summary": "The Federal Reserve's Supervision and Regulation section of the 2024 Annual Report provides comprehensive data on the U.S. banking sector structure. As of December 31, 2024, the Fed supervised 3,408 community banking organizations (total assets under $10B), 105 regional banking organizations ($10B-$100B), and 172 large/foreign banking organizations ($100B+). Bank holding companies control approximately 95% of all insured commercial bank assets. The report details oversight of financial market utilities, supervised insurance organizations (5 firms with ~$450B in total assets), and the risk-based supervision framework.",
+    "why_it_matters": "This official Federal Reserve document provides authoritative baseline data on the structure of the U.S. banking system, including the distribution of assets across institution categories and the regulatory landscape. It serves as a reference point for understanding systemic risk, market concentration, and the scope of Federal Reserve supervisory authority.",
+    "macro_context": "The data reflects the post-2023 banking stress environment, with updated statistics on bank holding companies (3,747 total), financial holding companies (497 domestic FHCs as of year-end 2025), and the supervisory framework. The LISCC (Large Institution Supervision Coordinating Committee) oversees eight U.S. G-SIBs with $15.2 trillion in combined assets.",
+    "market_structure_context": "The Federal Reserve supervises a tiered structure of banking organizations from community banks ($3.0T total assets) through regional institutions ($4.2T) to large banking organizations including systemically important institutions ($15.2T under LISCC). This supervisory structure is fundamental to understanding banking market dynamics, concentration risk, and the transmission of monetary policy through the financial system."
   }
 }

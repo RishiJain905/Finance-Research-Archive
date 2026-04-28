@@ -1,16 +1,19 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
+  "verification_confidence": 5,
+  "verdict": "review",
   "issues_found": [
-    "Minor: event_type is 'regulatory_guidance' but this technical methodology document could more precisely be classified as 'research_paper' given it describes model development frameworks rather than issuing guidance"
+    "Topic alignment with target 'market structure' is marginal - source addresses bank stress test methodology and capital regulation, not trading market operations or market plumbing",
+    "Source is approximately 10 months old (published June 2025; TODAY is April 2026) - exceeds 90-day threshold, though archival value exists as historical regulatory document",
+    "Source body was truncated, limiting full verification of model specifications in later sections",
+    "record correctly identifies the disconnect in market_structure_context field, but does not resolve the classification question"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "Topic alignment is ambiguous. The target is 'market structure' and the source is a Federal Reserve supervisory stress test methodology document. While stress testing affects bank capital requirements and has downstream effects on credit availability, it's not trading market structure in the narrow sense. The record itself acknowledges this gap. Human reviewer should confirm whether the archive's scope for 'market structure' includes bank regulatory framework documents or is limited to trading/operations topics.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "Consider clarifying whether this methodology document qualifies under the archive's market structure definition. The stress test framework relates to bank capital regulation and regulatory supervision of large financial institutions, which affects financial system stability but is distinct from trading market operations, market microstructure, or market plumbing topics."
   }
 }

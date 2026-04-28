@@ -1,6 +1,6 @@
 {
   "id": "keyword_discovery_bankofengland_financial_policy_committee_record_april_8835ed68a88e9153",
-  "created_at": "2026-04-14T01:31:01.048537+00:00",
+  "created_at": "2026-04-28T06:27:08.941133+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "financial_stability_report",
@@ -8,70 +8,83 @@
   "source": {
     "name": "Bank of England",
     "url": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/april-2026",
+    "domain": "www.bankofengland.co.uk",
     "published_at": "2026-04-01",
-    "source_type": "financial_stability_report",
-    "domain": "www.bankofengland.co.uk"
+    "source_type": "financial_stability_report"
   },
-  "summary": "The Bank of England's Financial Policy Committee met on 27 March 2026 and judged that the Middle East conflict has created a substantial negative supply shock to the global economy, triggering significant volatility in energy prices and government bond yields. While the financial system has remained resilient, the FPC identified interacting vulnerabilities in sovereign debt markets, risky asset valuations, and private credit that could crystallise simultaneously. The committee maintained the UK countercyclical capital buffer at 2% and assessed that the banking system can support households and businesses even under substantially worse conditions.",
+  "summary": "The FPC met on 27 March 2026 and judged that the Middle East conflict has resulted in a substantial negative supply shock, triggering large and volatile moves in global energy prices and government bond yields. The Committee identified multiple interconnected vulnerabilities across sovereign debt markets, private credit, and AI-related systemic risks that could crystallise simultaneously and amplify financial stability concerns. The FPC maintained the UK CCyB rate at 2%,judging the banking system remains appropriately capitalised and capable of supporting households and businesses even under substantially worse conditions.",
   "key_points": [
-    "The Middle East conflict resulted in a substantial negative supply shock, causing large upward moves in global energy prices and government bond yields",
-    "Sovereign debt markets face elevated risks due to historically high issuance with higher proportions at shorter maturities, compounded by leveraged hedge fund positioning",
-    "Global equity and debt risk premia remain compressed by historical standards despite recent volatility, with US AI-focused technology valuations particularly stretched",
-    "Private credit markets show elevated redemption requests in retail funds and liquidity mismatch concerns, with worsening investor sentiment prior to the conflict",
-    "UK CCyB held at 2% as the banking system remains appropriately capitalised with high liquidity and strong asset quality",
-    "Repo markets have functioned well despite high volatility and volumes",
-    "The FPC judged that AI adoption by financial firms has not yet reached systemic risk levels but risks are likely to increase with expanding deployment"
+    "The Middle East conflict has created a negative supply shock increasing risks to financial stability through higher energy prices, inflation, and tighter financial conditions.",
+    "Sovereign debt markets face historically high issuance with higher proportions at shorter maturities, compounded by concentrated leverage among hedge funds pursuing similar strategies across jurisdictions—increasing disorderly unwind risk.",
+    "Repo markets have functioned to absorb volatility so far, providing a market structure buffer, though fragility remains.",
+    "Private credit markets show liquidity concerns with elevated redemption requests in retail funds and valuation uncertainty, particularly for software and services exposed companies.",
+    "The FPC reiterated support for the Private Markets System-wide Exploratory Scenario (PM SWES) to assess bank and NBFI dynamics in private markets under stress.",
+    "The CCyB rate was maintained at 2%; no evidence of banks restricting lending to protect capital positions despite increased macro risks.",
+    "Financial system participants have not yet adopted advanced AI (generative or agentic) in a systemic risk manner, but risks are likely to increase as adoption expands."
   ],
-  "why_it_matters": "This FPC assessment is critical for understanding where market vulnerabilities could compound if the global macro environment deteriorates further. Market participants should incorporate scenarios of sudden price adjustments into stress testing, particularly given the identified risks around leveraged hedge fund positioning in sovereign markets, compressed risk premia, and liquidity concerns in private credit. The functioning of repo markets is highlighted as a key resilience factor.",
+  "why_it_matters": "The FPC record provides an official financial stability risk assessment identifying specific structural vulnerabilities and amplification pathways. Market participants should incorporate stress scenarios involving sudden price adjustments given the materially more unpredictable global environment. The document signals active monitoring of hedge fund leverage in sovereign markets, private credit liquidity mismatches, and AI-related systemic risks—all relevant to trading, risk management, and regulatory compliance decisions.",
   "market_impact": {
     "asset_classes": [
       "bonds",
-      "equities",
       "volatility"
     ],
-    "directional_bias": "mixed",
-    "confidence": 6
+    "directional_bias": "risk_off",
+    "confidence": 5
   },
-  "macro_context": "The conflict creates a supply shock that will weigh on global growth, increase inflation, and tighten financial conditions. The FPC notes that sovereign debt outlook has worsened through potential to weigh on growth, raise interest rates, and increase spending pressures.",
-  "market_structure_context": "The FPC highlights functioning repo markets as underpinning market resilience despite high volatility. Sovereign markets are characterised by leverage by small number of hedge funds pursuing similar strategies across jurisdictions, increasing risk of disorderly unwind. Private credit retail funds have elevated redemption requests and some have limited redemptions, underlining liquidity mismatch.",
+  "macro_context": "The supply shock from the Middle East conflict is expected to weigh on global growth while increasing inflation—creating a stagflationary dynamic that tightens financial conditions. Sovereign debt outlook has worsened through potential growth headwinds, higher rates, and increased government spending pressures. Private credit faces dual pressure from higher rates increasing debt-servicing costs and lower growth reducing asset quality.",
+  "market_structure_context": "Repo markets have functioned to absorb high volatility and volumes, providing market infrastructure resilience. However, concentrated hedge fund leverage in sovereign debt across jurisdictions creates disorderly unwind and illiquidity jump risk. Private credit funds show liquidity mismatch through elevated redemptions and some fund gating. These dynamics highlight NBFI (non-bank financial institution) risks as a market structure concern.",
   "important_numbers": [
-    "2% CCyB",
-    "0.3MB (PDF document size)"
+    "2% (CCyB rate maintained)"
   ],
   "tags": [
+    "financial-policy-committee",
     "bank-of-england",
-    "fpc",
     "financial-stability",
     "sovereign-debt",
     "private-credit",
-    "countercyclical-capital-buffer",
+    "hedge-funds",
     "repo-markets",
+    "macro-shock",
+    "middle-east",
+    "countercyclical-capital-buffer",
+    "nbfi",
     "ai-risk"
   ],
   "llm_review": {
-    "initial_confidence": 7,
-    "verification_confidence": 9,
+    "initial_confidence": 8,
+    "verification_confidence": 8,
     "verdict": "accept",
-    "issues_found": []
+    "issues_found": [
+      "Source body is truncated at end, preventing verification of any details on AI monitoring initiatives or PM SWES beyond what is captured in the record's key points"
+    ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "duplicate_event:bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b"
+    "notes": "Record is well-supported by source text with high verification confidence. Minor truncation noted but does not affect core accuracy of captured content., duplicate_event:bank_of_england_publications_r_systemic_risk_survey_results_2026_h1_bank_of_england_343f496b"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_bankofengland_financial_policy_committee_record_april_8835ed68a88e9153.txt",
-  "notes": "Document is a Financial Policy Committee meeting record from the Bank of England. Published 1 April 2026, meeting held 27 March 2026. Recent source within 90-day window. Contains substantive market structure analysis relevant to financial stability. Source explicitly addresses both macro catalysts (Middle East conflict supply shock) and market structure (repo markets, sovereign debt vulnerabilities, private credit liquidity). CCyB decision is explicitly stated.",
+  "notes": "FPC meeting record dated 27 March 2026, published 1 April 2026—approximately 4 weeks prior to TODAY. This is recent and within the 90-day window. Relevant to both market structure (repo functioning, hedge fund leverage, NBFI risks) and macro catalysts (Middle East supply shock, energy price volatility, sovereign debt stress). Source quality is high—official BoE publication with specific risk assessments. Event_type correctly classified as financial_stability_report per taxonomy.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "primary",
+    "tier": "high",
     "score": 8,
     "reasoning": [
-      "High domain trust tier (BoE official)",
-      "Authoritative source from primary financial regulator",
-      "Contains specific CCyB decision and rationale",
-      "Explicitly addresses market structure vulnerabilities",
-      "Source body was truncated; additional content may exist in linked PDF"
+      "Official institutional source from trusted domain (bankofengland.co.uk)",
+      "High domain trust tier per metadata",
+      "Specific, verifiable risk assessments and policy actions",
+      "Recent publication (1 April 2026) within 90-day relevance window",
+      "Content directly addresses both market structure (repo, hedge fund leverage, private credit liquidity) and macro catalysts (supply shock, energy prices, sovereign debt)",
+      "Truncation at end prevents full capture of AI monitoring and PM SWES details—minor information loss"
     ]
   }
 }

@@ -1,0 +1,87 @@
+{
+  "id": "keyword_discovery_federalreserve_annual_large_bank_capital_requirements_69e6c69f74b1e329",
+  "created_at": "2026-04-28T06:33:10.138167+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "regulatory_guidance",
+  "title": "Annual Large Bank Capital Requirements - Federal Reserve Board",
+  "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/supervisionreg/large-bank-capital-requirements.htm",
+    "domain": "www.federalreserve.gov",
+    "published_at": "2025-09-30",
+    "source_type": "navigation_page"
+  },
+  "summary": "This Federal Reserve page explains the capital framework for large bank holding companies ($100B+ assets) but functions as a navigation hub. It describes how CET1 requirements are calculated (4.5% minimum + SCB + G-SIB surcharge) but does NOT contain actual 2025 capital numbers — those are in the linked 2025 Large Bank Capital Requirements PDF.",
+  "key_points": [
+    "Covered institutions include bank holding companies, covered savings and loan holding companies, and U.S. intermediate holding companies with $100 billion or more in total consolidated assets",
+    "Total CET1 capital ratio requirement is composed of: minimum 4.5% CET1 ratio (identical for all banks), stress capital buffer (SCB) of at least 2.5% based on supervisory stress test results, and if applicable, a G-SIB capital surcharge of at least 1.0%",
+    "Page serves as an index linking to annual requirement PDFs (2020–2025) rather than presenting the actual capital numbers",
+    "Category IV firms generally not required to participate in supervisory stress test in odd years, though 2025 required their participation",
+    "Last update to page: September 30, 2025"
+  ],
+  "why_it_matters": "The capital framework is foundational to banking regulation, but this page provides no quantitative data. The SCB methodology creates a feedback loop between stress test results and capital buffers. Market participants need the actual PDF (not this page) for specific 2025 capital requirement figures.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "This describes the Federal Reserve's supervisory capital architecture for large banks, which is regulatory framework rather than actionable market structure data. The substantive capital numbers for 2025 are in the linked PDF, not this index page.",
+  "important_numbers": [
+    "$100 billion (asset threshold for applicability)",
+    "4.5% (minimum CET1 capital ratio)",
+    "2.5% (minimum SCB requirement)",
+    "1.0% (minimum G-SIB surcharge)"
+  ],
+  "tags": [
+    "federal-reserve",
+    "bank-capital",
+    "regulation",
+    "stress-test",
+    "scb",
+    "gsib",
+    "cet1",
+    "large-banks",
+    "supervisory"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "source_type is navigation_page — per Rule #5, navigation pages should be rejected",
+      "Page contains no actual 2025 capital numbers; actual data resides in linked PDFs (2025 Large Bank Capital Requirements)",
+      "Page is a framework/index explanation, not substantive regulatory guidance or data source",
+      "No market impact data contained in page body",
+      "Topic relevance is indirect — describes regulatory architecture but lacks actionable market structure intelligence"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_annual_large_bank_capital_requirements_69e6c69f74b1e329.txt",
+  "notes": "This is a framework/overview page rather than a data source. The actual CET1 capital ratio requirements for each specific large bank in 2025 are contained in the linked PDF (2025 Large Bank Capital Requirements), not in this page. The page explains how requirements are calculated but doesn't provide the resulting numbers. Relevance to market structure: the capital framework itself is market structure (bank regulatory architecture), even if this specific page lacks the quantitative details. Consider retrieving the linked PDF for substantive capital data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 4,
+    "reasoning": [
+      "Navigation page with limited standalone content",
+      "No actual 2025 capital numbers—just framework description",
+      "Useful as context for capital regulation but not a data source",
+      "High-trust domain (federalreserve.gov) but thin content"
+    ]
+  }
+}

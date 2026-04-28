@@ -1,14 +1,20 @@
 {
-  "verification_confidence": 9,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "PDF attachment with bank-by-bank table mentioned but not accessible in source body",
+    "April 2025 proposal to average stress test results over two years was pending finalization at time of publication; current status unknown",
+    "Morgan Stanley reconsideration deadline was September 30, 2025; outcome not reflected in record",
+    "macro_context field is empty",
+    "event_type 'regulatory_guidance' is reasonable but not the only plausible classification for a press release about capital requirements"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is 8 months old and contains pending items (Morgan Stanley decision, stress test averaging rule finalization) that may have since been resolved. Human reviewer should assess whether the record needs updating to reflect current status, or whether the historical announcement has sufficient standalone archival value.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The Federal Reserve Board announced final individual capital requirements for large banks following its 2025 stress test, effective October 1, 2025. Vice Chair for Supervision Michelle W. Bowman characterized this as a period of transition as the Board works to reduce year-over-year volatility in stress testing. Capital requirements consist of a 4.5% minimum CET1, a stress capital buffer of at least 2.5%, and potentially a surcharge for systemic institutions. Morgan Stanley's final requirement was pending a reconsideration request, with a decision expected by September 30, 2025. Note: The April 2025 proposal to average stress test results over two years was pending finalization at time of publication.",
+    "why_it_matters": "Bank capital requirements directly affect how much capital large institutions must hold against potential losses, influencing their ability to pay dividends, buy back shares, and extend credit. These requirements affect bank profitability, risk appetite, and systemic resilience. The ongoing effort to average stress test results across two years aims to reduce procyclical volatility in capital requirements, which would benefit banks' capital planning during stress periods.",
+    "macro_context": "This announcement is part of the Fed's broader effort to refine its stress testing and capital requirement framework. The timing follows the 2025 stress test cycle and occurs amid ongoing discussions about reducing regulatory volatility for large banks. The policy represents a transitional phase before potential implementation of the stress test averaging methodology.",
+    "market_structure_context": "This announcement concerns the regulatory capital framework for large banks under stress testing (Dodd-Frank Act Stress Tests / DFAST). Banks below their total capital requirement face automatic restrictions on capital distributions and discretionary bonus payments. The capital requirements combine a 4.5% minimum CET1 floor, a 2.5%+ stress capital buffer derived from stress test losses, and potentially a G-SIB surcharge for the largest institutions. The attached table provides bank-specific requirements."
   }
 }

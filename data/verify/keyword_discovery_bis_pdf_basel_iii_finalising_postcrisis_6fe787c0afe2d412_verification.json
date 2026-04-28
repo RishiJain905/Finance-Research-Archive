@@ -1,18 +1,21 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "IRB framework revision effective date appears potentially misstated: key_points says '1 January 2022' but source footnote indicates IRB revisions are tied to output floor implementation where the scaling factor is removed 'on implementation of the revisions to the risk-weighted framework outlined in this standard and the revised output floor' - main table shows IRB as '1 January 2022^3' where footnote 3 references output floor",
-    "Source body was truncated; limited excerpt available for full verification of all implementation details",
-    "Implementation dates (2022-2027) have now passed; actual implementation outcomes not verifiable from source alone"
+    "Source is approximately 8.5 years old (published December 2017) — exceeds 90-day staleness threshold but may have archival value as historical policy document",
+    "Document has been integrated into consolidated Basel Framework (as stated on page 1) — PDF is historical reference, not current authoritative version",
+    "Page type not specified in metadata; source is a regulatory technical standard rather than a news article or commentary",
+    "Source body was truncated; implementation table content verified against available text and appears accurate",
+    "No current market reaction or price action data in source — document is backward-looking regulatory architecture",
+    "market_structure_context is somewhat generic and could more precisely connect output floor constraints to Treasury market dynamics"
   ],
-  "human_review_required": false,
-  "human_review_reason": "Record is well-constructed with accurate summary and key points matching source content. Issues are relatively minor - primarily about verification of dates against actual implementation status and source truncation. The record correctly identifies this as a December 2017 foundational regulatory document with appropriate archival value. Can be accepted to review_queue for verification against actual implemented standards.",
+  "human_review_required": true,
+  "human_review_reason": "Document is historically significant for understanding banking capital framework evolution but is stale (8.5 years old) and superseded by consolidated Basel Framework. May have archival value for regulatory history research but is not actionable for current market structure analysis. Human reviewer should assess whether this document has sufficient archival value to justify inclusion despite age and superseded status.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The document establishes minimum capital standards and leverage ratio requirements for banks, affecting how banks manage their balance sheets and Treasury market participation. The output floor (phasing to 72.5% from 2022-2027) constrains the extent to which banks can use internal models to reduce capital requirements, directly impacting risk-weighted asset calculations. The revised standardised approach for credit risk and the finalised leverage ratio framework affect bank appetite for various credit exposures and their interactions with Treasury markets."
   }
 }
