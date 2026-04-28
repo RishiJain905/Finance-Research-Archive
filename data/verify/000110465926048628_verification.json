@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but should be 'research_paper' for an SEC XBRL filing that contains company financial disclosures and analysis",
+    "The record is internally accurate and well-structured, but it is correctly identifying content that falls outside the scope of market structure or macro catalysts",
+    "If this source were intended to be included despite being outside scope, the classification would need correction; as written, the record appropriately rejects itself"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is self-consistent and factually accurate. The primary issue is the event_type='unknown' which should be 'research_paper' for SEC filings, but since the record correctly identifies this source as outside the archive's scope, no human intervention is needed.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

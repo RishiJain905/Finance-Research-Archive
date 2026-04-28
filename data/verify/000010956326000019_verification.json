@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is incorrect: 'data_release_other' is invalid for a corporate 8-K filing. This is not a macroeconomic data release (CPI, PPI, GDP, employment). It should be 'unknown' or a corporate-specific type not in the taxonomy.",
+    "topic 'macro catalysts' is inappropriate: A single company's Q3 earnings filing and share buyback announcement are not macro catalysts. This is company-specific corporate news with no bearing on broad market structure or monetary policy.",
+    "Source has no macro relevance: The filing contains no Fed policy signals, Treasury operations, broad economic data, or market structure information. It is a peripheral corporate disclosure.",
+    "Earnings content missing: The actual earnings figures, revenue, EPS, and any guidance referenced in the press release (Exhibit 99.1) are not included in the filing text, making the record thin and incomplete."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record clearly fails relevance criteria for a macro/market structure research archive. The issues are straightforward: event_type is wrong, topic is wrong, and source content is not macro-relevant. No need for human escalation.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Applied Industrial Technologies, Inc. filed an 8-K on April 28, 2026 disclosing (a) a Q3 fiscal year 2026 earnings press release (Exhibit 99.1) attached but not included in filing text, and (b) board-authorized share repurchase of up to 3.0 million shares approved April 22, 2026.",
+    "why_it_matters": "This is a single-company corporate filing with no macro relevance. It contains no Fed policy signals, Treasury operations, broad economic data, or market structure information. The earnings press release content (Exhibit 99.1) is not included in the filing, so actual financial figures are unavailable.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

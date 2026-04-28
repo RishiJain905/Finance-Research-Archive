@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a thin 8-K cover page - the substantive press release (Exhibit 99.1) is referenced but not included in the source text",
+    "Cannot assess relevance without the actual press release content",
+    "event_type set to 'unknown' - corporate filing doesn't fit the taxonomy, but this is correctly identified"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately represents the source content. The only substantive question is whether to archive a thin corporate 8-K that references an unattached press release. The record's assessment of 'not relevant' is reasonable given available information.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "PMGC Holdings Inc. filed an 8-K on April 23, 2026, disclosing that its wholly owned subsidiary NorthStrive Defense Tech LLC issued a press release. The filing is under Regulation FD disclosure (Item 7.01) and includes the press release as Exhibit 99.1, which is not reproduced in the filing text. The source consists only of the 8-K cover page and signature block.",
+    "why_it_matters": "This is a routine corporate disclosure from a small-cap Nasdaq-listed emerging growth company (symbol ELAB). Without the referenced press release content, there is no basis to assess any potential relevance to macro market conditions, central bank policy, or financial market structure. The filing has no archival value for finance research.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

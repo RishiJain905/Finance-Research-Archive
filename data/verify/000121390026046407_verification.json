@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single-company SEC 8-K filing with no relevance to market structure or macro catalysts",
+    "Archive focus is market structure (market plumbing, operations, clearing, settlement) and macro catalysts (monetary policy, economic data, central bank communications)",
+    "Corporate debt issuance for SunPower Inc. is company-specific and does not convey market-wide signals",
+    "event_type is set to 'unknown' which is technically correct for this non-standard filing, but the underlying issue is source relevance, not event classification"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is internally consistent and facts are accurate, but the source type is inherently misaligned with the archive's focus areas",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

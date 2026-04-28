@@ -1,0 +1,79 @@
+{
+  "id": "000110465926048628",
+  "created_at": "2026-04-28T15:09:00.470685+00:00",
+  "status": "review_queue",
+  "topic": "not relevant",
+  "event_type": "unknown",
+  "title": "Hilltop Holdings Inc. 10-Q Filing — Q1 2026",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1265131/000110465926048628/hth-20260331x10q.htm",
+    "published_at": "2026-04-24",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Hilltop Holdings Inc. filed its Q1 2026 10-Q quarterly report covering the period ended March 31, 2026. The filing contains standard SEC XBRL-tagged financial data including balance sheet items, revenue segment breakdowns, fair value measurements, and mortgage servicing assets. This is a company-specific quarterly earnings filing with no content related to market structure or macro catalysts.",
+  "key_points": [
+    "This is a quarterly 10-Q filing for Hilltop Holdings Inc. (SEC CIK: 0001265131), a regional financial services company",
+    "Covers Q1 2026 period ending March 31, 2026, filed April 24, 2026",
+    "Contains XBRL-tagged financial data including assets, liabilities, equity, and revenue segment disclosures",
+    "References mortgage servicing assets measured at fair value using Level 3 inputs (discount rate, CPR)",
+    "Includes repurchase and reverse repurchase agreement disclosures with institutional counterparties",
+    "Not relevant to market structure or macro catalysts topics"
+  ],
+  "why_it_matters": "This filing is company-specific financial reporting for Hilltop Holdings Inc. It does not provide information relevant to broad market structure (trading venues, market maker dynamics, settlement procedures, regulatory frameworks) or macro catalysts (central bank policy decisions, economic data releases, geopolitical events). It has no bearing on rate path expectations, market operations, or financial stability assessments.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-q",
+    "hilltop-holdings",
+    "quarterly-earnings",
+    "banking-sector",
+    "not-macro-relevant",
+    "not-market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' but should be 'research_paper' for an SEC XBRL filing that contains company financial disclosures and analysis",
+      "The record is internally accurate and well-structured, but it is correctly identifying content that falls outside the scope of market structure or macro catalysts",
+      "If this source were intended to be included despite being outside scope, the classification would need correction; as written, the record appropriately rejects itself"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is self-consistent and factually accurate. The primary issue is the event_type='unknown' which should be 'research_paper' for SEC filings, but since the record correctly identifies this source as outside the archive's scope, no human intervention is needed."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000110465926048628.txt",
+  "notes": "This source is a corporate quarterly financial filing (10-Q) for Hilltop Holdings Inc. The source focus criteria specify market structure and macro catalysts only. This filing does not contain information on central bank policy, market operations, trading venue structure, or broader macro catalysts. Filed via SEC EDGAR XBRL format. The content appears to be primarily financial statement tags and has been truncated in the source body. This document should not be included in a macro/market structure research archive unless banking sector financial statements are explicitly within scope.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "not-applicable",
+    "score": 0,
+    "reasoning": [
+      "Corporate earnings filing not within focus topics",
+      "No market structure content",
+      "No macro catalyst content",
+      "Company-specific financial data only"
+    ]
+  }
+}

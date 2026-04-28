@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single company's corporate 8-K filing with no relevance to market structure or macro catalysts",
+    "No actual Q1 financial figures included in the filing body — content references Exhibit 99.1 (press release) that is not embedded",
+    "event_type correctly set to 'unknown' but confirms this falls outside the archive's taxonomy",
+    "Dividend and earnings announcements for one mid-cap specialty chemicals company lack broader market significance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the record is factually accurate, the source is explicitly outside the archive's scope. The record correctly identifies this as 'not relevant' and the filing is a thin source (exhibits not included). Auto-reject is appropriate per rules on low-signal container pages and relevance requirements.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

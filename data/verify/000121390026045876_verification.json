@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - routine corporate SEC filing",
+    "Content is minimal boilerplate with no substantive policy, economic, or market information",
+    "Press release content (Exhibit 99.1) referenced but not included in source text",
+    "event_type is 'unknown' - correct classification should be identified or this category should be excluded from archive scope",
+    "No archival value for a finance research archive focused on macro catalysts and market structure"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is accurately summarizing the source, but the source itself is clearly not relevant to the archive's stated scope. A routine small-cap corporate 8-K filing disclosing a subsidiary press release (without the actual press release content) carries no market-moving information, policy implications, or macro catalyst relevance. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "PMGC Holdings Inc. filed a Form 8-K on April 21, 2026 disclosing that its wholly owned subsidiary SVM Machining, Inc. issued a press release. The filing contains no substantive policy or market-moving information; it is a routine SEC disclosure under Regulation FD. The actual press release content (Exhibit 99.1) is not included in this filing text.",
+    "why_it_matters": "This filing has no relevance to market structure or macro catalysts. It is a routine corporate disclosure by a small-cap, Nasdaq-listed company (ticker ELAB). The attached press release content is not included in the 8-K itself; it would be in Exhibit 99.1 which was not provided in the source text. This filing carries no information that would affect monetary policy, rate expectations, Treasury operations, or broader market dynamics. It should be excluded from a finance research archive focused on macro catalysts and market structure.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

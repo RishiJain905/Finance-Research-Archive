@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific SEC filing (First Merchants Corp regional bank) with no market-wide or macroeconomic relevance",
+    "Actual Q1 2026 financial figures are not contained in the 8-K body — only referenced as Exhibit 99.1 (press release) which is not included",
+    "No forward guidance, macroeconomic commentary, interest rate outlook, or policy content present",
+    "event_type is 'unknown' — while the taxonomy doesn't have a perfect fit for routine corporate filings, this should be flagged rather than left as unknown when a better categorization is possible",
+    "Archive value is minimal for finance research focused on market structure and macro catalysts — this is a structural placeholder, not substantive research content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately captures the source content and correctly identifies the relevance problem, but the record itself demonstrates strong internal consistency in flagging this as out-of-scope. Human confirmation is appropriate to formalize rejection and ensure the archive stays focused on macro/market-structure relevant content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "First Merchants Corporation, a regional bank based in Muncie, Indiana (ticker: FRME), filed a Form 8-K on April 22, 2026 to report Q1 2026 financial results for the quarter ended March 31, 2026 and announce an earnings conference call scheduled for April 23, 2026 at 9:00 a.m. ET. Note: The actual press release (Exhibit 99.1) containing financial figures is referenced but not included in this 8-K body.",
+    "why_it_matters": "This is a routine corporate earnings disclosure from a single regional bank. It does not contain market-wide or macroeconomic information relevant to broader financial research. The actual financial results and any discussion of loan performance, net interest margin, credit quality, or capital position are contained in Exhibit 99.1 (the press release), which is referenced but not included in this 8-K text. Out of scope for market structure and macro catalyst research.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
