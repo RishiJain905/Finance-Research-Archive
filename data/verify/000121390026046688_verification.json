@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - could be more specific like 'regulatory_filing' or 'listing_compliance' though 'unknown' is a valid taxonomy value",
+    "topic field is empty - could be populated with 'company_compliance' or similar",
+    "Source has no relevance to market structure or macro catalysts - this is an individual micro-cap company's delisting risk, which falls under the rejection criteria"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record accurately summarizes the source content with correct facts about the NYSE American delisting notice. However, the record acknowledges (in 'why_it_matters' and 'quality_tier') that this source is NOT relevant to market structure or macro catalysts. Under the verification rules, sources not relevant to market structure or macro catalysts should be rejected. The human reviewer should decide whether to accept the record as a historical compliance filing or reject it based on the archive's focus. The human_review.required field in the generated record is false, but this decision appears to warrant human judgment.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing concerns a micro-cap company's individual compliance status with exchange listing requirements. It does not provide information relevant to broad market structure or macro economic catalysts. The filing is notable only for traders holding EONR securities or those monitoring small-cap delisting risks.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

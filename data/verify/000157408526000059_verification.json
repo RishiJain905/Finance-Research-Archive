@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine corporate dividend declaration for a single company's preferred stock",
+    "event_type is set to 'unknown' when the correct type is clearly a corporate action/disclosure (though no taxonomy value fits)",
+    "Record correctly identifies lack of broader market impact, which confirms this should be rejected under relevance rules",
+    "Source is too thin and company-specific to have archival value for macro research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-reject appropriate: source is a routine single-company corporate dividend announcement with no relevance to market structure or macro catalysts. Rules explicitly reject when source is not relevant to macro catalysts or when source is too thin to have archival value.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

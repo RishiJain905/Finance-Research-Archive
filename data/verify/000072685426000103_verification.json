@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'data_release_other' which is incorrect. This is an earnings announcement from a single company (City Holding Company), not a macroeconomic data release (CPI, GDP, employment, etc.). The appropriate classification would be 'unknown' or the record should note this does not fit the taxonomy.",
+    "The record correctly identifies this as non-archivable for macro research, but the taxonomy mismatch (data_release_* for a corporate earnings filing) creates confusion about the source's nature."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record's substantive assessment is accurate—this filing is thin and irrelevant to macro research. However, the event_type misclassification should be corrected before archiving.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "event_type": "unknown",
+    "summary": "City Holding Company (NASDAQ: CHCO) filed an 8-K on April 23, 2026, announcing Q1 2026 earnings results for the quarter ended March 31, 2026. The actual earnings release is referenced as Exhibit 99.1 but the filing text itself contains only the boilerplate cover page and signature block, not the earnings figures or commentary. This is a routine micro-level corporate disclosure from a small regional bank with no relevance to macro catalysts or market structure.",
+    "why_it_matters": "Routine micro-level corporate earnings disclosure from a small regional bank holding company (City Holding, WV). The filing is thin—it contains no actual earnings figures, revenue, EPS, or forward guidance. Has no relevance to market structure or macro catalysts as defined in the research focus. The actual earnings release (Exhibit 99.1) would need to be retrieved separately if micro-equity research on CHCO is desired.",
+    "macro_context": "N/A — this source has no macro relevance. City Holding Company is a small regional bank (market cap likely under $1B) with no systemic or market-moving significance.",
+    "market_structure_context": "N/A — this source has no market structure relevance. It is a routine company-specific regulatory filing."
+  }
+}

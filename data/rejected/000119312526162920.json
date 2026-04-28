@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - no fields populated",
+      "Source attribution completely missing (name, url, domain, published_at, source_type all empty)",
+      "No summary, key_points, why_it_matters, macro_context, or market_structure_context extracted",
+      "event_type field missing from generated record",
+      "Source metadata shows this is an SEC 8-K filing from Ennis, Inc. (EBF), but this was not captured in the record"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The LLM failed to extract any content from the source. The generated record is entirely blank, making verification impossible. This is not a case requiring human judgment - the record must be regenerated with proper content extraction."
+  },
+  "summary": "Ennis, Inc. (EBF) filed an 8-K current report on April 20, 2026, announcing financial results for the three and twelve months ended February 28, 2026 via press release (Exhibit 99.1). The company also disclosed that its 2026 Annual Meeting of Shareholders will be held on July 16, 2026 (record date May 15, 2026).",
+  "key_points": [],
+  "why_it_matters": "Quarterly earnings announcement from a publicly-traded company (NYSE: EBF) providing revenue and earnings data for investors. However, this is a single mid-cap company filing with limited broader market impact.",
+  "macro_context": "",
+  "market_structure_context": "SEC Form 8-K filing providing corporate earnings disclosure. As a Texas-based printing/forms company, Ennis operates in a traditional industry. This filing represents standard corporate disclosure obligation rather than a market-moving event.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

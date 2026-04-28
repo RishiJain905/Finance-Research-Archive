@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine corporate governance 8-K filing reporting stockholder meeting voting results",
+    "event_type is set to 'unknown' when the filing type (annual meeting voting results) clearly indicates 'not_applicable' or a governance-specific category",
+    "verification_confidence field shows 0 which indicates the verification pass was not properly completed",
+    "confidence in market_impact is 0 but the field exists, suggesting incomplete assessment",
+    "llm_review.verification_confidence shows 0 which contradicts llm_review.initial_confidence of 8"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is a routine corporate governance filing outside the scope of market structure and macro catalysts. While the factual content is accurate (director elections, say-on-pay vote, auditor ratification, failed stockholder proposal), the content does not qualify for archival inclusion under the target topics. The human_review section correctly identifies this. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "AGCO Corporation filed an 8-K reporting results from its April 23, 2026 Annual Meeting of Stockholders, including election of nine directors, a say-on-pay advisory resolution, ratification of KPMG as auditor for 2026, and a failed stockholder proposal on ability to call special stockholder meetings.",
+    "why_it_matters": "This is a routine corporate governance filing with no relevance to financial market structure or macro market catalysts. The 8-K reports standard stockholder voting results: director elections, executive compensation advisory vote (passed with 62.6M for/4.8M against), auditor ratification (passed with 64.4M for/4.9M against), and a failed stockholder proposal on special meeting rights (32.8M for/34.6M against). Notable dissent: CEO Eric Hansotia received 1.55M反对票 and board member Niels Pörksen received 3.23M反对票. No forward-looking statements, material guidance updates, or operational changes that would affect market assessments.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

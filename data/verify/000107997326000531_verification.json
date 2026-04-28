@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - while the taxonomy doesn't have a perfect fit for corporate equity issuances, 'unknown' is weak when the source content is clearly identifiable as a corporate financing event",
+    "topic field is empty - should at minimum indicate 'corporate_financing' or similar"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is factually accurate and the assessment of low relevance to macro/market structure focus is correct. The human review flag appears to be pre-set incorrectly; auto-routing is appropriate based on the record content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Zapata Quantum, Inc. filed a Form 8-K on April 24, 2026 disclosing the completion of a $15 million equity financing on April 23, 2026. The company is a Delaware incorporated quantum computing firm headquartered in Boston, MA, registered as an emerging growth company. No financial statements or forward-looking guidance were provided in this filing.",
+    "why_it_matters": "This is a routine corporate equity issuance announcement for a single quantum computing company. The filing has no relevance to market structure or macro catalysts as it represents an individual company's private financing event rather than a systemic market event, central bank action, macroeconomic indicator, or regulatory development. Archive focus should remain on events with market-wide implications.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

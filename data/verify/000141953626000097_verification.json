@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 8,
+  "verdict": "accept",
+  "issues_found": [
+    "event_type is set to 'unknown' but a corporate earnings/dividend announcement does not map cleanly to the available taxonomy. The taxonomy includes 'data_release_*' for economic data, 'research_paper', 'economic_commentary', etc. - none fit a standard corporate 8-K. While 'unknown' is technically valid per the rules, the record should note this limitation."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "All source attribution fields (name, url, domain, published_at, source_type) are completely empty",
+    "Generated record has no summary, key_points, or any content filled in",
+    "event_type field is missing/empty - cannot verify taxonomy compliance",
+    "Source is a SEC Form 8-K regulatory filing, not an article-like source with research value",
+    "Source is a routine corporate earnings announcement from Pitney Bowes Inc. - not relevant to market structure or macro catalysts",
+    "Generated record is entirely blank - no work appears to have been done"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is completely empty with no content. This is a reject without needing human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

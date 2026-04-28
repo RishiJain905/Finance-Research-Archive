@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but this is clearly a regulatory_filing which is outside the event taxonomy scope",
+    "Source is a routine corporate governance filing with no relevance to market structure or macro catalysts",
+    "The research archive focus is on market structure and macro catalysts; this filing does not address either topic"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source content is definitively outside the research archive's scope (market structure and macro catalysts). The record correctly identifies this as not relevant, so automated rejection is appropriate without human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
