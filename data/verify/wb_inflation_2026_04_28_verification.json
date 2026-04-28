@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a failed data query response with no actual data content - cannot derive any macro catalysts or market insights",
+    "URL field is empty - no valid source URL for verification or attribution",
+    "PAGE_TYPE not provided in source metadata - unable to verify this isn't a container or navigation page",
+    "Published_at date is empty - cannot verify timeliness or recency",
+    "Source_type is 'data_query' rather than an article or report - this is a technical error message, not archival content",
+    "Domain field is empty - source authority cannot be verified",
+    "The record summarizes a failure state rather than providing substantive research - has no archival value as financial intelligence",
+    "No actual inflation figures or data points to support any market analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately describes the source failure (no data returned), but both the source and resulting record contain zero actionable intelligence for market structure or macro catalyst analysis. This is a technical error message, not research content. Per CORE RULE 6 (thin low-signal sources bias toward reject) and CORE RULE 7 (missing attribution and container pages bias toward reject), this clearly fails archiving standards.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank data query for global inflation indicator FP.CPI.TOTL.ZG returned no valid observations for the April 28, 2026 snapshot date. This is a failed data retrieval response with no actual content.",
+    "why_it_matters": "No inflation data was returned - this technical error message provides no basis for macro analysis, central bank assessment, or market risk evaluation. The query failed to produce any country-level or aggregate inflation figures.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "wb_inflation_2026_04_28",
+  "created_at": "2026-04-28T15:43:21.181568+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "World Inflation Rate - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_query",
+    "domain": ""
+  },
+  "summary": "The World Bank data query for global inflation indicator FP.CPI.TOTL.ZG returned no valid observations for the April 28, 2026 snapshot date. This is a failed data retrieval response with no actual content.",
+  "key_points": [
+    "World Bank query for inflation indicator FP.CPI.TOTL.ZG returned 'No recent valid observations'",
+    "Data query was performed for snapshot date 2026_04_28",
+    "Source contains no actual inflation figures or historical data",
+    "No country-specific or regional breakdowns provided"
+  ],
+  "why_it_matters": "No inflation data was returned - this technical error message provides no basis for macro analysis, central bank assessment, or market risk evaluation. The query failed to produce any country-level or aggregate inflation figures.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "cpi",
+    "no-data",
+    "empty-response",
+    "macro"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a failed data query response with no actual data content - cannot derive any macro catalysts or market insights",
+      "URL field is empty - no valid source URL for verification or attribution",
+      "PAGE_TYPE not provided in source metadata - unable to verify this isn't a container or navigation page",
+      "Published_at date is empty - cannot verify timeliness or recency",
+      "Source_type is 'data_query' rather than an article or report - this is a technical error message, not archival content",
+      "Domain field is empty - source authority cannot be verified",
+      "The record summarizes a failure state rather than providing substantive research - has no archival value as financial intelligence",
+      "No actual inflation figures or data points to support any market analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_28.txt",
+  "notes": "Source is a technical data query response rather than a substantive article or report. No actual inflation data was returned for the indicator. Recommend re-querying or finding alternative data source for global inflation metrics.",
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "No actual data contained in source",
+      "Cannot derive any market or macro insights",
+      "Source is a failed data retrieval response"
+    ]
+  }
+}

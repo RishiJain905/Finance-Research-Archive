@@ -1,0 +1,78 @@
+{
+  "id": "wb_trade_gdp_2026_04_28",
+  "created_at": "2026-04-28T15:44:33.237869+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - World Bank Indicator TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_query",
+    "domain": ""
+  },
+  "summary": "The World Bank API returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade % of GDP) as of the 2026-04-28 snapshot. This is a technical no-data response, not a research document or analysis.",
+  "key_points": [
+    "The World Bank API query returned zero valid observations for indicator TG.VAL.TOTL.GD.ZS",
+    "No numeric values, dates, or country-specific data are present in the source",
+    "The source provides no information about trade volumes, GDP contributions, or global trade trends",
+    "This is a data retrieval failure rather than a published research document"
+  ],
+  "why_it_matters": "This source contains no actionable data, analysis, or insights. It cannot be used for market structure or macro catalyst research as there is no information to extract or analyze.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade",
+    "gdp",
+    "no-data",
+    "data-query",
+    "irrelevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no valid data - only an error message stating 'No recent valid observations were returned'",
+      "Source is not relevant to market structure or macro catalysts as there is no extractable information",
+      "Source is too thin to have archival value - a failed API query provides no actionable intelligence",
+      "No source URL provided to verify or access the data",
+      "event_type set to 'unknown' is technically valid but this is not an event/document that fits any taxonomy category"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_28.txt",
+  "notes": "IRRELEVANT TO MANDATE. This source does not contain market structure or macro catalyst information. The World Bank indicator query returned no usable data. The TARGET in metadata indicates 'global_economy' topic, but even that cannot be assessed because the data query failed. Topic field defaulted to 'global_economy' from metadata but source is not relevant to either required topic. Low confidence = 0 due to complete absence of extractable information.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "irrelevant",
+    "score": 0,
+    "reasoning": [
+      "Source is a data query with no valid observations",
+      "Contains only an error message: 'No recent valid observations were returned'",
+      "Cannot support any market structure or macro catalyst analysis",
+      "No actionable intelligence present"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no valid data - only an error message stating 'No recent valid observations were returned'",
+    "Source is not relevant to market structure or macro catalysts as there is no extractable information",
+    "Source is too thin to have archival value - a failed API query provides no actionable intelligence",
+    "No source URL provided to verify or access the data",
+    "event_type set to 'unknown' is technically valid but this is not an event/document that fits any taxonomy category"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record correctly and honestly describes a no-data technical response. No human judgment needed to determine rejection - the source is a failed data query with zero extractable content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank API returned no valid observations for indicator TG.VAL.TOTL.GD.ZS (World Trade % of GDP) as of the 2026-04-28 snapshot. This is a technical no-data response, not a research document or analysis.",
+    "why_it_matters": "This source contains no actionable data, analysis, or insights. It cannot be used for market structure or macro catalyst research as there is no information to extract or analyze.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

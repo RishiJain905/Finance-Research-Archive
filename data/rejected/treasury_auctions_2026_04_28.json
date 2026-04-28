@@ -1,0 +1,77 @@
+{
+  "id": "treasury_auctions_2026_04_28",
+  "created_at": "2026-04-28T15:41:25.068888+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Failed to fetch Treasury auction data",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "published_at": "unknown",
+    "source_type": "data_fetch_failed",
+    "domain": "api.fiscaldata.treasury.gov"
+  },
+  "summary": "An API request to the Treasury Fiscal Data API endpoint for auction securities data failed with a 404 error. No actual auction data was retrieved.",
+  "key_points": [
+    "API endpoint returned 404 error: endpoint not found",
+    "Requested fields: issue_date, security_type, security_term, offering_amt, total_accepted",
+    "Sorting was set to descending by issue_date",
+    "No auction data was retrieved due to the error"
+  ],
+  "why_it_matters": "Treasury auction data is relevant for market structure analysis as it provides visibility into issuance patterns, bid-to-cover ratios, and dealer participation. The failure to retrieve this data prevents any analysis of recent Treasury market conditions.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Treasury auction data would normally be relevant to market structure as it informs understanding of primary market dynamics, dealer balance sheet constraints, and the operational mechanics of government securities distribution. However, no data was available from this source.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-auctions",
+    "market-structure",
+    "api-error",
+    "data-failure",
+    "primary-market"
+  ],
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual content - only a 404 error message with no market-relevant data",
+      "No archival value: an error message provides no information about Treasury auction dynamics, bid-to-cover ratios, or dealer participation",
+      "event_type set to 'unknown' which is technically valid but reflects the absence of any categorizable event",
+      "PUBLISHED_AT is 'unknown' - cannot assess recency or verify source currency",
+      "quality_tier correctly identified as 'failed' with score 0, but record still submitted for verification despite having no substantive content",
+      "market_impact correctly shows empty arrays and unknown directional bias, confirming no market-relevant content exists"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Automated rejection is appropriate. The source is a failed API request returning a 404 error with no actual Treasury auction data, statistics, or market content. There is no archival value in preserving an error message. The record is correctly identified as 'failed' quality tier with zero score."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_28.txt",
+  "notes": "Source attempted to retrieve Treasury auction data via the Treasury Fiscal Data API but received a 404 error. No actual auction statistics, results, or any market-relevant content was obtained. The endpoint URL may be outdated, the service may be temporarily unavailable, or the specific endpoint path may have changed. Recommend verifying the correct API endpoint for Treasury auction data or attempting manual retrieval through alternative means.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed",
+    "score": 0,
+    "reasoning": [
+      "No content retrieved - API returned 404 error",
+      "No archival value as no data was obtained",
+      "Cannot assess topic relevance due to complete lack of content"
+    ]
+  }
+}

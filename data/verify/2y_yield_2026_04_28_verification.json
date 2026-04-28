@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'data_release_other' — the source is a daily data release of Treasury yield data",
+    "Source is raw market observable data (price levels only) with no narrative, analysis, or causal information",
+    "No macro catalyst or structural insight provided — cannot determine what drove the yield move",
+    "Limited archival value for a finance research archive focused on macro catalysts and market structure"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately captures the source data but event_type is incorrectly set to 'unknown' and the source itself has marginal archival value. While the yield data is factually correct and the record appropriately notes limitations, a decision is needed on whether raw price snapshots (without catalyst context) belong in the research archive. The record should also have event_type corrected to 'data_release_other'.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 2-Year Treasury yield closed at 3.78% on April 24, 2026, down 5 basis points from the prior day's 3.83%. The yield has remained in a narrow range of 3.72%–3.83% over the past week.",
+    "why_it_matters": "The 2-year Treasury yield is a market-implied gauge of near-term Fed policy expectations. However, this snapshot captures only the price level without any explanation of what drove the move. It serves as a reference data point but does not constitute a macro catalyst on its own. Raw yield data without catalyst context has limited standalone archival value for a research archive."
+  }
+}

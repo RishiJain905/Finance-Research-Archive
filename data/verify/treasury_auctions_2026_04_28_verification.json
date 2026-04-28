@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual content - only a 404 error message with no market-relevant data",
+    "No archival value: an error message provides no information about Treasury auction dynamics, bid-to-cover ratios, or dealer participation",
+    "event_type set to 'unknown' which is technically valid but reflects the absence of any categorizable event",
+    "PUBLISHED_AT is 'unknown' - cannot assess recency or verify source currency",
+    "quality_tier correctly identified as 'failed' with score 0, but record still submitted for verification despite having no substantive content",
+    "market_impact correctly shows empty arrays and unknown directional bias, confirming no market-relevant content exists"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Automated rejection is appropriate. The source is a failed API request returning a 404 error with no actual Treasury auction data, statistics, or market content. There is no archival value in preserving an error message. The record is correctly identified as 'failed' quality tier with zero score.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

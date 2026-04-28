@@ -1,0 +1,82 @@
+{
+  "id": "repo_operations_2026_04_28",
+  "created_at": "2026-04-28T15:42:31.734607+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "NY Fed Repo Operations — API Data Fetch Failed",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "published_at": "2026-04-28",
+    "source_type": "data_endpoint",
+    "domain": "markets.newyorkfed.org"
+  },
+  "summary": "An attempt to retrieve the latest NY Fed repo operation results via the official Fed API failed with a 400 Bad Request error. No actual repo operation data was captured. The API endpoint (https://markets.newyorkfed.org/api/repo/all/results/latest.json) was inaccessible at snapshot time.",
+  "key_points": [
+    "API request to NY Fed repo operations endpoint returned HTTP 400 Bad Request",
+    "Target URL was https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "No repo operation data, rates, or amounts were retrieved",
+    "The failure prevents any analysis of current NY Fed repo market interventions",
+    "Snapshot date: 2026-04-28"
+  ],
+  "why_it_matters": "NY Fed repo operations are a primary tool for managing short-term interest rates and bank liquidity. Without actual data, market participants cannot assess current repo market conditions or the Fed's operational stance for the day.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "NY Fed repo operations are a core component of the Fed's monetary policy implementation framework. Failed API retrieval blocks visibility into daily repo market operations.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "api-failure",
+    "market-structure",
+    "liquidity-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source contains no actual data content — only a 400 error from the API endpoint",
+      "Cannot extract any repo operation details (rates, amounts, counterparties)",
+      "Cannot verify any actual market conditions or Fed operational stance",
+      "Record accurately documents the failure itself, but has no substantive content to archive"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record's factual claims about the API failure are accurate and supported by the source. No unsupported or fabricated claims were made. Human review is not needed — the record can be auto-routed based on verification result."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_28.txt",
+  "notes": "This source represents a failed data retrieval attempt, not actual repo operation content. The NY Fed API endpoint was inaccessible (HTTP 400). No quantitative data was captured. Archive as failed attempt with low confidence. Topic relevance is confirmed (market structure / repo operations) but content is absent.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed",
+    "score": 1,
+    "reasoning": [
+      "No actual data retrieved — API returned 400 error",
+      "Cannot support any key points with source evidence",
+      "No market impact assessment possible",
+      "Topic (market structure) is correct but content is null"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "03e0f35379cdf8013ade908b921a7459b223dccb"
+}

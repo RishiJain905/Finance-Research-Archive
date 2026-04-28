@@ -1,0 +1,74 @@
+{
+  "id": "wb_gdp_growth_2026_04_28",
+  "created_at": "2026-04-28T15:42:53.568401+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World GDP Growth Rate Indicator Query",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-28",
+    "source_type": "unknown"
+  },
+  "summary": "This source is a World Bank API query response for indicator NY.GDP.MKTP.KD.ZG (Real GDP Growth Rate) that returned no valid observations. No actual GDP data or analysis is present.",
+  "key_points": [
+    "Source attempted to retrieve World Bank GDP growth rate indicator (NY.GDP.MKTP.KD.ZG)",
+    "Query returned zero valid observations on 2026-04-28",
+    "No actual macro data, forecasts, or analysis included in the source",
+    "Source contains only an error message: 'No recent valid observations were returned'"
+  ],
+  "why_it_matters": "This source does not provide actionable information. It is a data retrieval failure, not a substantive macro catalyst or market research document. It cannot be used for investment decisions, economic analysis, or RAG purposes.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "gdp",
+    "no-data",
+    "query-failure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 9,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty in the record (source attribution incomplete)",
+      "Source contains no actionable macro data - only an API error message stating 'No recent valid observations were returned'",
+      "event_type set to 'unknown' which is acceptable given the source is a data query failure, not an event"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_gdp_growth_2026_04_28.txt",
+  "notes": "IRRELEVANT: This source does not contain information related to market structure or macro catalysts. It is a World Bank API response that returned no data. The indicator code NY.GDP.MKTP.KD.ZG refers to real GDP growth rates, but the query failed. This should not be archived as a research note. Topic adjusted to 'global_economy' per source metadata, but content does not support even that categorization.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 0,
+    "reasoning": [
+      "No actual data or analysis present in source",
+      "Query returned error message instead of macro data",
+      "Cannot support any investment or research use case",
+      "Does not meet minimum content threshold for archiving"
+    ]
+  }
+}
