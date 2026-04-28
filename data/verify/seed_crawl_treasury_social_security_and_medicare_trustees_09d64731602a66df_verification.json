@@ -1,20 +1,20 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 1,
   "verdict": "reject",
   "issues_found": [
-    "Source is a Treasury landing page that describes the Trustees Reports mechanism but does not contain the actual reports",
-    "Source body is severely truncated with no financial projections, depletion dates, or actuarial data",
-    "Source is essentially a navigation/descriptor page - likely a PAGE_TYPE of navigation_page or listing_page which triggers rejection under core rules",
-    "published_at is blank - cannot verify recency or determine if this represents current information",
-    "event_type set to 'unknown' but correct type should be identifiable if actual reports were present (e.g., financial_stability_report or research_paper)",
-    "No actual market-relevant content to support macro catalyst analysis"
+    "Source body contains only structural metadata describing the report framework, no substantive content",
+    "Page is a listing/navigation page with links to actual reports, not the reports themselves",
+    "No actual projections, solvency dates, fiscal findings, or data present in the source",
+    "Published date not provided in source metadata",
+    "event_type set to 'unknown' which is acceptable given the thin content, but 'unknown' for a legitimate government report page with no content is also a flag",
+    "Per Rule #5: listing_page type pages should be rejected"
   ],
-  "human_review_required": true,
-  "human_review_reason": "This source is a thin crawler seed that describes the governance structure of the Social Security and Medicare Boards of Trustees but contains no actual report content, financial data, or projections. It appears to be a landing/index page rather than archival-quality content. The generated record accurately identifies this problem, but human review is needed to confirm the rejection decision and ensure no valuable content was overlooked.",
+  "human_review_required": false,
+  "human_review_reason": "",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "This is a Treasury Department landing page describing the structure and function of the Social Security and Medicare Boards of Trustees, which annually report on the financial status of the respective trust funds to Congress. The actual Trustees Reports containing financial projections, depletion dates, and actuarial estimates are not present in this source body.",
-    "why_it_matters": "This source is a structural description page, not an actual report. The actual Social Security and Medicare Trustees Reports contain critical long-term fiscal projections including trust fund depletion dates, actuarial balances, and sustainability assessments. Those reports represent significant macro-fiscal risk indicators. However, this specific source provides no numerical data or projections to analyze.",
+    "summary": "",
+    "why_it_matters": "",
     "macro_context": "",
     "market_structure_context": ""
   }

@@ -1,29 +1,29 @@
 {
   "id": "seed_crawl_federalreserve_2015_press_releases_7403691da98a48d4",
-  "created_at": "2026-03-31T18:29:23.142510+00:00",
+  "created_at": "2026-04-28T10:35:38.865661+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
   "title": "2015 Press Releases",
   "source": {
-    "name": "Federal Reserve",
+    "name": "Board of Governors of the Federal Reserve System",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/2015all.htm",
-    "published_at": "2015-12-31",
+    "published_at": "unknown",
     "source_type": "listing_page",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This is an index page listing all Federal Reserve press releases from calendar year 2015, including items related to banking applications, enforcement actions, regulatory policy, and monetary policy. The page does not contain individual source documents but rather links to them. As a historical record from 2015 (approximately 11 years old), it is stale and not useful as a primary research source.",
+  "summary": "This is an index page listing all Federal Reserve press releases from calendar year 2015, including FOMC statements, rate decisions, enforcement actions, regulatory proposals, banking applications, and other Fed announcements. It is not an individual document but rather a chronological archive index containing links to hundreds of separate press releases.",
   "key_points": [
-    "This is a listing/aggregation page of Federal Reserve press releases, not a standalone document",
-    "Contains links to various Fed business items from throughout 2015",
-    "Notable items visible include FOMC statements from December 16 and October 28, 2015",
-    "Page lists enforcement actions, banking applications, regulatory policy updates, and other Fed announcements",
-    "Source is stale (2015 vintage) and exceeds the 90-day recency threshold by approximately 11 years"
+    "This is a listing page/index, not an individual archiveable document",
+    "Contains references to 2015 FOMC statements (December 16, October 28, and other dates)",
+    "Includes enforcement actions, banking applications, regulatory policy announcements, and other Fed business",
+    "Cannot be used directly for market structure or macro catalyst analysis without accessing individual linked documents",
+    "Source is from 2015, making it a historical record approximately 11 years old as of TODAY"
   ],
-  "why_it_matters": "This listing page has no direct market or macro relevance as an information source. It is a navigation index that would point to individual press releases. The individual FOMC statements and rate decisions from 2015 would be the relevant primary sources for market structure and macro catalyst research, not this aggregation page.",
+  "why_it_matters": "This listing page serves as a navigation index but does not itself contain actionable market or macro information. Individual FOMC statements, rate decisions, or data releases within the 2015 archive would be relevant primary sources for macro catalyst analysis.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -31,29 +31,43 @@
   "important_numbers": [],
   "tags": [
     "federal-reserve",
+    "press-releases",
     "listing-page",
     "historical",
-    "stale",
-    "not-archivable"
+    "2015",
+    "fomc",
+    "enforcement-actions"
   ],
   "llm_review": {
-    "initial_confidence": 1,
-    "verification_confidence": 0,
+    "initial_confidence": 2,
+    "verification_confidence": 10,
     "verdict": "reject",
-    "issues_found": [
-      "Source is a listing_page (index of 2015 press releases), explicitly excluded from archival per rule 5",
-      "Source contains no primary content - only links to individual press releases",
-      "Source published 2015-12-31, approximately 11 years before TODAY (2026-03-31), making it stale",
-      "event_type set to 'unknown' but should not be any event type since this is a container page, not an archiveable source",
-      "No extractable macro catalyst or market structure content",
-      "Individual FOMC statements, rate decisions, and other substantive Fed releases from 2015 should be archived separately as primary sources"
-    ]
+    "issues_found": []
   },
   "human_review": {
     "required": false,
     "decision": "",
     "notes": "container_page"
   },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_2015_press_releases_7403691da98a48d4.txt",
-  "notes": "Non-archiveable: This is a listing/aggregation page of Federal Reserve press releases from 2015, not a standalone document. Contains no extractable market structure or macro catalyst information. Historical record from 2015 (stale). Individual FOMC statements and press releases from 2015 should be identified and archived as separate, primary sources if needed for research."
+  "notes": "NON-ARCHIVEABLE: This is a listing page containing an index of 2015 Federal Reserve press releases. Per CORE RULE 6, listing pages should not be archived as they do not contain the substantive content needed for RAG. The individual FOMC statements (e.g., December 16, 2015 rate decision), FOMC minutes, economic projections, and other policy documents from 2015 would be the appropriate archiveable sources. This index may still be useful for crawling/indexing purposes to discover individual documents, but should not itself be treated as an archiveable research note. Historical record: published in 2015, approximately 11 years prior to TODAY (2026-04-28).",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "non-archivable",
+    "score": 0,
+    "reasoning": [
+      "Source type is a listing page, not an individual document",
+      "Contains no substantive macro catalyst or market structure content on its own",
+      "Historical record from 2015 - significantly stale for current analysis"
+    ]
+  }
 }

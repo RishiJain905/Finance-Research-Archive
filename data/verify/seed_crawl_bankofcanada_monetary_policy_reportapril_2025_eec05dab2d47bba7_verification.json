@@ -1,15 +1,10 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
-  "issues_found": [
-    "Source is a landing page crawl containing metadata, overview bullets, and navigation elements—not the substantive body of the Monetary Policy Report. Full projection tables, detailed scenario analysis, vote tally, and Governor's complete assessment are not present in the scraped content.",
-    "Record is approximately 12.5 months old (2025-04-16 vs. TODAY 2026-04-14). While quarterly MPRs have archival value as historical policy documents, current market relevance is limited for live trading decisions.",
-    "market_impact.directional_bias is 0 (unfilled), but this is correctly unknown given the source does not provide market impact commentary.",
-    "quality_tier correctly identifies the source as thin (C-tier), but all captured key points are factually supported by the available source content."
-  ],
-  "human_review_required": true,
-  "human_review_reason": "The record correctly captures all verifiable elements from the thin source (rate decision, economic context, tariff characterization, carbon tax impact, neutral rate range). However, the source itself is a landing page rather than the full report PDF. Human reviewer should confirm whether the complete MPR PDF was intended to be crawled separately, and assess whether the metadata-only capture is sufficient for archival purposes given the source's age.",
-  "suggested_status": "review_queue",
+  "verification_confidence": 8,
+  "verdict": "accept",
+  "issues_found": [],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",

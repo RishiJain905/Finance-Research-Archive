@@ -1,20 +1,19 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "event_type 'monetary_policy_report' is questionable - source is an educational/explainer page describing the inflation target framework, not a substantive policy report",
-    "Source is thin on archival value - it explains the existing framework rather than providing new analysis, decisions, or research",
-    "Governor letters to the Chancellor (Dec 2025, Sep 2025, Jun 2025) are referenced but not included in this page - the actual substantive policy communications are absent",
-    "Published_at derived from 'last updated' (18 Feb 2026) rather than an original publication date; this page has existed much longer",
-    "Record describes this page as establishing 'foundational monetary policy framework' which overstates its macro catalyst relevance"
+    "event_type is set to 'unknown' which is appropriate for this informational page - no specific taxonomy category applies",
+    "This is informational/educational content rather than a specific policy event, data release, or speech",
+    "Contains no new market-moving information, policy signals, or forward guidance",
+    "Source is static framework content with current numbers, not an event-driven document"
   ],
   "human_review_required": true,
-  "human_review_reason": "This record is borderline. The factual content is accurate (Bank Rate 3.75%, inflation 3%, 2% target, measurement methodology), but the source is an institutional explainer page rather than substantive macro catalyst content. The event_type classification as 'monetary_policy_report' is questionable - this is more akin to institutional background than a policy report. Given the archive's focus on market structure and macro catalysts, this thin educational content may not warrant archiving when the actual Governor letters are the substantive communications.",
-  "suggested_status": "rejected",
+  "human_review_reason": "The record accurately represents the source but raises a threshold question: should informational/educational framework pages like this be archived as research records at all? The content is factually accurate and provides useful context, but it lacks event-specific value. Human judgment is needed to determine the archival policy for such reference material versus actionable catalyst records.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "The why_it_matters reasonably interprets the Governor letter requirement but overstates the page's significance - this explainer page references those letters rather than containing them.",
-    "macro_context": "",
+    "summary": "The Bank of England's inflation target page provides current status: Bank Rate at 3.75% (next decision due 30 April 2026) and CPI inflation at 3.3%, above the 2% target. The page explains the inflation targeting framework and the requirement for the Governor to write to the Chancellor if inflation deviates more than 1 percentage point from target. This is an informational/educational page rather than a specific policy event or data release.",
+    "why_it_matters": "This page is background reference material explaining the Bank of England's inflation mandate and current status. While the current inflation rate (3.3%) above the 2% target is relevant context for future MPC decisions, the page itself contains no new policy signals, forward guidance, or market-moving information. It is not a catalyst but rather provides foundational context for understanding BoE monetary policy.",
+    "macro_context": "CPI inflation at 3.3% remains 1.3 percentage points above the 2% target, placing the BoE in an above-target situation that requires explanation letters to the Chancellor. This context is relevant for understanding potential policy path but does not itself constitute a macro catalyst.",
     "market_structure_context": ""
   }
 }

@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_testimonies_us_department_of_the_7a33e04406da6300",
-  "created_at": "2026-04-14T09:41:53.068856+00:00",
+  "created_at": "2026-04-28T10:32:23.840463+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -8,22 +8,22 @@
   "source": {
     "name": "U.S. Department of the Treasury",
     "url": "https://home.treasury.gov/news/press-releases/testimonies",
-    "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "listing_page"
+    "source_type": "listing_page",
+    "domain": "home.treasury.gov"
   },
-  "summary": "This is a Treasury Department testimonies listing page containing a chronological index of testimony titles, dates, and officials. The source does not contain the actual testimony transcripts or substantive policy content. The listed testimonies span May 2023 to June 2024 and cover topics including fiscal year budget requests, terrorist financing, financial crimes enforcement, investment security, and international affairs—none of which are directly related to market structure or macro catalysts.",
+  "summary": "This is a navigation/index page listing Treasury Department testimonies from 2023-2024 with dates and speaker names. No substantive testimony content is provided—only a list of links to separate testimony pages. The page does not contain market-relevant macro catalyst information, rate expectations, or fiscal analysis.",
   "key_points": [
-    "Source is a listing page indexing Treasury testimonies, not the testimony content itself",
-    "Listed testimonies from May 2023 to June 2024 from various Treasury officials",
-    "Testimony topics include: fiscal budget (Yellen), terrorist financing (Nelson, Rosenberg), financial crimes (Gacki), investment security (Rosen), international affairs (Shambaugh)",
-    "No substantive policy content, economic data, or market-relevant analysis present in this source",
-    "Source does not contain actual testimony text—only titles and dates"
+    "Source is a listing/index page with no substantive content—only a list of testimony dates, speakers, and committee names",
+    "No testimony transcript, remarks, or policy content is included in this source",
+    "Topics listed include budget requests, financial crimes enforcement, terrorist financing, and investment security—not traditional macro catalysts",
+    "Most recent testimony listed is dated June 4, 2024 (Secretary Yellen on FY2025 Budget); oldest is May 31, 2023",
+    "No market-impacting data, rate guidance, or economic projections are present"
   ],
-  "why_it_matters": "This source cannot be used for finance research because it is a navigation/index page with no substantive content. Researchers would need to access individual testimony pages for actual policy discussions.",
+  "why_it_matters": "This page is a navigation aid, not an archival research document. It provides no substantive testimony content, policy signals, or market-relevant data. Research archivists seeking Treasury testimony content must navigate to individual testimony URLs directly.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "",
+    "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
@@ -31,22 +31,21 @@
   "important_numbers": [],
   "tags": [
     "treasury",
-    "testimonies",
+    "testimony",
     "listing-page",
-    "not-archivable",
+    "non-archivable",
     "yellen",
-    "wally-adeyemo"
+    "fiscal-policy"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 0,
+    "initial_confidence": 0,
+    "verification_confidence": 9,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing_page per SOURCE METADATA - violates rule #5 (reject container pages)",
-      "No substantive content - only testimony index with titles, dates, and officials",
-      "event_type is 'unknown' but should be 'congressional_testimony' per taxonomy; however, correct type would not change rejection",
-      "Source dates range May 2023 to June 2024, making content stale for current research",
-      "Not relevant to market structure or macro catalysts per archive focus areas"
+      "Source is a listing_page per metadata - rule 5 explicitly requires rejection of listing pages",
+      "Source contains no substantive testimony content, only dates and speaker names",
+      "No macro catalyst or market-relevant information present",
+      "Cannot serve as an archival research document"
     ]
   },
   "human_review": {
@@ -63,17 +62,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_testimonies_us_department_of_the_7a33e04406da6300.txt",
-  "notes": "This record should be excluded from the research archive. The source is a listing page (listing_page) that merely indexes Treasury testimonies. It contains no substantive policy content, economic data, or market-relevant information. The focus areas for this archive are market structure and macro catalysts; this listing page does not address either. Individual testimonies on different pages may be relevant, but this index page itself is not archivable.",
+  "notes": "NON-ARCHIVABLE: This is a listing page (per rule 6) with no substantive testimony content. It contains only dates and speaker names. The actual testimony transcripts would need to be sourced from individual URLs. This listing page itself has no value for market structure or macro catalyst research archive.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "exclude",
-    "score": 0,
+    "tier": "low",
+    "score": 1,
     "reasoning": [
       "Listing page with no substantive content",
-      "Not relevant to market structure or macro catalysts",
-      "Multiple date references (May 2023 - June 2024) indicate stale content",
-      "No actionable market or policy information present"
+      "No market-relevant data",
+      "No policy signals or guidance",
+      "Cannot support key_points or analysis"
     ]
   }
 }

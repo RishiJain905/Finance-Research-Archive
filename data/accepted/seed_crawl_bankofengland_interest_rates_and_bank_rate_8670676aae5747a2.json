@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_bankofengland_interest_rates_and_bank_rate_8670676aae5747a2",
-  "created_at": "2026-04-14T09:30:44.019775+00:00",
+  "created_at": "2026-04-28T10:21:32.796846+00:00",
   "status": "accepted",
   "topic": "macro catalysts",
   "event_type": "rate_decision",
@@ -10,51 +10,52 @@
     "url": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
     "domain": "www.bankofengland.co.uk",
     "published_at": "2026-03-19",
-    "source_type": "institutional_page"
+    "source_type": "decision_page"
   },
-  "summary": "The Bank of England's Monetary Policy Committee held Bank Rate at 3.75% on 19 March 2026, marking the sixth consecutive hold following six cuts since August 2024. The committee cited the Middle East war as a driver of higher energy prices, which will push inflation above prior expectations in the near term. Current inflation stands at 3% against a 2% target.",
+  "summary": "The Bank of England's Monetary Policy Committee held the Bank Rate at 3.75% on 19 March 2026, marking the sixth consecutive hold following a series of cuts since August 2024. The Committee cited the war in the Middle East as a key disruption to global energy supplies, which will push UK inflation higher than previously expected in the near term. Current inflation stands at 3.3%, well above the 2% target.",
   "key_points": [
-    "Bank Rate held at 3.75% – unchanged from prior meeting",
-    "Six rate cuts have been implemented since August 2024",
-    "War in the Middle East has disrupted energy transportation and supply, raising energy prices",
-    "Higher energy costs will push up households' fuel and utility prices and increase companies' production costs",
-    "Inflation will be higher than expected at least in the short term due to energy price pressures",
-    "Current inflation rate is 3%, versus the 2% target",
-    "Next MPC meeting scheduled for 30 April 2026"
+    "Bank Rate maintained at 3.75% — sixth hold since cutting began in August 2024",
+    "War in the Middle East has disrupted energy transportation and supply chains, raising global energy prices",
+    "UK inflation expected to be higher than anticipated in the short term due to energy cost pressures",
+    "Current UK inflation rate: 3.3% (target: 2%)",
+    "The MPC acknowledged that monetary policy cannot directly affect global energy prices",
+    "The Committee will monitor the situation closely and adjust policy as needed to achieve the 2% inflation target sustainably over the medium term"
   ],
-  "why_it_matters": "The Bank of England is signaling that geopolitical energy disruptions are creating upward inflation pressure at a time when monetary policymakers had been normalizing rates. This could complicate the path toward further easing if energy-driven inflation proves persistent, affecting mortgage costs, consumer spending power, and business cost structures across the UK economy.",
+  "why_it_matters": "The BoE's decision to hold rates signals caution amid external energy supply shocks, suggesting the Committee is willing to tolerate elevated inflation temporarily rather than risk over-tightening. Market participants will watch for whether higher-for-longer energy costs delay the path back to target, which could shift rate cut expectations and affect gilt yields, mortgage rates, and pound sterling positioning.",
   "market_impact": {
     "asset_classes": [
       "bonds",
       "fx"
     ],
-    "directional_bias": "mixed",
-    "confidence": 3
+    "directional_bias": "unknown",
+    "confidence": 0
   },
-  "macro_context": "The source explicitly attributes near-term inflation upward pressure to Middle East conflict disrupting global energy supply. Higher energy costs are identified as a potential drag on economic activity as purchasing power is redirected to fuel and utilities. The MPC is assessing these second-order effects on inflation. The source states monetary policy cannot directly affect global energy prices.",
+  "macro_context": "The BoE faces a stagflationary headwind: energy-driven inflation pressures coinciding with slower economic growth as higher fuel costs squeeze household disposable income and business input costs. The Committee's explicit acknowledgment that inflation will be higher than expected signals a more uncertain trajectory for the 2% target, potentially delaying further easing and keeping monetary policy restrictive for longer.",
   "market_structure_context": "",
   "important_numbers": [
-    "3.75% – Bank Rate",
-    "3% – current inflation rate",
-    "2% – inflation target",
-    "6 – number of cuts since August 2024",
-    "30 April 2026 – next MPC meeting"
+    "3.75%",
+    "3.3%",
+    "2%",
+    "six cuts since August 2024"
   ],
   "tags": [
     "bank-of-england",
     "bank-rate",
-    "rate-decision",
+    "interest-rates",
     "monetary-policy",
     "inflation",
     "energy-prices",
     "middle-east",
+    "mpc",
     "uk"
   ],
   "llm_review": {
     "initial_confidence": 8,
-    "verification_confidence": 9,
+    "verification_confidence": 8,
     "verdict": "accept",
-    "issues_found": []
+    "issues_found": [
+      "The phrase 'sixth consecutive hold' is ambiguously supported by the source. The source says 'held Bank Rate at 3.75% — after cutting it six times since August 2024', which could mean there were six cuts and now this is a hold, or it could be the sixth consecutive hold at 3.75%. This is a minor interpretive ambiguity, not a factual error."
+    ]
   },
   "human_review": {
     "required": false,
@@ -70,36 +71,50 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_bankofengland_interest_rates_and_bank_rate_8670676aae5747a2.txt",
-  "notes": "Source is from Bank of England's institutional page; authoritative domain. Published 26 days before TODAY, well within the 90-day threshold – considered recent. Source discusses macro catalyst context (energy-driven inflation revision) clearly. Market impact confidence set to 3 because directional bias is mixed and explicit market reaction language is absent from the source.",
+  "notes": "Source is approximately 40 days old as of TODAY (2026-04-28), placing it well within the 90-day recency threshold. Published 19 March 2026. The page describes a specific MPC decision with clear macro implications. Page was last updated on 19 March 2026. No source_type explicitly provided in metadata, but the content is substantive decision information, not navigation or homepage material. Market impact confidence set to 0 as the source does not explicitly state predicted market reactions.",
   "linked_quant_context": [
     {
-      "record_id": "fed_funds_2026_04_10",
+      "record_id": "fed_funds_2026_04_17",
       "relationship": "temporally_proximate_quant",
       "reason": "within a month, exact topic match",
       "topic_overlap": [
         "macro catalysts",
-        "monetary-policy"
+        "monetary-policy",
+        "interest-rates"
       ],
-      "link_score": 73.8
+      "link_score": 76.7
     },
     {
-      "record_id": "2y_yield_2026_04_11",
+      "record_id": "fed_funds_2026_04_22",
       "relationship": "temporally_proximate_quant",
       "reason": "within a month, exact topic match",
       "topic_overlap": [
-        "macro catalysts"
+        "macro catalysts",
+        "monetary-policy",
+        "interest-rates"
       ],
-      "link_score": 70.0
+      "link_score": 76.7
+    },
+    {
+      "record_id": "fed_funds_2026_04_16",
+      "relationship": "temporally_proximate_quant",
+      "reason": "within a month, exact topic match",
+      "topic_overlap": [
+        "macro catalysts",
+        "monetary-policy",
+        "interest-rates"
+      ],
+      "link_score": 76.7
     }
   ],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "tier_2",
-    "score": 74.5,
+    "score": 71.0,
     "reasoning": [
-      "quality score: 74.5/100 (useful_context)",
+      "quality score: 71.0/100 (useful_context)",
       "high verification confidence",
-      "no issues found during verification",
+      "minor issues found (1)",
       "clear why_it_matters explanation",
       "contains useful structured numbers",
       "high-trust source",

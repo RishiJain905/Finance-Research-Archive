@@ -1,6 +1,6 @@
 {
   "id": "seed_crawl_treasury_social_security_and_medicare_trustees_09d64731602a66df",
-  "created_at": "2026-04-14T09:32:10.352844+00:00",
+  "created_at": "2026-04-28T10:29:33.878391+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
   "event_type": "unknown",
@@ -10,17 +10,16 @@
     "url": "https://home.treasury.gov/policy-issues/economic-policy/social-security-and-medicare-trustees-reports",
     "domain": "home.treasury.gov",
     "published_at": "",
-    "source_type": "seed_crawl"
+    "source_type": "listing_page"
   },
-  "summary": "This is a Treasury Department landing page describing the structure and function of the Social Security and Medicare Boards of Trustees, which annually report on the financial status of the respective trust funds to Congress. The actual Trustees Reports containing financial projections, depletion dates, and actuarial estimates are not present in this source body.",
+  "summary": "This Treasury page serves as a navigation hub linking to annual Social Security and Medicare Trustees Reports, which provide Congress with financial accounting and projections for these trust funds. The page contains no substantive content from the actual reports themselves.",
   "key_points": [
-    "The Secretary of the Treasury serves as Chair of both the Social Security and Medicare Boards of Trustees.",
-    "Each Board has six trustees: three federal officials (Social Security Commissioner, HHS Secretary, Labor Secretary) and two Presidentially-appointed public trustees.",
-    "The Treasury page describes the governance structure but does not include any actual financial data, projections, or trust fund status information.",
-    "Reports are issued annually to Congress detailing current and projected financial status of the trust funds.",
-    "Links to actual reports are referenced but the source body only contains introductory/descriptor text."
+    "The Secretary of the Treasury serves as Chair of the Boards of Trustees for Social Security and Medicare",
+    "The Board comprises six trustees: three federal officials (Social Security Commissioner, HHS Secretary, Labor Secretary) and two Senate-confirmed public members",
+    "Annual trustees reports provide Congress with current and projected financial status of both trust funds",
+    "The page provides links to separate Social Security Report, Medicare Report, and a combined Summary"
   ],
-  "why_it_matters": "This source is a structural description page, not an actual report. The actual Social Security and Medicare Trustees Reports contain critical long-term fiscal projections including trust fund depletion dates, actuarial balances, and sustainability assessments. Those reports represent significant macro-fiscal risk indicators. However, this specific source provides no numerical data or projections to analyze.",
+  "why_it_matters": "The actual Trustees Reports contain critical long-term fiscal projections for major entitlement programs, which have significant implications for federal budget deficits, Treasury issuance needs, and macroeconomic sustainability. However, this navigation page provides no actual report content or findings.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -30,30 +29,29 @@
   "market_structure_context": "",
   "important_numbers": [],
   "tags": [
+    "entitlements",
     "social-security",
     "medicare",
-    "trust-funds",
-    "treasury",
-    "entitlements",
-    "fiscal-policy"
+    "fiscal-policy",
+    "treasury"
   ],
   "llm_review": {
-    "initial_confidence": 2,
-    "verification_confidence": 2,
+    "initial_confidence": 1,
+    "verification_confidence": 1,
     "verdict": "reject",
     "issues_found": [
-      "Source is a Treasury landing page that describes the Trustees Reports mechanism but does not contain the actual reports",
-      "Source body is severely truncated with no financial projections, depletion dates, or actuarial data",
-      "Source is essentially a navigation/descriptor page - likely a PAGE_TYPE of navigation_page or listing_page which triggers rejection under core rules",
-      "published_at is blank - cannot verify recency or determine if this represents current information",
-      "event_type set to 'unknown' but correct type should be identifiable if actual reports were present (e.g., financial_stability_report or research_paper)",
-      "No actual market-relevant content to support macro catalyst analysis"
+      "Source body contains only structural metadata describing the report framework, no substantive content",
+      "Page is a listing/navigation page with links to actual reports, not the reports themselves",
+      "No actual projections, solvency dates, fiscal findings, or data present in the source",
+      "Published date not provided in source metadata",
+      "event_type set to 'unknown' which is acceptable given the thin content, but 'unknown' for a legitimate government report page with no content is also a flag",
+      "Per Rule #5: listing_page type pages should be rejected"
     ]
   },
   "human_review": {
     "required": false,
     "decision": "",
-    "notes": "This source is a thin crawler seed that describes the governance structure of the Social Security and Medicare Boards of Trustees but contains no actual report content, financial data, or projections. It appears to be a landing/index page rather than archival-quality content. The generated record accurately identifies this problem, but human review is needed to confirm the rejection decision and ensure no valuable content was overlooked."
+    "notes": "container_page"
   },
   "human_feedback": {
     "decision": "",
@@ -64,18 +62,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_treasury_social_security_and_medicare_trustees_09d64731602a66df.txt",
-  "notes": "This source fails to meet archival quality standards for macro catalyst research. The source body consists solely of descriptive text about who the trustees are and that annual reports are issued—no actual financial data, projections, or trust fund status information is present. To properly capture Social Security and Medicare fiscal sustainability information for macro analysis, the actual Trustees Reports (typically published in March of each year) would need to be accessed. The published_at field is blank, making it impossible to determine if this represents a current or historical document.",
+  "notes": "Source is a thin navigation page listing links to Social Security and Medicare Trustees Reports. No actual report content, projections, or findings present in the source body. Relevance to macro catalysts is indirect—the actual reports cover long-term fiscal sustainability which affects Treasury supply and macro outlook, but this source provides only metadata about report existence. Per rule #6, listing pages should be treated as non-archiveable. Recommend retrieving actual linked reports (Social Security Report, Medicare Report) for substantive macro-relevant content.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
     "score": 2,
     "reasoning": [
-      "Source body is extremely thin with no actual report content",
-      "No numerical data present to support macro catalyst analysis",
-      "Likely a navigation or index page rather than archival-quality source",
-      "Published date not provided, cannot verify recency",
-      "Cannot extract any market-relevant information as written"
+      "Source body contains only structural metadata, no substantive content",
+      "Listing/navigation page type per source_type classification",
+      "No actual data, projections, or findings present",
+      "Cannot assess recency or completeness",
+      "Not directly actionable for market or macro analysis"
     ]
   }
 }

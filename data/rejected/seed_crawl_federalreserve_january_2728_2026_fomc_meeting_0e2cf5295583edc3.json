@@ -1,9 +1,9 @@
 {
   "id": "seed_crawl_federalreserve_january_2728_2026_fomc_meeting_0e2cf5295583edc3",
-  "created_at": "2026-04-14T09:32:58.504567+00:00",
+  "created_at": "2026-04-28T10:21:32.797086+00:00",
   "status": "rejected",
   "topic": "macro catalysts",
-  "event_type": "fomc_statement",
+  "event_type": "unknown",
   "title": "January 27-28, 2026 FOMC Meeting",
   "source": {
     "name": "Board of Governors of the Federal Reserve System",
@@ -12,16 +12,16 @@
     "source_type": "navigation_page",
     "domain": "www.federalreserve.gov"
   },
-  "summary": "This is a navigation page for the January 27-28, 2026 FOMC meeting press conference. It contains only meta-information about document availability and release dates. The actual FOMC statement, implementation note, and minutes are in separate linked documents that must be crawled directly.",
+  "summary": "This is a Federal Reserve navigation hub page for the January 27-28, 2026 FOMC meeting that links to related documents (statement, implementation note, press conference transcript, minutes) but does not contain the actual policy decision or substantive content. The underlying documents (statement, implementation note) were released January 28, 2026 at 2:00 p.m.",
   "key_points": [
-    "This URL is a navigation page linking to FOMC documents, not the documents themselves",
-    "FOMC Meeting Statement was released January 28, 2026 at 2:00 p.m.",
-    "Implementation Note was released January 28, 2026 at 2:00 p.m.",
-    "Statement on Longer-Run Goals and Monetary Policy Strategy was released January 28, 2026",
-    "Press Conference Transcript released as PDF on January 28, 2026",
-    "FOMC Minutes were released February 18, 2026 at 2:00 p.m."
+    "This is a navigation/landing page, not an archiveable source containing actual FOMC content.",
+    "Statement and Implementation Note were released January 28, 2026 at 2:00 p.m.",
+    "Minutes are scheduled for release February 18, 2026 at 2:00 p.m.",
+    "Press Conference Transcript is available as a separate PDF document.",
+    "Links to Statement on Longer-Run Goals and Monetary Policy Strategy are provided.",
+    "The actual policy decision and content reside in linked PDFs and HTML documents, not on this page."
   ],
-  "why_it_matters": "This page is not a valid source for archival purposes. The substantive policy content (rate decision, forward guidance, vote tally) is in the linked FOMC statement and minutes documents, which should be crawled separately. This navigation page provides no decision details or market-relevant information.",
+  "why_it_matters": "This page serves as an index to FOMC documents but is not itself an archiveable source for market structure or macro catalyst analysis. The actual policy decision, rate targets, and forward guidance are contained in the linked Statement and Implementation Note documents.",
   "market_impact": {
     "asset_classes": [],
     "directional_bias": "unknown",
@@ -32,20 +32,21 @@
   "important_numbers": [],
   "tags": [
     "fomc",
-    "federal-reserve",
-    "monetary-policy",
     "navigation-page",
-    "january-2026"
+    "january-2026",
+    "federal-reserve",
+    "monetary-policy"
   ],
   "llm_review": {
-    "initial_confidence": 2,
+    "initial_confidence": 3,
     "verification_confidence": 0,
     "verdict": "reject",
     "issues_found": [
-      "Source is a navigation page (source_type: navigation_page). Per CORE RULE 5, pages of type homepage, navigation_page, listing_page, or search_page must be rejected.",
-      "event_type 'fomc_statement' is incorrect - this page does not contain the FOMC statement; it only links to it. The actual policy content exists in separate PDF/HTML documents that were not crawled.",
-      "Cannot verify rate decision, forward guidance, or any substantive policy content from this source.",
-      "No archiveable content; the record itself acknowledges 'Non-archiveable navigation page' and recommends crawling the linked documents instead."
+      "Source is a navigation/landing page with no substantive policy content - Rule 6 applies",
+      "Page contains only links to PDFs and HTML documents, not the actual FOMC content",
+      "No actual policy decision, rate target, or forward guidance is present in this source",
+      "event_type is set to 'unknown' when the underlying event type (fomc_statement) is inferable, but since no content exists on this page, the record cannot meaningfully categorize it",
+      "Source has no archival value as an independent record - actual archiveable content resides in linked Statement and Implementation Note documents"
     ]
   },
   "human_review": {
@@ -62,16 +63,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_federalreserve_january_2728_2026_fomc_meeting_0e2cf5295583edc3.txt",
-  "notes": "Non-archiveable navigation page. Per CORE RULE 6: pages of type homepage, navigation_page, listing_page are treated as non-archiveable. This page provides only meta-information about document availability and release dates, not the policy content itself. The linked documents (FOMC statement, implementation note, minutes) should be crawled separately for substantive analysis. Published within 90 days of TODAY (2026-04-14), so not historical.",
+  "notes": "NON-ARCHIVEABLE: This is a navigation hub page linking to FOMC documents rather than the substantive content itself. For a complete record of this FOMC meeting, the associated Statement (PDF/HTML) and Implementation Note should be retrieved separately. The underlying documents contain the actual policy decision, rate targets, balance sheet details, and forward guidance that would be relevant for macro catalyst analysis.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
-    "tier": "low",
-    "score": 2,
+    "tier": "non-archivable",
+    "score": 1,
     "reasoning": [
-      "Navigation page without substantive policy content",
-      "Cannot extract decision details, forward guidance, or market-relevant information from this source alone",
-      "High domain trust but low content value for archival purposes"
+      "Navigation page with no substantive policy content",
+      "Contains only links and dates, not actual decisions or data",
+      "Source type classified as navigation_page per Rule 6",
+      "Actual content requires retrieval of linked PDF/HTML documents"
     ]
   }
 }

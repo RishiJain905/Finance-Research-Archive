@@ -1,66 +1,84 @@
 {
   "id": "seed_crawl_bankofengland_trade_repository_tr_data_collections_3b1fd7ef45ae9048",
-  "created_at": "2026-03-31T18:04:39.018912+00:00",
+  "created_at": "2026-04-28T10:33:14.857899+00:00",
   "status": "review_queue",
-  "topic": "macro catalysts",
+  "topic": "market structure",
   "event_type": "regulatory_guidance",
   "title": "Trade Repository (TR) Data Collections",
   "source": {
     "name": "Bank of England",
     "url": "https://www.bankofengland.co.uk/financial-stability/trade-repository-data",
-    "domain": "www.bankofengland.co.uk",
-    "published_at": "2025-10-31",
-    "source_type": "informational_page"
+    "published_at": "2026-04-16",
+    "source_type": "institutional_page",
+    "domain": "www.bankofengland.co.uk"
   },
-  "summary": "The Bank of England collects trade repository data under UK EMIR (derivatives) and UK SFTR (securities financing transactions) to support financial stability objectives and market transparency following post-2008 crisis reforms. Data is used by multiple Bank committees (FPC, PRC, MPC, FMIC) and feeds into the Financial Stability Report. Final rules for updated reporting requirements come into force on 26 January 2026.",
+  "summary": "The Bank of England page describes its Trade Repository data collections under UK EMIR and UK SFTR, which gather transaction-level data on derivatives and securities financing transactions. The data supports financial stability oversight by the FPC, PRC, MPC, and FMIC committees. An April 2026 update modified UK EMIR Validation Rules, setting a reconciliation start date of 28 September 2026.",
   "key_points": [
-    "Data collected covers five derivatives asset classes: interest rates, foreign exchange, commodities, credit default swaps, and equities",
-    "Trade repositories aggregate transaction-level data from reporting firms and submit to financial authorities",
-    "Bank and FCA share UK EMIR reporting responsibilities; Bank handles CCPs, FCA handles other counterparties",
-    "New UK EMIR reporting requirements finalised August 2025, effective 26 January 2026",
-    "September 2024 regime aligned UK derivatives reporting with CPMI-IOSCO harmonisation guidance",
-    "Data informs FPC, PRC, MPC, and FMIC committees plus Financial Stability Reports and research"
+    "Trade Repository data collections cover derivatives (UK EMIR) and securities financing transactions (UK SFTR)",
+    "Five derivatives asset classes are reported: interest rates, foreign exchange, commodities, credit default swaps, and equities",
+    "Data is reported daily by UK firms and used by FPC, PRC, MPC, and FMIC committees",
+    "April 2026 update sets reconciliation start date as 28 September 2026 and removes requirement to reconcile underlying index name field",
+    "A revised derivatives reporting regime came into force on 30 September 2024, aligning with CPMI-IOSCO guidance",
+    "New UK EMIR reporting requirements came into force on 26 January 2026 following August 2025 policy statement"
   ],
-  "why_it_matters": "This source describes the regulatory infrastructure for derivatives and SFT transparency rather than providing macro catalysts or market-moving information. It is relevant for understanding post-crisis market oversight but does not itself constitute a market event or catalyst.",
+  "why_it_matters": "This describes the regulatory infrastructure for market transparency. Trade repository data gives authorities visibility into derivatives markets and securities financing, which was identified as a gap following the 2008/9 financial crisis. This is background supervisory infrastructure rather than a market-moving catalyst.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
     "directional_bias": "neutral",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "Trade repository data supports financial stability oversight by providing authorities visibility into derivatives and securities financing markets. The September 2024 updates aligned UK reporting with CPMI-IOSCO harmonisation standards for globally consistent OTC derivatives data.",
+  "market_structure_context": "Trade repositories provide transaction-level transparency to authorities on derivatives and SFT markets, helping them understand market function and counterparty interconnectedness. This is regulatory infrastructure for market oversight rather than a direct market structure mechanism.",
   "important_numbers": [
-    "26 January 2026 (new reporting requirements effective date)",
-    "30 September 2024 (previous regime implementation date)",
-    "12 September 2025 (consultation deadline)"
+    "28 September 2026"
   ],
   "tags": [
-    "bank-of-england",
-    "trade-repository",
     "uk-emir",
-    "uk-sftr",
+    "trade-repository",
     "derivatives-reporting",
-    "regulatory-infrastructure",
+    "bank-of-england",
+    "uk-sftr",
+    "regulatory",
     "financial-stability"
   ],
   "llm_review": {
-    "initial_confidence": 5,
+    "initial_confidence": 6,
     "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "TARGET/TOPIC metadata states 'macro catalysts' but source content is regulatory infrastructure description, not macro catalyst",
-      "published_at '2025-10-31' derived from 'Latest news' section; page-level publication date not explicitly confirmed in source",
-      "Source is informational/infrastructure page describing data collection framework - low direct relevance to market-moving events",
-      "Record correctly identifies this as not being a macro catalyst source in notes, but metadata topic assignment is inconsistent"
+      "Source metadata TARGET is 'macro catalysts' but source is institutional documentation describing regulatory reporting infrastructure, not a market catalyst",
+      "Source is institutional informational page (source_type: institutional_page) which the guidance treats as lower-quality for archival purposes",
+      "The record appropriately describes this as 'background supervisory infrastructure rather than a market-moving catalyst' in why_it_matters"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Factual content is accurate and well-supported; primary issue is source appropriateness for stated topic. Auto-route acceptable since the record itself acknowledges this is not a macro catalyst source."
+    "notes": "The record is accurate and factually supported by the source. The main question is whether institutional regulatory documentation qualifies for archival given the 'macro catalysts' target, but the record correctly contextualizes this as market structure background rather than a catalyst."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
   },
   "raw_text_path": "data/raw/seed_crawl_bankofengland_trade_repository_tr_data_collections_3b1fd7ef45ae9048.txt",
-  "notes": "Not a macro catalyst source. This is a regulatory infrastructure page describing how the Bank of England collects and uses derivatives and SFT transaction data. Useful background for understanding post-2008 market transparency regime but no direct market impact.",
-  "telegram_review_sent": true,
-  "telegram_review_fingerprint": "a5416e848053ed9b5656264a2b2a69909fb30745"
+  "notes": "Source describes regulatory reporting infrastructure rather than macro catalysts. Classified as market structure due to trade repository transparency role. The April 2026 update is recent and pertains to validation rule changes, not market-moving information.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier2",
+    "score": 5,
+    "reasoning": [
+      "Institutional informational page on regulatory reporting",
+      "Recent update (April 2026) for validation rules",
+      "Authoritative source (Bank of England)",
+      "Not a market catalyst but provides market transparency context"
+    ]
+  }
 }

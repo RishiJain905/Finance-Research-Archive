@@ -2,18 +2,17 @@
   "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "TARGET/TOPIC metadata states 'macro catalysts' but source content is regulatory infrastructure description, not macro catalyst",
-    "published_at '2025-10-31' derived from 'Latest news' section; page-level publication date not explicitly confirmed in source",
-    "Source is informational/infrastructure page describing data collection framework - low direct relevance to market-moving events",
-    "Record correctly identifies this as not being a macro catalyst source in notes, but metadata topic assignment is inconsistent"
+    "Source metadata TARGET is 'macro catalysts' but source is institutional documentation describing regulatory reporting infrastructure, not a market catalyst",
+    "Source is institutional informational page (source_type: institutional_page) which the guidance treats as lower-quality for archival purposes",
+    "The record appropriately describes this as 'background supervisory infrastructure rather than a market-moving catalyst' in why_it_matters"
   ],
   "human_review_required": false,
-  "human_review_reason": "Factual content is accurate and well-supported; primary issue is source appropriateness for stated topic. Auto-route acceptable since the record itself acknowledges this is not a macro catalyst source.",
-  "suggested_status": "review_queue",
+  "human_review_reason": "The record is accurate and factually supported by the source. The main question is whether institutional regulatory documentation qualifies for archival given the 'macro catalysts' target, but the record correctly contextualizes this as market structure background rather than a catalyst.",
+  "suggested_status": "accepted",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "This source describes the regulatory infrastructure for derivatives and SFT transparency rather than providing macro catalysts or market-moving information. It is relevant for understanding post-crisis market oversight but does not itself constitute a market event or catalyst.",
+    "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": "Trade repository data supports financial stability oversight by providing authorities visibility into derivatives and securities financing markets. The September 2024 updates aligned UK reporting with CPMI-IOSCO harmonisation standards for globally consistent OTC derivatives data."
+    "market_structure_context": ""
   }
 }

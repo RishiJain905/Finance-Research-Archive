@@ -2,16 +2,15 @@
   "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing page (index of 2017 press releases) containing only titles, dates, and category labels with no substantive content",
-    "Source type correctly identified as 'listing_page' which per rule #6 should be rejected",
-    "event_type set to 'unknown' which is acceptable for a non-specific listing page",
-    "published_at set to '2017-01-01' is inaccurate—the page aggregates items throughout 2017 (up to 12/21/2017), not a single publication date",
-    "No individual press release content present; actual FOMC statements, rate decisions, and regulatory proposals require separate URLs",
-    "Approximately 9 years old relative to TODAY (2026-03-31); while historical materials may have archival value, listing pages without substantive content do not",
-    "market_impact correctly shows zero content—no verifiable market data present"
+    "Source is a listing_page per source_type and URL structure — violates rule #5",
+    "Contains no full-text content; only links to ~80+ individual press releases",
+    "No specific macro catalyst or market structure content present in the page itself",
+    "event_type set to 'unknown' — listing pages cannot be classified into a single taxonomy value",
+    "Published date 2017 is 9 years old, but age is moot since source type disqualifies it",
+    "Not suitable for direct archival; individual linked items would need separate processing"
   ],
   "human_review_required": false,
-  "human_review_reason": "The source is unambiguously a listing/navigation page with no substantive content. Per rule #5 and rule #6, listing pages should be rejected. The generated record correctly identifies this as non-archivable. No human review needed—the verdict is clear.",
+  "human_review_reason": "The record is already accurate and well-reasoned. Auto-reject is appropriate.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",

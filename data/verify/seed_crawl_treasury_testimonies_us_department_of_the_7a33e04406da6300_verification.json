@@ -1,15 +1,14 @@
 {
-  "verification_confidence": 0,
+  "verification_confidence": 9,
   "verdict": "reject",
   "issues_found": [
-    "Source is a listing_page per SOURCE METADATA - violates rule #5 (reject container pages)",
-    "No substantive content - only testimony index with titles, dates, and officials",
-    "event_type is 'unknown' but should be 'congressional_testimony' per taxonomy; however, correct type would not change rejection",
-    "Source dates range May 2023 to June 2024, making content stale for current research",
-    "Not relevant to market structure or macro catalysts per archive focus areas"
+    "Source is a listing_page per metadata - rule 5 explicitly requires rejection of listing pages",
+    "Source contains no substantive testimony content, only dates and speaker names",
+    "No macro catalyst or market-relevant information present",
+    "Cannot serve as an archival research document"
   ],
   "human_review_required": false,
-  "human_review_reason": "The generated record is accurate and appropriately flags this as a non-archivable listing page. No human review needed as the record correctly identifies all issues.",
+  "human_review_reason": "The generated record is exceptionally well-calibrated. It correctly identifies the source as a listing_page, accurately summarizes its lack of substantive content, and appropriately recommends rejection. The LLM's analysis mirrors the correct verdict that a human would reach. No additional review needed.",
   "suggested_status": "rejected",
   "corrected_fields": {
     "summary": "",
