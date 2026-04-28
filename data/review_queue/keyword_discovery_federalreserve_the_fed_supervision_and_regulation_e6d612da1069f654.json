@@ -1,69 +1,70 @@
 {
   "id": "keyword_discovery_federalreserve_the_fed_supervision_and_regulation_e6d612da1069f654",
-  "created_at": "2026-04-14T01:27:50.182943+00:00",
+  "created_at": "2026-04-28T13:32:47.489757+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "unknown",
-  "title": "Annual Report - 2024: Supervision and Regulation",
+  "title": "Supervision and Regulation",
   "source": {
     "name": "Federal Reserve",
     "url": "https://www.federalreserve.gov/publications/2024-ar-supervision-and-regulation.htm",
-    "domain": "www.federalreserve.gov",
-    "published_at": "2024",
-    "source_type": "publication_page"
+    "published_at": "",
+    "source_type": "unknown",
+    "domain": "www.federalreserve.gov"
   },
-  "summary": "This chapter of the Federal Reserve's 2024 Annual Report describes the Fed's supervisory and regulatory framework for banking organizations as of year-end 2024, categorizing institutions by portfolio type and providing aggregate asset data across bank holding companies, state member banks, savings and loan holding companies, and financial market utilities.",
+  "summary": "This Federal Reserve Annual Report chapter describes the supervisory and regulatory framework for U.S. banking organizations as of year-end 2024, detailing the portfolio categories used to organize supervised institutions, the number and total assets of banks in each category, and the structure of the Federal Reserve's supervisory approach. The document provides institutional reference data rather than current market-moving information.",
   "key_points": [
-    "The Fed categorizes supervised institutions into portfolios: CBOs (under $10B assets), RBOs ($10-100B), LFBOs ($100B+ and foreign banks), and LISCC (8 U.S. G-SIBs)",
-    "As of December 31, 2024, 3,747 U.S. bank holding companies controlled approximately 95% of all insured commercial bank assets",
-    "The LISCC portfolio includes 8 U.S. G-SIBs with $15.2 trillion in total assets and 4 state member banks within those organizations",
-    "State member banks numbered 1,402, operating 47,434 branches representing 35% of all U.S. commercial banks and 70% of all commercial banking offices",
-    "497 domestic BHCs and 46 foreign banking organizations held Financial Holding Company (FHC) status as of year-end 2025",
-    "Five supervised insurance organizations (SLHCs) with approximately $450 billion in total assets were supervised by the Fed at year-end 2024",
-    "FSOC designated eight Financial Market Utilities (FMUs) as systemically important under Title VIII of Dodd-Frank in July 2012"
+    "As of December 31, 2024, there were 3,408 community banking organizations with $3.0 trillion in total assets",
+    "The LISCC portfolio (8 U.S. G-SIBs) held $15.2 trillion in total assets, representing the largest supervised segment",
+    "Large banking organizations (non-LISCC U.S. firms with $100B+ assets) totaled 18 firms with $5.1 trillion in assets",
+    "Bank holding companies controlled approximately 95% of all insured commercial bank assets in the United States",
+    "Five supervised insurance organizations held approximately $450 billion in total assets as of December 31, 2024",
+    "The Federal Reserve supervises financial market utilities (FMUs) designated as systemically important under Dodd-Frank title VIII"
   ],
-  "why_it_matters": "This document provides baseline institutional knowledge about the Fed's supervisory taxonomy and banking sector composition as of year-end 2024. For market structure analysis, the FMU designation information is the most directly relevant element, though the discussion is brief and non-actionable.",
+  "why_it_matters": "This source provides institutional reference data about the structure and size of the U.S. banking system under Federal Reserve supervision. While it offers useful context about the supervisory landscape, it does not contain information likely to move markets or serve as a macro catalyst. The data reflects the organizational framework rather than current conditions or policy directions.",
   "market_impact": {
     "asset_classes": [],
-    "directional_bias": "neutral",
+    "directional_bias": "",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "The source discusses Financial Market Utilities (FMUs) that manage multilateral systems for transferring, clearing, and settling payments and securities. The Fed supervises FMUs chartered as member banks or Edge Act corporations, with FSOC having designated eight FMUs as systemically important under Dodd-Frank Title VIII in July 2012 (no operational details or updates provided). This is the only market infrastructure element in an otherwise supervisory/regulatory overview.",
+  "market_structure_context": "The document describes the supervisory structure of the U.S. banking system, including the categorization of supervised institutions into portfolios (CBOs, RBOs, LFBOs, LISCC). It details the organizational breakdown of bank holding companies, state member banks, savings and loan holding companies, and financial market utilities. This provides background on the institutional landscape but does not describe market operations, plumbing, or mechanisms.",
   "important_numbers": [
-    "3,747 U.S. bank holding companies",
-    "$15.2 trillion (LISCC total assets)",
-    "$10.4 trillion (LFBO total assets)",
-    "1,402 state member banks",
-    "47,434 branches (35% of commercial banks, 70% of offices)",
-    "8 systemically important FMUs designated by FSOC",
-    "$450 billion (supervised insurance organizations total assets)",
-    "497 domestic FHCs"
+    "3,408 community banking organizations",
+    "$3.0 trillion (CBO assets)",
+    "8 G-SIBs in LISCC portfolio",
+    "$15.2 trillion (LISCC assets)",
+    "18 large banking organizations (non-LISCC U.S.)",
+    "$5.1 trillion (LBO assets)",
+    "497 domestic FHCs",
+    "95% of insured commercial bank assets controlled by BHCs",
+    "$450 billion (supervised insurance organizations total assets)"
   ],
   "tags": [
     "federal-reserve",
     "supervision",
     "banking-regulation",
-    "financial-market-utilities",
-    "bank-holding-companies",
-    "fsoc",
+    "institutional-structure",
     "annual-report",
-    "supervision-framework"
+    "bank-holding-companies",
+    "g-sib",
+    "regulatory-framework"
   ],
   "llm_review": {
-    "initial_confidence": 2,
+    "initial_confidence": 3,
     "verification_confidence": 6,
     "verdict": "review",
     "issues_found": [
-      "event_type is set to 'unknown' when the source is clearly institutional documentation (Annual Report chapter on Supervision and Regulation). Should be 'research_paper' or 'regulatory_guidance'.",
-      "The source acknowledges the FSOC FMU designation as July 2012, but provides no operational details or updates - this is historical reference only, not current market structure information.",
-      "The record notes 'published_at: 2024' which is imprecise; the source is a chapter from the 2024 Annual Report with data as of December 31, 2024."
+      "event_type is 'unknown' - the source is clearly a formal regulatory document (part of the Federal Reserve's 2024 Annual Report chapter on Supervision and Regulation) which should be classified as 'regulatory_guidance' or 'research_paper'",
+      "source.published_at is empty - no publication date provided in metadata",
+      "Source age is approximately 16 months prior to TODAY (2026-04-28), making it historical reference data rather than current information",
+      "Source does not contain market-moving information or macro catalysts - it is descriptive institutional reference data"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "The record is factually accurate and correctly identifies the source's archival limitations. Human review is not required as the automated decision pathway can handle this borderline case."
+    "notes": "The source is a legitimate content page within the Federal Reserve's 2024 Annual Report (not a navigation/container page), but event_type is missing and the document is historical institutional reference rather than a market catalyst. Human review needed to confirm archival value and assign appropriate event_type."
   },
   "human_feedback": {
     "decision": "",
@@ -74,19 +75,19 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_supervision_and_regulation_e6d612da1069f654.txt",
-  "notes": "This is a chapter from the Fed's 2024 Annual Report covering supervisory and regulatory responsibilities. The content is descriptive/institutional rather than analytical or actionable. The primary market structure element is the brief mention of Financial Market Utilities (FMUs) and FSOC's designation of 8 systemically important FMUs in 2012 - this is not new information and provides no operational details. The bulk of the document catalogs banking organization portfolios and their aggregate asset sizes as of year-end 2024. Given the age (data is 15+ months old as of today), the institutional nature of the content, and the lack of actionable market structure or macro catalyst information, this source has limited value for real-time or forward-looking research. Marked for human review as candidate for exclusion from active archive.",
+  "notes": "This source describes the Federal Reserve's supervisory and regulatory activities and provides institutional data about the U.S. banking system as of year-end 2024. While it touches on market structure in terms of describing how supervised institutions are categorized, it does not provide market-moving information, discuss market mechanisms or plumbing, or serve as a macro catalyst. The document is best characterized as an institutional reference that would be useful for understanding the regulatory landscape but has limited direct relevance to market analysis or trading decisions. The data is historical (approximately 16 months old as of TODAY) and descriptive rather than forward-looking. PAGE_TYPE should be confirmed—if this is a navigation or listing page, it may be non-archiveable.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 25,
+    "score": 3,
     "reasoning": [
-      "Historical data as of year-end 2024 (15+ months old)",
-      "Institutional overview rather than analytical content",
-      "Only tangential connection to market structure via brief FMU reference",
-      "No macro catalyst content",
-      "Low actionability for trading or risk management research",
-      "Better sources available for current banking sector conditions"
+      "Historical institutional reference document, not a market-moving event",
+      "Low relevance to macro catalysts (no policy decisions, data releases, or forward guidance)",
+      "Describes supervisory categories rather than market structure mechanisms",
+      "Data is approximately 16 months old relative to TODAY",
+      "Not actionable for trading or risk management",
+      "Useful for regulatory background context only"
     ]
   }
 }

@@ -1,14 +1,20 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when it should be 'regulatory_guidance' - the correct type is obvious from context (Federal Reserve capital framework page)",
+    "Source is a navigation/framework page that merely links to PDF documents containing the actual bank-specific capital requirements",
+    "This page contains no substantive market-relevant data - it explains methodology and links to PDFs for years 2020-2025",
+    "Actual capital requirements data resides in linked PDFs (not this page), making this thin for direct RAG purposes",
+    "No 2026 requirements available - last update was September 30, 2025 (approximately 7 months before TODAY)",
+    "Page functions as disclosure/methodology reference, not a source of current market or macro catalyst data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This source is borderline based on content accuracy (the record's factual claims are correct), but the source type violates Core Rule #6: navigation/framework pages and thin low-signal sources bias toward reject. The page doesn't contain current market data or actionable research content - it's a methodology explanation that links elsewhere for actual data. While the description is accurate, the underlying source has limited archival value for market structure research.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This Federal Reserve page provides a high-level overview of the capital requirements framework for large banks ($100B+ in assets), but functions primarily as a navigation hub linking to annual requirement PDFs rather than containing the actual requirements data itself. The framework requires minimum CET1 of 4.5%, a stress capital buffer (SCB) of at least 2.5%, and G-SIB surcharges of at least 1.0%.",
+    "why_it_matters": "Large bank capital requirements are a core component of the financial system's safety net and affect how much capital banks must hold against potential losses. These requirements influence bank behavior, lending capacity, and systemic risk. The stress capital buffer framework directly ties capital requirements to adverse economic scenarios, creating a dynamic capital floor that expands when stress test results worsen.",
+    "market_structure_context": "This page documents the regulatory framework governing bank capital adequacy. The SCB requirement creates a market-structure mechanism where bank capital requirements respond to stress test outcomes, which are tied to portfolio composition and risk exposures. The G-SIB surcharge ensures systemically important institutions hold additional capital. However, this page does not provide current period capital requirements—it is a methodology and linkage page."
   }
 }
