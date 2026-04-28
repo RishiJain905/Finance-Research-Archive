@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 6,
-  "verdict": "review",
+  "verification_confidence": 3,
+  "verdict": "reject",
   "issues_found": [
-    "event_type is set to 'unknown' when the source is clearly institutional documentation (Annual Report chapter on Supervision and Regulation). Should be 'research_paper' or 'regulatory_guidance'.",
-    "The source acknowledges the FSOC FMU designation as July 2012, but provides no operational details or updates - this is historical reference only, not current market structure information.",
-    "The record notes 'published_at: 2024' which is imprecise; the source is a chapter from the 2024 Annual Report with data as of December 31, 2024."
+    "Source does not address trading market structure or market microstructure—it is a regulatory supervisory inventory of banking institutions, not market operations intelligence",
+    "event_type 'financial_stability_report' is a misclassification; this is a chapter from the Federal Reserve's Annual Report, not a dedicated financial stability report",
+    "Source contains no information about trading venues, order routing, clearing mechanisms, liquidity, or market operations",
+    "Published date of 2024 Annual Report makes this stale for current market intelligence purposes",
+    "Record is accurate in its data points but lacks relevance to the archive's stated target of 'market structure' (market microstructure/trading context)"
   ],
   "human_review_required": false,
-  "human_review_reason": "The record is factually accurate and correctly identifies the source's archival limitations. Human review is not required as the automated decision pathway can handle this borderline case.",
-  "suggested_status": "review_queue",
+  "human_review_reason": "The issues are clear-cut: the source is a regulatory institutional inventory, not market structure intelligence in the trading sense. While the data is accurate, the fundamental relevance to the archive's scope is absent. The record should be rejected without requiring human escalation.",
+  "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "This document provides baseline institutional knowledge about the Fed's supervisory taxonomy and banking sector composition as of year-end 2024. For market structure analysis, the FMU designation information is the most directly relevant element, though the discussion is brief and non-actionable.",
+    "summary": "This section of the Federal Reserve's 2024 Annual Report provides a comprehensive inventory of supervised financial institutions as of year-end 2024, detailing the number and total assets of bank holding companies, state member banks, savings and loan holding companies, and financial market utilities under Fed oversight.",
+    "why_it_matters": "",
     "macro_context": "",
-    "market_structure_context": "The source discusses Financial Market Utilities (FMUs) that manage multilateral systems for transferring, clearing, and settling payments and securities. The Fed supervises FMUs chartered as member banks or Edge Act corporations, with FSOC having designated eight FMUs as systemically important under Dodd-Frank Title VIII in July 2012 (no operational details or updates provided). This is the only market infrastructure element in an otherwise supervisory/regulatory overview."
+    "market_structure_context": ""
   }
 }

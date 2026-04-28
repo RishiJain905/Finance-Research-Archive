@@ -1,0 +1,84 @@
+{
+  "id": "keyword_discovery_federalreserve_the_fed_fr_y14q_federal_4a1adc50504442a8",
+  "created_at": "2026-04-28T17:43:56.456483+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "FR Y-14Q Information Collection Q&As",
+  "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/publications/fr-y-14-qas/fr-y-14-qas-fr-y-14q.htm",
+    "published_at": "",
+    "source_type": "listing_page",
+    "domain": "www.federalreserve.gov"
+  },
+  "summary": "This Federal Reserve page aggregates FAQ responses clarifying reporting requirements for the FR Y-14Q Capital Assessments and Stress Testing Information Collection. The Q&As address technical bank regulatory reporting matters including lien position reporting, PPP loan inclusion, convertible securities classification, and Basel parameter calculations. The content is regulatory/compliance documentation with no direct relevance to market structure or macro catalysts.",
+  "key_points": [
+    "FR Y-14Q Schedule A.4 and A.5 require reporting international home equity and first lien mortgage loans as of the report date, per FR Y-9C definitions.",
+    "Schedules H.1 (Corporate Loan) and H.2 (Commercial Real Estate) require reporting lien status as of the report date per current instructions.",
+    "Convertible available-for-sale debt securities issued by non-publicly traded entities should be reported on Schedule F as Private Equity, not on Schedule B.",
+    "For Schedule A.9 summary variable B.5 ($ Commitments), firms should report total commitment amounts regardless of funding status and including all amounts reportable in FR Y-9C Schedule HC-L.",
+    "Basel fields (PD and LGD) for Schedule A.2 should be calculated as simple account-weighted averages, not dollar-weighted.",
+    "Accounts with partial charge-offs with remaining unpaid principal balances should not be included in # of accounts and $ outstanding summary variables for Schedule A."
+  ],
+  "why_it_matters": "This source provides Federal Reserve guidance on bank regulatory reporting for stress testing (FR Y-14Q). While relevant to bank compliance officers and risk managers, it does not address market microstructure, trading operations, or macro economic catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "fr-y-14q",
+    "stress-testing",
+    "bank-regulation",
+    "regulatory-reporting",
+    "federal-reserve",
+    "capital-assessment",
+    "q-and-a",
+    "compliance"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' but should be 'regulatory_guidance' - the source is Federal Reserve authoritative guidance on bank regulatory reporting",
+      "Source is not relevant to market structure or macro catalysts as specified in TOPIC - content is banking stress test reporting requirements (FR Y-14Q), not market microstructure or trading",
+      "Page type is listing_page/navigation - aggregation of FAQ responses is non-archiveable per Rule #5 and #6",
+      "No published_at date provided in source metadata",
+      "Source has no content about market microstructure, trading venues, execution quality, central bank policy decisions, or economic data releases",
+      "Low archival value for a finance research archive focused on market structure and macro catalysts"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "container_page"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/keyword_discovery_federalreserve_the_fed_fr_y14q_federal_4a1adc50504442a8.txt",
+  "notes": "This source is not relevant to market structure or macro catalysts as specified in the TOPIC guidance. It contains regulatory FAQ Q&As about bank stress test reporting requirements (FR Y-14Q). While important for bank compliance, it has no direct bearing on market microstructure, trading venues, execution quality, central bank policy decisions, or economic data releases. Page type is listing_page (navigation with FAQ content), making it non-archiveable per core rules. Lowered confidence due to lack of relevance and thin/no published date.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Non-archivable page type (listing_page)",
+      "Not relevant to specified topics (market structure, macro catalysts)",
+      "Technical regulatory reporting guidance with no trading/market content",
+      "No published date provided for age assessment",
+      "Source content is FAQ aggregation rather than primary research or policy"
+    ]
+  }
+}

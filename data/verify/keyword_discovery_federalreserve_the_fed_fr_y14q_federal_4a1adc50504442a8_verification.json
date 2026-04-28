@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' but should be 'regulatory_guidance' - the source is Federal Reserve authoritative guidance on bank regulatory reporting",
+    "Source is not relevant to market structure or macro catalysts as specified in TOPIC - content is banking stress test reporting requirements (FR Y-14Q), not market microstructure or trading",
+    "Page type is listing_page/navigation - aggregation of FAQ responses is non-archiveable per Rule #5 and #6",
+    "No published_at date provided in source metadata",
+    "Source has no content about market microstructure, trading venues, execution quality, central bank policy decisions, or economic data releases",
+    "Low archival value for a finance research archive focused on market structure and macro catalysts"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source clearly fails multiple rejection criteria: wrong page type (listing_page), wrong topic (banking regulation vs market structure), and missing relevance to archive scope. No human review needed as the issues are straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This source provides Federal Reserve guidance on bank regulatory reporting for stress testing (FR Y-14Q). While relevant to bank compliance officers and risk managers, it does not address market microstructure, trading operations, or macro economic catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

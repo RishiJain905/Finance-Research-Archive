@@ -1,14 +1,20 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a framework overview page that links to PDF documents for actual capital requirements rather than containing the data itself",
+    "No current 2026 capital requirement values are provided in the source - only the calculation framework",
+    "The source does contain substantive framework information (4.5% CET1 minimum, 2.5% SCB floor, 1.0% G-SIB surcharge floor, $100B threshold, Category IV participation details) that is accurately captured in the record",
+    "Last updated September 30, 2025 - approximately 7 months old as of TODAY, but describes an ongoing regulatory framework",
+    "SCB requirements stated as based on 2022 stress test results is accurate per source footnote"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The source contains accurate regulatory framework information and has clear market structure relevance, but is a framework description page linking to PDFs rather than a self-contained document with current data. The record accurately represents what the source contains. Decision hinges on whether 'thin but accurate' framework pages should be accepted for archival given their regulatory relevance.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
+    "summary": "The Federal Reserve Board describes its capital framework for large bank holding companies, savings and loan holding companies, and U.S. intermediate holding companies with $100 billion or more in total consolidated assets. The total CET1 capital ratio requirement consists of three components: a minimum 4.5% CET1 requirement, a stress capital buffer (SCB) of at least 2.5% derived from supervisory stress test results, and a G-SIB capital surcharge of at least 1.0% for global systemically important banks. Note: Actual current capital requirements are contained in linked PDF documents.",
+    "why_it_matters": "This framework establishes the capital buffers that large banks must maintain, directly affecting their ability to absorb losses and potentially influencing lending capacity. The SCB and G-SIB surcharges create differentiated capital requirements based on each bank's risk profile and systemic importance. Market participants monitor these requirements as they affect bank profitability targets, dividend capacities, and risk appetite. Note: Specific current-period capital requirement numbers are available in the linked PDF documents.",
     "macro_context": "",
-    "market_structure_context": ""
+    "market_structure_context": "The capital requirements framework is a core element of banking market structure, determining minimum capital buffers that large banks must hold. This affects the competitive landscape by creating tiered requirements based on bank size and systemic importance. Actual capital requirement values for specific banks are documented in the linked PDF files."
   }
 }

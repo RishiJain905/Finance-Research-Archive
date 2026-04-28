@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "Source body was truncated; only table of contents, glossary, and front matter were captured. Full analytical content, specific statistics, tables, and figures are not available for verification.",
-    "Published_at field shows only month/year (December 2025) without exact publication date",
-    "Cannot verify specific numbers, statistics, or quoted figures mentioned in the record without full source text",
-    "Record notes 'April 2025 FX volume surge' as an important number but this specific data point cannot be confirmed against the truncated source"
+    "PDF source was truncated; complete analysis would require full document access",
+    "verification_confidence field incorrectly set to 0 (should reflect actual quality assessment)",
+    "Specific quantitative figures (turnover numbers, basis spread ranges) not extracted due to truncation"
   ],
   "human_review_required": true,
-  "human_review_reason": "Source is a high-authority BIS publication with clear archival value and the record accurately reflects the table of contents. However, the source body truncation means full analytical content is unavailable for verification. Human review should confirm whether full PDF extraction is feasible and whether the record's specific claims (Triennial Survey data, FX volume figures, benchmark reform details) align with the complete source. The record is professionally constructed with no apparent fabrication, but conservative verification standards require seeing the full content before acceptance.",
+  "human_review_reason": "The record is well-constructed and accurate against available source content, with appropriate classification and good coverage of market structure themes. However, the source was truncated, limiting verification of specific quantitative claims. The verification_confidence is inconsistently set to 0 despite quality_tier scoring of 8 and initial_confidence of 8. Recommend accepting if archive prefers completeness over full-text verification for institutional publications of this stature.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "The BIS Quarterly Review December 2025 covers international banking and financial market developments, with substantial focus on market structure topics including FX derivatives turnover trends from the 2025 Triennial Survey, the cash-futures basis trade dynamics, and the ongoing LIBOR benchmark reform transition in interest rate derivatives markets. The publication examines structural shifts in global FX and IRD markets amid monetary policy changes and identifies clearing concentration as an emerging challenge for EMEs.",
+    "why_it_matters": "This BIS publication provides authoritative, source-grounded data on fundamental market structure elements: FX market liquidity conditions, basis trade dynamics, and clearing infrastructure. For traders and risk managers, understanding the cash-futures basis relationship and clearing concentration patterns is essential for assessing funding risks and execution quality in IRD and FX markets.",
+    "macro_context": "The research notes shifts in FX trading amid global monetary policy tightening cycles and links volatility challenges to risk-taking behavior. Sovereign yields moderated with monetary easing, while precious metals and USD appreciated.",
+    "market_structure_context": "Core market structure content includes: (1) FX market liquidity conditions and non-visible trading patterns, (2) cash-futures basis trade dynamics and XTD positioning, (3) clearing concentration challenges in EME OTC IRD markets, (4) migration of LIBOR-referenced contracts to new benchmarks, (5) broker-dealer and electronic broker landscape in FX execution."
   }
 }
