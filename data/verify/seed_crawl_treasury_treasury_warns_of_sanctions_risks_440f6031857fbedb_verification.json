@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "market_impact.confidence is set to 0 but market_impact.asset_classes lists 'commodities' and 'fx', creating inconsistency - if no impact assessment is possible, asset_classes should also be empty or unspecified"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is largely accurate and well-sourced, but the why_it_matters section contains interpretive claims about 'escalated enforcement' and market dynamics that go beyond explicit source text. While not factually wrong, these forward-looking implications about potential disruptions to Iranian oil trade should be verified for appropriateness. Additionally, the market_structure_context is empty despite sanctions guidance having potential implications for financial system access and correspondent banking relationships.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "The alert does not announce new sanctions but emphasizes enforcement willingness and secondary sanctions threats. Given that China accounts for 90% of Iranian oil exports and teapot refineries process most of this, this guidance could affect compliance behavior in energy-related transactions. The geopolitical tension between U.S. enforcement and Chinese energy interests adds uncertainty, though no immediate policy shift or supply disruption is signaled.",
+    "market_structure_context": "The alert specifically mentions that some teapot refineries have 'used the U.S. financial system to conduct dollar-denominated transactions and procure U.S. goods.' This creates direct relevance to U.S. financial infrastructure, correspondent banking relationships, and dollar-based transaction monitoring. Secondary sanctions threats against foreign financial institutions add systemic risk considerations for banks with cross-border energy sector exposure."
+  }
+}
