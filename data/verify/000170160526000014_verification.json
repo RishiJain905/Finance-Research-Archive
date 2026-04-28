@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing - name, url, domain, published_at, and source_type fields are all empty",
+    "Record content is essentially blank - summary, key_points, why_it_matters, macro_context, market_structure_context, notes, market_impact, important_numbers, and tags fields are all empty",
+    "Event type is missing - no valid taxonomy value provided",
+    "Source is a regulatory filing (10-Q) which is a data document, not an article-like source with narrative content relevant to market structure or macro catalysts",
+    "Generated record provides no extractable content to verify against the source",
+    "Topic field is empty - no categorization provided"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is completely empty with no extractable content or source attribution. This appears to be a generation failure rather than a verification issue. Human review needed to determine if the pipeline should regenerate with proper extraction, or if Baker Hughes 10-Q filings should be excluded from the archive scope (company-specific financial reports are not macro market catalysts).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
