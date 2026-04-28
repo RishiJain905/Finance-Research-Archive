@@ -1,6 +1,6 @@
 {
   "id": "keyword_discovery_bis_basel_iii_international_regulatory_framework_992314f94fe66986",
-  "created_at": "2026-04-14T01:32:47.682886+00:00",
+  "created_at": "2026-04-28T10:14:31.685466+00:00",
   "status": "rejected",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
@@ -12,41 +12,48 @@
     "published_at": "",
     "source_type": "listing_page"
   },
-  "summary": "This is a high-level index page on the BIS website listing Basel III regulatory framework documents, including finalization of post-crisis reforms, minimum capital requirements for market risk, Liquidity Coverage Ratio, and Net Stable Funding Ratio. No substantive content, data, or policy signals are present in this page itself.",
+  "summary": "BIS provides an index page to Basel III regulatory framework documents, including standards for capital requirements, market risk, liquidity coverage ratio, and net stable funding ratio. Basel III is an internationally agreed set of measures developed in response to the 2007-09 financial crisis to strengthen bank regulation, supervision, and risk management.",
   "key_points": [
-    "Basel III is an internationally agreed set of measures developed by the Basel Committee on Banking Supervision in response to the 2007-09 financial crisis",
-    "The measures aim to strengthen regulation, supervision, and risk management of banks",
-    "Basel III standards are minimum requirements applying to internationally active banks",
-    "Post-crisis regulatory reforms were endorsed by the GHOS on 7 December 2017",
-    "Adjustments to the market risk framework were endorsed by the GHOS on 14 January 2019",
-    "This page is an index/list of document links, not a substantive research document"
+    "Basel III reforms have been integrated into the consolidated Basel Framework",
+    "Standards apply as minimum requirements to internationally active banks",
+    "Final post-crisis reforms endorsed by the Group of Governors and Heads of Supervision (GHOS) on December 7, 2017",
+    "Market risk framework adjustments endorsed by GHOS on January 14, 2019",
+    "Key components include: Minimum capital requirements for market risk, Liquidity Coverage Ratio (LCR), Net Stable Funding Ratio (NSFR)",
+    "Member jurisdictions committed to implementing standards within established timeframes"
   ],
-  "why_it_matters": "This source is not actionable for this archive. It is a navigation/listing page containing only a catalog of links to Basel III documents. It contains no specific data, no policy decisions, no market signals, and no substantive analysis that would support trading decisions or macro research.",
+  "why_it_matters": "Basel III sets the foundational regulatory capital and liquidity requirements for globally active banks. These standards affect bank balance sheets, risk-taking behavior, and ultimately credit availability and market liquidity. Understanding the regulatory framework is essential for assessing banking sector resilience and potential compliance costs.",
   "market_impact": {
-    "asset_classes": [],
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
     "directional_bias": "unknown",
     "confidence": 0
   },
   "macro_context": "",
-  "market_structure_context": "While Basel III technically relates to banking regulatory structure, this listing page provides no specifics on market plumbing, trading operations, or market structure in the sense relevant to this archive (trading venues, market makers, market microstructure, clearing, settlement).",
-  "important_numbers": [],
+  "market_structure_context": "This page references the Basel III framework which directly governs bank capital requirements, risk-weighted assets, and market risk standards. Implementation phases extend from 2017 to 2028, affecting how banks structure their trading operations and maintain regulatory capital ratios.",
+  "important_numbers": [
+    "2017-2028: Basel III transitional arrangements timeline"
+  ],
   "tags": [
     "basel-iii",
-    "banking-regulation",
-    "bank-supervision",
+    "bank-regulation",
     "capital-requirements",
-    "regulatory-framework"
+    "bis",
+    "regulatory-framework",
+    "banking-supervision",
+    "market-risk"
   ],
   "llm_review": {
-    "initial_confidence": 1,
+    "initial_confidence": 3,
     "verification_confidence": 2,
     "verdict": "reject",
     "issues_found": [
-      "Source is a listing/navigation page, not a substantive document",
-      "No published_at date provided in source metadata",
-      "Contains only index of links and high-level summaries, no actionable content",
-      "Source attribution present but page has no standalone archival value",
-      "event_type 'regulatory_guidance' is technically valid but misleading for an index page with no actual guidance content"
+      "Source is a listing/navigation page (index to Basel III documents) with minimal substantive content",
+      "No published_at date provided; page references historical documents from 2017-2019",
+      "Cannot extract specific numerical thresholds, capital requirements, or substantive regulatory details from this source",
+      "Limited standalone archival value; actual research value resides in the linked documents (e.g., 'Finalising post-crisis reforms December 2017')",
+      "Rule 5 violation: PAGE_TYPE listing_page mandates rejection"
     ]
   },
   "human_review": {
@@ -63,18 +70,17 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_bis_basel_iii_international_regulatory_framework_992314f94fe66986.txt",
-  "notes": "This source is a listing page from BIS containing an index of Basel III regulatory framework documents. Per rule 6, listing pages should be treated as non-archiveable. The content is purely structural—a menu of links to Basel III papers on capital requirements, liquidity rules, and market risk standards. No specific numbers, no publication date, no data. Not useful for market structure or macro catalyst research. Recommend routing to a separate regulatory library if such a collection exists, but this record is not suitable for the main archive.",
+  "notes": "This is a BIS index/landing page, not a substantive document. SOURCE_TYPE is listing_page per rules. Page contains links to Basel III publications but minimal original content. No published_at date available; references historical GHOS endorsements from 2017 and 2019. For research purposes, the linked documents (e.g., 'Finalising post-crisis reforms December 2017') would be more valuable. Limited relevance to macro catalysts. Moderate indirect relevance to market structure through banking regulation.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "low",
-    "score": 1,
+    "score": 3,
     "reasoning": [
-      "Listing/navigation page with no substantive content",
-      "No published date or authoritative metadata",
-      "Contains only index of links to other documents",
-      "Not relevant to trading market structure or macro catalysts",
-      "Would not support any trading or research workflow"
+      "Source is a navigation/index page with minimal substantive content",
+      "No published date provided - content is historical by reference",
+      "Most value would be in linked documents, not this index page",
+      "Cannot extract specific capital requirements or thresholds from this source"
     ]
   }
 }

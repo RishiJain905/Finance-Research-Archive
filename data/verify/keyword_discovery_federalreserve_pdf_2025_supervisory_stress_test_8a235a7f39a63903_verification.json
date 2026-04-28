@@ -1,16 +1,18 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
+  "verification_confidence": 5,
+  "verdict": "review",
   "issues_found": [
-    "Minor: event_type is 'regulatory_guidance' but this technical methodology document could more precisely be classified as 'research_paper' given it describes model development frameworks rather than issuing guidance"
+    "Topic classification mismatch: SOURCE METADATA shows TARGET was 'market structure', but this document is about bank supervisory stress test methodology (regulatory capital assessment), not market structure in the trading/clearing/market-making sense",
+    "Relevance ambiguity: Archive scope targets 'market structure or macro catalysts'. This is regulatory methodology that precedes macro catalyst events (stress test results), not the catalyst itself",
+    "event_type 'research_paper' is acceptable but 'regulatory_guidance' might be more precise given the official Fed methodology nature"
   ],
-  "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, but a human decision is needed on relevance classification. The SOURCE METADATA itself flags 'market structure' as the target, yet the document content is banking supervision methodology (stress test models, capital calculations) rather than market structure in the trading/market-making/clearing sense. Human reviewer should decide: (1) Reclassify topic to 'banking regulation' or 'regulatory methodology', or (2) Accept under broad macro context given that stress test methodology informs capital buffers affecting lending capacity and market functioning.",
+  "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
     "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "macro_context": "The 2025 Stress Test Methodology document is published in June, before the actual stress test results (typically end of Q2) and capital requirements (Q3). While the methodology itself is not a market-moving event, the resulting stress test outputs later in the year can influence bank stock valuations, capital requirement expectations, and dividend/buyback capacity for large bank equities.",
+    "market_structure_context": "Fed stress test methodology determines capital buffer requirements for large banks ($100B+). These capital requirements affect how much leverage banks can carry, which indirectly influences their market-making capacity, securities lending activity, and ability to provide credit during stress periods. The methodology's loan loss models (corporate, CRE, mortgage, credit card) project how bank balance sheets would be impacted in a severe recession."
   }
 }

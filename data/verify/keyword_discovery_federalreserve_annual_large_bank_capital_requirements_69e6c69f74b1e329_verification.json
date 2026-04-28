@@ -1,14 +1,15 @@
 {
-  "verification_confidence": 8,
-  "verdict": "accept",
-  "issues_found": [],
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a navigation/index page (source_type: navigation_page) — automatically rejected per Rule 5",
+    "Content is thin explanatory text; substantive policy data resides in linked PDFs, not this page",
+    "No specific policy event, decision, or new announcement — only framework description",
+    "No archival value as standalone document; linked PDFs (2020-2025) are the actual archiveable records",
+    "event_type set to 'unknown' — this is appropriate since the page is not event-based, but confirms the source lacks event structure"
+  ],
   "human_review_required": false,
-  "human_review_reason": "",
-  "suggested_status": "accepted",
-  "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
-  }
+  "human_review_reason": "Rule 5 is determinative: navigation pages are automatically rejected regardless of content quality. No human judgment needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {}
 }

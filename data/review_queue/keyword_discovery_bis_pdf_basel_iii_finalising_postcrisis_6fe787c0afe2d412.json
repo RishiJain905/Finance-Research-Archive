@@ -1,69 +1,75 @@
 {
   "id": "keyword_discovery_bis_pdf_basel_iii_finalising_postcrisis_6fe787c0afe2d412",
-  "created_at": "2026-04-14T01:39:16.392614+00:00",
+  "created_at": "2026-04-28T10:19:26.946463+00:00",
   "status": "review_queue",
   "topic": "market structure",
   "event_type": "regulatory_guidance",
   "title": "Basel III: Finalising post-crisis reforms",
   "source": {
-    "name": "Bank for International Settlements - Basel Committee on Banking Supervision",
+    "name": "Bank for International Settlements",
     "url": "https://www.bis.org/bcbs/publ/d424.pdf",
-    "domain": "www.bis.org",
     "published_at": "2017-12-01",
-    "source_type": "research_paper"
+    "source_type": "research_paper",
+    "domain": "www.bis.org"
   },
-  "summary": "The Basel Committee on Banking Supervision published finalising reforms to the Basel III framework in December 2017, addressing post-crisis regulatory shortcomings. Key objectives include reducing excessive variability in risk-weighted assets (RWAs), enhancing standardised approaches for credit and operational risk, constraining internally-modelled approaches, and complementing risk-weighted capital ratios with a finalised leverage ratio and robust capital floor.",
+  "summary": "The Basel Committee on Banking Supervision published finalised Basel III reforms in December 2017 to address pre-crisis regulatory framework shortcomings. A key objective is reducing excessive variability in risk-weighted assets (RWAs) that undermined stakeholder confidence during the global financial crisis. The reforms enhance standardised approaches for credit and operational risk, constrain internally-modelled approaches, and add a finalised leverage ratio and robust capital floor.",
   "key_points": [
-    "Primary objective is reducing excessive variability in banks' risk-weighted assets (RWAs), which eroded stakeholder faith during the financial crisis",
-    "Output floor phased implementation: 50% (2022), 55% (2023), 60% (2024), 65% (2025), 70% (2026), 72.5% (2027)",
-    "Revised standardised approach for credit risk effective 1 January 2022",
-    "Internal ratings-based (IRB) framework revisions effective 1 January 2022, with 1.06 scaling factor removed",
-    "Leverage ratio revised exposure definition effective 1 January 2022; G-SIB buffer effective 1 January 2022",
-    "Implementation committed to not significantly increasing overall capital requirements based on quantitative impact study"
+    "Published December 2017; implementation phased from 1 January 2022 through 1 January 2027 for output floor (50% to 72.5%)",
+    "Output floor introduced incrementally: 50% (2022), 55% (2023), 60% (2024), 65% (2025), 70% (2026), 72.5% (2027)",
+    "Revisions to standardised approach for credit risk and CVA framework effective 1 January 2022",
+    "Revisions to IRB framework and leverage ratio (revised exposure definition) effective 1 January 2022 and 2025 respectively",
+    "G-SIB buffer effective 1 January 2022; 1.06 scaling factor for IRB RWA amounts will no longer apply upon implementation",
+    "Three overarching principles: strengthen bank regulation/supervision globally, actively seek stakeholder views, conduct comprehensive impact assessment without significantly increasing overall capital requirements"
   ],
-  "why_it_matters": "This document represents the final Basel III regulatory framework that shapes global banking capital requirements. It directly affects how banks calculate risk-weighted assets, leverage ratios, and minimum capital floors—all critical inputs to market structure and bank risk management. The phased output floor implementation (capping internally-modelled RWAs at 72.5% of standardised approach by 2027) constrains model discretion and affects competitive dynamics between banks using internal models versus standardised approaches.",
+  "why_it_matters": "This is the definitive regulatory standard for global banking capital adequacy post-financial crisis. Banks' capital planning, risk management frameworks, and competitive dynamics are directly affected. The output floor and leverage ratio requirements shape how banks allocate assets and manage balance sheets, with downstream effects on credit availability and market liquidity.",
   "market_impact": {
     "asset_classes": [
       "bonds",
       "equities"
     ],
-    "directional_bias": "neutral",
+    "directional_bias": "mixed",
     "confidence": 0
   },
-  "macro_context": "",
-  "market_structure_context": "This document directly shapes market structure by establishing global banking capital standards. Key market structure elements include: (1) output floor constrains internally-modelled capital calculations, reducing RWA variability; (2) standardised approach enhancements affect credit risk assessment for bank borrowers; (3) leverage ratio revisions with revised exposure definitions affect bank balance sheet reporting; (4) G-SIB buffer requirements affect systemically important bank capital planning.",
+  "macro_context": "By maintaining overall capital requirements at current levels while improving framework robustness, the Committee aimed to avoid constraining bank lending to the real economy while still enhancing financial stability.",
+  "market_structure_context": "The reforms directly affect market structure by constraining RWA variability (improving comparability of bank capital ratios), finalising the leverage ratio framework, and introducing the output floor which limits benefits from internal models. These changes impact how banks optimise capital across asset classes.",
   "important_numbers": [
-    "Output floor: 50% (Jan 2022), 55% (Jan 2023), 60% (Jan 2024), 65% (Jan 2025), 70% (Jan 2026), 72.5% (Jan 2027)",
-    "IRB scaling factor: 1.06 removed upon implementation",
-    "Implementation date for standardised approach: 1 January 2022",
-    "Implementation date for leverage ratio revised exposure: 1 January 2022"
+    "50% output floor (2022)",
+    "55% output floor (2023)",
+    "60% output floor (2024)",
+    "65% output floor (2025)",
+    "70% output floor (2026)",
+    "72.5% output floor (2027)",
+    "1 January 2022: Credit risk standardised approach, CVA framework, G-SIB buffer",
+    "1 January 2025: Revised leverage ratio exposure definition",
+    "1 January 2027: Full output floor (72.5%)"
   ],
   "tags": [
     "basel iii",
-    "bank regulation",
+    "banking regulation",
     "capital requirements",
+    "risk-weighted assets",
     "output floor",
     "leverage ratio",
     "credit risk",
     "operational risk",
-    "rwa",
     "g-sib buffer",
-    "bis"
+    "bcbs",
+    "regulatory framework"
   ],
   "llm_review": {
-    "initial_confidence": 7,
+    "initial_confidence": 9,
     "verification_confidence": 7,
     "verdict": "review",
     "issues_found": [
-      "IRB framework revision effective date appears potentially misstated: key_points says '1 January 2022' but source footnote indicates IRB revisions are tied to output floor implementation where the scaling factor is removed 'on implementation of the revisions to the risk-weighted framework outlined in this standard and the revised output floor' - main table shows IRB as '1 January 2022^3' where footnote 3 references output floor",
-      "Source body was truncated; limited excerpt available for full verification of all implementation details",
-      "Implementation dates (2022-2027) have now passed; actual implementation outcomes not verifiable from source alone"
+      "Source body was truncated in processing, preventing full verification of all key_points claims",
+      "Source predates TODAY by over 8 years (2017-12-01) — while archival value exists due to ongoing implementation phases through 2027, this requires human confirmation that the summary accurately captures the full document",
+      "The 'three overarching principles' in key_points should be verified against the full text (paragraphs 5-7 appear to support this, but truncation prevents complete confirmation)"
     ]
   },
   "human_review": {
     "required": true,
     "decision": "",
-    "notes": "Record is well-constructed with accurate summary and key points matching source content. Issues are relatively minor - primarily about verification of dates against actual implementation status and source truncation. The record correctly identifies this as a December 2017 foundational regulatory document with appropriate archival value. Can be accepted to review_queue for verification against actual implemented standards."
+    "notes": "Source body was truncated, preventing full verification of all key_points against source text. While the visible portions of the source support the summary and the source is high-quality (BIS regulatory standard), the truncation means we cannot confirm that all implementation dates and details in key_points exactly match the source. Additionally, the source is over 8 years old — human confirmation is needed to assess whether the record accurately represents the document's current relevance despite age."
   },
   "human_feedback": {
     "decision": "",
@@ -74,17 +80,18 @@
     "reviewer_id": ""
   },
   "raw_text_path": "data/raw/keyword_discovery_bis_pdf_basel_iii_finalising_postcrisis_6fe787c0afe2d412.txt",
-  "notes": "Source is a foundational regulatory document from BIS Basel Committee. While it defines market structure rules for global banking, publication date (December 2017) makes it a historical record. The actual implementation occurred in phases from 2018-2027. Market impact confidence set to 0 because this is regulatory framework text without direct price/market action statements. Recommend cross-referencing with actual implemented standards and any subsequent amendments.",
+  "notes": "Source is a high-quality, authoritative regulatory standard from BIS. Document dated December 2017 and represents the final Basel III post-crisis reforms package. Body text was truncated in processing. While the document predates TODAY by over 8 years, it represents foundational regulatory framework that continues to affect market structure through ongoing implementation phases. Source type classified as research_paper based on PDF publication format from BIS.",
   "linked_quant_context": [],
   "linked_article_context": [],
   "quality_tier": {
     "tier": "high",
     "score": 8,
     "reasoning": [
-      "Authoritative source from BIS Basel Committee",
-      "Technical regulatory document with specific implementation dates and numerical thresholds",
-      "Addresses market structure directly through banking capital requirements",
-      "Source body truncated limiting full analysis"
+      "Authoritative source: BIS as standard-setting body for global banking regulation",
+      "High domain trust tier indicated in metadata",
+      "Content directly addresses market structure through capital framework reforms",
+      "Clear implementation timeline and specific numbers provided",
+      "Historical document but retains relevance as baseline regulatory text"
     ]
   }
 }

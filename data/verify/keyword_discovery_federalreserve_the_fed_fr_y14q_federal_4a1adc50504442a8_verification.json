@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is administrative regulatory reporting guidance for bank stress testing forms",
+    "TARGET specifies 'market structure' but content discusses form completion instructions (lien positions, PPP loan reporting, Basel parameter calculations) with zero relevance to trading, market operations, liquidity, or market microstructure",
+    "The record correctly identifies the mismatch but the source itself should not have been archived under a 'market structure' target",
+    "event_type 'unknown' is technically correct but reinforces that this has no connection to the defined taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear rejection based on topic mismatch — no need for human review since the record itself acknowledges the source is 'not_related' to market structure",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

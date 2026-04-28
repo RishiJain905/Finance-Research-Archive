@@ -1,19 +1,20 @@
 {
-  "verification_confidence": 5,
+  "verification_confidence": 3,
   "verdict": "review",
   "issues_found": [
-    "Source is a 1,982-page compilation of existing standards rather than a discrete analytical publication or new policy development",
-    "Published_at is blank - represents an ongoing framework not a specific publication date",
-    "Archival value is ambiguous - foundational reference documents may not belong in a research archive focused on market catalysts",
-    "The record correctly identifies this as not being a market catalyst but appropriately flags the market structure relevance"
+    "No PUBLISHED_AT date in source metadata - temporal assessment impossible, cannot determine if this includes recent Basel III reforms or is from an earlier version",
+    "Source is an encyclopedia-style reference document, not a discrete research note or market catalyst - lacks specific findings, decisions, or actionable intelligence",
+    "The document does not contain publication date, version info, or update markers that would allow assessment of recency",
+    "No specific numbers, policy decisions, or research findings are contained - just the framework structure and table of contents",
+    "Cannot determine if this represents current policy or an older consolidated version without date metadata"
   ],
   "human_review_required": true,
-  "human_review_reason": "The record is factually accurate and well-constructed, but raises a legitimate policy question: should comprehensive framework compilation documents (as opposed to specific policy changes, research findings, or discrete events) be archived? This requires a judgment call on archival scope that the automated system cannot make.",
+  "human_review_reason": "This is a regulatory framework reference document with no publication date, making it impossible to assess staleness or determine if it contains recent policy updates. The document is authoritative (BIS source) and relevant to market structure (banking regulation affects dealer behavior and market depth), but as a 1,982-page reference encyclopedia without temporal markers, it lacks the discrete catalyst quality typical of archived research. Human judgment is needed to decide whether to archive as reference material with chunking requirements or exclude from active research queue.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
-    "market_structure_context": ""
+    "summary": "This is a comprehensive 1,982-page regulatory framework document from the Basel Committee on Banking Supervision (BCBS) that consolidates all prudential standards for internationally active banks. The document covers capital definitions, risk-based capital requirements, credit risk approaches (standardized and IRB), market risk calculations, operational risk, and leverage ratios. No specific publication date is provided; this appears to be a living framework reference document downloaded in April 2026.",
+    "why_it_matters": "This framework establishes the foundational regulatory structure governing how banks calculate and maintain capital against market risk, credit risk, and operational risk. For market structure analysis, the market risk (MAR) sections directly impact how dealers size positions, provide liquidity, and manage risk - affecting bond spreads, derivatives pricing, and overall market depth. However, without a publication date, it is impossible to verify whether this version reflects current Basel III reforms or represents an earlier framework state.",
+    "macro_context": "The Basel Framework is the primary global standard setter for banking prudential regulation. BCBS member jurisdictions have agreed to implement these standards for internationally active banks. The framework's periodic updates (including recent Basel III reforms) can materially affect bank balance sheets, risk appetite, and market-making capacity - with downstream effects on liquidity and spreads across fixed income and derivatives markets.",
+    "market_structure_context": "This document is a regulatory reference framework. The MAR (market risk) section includes standardized approach provisions (MAR20-MAR23), internal models approach requirements (MAR30-MAR33), backtesting requirements, and P&L attribution tests. The CRE (credit risk) sections address counterparty credit risk calculations and capital treatment for central counterparties. These specifications influence dealer behavior, balance sheet usage, and market-making capacity. However, the lack of a publication date prevents verification of which framework version this represents."
   }
 }

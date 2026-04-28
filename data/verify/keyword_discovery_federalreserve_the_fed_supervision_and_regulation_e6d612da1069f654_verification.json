@@ -1,18 +1,20 @@
 {
-  "verification_confidence": 6,
+  "verification_confidence": 5,
   "verdict": "review",
   "issues_found": [
-    "event_type is set to 'unknown' when the source is clearly institutional documentation (Annual Report chapter on Supervision and Regulation). Should be 'research_paper' or 'regulatory_guidance'.",
-    "The source acknowledges the FSOC FMU designation as July 2012, but provides no operational details or updates - this is historical reference only, not current market structure information.",
-    "The record notes 'published_at: 2024' which is imprecise; the source is a chapter from the 2024 Annual Report with data as of December 31, 2024."
+    "event_type is 'unknown' but source is a supervisory/regulatory annual report chapter; 'financial_stability_report' would be more appropriate if the taxonomy is meant to capture this content type",
+    "published_at is missing from source metadata - cannot verify recency or apply the 90-day staleness exception",
+    "Source is informational/structural baseline documentation, not a market catalyst event - limited direct relevance to macro catalysts",
+    "Source content was truncated mid-sentence on FMU discussion - incomplete coverage",
+    "The key_point about '497 domestic bank holding companies...As of year-end 2025' references future-dated data (from TODAY's perspective of April 2026), which could be an error or intentional forward-looking reference in the original report"
   ],
-  "human_review_required": false,
-  "human_review_reason": "The record is factually accurate and correctly identifies the source's archival limitations. Human review is not required as the automated decision pathway can handle this borderline case.",
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source text and source attribution is correct. However, the record has borderline archival value: it provides valuable institutional baseline data on U.S. banking structure (relevant to market structure analysis via LISCC portfolio data, FMU infrastructure, and tiered supervisory framework), but it lacks any market catalyst properties. Human reviewer should determine whether standalone annual report chapters warrant archiving as research notes, or whether this is better consolidated as reference background material.",
   "suggested_status": "review_queue",
   "corrected_fields": {
     "summary": "",
-    "why_it_matters": "This document provides baseline institutional knowledge about the Fed's supervisory taxonomy and banking sector composition as of year-end 2024. For market structure analysis, the FMU designation information is the most directly relevant element, though the discussion is brief and non-actionable.",
+    "why_it_matters": "Consider rephrasing to explicitly position this as foundational/reference material for understanding Fed supervisory infrastructure rather than implied as an actionable research note. Clarify that the $15.2T LISCC figure and 172 LFBO data represent market infrastructure baseline knowledge useful for systemic risk analysis.",
     "macro_context": "",
-    "market_structure_context": "The source discusses Financial Market Utilities (FMUs) that manage multilateral systems for transferring, clearing, and settling payments and securities. The Fed supervises FMUs chartered as member banks or Edge Act corporations, with FSOC having designated eight FMUs as systemically important under Dodd-Frank Title VIII in July 2012 (no operational details or updates provided). This is the only market infrastructure element in an otherwise supervisory/regulatory overview."
+    "market_structure_context": ""
   }
 }
