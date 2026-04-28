@@ -1,0 +1,44 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - no summary, key_points, why_it_matters, macro_context, or market_structure_context content was produced",
+      "Source attribution fields (name, url, domain) are empty despite source metadata being provided",
+      "published_at is empty - should be 2026-04-22 based on filing date",
+      "source_type is empty - should be sec_edgar",
+      "No event_type assigned - cannot determine applicability to market structure or macro catalysts",
+      "No topic assigned",
+      "All market_impact fields are empty/defaults",
+      "record contains no extractable research value given complete absence of content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is entirely blank with no extractable content. This appears to be a system failure rather than a reviewable record."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

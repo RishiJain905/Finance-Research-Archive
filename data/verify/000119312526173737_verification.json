@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is an individual company earnings filing for a regional bank (Byline Bancorp, ticker BY)",
+    "The 8-K body contains no substantive financial figures; all actual Q1 2026 results are in referenced exhibits (99.1 press release, 99.2 slide deck) not included in this filing",
+    "No macro relevance: no Fed policy, economic data releases, central bank decisions, or market structure elements present",
+    "event_type correctly set to 'unknown' as corporate earnings filing doesn't fit any defined macro/market structure category",
+    "Thin, low-signal source with no systemic macro relevance for a finance research archive focused on market structure or macro catalysts"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record correctly identifies this filing as out of scope for macro catalysts and market structure research. The LLM analysis is accurate and well-reasoned. Human review confirms the recommendation to reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

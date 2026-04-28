@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it is a routine corporate governance 8-K filing for a small mining company (Greenland Mines Ltd)",
+    "Event type set to 'unknown' which is technically correct since no taxonomy value fits a corporate board appointment, but the system should handle governance filings better",
+    "The record accurately captures the source content but the source itself has no relevance to the archive's stated focus areas",
+    "Source is 6 days old (April 22, 2026 filing dated TODAY April 28, 2026) — not a staleness concern"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies this 8-K as a routine corporate governance filing with no market structure or macro catalyst relevance. However, human review is needed to: (1) confirm whether the archive's scope strictly excludes all corporate governance filings, and (2) decide whether to reject outright or accept as a low-priority archival record. The LLM correctly flagged this as out_of_scope, but the automated routing decision needs human confirmation given the binary nature of the reject/accept determination.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

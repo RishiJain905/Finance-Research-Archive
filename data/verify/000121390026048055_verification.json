@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but should be assigned to a taxonomy value or explicitly marked as not-applicable for routine SEC filings",
+    "topic field is blank - record should indicate this filing is not relevant to any research topic",
+    "macro_context and market_structure_context are blank - appropriate given the source content, but should be explicitly noted"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and the factual content accurately reflects the source. The assessment that this is a routine SPAC filing with no relevance to market structure or macro catalysts is correct. No manual intervention needed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "International Media Acquisition Corp., a SPAC (Special Purpose Acquisition Company) registered as an emerging growth company, filed an 8-K on April 27, 2026, disclosing a $2,000 extension payment to its trust account to extend its deadline for consummating an initial business combination from May 2, 2026 to June 2, 2026.",
+    "why_it_matters": "This is a routine corporate SPAC administration filing. The extension payment is a standard mechanism SPACs use to buy additional time to find and complete a business combination. The $2,000 amount is nominal and does not represent material financial news. This filing has no relevance to market structure or macro-financial catalysts.",
+    "macro_context": "Not applicable - this is a routine corporate filing with no macro-financial relevance.",
+    "market_structure_context": "Not applicable - this filing contains no information about market structure, trading operations, or liquidity."
+  }
+}
