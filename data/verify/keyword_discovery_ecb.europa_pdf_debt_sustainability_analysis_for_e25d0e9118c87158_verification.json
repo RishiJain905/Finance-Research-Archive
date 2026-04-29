@@ -1,18 +1,19 @@
 {
-  "verification_confidence": 7,
+  "verification_confidence": 6,
   "verdict": "review",
   "issues_found": [
-    "SOURCE METADATA TARGET field indicates 'market structure' but content is fiscal policy/debt sustainability methodology - topic classification mismatch",
-    "Source is a 2017 methodology paper, approximately 9 years stale; while it may have archival value as methodology, it does not constitute a current market catalyst",
-    "Record correctly identifies this as historical/low relevance, but human decision needed on whether to archive dated methodology"
+    "Source is dated April 2017 (~9 years old), exceeding the 90-day recency threshold but may have archival value for understanding ECB fiscal surveillance methodology",
+    "Source body was truncated at character limit, limiting verification of any quantitative details beyond the abstract and non-technical summary",
+    "No specific numerical projections, country-specific findings, or quantitative analysis could be verified from truncated source",
+    "Document is a methodological framework rather than current market analysis or policy decision; relevance to near-term market catalysts is limited"
   ],
   "human_review_required": true,
-  "human_review_reason": "SOURCE METADATA TARGET mismatch with content; 9-year-old methodology paper requires human judgment on archival value. While the research record is factually accurate and well-supported, the topic misalignment and age raise questions about whether this should be archived given the stated focus areas.",
+  "human_review_reason": "Source is an official ECB Occasional Paper with accurate summary and key points supported by the accessible portions of the document (abstract, non-technical summary, introduction). However, the document is dated (2017) and truncated, raising questions about archival value and whether updated methodology exists. Human reviewer should assess whether this 9-year-old methodological framework warrants archiving given limited near-term market relevance versus historical/research value for understanding ECB approaches to debt sustainability analysis.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "This ECB Occasional Paper introduces a comprehensive Debt Sustainability Analysis (DSA) framework for euro area sovereigns published in April 2017. The framework consists of three building blocks: (i) a deterministic DSA with benchmark and shock scenarios evaluated over a ten-year horizon, (ii) a stochastic DSA providing probabilistic debt assessments (probability of debt exceeding thresholds, probability of debt not stabilizing, dispersion of simulated paths), and (iii) other indicators capturing short-run liquidity risks (net financing needs, refinancing ease index) and medium to longer-run solvency risks (debt maturity structure, contingent liabilities, net financial position, governance/political risk). Results can be summarized in a heat map for overall risk assessment. Source was truncated and does not provide specific numerical projections or country-specific findings from later sections of the paper.",
+    "why_it_matters": "This ECB Occasional Paper provides a standardized methodology for assessing sovereign debt vulnerabilities across euro area countries. The framework is designed to serve as an early warning system for fiscal risks and could inform understanding of ECB fiscal surveillance under the Stability and Growth Pact. While dated (April 2017), it represents the ECB's analytical approach to debt sustainability and remains relevant for historical research on euro area fiscal risk assessment methodologies.",
+    "macro_context": "The paper addresses sovereign debt sustainability as a key macro risk factor for euro area countries. Debt sustainability analysis is used by international organizations and financial institutions in their surveillance procedures. The framework notes that unsustainable fiscal policy can create negative spillovers to other Member States in EMU, and that building fiscal buffers during good times is essential following the euro area sovereign debt crisis. The paper incorporates EU fiscal governance requirements under the Stability and Growth Pact when assessing primary balance adjustments and sustainable debt levels.",
     "market_structure_context": ""
   }
 }
