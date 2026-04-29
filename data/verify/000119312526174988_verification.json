@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when it could be classified as 'data_release_other' for corporate earnings announcement",
+    "Source correctly identified as out of scope for macro/market structure archive, but event_type classification is imprecise"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies this 8-K filing as out of scope for a macro catalyst/market structure archive. The summary, key_points, and why_it_matters are all factually supported by the source. Minor issue: event_type could be 'data_release_other' rather than 'unknown' since this is a corporate earnings release filing, but this is a borderline case given the archive's focus on central bank and economic data releases rather than individual corporate earnings.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a routine corporate earnings 8-K filing for a single company",
+    "event_type is set to 'unknown' when the correct type should be 'data_release_other' (earnings announcement)",
+    "Record has no archival value for macro/market structure research focus",
+    "The filing references actual earnings data in Exhibit 99.1 but does not contain it in the 8-K body itself, making the record thin"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear case for rejection — corporate earnings filing from a single company is not relevant to macro or market structure research",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

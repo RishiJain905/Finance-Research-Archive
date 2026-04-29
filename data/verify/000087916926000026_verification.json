@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing for Incyte Corp (biotech/pharmaceutical company) - not relevant to market structure or macro catalysts",
+    "Source content is entirely XBRL-structured financial tags with no human-readable narrative content",
+    "Source provides no information about central bank policy, interest rates, economic data releases, or financial market operations",
+    "event_type correctly set to 'unknown' but a more specific event_type is not needed since document is out of scope",
+    "This document is appropriate for a corporate earnings/financial reporting archive, not a macro/monetary policy research archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is clearly out of scope. The source is a corporate quarterly financial filing (10-Q) for an individual biotech company. The record accurately captures the source's nature and correctly identifies it as irrelevant to market structure or macro catalysts. The record's own analysis supports rejection with high confidence.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

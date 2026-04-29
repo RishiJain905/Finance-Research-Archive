@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' - for an earnings announcement, 'data_release_other' or 'research_paper' would be more appropriate if archiving",
+    "quality_tier correctly identifies source as not_relevant to macro/market structure, but this conflicts with archival mandate"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and well-structured, correctly identifying that this single REIT earnings filing has no relevance to market structure or macro catalysts. However, human review is needed to decide: (1) whether a finance research archive focused on market structure/macro catalysts should archive routine single-company earnings, and (2) whether the 'unknown' event_type should be corrected to 'data_release_other' if the record is to be accepted. The content matches the source precisely and no fabricated claims exist.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate earnings disclosure from Franklin Street Properties Corp. (FSP), a single REIT. The filing announces Q1 2026 financial results but defers actual figures to Exhibits 99.1 and 99.2, which are not included in the 8-K body. The filing has no relevance to market structure or macro catalysts and contains no actionable market intelligence.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
