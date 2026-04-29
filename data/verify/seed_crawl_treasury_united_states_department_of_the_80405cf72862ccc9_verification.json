@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' but this is a treasury_issuance (nomination announcement) - should be corrected to treasury_issuance or another valid type",
+    "Source content is thin administrative press release with no substantive market structure or macro catalyst information",
+    "The record correctly identifies this as low-quality content, but should be rejected rather than placed in review_queue given the thin content and lack of market relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a thin personnel announcement with no policy substance, forecasts, or market-relevant information. While the Assistant Secretary for Financial Markets role has market structure significance, the announcement itself contains only biographical details. The record appropriately notes low quality but recommends review_queue; given that the source provides no substantive information about market structure or macro catalysts despite the role's importance, rejection may be more appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Secretary Scott Bessent announced President Trump's intent to nominate G. Hunter McMaster II as Assistant Secretary for Financial Markets. McMaster currently serves as Counselor to the Secretary and has been performing the delegable duties of the position since July 2025. His prior experience includes Head of Trading at Key Square Group and positions at Morgan Stanley and Goldman Sachs focusing on foreign exchange and interest rate markets.",
+    "why_it_matters": "The Assistant Secretary for Financial Markets oversees Treasury market operations and debt management, a role with significant market structure implications. However, this announcement provides only biographical information with no discussion of policy positions, market views, or planned initiatives.",
+    "macro_context": "",
+    "market_structure_context": "While the Assistant Secretary for Financial Markets position manages $25+ trillion in outstanding Treasury debt and oversees market operations, this source provides no information on policy direction or market structure views."
+  }
+}
