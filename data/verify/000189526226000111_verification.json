@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — while 10-Q filings don't fit standard event taxonomy well, the record should either use a more descriptive type like 'corporate_financial_report' or justify 'unknown' more explicitly",
+    "The record correctly identifies this source as outside the archive's scope (not related to market structure or macro catalysts), but should still be rejected rather than sit in review queue if scope mismatch is the primary issue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record accurately identifies source limitations. Low verification score reflects the source's nature as a corporate 10-Q, not a flaw in the record itself.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Noble Corp plc Q1 2026 10-Q filing containing XBRL-formatted financial statements including balance sheet, segment data (floaters, jackups), debt details, and a subsequent event note regarding 8.5% Senior Secured Second Lien Notes.",
+    "why_it_matters": "Noble Corp is an offshore drilling company (OCS sector). This 10-Q reports Q1 2026 results showing activity across segments like floaters and jackups. Contains standard financial data and subsequent events but is not relevant to macro catalysts or market structure analysis.",
+    "macro_context": "Not applicable to macro/monetary policy focus.",
+    "market_structure_context": "Not applicable to market structure focus."
+  }
+}

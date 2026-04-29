@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 8-K filing announcing a preferred stock offering — not relevant to market structure or macro catalysts as defined in archiving criteria",
+    "Event type 'unknown' is technically correct since corporate regulatory filings fall outside the defined taxonomy (monetary policy, speeches, data releases, Treasury operations, research)",
+    "Individual corporate capital action with no systemic market relevance — does not move broader financial markets",
+    "The record correctly identifies this issue in why_it_matters and notes",
+    "However, the record still has event_type: 'unknown' rather than explicitly marking it as outside scope, and tags include '8-k' which could cause misrouting"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies the source's lack of relevance to market structure or macro catalysts. The 'reject' verdict is correct and aligned with archiving criteria. No human review needed as the generated record already made the right call.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate capital markets action by Ally Financial Inc., a bank holding company. The filing announces a proposed public offering of Series D Preferred Stock with potential redemption of existing Series B Preferred Stock, plus Q1 2026 earnings. This is NOT relevant to the archive's scope — it has no relevance to monetary policy, market structure, Treasury operations, or macro catalysts that would affect broader financial markets. Only relevant if archiving all SEC filings regardless of market impact.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

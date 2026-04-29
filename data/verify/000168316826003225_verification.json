@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is NOT relevant to market structure or macro catalysts - this is a routine micro-cap equity financing filing",
+    "event_type set to 'unknown' when it should be classified as not_applicable - this is a corporate securities filing, not a market structure or macro catalyst event",
+    "The record's own analysis correctly identifies the source as irrelevant to the archive's focus areas, yet suggested_status is 'review_queue' instead of 'rejected'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-reject is appropriate because the source has no relevance to market structure or macro catalysts. The record itself acknowledges this in the notes, why_it_matters, and quality_tier fields. The only correct action is rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

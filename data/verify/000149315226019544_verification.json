@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a SPAC corporate merger filing with no relevance to market structure or macro catalysts",
+    "The absence of redemption requests in a SPAC deal is routine corporate news, not a market-moving or policy-relevant event",
+    "The record correctly identifies the filing as irrelevant but then places it in review_queue despite clear rejection criteria",
+    "event_type 'unknown' is acceptable here given no taxonomy fit, but this underscores the filing's irrelevance to this archive's scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent and factually accurate, but it explicitly states the source has no relevance to market structure or macro catalysts. According to Rule 1, Rule 6, and the calibration guide, records that are not relevant to the archive's focus should be rejected, not reviewed.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

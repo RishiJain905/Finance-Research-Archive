@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single-company corporate 10-Q filing (Otis Worldwide Corp, an elevator/escalator equipment and services company) - not relevant to market structure or macro catalysts",
+    "Source contains standard XBRL-tagged financial statement data with no content on monetary policy, interest rates, Treasury operations, economic data releases, or market structure topics",
+    "event_type set to 'unknown' which is acceptable given no taxonomy fit, but also signals the source falls outside the archive's scope"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record itself is accurate and well-reasoned, correctly identifying the source as out of scope. The generated record appropriately recommends exclusion from the archive. No human review needed as the verdict and reasoning align with the source content and the archive's defined focus areas.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

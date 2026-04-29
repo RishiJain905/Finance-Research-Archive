@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate 8-K earnings filing from Entergy Corporation (a utility holding company), which has no relevance to market structure or macro catalysts",
+    "Source does not contain Fed policy, rate decisions, Treasury operations, economic data releases, or any market structure content",
+    "event_type is correctly set to 'unknown' as this filing does not fit any taxonomy category for monetary policy, speeches, data releases, Treasury/operations, or research",
+    "The record itself acknowledges this as a 'discard' tier with score 2 and notes the source is not relevant",
+    "Per Rule 6, thin low-signal sources bias toward reject; this is an operational disclosure with no market-moving or policy-relevant content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed. The generated record correctly identifies the source as irrelevant to the archive's focus. The source is a routine SEC 8-K announcing Q1 2026 earnings from a utility company—operational in nature, not market-moving or policy-relevant. This is a clear reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "Source is a routine corporate earnings filing from a utility holding company with no relevance to market structure or macro catalysts. This 8-K discloses Q1 2026 financial results per Items 2.02 and 7.01 of Regulation FD. No Fed policy, rate decisions, Treasury operations, economic data releases, or market structure content present.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "000162828026027513",
+  "created_at": "2026-04-29T20:07:39.990486+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Simpson Manufacturing Co., Inc. 8-K Filing — 2026-04-27",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/920371/000162828026027513/ssd-20260427.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-27",
+    "source_type": "sec_filing"
+  },
+  "summary": "Simpson Manufacturing Co., Inc. (ticker: SSD; NYSE-listed) filed an 8-K on April 27, 2026 disclosing Q1 2026 financial results for the quarter ended March 31, 2026 and announcing availability of an investor presentation to be distributed to analysts and investors. The filing was signed by CFO Matt Dunn. This is a single-company corporate earnings disclosure with no relevance to broad market structure or macro catalysts.",
+  "key_points": [
+    "Simpson Manufacturing Co., Inc. announced Q1 2026 financial results on April 27, 2026",
+    "Results cover the quarter ended March 31, 2026",
+    "Company will present investor materials (Exhibit 99.2) to analysts and investors on or after April 27, 2026",
+    "Filing includes forward-looking statements and safe harbor disclaimers",
+    "Company is incorporated in Delaware, headquartered in Pleasanton, CA",
+    "Stock trades on NYSE under ticker symbol SSD"
+  ],
+  "why_it_matters": "This is a routine corporate earnings announcement for a single company in the construction/building materials sector. It provides no insight into broad macroeconomic conditions, Fed policy, market operations, or structural market dynamics. Not relevant for macro or market structure research.",
+  "market_impact": {
+    "asset_classes": [
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "earnings",
+    "corporate-filing",
+    "construction-materials",
+    "individual-company",
+    "sec-filing"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "Event type 'unknown' is technically correct but the taxonomy lacks a corporate earnings category - this is a data release equivalent for individual company results",
+      "Record correctly identifies lack of relevance to macro/market structure but the framing may be appropriate for company-specific equity archives rather than this macro-focused archive",
+      "Source is factually accurate and well-parsed, but source type (single-company 8-K earnings filing) falls outside the archive's stated scope"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is factually accurate and the source parsing is correct. However, this is a borderline case: (1) the archive criteria explicitly require relevance to market structure or macro catalysts, (2) a single-company earnings 8-K from a mid-cap building materials manufacturer clearly does not meet this threshold, (3) the record correctly acknowledges this limitation. Human review is needed to confirm whether records that explicitly fall outside scope should be auto-rejected or routed elsewhere."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000162828026027513.txt",
+  "notes": "NOT RELEVANT TO MARKET STRUCTURE OR MACRO CATALYSTS. This is a routine SEC 8-K filing for a single company (Simpson Manufacturing Co., Inc.) disclosing Q1 2026 earnings and an investor presentation. The filing contains no information about Fed policy, economic data releases, market operations, liquidity, or any structural market dynamics. Suitable for company-specific equity research but not for macro or market structure archives.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "Single-company corporate filing, not macro",
+      "No market structure content present",
+      "Earnings data not extractable from filing text alone (Exhibit 99.1 referenced but content not included)",
+      "Low utility for macro/market structure research archive"
+    ]
+  }
+}

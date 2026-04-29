@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Event type 'unknown' is technically correct but the taxonomy lacks a corporate earnings category - this is a data release equivalent for individual company results",
+    "Record correctly identifies lack of relevance to macro/market structure but the framing may be appropriate for company-specific equity archives rather than this macro-focused archive",
+    "Source is factually accurate and well-parsed, but source type (single-company 8-K earnings filing) falls outside the archive's stated scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and the source parsing is correct. However, this is a borderline case: (1) the archive criteria explicitly require relevance to market structure or macro catalysts, (2) a single-company earnings 8-K from a mid-cap building materials manufacturer clearly does not meet this threshold, (3) the record correctly acknowledges this limitation. Human review is needed to confirm whether records that explicitly fall outside scope should be auto-rejected or routed elsewhere.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
