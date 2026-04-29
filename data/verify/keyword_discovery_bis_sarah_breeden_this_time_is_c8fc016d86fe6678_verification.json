@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is truncated; final discussion of 'Risk two' and 'Risk three' is not captured in the provided text. The record references 'three salient vulnerabilities' but only Risk one (private markets) is fully visible. This creates uncertainty about whether the record's summary of all three risks is complete and accurate.",
+    "The speech text cuts off mid-sentence at 'Redemption pre' suggesting significant content is missing from the source. The record should not claim comprehensive coverage of the speech's full argument if critical sections are not available.",
+    "LLM review notes also flagged the truncation as requiring human confirmation of completeness."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source truncation leaves uncertainty about whether the record fully captures the three vulnerability risks discussed in the speech. While the visible portion of the source supports the key claims about private markets, sovereign debt, and market-based finance migration, we cannot verify the discussion of risks two and three. The record references 'three salient vulnerabilities' but only one is fully corroborated from the visible source text. Human review should confirm whether the full speech text (available as PDF) supports the record's representation of all three risks or whether the summary needs refinement.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Bank of England Deputy Governor Sarah Breeden delivered a speech on financial stability examining whether recent shocks (pandemic, Ukraine war, bank failures, UK gilt crisis, trade disruptions, energy shock) have left lasting vulnerabilities. She concluded that while the banking system is considerably stronger than pre-GFC, risks have migrated to market-based finance and sovereign balance sheets, warranting continued vigilance. Three salient vulnerabilities were highlighted: (1) private markets growth to $18 trillion without macro stress testing; (2) elevated sovereign debt near post-war highs; and (3) liquidity and leverage risks in market-based finance. [NOTE: Source was truncated; risk two and three details require verification against full text]",
+    "why_it_matters": "This speech provides a structured assessment of current financial stability risks from the BoE's Deputy Governor for Financial Stability. Market participants should note that: (1) the resilient narrative does not imply vulnerability-free status; (2) private markets represent an untested fault line at scale; (3) sovereign market disruptions can propagate rapidly through repo and derivatives markets. The speech signals continued regulatory focus on non-bank financial intermediation risks. [SOURCE TRUNCATED - human review recommended to confirm risk two and three details are accurately captured]",
+    "macro_context": "The speech contextualises current financial stability within a macro environment of persistent uncertainty including ongoing Middle East conflict, energy price volatility, and elevated bond yield movements. The shift of risk to sovereign balance sheets reduces fiscal space for future shock response.",
+    "market_structure_context": "Sovereign bond markets anchor pricing for mortgages and corporate credit and provide core collateral for repo and derivatives markets—the 'plumbing' of the financial system. When that plumbing fails, stress propagates quickly, as demonstrated by the UK in autumn 2022. The migration from bank-based to market-based finance (~50% of assets) means leverage, liquidity mismatch and complexity risks have shifted to less visible corners."
+  }
+}
