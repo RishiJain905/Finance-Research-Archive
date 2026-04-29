@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' when the correct classification would be 'data_release_other' for a Q1 2026 earnings announcement (even though substantive figures are in unreferenced Exhibit 99.1)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately describes the filing and correctly identifies its non-relevance to macro/market structure research. The sole issue is the event_type value, which should be corrected from 'unknown' to 'data_release_other' to match the taxonomy.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "EQT Corporation filed a Form 8-K on April 21, 2026, announcing its first quarter 2026 earnings via a news release (Exhibit 99.1). The actual earnings figures, commentary, and any forward guidance are contained in the attached exhibit, which is not included in the 8-K body. This is a standard corporate regulatory filing with no substantive macro or market structure content.",
+    "why_it_matters": "This filing is not relevant to macro catalysts or market structure research. It is a routine corporate earnings announcement notice for a natural gas producer, with the substantive financial information contained in an exhibit not reproduced here.",
+    "macro_context": "",
+    "market_structure_context": ""
+  },
+  "event_type_correction": "data_release_other"
+}

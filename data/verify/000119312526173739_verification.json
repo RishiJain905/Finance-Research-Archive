@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'treasury_issuance' is imprecise; this is corporate debt issuance by JPMorgan Chase, not Treasury issuance. The taxonomy entry more likely refers to government debt auctions.",
+    "Source provides only administrative filing details with no analytical value or context",
+    "No connection to macro catalysts, monetary policy, or market structure",
+    "Filed under Item 8.01 (Other Events) with no material business developments beyond standard debt closing disclosure",
+    "Summary and key_points are factually accurate but the record acknowledges low relevance to archive scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate in its summary of the filing, but it falls into a gray area: it is a valid SEC filing with correct data, yet it has no relevance to macro catalysts or market structure research. Human judgment is needed to determine whether routine corporate debt issuances should be included in the archive, even when correctly documented.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "JPMorgan Chase & Co. filed an 8-K on April 23, 2026 disclosing the closing of $10 billion in registered debt offerings across four tranches of notes maturing between 2030 and 2037, including floating rate and fixed-to-floating rate structures.",
+    "why_it_matters": "This is a standard corporate debt issuance disclosure with no policy relevance to market structure or macro catalysts. It provides no insight into monetary policy, market operations, or economic conditions.",
+    "event_type": "corporate_debt_issuance"
+  }
+}

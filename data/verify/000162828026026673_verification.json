@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a single-company 10-Q corporate filing, entirely outside the archive scope of market structure or macro catalysts",
+    "Source content is structured XBRL data tags with no readable narrative disclosure",
+    "No extractable key financial figures, forward guidance, or market-relevant commentary",
+    "event_type set to 'unknown' is defensible given the source does not fit the monetary policy, speeches, data releases, or research taxonomy categories provided"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately identifies all material issues: source is a corporate filing outside archive scope, XBRL format prevents content extraction, and no market-relevant information can be derived. Auto-routing to reject is appropriate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Tesla, Inc. filed its Q1 2026 10-Q quarterly report on SEC EDGAR (period ending 2026-03-31, filed 2026-04-23). The source consists entirely of structured XBRL financial data tags rather than narrative disclosure text, making it impossible to extract substantive information about Tesla's business performance, forward guidance, or risk factors. This is a single-company corporate financial filing and falls entirely outside the archive's scope of market structure or macro catalysts.",
+    "why_it_matters": "This source is not relevant to the research archive's focus on market structure or macro catalysts. A Tesla 10-Q corporate quarterly filing does not address broader market dynamics, monetary policy, or macro economic catalysts. The XBRL format and lack of narrative text further prevent extraction of any potentially relevant financial context.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

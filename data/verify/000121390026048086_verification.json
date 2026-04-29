@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' — while correct that this doesn't fit standard taxonomy, the record itself identifies it as a corporate event with no market structure or macro relevance",
+    "Source is a single company's SPAC delisting/relisting filing with no systemic market implications",
+    "The record correctly acknowledges out-of-scope content but provides minimal utility for a market structure/macro catalyst research archive"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source content is factually accurate and properly attributed, but represents a routine corporate event (individual company SPAC exchange transfer) with zero relevance to market structure or macro catalysts. The generated record has correctly identified this as out-of-scope, but human confirmation is needed to formalize rejection and ensure consistent application of scope criteria.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "AParadise Acquisition Corp. (ticker APADU), a Nasdaq-listed SPAC, filed an 8-K announcing voluntary delisting from Nasdaq in connection with a business combination with Enhanced Ltd. Upon closing, the combined entity Enhanced Group Inc. is expected to list on NYSE under ticker ENHA around May 8, 2026.",
+    "why_it_matters": "Routine corporate event concerning a single SPAC's exchange transfer from Nasdaq to NYSE following a business combination. Has no relevance to market structure (systemic mechanics, plumbing, operations) or macro catalysts (Fed policy, economic data, Treasury operations).",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

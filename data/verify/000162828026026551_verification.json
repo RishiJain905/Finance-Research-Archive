@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - while the taxonomy lacks a corporate earnings category, 'unknown' should be reserved for truly ambiguous sources; an 8-K earnings filing is clearly a corporate disclosure event",
+    "The record correctly identifies the source as out of scope for market structure/macro research, but event_type 'unknown' may cause downstream routing confusion",
+    "Summary accurately notes 'no relevance to market structure or macro catalysts' - this is a correct assessment given the stated research mandate"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and correctly assesses this 8-K as a routine corporate earnings filing with no macro relevance. The key factual elements (date, filing type, Item 2.02 reference, missing Exhibit 99.1 data) are accurate. Human review is not strictly required as the assessment is sound.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Tesla, Inc. filed an 8-K with the SEC on April 22, 2026, disclosing Q1 2026 financial results by referencing an attached First Quarter 2026 Update (Exhibit 99.1). The 8-K body itself contains no financial figures; actual earnings data would require the separate Exhibit 99.1 document. This is a routine corporate earnings disclosure with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This filing is outside the scope of market structure and macro catalyst research. It represents company-specific earnings information for a single issuer (Tesla) with no broader market implications documented in this filing.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
