@@ -1,0 +1,91 @@
+{
+  "id": "10y_yield_2026_04_29",
+  "created_at": "2026-04-29T15:31:59.443084+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield",
+  "source": {
+    "name": "FRED (Federal Reserve Bank of St. Louis)",
+    "url": "https://fred.stlouisfed.org/series/DGS10",
+    "published_at": "2026-04-27",
+    "source_type": "data_release",
+    "domain": "fred.stlouisfed.org"
+  },
+  "summary": "The 10-Year Treasury Yield closed at 4.35% on 2026-04-27, up 4 basis points from 4.31% on 2026-04-24. The yield has ranged between 4.30% and 4.35% over the past week, showing modest upward movement.",
+  "key_points": [
+    "10-Year Treasury Yield: 4.35% as of 2026-04-27",
+    "Previous observation: 4.31% on 2026-04-24",
+    "Change: +0.04 (4 basis points)",
+    "Yield range 2026-04-21 to 2026-04-27: 4.30% to 4.35%",
+    "Source: FRED series DGS10, Federal Reserve Bank of St. Louis"
+  ],
+  "why_it_matters": "The 10-year Treasury yield is a foundational benchmark that influences mortgage rates, corporate borrowing costs, and equity valuations. At 4.35%, it reflects current market pricing of the risk-free rate and expectations for the path of monetary policy. Rising yields generally pressure risk assets and increase financing costs across the economy. [Note: Context added from general macro knowledge, not from source.]",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx",
+      "commodities"
+    ],
+    "directional_bias": "mixed",
+    "confidence": 2
+  },
+  "macro_context": "The yield level reflects market expectations for Fed policy, inflation, and economic growth. A yield at 4.35% suggests the market is pricing a relatively elevated rate environment for the medium term. [Note: Context added from general macro knowledge, not from source.]",
+  "market_structure_context": "",
+  "important_numbers": [
+    "4.35%",
+    "4.31%",
+    "+0.04",
+    "4.30%",
+    "4.35%"
+  ],
+  "tags": [
+    "treasury-yields",
+    "10-year-yield",
+    "macro-catalyst",
+    "bond-market",
+    "risk-free-rate",
+    "fed-policy"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw time series data with no analytical commentary or macro context - the record imports external knowledge into 'why_it_matters' and 'macro_context' that is not present in the source itself",
+      "Quality tier appropriately notes 'limited standalone research value' - but this conflicts with archiving a thin data snapshot",
+      "The record captures accurate numbers but adds no interpretive value beyond what the source provides"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This record sits at the boundary of the archiving mandate. The data is factually accurate and from an authoritative source, but raw time series data has inherently limited standalone archival value without analytical context. The human review should decide whether to accept thin data snapshots into the archive or reserve archival spots for more substantive analytical content."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_04_29.txt",
+  "notes": "FRED time series snapshot. This is raw market observable data, not an analytical release. The source contains only the numerical yield values with no accompanying commentary on drivers, Fed policy implications, or market context. Appropriate for inclusion as a quantitative data point but limited standalone value for macro research. TARGET aligned with macro catalysts topic.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 5,
+    "reasoning": [
+      "Raw market observable data point from authoritative source (FRED)",
+      "No analytical commentary or drivers provided",
+      "Current and timely data",
+      "Single data series with no broader context",
+      "Limited standalone research value"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "5e9c6a088fff83307d4d913055dde0e0752a1594"
+}

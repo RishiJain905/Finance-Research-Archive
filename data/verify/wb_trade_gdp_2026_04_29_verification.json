@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "No URL provided in source metadata; the url field is empty, making the source unverifiable and non-retrievable",
+    "Source is a machine-generated null-data response with no actual data values, narrative, or substantive content",
+    "Cannot be used for market structure or macro catalyst analysis due to total absence of usable information",
+    "Record acknowledges the null state but provides no value-add beyond stating the obvious"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes a null-data response, but the source has no archival value since it contains no numbers, dates, policy signals, or narrative. More importantly, the missing URL prevents verification. Human review is needed to determine whether null-data responses should be archived at all, or if they should be rejected as 'too thin to have archival value' per the core rules.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations for the 2026-04-29 snapshot date. The source is a null-data response with no usable information for market structure or macro catalyst analysis.",
+    "why_it_matters": "This source provides no actionable information. World Trade as % of GDP is a macro indicator relevant to global growth and current account analysis, but the data retrieval returned nothing. Analysts relying on this indicator for macro catalyst or market structure assessments should seek alternative data sources.",
+    "macro_context": "The indicator TG.VAL.TOTL.GD.ZS tracks the sum of exports and imports of goods and services as a percentage of GDP, which can inform assessments of global trade integration and current account dynamics. However, no data was returned, making any macro context assessment impossible from this source.",
+    "market_structure_context": ""
+  }
+}

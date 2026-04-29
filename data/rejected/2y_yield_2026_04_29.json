@@ -1,0 +1,84 @@
+{
+  "id": "2y_yield_2026_04_29",
+  "created_at": "2026-04-29T15:31:20.351692+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2) - FRED Data Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-29",
+    "source_type": "data_series_page"
+  },
+  "summary": "The 2-Year Treasury Yield stood at 3.78% as of 2026-04-27, unchanged from 2026-04-24. The yield has shown modest stability, declining 5 basis points from 3.83% on 2026-04-23.",
+  "key_points": [
+    "2-Year Treasury Yield at 3.78% as of 2026-04-27",
+    "Flat week-over-week: no change from 3.78% on 2026-04-24",
+    "Recent high of 3.83% on 2026-04-23",
+    "Yield range over 5 trading days: 3.78% to 3.83%",
+    "Slight decline of 5 bps from recent peak on 2026-04-23"
+  ],
+  "why_it_matters": "The 2-year Treasury yield is a key market-based indicator of interest rate expectations. At 3.78%, it reflects market pricing of Fed funds rate path over the next two years. This data point provides context for current rate expectations but contains no analysis or commentary.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 3
+  },
+  "macro_context": "The 2-year yield reflects near-term rate expectations. A reading of 3.78% suggests the market expects rates to settle near current levels over the next two years. Without additional context on Fed policy or economic data, the directional implications are unclear.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.78% (current 2-year yield)",
+    "3.83% (recent high on 2026-04-23)",
+    "0 bps (change from 2026-04-24 to 2026-04-27)"
+  ],
+  "tags": [
+    "treasury-yields",
+    "2-year-yield",
+    "interest-rates",
+    "fed-funds-expectations",
+    "bond-market",
+    "fred-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 7,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is blank - only domain provided, reducing traceability",
+      "Record is thin market data with no analytical content or narrative",
+      "quality_tier classified as 'low' with score 3 - suggests limited archival value",
+      "human_review.required set to false despite record suggesting review_queue status"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_29.txt",
+  "notes": "This is a FRED data series snapshot showing only numeric yield observations. No commentary, analysis, or policy context provided. The source has very limited research utility - it establishes a single data point (3.78% 2-year yield) but provides no narrative about what this means or why it matters. Consider linking to more substantive Fed communications (FOMC statements, speeches) for rate context rather than storing thin data snapshots.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 3,
+    "reasoning": [
+      "Content is raw market data only - no analysis or narrative",
+      "No policy commentary or macro context provided",
+      "Useful only as a single data point reference",
+      "No forward guidance or interpretive framework"
+    ]
+  }
+}

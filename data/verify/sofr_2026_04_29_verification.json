@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is empty - no verifiable link to the FRED data source provided",
+    "Source content is extremely thin - a single daily observation with no analytical narrative or contextual explanation",
+    "No consensus data, market commentary, or causal factors provided in the source",
+    "Record captures only a routine data point with no meaningful signal for market structure analysis"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The data is factually accurate and sourced from an authoritative provider (FRED/FRBNY), but the source content is extremely thin—only a single SOFR observation with no narrative or context. The missing URL prevents independent verification. This record has limited standalone archival value and would be better served as part of a time-series resource or linked to an analytical commentary that contextualizes SOFR movements. Human decision needed on whether routine daily SOFR snapshots warrant individual archive records.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "SOFR closed at 3.64 on 2026-04-28, a decline of 2 basis points from the prior day's reading of 3.66. This represents a minor daily move within a relatively stable range of 3.64-3.66 observed over the past week.",
+    "why_it_matters": "SOFR serves as the primary overnight reference rate for dollar-denominated derivatives and loans. A 2bp daily move within a stable 3.64-3.66 range is routine and carries no particular signal. This data point alone is insufficient for any meaningful market structure or macro analysis.",
+    "macro_context": "As the Federal Reserve's selected alternative to USD LIBOR, SOFR reflects the cost of overnight borrowing in the repo market backed by Treasury collateral. The current stable range suggests normal market functioning with no unusual stress in overnight funding markets.",
+    "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median of transaction-level repo data. The stable 3.64-3.66 range indicates typical overnight funding conditions without elevated collateral scarcity or counterparty stress."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a 404 error with no actual content - provides zero market-relevant data",
+    "event_type set to 'unknown' when the target clearly relates to treasury_issuance - classification should not be 'unknown' for a Treasury auction target",
+    "No archival value - an error page contains no research-worthy information",
+    "Record is essentially a metadata wrapper around an error message, not a research record",
+    "why_it_matters and market_structure_context contain generic statements that cannot be substantiated by any source data"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is an API error with no content. While the record accurately describes the error, a 404 error page has zero archival value for a finance research archive. The system should not be generating research records for failed API requests - this suggests a pipeline issue that needs addressing.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

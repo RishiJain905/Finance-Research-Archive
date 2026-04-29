@@ -1,0 +1,78 @@
+{
+  "id": "repo_operations_2026_04_29",
+  "created_at": "2026-04-29T15:33:20.379464+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "NY Fed Repo Operations - API Error",
+  "source": {
+    "name": "Federal Reserve Bank of New York",
+    "url": "https://markets.newyorkfed.org/api/repo/all/results/latest.json",
+    "published_at": "2026-04-29",
+    "source_type": "api_endpoint",
+    "domain": "markets.newyorkfed.org"
+  },
+  "summary": "Failed to retrieve NY Fed repo operation data. The API endpoint returned a 400 Bad Request error, indicating the requested data could not be fetched or does not exist for the current date.",
+  "key_points": [
+    "Target data: NY Fed repo operations (all results, latest)",
+    "Error: 400 Client Error: Bad Request",
+    "No actual repo operation figures were retrieved",
+    "Cannot assess current repo market conditions or Fed operations"
+  ],
+  "why_it_matters": "NY Fed repo operations are a core component of short-term funding market plumbing. The inability to fetch current data means there is no visibility into the Fed's current liquidity management or repo market conditions for this date.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "Repo operations are a key part of the Fed's monetary policy implementation framework. The API failure prevents monitoring of current repo operation results, which would typically show offered amounts, accepted amounts, and rates for reverse repo or outright repo operations.",
+  "important_numbers": [],
+  "tags": [
+    "ny-fed",
+    "repo-operations",
+    "market-structure",
+    "api-error",
+    "liquidity-operations"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual data - only a 400 Bad Request error message",
+      "No repo operation figures, amounts, or rates retrieved",
+      "Source is an API error state, not an archiveable document",
+      "Cannot support any market structure analysis without underlying data",
+      "event_type 'unknown' is technically correct but the real issue is the source has no content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The verdict is clear-cut: the source body contains only an error message with no actual repo operation data. This is not a documentation or summary problem that needs human judgment—the source itself is non-archiveable. No market structure analysis can be produced from an API error."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/repo_operations_2026_04_29.txt",
+  "notes": "This record documents a failed data fetch, not an actual source document. The NY Fed API endpoint for repo operations returned a 400 Bad Request error. The source body contains no actual repo operation data - only an error message. The target topic (market structure) is correct, but the content does not support any market structure analysis. Recommend retrying the fetch or checking if the NY Fed has changed their API endpoint structure.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed_fetch",
+    "score": 0,
+    "reasoning": [
+      "No actual data retrieved - only an API error message",
+      "Cannot produce any market structure documentation from this source",
+      "Source is non-archiveable in its current state"
+    ]
+  }
+}

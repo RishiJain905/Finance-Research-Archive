@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is blank - only domain provided, reducing traceability",
+    "Record is thin market data with no analytical content or narrative",
+    "quality_tier classified as 'low' with score 3 - suggests limited archival value",
+    "human_review.required set to false despite record suggesting review_queue status"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record is factually accurate and source data is correctly represented, but the core question is whether raw FRED data snapshots belong in a finance research archive. The record meets minimum bar for accuracy but quality_tier and llm_review both flag it as low-value content. Human decision needed on archival policy: does the archive want to store thin data snapshots alongside substantive research, or reserve archival space for records with narrative and analytical value?",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

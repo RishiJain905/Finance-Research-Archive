@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a null API response with no actual data - contains only 'No recent valid observations were returned'",
+    "Source has no archival value - it is a failed data retrieval response with no substantive content",
+    "event_type is 'unknown' but this appears to be a failed data_release_other - the null type could have been more accurately labeled",
+    "URL field is empty, leaving incomplete source attribution",
+    "Topic 'global_economy' is tangentially related to macro catalysts but the null response cannot support any market research or analysis"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Auto-reject is appropriate - the source is a null API response that provides no content to archive. The record accurately describes the null state but cannot be accepted because it has zero archival value. No human judgment needed on a failed retrieval.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank indicator NY.GDP.MKTP.KD.ZG (real GDP growth rate) returned no recent valid observations as of 2026-04-29. This is a null data response with no substantive content to archive.",
+    "why_it_matters": "This source contains no usable data. It cannot support market research, macro analysis, or any investment decision-making. It is a failed API/data retrieval response.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

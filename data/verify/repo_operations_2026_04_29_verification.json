@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual data - only a 400 Bad Request error message",
+    "No repo operation figures, amounts, or rates retrieved",
+    "Source is an API error state, not an archiveable document",
+    "Cannot support any market structure analysis without underlying data",
+    "event_type 'unknown' is technically correct but the real issue is the source has no content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The verdict is clear-cut: the source body contains only an error message with no actual repo operation data. This is not a documentation or summary problem that needs human judgment—the source itself is non-archiveable. No market structure analysis can be produced from an API error.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

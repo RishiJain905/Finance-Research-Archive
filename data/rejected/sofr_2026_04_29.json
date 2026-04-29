@@ -1,0 +1,85 @@
+{
+  "id": "sofr_2026_04_29",
+  "created_at": "2026-04-29T15:30:24.737413+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "market_notice",
+  "title": "SOFR Daily Observation: 3.64 (2026-04-28)",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-29",
+    "source_type": "data_release_other"
+  },
+  "summary": "SOFR closed at 3.64 on 2026-04-28, a decline of 2 basis points from the prior day's reading of 3.66. This represents a minor daily move within a relatively stable range of 3.64-3.66 observed over the past week.",
+  "key_points": [
+    "SOFR latest observation: 3.64 (2026-04-28)",
+    "Previous observation: 3.66 (2026-04-27)",
+    "Absolute change: -0.02 basis points (down)",
+    "Recent range: 3.64-3.66 (2026-04-22 through 2026-04-28)",
+    "Source: FRED series SOFR"
+  ],
+  "why_it_matters": "SOFR serves as the primary overnight reference rate for dollar-denominated derivatives and loans. A 2bp daily move within a stable 3.64-3.66 range is routine and carries no particular signal. This data point alone is insufficient for any meaningful market structure or macro analysis.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "As the Federal Reserve's selected alternative to USD LIBOR, SOFR reflects the cost of overnight borrowing in the repo market backed by Treasury collateral. The current stable range suggests normal market functioning with no unusual stress in overnight funding markets.",
+  "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median of transaction-level repo data. The stable 3.64-3.66 range indicates typical overnight funding conditions without elevated collateral scarcity or counterparty stress.",
+  "important_numbers": [
+    "3.64%",
+    "3.66%",
+    "-0.02 bps"
+  ],
+  "tags": [
+    "sofr",
+    "repo",
+    "overnight-rate",
+    "market-structure",
+    "fed-funds-alternative"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 6,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - no verifiable link to the FRED data source provided",
+      "Source content is extremely thin - a single daily observation with no analytical narrative or contextual explanation",
+      "No consensus data, market commentary, or causal factors provided in the source",
+      "Record captures only a routine data point with no meaningful signal for market structure analysis"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_29.txt",
+  "notes": "This record captures a single daily SOFR observation from FRED. The source is authoritative and data is current, but the content is extremely thin—just one number with a 2bp daily change. No market commentary, causal explanation, or analytical framing is provided. For RAG purposes, this adds minimal value compared to a time-series view or an analytical commentary piece that contextualizes SOFR movements. Recommend evaluating whether standalone daily SOFR snapshots warrant individual archive records or if they should be aggregated into a time-series resource.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "tier_3_data",
+    "score": 3,
+    "reasoning": [
+      "Authoritative source (FRED/FRBNY)",
+      "Current data (within 1 day)",
+      "Factual and accurate",
+      "Severely limited content—just a single observation",
+      "No analytical context or narrative",
+      "Insufficient standalone value for research archive"
+    ]
+  }
+}
