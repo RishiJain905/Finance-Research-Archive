@@ -2,17 +2,17 @@
   "verification_confidence": 7,
   "verdict": "review",
   "issues_found": [
-    "SOURCE METADATA TARGET field indicates 'market structure' but content is fiscal policy/debt sustainability methodology - topic classification mismatch",
-    "Source is a 2017 methodology paper, approximately 9 years stale; while it may have archival value as methodology, it does not constitute a current market catalyst",
-    "Record correctly identifies this as historical/low relevance, but human decision needed on whether to archive dated methodology"
+    "TARGET/Topic alignment issue: TARGET states 'market structure' but content is fiscal sustainability methodology, not market structure in the trading/operations sense",
+    "Published April 2017, approximately 9 years before TODAY - significantly stale for current market intelligence purposes",
+    "No actionable market signals or current macro data - purely methodological framework"
   ],
   "human_review_required": true,
-  "human_review_reason": "SOURCE METADATA TARGET mismatch with content; 9-year-old methodology paper requires human judgment on archival value. While the research record is factually accurate and well-supported, the topic misalignment and age raise questions about whether this should be archived given the stated focus areas.",
+  "human_review_reason": "The source is a legitimate ECB research paper with accurate summary and key points. However, it has three concerns: (1) Topic misaligned with TARGET 'market structure' - content is fiscal methodology, not market structure/operations; (2) Published 2017, well beyond 90-day threshold without clear archival value justification beyond being a methodology reference; (3) No current market catalyst value. Human decision needed to determine if fiscal policy methodology qualifies under broader macro catalyst scope.",
   "suggested_status": "review_queue",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "",
-    "macro_context": "",
+    "summary": "This ECB Occasional Paper introduces a comprehensive debt sustainability analysis (DSA) framework for euro area sovereigns, consisting of three building blocks: deterministic DSA (benchmark and shock scenarios), stochastic DSA (probabilistic approach), and other indicators capturing liquidity and solvency risks. The framework is designed as a warning system for fiscal surveillance under the Stability and Growth Pact.",
+    "why_it_matters": "This methodological paper establishes the analytical framework used by the ECB to assess sovereign debt sustainability risks across euro area countries. It does not contain current market-relevant data but provides the analytical approach that informs ECB fiscal surveillance under the Stability and Growth Pact and could generate policy warnings for member states.",
+    "macro_context": "The paper addresses sovereign debt sustainability methodology for euro area countries, relevant to understanding fiscal risks that could affect sovereign bond markets. It is methodological in nature, published April 2017, and does not contain current macro data or market catalysts.",
     "market_structure_context": ""
   }
 }
