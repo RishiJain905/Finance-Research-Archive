@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a routine corporate earnings disclosure for a small regional bank (SFST, ~$600M market cap)",
+    "Actual financial figures and earnings details are contained only in referenced exhibits (99.1, 99.2) not present in the filing body",
+    "No monetary policy signals, market operations, regulatory guidance, or systemically relevant information present",
+    "event_type set to 'unknown' which is correct; 8-K corporate filings do not fit the provided taxonomy (fomc_statement, rate_decision, data_release, etc.)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source clearly falls outside the archive's stated focus areas (market structure, macro catalysts). No judgment call needed — routine small-cap bank 8-K is categorically irrelevant to macro research.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Southern First Bancshares, Inc. (SFST), a small regional bank holding company based in Greenville, South Carolina, filed a Form 8-K on April 21, 2026, disclosing Q1 2026 financial results via press release and slide presentation (Exhibits 99.1 and 99.2). The filing body contains only boilerplate disclosure language; actual earnings figures are in the referenced exhibits.",
+    "why_it_matters": "Routine corporate earnings disclosure for a small-cap regional bank. No relevance to macroeconomic policy, monetary policy, market structure, or systemically important financial developments. Earnings details are in referenced exhibits not included in filing body.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

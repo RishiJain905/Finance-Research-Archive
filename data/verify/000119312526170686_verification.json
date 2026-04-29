@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a company-specific MLP distribution announcement with no broader market or policy implications",
+    "event_type is set to 'unknown', which is acceptable here since no other category applies, but the filing still fails relevance threshold",
+    "The record itself acknowledges in why_it_matters that 'This is a routine quarterly distribution announcement...It has no relevance to market structure or macro catalysts'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record already correctly identified this as out-of-scope. The source is accurate but irrelevant to the archive's designated topics (market structure, macro catalysts). Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

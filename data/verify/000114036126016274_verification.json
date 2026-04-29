@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - while the taxonomy doesn't have a perfect fit for shareholder voting results, this is a filing event and should be categorized appropriately",
+    "Tags include 'earnings' and 'dividends' which are incorrect - this filing contains no earnings or dividend information, only shareholder voting results",
+    "Source is a routine corporate governance filing from a small regional bank (~$400-500M market cap) with no relevance to macro market drivers, Fed policy, interest rates, or market structure"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source and record are factually accurate regarding the voting results, but the record needs cleanup of incorrect tags and assessment of whether routine corporate governance filings should be included in the finance research archive. Also, event_type needs clarification.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Capital City Bank Group Inc (NASDAQ: CCBG) filed a Form 8-K on April 23, 2026 reporting results of its 2026 Annual Meeting of Shareholders held April 21, 2026. The filing covers director elections (12 incumbent nominees elected), an advisory vote approving executive compensation, an advisory vote on compensation vote frequency (1 year preferred), and ratification of Forvis Mazars LLP as the company's independent auditor for fiscal year 2026.",
+    "why_it_matters": "This is a routine corporate governance filing with no relevance to macro market drivers, Fed policy, interest rates, or market structure. It does not contain information that would affect investment decisions or market dynamics. The archive should consider filtering routine corporate governance filings from small regional banks that do not contain macro-relevant information."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine 8-K earnings filing from a micro-cap Canadian water treatment company with no broader market implications",
+    "Source is thin - contains only the cover page of the 8-K with no actual financial data or meaningful content",
+    "llm_review.verification_confidence incorrectly set to 0 when summary and key_points are factually accurate; the low score reflects topic non-relevance rather than accuracy issues"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and factually accurate, but the source itself fails the relevance threshold. Flexible Solutions International Inc. is a micro-cap water treatment company whose 8-K filing contains no information about Federal Reserve policy, central bank communications, Treasury market operations, macroeconomic data releases, or market structure catalysts. The record correctly identifies this as 'peripheral' with quality_tier score 2, but per core rule #6, thin low-signal sources bias toward reject, and per the verification standards, sources not relevant to market structure or macro catalysts should be rejected.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Flexible Solutions International Inc. (FSI) filed a Form 8-K with the SEC on April 17, 2026, disclosing that the company issued a press release on April 15, 2026 announcing financial results for the year ended December 31, 2025, and held a conference call on April 17, 2026 to discuss those results. This is a routine corporate disclosure from a small-cap Canadian water treatment company listed on NYSE American.",
+    "why_it_matters": "This source is a standard SEC Form 8-K from a micro-cap company and contains no information relevant to market structure or macro catalysts. It is a routine corporate earnings disclosure with no Federal Reserve, central bank, Treasury market, or broader macroeconomic content.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

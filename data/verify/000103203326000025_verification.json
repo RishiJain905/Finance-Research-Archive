@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing (SLM Corp/Sallie Mae) - not relevant to market structure or macro catalysts per collection mandate",
+    "Source is XBRL-structured financial data with no narrative content about market conditions, policy implications, or structural market information",
+    "event_type correctly set to 'unknown' as corporate filings don't fit the defined taxonomy (fomc_statement, speech, data_release, treasury_operations, research)",
+    "Topic correctly identified as 'not_applicable' and quality_tier 'not_applicable' - consistent with scope mismatch",
+    "No unsupported claims or fabrications in the record - the record accurately describes the source limitations"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record correctly identifies the source as irrelevant to market structure/macro catalyst research. No subjective judgment calls needed - the scope mismatch is clear.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "SLM Corp (Sallie Mae) filed its Q1 2026 10-Q quarterly report covering the period January 1 through March 31, 2026. The filing consists of XBRL-structured financial data including balance sheet components, equity elements, loan portfolio details, and interest rate sensitivity disclosures. A subsequent event dated April 22, 2026 is referenced. This is a corporate financial filing for a private education loan company - outside the scope of market structure or macro catalyst research.",
+    "why_it_matters": "Not relevant to market structure or macro catalysts research collection. This is a corporate earnings/financial report from a single consumer finance company. The filing does not contain information about central bank policy, market plumbing, Treasury operations, or broad macroeconomic catalysts. Archive for completeness if tracking student loan sector, but not prioritized for market structure or macro research.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

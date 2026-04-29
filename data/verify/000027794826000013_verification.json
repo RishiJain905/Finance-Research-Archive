@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'data_release_other' but source is a corporate earnings 8-K filing, not a macroeconomic data release. No CPI, PPI, GDP, employment, or similar data is disclosed.",
+    "The notes field already correctly identifies the source as 'out of scope', but the event_type contradicts this assessment."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record contains a fundamental internal contradiction: it is correctly marked as out-of-scope in quality_tier and notes, yet assigned event_type 'data_release_other' which implies macro relevance. The event_type needs correction before acceptance. Human should decide whether CSX Q1 2026 earnings has sufficient macro signal to warrant archiving despite being a corporate filing, or whether 'unknown' or a different event_type is appropriate.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "CSX Corporation filed a Form 8-K on April 22, 2026, disclosing Q1 2026 financial and operating results (quarter ended March 31, 2026). The filing includes a press release and quarterly financial report as exhibits.",
+    "why_it_matters": "This is a routine corporate earnings disclosure from CSX Corporation, a Class I railroad operator. The filing reports quarterly financial and operating results but does not contain macroeconomic catalysts, central bank content, or market structure information. May have limited relevance as a transportation-sector economic indicator.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

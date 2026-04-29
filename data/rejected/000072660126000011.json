@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated research record is entirely empty - no summary, key_points, or any content",
+      "Source attribution fields (name, url, domain, published_at, source_type) are all empty",
+      "Source is a raw SEC XBRL/10-Q filing with no narrative content - only structured financial tags",
+      "Source contains only technical XBRL tags (us-gaap:*) with no readable financial discussion",
+      "Source is a company's quarterly filing (Capital City Bank Group Inc) - not relevant to market structure or macro catalysts",
+      "Record has no archival value as it cannot be used for market research without narrative context",
+      "No event_type provided, and type cannot be determined from XBRL tag data alone"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is blank/empty and cannot be reviewed for accuracy. Rejection is straightforward - no human decision needed."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

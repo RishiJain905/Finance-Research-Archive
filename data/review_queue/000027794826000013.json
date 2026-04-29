@@ -1,0 +1,78 @@
+{
+  "id": "000027794826000013",
+  "created_at": "2026-04-29T14:39:44.284625+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "CSX Corporation Current Report on Form 8-K",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/277948/000027794826000013/csx-20260422.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-22",
+    "source_type": "sec_filing"
+  },
+  "summary": "CSX Corporation filed a Form 8-K on April 22, 2026, disclosing Q1 2026 financial and operating results (quarter ended March 31, 2026). The filing includes a press release and quarterly financial report as exhibits.",
+  "key_points": [
+    "CSX Corporation filed Form 8-K on April 22, 2026",
+    "Disclosure under Item 2.02 (Results of Operations and Financial Condition)",
+    "Company issued press release and CSX Quarterly Financial Report for Q1 2026 (quarter ended March 31, 2026)",
+    "CSX common stock trades on NASDAQ Global Select Market under symbol CSX",
+    "Signed by Angela C. Williams, Vice President and Chief Accounting Officer"
+  ],
+  "why_it_matters": "This is a routine corporate earnings disclosure from CSX Corporation, a Class I railroad operator. The filing reports quarterly financial and operating results but does not contain macroeconomic catalysts, central bank content, or market structure information. May have limited relevance as a transportation-sector economic indicator.",
+  "market_impact": {
+    "asset_classes": [
+      "equities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "csx",
+    "earnings",
+    "8-k",
+    "q1-2026",
+    "corporate-filing",
+    "railroad"
+  ],
+  "llm_review": {
+    "initial_confidence": 10,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'data_release_other' but source is a corporate earnings 8-K filing, not a macroeconomic data release. No CPI, PPI, GDP, employment, or similar data is disclosed.",
+      "The notes field already correctly identifies the source as 'out of scope', but the event_type contradicts this assessment."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record contains a fundamental internal contradiction: it is correctly marked as out-of-scope in quality_tier and notes, yet assigned event_type 'data_release_other' which implies macro relevance. The event_type needs correction before acceptance. Human should decide whether CSX Q1 2026 earnings has sufficient macro signal to warrant archiving despite being a corporate filing, or whether 'unknown' or a different event_type is appropriate."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000027794826000013.txt",
+  "notes": "SOURCE IS OUT OF SCOPE. This document is a routine corporate SEC filing (Form 8-K) disclosing CSX Corporation's Q1 2026 earnings results. It does not contain information related to market structure (market plumbing, operations, clearing, settlement) or macro catalysts (Fed policy, central bank decisions, macroeconomic data releases). Filed on SEC EDGAR on April 22, 2026. The actual press release and quarterly financial report are referenced as exhibits but not included in the filing text. No relevance to finance research archive focus areas.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "out-of-scope",
+    "score": 0,
+    "reasoning": [
+      "Document is a routine corporate earnings disclosure from a transportation company",
+      "Does not address market structure or macro catalysts as defined in the archive mandate",
+      "No central bank content, monetary policy signals, or market operations information",
+      "Only useful for company-specific equity analysis"
+    ]
+  }
+}

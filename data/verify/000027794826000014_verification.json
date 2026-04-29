@@ -1,0 +1,23 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution fields are completely empty (no name, url, domain, published_at, or source_type provided)",
+    "Source is raw XBRL/XML financial data from CSX Corp 10-Q, not human-readable content",
+    "CSX is a railroad transportation company with no direct relevance to market structure or macro catalysts",
+    "Source contains only financial reporting tags (retained earnings, stock options, hedging instruments, casualty reserves) without narrative analysis",
+    "No event_type provided; cannot determine relevance to finance research archive taxonomy",
+    "Generated record fields are all empty strings, indicating no extraction was performed",
+    "Source published_at is missing from generated record",
+    "Company (CSX Corp) is a single-company issuer, not a policy, research, or market structure document"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Clear rejection: source is a single-company regulatory filing without market structure or macro relevance, and all record fields including source attribution are empty",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

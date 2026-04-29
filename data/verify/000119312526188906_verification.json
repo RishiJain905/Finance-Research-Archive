@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a single-company 8-K filing announcing an earnings release date",
+    "Source has no broader financial market implications and cannot serve as a macro catalyst record",
+    "event_type set to 'unknown' - while no taxonomy category fits this filing type well, the lack of relevance to finance research scope is the primary issue",
+    "Record correctly identifies source as out of scope (quality_tier: non-archivable), but this should result in rejection rather than entering review_queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate against the source text, but the source is fundamentally out of scope for a finance research archive focused on market structure and macro catalysts. No human review needed to determine rejection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

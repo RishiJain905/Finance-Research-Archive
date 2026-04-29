@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' - correctly flagged as invalid taxonomy value",
+    "Source is NOT relevant to market structure or macro catalysts per stated collection scope",
+    "Source is a routine corporate governance filing (reincorporation from Delaware to Nevada) with zero macro implications",
+    "Quality tier correctly identifies source as 'irrelevant' for this archive's focus",
+    "No market structure context, no monetary policy, no economic data, no trading operations content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-formed and accurately summarizes the source content. The automated rejection is appropriate and consistent with the archive's stated focus on market structure and macro catalysts. This source has no archival value for the target collection.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "event_type": "unknown"
+  }
+}

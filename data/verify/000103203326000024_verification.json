@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts—it's a routine corporate earnings filing for a private student loan company",
+    "Earnings data is not included in the filing; only a reference to Exhibit 99.1 (press release) is present, making the source thin with no actionable content",
+    "event_type set to 'unknown' is technically acceptable since corporate earnings filings don't fit the defined taxonomy, but this confirms the source is out of scope",
+    "No policy-relevant content, macroeconomic data, or market structure content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-structured and accurately describes the source's limitations. No factual errors in the summary or key_points. The rejection recommendation is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "SLM Corporation (Sallie Mae) filed a Form 8-K on April 23, 2026 reporting financial results for the quarter ended March 31, 2026. The filing references an earnings press release (Exhibit 99.1) but does not include the actual earnings content in this document. This is a routine corporate earnings disclosure with no content relevant to market structure or macro catalysts.",
+    "why_it_matters": "This filing is a routine corporate earnings disclosure for a private student loan company. It contains no policy-relevant information, no macroeconomic data, and no market structure content. Out of scope for a finance research archive focused on market structure and macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
