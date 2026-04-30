@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when the document could be classified as 'regulatory_guidance' given it documents Technical Standards Instruments under s138P FSMA 2000",
+    "Source is not relevant to macro catalysts or market structure - it is an administrative reporting document with no market-moving implications",
+    "The generated record correctly identifies this as out of scope, but the task requires a verdict on whether to accept/reject, not whether it's in scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes the source content, but the fundamental question is whether administrative resolution authority reporting documents have archival value for a macro catalysts/market structure archive. The record is well-constructed and factually accurate, but documents technical compliance updates with zero market impact. Human judgment needed on archival scope boundaries.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
