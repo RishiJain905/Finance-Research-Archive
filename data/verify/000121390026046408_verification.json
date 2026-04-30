@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a routine corporate SEC filing from a small-cap biotech company",
+    "Press release content (Exhibit 99.1) is referenced but not included in the 8-K body, making the filing substantively empty",
+    "No macro, monetary, policy, or market structure content present",
+    "event_type correctly set to 'unknown' but no other valid event type applies"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is accurate in its assessment that this source has no relevance to market structure or macro catalysts. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate SEC Form 8-K from a small-cap Australian healthcare company (Incannex Healthcare Inc., ticker IXHL). The filing references a press release via Item 7.01 (Regulation FD) but does not include the press release content itself. The document contains only standard 8-K boilerplate and has no relevance to macro catalysts, monetary policy, or market structure. It should be excluded from the finance research archive.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

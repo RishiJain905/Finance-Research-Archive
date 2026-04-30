@@ -1,0 +1,69 @@
+{
+  "id": "000031052226000040",
+  "created_at": "2026-04-30T08:41:06.880999+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE 10-Q Filing — 2026-04-29",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/310522/000031052226000040/fnm-20260331.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-29",
+    "source_type": "sec_filing"
+  },
+  "summary": "This is a quarterly 10-Q financial filing from Fannie Mae (Federal National Mortgage Association) covering Q1 2026 (January 1 – March 31, 2026), filed with the SEC on April 29, 2026. The source body consists almost entirely of XBRL taxonomy tags and financial line items with minimal narrative content readable in the provided excerpt. This is a routine corporate financial disclosure, not a source relevant to market structure or macro catalysts as defined by the extraction mandate.",
+  "key_points": [],
+  "why_it_matters": "This filing is a corporate quarterly financial statement from a GSE (government-sponsored enterprise) and is not designed to communicate market-moving macro information or structural market insights. It may contain indirect housing/mortgage data useful for fundamental analysis, but the document itself does not constitute a macro catalyst or market structure event. SEC XBRL filings of this type are not archivable as primary research sources.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "fannie-mae",
+    "10-q",
+    "sec-filing",
+    "gse",
+    "quarterly-financials"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but could reasonably be classified as 'research_paper' or similar given the SEC filing source type",
+      "The record correctly identifies the source as irrelevant to macro catalysts, but does not provide a clear recommendation on whether to archive (just notes 'NOT ARCHIVABLE' in notes field)"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The generated record is largely accurate and appropriately characterizes this SEC 10-Q filing as irrelevant to market structure or macro catalysts. The main minor issue is the 'unknown' event_type classification when a more specific value from the taxonomy might apply. However, given the source is correctly assessed as low-value for the research archive mandate, this does not require human review."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000031052226000040.txt",
+  "notes": "NOT ARCHIVABLE FOR RESEARCH PURPOSES. This is a routine SEC 10-Q quarterly financial filing. The source body provided is raw XBRL taxonomy tags with no readable narrative or data content. Even if full text were available, a corporate financial statement from a GSE is not a macro catalyst or market structure source per the defined focus areas. Should be flagged as low-priority for research archive; housing/mortgage data in filings would require manual extraction and financial statement expertise to interpret.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 2,
+    "reasoning": [
+      "No readable financial data in provided source body excerpt",
+      "XBRL format not suitable for natural language extraction",
+      "Source type (SEC filing) not aligned with market structure or macro catalyst mandates",
+      "Would require financial statement expertise to extract macro-relevant housing data"
+    ]
+  }
+}

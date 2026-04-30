@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine corporate earnings 8-K filing with no relevance to market structure or macro catalysts",
+    "Topic classified as 'not_applicable', indicating correctly that source is out of scope for this archive",
+    "Source contains no actual earnings figures (referenced exhibit 99.1 not embedded), but even if it did, corporate earnings are outside this archive's focus",
+    "event_type correctly 'unknown' but for the wrong reason — it should be 'unknown' because the taxonomy is designed for central bank/policy documents, not because of ambiguity"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Generated record correctly identified the source as irrelevant. No human review needed — this is a clear reject based on scope mismatch.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This is a routine corporate earnings disclosure. Irrelevant to market structure or macro catalyst research archive.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

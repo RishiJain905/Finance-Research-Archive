@@ -1,0 +1,79 @@
+{
+  "id": "000031052226000041",
+  "created_at": "2026-04-30T08:42:19.591665+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE 8-K Filing — 2026-04-29",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/310522/000031052226000041/fnm-20260429.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-29",
+    "source_type": "regulatory_filing"
+  },
+  "summary": "Fannie Mae filed an 8-K on April 29, 2026, announcing it had filed its Q1 2026 10-Q quarterly report and is issuing a press release along with an earnings presentation and financial supplement (Exhibits 99.1, 99.2, 99.3). The filing is a notification wrapper—the substantive financial content is embedded in the attached exhibits, which are referenced but not included in the body text provided.",
+  "key_points": [
+    "Fannie Mae filed its quarterly report on Form 10-Q for the quarter ended March 31, 2026",
+    "The company issued a press release, earnings presentation, and financial supplement for 1Q 2026",
+    "Copies are available on Fannie Mae's website under Investor Relations",
+    "The 8-K is signed by Chryssa C. Halley, Executive Vice President and CFO, dated April 29, 2026",
+    "The filing contains no substantive financial data, forecasts, or commentary in the body text—only references to attached exhibits"
+  ],
+  "why_it_matters": "This 8-K is a standard regulatory wrapper for Fannie Mae's Q1 2026 earnings. The body text contains no substantive financial data—only references to attached exhibits (99.1 press release, 99.2 earnings presentation, 99.3 financial supplement). For research on macro catalysts or market structure, the actual exhibits would need to be retrieved. GSE earnings can be relevant to housing finance and credit markets, but this source alone provides no actionable information.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "Fannie Mae is a government-sponsored enterprise (GSE) critical to the secondary mortgage market. Its earnings reports can signal credit market conditions and housing sector health, but this 8-K filing contains no such data—the exhibits with the actual figures are referenced but not included.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "fannie-mae",
+    "8-k",
+    "quarterly-results",
+    "sec-filing",
+    "corporate-earnings",
+    "irrelevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' when a more specific value could apply (e.g., corporate_earnings or financial_stability_report for a GSE)",
+      "The record acknowledges 'topic is not market structure or macro catalysts' but doesn't correctly classify what it is",
+      "macro_context is empty - no assessment of whether GSE earnings announcements are relevant to macro research",
+      "The record correctly identifies the source as thin but then puts it in review_queue rather than making a clear reject decision",
+      "tag 'irrelevant' is self-contradictory for an archive that supposedly includes corporate earnings research"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This is a borderline case. The record is factually accurate about the source content, but the record itself has internal inconsistencies: it correctly identifies the source as irrelevant to market structure/macro catalysts (and tags it 'irrelevant') yet still sends it to review_queue. The decision logic needs clarification: should corporate earnings from GSEs be archived or not?"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000031052226000041.txt",
+  "notes": "Irrelevant to market structure and macro catalysts. This is a standard SEC 8-K filing by Fannie Mae—a government-sponsored enterprise—announcing the availability of Q1 2026 earnings documents. The filing does not contain any substantive financial data, forward guidance, or market-moving information in its body text. The referenced exhibits (99.1 press release, 99.2 earnings presentation, 99.3 financial supplement) contain the actual content but are not included in the source provided. If research requires Fannie Mae's Q1 2026 earnings data, the exhibits must be retrieved separately. Not suitable for RAG on market structure or macro catalysts.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "No content relevant to market structure or macro catalysts",
+      "Source is a regulatory wrapper with no substantive data in body text",
+      "Exhibits containing actual earnings information not included",
+      "Topic mismatch: corporate earnings ≠ macro catalyst or market structure"
+    ]
+  }
+}

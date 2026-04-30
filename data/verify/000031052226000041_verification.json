@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' when a more specific value could apply (e.g., corporate_earnings or financial_stability_report for a GSE)",
+    "The record acknowledges 'topic is not market structure or macro catalysts' but doesn't correctly classify what it is",
+    "macro_context is empty - no assessment of whether GSE earnings announcements are relevant to macro research",
+    "The record correctly identifies the source as thin but then puts it in review_queue rather than making a clear reject decision",
+    "tag 'irrelevant' is self-contradictory for an archive that supposedly includes corporate earnings research"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The record is factually accurate about the source content, but the record itself has internal inconsistencies: it correctly identifies the source as irrelevant to market structure/macro catalysts (and tags it 'irrelevant') yet still sends it to review_queue. The decision logic needs clarification: should corporate earnings from GSEs be archived or not?",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K is a standard regulatory wrapper for Fannie Mae's Q1 2026 earnings. The body text contains no substantive financial data—only references to attached exhibits (99.1 press release, 99.2 earnings presentation, 99.3 financial supplement). For research on macro catalysts or market structure, the actual exhibits would need to be retrieved. GSE earnings can be relevant to housing finance and credit markets, but this source alone provides no actionable information.",
+    "macro_context": "Fannie Mae is a government-sponsored enterprise (GSE) critical to the secondary mortgage market. Its earnings reports can signal credit market conditions and housing sector health, but this 8-K filing contains no such data—the exhibits with the actual figures are referenced but not included.",
+    "market_structure_context": ""
+  }
+}

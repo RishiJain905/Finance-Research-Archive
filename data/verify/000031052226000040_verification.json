@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but could reasonably be classified as 'research_paper' or similar given the SEC filing source type",
+    "The record correctly identifies the source as irrelevant to macro catalysts, but does not provide a clear recommendation on whether to archive (just notes 'NOT ARCHIVABLE' in notes field)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is largely accurate and appropriately characterizes this SEC 10-Q filing as irrelevant to market structure or macro catalysts. The main minor issue is the 'unknown' event_type classification when a more specific value from the taxonomy might apply. However, given the source is correctly assessed as low-value for the research archive mandate, this does not require human review.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "This is a quarterly 10-Q financial filing from Fannie Mae (Federal National Mortgage Association) covering Q1 2026 (January 1 – March 31, 2026), filed with the SEC on April 29, 2026. The source body consists almost entirely of XBRL taxonomy tags and financial line items with minimal narrative content readable in the provided excerpt. This is a routine corporate financial disclosure, not a source relevant to market structure or macro catalysts as defined by the extraction mandate.",
+    "why_it_matters": "This filing is a corporate quarterly financial statement from a GSE (government-sponsored enterprise) and is not designed to communicate market-moving macro information or structural market insights. It may contain indirect housing/mortgage data useful for fundamental analysis, but the document itself does not constitute a macro catalyst or market structure event. SEC XBRL filings of this type are not archivable as primary research sources.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

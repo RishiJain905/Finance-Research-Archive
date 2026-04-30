@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record has empty source attribution (name, url, domain, published_at, source_type all blank)",
+      "Generated record has empty summary, key_points, and all other fields - failed generation",
+      "Source is a micro-cap pharmaceutical company (MDCX) SEC filing, not relevant to macro catalysts or market structure",
+      "Source is a routine 8-K with no market-wide implications (ATM offering amendment and delisting notice for sub-$1 stock)",
+      "Page type is a regulatory filing document, not an article or research piece with archival value for finance research"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Generated record is essentially empty/incomplete. Source itself is a micro-cap company filing irrelevant to macro finance research. Both the record and the source fail verification standards."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine earnings announcement for a single BDC",
+    "Event type 'unknown' is technically correct as 8-K filings don't map to taxonomy, but confirms non-qualifying content",
+    "No macro or market structure content present in the filing",
+    "Inconsistent quality tier scoring (tier: not_applicable, score: 0) contradicts suggested_status of 'review_queue'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source is clearly outside the archive's scope (market structure and macro catalysts). This is a routine corporate disclosure with no policy-relevant content. The generated record correctly identified this as irrelevant. No human review needed as the verdict is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

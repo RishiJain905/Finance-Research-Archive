@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a container/cover page 8-K that references exhibits (99.1 press release, 99.2 slides) containing actual earnings data, but the body text provides zero substantive financial figures",
+    "No actionable macro or market structure data present—the record correctly identifies this as a significant limitation",
+    "event_type is 'unknown' with no clear match to taxonomy, though corporate earnings announcements don't fit standard categories",
+    "Record correctly notes the document has low archival value for finance research focused on macro catalysts or market structure"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is well-reasoned and correctly identifies the core issue (no substantive data in body), but this falls at the edge of the decision boundary. The verification confidence of 7 and status of 'review_queue' are appropriate. Human review needed to confirm whether container-style SEC filings with no embedded data should be auto-rejected versus flagged for potential exhibit retrieval.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Freeport-McMoRan Inc. (FCX) filed a Form 8-K on April 23, 2026, announcing first-quarter 2026 financial and operating results via press release and earnings call slides, both provided as exhibits. The filing contains only the 8-K cover page with no substantive earnings data included in the body text.",
+    "why_it_matters": "This filing is a corporate earnings announcement for a major copper and gold producer. However, the actual earnings data and financial figures are not present in the 8-K body text—they exist only in exhibits referenced but not reproduced. As structured, this document provides no actionable financial or macro data.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

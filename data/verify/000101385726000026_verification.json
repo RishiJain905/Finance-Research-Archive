@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is raw XBRL financial data (SEC EDGAR 10-Q filing) with no human-readable narrative content",
+    "Generated record is completely empty - all fields blank (source attribution, summary, key_points, etc.)",
+    "Source type is XBRL taxonomy data, not an article or commentary - provides no analytical content",
+    "Source attribution missing from the generated record entirely",
+    "event_type not provided and cannot be determined from XBRL data alone",
+    "Source is not relevant to macro catalysts or market structure - this is a corporate earnings/financial filing with no monetary policy or market-moving content",
+    "XBRL data has no archival value for research purposes without accompanying human-readable filing"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Generated record is entirely empty with no content to verify. Source is raw XBRL accounting data without narrative analysis. SEC EDGAR 10-Q filings are regulatory documents, not market catalyst sources.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
