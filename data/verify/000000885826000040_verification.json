@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated research record contains only empty fields - no summary, key_points, or any content was produced",
+    "Source attribution (name, url, published_at, source_type) is completely missing from the record",
+    "Source is a corporate 8-K earnings filing from Avnet, Inc. - a single company's quarterly results announcement, not relevant to market structure or macro catalysts",
+    "Source itself is thin - only contains boilerplate 8-K cover page and references an attached press release (Exhibit 99.1) that would contain actual earnings figures",
+    "No event_type provided, and the record contains no meaningful content to classify",
+    "Source metadata shows empty JSON object - no source_type diagnostic available"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Research record was not generated (all fields empty). Source is a corporate earnings filing rather than a macro/market structure document. Requires human decision on whether this source type should be archived at all.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

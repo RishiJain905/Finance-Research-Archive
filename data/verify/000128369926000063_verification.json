@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q SEC filing, entirely outside scope of market structure or macro catalysts research",
+    "Source contains only XBRL-tagged financial data with no narrative content, policy references, or market-relevant commentary",
+    "event_type correctly set to 'unknown', but this confirms the source falls outside the event taxonomy entirely",
+    "topic correctly set to 'not_applicable' - this is the appropriate classification",
+    "Source is a container/filing document, not an article-like source with analytical content",
+    "No archival value for the designated research focus areas"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record accurately identifies this source as outside scope. No human review needed - the rejection is clear-cut based on relevance rules.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

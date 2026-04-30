@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — it's a company-specific 8-K earnings filing from a mid-cap trucking company (MRTN) with no macro or market structure implications",
+    "The generated record correctly identifies the source as 'not relevant' and uses appropriate tags and why_it_matters framing",
+    "Record is well-constructed and factually accurate against the source, but the source itself is out of scope for this archive's focus areas"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is correctly flagged as not relevant by the record. However, since this archive focuses on market structure and macro catalysts, company-specific earnings filings like this should likely be rejected. Human review needed to confirm whether individual company earnings filings fall within scope, or if only market-wide macro catalysts qualify.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The current why_it_matters is accurate — this is a company-specific earnings release with no macro relevance. The framing correctly identifies that it does not contain Fed policy, central bank decisions, macroeconomic data, or market operations.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

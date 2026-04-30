@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — routine regional bank 8-K earnings filing",
+    "event_type is 'unknown' when it should be classified as a data_release (corporate earnings release)",
+    "No actual financial data present in source body — only a reference to Exhibit 99.1",
+    "Source is thin, procedural, and lacks archival value for this archive's focus areas",
+    "market_impact fields are empty/zero, appropriately reflecting the source has no macro relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record correctly identifies this source as outside archive scope, but human review is needed to confirm rejection routing and verify that event_type 'unknown' is properly handled as an auto-reject trigger.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "MetroCity Bankshares, Inc. filed a Form 8-K on April 24, 2026, referencing its Q1 2026 earnings press release (Exhibit 99.1). The 8-K body contains no financial figures or substantive narrative — only procedural disclosure language and a reference to the attached exhibit. This is a routine corporate filing with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This filing is outside the archive's scope. It is a standard corporate earnings disclosure from a regional bank with no market-moving content. The actual Q1 2026 earnings data resides in Exhibit 99.1, which is not included in the source body.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

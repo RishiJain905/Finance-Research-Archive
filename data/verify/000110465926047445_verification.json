@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Topic is mislabeled as 'macro catalysts' despite source being a consumer staples earnings release",
+    "event_type set to 'unknown' is acceptable given no perfect taxonomy match, but filing could qualify as data_release_other if earnings data is tracked",
+    "why_it_matters accurately states lack of relevance to market structure or macro catalysts",
+    "Source is a routine SEC Form 8-K for a small-cap candy company with no policy or market structure significance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The source is factually accurate but fundamentally irrelevant to the finance research archive's focus areas. Human decision needed on whether routine corporate earnings from non-systemic companies should be archived at all, or routed to a separate corporate earnings category.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

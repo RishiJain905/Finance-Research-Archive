@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate earnings filing (8-K) from a single utility company (CMS Energy) - not relevant to macro catalysts or market structure",
+    "Source body truncated; Exhibit 99.1 containing actual Q1 earnings data not accessible in provided source",
+    "event_type set to 'unknown' - while correct that this doesn't fit taxonomy categories, the correct action is to reject as out of scope",
+    "No policy implications, market-wide signals, or market structure content contained in source",
+    "Archive focus (market structure, macro catalysts, monetary policy, rate expectations) not met by this corporate financial disclosure"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Source is definitively out of scope. This is a corporate 8-K filing announcing Q1 2026 earnings for CMS Energy Corporation. It contains company-specific financial results and securities registrations. There is no market-wide macro catalyst, monetary policy content, rate expectations, or market structure/policy implications. The record already correctly identifies this as not archiveable for the stated focus areas.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

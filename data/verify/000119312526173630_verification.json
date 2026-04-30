@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution is entirely missing - name, url, domain, published_at, and source_type are all blank",
+    "Source is SEC XBRL structured data (raw financial tags), not human-readable content suitable for archiving",
+    "Source is a company-specific 10-Q filing - not relevant to market structure or macro catalysts per mandate",
+    "Event type is missing and would be 'unknown' - 10-Q filings are not covered by the event taxonomy",
+    "Generated record is empty/placeholder with no summary, key_points, why_it_matters, or any substantive content",
+    "A single insurer's quarterly filing has no meaningful market-wide archival value",
+    "Source is not article-like; it's structured financial data that cannot be meaningfully summarized"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source attribution completely missing, source is XBRL data not suitable for archiving, record is empty placeholder with no content",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
