@@ -1,0 +1,68 @@
+{
+  "id": "seed_crawl_treasury_report_on_foreign_portfolio_holdings_bc9e7f2613843020",
+  "created_at": "2026-04-30T21:08:41.639676+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "Report on Foreign Portfolio Holdings of U.S. Securities at End-June 2025",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/news/press-releases/sb0482",
+    "published_at": "2025-06-30",
+    "source_type": "seed_crawl",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "The Treasury released final results from the annual TIC survey of foreign portfolio holdings of U.S. securities as of June 30, 2025, measuring total holdings at $35,349 billion, up 14.5% from $30,881 billion a year earlier. Foreign holdings of U.S. equities reached $19,860 billion, long-term debt securities totaled $13,840 billion, and short-term debt securities stood at $1,649 billion. The survey was conducted jointly by Treasury, the Federal Reserve Bank of New York, and the Board of Governors.",
+  "key_points": [
+    "Total foreign portfolio holdings of U.S. securities as of June 30, 2025: $35,349 billion, up from $30,881 billion (June 2024)",
+    "U.S. equities held by foreigners: $19,860 billion, representing 56.2% of total holdings",
+    "U.S. long-term debt securities: $13,840 billion, including $1,626 billion in asset-backed securities and $12,214 billion in non-ABS securities",
+    "U.S. short-term debt securities held by foreigners: $1,649 billion",
+    "Official foreign holdings (central banks, governments): $6,907 billion (up from $6,598 billion)",
+    "Top investing countries: United Kingdom ($3,462B), Cayman Islands ($3,180B), Canada ($2,900B), Japan ($2,883B), Luxembourg ($2,641B)"
+  ],
+  "why_it_matters": "This TIC survey provides the authoritative benchmark for international capital flows into U.S. securities markets. The 14.5% year-over-year increase in foreign holdings reflects global allocation toward U.S. assets. The country-level breakdown reveals which nations are the largest investors in U.S. equities, Treasuries, agencies, and corporate debt, which is critical for understanding global demand dynamics and potential capital flow reversal risks.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "Foreign portfolio holdings data is a key input for understanding U.S. external financing, the dollar's reserve status, and potential vulnerabilities to shifts in global risk appetite. The survey shows foreign investors continue to increase allocations to U.S. securities, with equity holdings growing faster (+17.7% YoY) than debt holdings (+9.1% YoY). Official holdings increased by $309 billion year-over-year.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$35,349 billion",
+    "$19,860 billion",
+    "$13,840 billion",
+    "$1,649 billion",
+    "$6,907 billion official holdings",
+    "$1,626 billion ABS holdings"
+  ],
+  "tags": [
+    "tic-survey",
+    "foreign-portfolio-holdings",
+    "international-capital-flows",
+    "us-securities",
+    "treasury-holdings",
+    "foreign-equities",
+    "debt-securities"
+  ],
+  "llm_review": {
+    "initial_confidence": 9,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "source.published_at is set to '2025-06-30' (survey reference date) but the source clearly states it was released on April 30, 2026. The notes correctly identify this issue, but the field itself wasn't corrected.",
+      "macro_context states 'central bank reserve diversification continued' — while official holdings increased by $309B is factually supported, the source does not explicitly state this represents reserve diversification; this is an inference."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is well-constructed and factually accurate on balance, but the published_at field error is a metadata issue that must be corrected. The source notes identify this discrepancy but the field itself remains wrong. Human should confirm the published_at should be updated to 2026-04-30 (release date) rather than 2025-06-30 (survey reference date)."
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_report_on_foreign_portfolio_holdings_bc9e7f2613843020.txt",
+  "notes": "This is a data release from the annual TIC survey, not a market structure document. The source provides authoritative benchmark data on foreign ownership of U.S. securities. Note: published_at reflects the survey reference date (June 30, 2025), not the release date. The report was actually released on April 30, 2026. The survey was conducted jointly by Treasury, Federal Reserve Bank of New York, and Board of Governors. Next survey covers June 2026 holdings with preliminary data expected February 26, 2027. Complementary survey on U.S. holdings of foreign securities (year-end 2025 data) is being processed with preliminary results expected August 31, 2026."
+}

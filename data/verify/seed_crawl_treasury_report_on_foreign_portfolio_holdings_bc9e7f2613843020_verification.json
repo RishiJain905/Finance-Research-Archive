@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "source.published_at is set to '2025-06-30' (survey reference date) but the source clearly states it was released on April 30, 2026. The notes correctly identify this issue, but the field itself wasn't corrected.",
+    "macro_context states 'central bank reserve diversification continued' — while official holdings increased by $309B is factually supported, the source does not explicitly state this represents reserve diversification; this is an inference."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is well-constructed and factually accurate on balance, but the published_at field error is a metadata issue that must be corrected. The source notes identify this discrepancy but the field itself remains wrong. Human should confirm the published_at should be updated to 2026-04-30 (release date) rather than 2025-06-30 (survey reference date).",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "Foreign portfolio holdings data is a key input for understanding U.S. external financing, the dollar's reserve status, and potential vulnerabilities to shifts in global risk appetite. The survey shows foreign investors continue to increase allocations to U.S. securities, with equity holdings growing faster (+17.7% YoY) than debt holdings (+9.1% YoY). Official holdings increased by $309 billion year-over-year.",
+    "market_structure_context": ""
+  }
+}
