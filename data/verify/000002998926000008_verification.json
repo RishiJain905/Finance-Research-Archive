@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a routine corporate earnings filing for Omnicom Group Inc. (advertising/marketing company), explicitly outside stated focus on market structure and macro catalysts",
+    "event_type set to 'unknown' when it could more specifically be 'data_release_other' if earnings data is considered a data release",
+    "verification_confidence in llm_review is set to 0 but initial_confidence is 8—a logical inconsistency indicating review was not completed properly",
+    "human_review.required is false despite issues present; should be true for records with verification_confidence <= 5"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is factually accurate but explicitly outside the archive's scope (macro catalysts/market structure). Low verification_confidence (0 in llm_review) combined with scope exclusion suggests rejection is appropriate, but the internal inconsistency in the record itself (initial_confidence: 8 vs verification_confidence: 0) warrants human review to clarify the record's integrity before final disposition.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Omnicom Group Inc. filed a Form 8-K on April 28, 2026, disclosing Q1 2026 financial results for the three months ended March 31, 2026. The company hosted an earnings call and furnished an investor presentation (Exhibits 99.1 and 99.2). The filing references the pending merger with Interpublic Group (IPG) and contains standard forward-looking statement risk factors. This is a routine corporate earnings disclosure with no relevance to monetary policy, macro economic catalysts, or market structure.",
+    "why_it_matters": "This is a standard corporate earnings filing for an advertising and marketing communications holding company. The filing has no relevance to market structure (trading mechanisms, market plumbing, institutional operations) or macro catalysts (central bank policy, Treasury operations, key economic data releases). While the IPG merger integration and general risk disclosures are noted, they do not constitute macro or market structure analysis. Outside the scope of this macro/market structure research archive.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

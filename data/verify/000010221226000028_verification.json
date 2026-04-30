@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a routine SEC 10-Q filing from a small regional bank (UNIVEST Financial) — not relevant to market structure or macro catalysts",
+    "Generated record is completely empty with all fields blank",
+    "Source is XBRL-structured financial data, not an article-like source with analytical content",
+    "No market-moving information or policy relevance present in this filing",
+    "Source does not match any valid event_type in the taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "This is a straightforward rejection. The source is a routine regulatory filing with no relevance to macro catalysts or market structure, and the generated record is entirely empty.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

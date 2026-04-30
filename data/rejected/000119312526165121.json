@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated research record is entirely empty - no summary, key_points, source attribution, event_type, or any content to verify",
+      "Source is a company-specific SEC 8-K filing (Core Scientific debt offering announcement) - not relevant to market structure or macro catalysts",
+      "Source attribution fields (name, url, domain, published_at, source_type) are all empty",
+      "event_type field is empty/missing",
+      "No market impact or macro context can be assessed from an empty record"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record is empty template with no content to verify; rejection is automatic"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

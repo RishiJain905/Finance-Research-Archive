@@ -1,0 +1,74 @@
+{
+  "id": "000010051726000091",
+  "created_at": "2026-04-30T14:40:47.406553+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "United Airlines Holdings, Inc. 10-Q Filing — 2026-04-22",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000091/ual-20260331.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-16",
+    "source_type": "sec_filing"
+  },
+  "summary": "United Airlines Holdings filed its Q1 2026 10-Q quarterly report covering the period January 1 – March 31, 2026. The filing contains standard XBRL-tagged financial data including balance sheet items, revenue segment breakdowns (passenger, cargo, ancillary), and equity components. The source is primarily machine-readable XBRL taxonomy data with limited narrative content visible in the truncated body.",
+  "key_points": [
+    "Filing period: Q1 2026 (January 1 – March 31, 2026)",
+    "XBRL taxonomy tags include standard elements: CommonStock, AdditionalPaidInCapital, RetainedEarnings, TreasuryStock, AccumulatedOtherComprehensiveIncome",
+    "Revenue segments broken down by passenger, cargo and freight, and other product/service categories",
+    "Geographic revenue breakdown by destination: domestic, Atlantic, Pacific, Latin America",
+    "Frequent flyer program (MileagePlus) data points included in XBRL tags",
+    "No narrative commentary or forward-looking statements visible in the provided excerpt"
+  ],
+  "why_it_matters": "This is a corporate financial filing for an airline company. It contains no information relevant to market structure (no discussion of market operations, plumbing, Treasury operations, or monetary policy) or macro catalysts (no economic data, Fed decisions, or policy commentary). The document is outside the archive's scope.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "10-q",
+    "earnings",
+    "united-airlines",
+    "not-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type set to 'unknown' - correct given the source is a corporate 10-Q which doesn't fit any specific taxonomy category (it's not monetary policy, speeches, data releases, Treasury operations, or research paper in the economic/policy sense)"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is well-constructed and correctly identifies the source as out-of-scope for the archive. The assessment that this corporate 10-Q filing lacks relevance to market structure or macro catalysts is accurate. Auto-routing to reject is appropriate."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000010051726000091.txt",
+  "notes": "OUT OF SCOPE — This is a corporate SEC 10-Q filing for United Airlines Holdings. The document contains standard XBRL financial data (revenue segments, equity components, balance sheet items) and is entirely focused on airline company financials. It contains no content related to: (1) market structure — no discussion of market operations, Treasury auctions, Fed balance sheet, repo markets, or trading mechanics; (2) macro catalysts — no monetary policy decisions, economic data releases, central bank communications, or market-moving events. Document is not suitable for this finance research archive and should be excluded.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 0,
+    "reasoning": [
+      "Not relevant to market structure or macro catalysts",
+      "Corporate earnings filing, not a market or policy document",
+      "XBRL data only; no narrative content accessible"
+    ]
+  }
+}

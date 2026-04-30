@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - while true that no taxonomy type fits perfectly, the record should note this is a corporate governance vote results filing from SEC EDGAR",
+    "The record correctly identifies this source as not relevant to market structure or macro catalysts, but the systematic evaluation of event_type against the taxonomy appears incomplete"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Minor refinement opportunity: the event_type 'unknown' is technically correct but should be better documented. The record is otherwise accurate, well-structured, and appropriately assessed as non-relevant. Auto-route is appropriate.",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

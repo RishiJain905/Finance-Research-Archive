@@ -1,0 +1,14 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_filing' is not a valid taxonomy value. Valid values are: fomc_statement, fomc_minutes, fomc_projections, rate_decision, monetary_policy_report, speech_hawkish, speech_dovish, speech_neutral, congressional_testimony, data_release_cpi, data_release_ppi, data_release_gdp, data_release_employment, data_release_other, treasury_issuance, balance_sheet_update, market_notice, financial_stability_report, regulatory_guidance, research_paper, economic_commentary, blog_post, unknown. Since this is a corporate filing with no macro relevance, event_type should be 'unknown'.",
+    "Source relevance assessment in the record is correct: this is a micro-cap mining company feasibility study update, not relevant to market structure or macro catalysts."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record appropriately identifies this source as not relevant for a macro/market structure archive (correctly marking quality_tier as 'excluded'), but uses an invalid event_type 'regulatory_filing'. This requires correction to a valid taxonomy value ('unknown' is appropriate since the source has no macro relevance). The human reviewer should confirm whether to accept/reject the record given the source's exclusion recommendation.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "event_type": "unknown"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing, entirely outside the scope of market structure and macro catalysts research",
+    "Source body consists of raw XBRL financial data tags with no human-readable narrative content",
+    "event_type is set to 'unknown' — correct classification since this filing doesn't fit any taxonomy category (monetary policy, speeches, data releases, Treasury operations, or research)",
+    "No relevance to Fed policy, central bank decisions, Treasury market operations, or macroeconomic catalysts",
+    "Record correctly identifies the source as non-relevant, but the system should not be ingesting such sources in the first place"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

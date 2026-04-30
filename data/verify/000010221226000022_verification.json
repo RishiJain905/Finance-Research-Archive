@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 8,
+  "verdict": "accept",
+  "issues_found": [
+    "event_type is 'unknown' but the source clearly describes a Q1 2026 earnings data release via 8-K; this should be classified as 'data_release_other'",
+    "topic is marked 'not_relevant' - while accurate that this is not a macro catalyst, the record correctly notes it's a regional bank earnings release which does have a defined place in the taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "accepted",
+  "corrected_fields": {
+    "summary": "Univest Financial Corporation filed a Form 8-K on April 22, 2026 reporting Q1 2026 earnings via attached press release (Exhibit 99.1). The actual earnings figures are not included in the 8-K body itself—they are contained in the referenced exhibit, which is not present in this source text. This is a routine corporate disclosure from a small regional bank holding company.",
+    "why_it_matters": "This filing has no relevance to market structure or macro catalysts. It is a routine earnings disclosure from a micro-cap regional bank (Univest Financial), representing standard corporate disclosure obligations under SEC rules. The source contains no substantive financial data—only a reference to an external press release containing the actual earnings information. As a micro-cap regional bank (~$500M market cap), this filing has no systemic market impact.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

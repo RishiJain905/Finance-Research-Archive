@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' but could reasonably be coded as 'research_paper' since the source is a regulatory filing with substantive corporate action disclosures",
+    "verification_confidence is 0 in llm_review but internal logic suggests this should be higher for factual accuracy (the record correctly captures all numbers - $50M repurchase authorization, $0.22 dividend, payment dates)",
+    "human_review.required is false but human_review.decision is already set to 'exclude' - internal inconsistency in routing logic"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The factual content is accurate and properly captured from the source. However, the record has two competing assessments: (1) the content is correctly summarized, and (2) the source is deemed irrelevant to macro/market structure. The verification confidence scoring is inconsistent, and the decision to mark human_review.required=false while already having a human decision of 'exclude' is contradictory. A human should clarify the verification confidence and confirm the appropriate routing for sources that are factually accurate but scope-irrelevant.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Mid Penn Bancorp, Inc. filed an 8-K on April 21, 2026, announcing Q1 2026 financial results and two corporate actions: (1) extension and expansion of its treasury stock repurchase program by an additional $50 million through April 30, 2027, and (2) declaration of a quarterly cash dividend of $0.22 per share payable May 15, 2026.",
+    "why_it_matters": "This filing is a routine corporate disclosure for a small regional bank (~$240M market cap, NASDAQ: MPB). The stock buyback expansion and dividend declaration are company-specific capital allocation decisions with no bearing on aggregate market structure or macro monetary policy. Irrelevant for finance research focused on market structure or macro catalysts.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 9,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing from an advertising holding company (Omnicom Group), not relevant to market structure or macro catalysts",
+    "Source contains raw XBRL accounting data with no narrative content about economic conditions, monetary policy, or market structure",
+    "Generated record correctly identifies the source as non-relevant and recommends exclusion",
+    "event_type 'unknown' is technically valid but accurate given the source type lacks macro relevance",
+    "Source is appropriate for corporate earnings archives but inappropriate for this macro/market structure research archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record has performed an accurate self-assessment. It correctly identifies the source as a corporate earnings filing with no macro or market structure relevance. No human review needed—the record and recommendation are sound.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Omnicom Group Inc. filed its Q1 2026 10-Q (period ending 2026-03-31) on 2026-04-29. The filing contains standard corporate financial statement data in raw XBRL format including segment revenue by geography, debt schedule, and balance sheet line items. This document is a private sector advertising and communications holding company's quarterly earnings filing and contains no information relevant to market structure or macro catalysts.",
+    "why_it_matters": "This is a corporate earnings filing from a private sector advertising company. It does not contain information relevant to macro/market structure research. The filing is XBRL accounting data with no commentary on economic conditions, Fed policy, market operations, or any macro catalysts relevant to fixed income or equity market analysis."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "000087963526000030",
+  "created_at": "2026-04-30T14:49:07.966472+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "MID PENN BANCORP INC 8-K Filing — 2026-04-21",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/879635/000087963526000030/mpb-20260421.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-21",
+    "source_type": "regulatory_filing"
+  },
+  "summary": "Mid Penn Bancorp, Inc. filed an 8-K on April 21, 2026, announcing Q1 2026 financial results and two corporate actions: (1) extension and expansion of its treasury stock repurchase program by an additional $50 million through April 30, 2027, and (2) declaration of a quarterly cash dividend of $0.22 per share payable May 15, 2026.",
+  "key_points": [
+    "Board approved renewal of stock repurchase program through April 30, 2027",
+    "Program increased by up to $50 million additional authorization for future open market or negotiated repurchases",
+    "Repurchases to be conducted per SEC Rule 10b-18 and may be executed via Rule 10b5-1 trading plans",
+    "Board declared quarterly cash dividend of $0.22 per common share",
+    "Dividend payable May 15, 2026 to shareholders of record as of May 4, 2026",
+    "Q1 2026 financial results discussed in accompanying press release (Exhibit 99.1)"
+  ],
+  "why_it_matters": "This filing is a routine corporate disclosure for a small regional bank (~$240M market cap, NASDAQ: MPB). The stock buyback expansion and dividend declaration are company-specific capital allocation decisions with no bearing on aggregate market structure or macro monetary policy. Irrelevant for finance research focused on market structure or macro catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "$50 million additional repurchase authorization",
+    "$0.22 per share quarterly dividend",
+    "May 15, 2026 dividend payment date",
+    "May 4, 2026 record date"
+  ],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "mid-penn-bancorp",
+    "stock-repurchase",
+    "dividend",
+    "regional-bank",
+    "not-relevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but could reasonably be coded as 'research_paper' since the source is a regulatory filing with substantive corporate action disclosures",
+      "verification_confidence is 0 in llm_review but internal logic suggests this should be higher for factual accuracy (the record correctly captures all numbers - $50M repurchase authorization, $0.22 dividend, payment dates)",
+      "human_review.required is false but human_review.decision is already set to 'exclude' - internal inconsistency in routing logic"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "exclude",
+    "notes": "The factual content is accurate and properly captured from the source. However, the record has two competing assessments: (1) the content is correctly summarized, and (2) the source is deemed irrelevant to macro/market structure. The verification confidence scoring is inconsistent, and the decision to mark human_review.required=false while already having a human decision of 'exclude' is contradictory. A human should clarify the verification confidence and confirm the appropriate routing for sources that are factually accurate but scope-irrelevant."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000087963526000030.txt",
+  "notes": "NOT RELEVANT to target topics (market structure, macro catalysts). This is a routine corporate filing for Mid Penn Bancorp, Inc., a small regional bank headquartered in Harrisburg, PA. The filing contains only company-specific corporate actions: (1) expansion of stock buyback program by $50M, and (2) quarterly dividend declaration of $0.22/share. No market-wide structural implications or macro policy relevance.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 1,
+    "reasoning": [
+      "Source is a single-company regulatory filing with no relevance to market structure or macro catalysts",
+      "Subject matter is company-specific capital allocation (buybacks, dividends) rather than systemic market information",
+      "Filed for a micro-cap regional bank; no significance for aggregate markets"
+    ]
+  }
+}

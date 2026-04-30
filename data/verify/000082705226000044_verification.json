@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is incorrectly set to 'unknown' when the source is a regulatory filing that should be categorized as 'regulatory_guidance' or 'market_notice'",
+    "Source contains no substantive content relevant to market structure or macro catalysts",
+    "Source is too thin — the actual Business Update Presentation (Exhibit 99.1) is referenced but not included in the filing text",
+    "No numerical data, financial results, operational updates, or guidance present in this 8-K",
+    "Record correctly identifies the source as low-quality, but should be rejected rather than sent to review queue"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Issues are clear-cut: source is a thin regulatory filing with no macro relevance and has been correctly assessed as low-quality. Event type classification is obvious ('regulatory_guidance' or 'market_notice'), not 'unknown'.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Southern California Edison Company (SCE) and parent Edison International filed a Form 8-K on April 28, 2026, disclosing under Regulation FD that management will use a business update presentation (Exhibit 99.1) in meetings with institutional investors and at investor conferences. The filing does not contain the actual presentation content; it only references the exhibit and provides standard forward-looking statement disclaimers.",
+    "why_it_matters": "This filing is a routine regulatory disclosure indicating upcoming investor communications by a California utility company. It has no direct relevance to market structure or macro catalysts. The actual investor presentation content referenced in the exhibit is not included in this 8-K filing, making the document thin in terms of actionable information.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
