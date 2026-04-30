@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an empty API response/technical error stub with zero substantive content",
+    "Source provides no actual GDP data, analysis, or commentary to support market research",
+    "No archival value - a failed data retrieval attempt cannot inform macro catalyst analysis",
+    "Source URL and domain are empty/missing from attribution"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The World Bank API returned no valid observations for indicator NY.GDP.MKTP.KD.ZG (World GDP Growth Rate) as of the snapshot date 2026-04-30. No GDP growth figures, historical data, or forecast data are available in this response.",
+    "why_it_matters": "This source contains no usable economic data. It provides no information for assessing global GDP growth trends, which are fundamental macro catalysts for financial markets. Any analysis based on this source would be impossible.",
+    "macro_context": "No macro context available — the API returned an empty dataset for the World Bank GDP growth indicator. This does not reflect actual global economic conditions.",
+    "market_structure_context": ""
+  }
+}

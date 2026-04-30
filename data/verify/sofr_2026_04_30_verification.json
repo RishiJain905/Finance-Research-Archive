@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "source URL is missing from metadata — reduces traceability and verification ability",
+    "event_type is 'unknown' but the source is clearly a data_release_other type per taxonomy",
+    "summary and why_it_matters contain analytical claims not present in source (e.g., 'primary benchmark', 'foundational benchmark')",
+    "market_structure_context adds definition details not sourced from this specific snapshot",
+    "record represents raw quantitative data rather than research or analysis document",
+    "single daily data point without narrative or causal context limits standalone archival value"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source data is accurate but record format is problematic: missing source URL, incorrect event_type, and analytical claims that extend beyond the raw snapshot. Human review needed to determine if daily SOFR snapshots warrant individual archival records or should be aggregated.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "SOFR closed at 3.63% on April 29, 2026, down 1 basis point from the prior day's 3.64%. The rate has trended slightly lower over the past week, declining from 3.66% on April 24. This daily observation reflects overnight Treasury collateral repo market financing costs.",
+    "why_it_matters": "SOFR is the primary short-term lending benchmark. Daily observations provide real-time insight into short-term funding conditions and money market stress.",
+    "macro_context": "SOFR (Secured Overnight Financing Rate) is published daily by the Federal Reserve Bank of New York and reflects the median cost of overnight Treasury repo transactions.",
+    "market_structure_context": "SOFR replaced LIBOR as the primary reference rate for short-term lending and is used in Fed funds futures, SOFR futures, and as a fallback rate for legacy contracts. It is calculated as the median of overnight repo transactions collateralized by Treasury securities."
+  }
+}

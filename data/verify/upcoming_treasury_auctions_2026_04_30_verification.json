@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source contains no actual content - only a 404 error message with no usable market structure or macro data",
+    "event_type is 'unknown' but the record documents an API failure, not a research finding or policy event",
+    "Record has minimal archival value - it's a technical failure log, not source material for market analysis",
+    "No actual auction data, security types, offering amounts, or any substantive information retrieved",
+    "source_type is 'api_endpoint' which is a data retrieval mechanism, not an article-like source"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate in documenting the API failure (404 error, correct endpoint URL, attempted parameters all verified against source). However, the record has serious limitations: (1) No actual content from which to derive market structure or macro insights, (2) event_type is 'unknown' which is technically correct but indicates the record doesn't fit the taxonomy, (3) Archival value is very low - this is a failure log, not source material. Human judgment needed on whether documenting failed API retrievals has sufficient archival value for this research archive.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Attempt to retrieve upcoming Treasury auction data from the Treasury Fiscal Data API returned a 404 Not Found error. No auction dates, security types, offering amounts, or any other auction schedule information was retrieved.",
+    "why_it_matters": "Failed Treasury auction data retrieval creates a gap in visibility into near-term Treasury issuance schedule, which is essential for bond market participants assessing near-term supply pressures and auction dynamics.",
+    "macro_context": "",
+    "market_structure_context": "The Treasury Fiscal Data API is a primary source for U.S. Treasury auction schedules. A 404 error on the upcoming_auctions endpoint means market participants cannot access structured data on planned debt issuance through this channel."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "2y_yield_2026_04_30",
+  "created_at": "2026-04-30T15:26:48.970945+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "2-Year Treasury Yield (DGS2) Daily Snapshot",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-28",
+    "source_type": "data_snapshot"
+  },
+  "summary": "The 2-Year Treasury yield closed at 3.84% on April 28, 2026, up 6 basis points from the prior day's close of 3.78%, with recent observations ranging between 3.78% and 3.84%.",
+  "key_points": [
+    "2-Year Treasury yield: 3.84% as of 2026-04-28",
+    "Prior day close: 3.78% on 2026-04-27",
+    "Absolute change: +0.06 percentage points (6 bps)",
+    "Direction: up",
+    "Recent observations: 3.84 (4/28), 3.78 (4/27), 3.78 (4/24), 3.83 (4/23), 3.79 (4/22)"
+  ],
+  "why_it_matters": "The 2-year yield is highly sensitive to near-term rate expectations and Federal Reserve policy signaling. This daily snapshot provides a recent anchor point for rate path expectations, but does not include the driver of the move or forward-looking commentary.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The 2-year Treasury yield reflects market pricing of short-term rate expectations over the next ~2 years. Without accompanying news or data releases in this snapshot, the reason for the 6 bps increase cannot be determined from this source alone.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.84%",
+    "3.78%",
+    "0.06",
+    "6 bps"
+  ],
+  "tags": [
+    "treasury",
+    "yield-curve",
+    "2-year",
+    "short-end",
+    "rate-expectations"
+  ],
+  "llm_review": {
+    "initial_confidence": 3,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "event_type is 'unknown' when it should be 'data_release_other' - taxonomy value is mandatory and the correct type is obvious from context",
+      "Source is raw market data with no analytical content, policy context, or catalyst attribution - violates the 'article-like' requirement for research records",
+      "Source is thin, mechanical data delivery (data_snapshot) with insufficient substance for standalone archival value",
+      "The 'why_it_matters' and 'macro_context' fields contain generic interpretive content not sourced from the raw data itself",
+      "No driver or catalyst identified for the 6 bps yield change - record acknowledges this limitation but provides no explanatory context"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Decision is clear-cut: raw data snapshot lacks research value and event_type is invalid."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_04_30.txt",
+  "notes": "This source is a raw FRED data extraction, not research or commentary. It provides only the latest yield observation without any explanatory context. The 6 bps increase between April 27-28 could reflect multiple factors (economic data, Fed communications, risk sentiment) but none are identified here. Archive value is limited unless linked to contemporaneous analysis or events.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data-only",
+    "score": 2,
+    "reasoning": [
+      "Raw numeric observation without analysis",
+      "No policy context or catalyst attribution",
+      "Insufficient for standalone research note",
+      "Useful only as a quantitative data point requiring additional context"
+    ]
+  }
+}

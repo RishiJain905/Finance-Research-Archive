@@ -1,0 +1,78 @@
+{
+  "id": "wb_public_debt_2026_04_30",
+  "created_at": "2026-04-30T15:31:58.861853+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Public Debt Indicator (GC.DOD.TOTL.GD.ZS) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-04-30",
+    "source_type": "data_release_other",
+    "domain": ""
+  },
+  "summary": "The World Bank API query for indicator GC.DOD.TOTL.GD.ZS (World Public Debt as percentage of GDP) returned no valid observations for the snapshot date of 2026-04-30. No actual debt statistics, country-level data, or trend information could be extracted from this source.",
+  "key_points": [
+    "No recent valid observations were returned for indicator GC.DOD.TOTL.GD.ZS",
+    "The snapshot date is 2026-04-30",
+    "This indicator measures total central government debt as a percentage of GDP",
+    "The data query failed to return any usable content"
+  ],
+  "why_it_matters": "This source was intended to provide public debt statistics relevant to macro catalysts and fiscal sustainability analysis. The failure to return data means there is no information on debt levels, debt trajectories, or cross-country comparisons that would inform macro research or market analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "public-debt",
+    "indicator-failure",
+    "no-data",
+    "gc.dod.totl.gd.zs"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a data query failure response, not substantive content - contains only a system message stating no observations were returned",
+      "No actual debt statistics, figures, percentages, or country-level data present in source",
+      "Source has zero information content - cannot support any macro catalysts or market structure analysis",
+      "Quality tier 'insufficient' with score 1 is accurate; no valid data observations returned",
+      "Archival value is zero - a failed API query has no research or analytical utility",
+      "Domain field is empty string, making source attribution incomplete"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_public_debt_2026_04_30.txt",
+  "notes": "Source quality is extremely low. This is a data query failure, not a content source. No macroeconomic debt statistics, trend data, or analysis could be extracted. The source provides only a system message indicating no observations were returned. Future retrieval attempts should verify indicator availability or try alternative debt data sources such as IMF Fiscal Monitor or IMF WEO databases.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "insufficient",
+    "score": 1,
+    "reasoning": [
+      "No valid data observations returned",
+      "Query failure rather than substantive content",
+      "Cannot support market structure or macro catalysts analysis",
+      "Zero information content"
+    ]
+  }
+}

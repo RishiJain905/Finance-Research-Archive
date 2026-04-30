@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source URL is empty - FRED series URL pattern is https://fred.stlouisfed.org/series/IORB but no actual URL provided",
+    "event_type 'balance_sheet_update' is questionable - IORB is a policy rate, not an active balance sheet operation (QE/QT). Taxonomy options like 'rate_decision' or 'monetary_policy_report' would be more appropriate, though IORB is typically set administratively rather than through decisions",
+    "Record captures a flat reading (0 change) with no narrative - this is a single numeric observation with minimal standalone archival value as research documentation",
+    "Source correctly identified as 'raw_data' tier with score 3 - no accompanying analysis, commentary, or policy discussion"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record is factually accurate against the source data (IORB at 3.65%, flat) but has multiple structural issues: (1) missing source URL prevents verification, (2) event_type 'balance_sheet_update' is a poor fit for a policy rate observation, (3) as a single flat reading with no context, the standalone archival value is questionable. Human review should determine whether to accept with corrections or reject as low-value raw data.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The Interest on Reserve Balances (IORB) rate held steady at 3.65% on 2026-04-30, unchanged from 2026-04-29. IORB is the interest rate the Federal Reserve pays on reserve balances held by depository institutions, serving as a key policy rate in the Fed's floor system.",
+    "why_it_matters": "IORB serves as the floor for overnight interest rates in the federal funds market. Banks have no incentive to lend reserves below this rate, making IORB a key determinant of monetary policy transmission to money markets. The rate is typically set at or near the top of the federal funds target range.",
+    "market_structure_context": "IORB is a core element of the Fed's floor system for monetary policy implementation. By paying interest on reserves, the Fed anchors short-term rates without directly controlling the federal funds market. The current IORB at 3.65% suggests the top of the fed funds target range is approximately 3.50-3.75%. Note: Unlike active balance sheet operations (QE/QT), IORB is an administratively set policy rate reflecting the current policy stance."
+  }
+}

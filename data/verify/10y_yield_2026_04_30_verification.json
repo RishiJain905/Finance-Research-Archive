@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Missing source URL - FRED data should include a URL (e.g., https://fred.stlouisfed.org/series/DGS10)",
+    "Source is a thin raw data snapshot with no analytical content, creating limited standalone research value",
+    "Summary uses 'closed at' but source uses 'Latest observation' - treasury yields don't have a single daily 'close' like equities",
+    "market_impact directional_bias assigned as 'neutral' with confidence 2 is speculative for a single-day data point",
+    "macro_context and why_it_matters contain generalized statements that exceed what the thin source supports"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source data but has significant quality concerns: missing source URL, thin source with no analytical content, and market impact claims that go beyond what a single yield observation can support. The source itself is borderline acceptable for research archive purposes.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The 10-Year Treasury Yield (DGS10) registered 4.36% on 2026-04-28, up 1 basis point from the prior observation of 4.35% on 2026-04-27. The yield has remained in a narrow 4.30-4.36% range over the 5-day observation period (2026-04-22 to 2026-04-28).",
+    "why_it_matters": "The 10-year Treasury yield serves as a benchmark for mortgage rates and corporate borrowing costs, influencing risk asset valuations. Current levels in the 4.3-4.4% range reflect market pricing under the current rate environment.",
+    "macro_context": "The yield hovering around 4.3-4.4% is consistent with a steady rate environment, though this single observation provides limited macro context without accompanying policy or economic analysis.",
+    "market_structure_context": ""
+  }
+}

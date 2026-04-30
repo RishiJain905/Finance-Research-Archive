@@ -1,0 +1,79 @@
+{
+  "id": "upcoming_treasury_auctions_2026_04_30",
+  "created_at": "2026-04-30T15:29:16.831104+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "Upcoming Treasury Auctions — API Fetch Failed",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "domain": "treasury.gov",
+    "published_at": "2026-04-30",
+    "source_type": "api_endpoint"
+  },
+  "summary": "Attempt to retrieve upcoming Treasury auction data from the Treasury Fiscal Data API returned a 404 Not Found error. No auction dates, security types, offering amounts, or any other auction schedule information was retrieved.",
+  "key_points": [
+    "API endpoint for upcoming auctions returned 404 Not Found error",
+    "No auction_date, security_type, security_term, or offering_amt data available",
+    "Attempted to query 10 records sorted by auction date"
+  ],
+  "why_it_matters": "Failed Treasury auction data retrieval creates a gap in visibility into near-term Treasury issuance schedule, which is essential for bond market participants assessing near-term supply pressures and auction dynamics.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The Treasury Fiscal Data API is a primary source for U.S. Treasury auction schedules. A 404 error on the upcoming_auctions endpoint means market participants cannot access structured data on planned debt issuance through this channel.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api",
+    "404-error",
+    "market-structure",
+    "treasury-issuance"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 4,
+    "verdict": "review",
+    "issues_found": [
+      "Source contains no actual content - only a 404 error message with no usable market structure or macro data",
+      "event_type is 'unknown' but the record documents an API failure, not a research finding or policy event",
+      "Record has minimal archival value - it's a technical failure log, not source material for market analysis",
+      "No actual auction data, security types, offering amounts, or any substantive information retrieved",
+      "source_type is 'api_endpoint' which is a data retrieval mechanism, not an article-like source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is factually accurate in documenting the API failure (404 error, correct endpoint URL, attempted parameters all verified against source). However, the record has serious limitations: (1) No actual content from which to derive market structure or macro insights, (2) event_type is 'unknown' which is technically correct but indicates the record doesn't fit the taxonomy, (3) Archival value is very low - this is a failure log, not source material. Human judgment needed on whether documenting failed API retrievals has sufficient archival value for this research archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_04_30.txt",
+  "notes": "This source attempted to retrieve Treasury auction schedule data but received a 404 error. The endpoint URL suggests an API structure change or service disruption. No information about auction dates, amounts, or security types is available from this source. Topic assigned as market structure per TARGET metadata, but content is entirely absent. Low confidence in this record due to complete lack of actual data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "No actual content retrieved — only error message",
+      "Completely failed to fetch target data",
+      "Cannot support any market structure analysis",
+      "Archive only as documentation of retrieval failure"
+    ]
+  }
+}

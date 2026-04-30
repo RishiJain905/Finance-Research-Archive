@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains no actual content - only a 404 error message from a failed API call",
+    "No auction data, yields, bid-to-cover ratios, or any market structure information present",
+    "No archival value: a failed API request with no data is not worth preserving",
+    "Cannot verify any claims against source because source provides no data",
+    "event_type 'treasury_issuance' is misleading - source is about a data retrieval failure, not actual Treasury issuance",
+    "Record is honest about the failure, but honesty cannot compensate for absence of content"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately documents an API failure but the source itself has zero archival value. No human review needed - this is a clear reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

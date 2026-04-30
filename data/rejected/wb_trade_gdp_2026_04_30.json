@@ -1,0 +1,76 @@
+{
+  "id": "wb_trade_gdp_2026_04_30",
+  "created_at": "2026-04-30T15:32:36.502359+00:00",
+  "status": "rejected",
+  "topic": "global_economy",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) - No Data Available",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "",
+    "source_type": "data_notice",
+    "domain": ""
+  },
+  "summary": "Data retrieval for World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no recent valid observations. This is a technical data query failure with no content to analyze.",
+  "key_points": [
+    "World Bank API returned no valid data for indicator TG.VAL.TOTL.GD.ZS",
+    "Query date: 2026-04-30",
+    "Result: No recent valid observations were returned",
+    "No actual trade data, percentages, or GDP figures available for analysis"
+  ],
+  "why_it_matters": "No actionable content. This record documents a failed data retrieval attempt rather than providing usable economic or market data.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "data-retrieval-failure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no usable content - only a World Bank API error message indicating no valid observations returned",
+      "No relevance to market structure or macro catalysts since no actual economic data exists to analyze",
+      "event_type set to 'unknown' - this is appropriate but confirms the source has no archivable content",
+      "Cannot verify accuracy of non-existent data points or claims",
+      "Record documents a technical data retrieval failure, not a research document worth archiving"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_04_30.txt",
+  "notes": "Non-archivable. This source is a technical data retrieval failure indicating no recent valid observations for the World Trade (% of GDP) indicator. Contains no content relevant to market structure or macro catalysts analysis. The metadata topic 'global_economy' falls outside the required focus areas. Recommend re-querying World Bank API or discarding this record.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 1,
+    "reasoning": [
+      "Source contains only an error message, no actual data",
+      "No relevance to specified focus areas (market structure, macro catalysts)",
+      "Cannot generate any market or macro insights from empty response",
+      "Cannot verify accuracy of non-existent data"
+    ]
+  }
+}

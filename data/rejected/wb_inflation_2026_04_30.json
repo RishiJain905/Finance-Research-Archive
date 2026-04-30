@@ -1,0 +1,80 @@
+{
+  "id": "wb_inflation_2026_04_30",
+  "created_at": "2026-04-30T15:31:15.126119+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "World Inflation Rate",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "domain": "worldbank.org",
+    "published_at": "2026-04-30",
+    "source_type": "unknown"
+  },
+  "summary": "The World Bank data query for indicator FP.CPI.TOTL.ZG (World Inflation Rate) returned no valid observations as of the 2026-04-30 snapshot date. No substantive inflation data, historical series, or analyst commentary is available from this source.",
+  "key_points": [
+    "The World Bank CPI inflation indicator (FP.CPI.TOTL.ZG) returned no recent valid observations.",
+    "The snapshot date of the query is 2026-04-30, which is current relative to TODAY.",
+    "No inflation figures, country-level data, or percentage changes are provided.",
+    "The source is a data query result with no actual macroeconomic content."
+  ],
+  "why_it_matters": "This source provides no usable data for market analysis or macro research. Inflation is a key macro catalyst that influences central bank policy decisions and market expectations, but this specific query has returned an empty dataset. Researchers cannot assess global inflation trends, relative performance, or implications for monetary policy using this source.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "No macro context available—the source explicitly states that no inflation observations were returned for the queried indicator. Unable to assess global inflation trends, disinflation progress, or inflation persistence.",
+  "market_structure_context": "Not applicable—this source does not discuss market structure, operations, plumbing, or structural market dynamics.",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "inflation",
+    "no-data",
+    "failed-query",
+    "global-economy",
+    "macro-catalyst"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - violates source attribution requirement",
+      "Source contains zero substantive content - a failed data query cannot be archived as a research record",
+      "No actionable inflation data, historical series, or analyst commentary exists in this source",
+      "No author, institution statement, or substantive commentary present",
+      "Cannot assess macro or market structure relevance without underlying data",
+      "Event type 'data_release_other' is technically valid but misleading - no data was actually released",
+      "Source metadata topic is global_economy, not market structure or macro catalysts per instructions"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_04_30.txt",
+  "notes": "This is not a research document or data release—it is a data query that returned an empty result set. The source explicitly states 'No recent valid observations were returned.' This source is not relevant to market structure or macro catalysts because it contains no substantive content. Marked for human review due to low quality and non-applicability to target topics.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "failed_query",
+    "score": 1,
+    "reasoning": [
+      "Source contains zero data observations",
+      "No substantive content to summarize or extract",
+      "Cannot assess macro or market structure relevance without data",
+      "Quality tier is 'failed_query' indicating data retrieval failure rather than low-quality research"
+    ]
+  }
+}

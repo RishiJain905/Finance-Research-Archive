@@ -1,0 +1,89 @@
+{
+  "id": "sofr_2026_04_30",
+  "created_at": "2026-04-30T15:25:42.954231+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "SOFR Daily Rate Observation",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-29",
+    "source_type": "data_snapshot"
+  },
+  "summary": "SOFR closed at 3.63% on April 29, 2026, down 1 basis point from the prior day's 3.64%. The rate has trended slightly lower over the past week, declining from 3.66% on April 24. This daily observation reflects overnight Treasury collateral repo market financing costs.",
+  "key_points": [
+    "SOFR value: 3.63% as of 2026-04-29",
+    "Prior day value: 3.64% (2026-04-28), change of -0.01",
+    "Week-over-week decline: 3.66% (2026-04-24) to 3.63% (2026-04-29)",
+    "SOFR is calculated as the median of overnight repo transactions collateralized by Treasury securities",
+    "Source: FRED series code SOFR"
+  ],
+  "why_it_matters": "SOFR is the primary short-term lending benchmark. Daily observations provide real-time insight into short-term funding conditions and money market stress.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "repo",
+      "derivatives"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "SOFR (Secured Overnight Financing Rate) is published daily by the Federal Reserve Bank of New York and reflects the median cost of overnight Treasury repo transactions.",
+  "market_structure_context": "SOFR replaced LIBOR as the primary reference rate for short-term lending and is used in Fed funds futures, SOFR futures, and as a fallback rate for legacy contracts. It is calculated as the median of overnight repo transactions collateralized by Treasury securities.",
+  "important_numbers": [
+    "3.63%",
+    "3.64%",
+    "3.66%"
+  ],
+  "tags": [
+    "sofr",
+    "repo-market",
+    "short-term-rates",
+    "money-market",
+    "benchmark-rate",
+    "fed"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 5,
+    "verdict": "reject",
+    "issues_found": [
+      "source URL is missing from metadata — reduces traceability and verification ability",
+      "event_type is 'unknown' but the source is clearly a data_release_other type per taxonomy",
+      "summary and why_it_matters contain analytical claims not present in source (e.g., 'primary benchmark', 'foundational benchmark')",
+      "market_structure_context adds definition details not sourced from this specific snapshot",
+      "record represents raw quantitative data rather than research or analysis document",
+      "single daily data point without narrative or causal context limits standalone archival value"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_04_30.txt",
+  "notes": "This source is a single-day quantitative snapshot of SOFR from FRED. While the data is accurate and sourced from an authoritative government repository, it provides no analytical narrative or market context. A single basis point move in isolation is not inherently significant. This record captures the raw observation but has limited standalone research value. Consider whether daily SOFR snapshots should be archived individually or aggregated into weekly/monthly summaries for better utility in RAG applications.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 4,
+    "reasoning": [
+      "Source is authoritative (FRED)",
+      "Data is accurate and internally consistent",
+      "However, contains no analytical content",
+      "Single data point without context limits research utility",
+      "Relevant to market structure as SOFR is core market infrastructure"
+    ]
+  }
+}

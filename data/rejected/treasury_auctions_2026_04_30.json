@@ -1,0 +1,77 @@
+{
+  "id": "treasury_auctions_2026_04_30",
+  "created_at": "2026-04-30T15:28:32.571698+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Treasury Securities Auctions Data (Fetch Failed)",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/auction_data_securities",
+    "domain": "fiscaldata.treasury.gov",
+    "published_at": "2026-04-30",
+    "source_type": "data_feed"
+  },
+  "summary": "An attempt to retrieve current Treasury auction data from the Treasury Fiscal Data API resulted in a 404 error. No auction data was retrieved for the specified date.",
+  "key_points": [
+    "API endpoint returned 404 Not Found error",
+    "Attempted to fetch fields: issue_date, security_type, security_term, offering_amt, total_accepted",
+    "Sorted by issue_date descending, page size 5",
+    "No auction records were successfully retrieved"
+  ],
+  "why_it_matters": "Treasury auction data is critical for understanding primary market supply and bidder demand. The inability to retrieve this data means there is no current record of auction outcomes, yields, or bid-to-cover ratios for market structure analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "The Treasury auction mechanism is a key component of primary market structure. Failed data retrieval means no information about recent auction performance, tail sizes, or bidder participation is available.",
+  "important_numbers": [],
+  "tags": [
+    "treasury-auctions",
+    "api-error",
+    "data-unavailable",
+    "primary-market",
+    "404-error"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source contains no actual content - only a 404 error message from a failed API call",
+      "No auction data, yields, bid-to-cover ratios, or any market structure information present",
+      "No archival value: a failed API request with no data is not worth preserving",
+      "Cannot verify any claims against source because source provides no data",
+      "event_type 'treasury_issuance' is misleading - source is about a data retrieval failure, not actual Treasury issuance",
+      "Record is honest about the failure, but honesty cannot compensate for absence of content"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately documents an API failure but the source itself has zero archival value. No human review needed - this is a clear reject."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/treasury_auctions_2026_04_30.txt",
+  "notes": "Source attempted to query Treasury Fiscal Data API for recent auction records but received a 404 response. This indicates the endpoint may be unavailable, the URL may have changed, or the API may require authentication/parameters that were not provided. No market structure or auction analysis can be performed from this source. Recommend re-attempting fetch or using alternative Treasury auction data sources (e.g., TreasuryDirect.gov or Bloomberg auction data).",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "low",
+    "score": 1,
+    "reasoning": [
+      "No actual data retrieved - API failure",
+      "No usable content for market structure analysis",
+      "Only metadata about the failed request is available"
+    ]
+  }
+}

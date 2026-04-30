@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is 'unknown' when it should be 'data_release_other' - taxonomy value is mandatory and the correct type is obvious from context",
+    "Source is raw market data with no analytical content, policy context, or catalyst attribution - violates the 'article-like' requirement for research records",
+    "Source is thin, mechanical data delivery (data_snapshot) with insufficient substance for standalone archival value",
+    "The 'why_it_matters' and 'macro_context' fields contain generic interpretive content not sourced from the raw data itself",
+    "No driver or catalyst identified for the 6 bps yield change - record acknowledges this limitation but provides no explanatory context"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Decision is clear-cut: raw data snapshot lacks research value and event_type is invalid.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

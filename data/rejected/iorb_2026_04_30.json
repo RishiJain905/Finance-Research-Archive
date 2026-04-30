@@ -1,0 +1,85 @@
+{
+  "id": "iorb_2026_04_30",
+  "created_at": "2026-04-30T15:26:48.224788+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "balance_sheet_update",
+  "title": "Interest on Reserve Balances (IORB) - Daily Observation",
+  "source": {
+    "name": "Federal Reserve Economic Data (FRED)",
+    "url": "",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-30",
+    "source_type": "data_release_other"
+  },
+  "summary": "The Interest on Reserve Balances (IORB) rate held steady at 3.65% on 2026-04-30, unchanged from 2026-04-29. IORB is the interest rate the Federal Reserve pays on reserve balances held by depository institutions, serving as a key policy rate in the Fed's floor system.",
+  "key_points": [
+    "IORB rate: 3.65% as of 2026-04-30",
+    "IORB rate: 3.65% as of 2026-04-29",
+    "Absolute change: 0 (flat)",
+    "Rate has remained at 3.65% for at least five consecutive observations (2026-04-26 through 2026-04-30)",
+    "IORB serves as a floor for overnight interest rates in the federal funds market"
+  ],
+  "why_it_matters": "IORB serves as the floor for overnight interest rates in the federal funds market. Banks have no incentive to lend reserves below this rate, making IORB a key determinant of monetary policy transmission to money markets. The rate is typically set at or near the top of the federal funds target range.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "IORB is a core element of the Fed's floor system for monetary policy implementation. By paying interest on reserves, the Fed anchors short-term rates without directly controlling the federal funds market. The current IORB at 3.65% suggests the top of the fed funds target range is approximately 3.50-3.75%. Note: Unlike active balance sheet operations (QE/QT), IORB is an administratively set policy rate reflecting the current policy stance.",
+  "important_numbers": [
+    "3.65%",
+    "0"
+  ],
+  "tags": [
+    "interest-on-reserves",
+    "fed-policy",
+    "monetary-operations",
+    "iorb",
+    "money-market",
+    "bank-reserves",
+    "floor-system"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 4,
+    "verdict": "reject",
+    "issues_found": [
+      "Source URL is empty - FRED series URL pattern is https://fred.stlouisfed.org/series/IORB but no actual URL provided",
+      "event_type 'balance_sheet_update' is questionable - IORB is a policy rate, not an active balance sheet operation (QE/QT). Taxonomy options like 'rate_decision' or 'monetary_policy_report' would be more appropriate, though IORB is typically set administratively rather than through decisions",
+      "Record captures a flat reading (0 change) with no narrative - this is a single numeric observation with minimal standalone archival value as research documentation",
+      "Source correctly identified as 'raw_data' tier with score 3 - no accompanying analysis, commentary, or policy discussion"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "missing_source_attribution"
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/iorb_2026_04_30.txt",
+  "notes": "This is a daily FRED data observation for IORB, not an article or research piece. The data is factual and current (TODAY 2026-04-30 matches latest observation). The flat reading indicates no change in the Fed's reserve remuneration rate. Limited analytical value as a standalone record but serves as a baseline data point for monetary policy monitoring.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "raw_data",
+    "score": 3,
+    "reasoning": [
+      "This is a single-day numeric observation from FRED, not a research document",
+      "No accompanying analysis, commentary, or policy discussion",
+      "Provides only raw time series data without context",
+      "Sufficient for market structure reference but lacks depth for comprehensive research archiving"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is set to 'unknown' when the source is clearly a data release type; 'data_release_other' is the correct taxonomy value for daily EFFR observations",
+    "why_it_matters contains an unsupported inference: the target range 'likely 3.50-3.75%' is not stated in the source and should not be presented as fact",
+    "The source is a thin data snapshot (5 identical rate observations over consecutive days) with no narrative, policy decision, vote tally, or forward guidance",
+    "No FOMC meeting date or recent policy action is referenced, making it impossible to contextualize the rate level",
+    "Record notes classify this as 'tier_3_data' with low information density and lack of analytical value",
+    "Missing linkage to an associated FOMC statement or rate decision that would give meaning to the 3.64% figure"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "While the data points are factually accurate, the record fails core acceptance criteria: event_type is incorrectly marked 'unknown' rather than 'data_release_other', the why_it_matters section makes an unsupported target range inference, and the source is too thin to warrant standalone archival status without connecting policy context.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "The Effective Federal Funds Rate (EFFR) stood at 3.64% as of April 28, 2026, unchanged from the prior four trading days (April 24-28). The rate has been flat at this level, indicating no intraday or day-over-day change in the policy rate during this period. Note: This daily observation should be linked to the corresponding FOMC rate decision or statement for archival context.",
+    "why_it_matters": "The EFFR at 3.64% reflects current monetary policy settings. This daily observation should be paired with the corresponding FOMC statement or meeting minutes to provide policy context. Without accompanying FOMC decision data, the directional implications for the rate path are unknown from this source alone.",
+    "macro_context": "The EFFR at 3.64% reflects current monetary policy settings. This daily snapshot provides only the rate value and direction—no vote tally, forward guidance, or policy rationale. To assess implications for the rate path, this data point must be linked to the relevant FOMC decision or statement.",
+    "market_structure_context": "The EFFR is the overnight unsecured rate at which depository institutions lend reserves to each other, maintained within the FOMC's target range through the Fed's floor operating framework (where the Interest on Reserve Balances rate serves as the floor)."
+  }
+}
