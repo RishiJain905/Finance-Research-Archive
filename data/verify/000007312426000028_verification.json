@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts — this is a routine corporate earnings filing from a financial services company",
+    "Source is thin — the actual earnings data, press release content, and financial materials are in referenced exhibits (99.1, 99.2, 99.3) not included in the source text",
+    "The source contains only the 8-K cover page/transmittal document with no substantive market-moving information",
+    "event_type is correctly 'unknown' as corporate earnings filings don't fit the macro catalyst taxonomy",
+    "No policy commentary, rate implications, or systemic risk content present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately describes the source but correctly identifies it as out-of-scope for this archive focused on market structure and macro catalysts. No human review needed — the rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Northern Trust Corporation filed a Form 8-K on April 21, 2026, disclosing Q1 2026 earnings for the three months ended March 31, 2026. The filing is the 8-K cover page/transmittal document referencing exhibits (press release, presentation materials, financial trends) that contain the actual earnings data but are not included in this source text. This is a routine corporate earnings disclosure with no relevance to market structure or macro catalysts.",
+    "why_it_matters": "This filing is a standard corporate earnings release. It is not a market-moving macro event or a market structure document. Northern Trust is a financial sector company, but this filing provides no commentary on Fed policy, interest rates, market operations, or system-level liquidity conditions. The actual earnings figures and commentary are in exhibits not present in this source."
+  }
+}

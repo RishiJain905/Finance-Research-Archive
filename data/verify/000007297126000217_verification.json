@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source body consists primarily of XBRL technical taxonomy tags with minimal human-readable narrative content",
+    "Cannot extract meaningful macro context, market structure signals, or policy information from this source",
+    "Source type is a corporate quarterly financial filing (10-Q), outside the scope of macro/market structure research archive",
+    "Generated record correctly identifies the source as thin and non-relevant"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately characterizes the source as XBRL-dominated with no substantive narrative. No need for human review—the verdict of reject is supported by the evidence.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

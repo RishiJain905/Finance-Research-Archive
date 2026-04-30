@@ -1,0 +1,24 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is completely empty - all fields (summary, key_points, why_it_matters, macro_context, market_structure_context, etc.) are missing",
+    "Source attribution fields (name, url, domain, published_at, source_type) are all empty - violates core attribution requirement",
+    "event_type field is missing from the record",
+    "topic field is missing from the record",
+    "No market_impact assessment provided",
+    "No important_numbers provided",
+    "No tags provided",
+    "Source is a thin disclosure about ongoing negotiations with no definitive terms - has limited archival value as company-specific corporate news rather than market structure or macro catalyst",
+    "The source describes preliminary discussions about a potential acquisition with explicit uncertainty ('no definitive terms have been agreed upon', 'no assurance that discussions will result in...')"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record is entirely empty and has no content to verify. The source attribution is completely missing. This is a clear rejection case requiring no human review.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Sky Quarry Inc. filed a Form 8-K under Item 7.01 Regulation FD Disclosure announcing that in March 2026, the company entered into an exclusivity agreement to evaluate a potential transaction involving the acquisition of digital infrastructure assets. Discussions are ongoing but no definitive terms have been agreed upon. The company received information about the counterparty's plans including discussions with a potential tenant regarding a long-term lease and consideration of several financing options. No assurance that the transaction will be completed.",
+    "why_it_matters": "Sky Quarry is an Emerging Growth Company listed on Nasdaq Capital Market (ticker: SKYQ). This 8-K discloses early-stage M&A activity related to digital infrastructure assets, with no material terms yet established.",
+    "macro_context": "The filing does not contain macro-economic content. It is a company-specific disclosure about potential M&A activity.",
+    "market_structure_context": "As a micro-cap company (Nasdaq Capital Market listing) pursuing digital infrastructure acquisitions, this filing represents speculative corporate development rather than market-wide structural information."
+  }
+}
