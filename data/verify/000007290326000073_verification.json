@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution fields (name, url) are completely empty in the record",
+    "The record contains no content whatsoever - summary, key_points, and all other fields are empty",
+    "Source is XBRL (structured financial data) from SEC EDGAR, not human-readable narrative content suitable for research analysis",
+    "No event_type specified - cannot verify taxonomy compliance",
+    "Source is a corporate 10-Q filing for Xcel Energy - company-specific financial data with unclear relevance to market structure or macro catalysts",
+    "Cannot assess factual accuracy since no claims were generated"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is entirely empty - no content exists to verify. Rejection is automatic.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

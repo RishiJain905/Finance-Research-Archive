@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 8-K filing for a single biotech company (Lexicon Pharmaceuticals) - not relevant to market structure or macro catalysts as defined by the archive mandate",
+    "No discussion of trading venues, market makers, clearing, settlement, market plumbing, or market infrastructure",
+    "No discussion of Federal Reserve policy, central bank decisions, economic data releases, or fiscal policy",
+    "Content covers company-specific corporate actions (preferred stock conversion, equity plans, director elections) with no systematic market implications",
+    "event_type set to 'unknown' which is acceptable given taxonomy mismatch, but reinforces that the source does not fit any recognized category",
+    "The archive appears designed for market structure and macro catalyst research; this filing is out of scope regardless of its factual accuracy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is factually accurate and well-documented, but the source is fundamentally out of scope. The archive's focus areas are clearly defined (market structure and macro catalysts), and a single company's securities filing about equity conversions and corporate governance does not meet these criteria. Automated rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

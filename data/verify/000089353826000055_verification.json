@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is company-specific corporate transaction, not relevant to market structure or macro catalysts per archive mandate",
+    "event_type set to 'unknown' - while no perfect taxonomy match exists for single-company M&A filings, this correctly reflects the mismatch",
+    "Topic field correctly left blank as filing doesn't fit archive focus areas",
+    "Source quality is high (official SEC filing) but relevance to stated archive scope is zero",
+    "Archive notes correctly identify this as not meeting the core relevance criteria"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No ambiguity - the generated record itself correctly identifies that this corporate M&A filing is not relevant to market structure or macro catalysts, which are the stated scope of this archive. The record accurately summarizes the source but appropriately flags the relevance issue.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

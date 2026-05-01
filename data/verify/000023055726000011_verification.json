@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate 10-Q filing for Selective Insurance Group Inc — not relevant to market structure or macro catalysts",
+    "Source is raw XBRL-tagged structured data, not an article-like source with narrative content",
+    "XBRL data is truncated and provides no extractable market-moving information",
+    "event_type is 'unknown' — correct, but source does not fit any valid event_type category",
+    "No policy signals, rate guidance, or market-moving content present",
+    "Archive focus is macro/market-structure sources; company-specific financial filings are outside scope",
+    "Source provides only company-specific financial data with no broader market relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is clearly outside archive scope — a corporate 10-Q filing for a single insurance company with no macro or market structure content. The generated record correctly identifies this as not relevant. Manual review confirms rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

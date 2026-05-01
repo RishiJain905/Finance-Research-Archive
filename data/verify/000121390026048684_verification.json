@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "event_type is set to 'unknown' when the correct type could be 'research_paper' or the record should explicitly note no applicable taxonomy category exists for corporate filings",
+    "Source is not relevant to market structure or macro catalysts as explicitly stated in the record's own 'why_it_matters' field",
+    "Source falls outside the archive's scope based on its own quality tier assessment (out_of_scope)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent and well-constructed, but it explicitly identifies the source as having no relevance to market structure or macro catalysts. The record's own analysis confirms this is a standard SPAC M&A announcement that falls outside archive focus areas. No re-review needed—auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

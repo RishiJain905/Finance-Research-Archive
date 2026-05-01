@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is entirely outside the scope of a finance research archive focused on market structure and macro catalysts",
+    "Contains only routine corporate governance disclosures: director elections, say-on-pay vote, auditor ratification",
+    "No market-moving information, no connection to monetary policy, economic data, or financial market operations",
+    "Event type set to 'unknown' - while no taxonomy value fits this filing well, it should at least be noted as corporate governance rather than 'unknown'",
+    "The generated record itself correctly identifies this as 'out_of_scope' with quality tier score of 1"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is self-consistently identified as out of scope. Both the generated record's own notes and quality_tier explicitly state this filing has no relevance to market structure or macro catalyst research. No human review needed - this is clearly a reject.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

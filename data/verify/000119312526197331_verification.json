@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a single company's quarterly 10-Q filing (MAA apartment REIT) — not a macro catalyst or market structure source",
+    "Source contains only company-specific XBRL financial data with no narrative discussion of market structure dynamics",
+    "Record correctly identifies non-relevance, but the underlying source does not belong in this research archive",
+    "event_type set to 'unknown' is technically acceptable but could be 'research_paper' since the taxonomy has no SEC filing category — though this does not change the reject outcome"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The human review decision is already recorded in the record as 'not_relevant'. The record itself is internally consistent and accurately represents the source, but the source is correctly identified as outside the archive's research focus.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

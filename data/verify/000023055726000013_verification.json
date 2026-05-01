@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts - this is a routine corporate governance 8-K from an insurance company",
+    "event_type is 'unknown' and the correct type cannot be mapped to any valid taxonomy value from the provided list",
+    "Record correctly identifies source as having no macro relevance but this should result in rejection, not review_queue",
+    "Source contains only company-specific voting results with no broader market or economic implications"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record itself acknowledges this source has no relevance to market structure or macro catalysts. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

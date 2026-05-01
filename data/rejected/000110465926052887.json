@@ -1,0 +1,43 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution is completely missing from the record (name, url, domain, published_at, source_type all empty)",
+      "Record contains no summary, key_points, or any substantive content",
+      "Topic field is empty - no identification of the filing's subject matter",
+      "event_type field is missing from the record",
+      "Source is an SEC 8-K filing about equity incentive plan approval and shareholder voting - not clearly relevant to market structure or macro catalysts as defined for this archive",
+      "The source is a corporate governance/administrative filing rather than monetary policy, economic data, or financial stability content",
+      "No archival value for market structure or macro catalyst research - this is routine corporate disclosure"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated research record is entirely empty with no content whatsoever. Additionally, the source is a routine SEC 8-K filing about equity incentive plan approval and shareholder meeting results, which falls outside the typical scope of market structure or macro catalyst relevance for this archive. The source type (corporate governance filing) does not align with the event taxonomy of monetary policy, speeches, data releases, or financial stability content."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

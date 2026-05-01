@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is essentially empty - all major fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are blank",
+    "No topic or meaningful name assigned beyond 'SEC EDGAR'",
+    "Source is a company-specific 8-K filing for Selective Insurance Group (insurance sector), not relevant to broad market structure or macro catalysts",
+    "market_impact and important_numbers arrays are empty",
+    "tags array is empty - no categorization present"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is empty/unusable - no content to verify",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
