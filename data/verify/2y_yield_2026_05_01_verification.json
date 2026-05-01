@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a raw FRED data series snapshot with no editorial content, analysis, or catalyst explanation — content is inherently thin.",
+    "Source type is 'data_series', not an article or research document. Core verification standards ask whether the source is 'article-like', which this is not.",
+    "The record's summary and key_points accurately reflect the data but add no interpretive layer beyond the raw numbers.",
+    "No fundamental catalyst or causal explanation for the yield move is provided in the source, making this a time-series observation rather than research.",
+    "While the record correctly identifies this as a 'data-point' tier with score 2 and acknowledges minimal standalone research value, the fundamental question is whether this specific snapshot belongs in a research archive when the underlying time series is already permanently available from FRED."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate and properly attributed, but presents a fundamental tension: the source is raw market data with no analysis, which the record itself transparently acknowledges. The question for human review is whether capturing individual daily yield snapshots from a public time series has sufficient archival value for a research archive — or whether this is better treated as database output. The record is not wrong, but its value as a standalone research note is marginal. Human judgment is needed on whether to accept thin-but-accurate data snapshots into the archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "sofr_2026_05_01",
+  "created_at": "2026-05-01T14:35:22.063924+00:00",
+  "status": "review_queue",
+  "topic": "market structure",
+  "event_type": "unknown",
+  "title": "SOFR Daily Rate Observation (2026-04-30)",
+  "source": {
+    "name": "Federal Reserve Bank of St. Louis (FRED)",
+    "url": "https://fred.stlouisfed.org/series/SOFR",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-30",
+    "source_type": "data_series"
+  },
+  "summary": "SOFR closed at 3.66% on 2026-04-30, up 3 basis points from the prior day's 3.63%. Over the past five trading days (2026-04-24 to 2026-04-30), SOFR has remained range-bound between 3.63% and 3.66%.",
+  "key_points": [
+    "SOFR latest observation: 3.66% (2026-04-30)",
+    "Previous observation: 3.63% (2026-04-29)",
+    "Absolute change: +0.03 bps (direction: up)",
+    "Recent range: 3.63% to 3.66% over five observations",
+    "SOFR is the Secured Overnight Financing Rate, used as a benchmark for derivatives and loans"
+  ],
+  "why_it_matters": "SOFR is the primary risk-free benchmark rate for the overnight secured lending market, used as the reference rate for SOFR futures, interest rate swaps, and floating-rate instruments. Monitoring daily SOFR levels provides insight into short-term funding conditions. The 3bp increase on April 30 brought SOFR back to 3.66%, the upper end of the recent range, suggesting a modest tightening in overnight funding costs. The rate's stability in the 3.63-3.66% band over five days indicates consistent, unstressed money market conditions.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "volatility"
+    ],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "SOFR tracks closely with the Federal Reserve's policy rate target range. As of late April 2026, SOFR in the 3.63-3.66% range reflects the current effective Fed funds rate of approximately 3.75-4.00%. The lack of significant volatility in recent observations suggests no acute funding market stress.",
+  "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median rate on tri-party repo transactions collateralized by Treasury securities. It reflects the cost of borrowing cash overnight against Treasury collateral across major dealers. This data point represents a daily market observation — not a policy action or analytical commentary. For archival purposes, this rate should ideally be contextualized alongside FOMC statements, Treasury issuance calendars, or money market stress indicators.",
+  "important_numbers": [
+    "3.66% (SOFR 2026-04-30)",
+    "3.63% (SOFR 2026-04-29)",
+    "0.03 bps (absolute change)"
+  ],
+  "tags": [
+    "sofr",
+    "money-market",
+    "reference-rate",
+    "overnight-rate",
+    "fred",
+    "market-structure",
+    "daily-data"
+  ],
+  "llm_review": {
+    "initial_confidence": 5,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type set to 'unknown' — while a single daily rate observation doesn't fit cleanly into the taxonomy, a more specific categorization (e.g., data_release_other or market_observation) should be used rather than defaulting to unknown",
+      "Source content is thin — only raw numerical data with no narrative, analysis, or context about what drove the 3bp change",
+      "No causal or contextual information provided — no link to policy events, Treasury issuance, or other market catalysts that could explain the rate movement",
+      "market_impact.confidence set to 0 — appropriate conservatism, but the record provides no guidance on how to contextualize this observation alongside policy or market events"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This record sits at the boundary of the archival worthiness threshold. The numerical data is accurate and the source is authoritative (FRED). However, the content is extremely thin — a single daily rate observation with no analytical context, causal explanation, or linkage to broader market/policy events. The record itself acknowledges this ('Consider linking to contemporaneous policy events or market commentary'). Human review is needed to decide whether raw data points of this nature (without any accompanying analysis) meet the archival value bar for a finance research archive. The decision should consider: (1) whether the archive's scope includes raw market data or only analytical/research documents; (2) whether to accept with a 'needs_context' flag; (3) whether to link this record to a separate policy or market context document instead."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/sofr_2026_05_01.txt",
+  "notes": "This is a raw data point from FRED, not an analytical or policy document. The source provides no narrative, commentary, or context about why SOFR moved or what it means for broader markets. Relevant to market structure as SOFR is a critical benchmark rate, but the content is too thin to constitute a standalone research note. Consider linking to contemporaneous policy events or market commentary to provide context.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data",
+    "score": 4,
+    "reasoning": [
+      "Authoritative source (Federal Reserve Bank of St. Louis)",
+      "Current and valid (2026-04-30, within 90 days)",
+      "Exact numerical precision",
+      "Too thin for standalone research note",
+      "No analytical content or policy context",
+      "FRED data best used as reference data rather than primary source for archival research"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "9cbbdde4e27659713b1977b748d6157e4a7d4426"
+}

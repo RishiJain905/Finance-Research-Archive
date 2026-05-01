@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source contains only a 404 error message with zero actual data content",
+    "No auction data, market structure information, or macro catalysts can be extracted",
+    "Source has no archival value - error responses from APIs are transient and uninformative",
+    "event_type is 'unknown' which is technically correct but the record itself documents a non-event",
+    "The record is well-documented but describes something that should not be archived"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes a failed API request, but the underlying source has zero information value. This is a meta-record about a data retrieval failure rather than actual market structure or macro content. While the record is honest about its limitations (quality_tier: fail, score: 0), the source itself should be rejected - an API error response is not archiveable content.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

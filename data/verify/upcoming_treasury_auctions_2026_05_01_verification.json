@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a 404 error response with no actual auction data",
+    "No market structure content available to archive",
+    "Record correctly identifies lack of archival value",
+    "Source is too thin to warrant archiving - it is merely a failed API call"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately documents an API error, but the source contains no actionable content. This is a thin, no-data source that explicitly should not be archived per the record's own quality assessment.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

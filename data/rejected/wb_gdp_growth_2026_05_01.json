@@ -1,0 +1,44 @@
+{
+  "asset_classes": [],
+  "directional_bias": "unknown",
+  "confidence": 0,
+  "source": {
+    "name": "World GDP Growth Rate",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "global_economy",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Source body contains only an error message: 'No recent valid observations were returned' - no actual data or research content",
+      "Generated record has no URL, domain, or published_at - missing source attribution",
+      "Generated record is entirely empty (summary, key_points, why_it_matters all blank) - no archiveable content",
+      "Source is not article-like; it is a data API query response with no returned observations",
+      "No World Bank URL is provided, only a generic indicator code"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "low_verification_confidence, issues_found, suggested_status_not_accepted"
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

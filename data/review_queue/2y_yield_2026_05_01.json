@@ -1,0 +1,91 @@
+{
+  "id": "2y_yield_2026_05_01",
+  "created_at": "2026-05-01T14:35:22.065266+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "2-Year Treasury Yield (DGS2) — Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS2",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-04-29",
+    "source_type": "data_series"
+  },
+  "summary": "The 2-Year Treasury yield stood at 3.92% as of April 29, 2026, rising 8 basis points from the prior day's 3.84%, marking the third consecutive daily increase in a short upward trend that began April 25.",
+  "key_points": [
+    "2-Year Treasury yield closed at 3.92% on 2026-04-29, up 8 bps from 3.84% on 2026-04-28.",
+    "Yield has climbed 14 bps over five trading sessions from 3.78% on April 24–27 to 3.92% on April 29.",
+    "Previous observations: 3.83% (April 23), 3.78% (April 24–27).",
+    "Source is raw market data from FRED with no accompanying analysis or catalyst explanation."
+  ],
+  "why_it_matters": "The 2-year yield is highly sensitive to near-term Federal Reserve rate expectations and serves as a key macro catalyst for risk assets, FX, and fixed income pricing. The sharp 14-bp move over five days may signal shifting rate expectations, though no fundamental catalyst is cited in the source.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "fx",
+      "equities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "A rising 2-year yield typically reflects expectations of higher short-term rates or deteriorating near-term growth/inflation dynamics. The directional move here suggests hawkish repricing but no specific macro driver is stated.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "3.92%",
+    "3.84%",
+    "+0.08%",
+    "3.78%",
+    "3.83%"
+  ],
+  "tags": [
+    "2y-yield",
+    "treasury",
+    "macro-catalyst",
+    "fed-expectations",
+    "rate-sensitivity",
+    "bond-market",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 4,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Source is a raw FRED data series snapshot with no editorial content, analysis, or catalyst explanation — content is inherently thin.",
+      "Source type is 'data_series', not an article or research document. Core verification standards ask whether the source is 'article-like', which this is not.",
+      "The record's summary and key_points accurately reflect the data but add no interpretive layer beyond the raw numbers.",
+      "No fundamental catalyst or causal explanation for the yield move is provided in the source, making this a time-series observation rather than research.",
+      "While the record correctly identifies this as a 'data-point' tier with score 2 and acknowledges minimal standalone research value, the fundamental question is whether this specific snapshot belongs in a research archive when the underlying time series is already permanently available from FRED."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate and properly attributed, but presents a fundamental tension: the source is raw market data with no analysis, which the record itself transparently acknowledges. The question for human review is whether capturing individual daily yield snapshots from a public time series has sufficient archival value for a research archive — or whether this is better treated as database output. The record is not wrong, but its value as a standalone research note is marginal. Human judgment is needed on whether to accept thin-but-accurate data snapshots into the archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/2y_yield_2026_05_01.txt",
+  "notes": "This source is a bare FRED data snapshot — no narrative, no catalyst explanation, no analyst commentary. Archivable as market data but provides minimal research value on its own. Useful as a linked quantitative context point for macro analysis but insufficient as a standalone research note.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "data-point",
+    "score": 2,
+    "reasoning": [
+      "Raw numeric snapshot only — no editorial or analytical content",
+      "No causal explanation for yield movement",
+      "Thin source with 5 data points and no context",
+      "Useful for market monitoring but not research archive in isolation"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "e6a5da48478e2bf9b5ea3dec3a977d20e431abf9"
+}

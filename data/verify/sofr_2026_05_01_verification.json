@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' — while a single daily rate observation doesn't fit cleanly into the taxonomy, a more specific categorization (e.g., data_release_other or market_observation) should be used rather than defaulting to unknown",
+    "Source content is thin — only raw numerical data with no narrative, analysis, or context about what drove the 3bp change",
+    "No causal or contextual information provided — no link to policy events, Treasury issuance, or other market catalysts that could explain the rate movement",
+    "market_impact.confidence set to 0 — appropriate conservatism, but the record provides no guidance on how to contextualize this observation alongside policy or market events"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record sits at the boundary of the archival worthiness threshold. The numerical data is accurate and the source is authoritative (FRED). However, the content is extremely thin — a single daily rate observation with no analytical context, causal explanation, or linkage to broader market/policy events. The record itself acknowledges this ('Consider linking to contemporaneous policy events or market commentary'). Human review is needed to decide whether raw data points of this nature (without any accompanying analysis) meet the archival value bar for a finance research archive. The decision should consider: (1) whether the archive's scope includes raw market data or only analytical/research documents; (2) whether to accept with a 'needs_context' flag; (3) whether to link this record to a separate policy or market context document instead.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "SOFR closed at 3.66% on 2026-04-30, up 3 basis points from the prior day's 3.63%. Over the past five trading days (2026-04-24 to 2026-04-30), SOFR has remained range-bound between 3.63% and 3.66%.",
+    "why_it_matters": "SOFR is the primary risk-free benchmark rate for the overnight secured lending market, used as the reference rate for SOFR futures, interest rate swaps, and floating-rate instruments. Monitoring daily SOFR levels provides insight into short-term funding conditions. The 3bp increase on April 30 brought SOFR back to 3.66%, the upper end of the recent range, suggesting a modest tightening in overnight funding costs. The rate's stability in the 3.63-3.66% band over five days indicates consistent, unstressed money market conditions.",
+    "macro_context": "SOFR tracks closely with the Federal Reserve's policy rate target range. As of late April 2026, SOFR in the 3.63-3.66% range reflects the current effective Fed funds rate of approximately 3.75-4.00%. The lack of significant volatility in recent observations suggests no acute funding market stress.",
+    "market_structure_context": "SOFR is calculated by the Federal Reserve Bank of New York as the median rate on tri-party repo transactions collateralized by Treasury securities. It reflects the cost of borrowing cash overnight against Treasury collateral across major dealers. This data point represents a daily market observation — not a policy action or analytical commentary. For archival purposes, this rate should ideally be contextualized alongside FOMC statements, Treasury issuance calendars, or money market stress indicators."
+  }
+}

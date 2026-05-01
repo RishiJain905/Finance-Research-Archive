@@ -1,0 +1,91 @@
+{
+  "id": "10y_yield_2026_05_01",
+  "created_at": "2026-05-01T14:36:48.963307+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_other",
+  "title": "10-Year Treasury Yield (DGS10) Daily Snapshot",
+  "source": {
+    "name": "FRED (Federal Reserve Economic Data)",
+    "url": "https://fred.stlouisfed.org/series/DGS10",
+    "domain": "fred.stlouisfed.org",
+    "published_at": "2026-05-01",
+    "source_type": "data_release_other"
+  },
+  "summary": "The 10-Year Treasury Yield closed at 4.42% on April 29, 2026, up 6 basis points from the prior day's close of 4.36%. This represents a continuation of the modest upward trend observed over the past week, with yields rising from 4.31% on April 24 to the current level.",
+  "key_points": [
+    "Latest observation: 4.42% on 2026-04-29",
+    "Previous observation: 4.36% on 2026-04-28",
+    "Absolute change: +0.06 percentage points (up)",
+    "5-day observation range: 4.31% (Apr 24) to 4.42% (Apr 29)",
+    "Yields have been rising consistently since Apr 24 (4.31%) through Apr 29 (4.42%)"
+  ],
+  "why_it_matters": "The 10-Year Treasury Yield is a benchmark rate that influences mortgage costs, corporate borrowing costs, and risk asset valuations. A rising yield reflects shifting market expectations about growth, inflation, or fiscal conditions. This 6bp move within a single session is notable and may signal evolving market sentiment.",
+  "market_impact": {
+    "asset_classes": [
+      "bonds",
+      "equities",
+      "fx"
+    ],
+    "directional_bias": "risk_off",
+    "confidence": 5
+  },
+  "macro_context": "Rising Treasury yields typically reflect higher real interest rate expectations or concerns about fiscal deficits and inflation. The gradual upward drift from 4.31% to 4.42% over 5 business days suggests incrementally hawkish market repricing, though the move remains modest relative to major rate cycles.",
+  "market_structure_context": "Consider adding that this data point serves as a time-series reference rather than an event-driven catalyst. The yield level (4.42%) may be compared against historical ranges, Fed policy expectations, or cross-asset correlations to derive analytical value, but those connections are external to this source.",
+  "important_numbers": [
+    "4.42%",
+    "4.36%",
+    "4.35%",
+    "4.31%",
+    "4.34%",
+    "+0.06"
+  ],
+  "tags": [
+    "treasury-yields",
+    "10y-yield",
+    "bond-market",
+    "rate-analysis",
+    "macro-data",
+    "fred"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "Source is raw market data (FRED observation) with no policy rationale, economic interpretation, or forward guidance. The 'why_it_matters' and 'macro_context' fields contain inferred commentary that goes beyond what the source provides.",
+      "The 'directional_bias: risk_off' is inferred by the LLM, not stated in the source. This is reasonable interpretation but should be flagged as such.",
+      "The record's notes correctly acknowledge 'The directional bias is inferred rather than explicitly stated' — this self-awareness is good but confirms the market_impact is LLM-constructed."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This record is factually accurate against the source, but it sits in an ambiguous zone: raw data with no explanatory content. While the data point is valid and correctly transcribed, the archival value of a standalone FRED observation (with no news, commentary, or policy context) is marginal. The LLM has appropriately generated interpretations (risk_off bias, macro_context) that go beyond the source's scope. Human judgment is needed to determine whether the archive should include raw data snapshots or require at least some analytical context."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/10y_yield_2026_05_01.txt",
+  "notes": "This is a raw data snapshot from FRED, not a news article or commentary. The source provides daily yield observations without explanatory context. No policy rationale, economic interpretation, or forward guidance is provided in the source itself. The directional bias is inferred rather than explicitly stated.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Tier 3 - Raw Data",
+    "score": 4,
+    "reasoning": [
+      "Source is raw market data, not analytical content",
+      "High data integrity (official Fed data source)",
+      "No commentary or interpretation provided",
+      "Limited research value without additional context",
+      "Useful as a data point for time-series analysis"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "6f3d15f631a7630af6a8c01c85a868890ed636f3"
+}

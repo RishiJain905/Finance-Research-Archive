@@ -1,0 +1,79 @@
+{
+  "id": "wb_inflation_2026_05_01",
+  "created_at": "2026-05-01T14:39:11.315449+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "data_release_cpi",
+  "title": "World Inflation Rate (CPI)",
+  "source": {
+    "name": "World Bank",
+    "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+    "published_at": "2026-05-01",
+    "source_type": "data_release",
+    "domain": "data.worldbank.org"
+  },
+  "summary": "The World Bank inflation indicator (FP.CPI.TOTL.ZG) returned no valid observations as of the 2026-05-01 snapshot date, indicating the data query failed or no recent data is available in the World Bank API for this indicator.",
+  "key_points": [
+    "Indicator: FP.CPI.TOTL.ZG (World Bank CPI inflation rate)",
+    "Snapshot date: 2026-05-01",
+    "Result: No valid observations returned",
+    "Data source: World Bank data portal",
+    "Status: Data unavailable for this indicator on current query"
+  ],
+  "why_it_matters": "This record documents a failed API query for CPI inflation data. Without valid observations, the source cannot inform policy decisions or market analysis.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The World Bank data API returned no valid results for the inflation indicator. No current inflation data is available through this query to assess macroeconomic trends.",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "inflation",
+    "cpi",
+    "world-bank",
+    "macro-data",
+    "data-unavailable"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'data_release_cpi' is misleading - no data was actually released or available, the source is a failed API query returning empty results",
+      "quality tier correctly identifies 'no-data' status with score 0, but this suggests the record itself may not belong in the archive at all",
+      "no numerical values or trends can be extracted from this source",
+      "macro_context and why_it_matters contain speculative language about what data would show if available, which goes beyond what the source states"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "This record documents a failed data query rather than substantive research content. While the factual summary is accurate, the record has minimal archival value as inflation data. The human notes correctly identify this as a 'failed data query, not an informative source' and recommend suppression. Decision needed on whether to archive failed API responses as research records or reject/suppress this entry."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_inflation_2026_05_01.txt",
+  "notes": "Source returned empty dataset. No inflation observations available for any country or region. This is a failed data query, not an informative source. Archive value is minimal. Consider linking to an alternative data provider (e.g., BLS, IMF IFS, OECD) for actual inflation data.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 0,
+    "reasoning": [
+      "Source contains no valid observations",
+      "No numerical data to extract",
+      "Cannot support any market or macro analysis",
+      "Fails fundamental archive quality requirements"
+    ]
+  },
+  "telegram_review_sent": true,
+  "telegram_review_fingerprint": "edfd485054a3a431f6d55371bd1f262e1382c54d"
+}

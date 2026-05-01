@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is raw market data (FRED observation) with no policy rationale, economic interpretation, or forward guidance. The 'why_it_matters' and 'macro_context' fields contain inferred commentary that goes beyond what the source provides.",
+    "The 'directional_bias: risk_off' is inferred by the LLM, not stated in the source. This is reasonable interpretation but should be flagged as such.",
+    "The record's notes correctly acknowledge 'The directional bias is inferred rather than explicitly stated' — this self-awareness is good but confirms the market_impact is LLM-constructed."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record is factually accurate against the source, but it sits in an ambiguous zone: raw data with no explanatory content. While the data point is valid and correctly transcribed, the archival value of a standalone FRED observation (with no news, commentary, or policy context) is marginal. The LLM has appropriately generated interpretations (risk_off bias, macro_context) that go beyond the source's scope. Human judgment is needed to determine whether the archive should include raw data snapshots or require at least some analytical context.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": "Consider adding that this data point serves as a time-series reference rather than an event-driven catalyst. The yield level (4.42%) may be compared against historical ranges, Fed policy expectations, or cross-asset correlations to derive analytical value, but those connections are external to this source."
+  }
+}

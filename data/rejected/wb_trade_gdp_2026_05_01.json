@@ -1,0 +1,77 @@
+{
+  "id": "wb_trade_gdp_2026_05_01",
+  "created_at": "2026-05-01T14:40:16.650613+00:00",
+  "status": "rejected",
+  "topic": "macro catalysts",
+  "event_type": "unknown",
+  "title": "World Trade (% of GDP) — World Bank Indicator TG.VAL.TOTL.GD.ZS",
+  "source": {
+    "name": "World Bank",
+    "url": "",
+    "published_at": "2026-05-01",
+    "source_type": "",
+    "domain": ""
+  },
+  "summary": "The World Bank indicator TG.VAL.TOTL.GD.ZS (World Trade as % of GDP) returned no valid observations as of 2026-05-01, providing no data for analysis.",
+  "key_points": [
+    "The World Bank API query for indicator TG.VAL.TOTL.GD.ZS returned no valid observations",
+    "Snapshot date is 2026-05-01 with no available data points",
+    "No numerical values, dates, or comparative data are present in the source",
+    "The query result indicates either a data gap, reporting lag, or indicator availability issue"
+  ],
+  "why_it_matters": "Without valid observations, this source cannot inform macro analysis of world trade trends, which would normally be relevant for assessing global economic conditions and potential market catalysts.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "world-bank",
+    "trade-gdp",
+    "no-data",
+    "indicator-gap"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 2,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is an empty API response with no actual data content - provides zero analytical value",
+      "Source attribution incomplete: URL is empty string, source_type and domain fields are empty",
+      "Record correctly identifies source as non-archivable but the record itself has no archival value",
+      "event_type set to 'unknown' when it should be categorized - however, the lack of any data makes this a moot point",
+      "Source does not meet the 'relevant to market structure or macro catalysts' criterion when it contains no data",
+      "world_bank indicator TG.VAL.TOTL.GD.ZS is not retrievable, making this a transient API state rather than a durable source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record accurately reflects a no-data API response, but the source itself fails archival standards on multiple dimensions. No human judgment needed."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/wb_trade_gdp_2026_05_01.txt",
+  "notes": "Source is non-archivable due to absence of data. Only metadata is available indicating the query target (World Trade % of GDP) but no actual observations. Topic does not align with primary focus areas (market structure, macro catalysts) and data quality is zero.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 0,
+    "reasoning": [
+      "Query returned no observations",
+      "No numerical content to extract",
+      "Cannot support any market or macro analysis",
+      "Fails basic quality thresholds for archival content"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'data_release_cpi' is misleading - no data was actually released or available, the source is a failed API query returning empty results",
+    "quality tier correctly identifies 'no-data' status with score 0, but this suggests the record itself may not belong in the archive at all",
+    "no numerical values or trends can be extracted from this source",
+    "macro_context and why_it_matters contain speculative language about what data would show if available, which goes beyond what the source states"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This record documents a failed data query rather than substantive research content. While the factual summary is accurate, the record has minimal archival value as inflation data. The human notes correctly identify this as a 'failed data query, not an informative source' and recommend suppression. Decision needed on whether to archive failed API responses as research records or reject/suppress this entry.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "The World Bank inflation indicator (FP.CPI.TOTL.ZG) returned no valid observations as of the 2026-05-01 snapshot date, indicating the data query failed or no recent data is available in the World Bank API for this indicator.",
+    "why_it_matters": "This record documents a failed API query for CPI inflation data. Without valid observations, the source cannot inform policy decisions or market analysis.",
+    "macro_context": "The World Bank data API returned no valid results for the inflation indicator. No current inflation data is available through this query to assess macroeconomic trends.",
+    "market_structure_context": ""
+  }
+}

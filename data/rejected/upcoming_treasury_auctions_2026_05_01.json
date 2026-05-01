@@ -1,0 +1,67 @@
+{
+  "id": "upcoming_treasury_auctions_2026_05_01",
+  "created_at": "2026-05-01T14:37:57.085445+00:00",
+  "status": "rejected",
+  "topic": "market structure",
+  "event_type": "treasury_issuance",
+  "title": "Upcoming Treasury Auctions (API Error)",
+  "source": {
+    "name": "Treasury Fiscal Data API",
+    "url": "https://api.fiscaldata.treasury.gov/services/api/v1/accounting/od/upcoming_auctions",
+    "published_at": "",
+    "source_type": "treasury_fiscal_data",
+    "domain": "api.fiscaldata.treasury.gov"
+  },
+  "summary": "The Treasury Fiscal Data API returned a 404 error when queried for upcoming auction data on 2026-05-01, resulting in no retrieval of scheduled Treasury auction information.",
+  "key_points": [
+    "API endpoint returned 404 Client Error: Not Found",
+    "Attempted endpoint: /accounting/od/upcoming_auctions with fields=auction_date, security_type, security_term, offering_amt",
+    "No auction schedule data was retrieved",
+    "SNAPSHOT_DATE: 2026_05_01"
+  ],
+  "why_it_matters": "Cannot provide market participants with upcoming Treasury auction schedule data needed for cash management and auction preparation. Lack of visibility into auction calendar affects primary dealer positioning and repo market dynamics.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "API failure prevents retrieval of auction schedule data that primary dealers and market participants use for cash management and settlement planning.",
+  "important_numbers": [],
+  "tags": [
+    "treasury",
+    "auctions",
+    "api-error",
+    "data-unavailable",
+    "market-structure"
+  ],
+  "llm_review": {
+    "initial_confidence": 1,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is a 404 error response with no actual auction data",
+      "No market structure content available to archive",
+      "Record correctly identifies lack of archival value",
+      "Source is too thin to warrant archiving - it is merely a failed API call"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record accurately documents an API error, but the source contains no actionable content. This is a thin, no-data source that explicitly should not be archived per the record's own quality assessment."
+  },
+  "raw_text_path": "data/raw/upcoming_treasury_auctions_2026_05_01.txt",
+  "notes": "Source attempted to retrieve upcoming Treasury auction schedule from Treasury Fiscal Data API but received a 404 error. No auction data was obtained. The target 'Upcoming Treasury Auctions' was not met due to API endpoint not found. This is not archiveable content—it is an error response indicating the data source is unavailable.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "no-data",
+    "score": 1,
+    "reasoning": [
+      "API returned 404 error - no data retrieved",
+      "No market structure content available",
+      "Cannot construct meaningful research note from error response"
+    ]
+  }
+}
