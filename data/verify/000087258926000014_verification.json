@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 5,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a single-company corporate earnings filing with no relevance to macro catalysts or market structure",
+    "event_type set to 'unknown' is correct—no taxonomy category fits this filing",
+    "Actual financial figures are not included; press release (Exhibit 99.1) content is referenced but absent",
+    "Record accurately describes the filing's limitations and scope"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The generated record is factually accurate and well-structured, correctly identifying that the source is out of scope for macro/market structure research. However, human decision is needed to determine whether this filing should be rejected outright or archived for potential corporate/earnings research. The source attribution and filing details are correct, but the topic scope mismatch requires a judgment call on archival value beyond the stated target topics.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

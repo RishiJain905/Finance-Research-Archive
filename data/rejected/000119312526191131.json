@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 0,
+    "verdict": "reject",
+    "issues_found": [
+      "Generated record is completely empty - all fields are blank strings",
+      "Source attribution entirely missing (name, url, domain all empty)",
+      "No summary, key_points, or any content extracted from the 10-Q filing",
+      "No event_type provided or determinable from the empty record",
+      "Source metadata from the 10-Q filing is not captured in the record"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely empty with no content extracted. This appears to be a processing failure rather than a valid record. Human review is needed to confirm the extraction failed and to determine whether the 10-Q filing itself contains extractable market-relevant content (e.g., revenue trends, guidance, liquidity concerns) before re-processing."
+  },
+  "summary": "Landstar System Inc 10-Q for the period ending 2026-03-28, filed 2026-04-29. The quarterly report covers transportation logistics operations, revenue composition (power-only, expedited, truck brokerage, intermodal), interest expense, and cash position. Key financials: interest income $778 (2026) vs $1,668 (2025) for 13-week periods; total interest expense $1,296 (2026) vs $1,509 (2025).",
+  "key_points": [],
+  "why_it_matters": "As a mid-cap transportation logistics company (ticker LSTR), Landstar's quarterly results provide insight into freight market conditions, particularly less-than-truckload (LTL) and truck brokerage demand. Declining interest income year-over-year may indicate lower cash balances or changing cash deployment strategies.",
+  "macro_context": "Transportation sector earnings reflect broader economic activity in manufacturing, retail, and consumer goods. Landstar operates as a BCO (business capacity owner) model with independent contractors, providing a read on freight market capacity and pricing dynamics.",
+  "market_structure_context": "Landstar competes in truck brokerage and asset-light logistics. The company's revenue mix (power-only, van, LTL, platform equipment) and carrier relationships (ocean/air cargo, rail intermodal) position it as a proxy for truckload and intermodal market conditions.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

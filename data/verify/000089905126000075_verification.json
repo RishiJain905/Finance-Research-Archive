@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a corporate 10-Q filing containing XBRL structured data, not narrative content suitable for macro catalyst or market structure research",
+    "event_type is 'unknown' — a corporate regulatory filing does not fit the event_type taxonomy (monetary policy, speeches, data releases, Treasury operations, research papers)",
+    "Source has no relevance to market structure (trading infrastructure, clearing, settlement, market microstructure) or macro catalysts (Fed policy, economic data releases, fiscal announcements)",
+    "XBRL tagging dominates the excerpt with no extractable human-readable narrative visible",
+    "verification_confidence of 0 is appropriate given source quality but suggests no confidence in record accuracy — need to verify record faithfulness"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record appears well-constructed and self-aware about scope limitations, but source is fundamentally outside the archive's focus areas. Human should confirm whether corporate regulatory filings should be accepted at all for this archive, or if the scope exclusion should result in rejection.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Allstate Corporation filed its Q1 2026 10-Q report on April 13, 2026, covering the period ended March 31, 2026. The filing contains standard corporate financial data including segment results for Allstate Protection (Property-Liability), Protection Services, Allstate Health and Benefits, and Run-off Property-Liability segments, along with detailed balance sheet line items. The document is primarily XBRL structured data with limited to no narrative content visible in the excerpt.",
+    "why_it_matters": "This is an individual corporate earnings filing for an insurance company (Allstate Corporation). It is NOT relevant to macro catalysts (Fed policy, economic data releases, fiscal announcements, geopolitical events) or market structure (trading infrastructure, clearing, settlement, market microstructure). While potentially useful for fundamental analysis of Allstate, it has no relevance to market-moving macroeconomic factors and should be evaluated for rejection based on scope.",
+    "macro_context": "N/A — Corporate regulatory filing outside macro catalyst scope",
+    "market_structure_context": "N/A — Corporate regulatory filing outside market structure scope"
+  }
+}

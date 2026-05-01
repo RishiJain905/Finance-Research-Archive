@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 8,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate earnings 8-K filing (insurance sector), which is not relevant to market structure or macro catalysts as defined",
+    "The 8-K itself contains no actual financial data—only references to Exhibits 99.1 and 99.2",
+    "event_type set to 'unknown' is appropriate; no valid taxonomy value applies to this source type",
+    "Cannot assess market impact because actual earnings content is in separate exhibits not included in this filing"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The source's irrelevance to the archive's scope is clear-cut. This is a corporate regulatory filing announcing an insurance company's Q1 earnings via referenced exhibits. It has no bearing on Fed policy, Treasury operations, interest rates, or macroeconomic data releases.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K is a regulatory disclosure announcing Allstate's Q1 2026 earnings via exhibits. The filing itself contains no actual financial results or forward guidance—it only references a press release (Exhibit 99.1) and investor supplement (Exhibit 99.2). As an insurance sector corporate filing with no market structure or macro catalyst relevance, it falls outside this archive's scope. For earnings analysis, the actual exhibits would need to be retrieved separately.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

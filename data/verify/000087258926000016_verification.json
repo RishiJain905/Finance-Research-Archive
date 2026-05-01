@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific 10-Q regulatory filing (Regeneron Pharmaceuticals), not relevant to market structure or macro catalysts analysis",
+    "Source consists entirely of XBRL taxonomy tags and numerical financial data with no narrative content, policy discussion, or macro context",
+    "event_type is 'unknown' and cannot be mapped to any valid taxonomy value (no FOMC, speech, data release, Treasury operation, or research category applies to a corporate 10-Q)",
+    "Record does not meet the archive's relevance threshold; company-specific financial filings fall outside scope for macro/market structure research",
+    "No extractable information pertains to Fed policy, interest rates, Treasury operations, economic data releases, or financial market structure"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

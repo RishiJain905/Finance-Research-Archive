@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' - quarterly earnings announcement could be mapped to 'data_release_other' as a routine financial disclosure, though this category was designed for macro economic data",
+    "The filing body only contains the 8-K cover page; actual earnings numbers are in Exhibit 99.1 which is not included in this document",
+    "Source is correctly assessed as irrelevant to macro catalysts, but the record is internally consistent and accurately summarizes what the source contains"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is well-constructed and correctly identifies this as a low-relevance corporate filing with no macro implications. The verification assessment aligns with source content. No factual errors in the summary or key_points.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

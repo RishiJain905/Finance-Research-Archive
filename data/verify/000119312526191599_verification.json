@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is not relevant to market structure or macro catalysts per core rule #1",
+    "Record correctly identifies lack of relevance but the source itself is inappropriate for this archive focused on market structure and macro catalysts",
+    "event_type set to 'unknown' - corporate earnings 8-K does not map to the defined taxonomy; catch-all 'unknown' is technically correct but worth flagging"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a routine corporate earnings 8-K for a small-cap consumer staples company (John B. Sanfilippo & Son, Inc.) with no relevance to market structure or macro catalysts. The generated record correctly identifies this as irrelevant and is well-structured with accurate information, but the source should not have been ingested into a finance research archive focused on market structure and macro catalysts. Manual review confirms the record is accurate but the source belongs in a different archive or should have been filtered upstream.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

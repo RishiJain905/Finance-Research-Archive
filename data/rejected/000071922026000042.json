@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "Source attribution is completely missing - all source fields (name, url, domain, published_at, source_type) are empty",
+      "Source is an SEC Form 8-K regulatory filing, not an article - does not meet 'article-like' requirement",
+      "Record has no event_type specified - violates taxonomy requirements",
+      "Subject matter is a regional bank (S&T Bancorp) dividend announcement of $0.01 increase - not relevant to market structure or macro catalysts",
+      "Source is extremely thin with no archival value for macro research - this is a single company's routine quarterly dividend decision",
+      "Generated record is entirely empty - no summary, key_points, why_it_matters, or any other content provided"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The generated record is entirely blank with no content extracted. Additionally, the source is a routine regional bank 8-K filing that does not qualify as relevant to market structure or macro catalysts. The source attribution fields are also empty."
+  },
+  "summary": "",
+  "key_points": [],
+  "why_it_matters": "",
+  "macro_context": "",
+  "market_structure_context": "",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}
