@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution entirely missing - name, url, domain, published_at, source_type all empty",
+    "Event type not specified in record",
+    "All content fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are empty - no extraction performed",
+    "Source is a company-specific SEC 10-Q XBRL filing for Cambium Networks Corp - not relevant to market structure or macro catalysts",
+    "Source is raw structured financial data (XBRL tags), not article-like content suitable for research archiving",
+    "Source is a container/data page (SEC EDGAR filing index), not substantive editorial content"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is completely empty with no extraction performed, and the source is not suitable for this archive - SEC 10-Q filings are company-specific financial documents, not macro/market structure catalysts",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

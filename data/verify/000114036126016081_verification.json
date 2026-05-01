@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 4,
+  "verdict": "reject",
+  "issues_found": [
+    "Topic mismatch: Record is tagged as 'macro catalysts' but source is a micro-cap regional bank 8-K announcing an unchanged quarterly dividend with no market-wide relevance",
+    "event_type set to 'unknown' when 'market_notice' would be appropriate for this corporate disclosure type",
+    "Source is irrelevant to stated focus areas (market structure or macro catalysts) per the archive's mandate",
+    "Human review notes confirm this source should be 'deprioritized in research workflows focused on macro events'",
+    "Record's own quality assessment correctly identifies 'negligible research value for macro analysis' yet remains in review_queue rather than being rejected"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record accurately describes the source content, but the topic assignment ('macro catalysts') and archival purpose are fundamentally misaligned with the source material. A micro-cap regional bank's routine dividend declaration with zero change quarter-over-quarter has no macro or market structure relevance. While the source itself is well-formed (valid SEC filing), the research value for the archive's stated focus is negligible. Human confirmation needed to reject this record rather than route it back for correction.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

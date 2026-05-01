@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is out of scope: individual corporate earnings (Q1 2026) from a regional bank holding company, not relevant to market structure or macro catalysts",
+    "event_type is 'unknown' but correct type would be 'data_release_other' or similar - however this is moot since source is out of scope",
+    "No forward guidance, policy signals, or market-structure content in the filing",
+    "Source is a regulatory document (Form 8-K) that announces individual company earnings - lacks archival value for macro/market structure research",
+    "The source contains no actionable information for the stated archive mandate (market structure or macro catalysts)"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "No human review needed - the source is clearly out of scope based on its content (individual bank earnings) and the generated record correctly identifies this. Rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "United Bankshares, Inc. filed a Form 8-K on April 23, 2026, disclosing Q1 2026 financial results via an attached press release (Exhibit 99.1). This is a routine corporate securities filing for a regional bank holding company; it contains no information relevant to macro catalysts or market structure.",
+    "why_it_matters": "This filing is not relevant to macro market analysis. It is a routine regulatory disclosure from a single regional bank (West Virginia-chartered) and provides no insight into Federal Reserve policy, Treasury market operations, rates, or broader financial market structure. The source is rejected as out of scope for a finance research archive focused on market structure or macro catalysts.",
+    "event_type": "data_release_other"
+  }
+}

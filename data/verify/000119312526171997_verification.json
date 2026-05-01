@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' but could be more specific; however, none of the defined taxonomy values (fomc_statement, rate_decision, speech_*, data_release_*, treasury_issuance, research_paper, regulatory_guidance) accurately describe a corporate M&A transaction",
+    "Source scope mismatch: the record's own notes acknowledge 'NOT RELEVANT to market structure or macro catalysts' — this appears to be outside the defined scope of the research archive",
+    "The source is factually accurate and properly attributed, but quality tier is correctly identified as 'low' with score 3 due to lack of macro/market relevance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is internally consistent and accurately summarizes the source, but presents a scope mismatch. The archive is designed for 'market structure or macro catalysts' (per CORE RULES and notes), yet this is a single-company biotech acquisition with no macro implications. Human judgment is needed to decide whether to archive scope-edge cases like routine M&A filings that are factually correct but outside the stated focus area.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

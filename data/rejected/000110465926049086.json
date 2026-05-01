@@ -1,0 +1,42 @@
+{
+  "source": {
+    "name": "",
+    "url": "",
+    "domain": "",
+    "published_at": "",
+    "source_type": ""
+  },
+  "topic": "",
+  "llm_review": {
+    "initial_confidence": 0,
+    "verification_confidence": 1,
+    "verdict": "reject",
+    "issues_found": [
+      "All source attribution fields are empty (name, url, domain, published_at, source_type)",
+      "All content fields are empty (topic, summary, key_points, why_it_matters, macro_context, market_structure_context)",
+      "All metadata fields are empty or zero (llm_review, human_review, market_impact, important_numbers, tags)",
+      "No record was actually generated — this appears to be a placeholder or failed extraction",
+      "Cannot verify event_type as the record contains no content to classify",
+      "Cannot assess summary accuracy, key_points fidelity, or any other field against source"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "The record is completely empty with no content to review. This is a clear reject — no human review needed for a placeholder record."
+  },
+  "summary": "SIERRA BANCORP filed an 8-K on April 27, 2026 announcing Q1 2026 unaudited consolidated financial results for the three-month period ended March 31, 2026. The press release (Exhibit 99.1) contains the actual financial figures but is not included in the source body text. The filing is signed by Christopher G. Treece, Executive Vice President & CFO. Company trades as BSRR on NASDAQ Global Select Market.",
+  "key_points": [],
+  "why_it_matters": "Corporate earnings from regional banks can provide insight into local economic conditions, credit quality trends, and community banking sector health. Q1 2026 results reflect performance through March 2026.",
+  "macro_context": "Regional bank earnings may provide early signals about credit stress, loan growth, and net interest margin trends in the current rate environment.",
+  "market_structure_context": "Sierra Bancorp is a smaller regional bank (NASDAQ: BSRR) based in Porterville, CA — its earnings are not typically market-moving at the macro level but may be relevant for banking sector analysis.",
+  "notes": "",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "important_numbers": [],
+  "tags": [],
+  "status": "rejected"
+}

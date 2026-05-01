@@ -1,0 +1,16 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' - correct given the provided taxonomy has no category for corporate clinical trial disclosures, but this leaves the record without proper categorization"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is a valid SEC 8-K filing accurately described in the record. However, the record correctly identifies this as out-of-scope for market structure/macro catalysts research. The event_type 'unknown' is technically correct per taxonomy but leaves the record uncategorizable. Human decision needed on whether out-of-scope biotech disclosures should be archived despite being outside the stated focus.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This filing is not relevant to finance research focused on market structure or macro catalysts. It is a healthcare/biotech corporate disclosure of clinical trial results for a company developing immunotherapies. It has no bearing on monetary policy, rate decisions, market operations, or macroeconomic analysis.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 10,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an individual company 10-Q filing — outside scope of market structure and macro catalyst topics",
+    "Source consists entirely of XBRL structured data tags — no extractable narrative content for research purposes",
+    "Archive focus is Fed policy, Treasury operations, economic data releases, and market structure — company quarterly filings are not included",
+    "event_type 'unknown' is technically valid but reflects the source's inapplicability to the taxonomy"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The generated record already accurately identifies this source as out-of-scope and recommends rejection. No further human review needed — the assessment is correct.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "DMC Global Inc. 10-Q filing from April 30, 2026 for Q1 2026 (period ending March 31, 2026). The source is raw XBRL structured data with no human-readable narrative content. This individual company quarterly financial filing falls outside the archive's focus on market structure and macro catalysts. No macro data, Fed communications, Treasury operations, or market structure content is present.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

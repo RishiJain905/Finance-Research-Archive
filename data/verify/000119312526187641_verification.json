@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "Source is a single-company SEC 8-K filing (Janux Therapeutics) with no relevance to macro market catalysts or system-level market structure",
+    "event_type is 'unknown' which is technically valid per taxonomy but reflects that this filing type falls outside the defined categories (monetary policy, speeches, data releases, Treasury operations, research)",
+    "Record is well-constructed and factually accurate, but 'why_it_matters' correctly notes this has no investment significance"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "This is a borderline case. The record is factually accurate and well-structured, correctly identifying the filing as irrelevant to macro/market structure research. However, per Core Rule 6, missing source relevance and thin low-signal sources bias toward reject. The record's own assessment concedes 'no investment significance' and 'not relevant to macro market analysis.' While archived for completeness, this should be rejected from the finance research archive given the target focus areas (market structure, macro catalysts).",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

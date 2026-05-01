@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 3,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is an individual company (Ionis Pharmaceuticals) quarterly earnings filing with no relevance to market structure or macro catalysts",
+    "event_type is 'unknown' but this is a corporate financial results release, not any of the valid taxonomy categories (monetary policy, speeches, macroeconomic data releases, Treasury operations, or research)",
+    "Archive mandate is focused on market structure and macro catalysts; individual company earnings have no systemic financial market relevance",
+    "Source contains only company-specific financial reporting with no implications for monetary policy, interest rates, Treasury markets, or broader financial market operations"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate in capturing the 8-K filing details, but the source itself is fundamentally out of scope for a finance research archive focused on market structure and macro catalysts. Individual company earnings releases do not constitute macro catalysts regardless of accuracy. Human confirmation needed to ensure proper routing to company-specific database or exclusion.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

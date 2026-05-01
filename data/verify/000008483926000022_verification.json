@@ -1,0 +1,22 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution is completely empty — name, url, domain, published_at, and source_type are all missing",
+    "Source is a corporate SEC 10-Q filing (Rollins Inc.) — not relevant to market structure or macro catalysts",
+    "Source content is raw XBRL financial data with no narrative, no market-moving content, no policy implications",
+    "Generated record has all critical fields empty (summary, key_points, why_it_matters, macro_context, market_structure_context)",
+    "Source type 'sec_edgar' indicates routine corporate filing, not a research archive candidate",
+    "This is a company-specific financial report with no macro or market structure relevance",
+    "The source provides no actionable research signal for finance research purposes"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is entirely empty of content and source is clearly out of scope for macro/market catalyst research",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

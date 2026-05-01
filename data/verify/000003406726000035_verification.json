@@ -1,0 +1,19 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a company-specific SEC 8-K filing for DMC Global Inc. (BOOM), outside the focus areas of market structure or macro catalysts.",
+    "Event_type is 'unknown' — while no taxonomy value perfectly fits corporate earnings releases, this confirms the filing doesn't belong in a macro/market structure research archive.",
+    "Q1 2026 financial figures are not included in the filing body; they are contained in Exhibit 99.1 (press release) which is not embedded in the source text.",
+    "Source has no relevance to monetary policy, interest rates, economic data releases, Treasury operations, or market structure."
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is clearly outside the archive's focus areas and can be auto-rejected without human escalation.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "DMC Global Inc. (ticker BOOM, listed on NASDAQ Global Select Market) filed a Form 8-K on April 30, 2026, disclosing Q1 2026 financial results via an attached press release (Exhibit 99.1). The filing was signed by CFO Eric V. Walter. No material non-public information is indicated in this disclosure.",
+    "why_it_matters": "This is a routine corporate earnings disclosure for a specific company (DMC Global Inc.). It is not relevant to macro catalysts or market structure research. This filing would only be material to investors holding BOOM shares or analyzing company-specific performance within Q1 2026.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
