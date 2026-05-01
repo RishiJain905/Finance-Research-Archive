@@ -1,0 +1,67 @@
+{
+  "id": "000084661726000024",
+  "created_at": "2026-05-01T08:32:59.441768+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Dime Community Bancshares, Inc. /NY/ 8-K Filing — 2026-04-23",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/846617/000084661726000024/dcom-20260423x8k.htm",
+    "published_at": "2026-04-23",
+    "source_type": "sec_8k",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Dime Community Bancshares, Inc. filed an 8-K on April 23, 2026 announcing Q1 2026 earnings for the quarter ended March 31, 2026 via Item 2.02. The actual earnings press release is referenced as Exhibit 99.1 but the content is not included in this filing notice. This is a routine corporate disclosure from a regional New York bank (NYSE: DCOM, Hauppauge, NY).",
+  "key_points": [
+    "Registrant: Dime Community Bancshares, Inc. (NYSE: DCOM), based in Hauppauge, NY",
+    "Date of report: April 23, 2026",
+    "Item 2.02 triggered: Results of Operations and Financial Condition",
+    "Earnings announcement for quarter ended March 31, 2026",
+    "Earnings press release attached as Exhibit 99.1; content not included in this 8-K notice",
+    "Filed under SEC regulations with no forward-looking policy disclosures"
+  ],
+  "why_it_matters": "Low relevance to finance research scope. Regional bank earnings from a single institution do not constitute macro catalysts or market structure events. The filing is included for completeness but carries no implications for Federal Reserve policy, systemic financial conditions, or broader economic indicators.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "earnings",
+    "8-k",
+    "regional-bank",
+    "dime-community-bancshares"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 5,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is 'unknown' but should be 'data_release_other' - the filing announces Q1 2026 earnings under Item 2.02 (Results of Operations and Financial Condition), which is a corporate earnings disclosure with a clear taxonomic match",
+      "topic field is empty - should be populated for discoverability even if non-macro in focus"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The source is a routine regional bank 8-K with minimal macro relevance, and the generated record correctly identifies this. However, the 'unknown' event_type violates the rule that event_type should be set when the correct type is obvious from context. Human review needed to confirm: (1) event_type correction to 'data_release_other', (2) whether to archive routine corporate filings outside macro scope vs. reject as low-value"
+  },
+  "raw_text_path": "data/raw/000084661726000024.txt",
+  "notes": "This 8-K filing is a routine corporate disclosure from Dime Community Bancshares announcing Q1 2026 earnings. The source does not contain information relevant to market structure or macro catalysts as defined in the scope. The filing only references the earnings announcement; actual earnings figures and press release content are not included in this document. Archived for completeness but should be low priority for finance research focused on monetary policy, macro data releases, or market operations.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "Not Relevant",
+    "score": 0,
+    "reasoning": [
+      "Corporate earnings filing outside scope of market structure and macro catalysts focus",
+      "No Federal Reserve, central bank, or macroeconomic policy content",
+      "Single-company disclosure with no systemic or market-level implications",
+      "Source content is a filing notice; actual earnings data not provided"
+    ]
+  }
+}

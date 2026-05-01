@@ -1,0 +1,79 @@
+{
+  "id": "000104321926000028",
+  "created_at": "2026-05-01T08:37:47.396322+00:00",
+  "status": "rejected",
+  "topic": "",
+  "event_type": "",
+  "title": "ANNALY CAPITAL MANAGEMENT INC 10-Q Filing — 2026-04-29",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1043219/000104321926000028/nly-20260331.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-29",
+    "source_type": "regulatory_filing"
+  },
+  "summary": "Annalys Capital Management Inc filed its Q1 2026 10-Q (period ending 2026-03-31). The source consists entirely of raw XBRL taxonomy data with no human-readable narrative content. The filing is not relevant to macro catalysts or market structure topics.",
+  "key_points": [
+    "Source is raw XBRL data from SEC EDGAR — no prose content available",
+    "Annalys Capital Management is a mortgage REIT (Real Estate Investment Trust)",
+    "Contains structured financial data for period 2026-01-01 to 2026-03-31",
+    "Document is a regulatory filing, not a macro policy or market structure document",
+    "XBRL elements include preferred stock series (F, G, I, J) and mortgage-backed securities classifications",
+    "No narrative analysis, forward guidance, or policy discussion in the source text"
+  ],
+  "why_it_matters": "Not applicable. This is a corporate earnings filing with no relevance to macro catalysts or market structure. Annalys' business (agency MBS investing) is indirectly related to housing/mortgage markets, but the source provides no analytical content to extract.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "not-relevant",
+    "sec-filing",
+    "corporate-earnings",
+    "annalys",
+    "mortgage-reit"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 5,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is raw XBRL taxonomy data with no human-readable narrative content — cannot extract meaningful research",
+      "event_type is empty, but for a regulatory filing should be set to 'research_paper' or similar valid taxonomy value",
+      "Source has no relevance to macro catalysts or market structure by the stated scope",
+      "Cannot extract policy signals, market context, or analytical insights from pure XBRL tags",
+      "Record correctly identifies lack of relevance but should explicitly reject rather than review queue"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Source is pure XBRL data with no analytical content. While the generated record accurately describes the source limitations, the verdict 'review_queue' is incorrect — this should be rejected as it cannot contribute to macro or market structure research. Human decision needed to confirm rejection and correct the event_type field."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000104321926000028.txt",
+  "notes": "Source is raw XBRL financial data extracted from SEC EDGAR. No analytical content is present. The source documents Annalys Capital Management's Q1 2026 financial position but is not relevant to macro catalysts or market structure. Classification: not relevant. Human review required to confirm rejection.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "reject",
+    "score": 1,
+    "reasoning": [
+      "No human-readable content — pure XBRL taxonomy tags",
+      "Corporate filing from a single mortgage REIT, not macro research",
+      "Not relevant to market structure or macro catalysts by scope",
+      "Cannot extract policy signals, market context, or analytical insights"
+    ]
+  }
+}

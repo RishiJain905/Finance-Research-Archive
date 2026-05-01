@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 5,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is raw XBRL taxonomy data with no human-readable narrative content — cannot extract meaningful research",
+    "event_type is empty, but for a regulatory filing should be set to 'research_paper' or similar valid taxonomy value",
+    "Source has no relevance to macro catalysts or market structure by the stated scope",
+    "Cannot extract policy signals, market context, or analytical insights from pure XBRL tags",
+    "Record correctly identifies lack of relevance but should explicitly reject rather than review queue"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Source is pure XBRL data with no analytical content. While the generated record accurately describes the source limitations, the verdict 'review_queue' is incorrect — this should be rejected as it cannot contribute to macro or market structure research. Human decision needed to confirm rejection and correct the event_type field.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "Annalys Capital Management Inc filed its Q1 2026 10-Q (period ending 2026-03-31). The source consists entirely of raw XBRL taxonomy data with no human-readable narrative content. The filing is not relevant to macro catalysts or market structure topics.",
+    "why_it_matters": "Not applicable. This is a corporate earnings filing with no relevance to macro catalysts or market structure. Annalys' business (agency MBS investing) is indirectly related to housing/mortgage markets, but the source provides no analytical content to extract.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

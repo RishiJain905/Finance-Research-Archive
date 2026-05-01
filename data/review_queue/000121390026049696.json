@@ -1,0 +1,76 @@
+{
+  "id": "000121390026049696",
+  "created_at": "2026-05-01T08:49:26.795412+00:00",
+  "status": "review_queue",
+  "topic": "",
+  "event_type": "unknown",
+  "title": "Fermi Inc. 8-K Filing — 2026-04-30",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026049696/ea0288469-8k_fermi.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-29",
+    "source_type": "filing"
+  },
+  "summary": "Fermi Inc. filed a Form 8-K on April 29, 2026 announcing the appointment of Robert L. Masson as Interim Chief Financial Officer, effective immediately. Masson has over 20 years of finance executive experience in aerospace, defense, and industrial sectors. The filing contains standard disclosures regarding compensatory arrangements and forward-looking statements. This is a routine corporate governance announcement with no relevance to macro catalysts or market structure.",
+  "key_points": [
+    "Robert L. Masson appointed as Interim CFO effective April 29, 2026",
+    "Masson previously served as CFO at Noble Supply and Logistics (2023-2025), Latham Group (2022-2023), and Hypertherm (2018-2022)",
+    "Board has not yet approved any compensation for the interim CFO role",
+    "No family relationships or material transactions requiring disclosure exist",
+    "Company is listed on Nasdaq and London Stock Exchange under symbol FRMI",
+    "Filing includes standard forward-looking statement disclaimers referencing the company's 10-K and other SEC filings"
+  ],
+  "why_it_matters": "This is a routine corporate governance filing announcing a management change at Fermi Inc. It has no relevance to macro catalysts or market structure. The appointment of an interim CFO may be a signal of financial management transition at this company but does not constitute a market-moving event.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "corporate-governance",
+    "cfo-change",
+    "fermi-inc",
+    "irrelevant"
+  ],
+  "llm_review": {
+    "initial_confidence": 8,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type is set to 'unknown' when the correct type (corporate_governance or regulatory_filing) is clearly identifiable from the source content",
+      "topic field is empty - should be populated even if marking as irrelevant"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is internally consistent and accurately describes the source. The primary concern is that event_type defaults to 'unknown' rather than using a valid taxonomy value that fits the source. Since this is a corporate governance announcement (not one of the defined FOMC/speech/data/research types), 'unknown' is technically within taxonomy but seems to indicate the record was auto-generated without careful categorization. The note correctly identifies this as irrelevant to macro catalysts, so this is borderline between review and accept."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000121390026049696.txt",
+  "notes": "NOT RELEVANT to market structure or macro catalysts. This is a routine SEC Form 8-K corporate governance filing announcing the appointment of an interim CFO at Fermi Inc. The document contains no information related to monetary policy, economic data releases, market operations, Treasury activities, or any market structure elements. Topic field left empty as the source does not relate to either target topic. Source is valid and well-structured but falls outside the archive's focus areas.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "not-applicable",
+    "score": 0,
+    "reasoning": [
+      "Source is a corporate governance filing, not relevant to target topics",
+      "Contains no macro catalyst or market structure information",
+      "Valid SEC filing but outside archive scope"
+    ]
+  }
+}

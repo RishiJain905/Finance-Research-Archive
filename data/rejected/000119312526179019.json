@@ -1,0 +1,79 @@
+{
+  "id": "000119312526179019",
+  "created_at": "2026-05-01T08:44:43.924553+00:00",
+  "status": "rejected",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "Repay Holdings Corp 8-K Filing — 2026-04-27",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526179019/rpay-20260427.htm",
+    "published_at": "2026-04-27",
+    "source_type": "sec_filing",
+    "domain": "www.sec.gov"
+  },
+  "summary": "Repay Holdings Corporation filed an 8-K on April 27, 2026, announcing preliminary Q1 2026 results via a separate press release (Exhibit 99.1) not included in the filing text. The filing contains no substantive financial data, only disclosure that results were announced externally.",
+  "key_points": [
+    "Repay Holdings Corporation filed Form 8-K on April 27, 2026",
+    "Filing references Item 2.02 (Results of Operations and Financial Condition)",
+    "Announces preliminary results for quarter ended March 31, 2026",
+    "Actual press release content is in Exhibit 99.1, not included in the 8-K text provided",
+    "Signed by CFO Robert S. Houser",
+    "Company trades as RPAY on Nasdaq"
+  ],
+  "why_it_matters": "This 8-K is a corporate earnings announcement wrapper but contains no financial data. The substantive Q1 2026 results would be in the referenced press release (Exhibit 99.1) which is not included in the filing text. Not actionable for macro or market structure analysis without access to the actual press release.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "sec-filing",
+    "8-k",
+    "repay-holdings",
+    "earnings",
+    "q1-2026",
+    "nasdaq"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 3,
+    "verdict": "reject",
+    "issues_found": [
+      "Source is outside scope: corporate 8-K for individual company earnings is not a market structure or macro catalyst event",
+      "Source is too thin: actual Q1 2026 preliminary results are in Exhibit 99.1 (press release), which is not included in the filing text",
+      "No substantive data in source - only an announcement that results were announced elsewhere",
+      "event_type set to 'unknown' which is correct but the taxonomy does not accommodate corporate earnings announcements, further indicating poor fit",
+      "Corporate earnings for a single payment processing company (Repay Holdings/RPAY) lacks broad market structure relevance"
+    ]
+  },
+  "human_review": {
+    "required": false,
+    "decision": "",
+    "notes": "Record accurately identifies the source as a thin corporate earnings wrapper outside the archive's focus area. The generated assessment correctly recommends declining to archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000119312526179019.txt",
+  "notes": "NOT RELEVANT TO MANDATE: This is a corporate 8-K filing for Repay Holdings Corporation, a payment processing company. The filing is outside the scope of market structure and macro catalysts. The actual press release with Q1 2026 preliminary results (Exhibit 99.1) is referenced but not included in the filing text. Recommend declining to archive or obtaining the full press release content if corporate earnings signals are later deemed relevant.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "discard",
+    "score": 2,
+    "reasoning": [
+      "Outside focus area: corporate earnings rather than market structure or macro catalysts",
+      "No substantive data in source text - only announcement that results exist elsewhere",
+      "Cannot assess market impact or macro relevance without actual numbers"
+    ]
+  }
+}

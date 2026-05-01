@@ -1,0 +1,76 @@
+{
+  "id": "000102621426000027",
+  "created_at": "2026-05-01T08:35:18.666151+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "FEDERAL HOME LOAN MORTGAGE CORP 10-Q Filing — 2026-04-30",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1026214/000102621426000027/fmcc-20260331.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-30",
+    "source_type": "sec_filing"
+  },
+  "summary": "Freddie Mac filed its Q1 2026 10-Q quarterly report on April 30, 2026. The source body consists of raw XBRL (eXtensible Business Reporting Language) data, which is machine-readable accounting markup rather than human-readable narrative text. This filing contains standard corporate financial reporting data (balance sheet items, equity, retained earnings, mortgage portfolio segments) but is not relevant to market structure or macro catalysts research.",
+  "key_points": [
+    "Freddie Mac Q1 2026 10-Q filed to SEC on April 30, 2026",
+    "Source body is raw XBRL/XBRL-Taxonomy encoded data, not rendered human-readable text",
+    "Contains financial line items: common stock outstanding, retained earnings, preferred stock, segment data (Single Family, Multifamily)",
+    "Cannot extract meaningful macro or market structure signals from raw accounting tags",
+    "GSE (Government-Sponsored Enterprise) operating in mortgage market"
+  ],
+  "why_it_matters": "This is a quarterly earnings/financial report from a mortgage GSE. It does not contain information relevant to market structure (trading mechanics, market plumbing, operations) or macro catalysts (monetary policy, economic data releases, speeches). It is a corporate filing containing balance sheet and income statement data rendered in a machine-readable format that is difficult to parse and provides minimal research value for the specified focus areas.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [],
+  "tags": [
+    "10-q",
+    "freddie-mac",
+    "sec-filing",
+    "quarterly-report",
+    "gse",
+    "mortgage",
+    "non-relevant-source"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type set to 'unknown' is technically correct for a corporate financial filing outside all defined taxonomy categories, but the record correctly identifies the source as out-of-scope for the archive's focus areas"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "Record is factually accurate and well-constructed, but the core archival decision hinges on scope: a standard 10-Q corporate filing with no market structure or macro catalyst relevance versus the question of whether SEC filings should be included in the archive at all. The record correctly excludes this source, but a human should confirm whether corporate financial filings are within the archive's intended scope."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000102621426000027.txt",
+  "notes": "This 10-Q filing is a standard SEC corporate quarterly report from Freddie Mac. It contains XBRL-encoded financial data (balance sheet, equity, segment reporting) but is not relevant to market structure or macro catalysts research. The source body is raw accounting markup tags rather than rendered narrative text. Excluded from archive focus areas. For financial analysis of Freddie Mac, a properly rendered/parsed XBRL display would be required, which this raw source does not provide.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 2,
+    "reasoning": [
+      "XBRL data format not human-parseable as provided",
+      "Outside specified focus areas (market structure, macro catalysts)",
+      "Corporate financial filing, not policy or market structure document",
+      "Cannot extract meaningful research content for target use case"
+    ]
+  }
+}

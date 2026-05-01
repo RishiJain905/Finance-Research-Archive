@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is set to 'unknown' when the correct type (corporate_governance or regulatory_filing) is clearly identifiable from the source content",
+    "topic field is empty - should be populated even if marking as irrelevant"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is internally consistent and accurately describes the source. The primary concern is that event_type defaults to 'unknown' rather than using a valid taxonomy value that fits the source. Since this is a corporate governance announcement (not one of the defined FOMC/speech/data/research types), 'unknown' is technically within taxonomy but seems to indicate the record was auto-generated without careful categorization. The note correctly identifies this as irrelevant to macro catalysts, so this is borderline between review and accept.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
