@@ -1,0 +1,21 @@
+TARGET: arXiv q-fin.RM
+TOPIC: quantitative_finance
+TITLE: Sampler-Robust Optimization under Generative Models
+URL: http://arxiv.org/abs/2604.27447v1
+INDEX_URL: http://arxiv.org/abs/2604.27447v1
+ARTICLE_URL: http://arxiv.org/abs/2604.27447v1
+CANONICAL_URL: http://arxiv.org/abs/2604.27447v1
+PAGE_TITLE: Sampler-Robust Optimization under Generative Models
+H1: Sampler-Robust Optimization under Generative Models
+PUBLISHED_AT: 2026-04-30T05:33:15+00:00
+PAGE_TYPE: academic_paper
+EXPECTED_LANGUAGE: en
+DETECTED_LANGUAGE: en
+CONTENT_WORD_COUNT: 169
+INGEST_SOURCE: arxiv
+SOURCE_TYPE: academic
+PAPER_ID: 2604.27447
+PRIMARY_CATEGORY: math.OC
+AUTHORS: Ziwei Zhang; Jonathan Yu-Meng Li
+
+Modern stochastic optimization pipelines increasingly rely on learned generative models to represent uncertainty, while downstream decisions are evaluated almost entirely through Monte Carlo scenarios. This shifts the operational object of uncertainty from an explicit probability law to the sampler induced by the learned generator. Reliability therefore depends on two errors: sampler misspecification and finite-simulation error. We propose Sampler-Robust Optimization (SRO), which optimizes decisions against the worst-case sampler induced by perturbing the learned generator. This sampler-first formulation aligns with simulation-based decision pipelines and admits a sharpness-aware interpretation: it favors decisions whose performance is stable under generator perturbations, rather than merely under the nominal sampler. Under a coverage assumption, we show that the empirical worst-case objective provides a high-probability upper certificate for the true population objective, with finite-simulation error partially absorbed by the robustification used to guard against sampler misspecification. The framework accommodates generative models with or without explicit densities and admits efficient minimax procedures. Portfolio-optimization experiments show that SRO produces more stable decisions and improves out-of-sample performance under distribution shift.
