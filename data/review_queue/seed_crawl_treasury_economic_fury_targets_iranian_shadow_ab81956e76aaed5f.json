@@ -1,0 +1,90 @@
+{
+  "id": "seed_crawl_treasury_economic_fury_targets_iranian_shadow_ab81956e76aaed5f",
+  "created_at": "2026-05-01T17:03:06.153291+00:00",
+  "status": "review_queue",
+  "topic": "macro catalysts",
+  "event_type": "regulatory_guidance",
+  "title": "Economic Fury Targets Iranian Shadow Banking Networks Moving Billions in Foreign Currency",
+  "source": {
+    "name": "U.S. Department of the Treasury",
+    "url": "https://home.treasury.gov/news/press-releases/sb0483",
+    "published_at": "2026-05-01",
+    "source_type": "press_release",
+    "domain": "home.treasury.gov"
+  },
+  "summary": "OFAC designated three Iranian foreign currency exchange houses and their associated front companies as part of the Economic Fury campaign to disrupt Iranian financial networks that sustain the regime's war effort. The exchange houses facilitate billions of dollars in foreign currency transactions annually, converting oil revenues (primarily settled in Chinese yuan) into usable currencies for Iran's military and proxies. Today's action names Opal Exchange, Radin Exchange, and Arz Iran Exchange along with multiple front companies and individuals.",
+  "key_points": [
+    "Three Iranian exchange houses designated: Opal Exchange (Pedram Pirouzan), Radin Exchange (Nasser Ghasemi Rad), and Arz Iran Exchange (Ehsan Tahayyori) along with 15 front companies",
+    "Action taken pursuant to Executive Order 13902 targeting persons operating in Iran's financial sector",
+    "Exchange houses convert Iran's oil revenues (settled primarily in Chinese yuan) into currencies usable by Iranian military and proxies",
+    "Front companies exploit high-risk jurisdictions with inadequate AML controls, using dual citizenship (Dominica, Saint Kitts and Nevis) to obscure Iran ties",
+    "Since February 2025, OFAC has sanctioned more than 1,000 Iran-related persons, vessels, and aircraft",
+    "Action further disrupts Iranian mechanisms for receiving payments for oil and other commodities, increasing costs and reducing revenue"
+  ],
+  "why_it_matters": "The statement that actions 'could reduce the regime's funding capacity' and 'may have secondary effects on yuan-dollar dynamics' are reasonable inferences but not supported by source text. Revise to reflect that source discusses enforcement intent without quantifying market impact.",
+  "market_impact": {
+    "asset_classes": [
+      "fx",
+      "commodities"
+    ],
+    "directional_bias": "unknown",
+    "confidence": 0
+  },
+  "macro_context": "The sanctions target Iranian shadow banking networks that handle tens of billions of dollars in annual trade, primarily from oil and petrochemical exports. By disrupting the conversion of yuan-denominated oil revenues into usable currencies, these actions may affect Iranian trade settlement patterns and increase costs for the regime's foreign currency access. The exposure of front companies in high-risk jurisdictions illustrates systemic vulnerabilities in correspondent banking and trade finance networks.",
+  "market_structure_context": "",
+  "important_numbers": [
+    "1,000+ Iran-related persons, vessels, and aircraft sanctioned since February 2025",
+    "3 designated exchange houses",
+    "15 designated front companies",
+    "4 designated individuals"
+  ],
+  "tags": [
+    "ofac",
+    "sanctions",
+    "iran",
+    "shadow-banking",
+    "exchange-houses",
+    "economic-fury",
+    "executive-order-13902",
+    "cnh",
+    "oil-sanctions"
+  ],
+  "llm_review": {
+    "initial_confidence": 7,
+    "verification_confidence": 7,
+    "verdict": "review",
+    "issues_found": [
+      "event_type 'regulatory_guidance' is imprecise: this is a sanctions designation/enforcement action rather than guidance. While not wrong, it may mischaracterize the nature of the document.",
+      "Source does not quantify direct market impact on currency or commodity markets; 'why_it_matters' contains speculative downstream effects not stated in source.",
+      "The record's own notes acknowledge this is 'enforcement focused rather than financial market catalyst' yet TARGET specifies 'macro catalysts' — scope fit is questionable."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "",
+    "notes": "The record is factually accurate against the source, but the event_type may not be optimal (enforcement action vs. guidance), and there is a scope question: TARGET specifies 'macro catalysts' but the source is geopolitical sanctions enforcement with indirect market implications rather than a direct market catalyst (rate decision, data release, etc.). Human review should determine whether geopolitical sanctions events meet the archive's macro catalyst criteria."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/seed_crawl_treasury_economic_fury_targets_iranian_shadow_ab81956e76aaed5f.txt",
+  "notes": "This is a Treasury/OFAC sanctions enforcement action rather than traditional macro catalyst (economic data releases, central bank decisions). The TARGET specified 'macro catalysts' and the source discusses Iranian financial networks supporting the regime, which could have secondary implications for oil markets and currency flows. However, the source does not quantify market impact or specify transmission mechanisms. Marked for human review to assess whether geopolitical sanctions events meet the archive's scope criteria.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "medium",
+    "score": 6,
+    "reasoning": [
+      "High-authority source (Treasury.gov)",
+      "Contains specific named entities, numbers, and policy citations",
+      "Source is contemporaneous (published TODAY)",
+      "Limited direct market impact data",
+      "Primarily geopolitical/enforcement focus rather than financial market catalyst"
+    ]
+  }
+}

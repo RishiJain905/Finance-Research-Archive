@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type 'regulatory_guidance' is imprecise: this is a sanctions designation/enforcement action rather than guidance. While not wrong, it may mischaracterize the nature of the document.",
+    "Source does not quantify direct market impact on currency or commodity markets; 'why_it_matters' contains speculative downstream effects not stated in source.",
+    "The record's own notes acknowledge this is 'enforcement focused rather than financial market catalyst' yet TARGET specifies 'macro catalysts' — scope fit is questionable."
+  ],
+  "human_review_required": true,
+  "human_review_reason": "The record is factually accurate against the source, but the event_type may not be optimal (enforcement action vs. guidance), and there is a scope question: TARGET specifies 'macro catalysts' but the source is geopolitical sanctions enforcement with indirect market implications rather than a direct market catalyst (rate decision, data release, etc.). Human review should determine whether geopolitical sanctions events meet the archive's macro catalyst criteria.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "The statement that actions 'could reduce the regime's funding capacity' and 'may have secondary effects on yuan-dollar dynamics' are reasonable inferences but not supported by source text. Revise to reflect that source discusses enforcement intent without quantifying market impact.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
