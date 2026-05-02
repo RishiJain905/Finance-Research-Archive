@@ -1,19 +1,18 @@
 {
-  "verification_confidence": 2,
+  "verification_confidence": 0,
   "verdict": "reject",
   "issues_found": [
-    "Source is a routine corporate 8-K earnings filing from Entergy Corporation (a utility holding company), which has no relevance to market structure or macro catalysts",
-    "Source does not contain Fed policy, rate decisions, Treasury operations, economic data releases, or any market structure content",
-    "event_type is correctly set to 'unknown' as this filing does not fit any taxonomy category for monetary policy, speeches, data releases, Treasury/operations, or research",
-    "The record itself acknowledges this as a 'discard' tier with score 2 and notes the source is not relevant",
-    "Per Rule 6, thin low-signal sources bias toward reject; this is an operational disclosure with no market-moving or policy-relevant content"
+    "Source is entirely outside scope: corporate utility earnings filing with no relevance to market structure or macro catalysts",
+    "No macro-relevant content present in the filing",
+    "Exhibit 99.1 (earnings release with actual financial data) not included in filing text",
+    "event_type is 'unknown' which is acceptable but reflects the filing's incompatibility with the research taxonomy"
   ],
   "human_review_required": false,
-  "human_review_reason": "No human review needed. The generated record correctly identifies the source as irrelevant to the archive's focus. The source is a routine SEC 8-K announcing Q1 2026 earnings from a utility company—operational in nature, not market-moving or policy-relevant. This is a clear reject.",
+  "human_review_reason": "The source's out-of-scope status is self-evident. This is a routine SEC Form 8-K filing by a utility holding company announcing quarterly earnings. The filing contains no information relevant to market structure (market plumbing, trading mechanisms, clearing, settlement) or macro catalysts (monetary policy, economic data releases, Treasury operations, rate decisions). Core Rule 6 explicitly states that low-signal sources should bias toward reject. No human review needed—the record itself correctly identifies this as out of scope.",
   "suggested_status": "rejected",
   "corrected_fields": {
-    "summary": "",
-    "why_it_matters": "Source is a routine corporate earnings filing from a utility holding company with no relevance to market structure or macro catalysts. This 8-K discloses Q1 2026 financial results per Items 2.02 and 7.01 of Regulation FD. No Fed policy, rate decisions, Treasury operations, economic data releases, or market structure content present.",
+    "summary": "This is a standard SEC Form 8-K filing by Entergy Corporation and its subsidiaries (Entergy Mississippi, Arkansas, Louisiana, Texas, New Orleans, and System Energy Resources) announcing Q1 2026 earnings results via a press release. The actual earnings content is referenced as Exhibit 99.1 but not included in the filing text itself. The document is a corporate registration and disclosure filing with no relevance to market structure or macro catalysts research focus.",
+    "why_it_matters": "This filing has no relevance to market structure or macro catalysts research. It is a routine corporate earnings announcement by a regulated utility holding company, with no information about central bank policy, market operations, economic data, or financial system structure.",
     "macro_context": "",
     "market_structure_context": ""
   }

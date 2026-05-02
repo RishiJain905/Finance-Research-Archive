@@ -1,0 +1,84 @@
+{
+  "id": "000073241726000044",
+  "created_at": "2026-05-02T04:08:07.448312+00:00",
+  "status": "review_queue",
+  "topic": "not_applicable",
+  "event_type": "unknown",
+  "title": "Hills Bancorporation 8-K — Stock Split Announcement",
+  "source": {
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/732417/000073241726000044/hbia-20260420.htm",
+    "domain": "sec.gov",
+    "published_at": "2026-04-24",
+    "source_type": "sec_filing"
+  },
+  "summary": "Hills Bancorporation, a small Iowa-based bank holding company quoted on OTC Markets (symbol HBIA), announced a 2-for-1 stock split approved by its Board of Directors, with a record date of June 1, 2026 and distribution date of June 8, 2026. The split will increase authorized shares from 20,000,000 to 40,000,000 common shares, no par value, with all new shares issued in book-entry form through Computershare.",
+  "key_points": [
+    "Hills Bancorporation is an emerging growth company and registered bank holding company headquartered in Iowa City, Iowa",
+    "Board of Directors approved a 2-for-1 stock split on April 20, 2026",
+    "Record date: June 1, 2026; distribution date: June 8, 2026",
+    "Authorized shares increase from 20,000,000 to 40,000,000 common shares, no par value",
+    "All equity awards (stock options, RSAs) will be proportionally adjusted—shares doubled, exercise prices halved",
+    "No physical stock certificates; shares issued via book-entry through Computershare transfer agent"
+  ],
+  "why_it_matters": "This is a routine corporate action for a small regional bank holding company. The stock split has no relevance to broader financial markets, monetary policy, interest rates, or macroeconomic conditions. It is a local/corporate-level event only.",
+  "market_impact": {
+    "asset_classes": [],
+    "directional_bias": "neutral",
+    "confidence": 0
+  },
+  "macro_context": "",
+  "market_structure_context": "",
+  "important_numbers": [
+    "2-for-1 split ratio",
+    "June 1, 2026 record date",
+    "June 8, 2026 distribution date",
+    "20,000,000 authorized shares (pre-split)",
+    "40,000,000 authorized shares (post-split)"
+  ],
+  "tags": [
+    "stock-split",
+    "8-k-filing",
+    "small-cap",
+    "bank-holding-company",
+    "otc-markets",
+    "corporate-action"
+  ],
+  "llm_review": {
+    "initial_confidence": 2,
+    "verification_confidence": 6,
+    "verdict": "review",
+    "issues_found": [
+      "Summary conflates 'authorized shares' (20M to 40M) with 'issued and outstanding shares' — these are distinct concepts per the source",
+      "key_points states 'Hills Bancorporation is an emerging growth company' as fact, but the source shows the checkbox is NOT checked (empty box) — the company indicates it is NOT an emerging growth company",
+      "event_type is set to 'unknown' — while this is technically valid, a more precise taxonomy like 'corporate_action' or 'equity_event' would better capture the nature of this filing"
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "decision": "exclude",
+    "notes": "Factual accuracy issues exist (misrepresentation of emerging growth company status; confusion of authorized vs. issued shares), but the primary concern is relevance. The record correctly identifies this source has no relevance to macro catalysts or market structure, but human judgment is needed to determine whether low-relevance but accurate corporate filings should be included in the archive."
+  },
+  "human_feedback": {
+    "decision": "",
+    "notes": "",
+    "source_feedback": null,
+    "topic_feedback": null,
+    "reviewed_at": "",
+    "reviewer_id": ""
+  },
+  "raw_text_path": "data/raw/000073241726000044.txt",
+  "notes": "Not relevant to finance research focus. This is a standard 8-K filing announcing a 2-for-1 stock split for a small regional bank holding company (OTC: HBIA). The announcement has no implications for market structure or macro catalysts. Corporate-level event only. Filed April 20, 2026; published April 24, 2026. Source is recent but content is thin and irrelevant to macro/structural research.",
+  "linked_quant_context": [],
+  "linked_article_context": [],
+  "quality_tier": {
+    "tier": "excluded",
+    "score": 1,
+    "reasoning": [
+      "Not relevant to focus topics (market structure, macro catalysts)",
+      "Small micro-cap company with no market-wide significance",
+      "Routine corporate action with no macro or structural implications",
+      "Source content is thin and administrative"
+    ]
+  }
+}

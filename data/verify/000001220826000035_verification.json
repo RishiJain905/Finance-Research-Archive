@@ -1,0 +1,20 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Research record is entirely empty - all fields (source.name, source.url, source.domain, source.published_at, topic, summary, key_points, etc.) are blank",
+    "No source attribution present in the record",
+    "Source body contains raw XBRL structured data tags, not human-readable content - cannot verify factual accuracy against this format",
+    "Source is a company-specific 10-Q filing for BIO-RAD LABORATORIES (a life sciences company) with no apparent relevance to macro catalysts or market structure",
+    "Event type is missing/empty when it should be identified or marked as unknown"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record is completely empty, making review impossible. Auto-reject is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

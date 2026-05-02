@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated record is completely empty - all substantive fields (summary, key_points, why_it_matters, macro_context, market_structure_context) are blank",
+    "Source attribution fields (name, url, domain, published_at, source_type) are all empty",
+    "Source is a company-specific 10-Q filing from Sanfilippo John B & Son Inc (JBSS), a niche nut/snack food manufacturer - not relevant to macro catalysts or market structure",
+    "Archive is clearly focused on monetary policy, macroeconomic data releases, speeches, and financial system research - a single company's quarterly filing does not fit",
+    "No topic, tags, or any archival-worthy content provided",
+    "event_type would be 'unknown' which is incorrect - this is a regulatory filing, not any recognized event type for this archive"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is entirely empty and source is fundamentally misaligned with archive scope - no human review needed to reject",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

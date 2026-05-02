@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 1,
+  "verdict": "reject",
+  "issues_found": [
+    "Source is a corporate governance 8-K filing (shareholder-approved equity compensation plans) with no connection to market structure or macro catalysts",
+    "Record correctly identifies source as not relevant ('topic: not relevant', 'quality_tier: irrelevant'), but this means it fails the basic relevance threshold for the finance research archive",
+    "event_type set to 'unknown' - while technically valid, this filing type is not aligned with any valid taxonomy category for macro/market research"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is internally consistent and accurately describes the source, but the source itself is not relevant to the archive's focus areas (monetary policy, economic data, market operations). Rejection is straightforward.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

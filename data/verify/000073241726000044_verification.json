@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "Summary conflates 'authorized shares' (20M to 40M) with 'issued and outstanding shares' — these are distinct concepts per the source",
+    "key_points states 'Hills Bancorporation is an emerging growth company' as fact, but the source shows the checkbox is NOT checked (empty box) — the company indicates it is NOT an emerging growth company",
+    "event_type is set to 'unknown' — while this is technically valid, a more precise taxonomy like 'corporate_action' or 'equity_event' would better capture the nature of this filing"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Factual accuracy issues exist (misrepresentation of emerging growth company status; confusion of authorized vs. issued shares), but the primary concern is relevance. The record correctly identifies this source has no relevance to macro catalysts or market structure, but human judgment is needed to determine whether low-relevance but accurate corporate filings should be included in the archive.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "Hills Bancorporation, a small Iowa-based bank holding company quoted on OTC Markets (symbol HBIA), announced a 2-for-1 stock split approved by its Board of Directors, with a record date of June 1, 2026 and distribution date of June 8, 2026. The split will increase authorized shares from 20,000,000 to 40,000,000 common shares, no par value, with all new shares issued in book-entry form through Computershare.",
+    "why_it_matters": "This is a routine corporate action for a small regional bank holding company. The stock split has no relevance to broader financial markets, monetary policy, interest rates, or macroeconomic conditions. It is a local/corporate-level event only.",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

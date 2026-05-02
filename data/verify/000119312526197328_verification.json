@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 0,
+  "verdict": "reject",
+  "issues_found": [
+    "Generated research record is completely empty - all fields blank, no content extracted",
+    "Source attribution entirely missing (name, url, domain, published_at all blank)",
+    "Event type missing/empty - corporate 10-Q filing does not fit any valid taxonomy value",
+    "Source is a raw XBRL-structured SEC filing, not article-like research content",
+    "Source content is structured financial data with no narrative research value",
+    "No summary, key_points, macro_context, or market_structure_context provided"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is completely empty with no extracted content. Source is a corporate SEC filing (10-Q) rather than macro/market structure research. Cannot assess any research value when no research content was generated. This appears to be a processing failure where the filing content could not be transformed into a meaningful research record.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "N/A - no content extracted to verify",
+    "why_it_matters": "N/A - no content extracted to verify",
+    "macro_context": "N/A - no content extracted to verify",
+    "market_structure_context": "N/A - no content extracted to verify"
+  }
+}

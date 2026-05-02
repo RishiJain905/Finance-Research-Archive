@@ -1,0 +1,18 @@
+{
+  "verification_confidence": 6,
+  "verdict": "review",
+  "issues_found": [
+    "event_type is 'unknown' — a regulatory filing/disclosure type would be more appropriate given this is a standard SEC 8-K",
+    "verification_confidence incorrectly set to 0 in llm_review field — the factual content is accurate; the issue is relevance, not verification",
+    "macro_context and market_structure_context are empty — while correctly noting irrelevance in why_it_matters, these fields should explicitly state 'Not applicable: corporate governance litigation filing outside archive scope'"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "Record is factually accurate and source attribution is correct, but relevance determination requires clarification on archive scope applicability.",
+  "suggested_status": "review_queue",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "This 8-K discloses a settlement of stockholder derivative litigation (Gilbert v. BC Partners LLP) involving Chewy, Inc. and its private equity backer BC Partners. The filing is a standard corporate legal disclosure and falls outside the archive's focus on market structure and macro catalysts. Relevant primarily to Chewy equity holders and those monitoring corporate governance outcomes.",
+    "macro_context": "Not applicable: corporate governance litigation settlement with no connection to monetary policy, interest rates, or economic indicators.",
+    "market_structure_context": "Not applicable: standard SEC disclosure of private litigation settlement; does not involve market operations, trading mechanics, or financial infrastructure."
+  }
+}

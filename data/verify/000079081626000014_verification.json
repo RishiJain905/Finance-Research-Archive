@@ -1,0 +1,17 @@
+{
+  "verification_confidence": 7,
+  "verdict": "review",
+  "issues_found": [
+    "event_type set to 'unknown' when source is a routine corporate earnings filing (could be 'unknown' but record correctly notes no category fits)",
+    "Source is a single-company REIT 8-K with no market-wide relevance or macro catalyst significance"
+  ],
+  "human_review_required": false,
+  "human_review_reason": "The record accurately captures the source content. The classification as 'excluded' with tier 1 is correct given the source has no relevance to market structure or macro catalysts. Auto-rejection is appropriate.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}

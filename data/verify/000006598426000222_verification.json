@@ -1,0 +1,21 @@
+{
+  "verification_confidence": 2,
+  "verdict": "reject",
+  "issues_found": [
+    "Source attribution completely missing in record (name, url, domain, published_at, source_type all empty)",
+    "Source is an SEC 10-Q quarterly filing for Entergy Mississippi - not relevant to market structure or macro catalysts",
+    "event_type field missing from record; none of the valid taxonomy types apply to this source",
+    "Record is entirely empty (no summary, key_points, why_it_matters, macro_context, market_structure_context)",
+    "Source is company-specific financial reporting, not a market-moving or market structure document",
+    "SEC EDGAR filings have archival value for financial analysis but not for macro/market structure research"
+  ],
+  "human_review_required": true,
+  "human_review_reason": "Record is empty with no extractable content. Source is an SEC 10-Q filing for a regional utility company - not a macro catalyst, market structure event, FOMC document, speech, data release, or research commentary. The source is outside the scope of this archive which focuses on market-moving and market structure events.",
+  "suggested_status": "rejected",
+  "corrected_fields": {
+    "summary": "",
+    "why_it_matters": "",
+    "macro_context": "",
+    "market_structure_context": ""
+  }
+}
